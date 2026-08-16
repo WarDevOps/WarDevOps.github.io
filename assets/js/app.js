@@ -54,9 +54,10 @@ import { maps, translations } from './data.js?v=route-chains-20260817';
     const MAX_IMPORTED_ANNOTATIONS = 5000;
     const ANNOTATION_TYPES = new Set(["aimHere", "route"]);
     const MAP_DRAWING_REFERENCE_SIZE = 600;
-    const AIM_ARROW_BASE_STROKE = 4;
-    const AIM_ARROW_BASE_ICON_SIZE = 32;
-    const ROUTE_BASE_STROKE = 3;
+    const AIM_ARROW_BASE_STROKE = 1;
+    const AIM_ARROW_HEAD_BASE_LENGTH = 13;
+    const AIM_ARROW_HEAD_BASE_HEIGHT = 16;
+    const ROUTE_BASE_STROKE = 1;
     // Larger values render above smaller values. Equal-priority markers keep their placement order.
     const MARKER_RENDER_Z_INDEX = Object.freeze({
       smokeshell: 400,
@@ -579,24 +580,27 @@ import { maps, translations } from './data.js?v=route-chains-20260817';
       drawing.style.transform = `rotate(${angle}deg)`;
       drawing.setAttribute("aria-label", t(annotation.type));
       if (annotation.type === "aimHere") {
-        const headSize = AIM_ARROW_BASE_ICON_SIZE * mapScale;
         const strokeWidth = AIM_ARROW_BASE_STROKE * mapScale;
-        drawing.style.height = `${headSize}px`;
-        drawing.style.top = `${fromY - (headSize / 2)}px`;
-        drawing.style.transformOrigin = `0 ${headSize / 2}px`;
+        const scaledHeadLength = AIM_ARROW_HEAD_BASE_LENGTH * mapScale;
+        const headLength = Math.min(scaledHeadLength, length);
+        const headHeight = AIM_ARROW_HEAD_BASE_HEIGHT * mapScale * (headLength / scaledHeadLength);
+        const arrowHeight = Math.max(strokeWidth, headHeight);
+        drawing.style.height = `${arrowHeight}px`;
+        drawing.style.top = `${fromY - (arrowHeight / 2)}px`;
+        drawing.style.transformOrigin = `0 ${arrowHeight / 2}px`;
         const shaft = document.createElement("span");
         shaft.className = "aim-arrow-shaft";
-        // The source arrow has a four-pixel shaft (rows 14–17); scale the complete drawing with the map.
-        shaft.style.top = `${(headSize - strokeWidth) / 2}px`;
+        shaft.style.top = `${(arrowHeight - strokeWidth) / 2}px`;
         shaft.style.height = `${strokeWidth}px`;
-        shaft.style.width = `${Math.max(0, length - (headSize / 2))}px`;
-        const arrowHead = document.createElement("img");
+        shaft.style.width = `${Math.max(0, length - headLength)}px`;
+        const arrowHead = document.createElement("span");
         arrowHead.className = "aim-arrow-head";
-        arrowHead.src = "Legend/Aim%20here.png";
-        arrowHead.alt = "";
-        arrowHead.style.left = `${Math.max(0, length - headSize)}px`;
-        arrowHead.style.width = `${headSize}px`;
-        arrowHead.style.height = `${headSize}px`;
+        arrowHead.setAttribute("aria-hidden", "true");
+        arrowHead.style.left = `${Math.max(0, length - headLength)}px`;
+        arrowHead.style.top = `${(arrowHeight - headHeight) / 2}px`;
+        arrowHead.style.borderTopWidth = `${headHeight / 2}px`;
+        arrowHead.style.borderBottomWidth = `${headHeight / 2}px`;
+        arrowHead.style.borderLeftWidth = `${headLength}px`;
         drawing.append(shaft, arrowHead);
       } else {
         const strokeWidth = ROUTE_BASE_STROKE * mapScale;
