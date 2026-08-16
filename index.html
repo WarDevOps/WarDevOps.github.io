@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ko">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -140,7 +140,7 @@
     .team-button.blue[aria-pressed="true"] { border-color: var(--blue); background: var(--blue); }
     .map-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(208px, 245px); gap: 16px; align-items: start; padding: 0 clamp(12px, 3vw, 28px) 20px; }
     .map-stage { position: relative; min-height: 470px; display: grid; overflow: hidden; place-items: center; border: 1px solid var(--line); border-radius: 12px; background: #0d1111; }
-    .map-stage::after { position: absolute; right: 14px; bottom: 12px; content: "클릭하여 크게 보기"; padding: 7px 9px; border: 1px solid rgba(255,255,255,.13); border-radius: 7px; background: rgba(10, 14, 13, .78); color: #d7ded9; font-size: .73rem; pointer-events: none; }
+    .map-stage::after { position: absolute; right: 14px; bottom: 12px; content: "Click to enlarge"; padding: 7px 9px; border: 1px solid rgba(255,255,255,.13); border-radius: 7px; background: rgba(10, 14, 13, .78); color: #d7ded9; font-size: .73rem; pointer-events: none; }
     #map-image { display: block; width: 100%; max-height: 670px; object-fit: contain; cursor: zoom-in; }
     .image-loading { position: absolute; color: var(--muted); font-size: .9rem; }
     .map-stage.loaded .image-loading { display: none; }
@@ -208,22 +208,22 @@
       <p class="hero-copy">Know yourself and your enemy, and you will win every battle.</p>
       <div class="search-wrap">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.8-3.8"></path></svg>
-        <label class="sr-only" for="map-search">검색</label>
-        <input id="map-search" type="search" autocomplete="off" placeholder="맵 이름으로 검색하세요 (예: Sinai, 시나이)">
-        <button class="clear-search" id="clear-search" type="button" aria-label="검색어 지우기">×</button>
+        <label class="sr-only" for="map-search">Search maps</label>
+        <input id="map-search" type="search" autocomplete="off" placeholder="Search by map name (Korean names supported)">
+        <button class="clear-search" id="clear-search" type="button" aria-label="Clear search">×</button>
       </div>
     </section>
 
-    <section class="workspace" aria-label="전술 지도 탐색기">
-      <aside class="map-index" aria-label="맵 목록">
-        <div class="index-heading"><h2>맵 선택</h2><span id="map-count"></span></div>
+    <section class="workspace" aria-label="Tactical map explorer">
+      <aside class="map-index" aria-label="Map list">
+        <div class="index-heading"><h2>Select a Map</h2><span id="map-count"></span></div>
         <div class="map-list" id="map-list"></div>
       </aside>
 
       <article class="map-viewer" aria-live="polite">
         <div class="viewer-top">
-          <div><h2 id="selected-map-name">맵을 선택하세요</h2><p id="selected-map-description">확인하세요</p></div>
-          <div class="team-switch" aria-label="진영 선택">
+          <div><h2 id="selected-map-name">Select a Map</h2><p id="selected-map-description">Choose a map to view its tactical layout.</p></div>
+          <div class="team-switch" aria-label="Team selection">
             <button class="team-button red" type="button" data-team="Red" aria-pressed="true">RED</button>
             <button class="team-button blue" type="button" data-team="Blue" aria-pressed="false">BLUE</button>
           </div>
@@ -233,28 +233,32 @@
           <span class="image-loading" id="image-status">Now Loading…</span>
           <img id="map-image" alt="" hidden>
           </div>
-          <aside class="legend-panel" aria-label="지도 범례">
-            <h3 class="legend-heading">지도 범례</h3>
-            <p class="legend-note">맵 이미지 위 아이콘의 의미입니다.</p>
+          <aside class="legend-panel" aria-label="Map legend">
+            <h3 class="legend-heading">Map Legend</h3>
+            <p class="legend-note">What each icon on a map represents.</p>
             <ul class="legend-list">
-              <li class="legend-item"><span class="legend-icon"><img src="Legend/Aim%20here.png" alt=""></span>조준 지점</li>
-              <li class="legend-item"><span class="legend-icon"><img src="Legend/Anti%20Air.png" alt=""></span>대공 유닛</li>
-              <li class="legend-item"><span class="legend-icon"><img src="Legend/Anti-Air%20area.png" alt=""></span>대공 위험 지역</li>
-              <li class="legend-item"><span class="legend-icon"><img src="Legend/Core%20area.png" alt=""></span>핵심 지역</li>
-              <li class="legend-item"><span class="legend-icon"><img src="Legend/Danger%20area.png" alt=""></span>위험 지역</li>
-              <li class="legend-item"><span class="legend-icon"><img src="Legend/High-risk%20spot.png" alt=""></span>고위험 지점</li>
-              <li class="legend-item"><span class="legend-icon"><img src="Legend/Light%20Tank.png" alt=""></span>경전차</li>
-              <li class="legend-item"><span class="legend-icon"><img src="Legend/Line%20battle.png" alt=""></span>교전선</li>
-              <li class="legend-item"><span class="legend-icon"><img src="Legend/Main%20Battle%20Tank.png" alt=""></span>주력전차</li>
-              <li class="legend-item"><span class="legend-icon"><img src="Legend/Not%20recommended.png" alt=""></span>비추천 지역</li>
-              <li class="legend-item"><span class="legend-icon"><img src="Legend/Route.png" alt=""></span>이동 경로</li>
-              <li class="legend-item"><span class="legend-icon"><img src="Legend/Sniper.png" alt=""></span>저격 위치</li>
-              <li class="legend-item"><span class="legend-icon"><img src="Legend/Spawn%20kill.png" alt=""></span>리스폰 킬 주의</li>
-              <li class="legend-item"><span class="legend-icon"><img src="Legend/Tank%20Destroyer.png" alt=""></span>구축전차</li>
+              <li class="legend-item"><span class="legend-icon"><img src="Legend/Light%20Tank.png" alt=""></span>Light Tank</li>
+              <li class="legend-item"><span class="legend-icon"><img src="Legend/Main%20Battle%20Tank.png" alt=""></span>Main Battle Tank</li>
+              <li class="legend-item"><span class="legend-icon"><img src="Legend/Tank%20Destroyer.png" alt=""></span>Tank Destroyer</li>
+              <li class="legend-item"><span class="legend-icon"><img src="Legend/Anti%20Air.png" alt=""></span>Anti Air</li>
+
+              <li class="legend-item"><span class="legend-icon"><img src="Legend/Line%20battle.png" alt=""></span>Line battle</li>
+              <li class="legend-item"><span class="legend-icon"><img src="Legend/High-risk%20spot.png" alt=""></span>High-risk spot</li>
+              <li class="legend-item"><span class="legend-icon"><img src="Legend/Sniper.png" alt=""></span>Sniper</li>
+              <li class="legend-item"><span class="legend-icon"><img src="Legend/Spawn%20kill.png" alt=""></span>Spawn Kill</li>
+
+              <li class="legend-item"><span class="legend-icon"><img src="Legend/Route.png" alt=""></span>Route</li>
+              <li class="legend-item"><span class="legend-icon"><img src="Legend/Aim%20here.png" alt=""></span>Aim here</li>
+
+              <li class="legend-item"><span class="legend-icon"><img src="Legend/Core%20area.png" alt=""></span>Core area</li>
+              <li class="legend-item"><span class="legend-icon"><img src="Legend/Danger%20area.png" alt=""></span>Danger area</li>
+              <li class="legend-item"><span class="legend-icon"><img src="Legend/Anti-Air%20area.png" alt=""></span>Anti Air area</li>
+              <li class="legend-item"><span class="legend-icon"><img src="Legend/Not%20recommended.png" alt=""></span>Not recommended</li>
+              <li class="legend-item"><span class="legend-icon"><img src="Legend/Spawn%20Area.png" alt=""></span>Spawn Area</li>
             </ul>
           </aside>
         </div>
-        <div class="team-legend" aria-label="진영 범례"><span><i class="red-dot"></i>RED</span><span><i class="blue-dot"></i>BLUE</span></div>
+        <div class="team-legend" aria-label="Team legend"><span><i class="red-dot"></i>RED</span><span><i class="blue-dot"></i>BLUE</span></div>
       </article>
     </section>
   </main>
@@ -264,14 +268,14 @@
     <p>All content on this website, including text, images, graphics, and other materials, is the property of the site owner. Unauthorized reproduction, distribution, or use is prohibited.</p>
   </footer>
 
-  <dialog id="image-modal" aria-label="확대하기">
-    <div class="modal-toolbar"><span id="modal-title"></span><button class="close-modal" type="button" aria-label="확대 보기 닫기">✕</button></div>
+  <dialog id="image-modal" aria-label="Enlarged map view">
+    <div class="modal-toolbar"><span id="modal-title"></span><button class="close-modal" type="button" aria-label="Close enlarged view">✕</button></div>
     <img id="modal-image" alt="">
   </dialog>
 
   <script>
     const maps = [
-      ["38 Parallel", "38선", "38 Parallel"], ["Aredennes", "아르덴"], ["Aredennes_Big", "아르덴 대형"],
+      ["38 Parallel", "38선"], ["Aredennes", "아르덴"], ["Aredennes_Big", "아르덴 대형"],
       ["Attica", "아티카"], ["Cargo Port", "카고 포트"], ["Carpathians", "카르파티아 산맥"],
       ["European Province", "유럽 지방"], ["Field of Normandy", "노르망디의 들판"], ["Finland", "핀란드"],
       ["Fire Arc", "파이어 아크"], ["Iberian Castle", "이베리아 성"], ["Japan", "일본"],
@@ -301,9 +305,9 @@
     }
     function renderList() {
       const displayed = visibleMaps();
-      $("#map-count").textContent = `${displayed.length}개 맵`;
+      $("#map-count").textContent = `${displayed.length} map${displayed.length === 1 ? "" : "s"}`;
       if (!displayed.length) {
-        mapList.innerHTML = '<p class="empty-state">일치하는 맵이 없습니다.<br>다른 이름으로 검색해 보세요.</p>';
+        mapList.innerHTML = '<p class="empty-state">No matching maps found.<br>Try another name or a Korean map alias.</p>';
         return;
       }
       mapList.innerHTML = displayed.map(map => `
@@ -322,7 +326,7 @@
       state.selected = map;
       state.team = team;
       $("#selected-map-name").textContent = map.name;
-      $("#selected-map-description").textContent = `${team === "Red" ? "RED" : "BLUE"} 팀 전술 지도`;
+      $("#selected-map-description").textContent = `${team} team tactical map`;
       document.querySelectorAll(".team-button").forEach(button => {
         button.setAttribute("aria-pressed", String(button.dataset.team === team));
       });
@@ -357,7 +361,7 @@
     clearSearch.addEventListener("click", () => { search.value = ""; search.dispatchEvent(new Event("input")); search.focus(); });
     document.querySelectorAll(".team-button").forEach(button => button.addEventListener("click", () => setTeam(button.dataset.team)));
     mapImage.addEventListener("load", () => { mapImage.hidden = false; mapStage.classList.add("loaded"); });
-    mapImage.addEventListener("error", () => { mapStage.classList.add("load-error"); imageStatus.textContent = "지도 이미지를 찾을 수 없습니다."; });
+    mapImage.addEventListener("error", () => { mapStage.classList.add("load-error"); imageStatus.textContent = "Map image could not be found."; });
     mapImage.addEventListener("click", () => {
       if (!state.selected || mapImage.hidden) return;
       $("#modal-image").src = mapImage.src;
