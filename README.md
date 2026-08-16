@@ -1,2 +1,2 @@
-# WarDevOps.github.io
-Root site for WarDevOps GitHub Pages and ads.txt
+# wardevops.github.io/MapTactic
+Root site for WarDevOps GitHub Pages
