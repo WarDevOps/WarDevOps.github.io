@@ -40,6 +40,20 @@ import { maps, translations } from './data.js';
     const hiddenMarkers = new Set();
     const hiddenMarkerTypes = new Set();
     const MARKER_STORAGE_KEY = "maptactic-marker-layout-v1";
+    // Larger values render above smaller values. Equal-priority markers keep their placement order.
+    const MARKER_RENDER_Z_INDEX = Object.freeze({
+      smokeshell: 400,
+      lightTank: 300,
+      mainBattleTank: 300,
+      tankDestroyer: 300,
+      antiAir: 300,
+      battleLine: 200,
+      highRiskSpot: 200,
+      sniper: 200,
+      spawnKill: 200,
+      route: 100,
+      aimHere: 100
+    });
     let legendDragActive = false;
 
     legendItems.forEach(item => {
@@ -249,6 +263,9 @@ import { maps, translations } from './data.js';
         y: Math.round((y / rect.height) * 10000) / 100
       };
     }
+    function markerRenderZIndex(type) {
+      return MARKER_RENDER_Z_INDEX[type] ?? 0;
+    }
     function renderMarkerLayer(layer, image) {
       layer.replaceChildren();
       if (!state.selected || image.hidden) return;
@@ -264,6 +281,8 @@ import { maps, translations } from './data.js';
         button.draggable = state.editMode;
         button.style.left = `${Math.min(100, Math.max(0, x))}%`;
         button.style.top = `${Math.min(100, Math.max(0, y))}%`;
+        button.style.zIndex = String(markerRenderZIndex(marker.type));
+        button.dataset.markerPriority = String(markerRenderZIndex(marker.type));
         button.title = t(state.editMode ? "markerEditTitle" : "markerViewTitle");
         button.setAttribute("aria-label", `${t(marker.type)} — ${button.title}`);
         const icon = document.createElement("img");

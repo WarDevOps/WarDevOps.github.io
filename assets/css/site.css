@@ -200,7 +200,7 @@
     body.light-theme .language-switch, body.light-theme .theme-toggle, body.light-theme .team-switch, body.light-theme .marker-tool { background: rgba(255,255,255,.88); }
     body.light-theme #map-search, body.light-theme .map-index, body.light-theme .map-viewer { background: rgba(255,255,255,.82); }
     body.light-theme #map-search::placeholder { color: #738078; }
-    body.light-theme .map-stage, body.light-theme dialog, body.light-theme .modal-map-stage { background: #f7faf7; }
+    body.light-theme .map-stage, body.light-theme dialog, body.light-theme .modal-workspace, body.light-theme .modal-map-stage { background: #f7faf7; }
     body.light-theme .legend-panel { background: rgba(248,251,248,.94); }
     body.light-theme .legend-item { color: var(--ink); }
     body.light-theme .legend-item:hover, body.light-theme .map-card:hover, body.light-theme .clear-search:hover, body.light-theme .close-modal:hover { background: rgba(42,79,54,.07); }
@@ -209,7 +209,8 @@
     body.light-theme .marker-context-menu { box-shadow: 0 12px 30px rgba(30,53,39,.16); }
     body.light-theme .site-footer { color: #607066; }
 
-    dialog { width: min(1400px, calc(100% - 28px)); max-height: calc(100vh - 28px); padding: 0; overflow: hidden; border: 1px solid #46544f; border-radius: 14px; background: #0d1111; box-shadow: 0 30px 100px rgba(0,0,0,.65); }
+    dialog { position: fixed; inset: 0; width: 100vw; max-width: none; height: 100dvh; max-height: none; margin: 0; padding: 0; overflow: hidden; border: 0; border-radius: 0; background: #0d1111; box-shadow: none; }
+    dialog[open] { display: grid; grid-template-rows: auto auto minmax(0, 1fr); }
     dialog::backdrop { background: rgba(4, 7, 6, .82); backdrop-filter: blur(4px); }
     .modal-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 13px 16px; border-bottom: 1px solid var(--line); background: var(--surface); }
     #modal-title { color: var(--muted); font-size: .86rem; font-weight: 700; }
@@ -219,14 +220,15 @@
     .modal-marker-tools .marker-tool { padding: 7px 9px; }
     .modal-marker-status { color: var(--muted); font-size: .73rem; }
     .modal-marker-editor-note { width: 100%; margin: 0; color: var(--muted); font-size: .72rem; line-height: 1.4; }
-    .modal-legend-region { padding: 8px 14px; border-bottom: 1px solid var(--line); background: rgba(13,19,18,.36); }
+    .modal-workspace { display: grid; grid-template-columns: minmax(0, 1fr) minmax(220px, 290px); min-height: 0; background: #0d1111; overflow: hidden; }
+    .modal-legend-region { min-width: 0; padding: 12px 10px; overflow: auto; border-left: 1px solid var(--line); background: rgba(13,19,18,.36); }
     .modal-legend-note { margin: 0 0 6px; color: var(--muted); font-size: .7rem; }
-    .modal-legend-list { display: flex; gap: 4px; margin: 0; padding: 0 0 2px; overflow-x: auto; list-style: none; }
-    .modal-legend-list .legend-item { flex: 0 0 auto; min-height: 34px; padding: 4px 7px; font-size: .72rem; white-space: nowrap; }
+    .modal-legend-list { display: grid; gap: 2px; margin: 0; padding: 0; list-style: none; }
+    .modal-legend-list .legend-item { min-height: 34px; padding: 4px 7px; font-size: .72rem; }
     .modal-legend-list .legend-icon { flex-basis: 24px; width: 24px; height: 24px; }
     .modal-legend-list .legend-icon img { max-width: 19px; max-height: 19px; }
-    .modal-map-stage { position: relative; display: grid; height: min(600px, calc(100vh - 255px)); min-height: 260px; overflow: hidden; place-items: center; background: #0d1111; }
-    #modal-image { display: block; max-width: 100%; max-height: 100%; object-fit: contain; }
+    .modal-map-stage { position: relative; display: grid; min-width: 0; min-height: 0; overflow: hidden; place-items: center; background: #0d1111; }
+    #modal-image { display: block; width: 100%; height: 100%; max-width: 100%; max-height: 100%; object-fit: contain; }
     dialog.is-editing .modal-map-stage { box-shadow: inset 0 0 0 1px rgba(214,219,157,.3); }
     dialog.is-editing .map-marker { cursor: grab; }
     dialog.is-editing .map-marker:active { cursor: grabbing; }
@@ -246,8 +248,9 @@
       .map-viewer { min-height: 0; }
       .marker-tools { padding-bottom: 14px; }
       .modal-marker-tools { padding: 8px 10px 7px; }
-      .modal-legend-region { padding: 7px 10px; }
-      .modal-map-stage { height: calc(100vh - 270px); min-height: 230px; }
+      .modal-workspace { grid-template-columns: minmax(0, 1fr) 172px; }
+      .modal-legend-region { padding: 7px 6px; }
+      .modal-legend-list .legend-item { gap: 6px; padding: 4px; font-size: .67rem; }
       .map-layout { grid-template-columns: 1fr; }
       .map-stage { min-height: 270px; }
       .legend-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }

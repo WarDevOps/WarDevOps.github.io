@@ -123,21 +123,23 @@
       <span class="modal-marker-status" id="modal-marker-status" role="status" aria-live="polite"></span>
       <p class="modal-marker-editor-note" id="modal-marker-editor-note">Enter edit mode to drag icons from the legend onto the map.</p>
     </div>
-    <div class="modal-legend-region">
-      <p class="modal-legend-note" data-i18n="modalLegendHint">Click an icon to hide or restore that marker type.</p>
-      <ul class="modal-legend-list" id="modal-legend-list"></ul>
-    </div>
-    <div class="modal-map-stage" id="modal-map-stage">
-      <img id="modal-image" alt="">
-      <div class="marker-layer" id="modal-marker-layer" aria-label="Map markers" data-i18n-aria="mapMarkers"></div>
-      <div class="marker-context-menu" id="modal-marker-context-menu" role="menu" aria-label="Marker actions" data-i18n-aria="markerActions" hidden>
-        <button class="marker-context-action" type="button" data-marker-action="hide" role="menuitem" data-i18n="hideMarker">Hide Marker</button>
-        <button class="marker-context-action delete" type="button" data-marker-action="delete" role="menuitem" data-i18n="deleteMarker">Delete Marker</button>
+    <div class="modal-workspace">
+      <div class="modal-map-stage" id="modal-map-stage">
+        <img id="modal-image" alt="">
+        <div class="marker-layer" id="modal-marker-layer" aria-label="Map markers" data-i18n-aria="mapMarkers"></div>
+        <div class="marker-context-menu" id="modal-marker-context-menu" role="menu" aria-label="Marker actions" data-i18n-aria="markerActions" hidden>
+          <button class="marker-context-action" type="button" data-marker-action="hide" role="menuitem" data-i18n="hideMarker">Hide Marker</button>
+          <button class="marker-context-action delete" type="button" data-marker-action="delete" role="menuitem" data-i18n="deleteMarker">Delete Marker</button>
+        </div>
       </div>
+      <aside class="modal-legend-region" aria-label="Map Legend" data-i18n-aria="mapLegend">
+        <p class="modal-legend-note" data-i18n="modalLegendHint">Click an icon to hide or restore that marker type.</p>
+        <ul class="modal-legend-list" id="modal-legend-list"></ul>
+      </aside>
     </div>
   </dialog>
 
 
-  <script type="module" src="assets/js/app.js?v=9dc79c6"></script>
+  <script type="module" src="assets/js/app.js?v=modal-fullscreen-20260816"></script>
 </body>
 </html>
