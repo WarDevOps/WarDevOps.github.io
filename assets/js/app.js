@@ -1,6 +1,6 @@
     import { loadMarkerLayout, saveMarkerLayout as saveMarkerLayoutToStorage } from './marker-storage.js';
 import { initVisitorCounter } from './visitor-counter.js';
-import { maps, translations } from './data.js?v=scaled-drawings-20260817';
+import { maps, translations } from './data.js?v=route-chains-20260817';
 
 
     const state = { selected: null, team: "Red", query: "", language: "en", theme: "dark", editMode: false, contextMarkerId: null, contextAnnotationId: null, drawing: null };
@@ -395,7 +395,7 @@ import { maps, translations } from './data.js?v=scaled-drawings-20260817';
     }
     function startRouteDrawing() {
       if (!state.selected) return;
-      state.drawing = { type: "route", startX: null, startY: null, endX: null, endY: null };
+      state.drawing = { type: "route", points: [], endX: null, endY: null };
       hideAnnotationContextMenu();
       updateDrawingState();
       renderMarkers();
@@ -403,7 +403,7 @@ import { maps, translations } from './data.js?v=scaled-drawings-20260817';
     }
     function updateDrawingPreview(position) {
       if (!state.drawing || !position) return;
-      if (state.drawing.type === "route" && state.drawing.startX === null) return;
+      if (state.drawing.type === "route" && !state.drawing.points.length) return;
       state.drawing.endX = position.x;
       state.drawing.endY = position.y;
       renderMarkers();
@@ -411,13 +411,12 @@ import { maps, translations } from './data.js?v=scaled-drawings-20260817';
     function completeDrawing(position) {
       if (!state.drawing || !position) return false;
       const drawing = state.drawing;
-      if (drawing.type === "route" && drawing.startX === null) {
-        drawing.startX = position.x;
-        drawing.startY = position.y;
+      if (drawing.type === "route") {
+        drawing.points.push({ x: position.x, y: position.y });
         drawing.endX = position.x;
         drawing.endY = position.y;
         renderMarkers();
-        setMarkerStatus("routeEndPrompt");
+        setMarkerStatus(drawing.points.length === 1 ? "routeEndPrompt" : "routeContinuePrompt");
         return true;
       }
       drawing.endX = position.x;
@@ -427,6 +426,21 @@ import { maps, translations } from './data.js?v=scaled-drawings-20260817';
       updateDrawingState();
       persistMarkerLayout(drawing.type === "aimHere" ? "aimHereDrawn" : "routeDrawn");
       renderMarkers();
+      return true;
+    }
+    function finishRouteDrawing() {
+      const drawing = state.drawing;
+      if (!drawing || drawing.type !== "route") return false;
+      if (drawing.points.length >= 2) {
+        currentAnnotations().push({ id: createLayoutId(), type: "route", points: drawing.points.map(point => ({ x: point.x, y: point.y })) });
+        state.drawing = null;
+        updateDrawingState();
+        persistMarkerLayout("routeDrawn");
+        renderMarkers();
+      } else {
+        cancelDrawing();
+        setMarkerStatus("routeCancelled");
+      }
       return true;
     }
     function updateContextRoleActions(contextMenu, marker) {
@@ -517,7 +531,30 @@ import { maps, translations } from './data.js?v=scaled-drawings-20260817';
     function isMarkerPlacementEnabled(type) {
       return !PLACEMENT_DISABLED_MARKER_TYPES.has(type);
     }
+    function routePoints(annotation) {
+      if (Array.isArray(annotation.points)) return annotation.points;
+      const { startX, startY, endX, endY } = annotation;
+      return [startX, startY, endX, endY].every(Number.isFinite)
+        ? [{ x: startX, y: startY }, { x: endX, y: endY }]
+        : [];
+    }
     function renderAnnotation(layer, annotation, isPreview = false) {
+      if (annotation.type !== "route") {
+        renderAnnotationSegment(layer, annotation, isPreview);
+        return;
+      }
+      const points = routePoints(annotation);
+      for (let index = 1; index < points.length; index += 1) {
+        renderAnnotationSegment(layer, {
+          ...annotation,
+          startX: points[index - 1].x,
+          startY: points[index - 1].y,
+          endX: points[index].x,
+          endY: points[index].y
+        }, isPreview);
+      }
+    }
+    function renderAnnotationSegment(layer, annotation, isPreview = false) {
       const startX = Number(annotation.startX);
       const startY = Number(annotation.startY);
       const endX = Number(annotation.endX);
@@ -576,7 +613,17 @@ import { maps, translations } from './data.js?v=scaled-drawings-20260817';
         if (!ANNOTATION_TYPES.has(annotation.type) || isAnnotationHidden(annotation)) return;
         renderAnnotation(layer, annotation);
       });
-      if (state.drawing && state.drawing.startX !== null) renderAnnotation(layer, state.drawing, true);
+      if (!state.drawing) return;
+      if (state.drawing.type !== "route") {
+        renderAnnotation(layer, state.drawing, true);
+        return;
+      }
+      const points = state.drawing.points.map(point => ({ x: point.x, y: point.y }));
+      const lastPoint = points.at(-1);
+      if (lastPoint && Number.isFinite(state.drawing.endX) && Number.isFinite(state.drawing.endY) && (lastPoint.x !== state.drawing.endX || lastPoint.y !== state.drawing.endY)) {
+        points.push({ x: state.drawing.endX, y: state.drawing.endY });
+      }
+      renderAnnotation(layer, { id: "preview", type: "route", points }, true);
     }
     function renderMarkerLayer(layer, image) {
       layer.replaceChildren();
@@ -686,23 +733,30 @@ import { maps, translations } from './data.js?v=scaled-drawings-20260817';
         });
       });
       let annotationCount = 0;
+      let routePointCount = 0;
       Object.entries(data.annotations || {}).forEach(([key, annotations]) => {
         if (!validMarkerLayoutKeys.has(key) || !Array.isArray(annotations)) throw new Error("Invalid drawing group.");
         const ids = new Set();
         layout.annotations[key] = annotations.map(annotation => {
           const hasValidCoordinates = [annotation?.startX, annotation?.startY, annotation?.endX, annotation?.endY].every(value => Number.isFinite(value) && value >= 0 && value <= 100);
           const isAimHere = annotation?.type === "aimHere";
-          if (!annotation || typeof annotation !== "object" || Array.isArray(annotation) || typeof annotation.id !== "string" || !annotation.id || ids.has(annotation.id) || !ANNOTATION_TYPES.has(annotation.type) || !hasValidCoordinates || (isAimHere && (typeof annotation.parentTankId !== "string" || !annotation.parentTankId)) || (!isAimHere && Object.prototype.hasOwnProperty.call(annotation, "parentTankId"))) {
+          const hasRoutePoints = Array.isArray(annotation?.points) && annotation.points.length >= 2 && annotation.points.every(point => point && typeof point === "object" && !Array.isArray(point) && Number.isFinite(point.x) && point.x >= 0 && point.x <= 100 && Number.isFinite(point.y) && point.y >= 0 && point.y <= 100);
+          const hasLegacyRoute = !isAimHere && hasValidCoordinates;
+          if (!annotation || typeof annotation !== "object" || Array.isArray(annotation) || typeof annotation.id !== "string" || !annotation.id || ids.has(annotation.id) || !ANNOTATION_TYPES.has(annotation.type) || (isAimHere && (!hasValidCoordinates || typeof annotation.parentTankId !== "string" || !annotation.parentTankId)) || (!isAimHere && (!hasRoutePoints && !hasLegacyRoute)) || (!isAimHere && Object.prototype.hasOwnProperty.call(annotation, "parentTankId"))) {
             throw new Error("Invalid drawing.");
           }
           const tankMarker = isAimHere ? layout.markers[key]?.find(marker => marker.id === annotation.parentTankId) : null;
           if (isAimHere && (!isTankMarker(tankMarker) || annotation.startX !== tankMarker.x || annotation.startY !== tankMarker.y)) throw new Error("Invalid aim drawing.");
           annotationCount += 1;
           if (annotationCount > MAX_IMPORTED_ANNOTATIONS) throw new Error("Too many drawings.");
+          if (hasRoutePoints) {
+            routePointCount += annotation.points.length;
+            if (routePointCount > MAX_IMPORTED_ANNOTATIONS) throw new Error("Too many route points.");
+          }
           ids.add(annotation.id);
-          return isAimHere
-            ? { id: annotation.id, type: annotation.type, parentTankId: annotation.parentTankId, startX: annotation.startX, startY: annotation.startY, endX: annotation.endX, endY: annotation.endY }
-            : { id: annotation.id, type: annotation.type, startX: annotation.startX, startY: annotation.startY, endX: annotation.endX, endY: annotation.endY };
+          if (isAimHere) return { id: annotation.id, type: annotation.type, parentTankId: annotation.parentTankId, startX: annotation.startX, startY: annotation.startY, endX: annotation.endX, endY: annotation.endY };
+          if (hasRoutePoints) return { id: annotation.id, type: annotation.type, points: annotation.points.map(point => ({ x: point.x, y: point.y })) };
+          return { id: annotation.id, type: annotation.type, startX: annotation.startX, startY: annotation.startY, endX: annotation.endX, endY: annotation.endY };
         });
       });
       return layout;
@@ -858,6 +912,12 @@ import { maps, translations } from './data.js?v=scaled-drawings-20260817';
         if (!completeDrawing(position)) return;
         event.preventDefault();
         event.stopPropagation();
+      }, true);
+      stage.addEventListener("contextmenu", event => {
+        if (state.drawing?.type !== "route") return;
+        event.preventDefault();
+        event.stopPropagation();
+        finishRouteDrawing();
       }, true);
       stage.addEventListener("dragover", event => {
         if (!state.editMode || !event.dataTransfer) return;
