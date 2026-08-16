@@ -210,6 +210,7 @@
     body.light-theme .map-enlarge-hint { border-color: rgba(25,48,35,.15); background: rgba(255,255,255,.88); color: var(--ink); }
     body.light-theme .marker-context-menu { box-shadow: 0 12px 30px rgba(30,53,39,.16); }
     body.light-theme .site-footer { color: #607066; }
+    body.light-theme .visitor-counter { border-color: rgba(25,48,35,.16); background: rgba(255,255,255,.84); color: #607066; }
 
     dialog { position: fixed; inset: 0; width: 100vw; max-width: none; height: 100dvh; max-height: none; margin: 0; padding: 0; overflow: hidden; border: 0; border-radius: 0; background: #0d1111; box-shadow: none; }
     dialog[open] { display: grid; grid-template-rows: auto auto minmax(0, 1fr); }
@@ -243,6 +244,8 @@
     dialog.is-editing .modal-legend-list .legend-item.is-placement-disabled:hover { cursor: not-allowed; opacity: .48; outline: 0; }
 
     .site-footer { width: min(1240px, calc(100% - 40px)); padding: 0 0 30px; margin: 0 auto; color: #718079; font-size: .75rem; text-align: center; }
+    .visitor-counter { position: fixed; z-index: 4; left: max(14px, env(safe-area-inset-left)); bottom: max(12px, env(safe-area-inset-bottom)); display: flex; gap: 9px; padding: 6px 8px; border: 1px solid rgba(154,168,162,.2); border-radius: 6px; background: rgba(17,23,25,.78); color: var(--muted); font-size: .64rem; font-variant-numeric: tabular-nums; letter-spacing: .04em; pointer-events: none; backdrop-filter: blur(5px); }
+    .visitor-counter strong { color: var(--ink); font-weight: 750; }
     @media (max-width: 760px) {
       .site-header, main, .site-footer { width: min(100% - 28px, 1240px); }
       .site-header { min-height: 64px; }

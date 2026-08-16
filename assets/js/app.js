@@ -1,5 +1,6 @@
     import { loadMarkerLayout, saveMarkerLayout as saveMarkerLayoutToStorage } from './marker-storage.js';
-import { maps, translations } from './data.js?v=marker-layout-import-20260817';
+import { initVisitorCounter } from './visitor-counter.js';
+import { maps, translations } from './data.js?v=visitor-counter-20260817';
 
 
     const state = { selected: null, team: "Red", query: "", language: "en", theme: "dark", editMode: false, contextMarkerId: null };
@@ -636,3 +637,4 @@ import { maps, translations } from './data.js?v=marker-layout-import-20260817';
     });
     setLanguage("en");
     restoreFromUrl();
+    initVisitorCounter();
