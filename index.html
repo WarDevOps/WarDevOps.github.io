@@ -59,6 +59,7 @@
           <button class="marker-tool primary" id="toggle-editor" type="button" aria-pressed="false" data-i18n="editMarkers">Edit Markers</button>
           <button class="marker-tool" id="save-marker-layout" type="button" data-i18n="saveLocally">Save Locally</button>
           <button class="marker-tool" id="export-marker-layout" type="button" data-i18n="exportJson">Export JSON</button>
+          <button class="marker-tool" id="import-marker-layout" type="button" data-i18n="importJson">Import JSON</button>
           <button class="marker-tool" id="reset-hidden-markers" type="button" data-i18n="resetHidden">Reset Hidden</button>
           <button class="marker-tool danger" id="reset-all-markers" type="button" data-i18n="resetAllMarkers">Reset All Markers</button>
           <span class="marker-status" id="marker-status" role="status" aria-live="polite"></span>
@@ -131,6 +132,7 @@
       <button class="marker-tool primary" id="modal-toggle-editor" type="button" aria-pressed="false" data-i18n="editMarkers">Edit Markers</button>
       <button class="marker-tool" id="modal-save-marker-layout" type="button" data-i18n="saveLocally">Save Locally</button>
       <button class="marker-tool" id="modal-export-marker-layout" type="button" data-i18n="exportJson">Export JSON</button>
+      <button class="marker-tool" id="modal-import-marker-layout" type="button" data-i18n="importJson">Import JSON</button>
       <button class="marker-tool" id="modal-reset-hidden-markers" type="button" data-i18n="resetHidden">Reset Hidden</button>
       <button class="marker-tool danger" id="modal-reset-all-markers" type="button" data-i18n="resetAllMarkers">Reset All Markers</button>
       <span class="modal-marker-status" id="modal-marker-status" role="status" aria-live="polite"></span>
@@ -152,7 +154,8 @@
     </div>
   </dialog>
 
+  <input id="marker-layout-import-file" type="file" accept="application/json,.json" hidden>
 
-  <script type="module" src="assets/js/app.js?v=modal-team-campania-20260817"></script>
+  <script type="module" src="assets/js/app.js?v=marker-layout-import-20260817"></script>
 </body>
 </html>

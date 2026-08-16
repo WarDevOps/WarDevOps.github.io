@@ -1,5 +1,5 @@
     import { loadMarkerLayout, saveMarkerLayout as saveMarkerLayoutToStorage } from './marker-storage.js';
-import { maps, translations } from './data.js?v=modal-team-campania-20260817';
+import { maps, translations } from './data.js?v=marker-layout-import-20260817';
 
 
     const state = { selected: null, team: "Red", query: "", language: "en", theme: "dark", editMode: false, contextMarkerId: null };
@@ -18,6 +18,7 @@ import { maps, translations } from './data.js?v=modal-team-campania-20260817';
     const modalToggleEditor = $("#modal-toggle-editor");
     const modalSaveMarkerLayout = $("#modal-save-marker-layout");
     const modalExportMarkerLayout = $("#modal-export-marker-layout");
+    const modalImportMarkerLayout = $("#modal-import-marker-layout");
     const modalResetHiddenMarkers = $("#modal-reset-hidden-markers");
     const modalResetAllMarkers = $("#modal-reset-all-markers");
     const modalMarkerStatus = $("#modal-marker-status");
@@ -31,6 +32,8 @@ import { maps, translations } from './data.js?v=modal-team-campania-20260817';
     const toggleEditor = $("#toggle-editor");
     const saveMarkerLayout = $("#save-marker-layout");
     const exportMarkerLayout = $("#export-marker-layout");
+    const importMarkerLayout = $("#import-marker-layout");
+    const markerLayoutImportFile = $("#marker-layout-import-file");
     const resetHiddenMarkers = $("#reset-hidden-markers");
     const resetAllMarkers = $("#reset-all-markers");
     const markerStatus = $("#marker-status");
@@ -40,6 +43,8 @@ import { maps, translations } from './data.js?v=modal-team-campania-20260817';
     const hiddenMarkers = new Set();
     const hiddenMarkerTypes = new Set();
     const MARKER_STORAGE_KEY = "maptactic-marker-layout-v1";
+    const MARKER_LAYOUT_VERSION = 1;
+    const MAX_IMPORTED_MARKERS = 5000;
     // Larger values render above smaller values. Equal-priority markers keep their placement order.
     const MARKER_RENDER_Z_INDEX = Object.freeze({
       smokeshell: 400,
@@ -80,6 +85,7 @@ import { maps, translations } from './data.js?v=modal-team-campania-20260817';
       markerTypes.set(label.dataset.i18n, { icon: icon.getAttribute("src") });
     });
     const markerLayout = loadMarkerLayout(MARKER_STORAGE_KEY);
+    const validMarkerLayoutKeys = new Set(maps.flatMap(map => ["Red", "Blue"].map(team => `${map.name}|${team}`)));
 
     function t(key) {
       return translations[state.language][key];
@@ -357,6 +363,51 @@ import { maps, translations } from './data.js?v=modal-team-campania-20260817';
       window.setTimeout(() => URL.revokeObjectURL(url), 0);
       setMarkerStatus("exportedJson");
     }
+    function validateImportedMarkerLayout(data) {
+      if (!data || typeof data !== "object" || Array.isArray(data) || data.version !== MARKER_LAYOUT_VERSION || !data.markers || typeof data.markers !== "object" || Array.isArray(data.markers)) {
+        throw new Error("Invalid marker layout.");
+      }
+      const layout = { version: MARKER_LAYOUT_VERSION, markers: {} };
+      let markerCount = 0;
+      Object.entries(data.markers).forEach(([key, markers]) => {
+        if (!validMarkerLayoutKeys.has(key) || !Array.isArray(markers)) throw new Error("Invalid marker group.");
+        const ids = new Set();
+        layout.markers[key] = markers.map(marker => {
+          if (!marker || typeof marker !== "object" || Array.isArray(marker) || typeof marker.id !== "string" || !marker.id || ids.has(marker.id) || !markerTypes.has(marker.type) || !Number.isFinite(marker.x) || !Number.isFinite(marker.y) || marker.x < 0 || marker.x > 100 || marker.y < 0 || marker.y > 100) {
+            throw new Error("Invalid marker.");
+          }
+          markerCount += 1;
+          if (markerCount > MAX_IMPORTED_MARKERS) throw new Error("Too many markers.");
+          ids.add(marker.id);
+          return { id: marker.id, type: marker.type, x: marker.x, y: marker.y };
+        });
+      });
+      return layout;
+    }
+    async function importMarkerLayoutFile(file) {
+      if (!file || file.size > 2 * 1024 * 1024) {
+        setMarkerStatus("invalidJson");
+        return;
+      }
+      try {
+        const importedLayout = validateImportedMarkerLayout(JSON.parse(await file.text()));
+        markerLayout.version = importedLayout.version;
+        markerLayout.markers = importedLayout.markers;
+        delete markerLayout.updatedAt;
+        hiddenMarkers.clear();
+        hiddenMarkerTypes.clear();
+        hideMarkerContextMenu();
+        updateLegendVisibility();
+        persistMarkerLayout("importedJson");
+        renderMarkers();
+      } catch (error) {
+        setMarkerStatus("invalidJson");
+      }
+    }
+    function requestMarkerLayoutImport() {
+      markerLayoutImportFile.value = "";
+      markerLayoutImportFile.click();
+    }
 
     function mapPath(map, team) {
       const image = map.sharedImage || `${team}.png`;
@@ -535,6 +586,9 @@ import { maps, translations } from './data.js?v=modal-team-campania-20260817';
     modalSaveMarkerLayout.addEventListener("click", () => persistMarkerLayout());
     exportMarkerLayout.addEventListener("click", exportMarkerLayoutData);
     modalExportMarkerLayout.addEventListener("click", exportMarkerLayoutData);
+    importMarkerLayout.addEventListener("click", requestMarkerLayoutImport);
+    modalImportMarkerLayout.addEventListener("click", requestMarkerLayoutImport);
+    markerLayoutImportFile.addEventListener("change", () => importMarkerLayoutFile(markerLayoutImportFile.files?.[0]));
     resetHiddenMarkers.addEventListener("click", resetHiddenMarkersForCurrentMap);
     modalResetHiddenMarkers.addEventListener("click", resetHiddenMarkersForCurrentMap);
     resetAllMarkers.addEventListener("click", resetAllPlacedMarkers);
