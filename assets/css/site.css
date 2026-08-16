@@ -152,14 +152,24 @@
     .map-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(208px, 245px); gap: 16px; align-items: start; padding: 0 clamp(12px, 3vw, 28px) 20px; }
     .map-stage { position: relative; min-height: 470px; display: grid; overflow: hidden; place-items: center; border: 1px solid var(--line); border-radius: 12px; background: #0d1111; }
     .map-enlarge-hint { position: absolute; right: 14px; bottom: 12px; z-index: 1; padding: 7px 9px; border: 1px solid rgba(255,255,255,.13); border-radius: 7px; background: rgba(10, 14, 13, .78); color: #d7ded9; font-size: .73rem; pointer-events: none; }
-    .marker-layer { position: absolute; z-index: 2; overflow: hidden; pointer-events: none; }
+    .annotation-layer, .marker-layer { position: absolute; overflow: hidden; pointer-events: none; }
+    .annotation-layer { z-index: 1; }
+    .marker-layer { z-index: 2; }
+    .map-annotation { position: absolute; display: block; padding: 0; border: 0; background: transparent; color: #fff; cursor: pointer; opacity: .5; pointer-events: auto; }
+    .map-annotation.is-preview { pointer-events: none; }
+    .aim-arrow { height: 32px; transform-origin: 0 16px; }
+    .aim-arrow-shaft { position: absolute; top: 14px; left: 0; height: 4px; background: #fff; }
+    .aim-arrow-head { position: absolute; top: 0; display: block; width: 32px; height: 32px; max-width: none; pointer-events: none; }
+    .route-line { height: 2px; transform-origin: 0 1px; background: repeating-linear-gradient(to right, #fff 0 10px, transparent 10px 20px); }
     .map-marker { position: absolute; display: block; width: auto; height: auto; padding: 0; transform: translate(-50%, -50%); border: 0; border-radius: 0; background: transparent; box-shadow: none; cursor: pointer; line-height: 0; pointer-events: auto; }
     .map-marker:hover { filter: drop-shadow(0 0 4px var(--accent)); }
     .map-marker img { display: block; width: auto; height: auto; max-width: none; max-height: none; object-fit: initial; pointer-events: none; }
     .map-viewer.is-editing .map-stage { border-color: var(--accent); box-shadow: inset 0 0 0 1px rgba(214,219,157,.3); }
+    .map-stage.is-drawing, .modal-map-stage.is-drawing { cursor: crosshair; }
     .map-viewer.is-editing .map-marker { cursor: grab; }
     .map-viewer.is-editing .map-marker:active { cursor: grabbing; }
     .map-viewer.is-editing .legend-item[data-marker-type] { cursor: grab; }
+    .map-viewer.is-editing .legend-item[data-marker-type="route"] { cursor: crosshair; }
     .map-viewer.is-editing .legend-item[data-marker-type]:hover { outline: 1px dashed rgba(214,219,157,.5); }
     .map-viewer.is-editing .legend-item.is-placement-disabled,
     .map-viewer.is-editing .legend-item.is-placement-disabled:hover { cursor: not-allowed; opacity: .48; outline: 0; }
@@ -184,14 +194,16 @@
     .team-legend .red-dot { background: var(--red); }
     .team-legend .blue-dot { background: var(--blue); }
 
-    .marker-context-menu { position: absolute; z-index: 4; min-width: 172px; padding: 5px; border: 1px solid var(--line); border-radius: 9px; background: var(--surface); box-shadow: 0 12px 30px rgba(0,0,0,.35); }
-    .marker-context-menu[hidden] { display: none; }
+    .marker-context-menu, .annotation-context-menu { position: absolute; z-index: 4; min-width: 172px; padding: 5px; border: 1px solid var(--line); border-radius: 9px; background: var(--surface); box-shadow: 0 12px 30px rgba(0,0,0,.35); }
+    .marker-context-menu[hidden], .annotation-context-menu[hidden] { display: none; }
     .marker-context-role-actions { margin: 0 0 5px; padding: 0 0 5px; border-bottom: 1px solid var(--line); }
     .marker-context-role-actions[hidden] { display: none; }
     .marker-context-role-title { margin: 4px 8px 3px; color: var(--muted); font-size: .66rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
     .marker-context-action { display: block; width: 100%; padding: 8px 10px; border: 0; border-radius: 6px; background: transparent; color: var(--ink); font-size: .77rem; text-align: left; cursor: pointer; }
     .marker-context-action:hover { background: var(--surface-raised); }
     .marker-context-action.role[aria-pressed="true"] { background: rgba(214,219,157,.15); color: var(--accent-strong); }
+    .marker-context-action.drawing-tool { display: inline-flex; align-items: center; gap: 7px; }
+    .marker-context-action.drawing-tool img { display: block; width: 24px; height: 24px; object-fit: contain; }
     .marker-context-action.delete { color: var(--red); }
 
     body.light-theme {
@@ -222,7 +234,7 @@
     body.light-theme .legend-item:hover, body.light-theme .map-card:hover, body.light-theme .clear-search:hover, body.light-theme .close-modal:hover { background: rgba(42,79,54,.07); }
     body.light-theme .legend-icon { border-color: rgba(25,48,35,.1); background: rgba(25,48,35,.035); }
     body.light-theme .map-enlarge-hint { border-color: rgba(25,48,35,.15); background: rgba(255,255,255,.88); color: var(--ink); }
-    body.light-theme .marker-context-menu { box-shadow: 0 12px 30px rgba(30,53,39,.16); }
+    body.light-theme .marker-context-menu, body.light-theme .annotation-context-menu { box-shadow: 0 12px 30px rgba(30,53,39,.16); }
     body.light-theme .site-footer { color: #607066; }
     body.light-theme .visitor-counter { border-color: rgba(25,48,35,.16); background: rgba(255,255,255,.84); color: #607066; }
 
@@ -254,6 +266,7 @@
     dialog.is-editing .map-marker { cursor: grab; }
     dialog.is-editing .map-marker:active { cursor: grabbing; }
     dialog.is-editing .modal-legend-list .legend-item[data-marker-type] { cursor: grab; }
+    dialog.is-editing .modal-legend-list .legend-item[data-marker-type="route"] { cursor: crosshair; }
     dialog.is-editing .modal-legend-list .legend-item[data-marker-type]:hover { outline: 1px dashed rgba(214,219,157,.5); }
     dialog.is-editing .modal-legend-list .legend-item.is-placement-disabled,
     dialog.is-editing .modal-legend-list .legend-item.is-placement-disabled:hover { cursor: not-allowed; opacity: .48; outline: 0; }

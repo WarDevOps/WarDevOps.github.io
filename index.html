@@ -9,7 +9,7 @@
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7687032122626786" crossorigin="anonymous"></script>
   <title>WarDevOps | War Thunder Map Tactic</title>
 
-  <link rel="stylesheet" href="assets/css/site.css?v=role-markers-20260817">
+  <link rel="stylesheet" href="assets/css/site.css?v=map-drawings-20260817">
 </head>
 <body>
   <header class="site-header">
@@ -71,6 +71,7 @@
           <div class="map-stage" id="map-stage">
           <span class="image-loading" id="image-status">Now Loading…</span>
           <img id="map-image" alt="" hidden>
+          <div class="annotation-layer" id="annotation-layer" aria-label="Map drawings" data-i18n-aria="mapDrawings"></div>
           <div class="marker-layer" id="marker-layer" aria-label="Map markers" data-i18n-aria="mapMarkers"></div>
           <span class="map-enlarge-hint" data-i18n="enlargeHint">Click to enlarge</span>
           <div class="marker-context-menu" id="marker-context-menu" role="menu" aria-label="Marker actions" data-i18n-aria="markerActions" hidden>
@@ -81,8 +82,13 @@
               <button class="marker-context-action role" type="button" data-marker-role="sniper" role="menuitemradio" aria-pressed="false" data-i18n="sniper">Sniper</button>
               <button class="marker-context-action role" type="button" data-marker-role="spawnKill" role="menuitemradio" aria-pressed="false" data-i18n="spawnKill">Spawn Kill Spot</button>
             </div>
+            <button class="marker-context-action drawing-tool" type="button" data-marker-tool="aimHere" role="menuitem"><img src="Legend/Aim%20here.png" alt=""><span data-i18n="aimHere">Aim Here</span></button>
             <button class="marker-context-action" type="button" data-marker-action="hide" role="menuitem" data-i18n="hideMarker">Hide Marker</button>
             <button class="marker-context-action delete" type="button" data-marker-action="delete" role="menuitem" data-i18n="deleteMarker">Delete Marker</button>
+          </div>
+          <div class="annotation-context-menu" id="annotation-context-menu" role="menu" aria-label="Drawing actions" data-i18n-aria="drawingActions" hidden>
+            <button class="marker-context-action" type="button" data-annotation-action="hide" role="menuitem" data-i18n="hideDrawing">Hide Drawing</button>
+            <button class="marker-context-action delete" type="button" data-annotation-action="delete" role="menuitem" data-i18n="deleteDrawing">Delete Drawing</button>
           </div>
           </div>
           <aside class="legend-panel" aria-label="Map legend" data-i18n-aria="mapLegend">
@@ -157,6 +163,7 @@
     <div class="modal-workspace">
       <div class="modal-map-stage" id="modal-map-stage">
         <img id="modal-image" alt="">
+        <div class="annotation-layer" id="modal-annotation-layer" aria-label="Map drawings" data-i18n-aria="mapDrawings"></div>
         <div class="marker-layer" id="modal-marker-layer" aria-label="Map markers" data-i18n-aria="mapMarkers"></div>
         <div class="marker-context-menu" id="modal-marker-context-menu" role="menu" aria-label="Marker actions" data-i18n-aria="markerActions" hidden>
           <div class="marker-context-role-actions" data-role-marker-actions hidden>
@@ -166,8 +173,13 @@
             <button class="marker-context-action role" type="button" data-marker-role="sniper" role="menuitemradio" aria-pressed="false" data-i18n="sniper">Sniper</button>
             <button class="marker-context-action role" type="button" data-marker-role="spawnKill" role="menuitemradio" aria-pressed="false" data-i18n="spawnKill">Spawn Kill Spot</button>
           </div>
+          <button class="marker-context-action drawing-tool" type="button" data-marker-tool="aimHere" role="menuitem"><img src="Legend/Aim%20here.png" alt=""><span data-i18n="aimHere">Aim Here</span></button>
           <button class="marker-context-action" type="button" data-marker-action="hide" role="menuitem" data-i18n="hideMarker">Hide Marker</button>
           <button class="marker-context-action delete" type="button" data-marker-action="delete" role="menuitem" data-i18n="deleteMarker">Delete Marker</button>
+        </div>
+        <div class="annotation-context-menu" id="modal-annotation-context-menu" role="menu" aria-label="Drawing actions" data-i18n-aria="drawingActions" hidden>
+          <button class="marker-context-action" type="button" data-annotation-action="hide" role="menuitem" data-i18n="hideDrawing">Hide Drawing</button>
+          <button class="marker-context-action delete" type="button" data-annotation-action="delete" role="menuitem" data-i18n="deleteDrawing">Delete Drawing</button>
         </div>
       </div>
       <aside class="modal-legend-region" aria-label="Map Legend" data-i18n-aria="mapLegend">
@@ -183,6 +195,6 @@
 
   <input id="marker-layout-import-file" type="file" accept="application/json,.json" hidden>
 
-  <script type="module" src="assets/js/app.js?v=role-markers-20260817"></script>
+  <script type="module" src="assets/js/app.js?v=map-drawings-20260817"></script>
 </body>
 </html>
