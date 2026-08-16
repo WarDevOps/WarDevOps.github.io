@@ -74,7 +74,13 @@
     .brand-mark i { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); }
     .brand-name { font-size: 1.05rem; font-weight: 800; letter-spacing: .04em; }
     .brand-name span { color: var(--accent); }
+    .header-actions { display: flex; align-items: center; gap: 18px; }
     .header-note { margin: 0; color: var(--muted); font-size: .84rem; }
+    .language-switch { display: inline-flex; align-items: center; gap: 2px; padding: 3px; border: 1px solid var(--line); border-radius: 9px; background: rgba(13, 19, 18, .7); }
+    .language-button { padding: 5px 8px; border: 0; border-radius: 6px; background: transparent; color: var(--muted); font-size: .72rem; font-weight: 800; letter-spacing: .06em; cursor: pointer; transition: .18s; }
+    .language-button:hover { color: var(--ink); }
+    .language-button[aria-pressed="true"] { background: var(--accent); color: #171b1a; }
+    .language-divider { color: #62716a; font-size: .72rem; user-select: none; }
 
     main { width: min(1240px, calc(100% - 40px)); margin: 0 auto; }
     .hero { padding: clamp(48px, 8vw, 92px) 0 38px; }
@@ -140,7 +146,7 @@
     .team-button.blue[aria-pressed="true"] { border-color: var(--blue); background: var(--blue); }
     .map-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(208px, 245px); gap: 16px; align-items: start; padding: 0 clamp(12px, 3vw, 28px) 20px; }
     .map-stage { position: relative; min-height: 470px; display: grid; overflow: hidden; place-items: center; border: 1px solid var(--line); border-radius: 12px; background: #0d1111; }
-    .map-stage::after { position: absolute; right: 14px; bottom: 12px; content: "Click to enlarge"; padding: 7px 9px; border: 1px solid rgba(255,255,255,.13); border-radius: 7px; background: rgba(10, 14, 13, .78); color: #d7ded9; font-size: .73rem; pointer-events: none; }
+    .map-enlarge-hint { position: absolute; right: 14px; bottom: 12px; z-index: 1; padding: 7px 9px; border: 1px solid rgba(255,255,255,.13); border-radius: 7px; background: rgba(10, 14, 13, .78); color: #d7ded9; font-size: .73rem; pointer-events: none; }
     #map-image { display: block; width: 100%; max-height: 670px; object-fit: contain; cursor: zoom-in; }
     .image-loading { position: absolute; color: var(--muted); font-size: .9rem; }
     .map-stage.loaded .image-loading { display: none; }
@@ -198,32 +204,39 @@
       <span class="brand-mark" aria-hidden="true"><i></i></span>
       <span class="brand-name">WarDevOps <span>MAPTACTIC</span></span>
     </a>
-    <p class="header-note">WAR THUNDER · MAP GUIDE</p>
+    <div class="header-actions">
+      <p class="header-note" data-i18n="headerNote">WAR THUNDER · MAP GUIDE</p>
+      <div class="language-switch" data-i18n-aria="languageSwitch" aria-label="Language selection">
+        <button class="language-button" type="button" data-language="en" aria-pressed="true">EN</button>
+        <span class="language-divider" aria-hidden="true">|</span>
+        <button class="language-button" type="button" data-language="ko" aria-pressed="false">KR</button>
+      </div>
+    </div>
   </header>
 
   <main id="top">
     <section class="hero" aria-labelledby="page-title">
-      <p class="eyebrow">TACTICAL MAP LIBRARY</p>
-      <h1 id="page-title">READ<br><em>THE WAR</em></h1>
-      <p class="hero-copy">Know yourself and your enemy, and you will win every battle.</p>
+      <p class="eyebrow" data-i18n="eyebrow">TACTICAL MAP LIBRARY</p>
+      <h1 id="page-title"><span data-i18n="heroTitleFirst">READ</span><br><em data-i18n="heroTitleSecond">THE WAR</em></h1>
+      <p class="hero-copy" data-i18n="heroCopy">Know yourself and your enemy, and you will win every battle.</p>
       <div class="search-wrap">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.8-3.8"></path></svg>
-        <label class="sr-only" for="map-search">Search maps</label>
-        <input id="map-search" type="search" autocomplete="off" placeholder="Search by map name (Korean names supported)">
-        <button class="clear-search" id="clear-search" type="button" aria-label="Clear search">×</button>
+        <label class="sr-only" for="map-search" data-i18n="searchLabel">Search maps</label>
+        <input id="map-search" type="search" autocomplete="off" placeholder="Search by map name (other names supported)" data-i18n-placeholder="searchPlaceholder">
+        <button class="clear-search" id="clear-search" type="button" aria-label="Clear search" data-i18n-aria="clearSearch">×</button>
       </div>
     </section>
 
-    <section class="workspace" aria-label="Tactical map explorer">
-      <aside class="map-index" aria-label="Map list">
-        <div class="index-heading"><h2>Select a Map</h2><span id="map-count"></span></div>
+    <section class="workspace" aria-label="Tactical map explorer" data-i18n-aria="mapExplorer">
+      <aside class="map-index" aria-label="Map list" data-i18n-aria="mapList">
+        <div class="index-heading"><h2 data-i18n="selectMap">Select a Map</h2><span id="map-count"></span></div>
         <div class="map-list" id="map-list"></div>
       </aside>
 
       <article class="map-viewer" aria-live="polite">
         <div class="viewer-top">
           <div><h2 id="selected-map-name">Select a Map</h2><p id="selected-map-description">Choose a map to view its tactical layout.</p></div>
-          <div class="team-switch" aria-label="Team selection">
+          <div class="team-switch" aria-label="Team selection" data-i18n-aria="teamSelection">
             <button class="team-button red" type="button" data-team="Red" aria-pressed="true">RED</button>
             <button class="team-button blue" type="button" data-team="Blue" aria-pressed="false">BLUE</button>
           </div>
@@ -232,44 +245,47 @@
           <div class="map-stage" id="map-stage">
           <span class="image-loading" id="image-status">Now Loading…</span>
           <img id="map-image" alt="" hidden>
+          <span class="map-enlarge-hint" data-i18n="enlargeHint">Click to enlarge</span>
           </div>
-          <aside class="legend-panel" aria-label="Map legend">
-            <h3 class="legend-heading">Map Legend</h3>
-            <p class="legend-note">What each icon on a map represents.</p>
+          <aside class="legend-panel" aria-label="Map legend" data-i18n-aria="mapLegend">
+            <h3 class="legend-heading" data-i18n="mapLegend">Map Legend</h3>
+            <p class="legend-note" data-i18n="legendNote">What each icon on a map represents.</p>
             <ul class="legend-list">
-              <li class="legend-item"><span class="legend-icon"><img src="Legend/Light%20Tank.png" alt=""></span>Light Tank</li>
-              <li class="legend-item"><span class="legend-icon"><img src="Legend/Main%20Battle%20Tank.png" alt=""></span>Main Battle Tank</li>
-              <li class="legend-item"><span class="legend-icon"><img src="Legend/Tank%20Destroyer.png" alt=""></span>Tank Destroyer</li>
-              <li class="legend-item"><span class="legend-icon"><img src="Legend/Anti%20Air.png" alt=""></span>Anti Air</li>
+              <li class="legend-item"><span class="legend-icon"><img src="Legend/Light%20Tank.png" alt=""></span><span data-i18n="lightTank">Light Tank</span></li>
+              <li class="legend-item"><span class="legend-icon"><img src="Legend/Main%20Battle%20Tank.png" alt=""></span><span data-i18n="mainBattleTank">Main Battle Tank</span></li>
+              <li class="legend-item"><span class="legend-icon"><img src="Legend/Tank%20Destroyer.png" alt=""></span><span data-i18n="tankDestroyer">Tank Destroyer</span></li>
+              <li class="legend-item"><span class="legend-icon"><img src="Legend/Anti%20Air.png" alt=""></span><span data-i18n="antiAir">Anti Air</span></li>
 
-              <li class="legend-item"><span class="legend-icon"><img src="Legend/Line%20battle.png" alt=""></span>Line battle</li>
-              <li class="legend-item"><span class="legend-icon"><img src="Legend/High-risk%20spot.png" alt=""></span>High-risk spot</li>
-              <li class="legend-item"><span class="legend-icon"><img src="Legend/Sniper.png" alt=""></span>Sniper</li>
-              <li class="legend-item"><span class="legend-icon"><img src="Legend/Spawn%20kill.png" alt=""></span>Spawn Kill</li>
+              <li class="legend-item"><span class="legend-icon"><img src="Legend/Line%20battle.png" alt=""></span><span data-i18n="battleLine">Battle Line</span></li>
+              <li class="legend-item"><span class="legend-icon"><img src="Legend/High-risk%20spot.png" alt=""></span><span data-i18n="highRiskSpot">High-risk Spot</span></li>
+              <li class="legend-item"><span class="legend-icon"><img src="Legend/Sniper.png" alt=""></span><span data-i18n="sniper">Sniper</span></li>
+              <li class="legend-item"><span class="legend-icon"><img src="Legend/Spawn%20kill.png" alt=""></span><span data-i18n="spawnKill">Spawn Kill</span></li>
 
-              <li class="legend-item"><span class="legend-icon"><img src="Legend/Route.png" alt=""></span>Route</li>
-              <li class="legend-item"><span class="legend-icon"><img src="Legend/Aim%20here.png" alt=""></span>Aim here</li>
+              <li class="legend-item"><span class="legend-icon"><img src="Legend/Route.png" alt=""></span><span data-i18n="route">Route</span></li>
+              <li class="legend-item"><span class="legend-icon"><img src="Legend/Aim%20here.png" alt=""></span><span data-i18n="aimHere">Aim Here</span></li>
 
-              <li class="legend-item"><span class="legend-icon"><img src="Legend/Core%20area.png" alt=""></span>Core area</li>
-              <li class="legend-item"><span class="legend-icon"><img src="Legend/Danger%20area.png" alt=""></span>Danger area</li>
-              <li class="legend-item"><span class="legend-icon"><img src="Legend/Anti-Air%20area.png" alt=""></span>Anti Air area</li>
-              <li class="legend-item"><span class="legend-icon"><img src="Legend/Not%20recommended.png" alt=""></span>Not recommended</li>
-              <li class="legend-item"><span class="legend-icon"><img src="Legend/Spawn%20Area.png" alt=""></span>Spawn Area</li>
+              <li class="legend-item"><span class="legend-icon"><img src="Legend/Core%20area.png" alt=""></span><span data-i18n="coreArea">Core Area</span></li>
+              <li class="legend-item"><span class="legend-icon"><img src="Legend/Danger%20area.png" alt=""></span><span data-i18n="dangerArea">Danger Area</span></li>
+              <li class="legend-item"><span class="legend-icon"><img src="Legend/Anti-Air%20area.png" alt=""></span><span data-i18n="antiAirArea">Anti-air Area</span></li>
+              <li class="legend-item"><span class="legend-icon"><img src="Legend/Spawn%20Area.png" alt=""></span><span data-i18n="spawnArea">Spawn Area</span></li>
+              <li class="legend-item"><span class="legend-icon"><img src="Legend/Not%20recommended.png" alt=""></span><span data-i18n="notRecommended">Not Recommended</span></li>
+
+              <li class="legend-item"><span class="legend-icon"><img src="Legend/SmokeShell.png" alt=""></span><span data-i18n="smokeshell">Use Smoke Shell</span></li>
             </ul>
           </aside>
         </div>
-        <div class="team-legend" aria-label="Team legend"><span><i class="red-dot"></i>RED</span><span><i class="blue-dot"></i>BLUE</span></div>
+        <div class="team-legend" aria-label="Team legend" data-i18n-aria="teamLegend"><span><i class="red-dot"></i>RED</span><span><i class="blue-dot"></i>BLUE</span></div>
       </article>
     </section>
   </main>
 
   <footer class="site-footer">
-    <p>© 2026 WarDevOps. All Rights Reserved.</p>
-    <p>All content on this website, including text, images, graphics, and other materials, is the property of the site owner. Unauthorized reproduction, distribution, or use is prohibited.</p>
+    <p data-i18n="copyright">© 2026 WarDevOps & 부릉부릉. All Rights Reserved.</p>
+    <p data-i18n="copyrightNotice">All content on this website, including text, images, graphics, and other materials, is the property of the site owner. Unauthorized reproduction, distribution, or use is prohibited.</p>
   </footer>
 
-  <dialog id="image-modal" aria-label="Enlarged map view">
-    <div class="modal-toolbar"><span id="modal-title"></span><button class="close-modal" type="button" aria-label="Close enlarged view">✕</button></div>
+  <dialog id="image-modal" aria-label="Enlarged map view" data-i18n-aria="enlargedMapView">
+    <div class="modal-toolbar"><span id="modal-title"></span><button class="close-modal" type="button" aria-label="Close enlarged view" data-i18n-aria="closeEnlargedView">✕</button></div>
     <img id="modal-image" alt="">
   </dialog>
 
@@ -286,7 +302,101 @@
       ["White Rock Fortress", "백암요새"]
     ].map(([name, aliases, folder = name]) => ({ name, aliases, folder }));
 
-    const state = { selected: null, team: "Red", query: "" };
+    const translations = {
+      en: {
+        pageTitle: "WarDevOps | War Thunder Map Tactic",
+        metaDescription: "War Thunder tactical map library.",
+        headerNote: "WAR THUNDER · MAP GUIDE",
+        languageSwitch: "Language selection",
+        eyebrow: "TACTICAL MAP LIBRARY",
+        heroTitleFirst: "READ",
+        heroTitleSecond: "THE WAR",
+        heroCopy: "Know yourself and your enemy, and you will win every battle.",
+        searchLabel: "Search maps",
+        searchPlaceholder: "Search by map name (other names supported)",
+        clearSearch: "Clear search",
+        mapExplorer: "Tactical map explorer",
+        mapList: "Map list",
+        selectMap: "Select a Map",
+        selectMapPrompt: "Choose a map to view its tactical layout.",
+        teamSelection: "Team selection",
+        enlargeHint: "Click to enlarge",
+        mapLegend: "Map Legend",
+        legendNote: "What each icon on a map represents.",
+        lightTank: "Light Tank",
+        mainBattleTank: "Main Battle Tank",
+        tankDestroyer: "Tank Destroyer",
+        antiAir: "Anti Air",
+        battleLine: "Battle Line",
+        highRiskSpot: "High-risk Spot",
+        sniper: "Sniper Position",
+        spawnKill: "Spawn Kill Warning",
+        route: "Route",
+        aimHere: "Aim Here",
+        coreArea: "Core Area",
+        dangerArea: "Danger Area",
+        antiAirArea: "Anti-air Area",
+        spawnArea: "Spawn Area",
+        notRecommended: "Not Recommended",
+        teamLegend: "Team legend",
+        copyright: "© 2026 WarDevOps & Vroom Vroom. All Rights Reserved.",
+        copyrightNotice: "All content on this website, including text, images, graphics, and other materials, is the property of the site owner. Unauthorized reproduction, distribution, or use is prohibited.",
+        enlargedMapView: "Enlarged map view",
+        closeEnlargedView: "Close enlarged view",
+        noResults: "No matching maps found.<br>Try another name or a map alias.",
+        teamTacticalMap: "team tactical map",
+        teamLabel: "Team",
+        loading: "Now Loading…",
+        imageError: "Map image could not be found."
+      },
+      ko: {
+        pageTitle: "WarDevOps | 워썬더 맵 전술",
+        metaDescription: "워썬더 전술 지도 라이브러리.",
+        headerNote: "워썬더 · 맵 가이드",
+        languageSwitch: "언어 선택",
+        eyebrow: "전술 지도 라이브러리",
+        heroTitleFirst: "전장을",
+        heroTitleSecond: "읽어라",
+        heroCopy: "자신과 적을 알면, 모든 전투에서 승리할 수 있습니다.",
+        searchLabel: "맵 검색",
+        searchPlaceholder: "맵 이름으로 검색하세요 (한글 검색 지원)",
+        clearSearch: "검색어 지우기",
+        mapExplorer: "전술 지도 탐색기",
+        mapList: "맵 목록",
+        selectMap: "맵 선택",
+        selectMapPrompt: "전술 지도를 보려면 맵을 선택하세요.",
+        teamSelection: "진영 선택",
+        enlargeHint: "클릭하여 크게 보기",
+        mapLegend: "지도 범례",
+        legendNote: "맵 이미지 위 아이콘의 의미입니다.",
+        lightTank: "경전차",
+        mainBattleTank: "주력전차",
+        tankDestroyer: "구축전차",
+        antiAir: "대공",
+        battleLine: "교전선",
+        highRiskSpot: "고위험 지점",
+        sniper: "저격 위치",
+        spawnKill: "리스폰 킬 주의",
+        route: "이동 경로",
+        aimHere: "조준 지점",
+        coreArea: "핵심 지역",
+        dangerArea: "위험 지역",
+        antiAirArea: "대공 위험 지역",
+        spawnArea: "스폰 지역",
+        notRecommended: "비추천 지역",
+        teamLegend: "진영 범례",
+        copyright: "© 2026 WarDevOps & 부릉부릉. 모든 권리 보유.",
+        copyrightNotice: "이 웹사이트의 텍스트, 이미지, 그래픽 및 기타 모든 자료는 사이트 소유자의 재산입니다. 무단 복제, 배포 또는 사용을 금지합니다.",
+        enlargedMapView: "확대 지도 보기",
+        closeEnlargedView: "확대 보기 닫기",
+        noResults: "일치하는 맵이 없습니다.<br>다른 이름이나 한글 맵 별칭으로 검색해 보세요.",
+        teamTacticalMap: "팀 전술 지도",
+        teamLabel: "팀",
+        loading: "불러오는 중…",
+        imageError: "지도 이미지를 찾을 수 없습니다."
+      }
+    };
+    const state = { selected: null, team: "Red", query: "", language: "en" };
     const $ = (selector) => document.querySelector(selector);
     const mapList = $("#map-list");
     const search = $("#map-search");
@@ -295,6 +405,33 @@
     const mapStage = $("#map-stage");
     const imageStatus = $("#image-status");
     const dialog = $("#image-modal");
+    const languageButtons = document.querySelectorAll(".language-button");
+
+    function t(key) {
+      return translations[state.language][key];
+    }
+    function mapLabel(map) {
+      return state.language === "ko" ? map.aliases : map.name;
+    }
+    function updateSelectedMapDetails() {
+      if (!state.selected) return;
+      $("#selected-map-name").textContent = mapLabel(state.selected);
+      $("#selected-map-description").textContent = `${state.team.toUpperCase()} ${t("teamTacticalMap")}`;
+      mapImage.alt = `${mapLabel(state.selected)} ${state.team}`;
+    }
+    function setLanguage(language) {
+      state.language = language;
+      document.documentElement.lang = language;
+      document.title = t("pageTitle");
+      document.querySelector('meta[name="description"]').setAttribute("content", t("metaDescription"));
+      document.querySelectorAll("[data-i18n]").forEach(element => { element.textContent = t(element.dataset.i18n); });
+      document.querySelectorAll("[data-i18n-placeholder]").forEach(element => { element.placeholder = t(element.dataset.i18nPlaceholder); });
+      document.querySelectorAll("[data-i18n-aria]").forEach(element => { element.setAttribute("aria-label", t(element.dataset.i18nAria)); });
+      languageButtons.forEach(button => { button.setAttribute("aria-pressed", String(button.dataset.language === language)); });
+      updateSelectedMapDetails();
+      imageStatus.textContent = mapStage.classList.contains("load-error") ? t("imageError") : t("loading");
+      renderList();
+    }
 
     function mapPath(map, team) {
       return `img/${encodeURIComponent(map.folder)}/${team}.png`;
@@ -305,14 +442,14 @@
     }
     function renderList() {
       const displayed = visibleMaps();
-      $("#map-count").textContent = `${displayed.length} map${displayed.length === 1 ? "" : "s"}`;
+      $("#map-count").textContent = state.language === "ko" ? `${displayed.length}개 맵` : `${displayed.length} map${displayed.length === 1 ? "" : "s"}`;
       if (!displayed.length) {
-        mapList.innerHTML = '<p class="empty-state">No matching maps found.<br>Try another name or a Korean map alias.</p>';
+        mapList.innerHTML = `<p class="empty-state">${t("noResults")}</p>`;
         return;
       }
       mapList.innerHTML = displayed.map(map => `
         <button class="map-card ${state.selected?.name === map.name ? "active" : ""}" type="button" data-map="${map.name}">
-          <span class="map-card-name">${map.name}</span><span class="map-card-arrow" aria-hidden="true">→</span>
+          <span class="map-card-name">${mapLabel(map)}</span><span class="map-card-arrow" aria-hidden="true">→</span>
         </button>`).join("");
     }
     function updateUrl() {
@@ -325,15 +462,14 @@
     function selectMap(map, team = state.team) {
       state.selected = map;
       state.team = team;
-      $("#selected-map-name").textContent = map.name;
-      $("#selected-map-description").textContent = `${team} team tactical map`;
+      updateSelectedMapDetails();
       document.querySelectorAll(".team-button").forEach(button => {
         button.setAttribute("aria-pressed", String(button.dataset.team === team));
       });
       mapImage.hidden = true;
       mapStage.classList.remove("loaded", "load-error");
-      imageStatus.textContent = "Now Loading...";
-      mapImage.alt = `${map.name} ${team}`;
+      imageStatus.textContent = t("loading");
+      mapImage.alt = `${mapLabel(map)} ${team}`;
       mapImage.src = mapPath(map, team);
       renderList();
       updateUrl();
@@ -360,17 +496,19 @@
     });
     clearSearch.addEventListener("click", () => { search.value = ""; search.dispatchEvent(new Event("input")); search.focus(); });
     document.querySelectorAll(".team-button").forEach(button => button.addEventListener("click", () => setTeam(button.dataset.team)));
+    languageButtons.forEach(button => button.addEventListener("click", () => setLanguage(button.dataset.language)));
     mapImage.addEventListener("load", () => { mapImage.hidden = false; mapStage.classList.add("loaded"); });
-    mapImage.addEventListener("error", () => { mapStage.classList.add("load-error"); imageStatus.textContent = "Map image could not be found."; });
+    mapImage.addEventListener("error", () => { mapStage.classList.add("load-error"); imageStatus.textContent = t("imageError"); });
     mapImage.addEventListener("click", () => {
       if (!state.selected || mapImage.hidden) return;
       $("#modal-image").src = mapImage.src;
       $("#modal-image").alt = mapImage.alt;
-      $("#modal-title").textContent = `${state.selected.name} · ${state.team.toUpperCase()} Team`;
+      $("#modal-title").textContent = `${mapLabel(state.selected)} · ${state.team.toUpperCase()} ${t("teamLabel")}`;
       dialog.showModal();
     });
     $(".close-modal").addEventListener("click", () => dialog.close());
     dialog.addEventListener("click", event => { if (event.target === dialog) dialog.close(); });
+    setLanguage("en");
     restoreFromUrl();
   </script>
   <style>.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }</style>
