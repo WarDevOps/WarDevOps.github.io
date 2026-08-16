@@ -223,14 +223,14 @@
     .modal-marker-status { color: var(--muted); font-size: .73rem; }
     .modal-marker-editor-note { width: 100%; margin: 0; color: var(--muted); font-size: .72rem; line-height: 1.4; }
     .modal-workspace { display: grid; grid-template-columns: minmax(0, 1fr) minmax(220px, 290px); min-height: 0; background: #0d1111; overflow: hidden; }
-    .modal-legend-region { min-width: 0; padding: 12px 10px; overflow: auto; border-left: 1px solid var(--line); background: rgba(13,19,18,.36); }
+    .modal-legend-region { grid-column: 2; grid-row: 1; min-width: 0; padding: 12px 10px; overflow: auto; border-left: 1px solid var(--line); background: rgba(13,19,18,.36); }
     .modal-legend-note { margin: 0 0 6px; color: var(--muted); font-size: .7rem; }
     .modal-legend-list { display: grid; gap: 2px; margin: 0; padding: 0; list-style: none; }
     .modal-legend-list .legend-item { min-height: 34px; padding: 4px 7px; font-size: .72rem; }
     .modal-legend-list .legend-icon { flex-basis: 24px; width: 24px; height: 24px; }
     .modal-legend-list .legend-icon img { max-width: 19px; max-height: 19px; }
-    .modal-map-stage { position: relative; display: grid; min-width: 0; min-height: 0; overflow: hidden; place-items: center; background: #0d1111; }
-    #modal-image { display: block; width: 100%; height: 100%; max-width: 100%; max-height: 100%; object-fit: contain; }
+    .modal-map-stage { grid-column: 1; grid-row: 1; position: relative; display: grid; min-width: 0; min-height: 0; overflow: hidden; place-items: center; background: #0d1111; }
+    #modal-image { display: block; width: 100%; height: 100%; min-width: 0; min-height: 0; max-width: 100%; max-height: 100%; object-fit: contain; }
     dialog.is-editing .modal-map-stage { box-shadow: inset 0 0 0 1px rgba(214,219,157,.3); }
     dialog.is-editing .map-marker { cursor: grab; }
     dialog.is-editing .map-marker:active { cursor: grabbing; }
