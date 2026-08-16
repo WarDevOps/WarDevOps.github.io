@@ -64,7 +64,11 @@
     .brand-name { font-size: 1.05rem; font-weight: 800; letter-spacing: .04em; }
     .brand-name span { color: var(--accent); }
     .header-actions { display: flex; align-items: center; gap: 18px; }
-    .header-note { margin: 0; color: var(--muted); font-size: .84rem; }
+    .squadron-link { display: inline-flex; align-items: center; gap: 7px; color: var(--muted); font-family: Arial, "Helvetica Neue", sans-serif; font-size: .72rem; font-weight: 650; letter-spacing: .01em; line-height: 1.2; text-decoration: none; white-space: nowrap; transition: color .18s; }
+    .squadron-link:hover, .squadron-link:focus-visible { color: var(--accent); }
+    .squadron-link img { display: block; width: 20px; height: 20px; object-fit: contain; }
+    .squadron-link strong { color: var(--ink); font-weight: 800; }
+    .header-note { margin: 0; color: var(--muted); font-family: Arial, "Helvetica Neue", sans-serif; font-size: .84rem; font-kerning: normal; font-synthesis: none; letter-spacing: .02em; white-space: nowrap; }
     .language-switch { display: inline-flex; align-items: center; gap: 2px; padding: 3px; border: 1px solid var(--line); border-radius: 9px; background: rgba(13, 19, 18, .7); }
     .language-button { padding: 5px 8px; border: 0; border-radius: 6px; background: transparent; color: var(--muted); font-size: .72rem; font-weight: 800; letter-spacing: .06em; cursor: pointer; transition: .18s; }
     .language-button:hover { color: var(--ink); }
@@ -77,6 +81,7 @@
     .hero { padding: clamp(48px, 8vw, 92px) 0 38px; }
     .eyebrow { margin: 0 0 12px; color: var(--accent); font-size: .78rem; font-weight: 800; letter-spacing: .14em; }
     h1 { max-width: 780px; margin: 0; font-size: clamp(2.35rem, 6vw, 4.75rem); line-height: 1.06; letter-spacing: -.055em; }
+    .hero-title { font-family: Arial, "Helvetica Neue", sans-serif; font-kerning: normal; font-synthesis: none; }
     h1 em { color: var(--accent); font-style: normal; }
     .hero-copy { max-width: 620px; margin: 20px 0 0; color: var(--muted); font-size: clamp(1rem, 2vw, 1.12rem); line-height: 1.75; }
     .search-wrap { position: relative; max-width: 680px; margin-top: 32px; }
@@ -250,6 +255,8 @@
       .site-header, main, .site-footer { width: min(100% - 28px, 1240px); }
       .site-header { min-height: 64px; }
       .header-note { display: none; }
+      .squadron-link { width: 30px; height: 30px; justify-content: center; padding: 5px; }
+      .squadron-link-label { display: none; }
       .hero { padding-top: 44px; }
       .workspace { grid-template-columns: 1fr; }
       .map-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); max-height: 250px; gap: 3px; }
@@ -273,7 +280,8 @@
       .team-button { min-width: 104px; }
       .legend-list { grid-template-columns: 1fr; }
       .site-header { gap: 8px; }
-      .header-actions { gap: 6px; }
+      .site-header { flex-wrap: wrap; justify-content: center; padding: 10px 0; }
+      .header-actions { width: 100%; justify-content: center; gap: 6px; }
       .theme-toggle { padding: 8px; }
       .modal-toolbar { align-items: flex-start; }
       .modal-toolbar-actions { gap: 5px; }
