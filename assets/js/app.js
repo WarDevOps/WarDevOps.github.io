@@ -1,5 +1,5 @@
     import { loadMarkerLayout, saveMarkerLayout as saveMarkerLayoutToStorage } from './marker-storage.js';
-import { maps, translations } from './data.js?v=campania-20260817';
+import { maps, translations } from './data.js?v=modal-team-campania-20260817';
 
 
     const state = { selected: null, team: "Red", query: "", language: "en", theme: "dark", editMode: false, contextMarkerId: null };
@@ -385,6 +385,14 @@ import { maps, translations } from './data.js?v=campania-20260817';
       url.searchParams.set("team", state.team.toLowerCase());
       window.history.replaceState({}, "", url);
     }
+    function setModalMapSource() {
+      if (!state.selected) return;
+      modalImage.hidden = true;
+      modalMarkerLayer.replaceChildren();
+      modalImage.alt = `${mapLabel(state.selected)} ${state.team}`;
+      modalImage.src = mapPath(state.selected, state.team);
+      $("#modal-title").textContent = `${mapLabel(state.selected)} · ${state.team.toUpperCase()} ${t("teamLabel")}`;
+    }
     function selectMap(map, team = state.team) {
       state.selected = map;
       state.team = team;
@@ -400,6 +408,7 @@ import { maps, translations } from './data.js?v=campania-20260817';
       imageStatus.textContent = t("loading");
       mapImage.alt = `${mapLabel(map)} ${team}`;
       mapImage.src = mapPath(map, team);
+      if (dialog.open) setModalMapSource();
       renderList();
       updateUrl();
     }
@@ -501,11 +510,8 @@ import { maps, translations } from './data.js?v=campania-20260817';
     }
     function openMapModal() {
       buildModalLegend();
-      modalImage.hidden = true;
-      modalImage.src = mapImage.src;
-      modalImage.alt = mapImage.alt;
-      $("#modal-title").textContent = `${mapLabel(state.selected)} · ${state.team.toUpperCase()} ${t("teamLabel")}`;
       dialog.showModal();
+      setModalMapSource();
       window.requestAnimationFrame(renderMarkers);
     }
 

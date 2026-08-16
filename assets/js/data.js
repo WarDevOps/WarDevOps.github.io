@@ -11,8 +11,7 @@ export const maps = [
     ].map(([name, aliases, folder = name]) => ({ name, aliases, folder })).concat({
       name: "Campania",
       aliases: "캄파니아",
-      folder: "Campania",
-      sharedImage: "Campania.png"
+      folder: "Campania"
     });
 
 export const translations = {

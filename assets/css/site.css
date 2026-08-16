@@ -215,6 +215,9 @@
     dialog[open] { display: grid; grid-template-rows: auto auto minmax(0, 1fr); }
     dialog::backdrop { background: rgba(4, 7, 6, .82); backdrop-filter: blur(4px); }
     .modal-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 13px 16px; border-bottom: 1px solid var(--line); background: var(--surface); }
+    .modal-toolbar-actions { display: flex; align-items: center; gap: 8px; }
+    .modal-team-switch { padding: 3px; gap: 3px; }
+    .modal-team-switch .team-button { min-width: 66px; padding: 7px 9px; }
     #modal-title { color: var(--muted); font-size: .86rem; font-weight: 700; }
     .close-modal { min-width: 34px; height: 34px; border: 1px solid var(--line); border-radius: 8px; background: transparent; cursor: pointer; }
     .close-modal:hover { background: rgba(255,255,255,.08); }
@@ -269,5 +272,8 @@
       .site-header { gap: 8px; }
       .header-actions { gap: 6px; }
       .theme-toggle { padding: 8px; }
+      .modal-toolbar { align-items: flex-start; }
+      .modal-toolbar-actions { gap: 5px; }
+      .modal-team-switch .team-button { min-width: 58px; padding: 7px; }
     }
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }

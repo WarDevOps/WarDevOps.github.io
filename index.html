@@ -9,7 +9,7 @@
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7687032122626786" crossorigin="anonymous"></script>
   <title>WarDevOps | War Thunder Map Tactic</title>
 
-  <link rel="stylesheet" href="assets/css/site.css?v=fullscreen-layout-2-20260816">
+  <link rel="stylesheet" href="assets/css/site.css?v=modal-team-campania-20260817">
 </head>
 <body>
   <header class="site-header">
@@ -117,7 +117,16 @@
   </footer>
 
   <dialog id="image-modal" aria-label="Enlarged map view" data-i18n-aria="enlargedMapView">
-    <div class="modal-toolbar"><span id="modal-title"></span><button class="close-modal" type="button" aria-label="Close enlarged view" data-i18n-aria="closeEnlargedView">✕</button></div>
+    <div class="modal-toolbar">
+      <span id="modal-title"></span>
+      <div class="modal-toolbar-actions">
+        <div class="team-switch modal-team-switch" aria-label="Team selection" data-i18n-aria="teamSelection">
+          <button class="team-button red" type="button" data-team="Red" aria-pressed="true">RED</button>
+          <button class="team-button blue" type="button" data-team="Blue" aria-pressed="false">BLUE</button>
+        </div>
+        <button class="close-modal" type="button" aria-label="Close enlarged view" data-i18n-aria="closeEnlargedView">✕</button>
+      </div>
+    </div>
     <div class="modal-marker-tools" aria-label="Marker editor" data-i18n-aria="markerTools">
       <button class="marker-tool primary" id="modal-toggle-editor" type="button" aria-pressed="false" data-i18n="editMarkers">Edit Markers</button>
       <button class="marker-tool" id="modal-save-marker-layout" type="button" data-i18n="saveLocally">Save Locally</button>
@@ -144,6 +153,6 @@
   </dialog>
 
 
-  <script type="module" src="assets/js/app.js?v=campania-20260817"></script>
+  <script type="module" src="assets/js/app.js?v=modal-team-campania-20260817"></script>
 </body>
 </html>
