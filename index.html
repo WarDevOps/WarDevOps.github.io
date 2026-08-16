@@ -9,7 +9,7 @@
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7687032122626786" crossorigin="anonymous"></script>
   <title>WarDevOps | War Thunder Map Tactic</title>
 
-  <link rel="stylesheet" href="assets/css/site.css?v=header-discord-20260817">
+  <link rel="stylesheet" href="assets/css/site.css?v=legend-reset-actions-20260817">
 </head>
 <body>
   <header class="site-header">
@@ -64,8 +64,6 @@
           <button class="marker-tool" id="save-marker-layout" type="button" data-i18n="saveLocally">Save Locally</button>
           <button class="marker-tool" id="export-marker-layout" type="button" data-i18n="exportJson">Export JSON</button>
           <button class="marker-tool" id="import-marker-layout" type="button" data-i18n="importJson">Import JSON</button>
-          <button class="marker-tool" id="reset-hidden-markers" type="button" data-i18n="resetHidden">Reset Hidden</button>
-          <button class="marker-tool danger" id="reset-all-markers" type="button" data-i18n="resetAllMarkers">Reset All Markers</button>
           <span class="marker-status" id="marker-status" role="status" aria-live="polite"></span>
           <p class="marker-editor-note" id="marker-editor-note">Enter edit mode to drag icons from the legend onto the map.</p>
         </div>
@@ -109,6 +107,10 @@
 
               <li class="legend-item"><span class="legend-icon"><img src="Legend/SmokeShell.png" alt=""></span><span data-i18n="smokeshell">Use Smoke Shell</span></li>
             </ul>
+            <div class="legend-actions">
+              <button class="marker-tool" id="reset-hidden-markers" type="button" data-i18n="resetHidden">Reset Hidden</button>
+              <button class="marker-tool danger" id="reset-all-markers" type="button" data-i18n="resetAllMarkers">Reset All Markers</button>
+            </div>
           </aside>
         </div>
         <div class="team-legend" aria-label="Team legend" data-i18n-aria="teamLegend"><span><i class="red-dot"></i>RED</span><span><i class="blue-dot"></i>BLUE</span></div>
@@ -142,8 +144,6 @@
       <button class="marker-tool" id="modal-save-marker-layout" type="button" data-i18n="saveLocally">Save Locally</button>
       <button class="marker-tool" id="modal-export-marker-layout" type="button" data-i18n="exportJson">Export JSON</button>
       <button class="marker-tool" id="modal-import-marker-layout" type="button" data-i18n="importJson">Import JSON</button>
-      <button class="marker-tool" id="modal-reset-hidden-markers" type="button" data-i18n="resetHidden">Reset Hidden</button>
-      <button class="marker-tool danger" id="modal-reset-all-markers" type="button" data-i18n="resetAllMarkers">Reset All Markers</button>
       <span class="modal-marker-status" id="modal-marker-status" role="status" aria-live="polite"></span>
       <p class="modal-marker-editor-note" id="modal-marker-editor-note">Enter edit mode to drag icons from the legend onto the map.</p>
     </div>
@@ -159,6 +159,10 @@
       <aside class="modal-legend-region" aria-label="Map Legend" data-i18n-aria="mapLegend">
         <p class="modal-legend-note" data-i18n="modalLegendHint">Click an icon to hide or restore that marker type.</p>
         <ul class="modal-legend-list" id="modal-legend-list"></ul>
+        <div class="modal-legend-actions">
+          <button class="marker-tool" id="modal-reset-hidden-markers" type="button" data-i18n="resetHidden">Reset Hidden</button>
+          <button class="marker-tool danger" id="modal-reset-all-markers" type="button" data-i18n="resetAllMarkers">Reset All Markers</button>
+        </div>
       </aside>
     </div>
   </dialog>

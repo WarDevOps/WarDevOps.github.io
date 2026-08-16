@@ -168,6 +168,8 @@
     .legend-heading { margin: 0; padding: 14px 15px 11px; border-bottom: 1px solid var(--line); font-size: .88rem; letter-spacing: .02em; }
     .legend-note { margin: 0; padding: 0 15px 12px; color: var(--muted); font-size: .73rem; line-height: 1.45; }
     .legend-list { display: grid; gap: 2px; margin: 0; padding: 0 7px 8px; list-style: none; }
+    .legend-actions { display: grid; gap: 6px; padding: 8px 10px 10px; border-top: 1px solid var(--line); }
+    .legend-actions .marker-tool, .modal-legend-actions .marker-tool { width: 100%; }
     .legend-item { display: flex; align-items: center; gap: 10px; min-height: 38px; padding: 5px 8px; border-radius: 7px; color: #d8e1db; font-size: .79rem; cursor: pointer; transition: opacity .18s, filter .18s, background .18s; }
     .legend-item:hover { background: rgba(255,255,255,.055); }
     .legend-item.is-marker-hidden { filter: brightness(.5); }
@@ -235,6 +237,7 @@
     .modal-legend-region { grid-column: 2; grid-row: 1; min-width: 0; padding: 12px 10px; overflow: auto; border-left: 1px solid var(--line); background: rgba(13,19,18,.36); }
     .modal-legend-note { margin: 0 0 6px; color: var(--muted); font-size: .7rem; }
     .modal-legend-list { display: grid; gap: 2px; margin: 0; padding: 0; list-style: none; }
+    .modal-legend-actions { display: grid; gap: 6px; margin-top: 8px; padding-top: 8px; border-top: 1px solid var(--line); }
     .modal-legend-list .legend-item { min-height: 34px; padding: 4px 7px; font-size: .72rem; }
     .modal-legend-list .legend-icon { flex-basis: 24px; width: 24px; height: 24px; }
     .modal-legend-list .legend-icon img { max-width: 19px; max-height: 19px; }
