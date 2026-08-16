@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="War Thunder All Maps">
+  <meta name="theme-color" content="#111719">
+  <meta name="google-adsense-account" content="ca-pub-7687032122626786">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7687032122626786" crossorigin="anonymous"></script>
+  <title>WarDevOps | War Thunder Map Tactic</title>
+  <style>
+    :root {
+      --ink: #eaf0ec;
+      --muted: #9aa8a2;
+      --surface: #17201f;
+      --surface-raised: #202c2a;
+      --line: #35423e;
+      --accent: #d6db9d;
+      --accent-strong: #edf2b8;
+      --red: #ee7771;
+      --blue: #76b6e8;
+      --shadow: 0 18px 55px rgba(0, 0, 0, .25);
+    }
+
+    * { box-sizing: border-box; }
+    html { color-scheme: dark; scroll-behavior: smooth; }
+    body {
+      min-width: 320px;
+      margin: 0;
+      color: var(--ink);
+      font-family: "Pretendard", "Noto Sans KR", "Malgun Gothic", system-ui, sans-serif;
+      background:
+        radial-gradient(circle at 84% -8%, rgba(104, 135, 105, .25), transparent 32rem),
+        radial-gradient(circle at 0% 25%, rgba(214, 219, 157, .09), transparent 25rem),
+        #111719;
+    }
+    body::before {
+      position: fixed;
+      z-index: -1;
+      inset: 0;
+      content: "";
+      pointer-events: none;
+      opacity: .18;
+      background-image: linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
+      background-size: 32px 32px;
+      mask-image: linear-gradient(to bottom, black, transparent 80%);
+    }
+    button, input { font: inherit; }
+    button { color: inherit; }
+
+    .site-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      width: min(1240px, calc(100% - 40px));
+      min-height: 76px;
+      margin: 0 auto;
+      border-bottom: 1px solid rgba(154, 168, 162, .18);
+    }
+    .brand { display: inline-flex; align-items: center; gap: 11px; color: var(--ink); text-decoration: none; }
+    .brand-mark {
+      position: relative;
+      display: grid;
+      width: 31px;
+      height: 31px;
+      place-items: center;
+      border: 2px solid var(--accent);
+      border-radius: 50%;
+    }
+    .brand-mark::before, .brand-mark::after { position: absolute; content: ""; background: var(--accent); }
+    .brand-mark::before { width: 2px; height: 39px; }
+    .brand-mark::after { width: 39px; height: 2px; }
+    .brand-mark i { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); }
+    .brand-name { font-size: 1.05rem; font-weight: 800; letter-spacing: .04em; }
+    .brand-name span { color: var(--accent); }
+    .header-note { margin: 0; color: var(--muted); font-size: .84rem; }
+
+    main { width: min(1240px, calc(100% - 40px)); margin: 0 auto; }
+    .hero { padding: clamp(48px, 8vw, 92px) 0 38px; }
+    .eyebrow { margin: 0 0 12px; color: var(--accent); font-size: .78rem; font-weight: 800; letter-spacing: .14em; }
+    h1 { max-width: 780px; margin: 0; font-size: clamp(2.35rem, 6vw, 4.75rem); line-height: 1.06; letter-spacing: -.055em; }
+    h1 em { color: var(--accent); font-style: normal; }
+    .hero-copy { max-width: 620px; margin: 20px 0 0; color: var(--muted); font-size: clamp(1rem, 2vw, 1.12rem); line-height: 1.75; }
+    .search-wrap { position: relative; max-width: 680px; margin-top: 32px; }
+    .search-wrap svg { position: absolute; top: 50%; left: 18px; width: 20px; height: 20px; transform: translateY(-50%); color: var(--muted); pointer-events: none; }
+    #map-search {
+      width: 100%;
+      padding: 18px 52px;
+      color: var(--ink);
+      outline: 0;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: rgba(23, 32, 31, .88);
+      box-shadow: var(--shadow);
+      transition: border-color .2s, box-shadow .2s;
+    }
+    #map-search::placeholder { color: #7c8a84; }
+    #map-search:focus { border-color: var(--accent); box-shadow: 0 0 0 4px rgba(214, 219, 157, .12), var(--shadow); }
+    .clear-search { position: absolute; top: 50%; right: 10px; display: none; width: 34px; height: 34px; padding: 0; border: 0; border-radius: 50%; background: transparent; color: var(--muted); cursor: pointer; transform: translateY(-50%); }
+    .clear-search:hover { color: var(--ink); background: rgba(255,255,255,.08); }
+    .clear-search.visible { display: grid; place-items: center; }
+
+    .workspace { display: grid; grid-template-columns: minmax(235px, 310px) minmax(0, 1fr); gap: 22px; padding-bottom: 72px; }
+    .map-index, .map-viewer { border: 1px solid var(--line); border-radius: 18px; background: rgba(23, 32, 31, .8); box-shadow: var(--shadow); }
+    .map-index { overflow: hidden; }
+    .index-heading { display: flex; align-items: baseline; justify-content: space-between; padding: 20px 20px 14px; border-bottom: 1px solid var(--line); }
+    .index-heading h2 { margin: 0; font-size: .95rem; }
+    #map-count { color: var(--muted); font-size: .78rem; }
+    .map-list { max-height: 580px; padding: 8px; overflow: auto; scrollbar-color: #52635d transparent; }
+    .map-card {
+      display: flex;
+      width: 100%;
+      padding: 13px 12px;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      border: 1px solid transparent;
+      border-radius: 10px;
+      background: transparent;
+      color: var(--ink);
+      text-align: left;
+      cursor: pointer;
+      transition: background .16s, border-color .16s, transform .16s;
+    }
+    .map-card:hover { background: rgba(255,255,255,.05); transform: translateX(2px); }
+    .map-card.active { border-color: rgba(214, 219, 157, .4); background: rgba(214, 219, 157, .12); }
+    .map-card-name { font-size: .93rem; font-weight: 700; line-height: 1.3; }
+    .map-card-arrow { color: var(--accent); font-size: 1.08rem; }
+    .empty-state { padding: 42px 18px; color: var(--muted); font-size: .9rem; text-align: center; }
+
+    .map-viewer { min-height: 600px; overflow: hidden; }
+    .viewer-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 18px; padding: clamp(20px, 4vw, 32px) clamp(20px, 4vw, 38px) 18px; }
+    .viewer-top h2 { margin: 0; font-size: clamp(1.5rem, 3vw, 2.1rem); letter-spacing: -.03em; }
+    .viewer-top p { margin: 7px 0 0; color: var(--muted); font-size: .9rem; }
+    .team-switch { display: inline-flex; flex-shrink: 0; padding: 4px; gap: 4px; border: 1px solid var(--line); border-radius: 10px; background: #111719; }
+    .team-button { min-width: 84px; padding: 9px 12px; border: 1px solid transparent; border-radius: 7px; background: transparent; color: var(--muted); font-size: .84rem; font-weight: 800; cursor: pointer; transition: .18s; }
+    .team-button[aria-pressed="true"] { color: #171b1a; }
+    .team-button.red[aria-pressed="true"] { border-color: var(--red); background: var(--red); }
+    .team-button.blue[aria-pressed="true"] { border-color: var(--blue); background: var(--blue); }
+    .map-stage { position: relative; margin: 0 clamp(12px, 3vw, 28px) clamp(12px, 3vw, 28px); min-height: 470px; display: grid; overflow: hidden; place-items: center; border: 1px solid var(--line); border-radius: 12px; background: #0d1111; }
+    .map-stage::after { position: absolute; right: 14px; bottom: 12px; content: "클릭하여 크게 보기"; padding: 7px 9px; border: 1px solid rgba(255,255,255,.13); border-radius: 7px; background: rgba(10, 14, 13, .78); color: #d7ded9; font-size: .73rem; pointer-events: none; }
+    #map-image { display: block; width: 100%; max-height: 670px; object-fit: contain; cursor: zoom-in; }
+    .image-loading { position: absolute; color: var(--muted); font-size: .9rem; }
+    .map-stage.loaded .image-loading { display: none; }
+    .map-stage.load-error .image-loading { display: block; color: var(--red); }
+    .team-legend { display: flex; gap: 15px; padding: 0 clamp(20px, 4vw, 38px) 28px; color: var(--muted); font-size: .8rem; }
+    .team-legend span { display: inline-flex; align-items: center; gap: 7px; }
+    .team-legend i { width: 9px; height: 9px; border-radius: 50%; }
+    .team-legend .red-dot { background: var(--red); }
+    .team-legend .blue-dot { background: var(--blue); }
+
+    dialog { width: min(1400px, calc(100% - 28px)); max-height: calc(100vh - 28px); padding: 0; overflow: hidden; border: 1px solid #46544f; border-radius: 14px; background: #0d1111; box-shadow: 0 30px 100px rgba(0,0,0,.65); }
+    dialog::backdrop { background: rgba(4, 7, 6, .82); backdrop-filter: blur(4px); }
+    .modal-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 13px 16px; border-bottom: 1px solid var(--line); background: var(--surface); }
+    #modal-title { color: var(--muted); font-size: .86rem; font-weight: 700; }
+    .close-modal { min-width: 34px; height: 34px; border: 1px solid var(--line); border-radius: 8px; background: transparent; cursor: pointer; }
+    .close-modal:hover { background: rgba(255,255,255,.08); }
+    #modal-image { display: block; width: 100%; max-height: calc(100vh - 84px); object-fit: contain; }
+
+    .site-footer { width: min(1240px, calc(100% - 40px)); padding: 0 0 30px; margin: 0 auto; color: #718079; font-size: .75rem; text-align: center; }
+    @media (max-width: 760px) {
+      .site-header, main, .site-footer { width: min(100% - 28px, 1240px); }
+      .site-header { min-height: 64px; }
+      .header-note { display: none; }
+      .hero { padding-top: 44px; }
+      .workspace { grid-template-columns: 1fr; }
+      .map-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); max-height: 250px; gap: 3px; }
+      .map-card { min-height: 58px; }
+      .map-card-arrow { display: none; }
+      .map-viewer { min-height: 0; }
+      .map-stage { min-height: 270px; }
+    }
+    @media (max-width: 430px) {
+      h1 { font-size: 2.25rem; }
+      .map-list { grid-template-columns: 1fr; }
+      .viewer-top { display: block; }
+      .team-switch { margin-top: 18px; }
+      .team-button { min-width: 104px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="WarDevOps MapTactic">
+      <span class="brand-mark" aria-hidden="true"><i></i></span>
+      <span class="brand-name">WarDevOps<span>MAPTACTIC</span></span>
+    </a>
+    <p class="header-note">WAR THUNDER · MAP GUIDE</p>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="page-title">
+      <p class="eyebrow">TACTICAL MAP LIBRARY</p>
+      <h1 id="page-title">READ<br><em>THE WAR</em></h1>
+      <p class="hero-copy">Know yourself and your enemy, and you will win every battle.</p>
+      <div class="search-wrap">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.8-3.8"></path></svg>
+        <label class="sr-only" for="map-search">검색</label>
+        <input id="map-search" type="search" autocomplete="off" placeholder="맵 이름으로 검색하세요 (예: Sinai, 시나이)">
+        <button class="clear-search" id="clear-search" type="button" aria-label="검색어 지우기">×</button>
+      </div>
+    </section>
+
+    <section class="workspace" aria-label="전술 지도 탐색기">
+      <aside class="map-index" aria-label="맵 목록">
+        <div class="index-heading"><h2>맵 선택</h2><span id="map-count"></span></div>
+        <div class="map-list" id="map-list"></div>
+      </aside>
+
+      <article class="map-viewer" aria-live="polite">
+        <div class="viewer-top">
+          <div><h2 id="selected-map-name">맵을 선택하세요</h2><p id="selected-map-description">확인하세요</p></div>
+          <div class="team-switch" aria-label="진영 선택">
+            <button class="team-button red" type="button" data-team="Red" aria-pressed="true">RED</button>
+            <button class="team-button blue" type="button" data-team="Blue" aria-pressed="false">BLUE</button>
+          </div>
+        </div>
+        <div class="map-stage" id="map-stage">
+          <span class="image-loading" id="image-status">Now Loading…</span>
+          <img id="map-image" alt="" hidden>
+        </div>
+        <div class="team-legend" aria-label="진영 범례"><span><i class="red-dot"></i>RED</span><span><i class="blue-dot"></i>BLUE</span></div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 WarDevOps. All Rights Reserved.</p>
+    <p>All content on this website, including text, images, graphics, and other materials, is the property of the site owner. Unauthorized reproduction, distribution, or use is prohibited.</p>
+  </footer>
+
+  <dialog id="image-modal" aria-label="확대하기">
+    <div class="modal-toolbar"><span id="modal-title"></span><button class="close-modal" type="button" aria-label="확대 보기 닫기">✕</button></div>
+    <img id="modal-image" alt="">
+  </dialog>
+
+  <script>
+    const maps = [
+      ["38 Parallel", "38선", "38 parallel"], ["Aredennes", "아르덴"], ["Aredennes_Big", "아르덴 대형"],
+      ["Attica", "아티카"], ["Cargo Port", "카고 포트"], ["Carpathians", "카르파티아 산맥"],
+      ["European Province", "유럽 지방"], ["Field of Normandy", "노르망디의 들판"], ["Finland", "핀란드"],
+      ["Fire Arc", "파이어 아크"], ["Iberian Castle", "이베리아 성"], ["Japan", "일본"],
+      ["Maginot Line", "마지노선"], ["Port Novorossiysk", "노보로시스크 항구"], ["Pradesh", "프라데시"],
+      ["Sand of Sinai", "시나이의 모래사장"], ["Second Battle of El Alamein", "엘 알라메인"],
+      ["Seversk-13", "세베르스크-13"], ["Sinai", "시나이"], ["Surrounding of Volokolamsk", "볼로콜람스크 포위"],
+      ["Sweden", "스웨덴"], ["Test Site-2271", "2271호 실험시설"], ["Vietnam", "베트남"],
+      ["White Rock Fortress", "백암요새"]
+    ].map(([name, aliases, folder = name]) => ({ name, aliases, folder }));
+
+    const state = { selected: null, team: "Red", query: "" };
+    const $ = (selector) => document.querySelector(selector);
+    const mapList = $("#map-list");
+    const search = $("#map-search");
+    const clearSearch = $("#clear-search");
+    const mapImage = $("#map-image");
+    const mapStage = $("#map-stage");
+    const imageStatus = $("#image-status");
+    const dialog = $("#image-modal");
+
+    function mapPath(map, team) {
+      return `img/${encodeURIComponent(map.folder)}/${team}.png`;
+    }
+    function visibleMaps() {
+      const term = state.query.trim().toLocaleLowerCase("ko");
+      return maps.filter(map => !term || `${map.name} ${map.aliases}`.toLocaleLowerCase("ko").includes(term));
+    }
+    function renderList() {
+      const displayed = visibleMaps();
+      $("#map-count").textContent = `${displayed.length}개 맵`;
+      if (!displayed.length) {
+        mapList.innerHTML = '<p class="empty-state">일치하는 맵이 없습니다.<br>다른 이름으로 검색해 보세요.</p>';
+        return;
+      }
+      mapList.innerHTML = displayed.map(map => `
+        <button class="map-card ${state.selected?.name === map.name ? "active" : ""}" type="button" data-map="${map.name}">
+          <span class="map-card-name">${map.name}</span><span class="map-card-arrow" aria-hidden="true">→</span>
+        </button>`).join("");
+    }
+    function updateUrl() {
+      if (!state.selected) return;
+      const url = new URL(window.location);
+      url.searchParams.set("map", state.selected.name);
+      url.searchParams.set("team", state.team.toLowerCase());
+      window.history.replaceState({}, "", url);
+    }
+    function selectMap(map, team = state.team) {
+      state.selected = map;
+      state.team = team;
+      $("#selected-map-name").textContent = map.name;
+      $("#selected-map-description").textContent = `${team === "Red" ? "RED" : "BLUE"} 팀 전술 지도`;
+      document.querySelectorAll(".team-button").forEach(button => {
+        button.setAttribute("aria-pressed", String(button.dataset.team === team));
+      });
+      mapImage.hidden = true;
+      mapStage.classList.remove("loaded", "load-error");
+      imageStatus.textContent = "Now Loading...";
+      mapImage.alt = `${map.name} ${team}`;
+      mapImage.src = mapPath(map, team);
+      renderList();
+      updateUrl();
+    }
+    function setTeam(team) {
+      if (state.selected) selectMap(state.selected, team);
+    }
+    function restoreFromUrl() {
+      const params = new URLSearchParams(window.location.search);
+      const map = maps.find(item => item.name === params.get("map"));
+      const team = params.get("team")?.toLowerCase() === "blue" ? "Blue" : "Red";
+      selectMap(map || maps[0], team);
+    }
+
+    mapList.addEventListener("click", event => {
+      const card = event.target.closest("[data-map]");
+      if (!card) return;
+      selectMap(maps.find(map => map.name === card.dataset.map));
+    });
+    search.addEventListener("input", () => {
+      state.query = search.value;
+      clearSearch.classList.toggle("visible", Boolean(search.value));
+      renderList();
+    });
+    clearSearch.addEventListener("click", () => { search.value = ""; search.dispatchEvent(new Event("input")); search.focus(); });
+    document.querySelectorAll(".team-button").forEach(button => button.addEventListener("click", () => setTeam(button.dataset.team)));
+    mapImage.addEventListener("load", () => { mapImage.hidden = false; mapStage.classList.add("loaded"); });
+    mapImage.addEventListener("error", () => { mapStage.classList.add("load-error"); imageStatus.textContent = "지도 이미지를 찾을 수 없습니다."; });
+    mapImage.addEventListener("click", () => {
+      if (!state.selected || mapImage.hidden) return;
+      $("#modal-image").src = mapImage.src;
+      $("#modal-image").alt = mapImage.alt;
+      $("#modal-title").textContent = `${state.selected.name} · ${state.team.toUpperCase()} Team`;
+      dialog.showModal();
+    });
+    $(".close-modal").addEventListener("click", () => dialog.close());
+    dialog.addEventListener("click", event => { if (event.target === dialog) dialog.close(); });
+    restoreFromUrl();
+  </script>
+  <style>.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }</style>
+</body>
+</html>
