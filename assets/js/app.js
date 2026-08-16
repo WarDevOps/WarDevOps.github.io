@@ -1,5 +1,5 @@
     import { loadMarkerLayout, saveMarkerLayout as saveMarkerLayoutToStorage } from './marker-storage.js';
-import { maps, translations } from './data.js';
+import { maps, translations } from './data.js?v=campania-20260817';
 
 
     const state = { selected: null, team: "Red", query: "", language: "en", theme: "dark", editMode: false, contextMarkerId: null };
@@ -44,9 +44,13 @@ import { maps, translations } from './data.js';
     const MARKER_RENDER_Z_INDEX = Object.freeze({
       smokeshell: 400,
       lightTank: 300,
+      lightTankRed: 300,
       mainBattleTank: 300,
+      mainBattleTankRed: 300,
       tankDestroyer: 300,
+      tankDestroyerRed: 300,
       antiAir: 300,
+      antiAirRed: 300,
       battleLine: 200,
       highRiskSpot: 200,
       sniper: 200,
@@ -355,7 +359,8 @@ import { maps, translations } from './data.js';
     }
 
     function mapPath(map, team) {
-      return `img/${encodeURIComponent(map.folder)}/${team}.png`;
+      const image = map.sharedImage || `${team}.png`;
+      return `img/${encodeURIComponent(map.folder)}/${encodeURIComponent(image)}`;
     }
     function visibleMaps() {
       const term = state.query.trim().toLocaleLowerCase("ko");

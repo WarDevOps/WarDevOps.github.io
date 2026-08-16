@@ -8,7 +8,12 @@ export const maps = [
       ["Seversk-13", "세베르스크-13"], ["Sinai", "시나이"], ["Surrounding of Volokolamsk", "볼로콜람스크 포위"],
       ["Sweden", "스웨덴"], ["Test Site-2271", "2271호 실험시설"], ["Vietnam", "베트남"],
       ["White Rock Fortress", "백암요새"]
-    ].map(([name, aliases, folder = name]) => ({ name, aliases, folder }));
+    ].map(([name, aliases, folder = name]) => ({ name, aliases, folder })).concat({
+      name: "Campania",
+      aliases: "캄파니아",
+      folder: "Campania",
+      sharedImage: "Campania.png"
+    });
 
 export const translations = {
       en: {
@@ -35,7 +40,7 @@ export const translations = {
         mainBattleTank: "Main Battle Tank",
         tankDestroyer: "Tank Destroyer",
         antiAir: "Anti Air",
-        battleLine: "Battle Line",
+        battleLine: "Front Line",
         highRiskSpot: "High-risk Spot",
         sniper: "Sniper",
         spawnKill: "Spawn Kill Spot",
@@ -168,3 +173,16 @@ export const translations = {
         modalLegendHint: "아이콘을 클릭하면 해당 종류의 범례를 숨기거나 다시 표시합니다."
       }
     };
+
+Object.assign(translations.en, {
+  lightTankRed: "Light Tank (Red)",
+  mainBattleTankRed: "Main Battle Tank (Red)",
+  tankDestroyerRed: "Tank Destroyer (Red)",
+  antiAirRed: "Anti Air (Red)"
+});
+Object.assign(translations.ko, {
+  lightTankRed: "경전차 (Red)",
+  mainBattleTankRed: "주력전차 (Red)",
+  tankDestroyerRed: "구축전차 (Red)",
+  antiAirRed: "대공전차 (Red)"
+});
