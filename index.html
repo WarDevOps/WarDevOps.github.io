@@ -138,12 +138,21 @@
     .team-button[aria-pressed="true"] { color: #171b1a; }
     .team-button.red[aria-pressed="true"] { border-color: var(--red); background: var(--red); }
     .team-button.blue[aria-pressed="true"] { border-color: var(--blue); background: var(--blue); }
-    .map-stage { position: relative; margin: 0 clamp(12px, 3vw, 28px) clamp(12px, 3vw, 28px); min-height: 470px; display: grid; overflow: hidden; place-items: center; border: 1px solid var(--line); border-radius: 12px; background: #0d1111; }
+    .map-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(208px, 245px); gap: 16px; align-items: start; padding: 0 clamp(12px, 3vw, 28px) 20px; }
+    .map-stage { position: relative; min-height: 470px; display: grid; overflow: hidden; place-items: center; border: 1px solid var(--line); border-radius: 12px; background: #0d1111; }
     .map-stage::after { position: absolute; right: 14px; bottom: 12px; content: "클릭하여 크게 보기"; padding: 7px 9px; border: 1px solid rgba(255,255,255,.13); border-radius: 7px; background: rgba(10, 14, 13, .78); color: #d7ded9; font-size: .73rem; pointer-events: none; }
     #map-image { display: block; width: 100%; max-height: 670px; object-fit: contain; cursor: zoom-in; }
     .image-loading { position: absolute; color: var(--muted); font-size: .9rem; }
     .map-stage.loaded .image-loading { display: none; }
     .map-stage.load-error .image-loading { display: block; color: var(--red); }
+    .legend-panel { border: 1px solid var(--line); border-radius: 12px; background: rgba(13, 19, 18, .82); overflow: hidden; }
+    .legend-heading { margin: 0; padding: 14px 15px 11px; border-bottom: 1px solid var(--line); font-size: .88rem; letter-spacing: .02em; }
+    .legend-note { margin: 0; padding: 0 15px 12px; color: var(--muted); font-size: .73rem; line-height: 1.45; }
+    .legend-list { display: grid; gap: 2px; margin: 0; padding: 0 7px 8px; list-style: none; }
+    .legend-item { display: flex; align-items: center; gap: 10px; min-height: 38px; padding: 5px 8px; border-radius: 7px; color: #d8e1db; font-size: .79rem; }
+    .legend-item:hover { background: rgba(255,255,255,.055); }
+    .legend-icon { display: grid; flex: 0 0 28px; width: 28px; height: 28px; place-items: center; border: 1px solid rgba(255,255,255,.08); border-radius: 6px; background: rgba(255,255,255,.035); }
+    .legend-icon img { display: block; max-width: 22px; max-height: 22px; object-fit: contain; }
     .team-legend { display: flex; gap: 15px; padding: 0 clamp(20px, 4vw, 38px) 28px; color: var(--muted); font-size: .8rem; }
     .team-legend span { display: inline-flex; align-items: center; gap: 7px; }
     .team-legend i { width: 9px; height: 9px; border-radius: 50%; }
@@ -169,7 +178,9 @@
       .map-card { min-height: 58px; }
       .map-card-arrow { display: none; }
       .map-viewer { min-height: 0; }
+      .map-layout { grid-template-columns: 1fr; }
       .map-stage { min-height: 270px; }
+      .legend-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     }
     @media (max-width: 430px) {
       h1 { font-size: 2.25rem; }
@@ -177,6 +188,7 @@
       .viewer-top { display: block; }
       .team-switch { margin-top: 18px; }
       .team-button { min-width: 104px; }
+      .legend-list { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -184,7 +196,7 @@
   <header class="site-header">
     <a class="brand" href="#top" aria-label="WarDevOps MapTactic">
       <span class="brand-mark" aria-hidden="true"><i></i></span>
-      <span class="brand-name">WarDevOps<span>MAPTACTIC</span></span>
+      <span class="brand-name">WarDevOps <span>MAPTACTIC</span></span>
     </a>
     <p class="header-note">WAR THUNDER · MAP GUIDE</p>
   </header>
@@ -216,9 +228,31 @@
             <button class="team-button blue" type="button" data-team="Blue" aria-pressed="false">BLUE</button>
           </div>
         </div>
-        <div class="map-stage" id="map-stage">
+        <div class="map-layout">
+          <div class="map-stage" id="map-stage">
           <span class="image-loading" id="image-status">Now Loading…</span>
           <img id="map-image" alt="" hidden>
+          </div>
+          <aside class="legend-panel" aria-label="지도 범례">
+            <h3 class="legend-heading">지도 범례</h3>
+            <p class="legend-note">맵 이미지 위 아이콘의 의미입니다.</p>
+            <ul class="legend-list">
+              <li class="legend-item"><span class="legend-icon"><img src="Legend/Aim%20here.png" alt=""></span>조준 지점</li>
+              <li class="legend-item"><span class="legend-icon"><img src="Legend/Anti%20Air.png" alt=""></span>대공 유닛</li>
+              <li class="legend-item"><span class="legend-icon"><img src="Legend/Anti-Air%20area.png" alt=""></span>대공 위험 지역</li>
+              <li class="legend-item"><span class="legend-icon"><img src="Legend/Core%20area.png" alt=""></span>핵심 지역</li>
+              <li class="legend-item"><span class="legend-icon"><img src="Legend/Danger%20area.png" alt=""></span>위험 지역</li>
+              <li class="legend-item"><span class="legend-icon"><img src="Legend/High-risk%20spot.png" alt=""></span>고위험 지점</li>
+              <li class="legend-item"><span class="legend-icon"><img src="Legend/Light%20Tank.png" alt=""></span>경전차</li>
+              <li class="legend-item"><span class="legend-icon"><img src="Legend/Line%20battle.png" alt=""></span>교전선</li>
+              <li class="legend-item"><span class="legend-icon"><img src="Legend/Main%20Battle%20Tank.png" alt=""></span>주력전차</li>
+              <li class="legend-item"><span class="legend-icon"><img src="Legend/Not%20recommended.png" alt=""></span>비추천 지역</li>
+              <li class="legend-item"><span class="legend-icon"><img src="Legend/Route.png" alt=""></span>이동 경로</li>
+              <li class="legend-item"><span class="legend-icon"><img src="Legend/Sniper.png" alt=""></span>저격 위치</li>
+              <li class="legend-item"><span class="legend-icon"><img src="Legend/Spawn%20kill.png" alt=""></span>리스폰 킬 주의</li>
+              <li class="legend-item"><span class="legend-icon"><img src="Legend/Tank%20Destroyer.png" alt=""></span>구축전차</li>
+            </ul>
+          </aside>
         </div>
         <div class="team-legend" aria-label="진영 범례"><span><i class="red-dot"></i>RED</span><span><i class="blue-dot"></i>BLUE</span></div>
       </article>
