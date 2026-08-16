@@ -1,4 +1,4 @@
-    import { loadMarkerLayout, saveMarkerLayout } from './marker-storage.js';
+    import { loadMarkerLayout, saveMarkerLayout as saveMarkerLayoutToStorage } from './marker-storage.js';
 import { maps, translations } from './data.js';
 
 
@@ -109,7 +109,7 @@ import { maps, translations } from './data.js';
     }
     function persistMarkerLayout(statusKey = "savedLocally") {
       try {
-        saveMarkerLayout(MARKER_STORAGE_KEY, markerLayout);
+        saveMarkerLayoutToStorage(MARKER_STORAGE_KEY, markerLayout);
         setMarkerStatus(statusKey);
         return true;
       } catch (error) {
