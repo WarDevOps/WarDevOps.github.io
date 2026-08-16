@@ -1,6 +1,6 @@
     import { loadMarkerLayout, saveMarkerLayout as saveMarkerLayoutToStorage } from './marker-storage.js';
 import { initVisitorCounter } from './visitor-counter.js';
-import { maps, translations } from './data.js?v=map-drawings-20260817';
+import { maps, translations } from './data.js?v=scaled-drawings-20260817';
 
 
     const state = { selected: null, team: "Red", query: "", language: "en", theme: "dark", editMode: false, contextMarkerId: null, contextAnnotationId: null, drawing: null };
@@ -53,6 +53,10 @@ import { maps, translations } from './data.js?v=map-drawings-20260817';
     const MAX_IMPORTED_MARKERS = 5000;
     const MAX_IMPORTED_ANNOTATIONS = 5000;
     const ANNOTATION_TYPES = new Set(["aimHere", "route"]);
+    const MAP_DRAWING_REFERENCE_SIZE = 600;
+    const AIM_ARROW_BASE_STROKE = 4;
+    const AIM_ARROW_BASE_ICON_SIZE = 32;
+    const ROUTE_BASE_STROKE = 3;
     // Larger values render above smaller values. Equal-priority markers keep their placement order.
     const MARKER_RENDER_Z_INDEX = Object.freeze({
       smokeshell: 400,
@@ -521,6 +525,7 @@ import { maps, translations } from './data.js?v=map-drawings-20260817';
       if (![startX, startY, endX, endY].every(Number.isFinite)) return;
       const width = layer.clientWidth;
       const height = layer.clientHeight;
+      const mapScale = Math.min(width, height) / MAP_DRAWING_REFERENCE_SIZE;
       const fromX = (startX / 100) * width;
       const fromY = (startY / 100) * height;
       const toX = (endX / 100) * width;
@@ -537,19 +542,30 @@ import { maps, translations } from './data.js?v=map-drawings-20260817';
       drawing.style.transform = `rotate(${angle}deg)`;
       drawing.setAttribute("aria-label", t(annotation.type));
       if (annotation.type === "aimHere") {
-        drawing.style.top = `${fromY - 16}px`;
+        const headSize = AIM_ARROW_BASE_ICON_SIZE * mapScale;
+        const strokeWidth = AIM_ARROW_BASE_STROKE * mapScale;
+        drawing.style.height = `${headSize}px`;
+        drawing.style.top = `${fromY - (headSize / 2)}px`;
+        drawing.style.transformOrigin = `0 ${headSize / 2}px`;
         const shaft = document.createElement("span");
         shaft.className = "aim-arrow-shaft";
-        // The source arrow has a four-pixel shaft (rows 14–17); keep it fixed at every map size.
-        shaft.style.width = `${Math.max(0, length - 16)}px`;
+        // The source arrow has a four-pixel shaft (rows 14–17); scale the complete drawing with the map.
+        shaft.style.top = `${(headSize - strokeWidth) / 2}px`;
+        shaft.style.height = `${strokeWidth}px`;
+        shaft.style.width = `${Math.max(0, length - (headSize / 2))}px`;
         const arrowHead = document.createElement("img");
         arrowHead.className = "aim-arrow-head";
         arrowHead.src = "Legend/Aim%20here.png";
         arrowHead.alt = "";
-        arrowHead.style.left = `${Math.max(0, length - 32)}px`;
+        arrowHead.style.left = `${Math.max(0, length - headSize)}px`;
+        arrowHead.style.width = `${headSize}px`;
+        arrowHead.style.height = `${headSize}px`;
         drawing.append(shaft, arrowHead);
       } else {
-        drawing.style.top = `${fromY - 1}px`;
+        const strokeWidth = ROUTE_BASE_STROKE * mapScale;
+        drawing.style.height = `${strokeWidth}px`;
+        drawing.style.top = `${fromY - (strokeWidth / 2)}px`;
+        drawing.style.transformOrigin = `0 ${strokeWidth / 2}px`;
       }
       layer.append(drawing);
     }
