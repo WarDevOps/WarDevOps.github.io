@@ -1,6 +1,6 @@
     import { loadMarkerLayout, saveMarkerLayout as saveMarkerLayoutToStorage } from './marker-storage.js';
 import { initVisitorCounter } from './visitor-counter.js';
-import { maps, translations } from './data.js?v=visitor-counter-20260817';
+import { maps, translations } from './data.js?v=role-markers-20260817';
 
 
     const state = { selected: null, team: "Red", query: "", language: "en", theme: "dark", editMode: false, contextMarkerId: null };
@@ -64,8 +64,20 @@ import { maps, translations } from './data.js?v=visitor-counter-20260817';
       route: 100,
       aimHere: 100
     });
-    // These tactical annotations are view-only until their placement workflow is finalized.
+    const TANK_MARKER_TYPES = new Set([
+      "lightTank",
+      "lightTankRed",
+      "mainBattleTank",
+      "mainBattleTankRed",
+      "tankDestroyer",
+      "tankDestroyerRed",
+      "antiAir",
+      "antiAirRed"
+    ]);
+    const ROLE_MARKER_TYPES = new Set(["battleLine", "highRiskSpot", "sniper", "spawnKill"]);
+    // Role markers are attached from a tank marker's context menu, never placed directly.
     const PLACEMENT_DISABLED_MARKER_TYPES = new Set([
+      ...ROLE_MARKER_TYPES,
       "aimHere",
       "route",
       "coreArea",
@@ -161,6 +173,32 @@ import { maps, translations } from './data.js?v=visitor-counter-20260817';
     function isMarkerHidden(marker) {
       return hiddenMarkers.has(markerIdentity(marker)) || hiddenMarkerTypes.has(markerTypeIdentity(marker.type));
     }
+    function isTankMarker(marker) {
+      return Boolean(marker && TANK_MARKER_TYPES.has(marker.type));
+    }
+    function isRoleMarker(marker) {
+      return Boolean(marker && ROLE_MARKER_TYPES.has(marker.type));
+    }
+    function linkedTankMarker(marker) {
+      if (isTankMarker(marker)) return marker;
+      if (!isRoleMarker(marker) || typeof marker.parentTankId !== "string") return null;
+      return currentMarkers().find(item => item.id === marker.parentTankId && isTankMarker(item)) || null;
+    }
+    function linkedMarkers(marker) {
+      const tank = linkedTankMarker(marker);
+      if (!tank) return marker ? [marker] : [];
+      return currentMarkers().filter(item => item.id === tank.id || item.parentTankId === tank.id);
+    }
+    function linkedRoleMarker(tankMarker) {
+      return currentMarkers().find(marker => marker.parentTankId === tankMarker.id && isRoleMarker(marker)) || null;
+    }
+    function syncLinkedRoleMarkerPosition(tankMarker) {
+      linkedMarkers(tankMarker).forEach(marker => {
+        if (!isRoleMarker(marker)) return;
+        marker.x = tankMarker.x;
+        marker.y = tankMarker.y;
+      });
+    }
     function modalLegendItems() {
       return Array.from(modalLegendList.querySelectorAll(".legend-item"));
     }
@@ -211,17 +249,37 @@ import { maps, translations } from './data.js?v=visitor-counter-20260817';
       });
     }
     function hideMarker(marker) {
-      hiddenMarkers.add(markerIdentity(marker));
+      linkedMarkers(marker).forEach(linkedMarker => hiddenMarkers.add(markerIdentity(linkedMarker)));
       renderMarkers();
       setMarkerStatus("markerHidden");
     }
     function deleteMarker(markerId) {
       const markers = currentMarkers();
-      const index = markers.findIndex(marker => marker.id === markerId);
-      if (index < 0) return;
-      const [marker] = markers.splice(index, 1);
-      hiddenMarkers.delete(markerIdentity(marker));
+      const marker = markers.find(item => item.id === markerId);
+      if (!marker) return;
+      const linkedMarkerIds = new Set(linkedMarkers(marker).map(item => item.id));
+      markerLayout.markers[currentMarkerKey()] = markers.filter(item => !linkedMarkerIds.has(item.id));
+      [...linkedMarkerIds].forEach(id => hiddenMarkers.delete(`${currentMarkerKey()}|${id}`));
       persistMarkerLayout("markerDeleted");
+      renderMarkers();
+    }
+    function applyRoleMarker(tankMarker, roleType) {
+      if (!isTankMarker(tankMarker) || !ROLE_MARKER_TYPES.has(roleType)) return;
+      const existingRoleMarker = linkedRoleMarker(tankMarker);
+      if (existingRoleMarker) {
+        existingRoleMarker.type = roleType;
+        existingRoleMarker.x = tankMarker.x;
+        existingRoleMarker.y = tankMarker.y;
+      } else {
+        currentMarkers().push({
+          id: `${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 8)}`,
+          type: roleType,
+          x: tankMarker.x,
+          y: tankMarker.y,
+          parentTankId: tankMarker.id
+        });
+      }
+      persistMarkerLayout("roleMarkerApplied");
       renderMarkers();
     }
     function hideMarkerContextMenu() {
@@ -229,11 +287,22 @@ import { maps, translations } from './data.js?v=visitor-counter-20260817';
       modalMarkerContextMenu.hidden = true;
       state.contextMarkerId = null;
     }
+    function updateContextRoleActions(contextMenu, marker) {
+      const roleActions = contextMenu.querySelector("[data-role-marker-actions]");
+      const tankMarker = linkedTankMarker(marker);
+      roleActions.hidden = !tankMarker;
+      if (!tankMarker) return;
+      const selectedRoleMarker = linkedRoleMarker(tankMarker);
+      roleActions.querySelectorAll("[data-marker-role]").forEach(button => {
+        button.setAttribute("aria-pressed", String(button.dataset.markerRole === selectedRoleMarker?.type));
+      });
+    }
     function showMarkerContextMenu(event, markerButton, contextMenu = markerContextMenu, stage = mapStage) {
       const stageRect = stage.getBoundingClientRect();
       state.contextMarkerId = markerButton.dataset.markerId;
       markerContextMenu.hidden = contextMenu !== markerContextMenu;
       modalMarkerContextMenu.hidden = contextMenu !== modalMarkerContextMenu;
+      updateContextRoleActions(contextMenu, currentMarkers().find(marker => marker.id === state.contextMarkerId));
       contextMenu.hidden = false;
       const left = Math.min(Math.max(6, event.clientX - stageRect.left), stageRect.width - contextMenu.offsetWidth - 6);
       const top = Math.min(Math.max(6, event.clientY - stageRect.top), stageRect.height - contextMenu.offsetHeight - 6);
@@ -374,13 +443,23 @@ import { maps, translations } from './data.js?v=visitor-counter-20260817';
         if (!validMarkerLayoutKeys.has(key) || !Array.isArray(markers)) throw new Error("Invalid marker group.");
         const ids = new Set();
         layout.markers[key] = markers.map(marker => {
-          if (!marker || typeof marker !== "object" || Array.isArray(marker) || typeof marker.id !== "string" || !marker.id || ids.has(marker.id) || !markerTypes.has(marker.type) || !Number.isFinite(marker.x) || !Number.isFinite(marker.y) || marker.x < 0 || marker.x > 100 || marker.y < 0 || marker.y > 100) {
+          const hasParentTankId = Object.prototype.hasOwnProperty.call(marker || {}, "parentTankId");
+          if (!marker || typeof marker !== "object" || Array.isArray(marker) || typeof marker.id !== "string" || !marker.id || ids.has(marker.id) || !markerTypes.has(marker.type) || !Number.isFinite(marker.x) || !Number.isFinite(marker.y) || marker.x < 0 || marker.x > 100 || marker.y < 0 || marker.y > 100 || (hasParentTankId && (!isRoleMarker(marker) || typeof marker.parentTankId !== "string" || !marker.parentTankId))) {
             throw new Error("Invalid marker.");
           }
           markerCount += 1;
           if (markerCount > MAX_IMPORTED_MARKERS) throw new Error("Too many markers.");
           ids.add(marker.id);
-          return { id: marker.id, type: marker.type, x: marker.x, y: marker.y };
+          const importedMarker = { id: marker.id, type: marker.type, x: marker.x, y: marker.y };
+          if (hasParentTankId) importedMarker.parentTankId = marker.parentTankId;
+          return importedMarker;
+        });
+        const attachedTankIds = new Set();
+        layout.markers[key].forEach(marker => {
+          if (typeof marker.parentTankId !== "string") return;
+          const tankMarker = layout.markers[key].find(item => item.id === marker.parentTankId);
+          if (!isTankMarker(tankMarker) || attachedTankIds.has(tankMarker.id) || marker.x !== tankMarker.x || marker.y !== tankMarker.y) throw new Error("Invalid role marker.");
+          attachedTankIds.add(tankMarker.id);
         });
       });
       return layout;
@@ -535,6 +614,7 @@ import { maps, translations } from './data.js?v=visitor-counter-20260817';
           if (!isMarkerPlacementEnabled(existingMarker.type)) return;
           existingMarker.x = position.x;
           existingMarker.y = position.y;
+          if (isTankMarker(existingMarker)) syncLinkedRoleMarkerPosition(existingMarker);
           hiddenMarkers.delete(markerIdentity(existingMarker));
         } else if (markerTypes.has(markerType) && isMarkerPlacementEnabled(markerType)) {
           markers.push({
@@ -552,9 +632,17 @@ import { maps, translations } from './data.js?v=visitor-counter-20260817';
     }
     function bindMarkerContextMenu(contextMenu) {
       contextMenu.addEventListener("click", event => {
+        const roleType = event.target.closest("[data-marker-role]")?.dataset.markerRole;
         const action = event.target.closest("[data-marker-action]")?.dataset.markerAction;
-        if (!action || !state.contextMarkerId) return;
+        if (!state.contextMarkerId) return;
         const marker = currentMarkers().find(item => item.id === state.contextMarkerId);
+        if (roleType && marker) {
+          const tankMarker = linkedTankMarker(marker);
+          if (tankMarker) applyRoleMarker(tankMarker, roleType);
+          hideMarkerContextMenu();
+          return;
+        }
+        if (!action) return;
         if (action === "hide" && marker) hideMarker(marker);
         if (action === "delete") deleteMarker(state.contextMarkerId);
         hideMarkerContextMenu();

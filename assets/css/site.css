@@ -184,10 +184,14 @@
     .team-legend .red-dot { background: var(--red); }
     .team-legend .blue-dot { background: var(--blue); }
 
-    .marker-context-menu { position: absolute; z-index: 4; min-width: 142px; padding: 5px; border: 1px solid var(--line); border-radius: 9px; background: var(--surface); box-shadow: 0 12px 30px rgba(0,0,0,.35); }
+    .marker-context-menu { position: absolute; z-index: 4; min-width: 172px; padding: 5px; border: 1px solid var(--line); border-radius: 9px; background: var(--surface); box-shadow: 0 12px 30px rgba(0,0,0,.35); }
     .marker-context-menu[hidden] { display: none; }
+    .marker-context-role-actions { margin: 0 0 5px; padding: 0 0 5px; border-bottom: 1px solid var(--line); }
+    .marker-context-role-actions[hidden] { display: none; }
+    .marker-context-role-title { margin: 4px 8px 3px; color: var(--muted); font-size: .66rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
     .marker-context-action { display: block; width: 100%; padding: 8px 10px; border: 0; border-radius: 6px; background: transparent; color: var(--ink); font-size: .77rem; text-align: left; cursor: pointer; }
     .marker-context-action:hover { background: var(--surface-raised); }
+    .marker-context-action.role[aria-pressed="true"] { background: rgba(214,219,157,.15); color: var(--accent-strong); }
     .marker-context-action.delete { color: var(--red); }
 
     body.light-theme {

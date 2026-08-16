@@ -92,9 +92,11 @@ export const translations = {
         confirmResetAll: "Delete every placed marker from all maps and teams? This cannot be undone.",
         allMarkersReset: "All placed markers were deleted.",
         markerActions: "Marker actions",
+        roleMarker: "Role Marker",
         hideMarker: "Hide Marker",
         deleteMarker: "Delete Marker",
         markerDeleted: "Marker deleted.",
+        roleMarkerApplied: "Role marker applied.",
         legendTypeHidden: "Markers for this legend are hidden.",
         legendTypeShown: "Markers for this legend are shown.",
         modalLegendHint: "Click an icon to hide or restore that marker type."
@@ -176,9 +178,11 @@ export const translations = {
         confirmResetAll: "모든 맵과 진영에 배치한 범례를 삭제할까요? 이 작업은 되돌릴 수 없습니다.",
         allMarkersReset: "배치한 모든 범례를 삭제했습니다.",
         markerActions: "범례 동작",
+        roleMarker: "역할 마커",
         hideMarker: "범례 숨기기",
         deleteMarker: "범례 삭제",
         markerDeleted: "범례를 삭제했습니다.",
+        roleMarkerApplied: "역할 마커를 적용했습니다.",
         legendTypeHidden: "이 범례의 아이콘을 숨겼습니다.",
         legendTypeShown: "이 범례의 아이콘을 표시했습니다.",
         modalLegendHint: "아이콘을 클릭하면 해당 종류의 범례를 숨기거나 다시 표시합니다."
