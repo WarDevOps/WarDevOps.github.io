@@ -54,6 +54,16 @@ import { maps, translations } from './data.js';
       route: 100,
       aimHere: 100
     });
+    // These tactical annotations are view-only until their placement workflow is finalized.
+    const PLACEMENT_DISABLED_MARKER_TYPES = new Set([
+      "aimHere",
+      "route",
+      "coreArea",
+      "dangerArea",
+      "antiAirArea",
+      "spawnArea",
+      "notRecommended"
+    ]);
     let legendDragActive = false;
 
     legendItems.forEach(item => {
@@ -157,7 +167,7 @@ import { maps, translations } from './data.js';
         toggleLegendMarkerType(item.dataset.markerType);
       });
       item.addEventListener("dragstart", event => {
-        if (!state.editMode || !event.dataTransfer) {
+        if (!state.editMode || !isMarkerPlacementEnabled(item.dataset.markerType) || !event.dataTransfer) {
           event.preventDefault();
           return;
         }
@@ -173,7 +183,9 @@ import { maps, translations } from './data.js';
       legendItems.forEach(source => {
         const item = source.cloneNode(true);
         item.classList.add("modal-legend-item");
-        item.draggable = state.editMode;
+        item.draggable = state.editMode && isMarkerPlacementEnabled(item.dataset.markerType);
+        item.classList.toggle("is-placement-disabled", state.editMode && !isMarkerPlacementEnabled(item.dataset.markerType));
+        item.setAttribute("aria-disabled", String(state.editMode && !isMarkerPlacementEnabled(item.dataset.markerType)));
         bindLegendItem(item);
         modalLegendList.append(item);
       });
@@ -266,6 +278,9 @@ import { maps, translations } from './data.js';
     function markerRenderZIndex(type) {
       return MARKER_RENDER_Z_INDEX[type] ?? 0;
     }
+    function isMarkerPlacementEnabled(type) {
+      return !PLACEMENT_DISABLED_MARKER_TYPES.has(type);
+    }
     function renderMarkerLayer(layer, image) {
       layer.replaceChildren();
       if (!state.selected || image.hidden) return;
@@ -278,7 +293,8 @@ import { maps, translations } from './data.js';
         button.type = "button";
         button.className = "map-marker";
         button.dataset.markerId = marker.id;
-        button.draggable = state.editMode;
+        button.dataset.markerType = marker.type;
+        button.draggable = state.editMode && isMarkerPlacementEnabled(marker.type);
         button.style.left = `${Math.min(100, Math.max(0, x))}%`;
         button.style.top = `${Math.min(100, Math.max(0, y))}%`;
         button.style.zIndex = String(markerRenderZIndex(marker.type));
@@ -310,7 +326,12 @@ import { maps, translations } from './data.js';
       modalToggleEditor.textContent = editorLabel;
       markerEditorNote.textContent = editorNote;
       modalMarkerEditorNote.textContent = editorNote;
-      allLegendItems().forEach(item => { item.draggable = state.editMode; });
+      allLegendItems().forEach(item => {
+        const placementEnabled = isMarkerPlacementEnabled(item.dataset.markerType);
+        item.draggable = state.editMode && placementEnabled;
+        item.classList.toggle("is-placement-disabled", state.editMode && !placementEnabled);
+        item.setAttribute("aria-disabled", String(state.editMode && !placementEnabled));
+      });
     }
     function setEditorMode(enabled) {
       state.editMode = enabled;
@@ -408,7 +429,7 @@ import { maps, translations } from './data.js';
     function bindMarkerLayer(layer, stage, contextMenu) {
       layer.addEventListener("dragstart", event => {
         const marker = event.target.closest(".map-marker");
-        if (!state.editMode || !marker || !event.dataTransfer) {
+        if (!state.editMode || !marker || !isMarkerPlacementEnabled(marker.dataset.markerType) || !event.dataTransfer) {
           event.preventDefault();
           return;
         }
@@ -445,10 +466,11 @@ import { maps, translations } from './data.js';
         const markers = currentMarkers();
         const existingMarker = markers.find(marker => marker.id === markerId);
         if (existingMarker) {
+          if (!isMarkerPlacementEnabled(existingMarker.type)) return;
           existingMarker.x = position.x;
           existingMarker.y = position.y;
           hiddenMarkers.delete(markerIdentity(existingMarker));
-        } else if (markerTypes.has(markerType)) {
+        } else if (markerTypes.has(markerType) && isMarkerPlacementEnabled(markerType)) {
           markers.push({
             id: `${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 8)}`,
             type: markerType,
