@@ -1,11 +1,12 @@
     import { loadMarkerLayout, saveMarkerLayout as saveMarkerLayoutToStorage } from './marker-storage.js';
 import { initVisitorCounter } from './visitor-counter.js';
-    import { maps, translations } from './data.js?v=special-map-markers-20260817';
+    import { maps, translations } from './data.js?v=map-variations-20260817';
 
 
     const state = { selected: null, team: "Red", query: "", language: "en", theme: "dark", editMode: false, contextMarkerId: null, contextAnnotationId: null, commentMarkerId: null, drawing: null };
     const $ = (selector) => document.querySelector(selector);
     const mapList = $("#map-list");
+    const mapVariationSelect = $("#map-variation");
     const search = $("#map-search");
     const clearSearch = $("#clear-search");
     const mapImage = $("#map-image");
@@ -135,13 +136,41 @@ import { initVisitorCounter } from './visitor-counter.js';
       markerTypes.set(label.dataset.i18n, { icon: icon.getAttribute("src") });
     });
     const markerLayout = loadMarkerLayout(MARKER_STORAGE_KEY);
-    const validMarkerLayoutKeys = new Set(maps.flatMap(map => ["Red", "Blue"].map(team => `${map.name}|${team}`)));
+    const validMarkerLayoutKeys = new Set(maps.flatMap(map => map.variations.flatMap(variation => ["Red", "Blue"].map(team => `${variation.storageKey}|${team}`))));
 
     function t(key) {
       return translations[state.language][key];
     }
     function mapLabel(map) {
       return state.language === "ko" ? map.aliases : map.name;
+    }
+    function mapVariationLabel(variation) {
+      return `${t(variation.mode)} #${variation.number}`;
+    }
+    function findBaseMap(map) {
+      return maps.find(candidate => candidate.name === map?.name) || map;
+    }
+    function expandMapVariation(map, variationId) {
+      const baseMap = findBaseMap(map);
+      const variation = baseMap.variations.find(item => item.id === variationId) || baseMap.variations[0];
+      return { ...baseMap, ...variation, variationId: variation.id };
+    }
+    function renderMapVariationSelect() {
+      if (!state.selected) {
+        mapVariationSelect.replaceChildren();
+        mapVariationSelect.disabled = true;
+        return;
+      }
+      const options = document.createDocumentFragment();
+      state.selected.variations.forEach(variation => {
+        const option = document.createElement("option");
+        option.value = variation.id;
+        option.textContent = mapVariationLabel(variation);
+        options.append(option);
+      });
+      mapVariationSelect.replaceChildren(options);
+      mapVariationSelect.value = state.selected.variationId;
+      mapVariationSelect.disabled = false;
     }
     function setTheme(theme) {
       state.theme = theme;
@@ -156,8 +185,9 @@ import { initVisitorCounter } from './visitor-counter.js';
     function updateSelectedMapDetails() {
       if (!state.selected) return;
       $("#selected-map-name").textContent = mapLabel(state.selected);
-      $("#selected-map-description").textContent = `${state.team.toUpperCase()} ${t("teamTacticalMap")}`;
-      mapImage.alt = `${mapLabel(state.selected)} ${state.team}`;
+      $("#selected-map-description").textContent = `${mapVariationLabel(state.selected)} · ${state.team.toUpperCase()} ${t("teamTacticalMap")}`;
+      mapImage.alt = `${mapLabel(state.selected)} ${mapVariationLabel(state.selected)} ${state.team}`;
+      renderMapVariationSelect();
     }
     function setLanguage(language) {
       state.language = language;
@@ -178,7 +208,7 @@ import { initVisitorCounter } from './visitor-counter.js';
     }
 
     function currentMarkerKey() {
-      return state.selected ? `${state.selected.name}|${state.team}` : null;
+      return state.selected ? `${state.selected.storageKey}|${state.team}` : null;
     }
     function currentMarkers() {
       const key = currentMarkerKey();
@@ -935,7 +965,7 @@ import { initVisitorCounter } from './visitor-counter.js';
     }
     function visibleMaps() {
       const term = state.query.trim().toLocaleLowerCase("ko");
-      return maps.filter(map => !term || `${map.name} ${map.aliases}`.toLocaleLowerCase("ko").includes(term));
+      return maps.filter(map => !term || `${map.name} ${map.aliases} ${map.variations.flatMap(variation => variation.legacyNames).join(" ")}`.toLocaleLowerCase("ko").includes(term));
     }
     function renderList() {
       const displayed = visibleMaps();
@@ -944,15 +974,19 @@ import { initVisitorCounter } from './visitor-counter.js';
         mapList.innerHTML = `<p class="empty-state">${t("noResults")}</p>`;
         return;
       }
-      mapList.innerHTML = displayed.map(map => `
+      mapList.innerHTML = displayed.map(map => {
+        const selectedVariation = state.selected?.name === map.name ? state.selected : expandMapVariation(map);
+        return `
         <button class="map-card ${state.selected?.name === map.name ? "active" : ""}" type="button" data-map="${map.name}">
-          <span class="map-card-name">${mapLabel(map)}</span><span class="map-card-arrow" aria-hidden="true">→</span>
-        </button>`).join("");
+          <span class="map-card-content"><span class="map-card-name">${mapLabel(map)}</span><span class="map-variation-tag">${mapVariationLabel(selectedVariation)}</span></span><span class="map-card-arrow" aria-hidden="true">→</span>
+        </button>`;
+      }).join("");
     }
     function updateUrl() {
       if (!state.selected) return;
       const url = new URL(window.location);
       url.searchParams.set("map", state.selected.name);
+      url.searchParams.set("variation", state.selected.variationId);
       url.searchParams.set("team", state.team.toLowerCase());
       window.history.replaceState({}, "", url);
     }
@@ -962,13 +996,15 @@ import { initVisitorCounter } from './visitor-counter.js';
       modalMapOverlayLayer.replaceChildren();
       modalAnnotationLayer.replaceChildren();
       modalMarkerLayer.replaceChildren();
-      modalImage.alt = `${mapLabel(state.selected)} ${state.team}`;
+      modalImage.alt = `${mapLabel(state.selected)} ${mapVariationLabel(state.selected)} ${state.team}`;
       modalImage.src = mapPath(state.selected, state.team);
-      $("#modal-title").textContent = `${mapLabel(state.selected)} · ${state.team.toUpperCase()} ${t("teamLabel")}`;
+      $("#modal-title").textContent = `${mapLabel(state.selected)} · ${mapVariationLabel(state.selected)} · ${state.team.toUpperCase()} ${t("teamLabel")}`;
     }
-    function selectMap(map, team = state.team) {
+    function selectMap(map, team = state.team, variationId) {
+      const baseMap = findBaseMap(map);
+      const preferredVariationId = variationId || (state.selected?.name === baseMap.name ? state.selected.variationId : null);
       cancelDrawing();
-      state.selected = map;
+      state.selected = expandMapVariation(baseMap, preferredVariationId);
       state.team = team;
       hideMarkerContextMenu();
       updateSelectedMapDetails();
@@ -982,8 +1018,8 @@ import { initVisitorCounter } from './visitor-counter.js';
       markerLayer.replaceChildren();
       annotationLayer.replaceChildren();
       imageStatus.textContent = t("loading");
-      mapImage.alt = `${mapLabel(map)} ${team}`;
-      mapImage.src = mapPath(map, team);
+      mapImage.alt = `${mapLabel(state.selected)} ${mapVariationLabel(state.selected)} ${team}`;
+      mapImage.src = mapPath(state.selected, team);
       if (dialog.open) setModalMapSource();
       renderList();
       updateUrl();
@@ -993,9 +1029,15 @@ import { initVisitorCounter } from './visitor-counter.js';
     }
     function restoreFromUrl() {
       const params = new URLSearchParams(window.location.search);
-      const map = maps.find(item => item.name === params.get("map"));
+      const requestedMapName = params.get("map");
+      let map = maps.find(item => item.name === requestedMapName);
+      let variationId = params.get("variation");
+      if (!map && requestedMapName) {
+        map = maps.find(item => item.variations.some(variation => variation.legacyNames.includes(requestedMapName)));
+        variationId = map?.variations.find(variation => variation.legacyNames.includes(requestedMapName))?.id || variationId;
+      }
       const team = params.get("team")?.toLowerCase() === "blue" ? "Blue" : "Red";
-      selectMap(map || maps[0], team);
+      selectMap(map || maps[0], team, variationId);
     }
     function resetHiddenMarkersForCurrentMap() {
       const markerKey = currentMarkerKey();
@@ -1171,6 +1213,9 @@ import { initVisitorCounter } from './visitor-counter.js';
       renderList();
     });
     clearSearch.addEventListener("click", () => { search.value = ""; search.dispatchEvent(new Event("input")); search.focus(); });
+    mapVariationSelect.addEventListener("change", () => {
+      if (state.selected) selectMap(state.selected, state.team, mapVariationSelect.value);
+    });
     document.querySelectorAll(".team-button").forEach(button => button.addEventListener("click", () => setTeam(button.dataset.team)));
     languageButtons.forEach(button => button.addEventListener("click", () => setLanguage(button.dataset.language)));
     themeToggle.addEventListener("click", () => setTheme(state.theme === "dark" ? "light" : "dark"));

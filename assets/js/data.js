@@ -1,3 +1,56 @@
+function createMap({ name, aliases, folder = name, teamImages, sharedImage, variations }) {
+  const configuredVariations = variations?.length ? variations : [{ mode: "domination", number: 1 }];
+  return {
+    name,
+    aliases,
+    folder,
+    variations: configuredVariations.map((variation, index) => {
+      const id = variation.id || `${variation.mode}-${variation.number}`;
+      return {
+        id,
+        mode: variation.mode,
+        number: variation.number,
+        folder: variation.folder || folder,
+        teamImages: variation.teamImages || teamImages,
+        sharedImage: variation.sharedImage ?? sharedImage,
+        legacyNames: variation.legacyNames || [],
+        // The first/current variation retains the old map key, preserving saved JSON layouts.
+        storageKey: variation.storageKey || (index === 0 ? name : `${name}::${id}`)
+      };
+    })
+  };
+}
+
+function standardMapVariations(name) {
+  if (name === "Maginot Line") {
+    return [
+      { mode: "domination", number: 1 },
+      {
+        mode: "domination",
+        number: 2,
+        folder: "Maginot Line Big",
+        teamImages: { Red: "Red big.png", Blue: "blue big.png" },
+        storageKey: "Maginot Line Big",
+        legacyNames: ["Maginot Line Big"]
+      }
+    ];
+  }
+  if (name === "Second Battle of El Alamein") {
+    return [
+      { mode: "domination", number: 1 },
+      {
+        mode: "domination",
+        number: 2,
+        folder: "Second Battle of El Alamein Small",
+        teamImages: { Red: "Red Small.png", Blue: "Blue Small.png" },
+        storageKey: "Second Battle of El Alamein Small",
+        legacyNames: ["Second Battle of El Alamein Small"]
+      }
+    ];
+  }
+  return [{ mode: name === "Port Novorossiysk" ? "conquest" : "domination", number: 1 }];
+}
+
 export const maps = [
       ["38 Parallel", "38선"], ["Aredennes", "아르덴"], ["Aredennes Big", "아르덴 대형"],
       ["Abandoned Town", "버려진 소도시"], ["Arctic Pier", "북극의 부두"], ["Arctic Polar Base", "북극"], ["Attica", "아티카"], ["Cargo Port", "카고 포트"], ["Carpathians", "카르파티아 산맥"],
@@ -8,30 +61,19 @@ export const maps = [
       ["Seversk-13", "세베르스크-13"], ["Sinai", "시나이"], ["Surrounding of Volokolamsk", "볼로콜람스크 포위"],
       ["Sweden", "스웨덴"], ["Test Site-2271", "2271호 실험시설"], ["Vietnam", "베트남"],
       ["White Rock Fortress", "백암요새"]
-    ].map(([name, aliases, folder = name]) => ({ name, aliases, folder })).concat({
-      name: "Campania",
-      aliases: "캄파니아",
-      folder: "Campania"
-    }, [
-      {
-        name: "Maginot Line Big",
-        aliases: "마지노선 대형",
-        folder: "Maginot Line Big",
-        teamImages: { Red: "Red big.png", Blue: "blue big.png" }
-      },
-      {
-        name: "Second Battle of El Alamein Small",
-        aliases: "엘 알라메인 소형",
-        folder: "Second Battle of El Alamein Small",
-        teamImages: { Red: "Red Small.png", Blue: "Blue Small.png" }
-      }
+    ].map(([name, aliases, folder = name]) => createMap({
+      name,
+      aliases,
+      folder,
+      variations: standardMapVariations(name)
+    })).concat([
+      createMap({ name: "Campania", aliases: "캄파니아", folder: "Campania" })
     ]);
 
 export const translations = {
       en: {
         pageTitle: "WarDevOps | War Thunder Map Tactic",
         metaDescription: "Explore War Thunder maps, team positions, tactical markers, routes, and key combat areas with WarDevOps MapTactic.",
-        headerNote: "WAR THUNDER · MAP GUIDE",
         languageSwitch: "Language selection",
         eyebrow: "TACTICAL MAP LIBRARY",
         heroTitleFirst: "READ",
@@ -46,6 +88,10 @@ export const translations = {
         mapList: "Map list",
         selectMap: "Select a Map",
         selectMapPrompt: "Choose a map to view its tactical layout.",
+        mapVariation: "Map Variation",
+        domination: "Domination",
+        conquest: "Conquest",
+        battle: "Battle",
         teamSelection: "Team selection",
         enlargeHint: "Click to enlarge",
         mapLegend: "Map Legend",
@@ -144,7 +190,6 @@ export const translations = {
       ko: {
         pageTitle: "WarDevOps | War Thunder Map Tactic",
         metaDescription: "워썬더 지도, 진영별 위치, 전술 범례, 이동 경로와 주요 교전 지역을 WarDevOps MapTactic에서 살펴보세요.",
-        headerNote: "WAR THUNDER · MAP GUIDE",
         languageSwitch: "언어 선택",
         eyebrow: "TACTICAL MAP LIBRARY",
         heroTitleFirst: "READ",
@@ -159,6 +204,10 @@ export const translations = {
         mapList: "맵 목록",
         selectMap: "맵 선택",
         selectMapPrompt: "전술 지도를 보려면 맵을 선택하세요.",
+        mapVariation: "맵 바리에이션",
+        domination: "도미네이션",
+        conquest: "컨퀘스트",
+        battle: "배틀",
         teamSelection: "진영 선택",
         enlargeHint: "클릭하여 크게 보기",
         mapLegend: "지도 범례",

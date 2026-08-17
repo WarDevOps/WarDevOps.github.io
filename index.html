@@ -42,7 +42,7 @@
   </script>
   <title>WarDevOps | War Thunder Map Tactic</title>
 
-  <link rel="stylesheet" href="assets/css/site.css?v=special-map-markers-20260817">
+  <link rel="stylesheet" href="assets/css/site.css?v=map-variations-20260817">
 </head>
 <body>
   <header class="site-header">
@@ -55,7 +55,6 @@
         <img src="icon/Discord_Small.png" alt="" width="20" height="20">
         <span class="squadron-link-label">Join Our Squadron <strong>SEOUL &amp; HYNIX</strong></span>
       </a>
-      <p class="header-note" data-i18n="headerNote">WAR THUNDER · MAP GUIDE</p>
       <div class="language-switch" data-i18n-aria="languageSwitch" aria-label="Language selection">
         <button class="language-button" type="button" data-language="en" aria-pressed="true">EN</button>
         <span class="language-divider" aria-hidden="true">|</span>
@@ -86,7 +85,14 @@
 
       <article class="map-viewer" aria-live="polite">
         <div class="viewer-top">
-          <div><h2 id="selected-map-name">Select a Map</h2><p id="selected-map-description">Choose a map to view its tactical layout.</p></div>
+          <div class="viewer-heading">
+            <h2 id="selected-map-name">Select a Map</h2>
+            <p id="selected-map-description">Choose a map to view its tactical layout.</p>
+            <div class="map-variation-control">
+              <label id="map-variation-label" for="map-variation" data-i18n="mapVariation">Map Variation</label>
+              <select id="map-variation" aria-labelledby="map-variation-label"></select>
+            </div>
+          </div>
           <div class="team-switch" aria-label="Team selection" data-i18n-aria="teamSelection">
             <button class="team-button red" type="button" data-team="Red" aria-pressed="true">RED</button>
             <button class="team-button blue" type="button" data-team="Blue" aria-pressed="false">BLUE</button>
@@ -260,6 +266,6 @@
 
   <input id="marker-layout-import-file" type="file" accept="application/json,.json" hidden>
 
-  <script type="module" src="assets/js/app.js?v=special-map-markers-20260817"></script>
+  <script type="module" src="assets/js/app.js?v=map-variations-20260817"></script>
 </body>
 </html>
