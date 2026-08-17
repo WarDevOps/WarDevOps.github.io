@@ -9,7 +9,7 @@
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7687032122626786" crossorigin="anonymous"></script>
   <title>WarDevOps | War Thunder Map Tactic</title>
 
-  <link rel="stylesheet" href="assets/css/site.css?v=css-arrows-20260817">
+  <link rel="stylesheet" href="assets/css/site.css?v=map-overlays-20260817">
 </head>
 <body>
   <header class="site-header">
@@ -71,6 +71,7 @@
           <div class="map-stage" id="map-stage">
           <span class="image-loading" id="image-status">Now Loading…</span>
           <img id="map-image" alt="" hidden>
+          <div class="map-overlay-layer" id="map-overlay-layer" aria-label="Map area overlays" data-i18n-aria="mapAreaOverlays"></div>
           <div class="annotation-layer" id="annotation-layer" aria-label="Map drawings" data-i18n-aria="mapDrawings"></div>
           <div class="marker-layer" id="marker-layer" aria-label="Map markers" data-i18n-aria="mapMarkers"></div>
           <span class="map-enlarge-hint" data-i18n="enlargeHint">Click to enlarge</span>
@@ -163,6 +164,7 @@
     <div class="modal-workspace">
       <div class="modal-map-stage" id="modal-map-stage">
         <img id="modal-image" alt="">
+        <div class="map-overlay-layer" id="modal-map-overlay-layer" aria-label="Map area overlays" data-i18n-aria="mapAreaOverlays"></div>
         <div class="annotation-layer" id="modal-annotation-layer" aria-label="Map drawings" data-i18n-aria="mapDrawings"></div>
         <div class="marker-layer" id="modal-marker-layer" aria-label="Map markers" data-i18n-aria="mapMarkers"></div>
         <div class="marker-context-menu" id="modal-marker-context-menu" role="menu" aria-label="Marker actions" data-i18n-aria="markerActions" hidden>
@@ -195,6 +197,6 @@
 
   <input id="marker-layout-import-file" type="file" accept="application/json,.json" hidden>
 
-  <script type="module" src="assets/js/app.js?v=css-arrows-20260817"></script>
+  <script type="module" src="assets/js/app.js?v=map-overlays-20260817"></script>
 </body>
 </html>

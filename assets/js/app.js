@@ -1,6 +1,6 @@
     import { loadMarkerLayout, saveMarkerLayout as saveMarkerLayoutToStorage } from './marker-storage.js';
 import { initVisitorCounter } from './visitor-counter.js';
-import { maps, translations } from './data.js?v=route-chains-20260817';
+import { maps, translations } from './data.js?v=map-overlays-20260817';
 
 
     const state = { selected: null, team: "Red", query: "", language: "en", theme: "dark", editMode: false, contextMarkerId: null, contextAnnotationId: null, drawing: null };
@@ -14,6 +14,7 @@ import { maps, translations } from './data.js?v=route-chains-20260817';
     const dialog = $("#image-modal");
     const modalImage = $("#modal-image");
     const modalMapStage = $("#modal-map-stage");
+    const modalMapOverlayLayer = $("#modal-map-overlay-layer");
     const modalAnnotationLayer = $("#modal-annotation-layer");
     const modalMarkerLayer = $("#modal-marker-layer");
     const modalLegendList = $("#modal-legend-list");
@@ -30,6 +31,7 @@ import { maps, translations } from './data.js?v=route-chains-20260817';
     const languageButtons = document.querySelectorAll(".language-button");
     const themeToggle = $("#theme-toggle");
     const mapViewer = $(".map-viewer");
+    const mapOverlayLayer = $("#map-overlay-layer");
     const markerLayer = $("#marker-layer");
     const annotationLayer = $("#annotation-layer");
     const legendItems = Array.from(document.querySelectorAll(".legend-list .legend-item"));
@@ -55,9 +57,18 @@ import { maps, translations } from './data.js?v=route-chains-20260817';
     const ANNOTATION_TYPES = new Set(["aimHere", "route"]);
     const MAP_DRAWING_REFERENCE_SIZE = 600;
     const AIM_ARROW_BASE_STROKE = 1;
-    const AIM_ARROW_HEAD_BASE_LENGTH = 13;
-    const AIM_ARROW_HEAD_BASE_HEIGHT = 16;
+    const AIM_ARROW_HEAD_BASE_LENGTH = 3;
+    const AIM_ARROW_HEAD_BASE_HEIGHT = 3;
     const ROUTE_BASE_STROKE = 1;
+    // Every map supports these optional transparent area overlays. A missing file is ignored.
+    const MAP_AREA_OVERLAYS = Object.freeze([
+      { type: "coreArea", file: "CoreArea.png" },
+      { type: "dangerArea", file: "DangerArea.png" },
+      { type: "notRecommended", file: "NotRecommended.png" },
+      { type: "antiAirArea", file: "AntiAirArea.png" },
+      { type: "spawnArea", file: "SpawnArea.png" }
+    ]);
+    const unavailableMapOverlayFiles = new Set();
     // Larger values render above smaller values. Equal-priority markers keep their placement order.
     const MARKER_RENDER_Z_INDEX = Object.freeze({
       smokeshell: 400,
@@ -191,6 +202,15 @@ import { maps, translations } from './data.js?v=route-chains-20260817';
     }
     function markerTypeIdentity(type) {
       return `${currentMarkerKey()}|type:${type}`;
+    }
+    function mapOverlayPath(map, file) {
+      return `img/${encodeURIComponent(map.folder)}/${encodeURIComponent(file)}`;
+    }
+    function mapOverlayIdentity(map, file) {
+      return `${map.folder}|${file}`;
+    }
+    function currentMapOverlays() {
+      return state.selected ? MAP_AREA_OVERLAYS : [];
     }
     function isMarkerHidden(marker) {
       return hiddenMarkers.has(markerIdentity(marker)) || hiddenMarkerTypes.has(markerTypeIdentity(marker.type));
@@ -629,6 +649,24 @@ import { maps, translations } from './data.js?v=route-chains-20260817';
       }
       renderAnnotation(layer, { id: "preview", type: "route", points }, true);
     }
+    function renderMapOverlayLayer(layer, image) {
+      layer.replaceChildren();
+      if (!state.selected || image.hidden || !layer.clientWidth || !layer.clientHeight) return;
+      currentMapOverlays().forEach(overlayConfig => {
+        if (hiddenMarkerTypes.has(markerTypeIdentity(overlayConfig.type))) return;
+        const overlayIdentity = mapOverlayIdentity(state.selected, overlayConfig.file);
+        if (unavailableMapOverlayFiles.has(overlayIdentity)) return;
+        const overlay = document.createElement("img");
+        overlay.className = "map-area-overlay";
+        overlay.src = mapOverlayPath(state.selected, overlayConfig.file);
+        overlay.alt = "";
+        overlay.addEventListener("error", () => {
+          unavailableMapOverlayFiles.add(overlayIdentity);
+          overlay.remove();
+        }, { once: true });
+        layer.append(overlay);
+      });
+    }
     function renderMarkerLayer(layer, image) {
       layer.replaceChildren();
       if (!state.selected || image.hidden) return;
@@ -657,11 +695,15 @@ import { maps, translations } from './data.js?v=route-chains-20260817';
       });
     }
     function renderMarkers() {
+      syncMarkerLayer(mapOverlayLayer, mapImage, mapStage);
+      renderMapOverlayLayer(mapOverlayLayer, mapImage);
       syncMarkerLayer(annotationLayer, mapImage, mapStage);
       renderAnnotationLayer(annotationLayer, mapImage);
       syncMarkerLayer(markerLayer, mapImage, mapStage);
       renderMarkerLayer(markerLayer, mapImage);
       if (!dialog.open) return;
+      syncMarkerLayer(modalMapOverlayLayer, modalImage, modalMapStage);
+      renderMapOverlayLayer(modalMapOverlayLayer, modalImage);
       syncMarkerLayer(modalAnnotationLayer, modalImage, modalMapStage);
       renderAnnotationLayer(modalAnnotationLayer, modalImage);
       syncMarkerLayer(modalMarkerLayer, modalImage, modalMapStage);
@@ -822,6 +864,7 @@ import { maps, translations } from './data.js?v=route-chains-20260817';
     function setModalMapSource() {
       if (!state.selected) return;
       modalImage.hidden = true;
+      modalMapOverlayLayer.replaceChildren();
       modalAnnotationLayer.replaceChildren();
       modalMarkerLayer.replaceChildren();
       modalImage.alt = `${mapLabel(state.selected)} ${state.team}`;
@@ -840,6 +883,7 @@ import { maps, translations } from './data.js?v=route-chains-20260817';
       });
       mapImage.hidden = true;
       mapStage.classList.remove("loaded", "load-error");
+      mapOverlayLayer.replaceChildren();
       markerLayer.replaceChildren();
       annotationLayer.replaceChildren();
       imageStatus.textContent = t("loading");
@@ -1066,6 +1110,7 @@ import { maps, translations } from './data.js?v=route-chains-20260817';
     });
     mapImage.addEventListener("error", () => {
       mapStage.classList.add("load-error");
+      mapOverlayLayer.replaceChildren();
       annotationLayer.replaceChildren();
       markerLayer.replaceChildren();
       imageStatus.textContent = t("imageError");
@@ -1075,6 +1120,7 @@ import { maps, translations } from './data.js?v=route-chains-20260817';
       renderMarkers();
     });
     modalImage.addEventListener("error", () => {
+      modalMapOverlayLayer.replaceChildren();
       modalAnnotationLayer.replaceChildren();
       modalMarkerLayer.replaceChildren();
     });
@@ -1089,6 +1135,7 @@ import { maps, translations } from './data.js?v=route-chains-20260817';
       cancelDrawing();
       hideMarkerContextMenu();
       hideAnnotationContextMenu();
+      modalMapOverlayLayer.replaceChildren();
       modalAnnotationLayer.replaceChildren();
       modalMarkerLayer.replaceChildren();
     });
