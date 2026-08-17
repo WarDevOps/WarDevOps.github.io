@@ -65,12 +65,15 @@
     .brand-mark::after { width: 39px; height: 2px; }
     .brand-mark i { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); }
     .brand-name { font-size: 1.05rem; font-weight: 800; letter-spacing: .04em; }
-    .brand-name span { color: var(--accent); }
+    .brand-owner { color: var(--ink); }
+    .brand-product { color: var(--accent); }
     .header-actions { display: flex; align-items: center; gap: 18px; }
     .squadron-link { display: inline-flex; align-items: center; gap: 7px; color: var(--muted); font-family: Arial, "Helvetica Neue", sans-serif; font-size: .72rem; font-weight: 650; letter-spacing: .01em; line-height: 1.2; text-decoration: none; white-space: nowrap; transition: color .18s; }
     .squadron-link:hover, .squadron-link:focus-visible { color: var(--accent); }
     .squadron-link img { display: block; width: 20px; height: 20px; object-fit: contain; }
     .squadron-link strong { color: var(--ink); font-weight: 800; }
+    .squadron-member-count { padding-left: 8px; border-left: 1px solid var(--line); color: var(--ink); font-variant-numeric: tabular-nums; font-weight: 800; }
+    .squadron-link:hover .squadron-member-count, .squadron-link:focus-visible .squadron-member-count { color: var(--accent); }
     .language-switch { display: inline-flex; align-items: center; gap: 2px; padding: 3px; border: 1px solid var(--line); border-radius: 9px; background: rgba(13, 19, 18, .7); }
     .language-button { padding: 5px 8px; border: 0; border-radius: 6px; background: transparent; color: var(--muted); font-size: .72rem; font-weight: 800; letter-spacing: .06em; cursor: pointer; transition: .18s; }
     .language-button:hover { color: var(--ink); }
@@ -176,7 +179,9 @@
     .map-viewer.is-editing .map-marker:hover, dialog.is-editing .map-marker:hover { filter: drop-shadow(0 0 4px var(--accent)); }
     .map-marker img { display: block; width: auto; height: auto; max-width: none; max-height: none; object-fit: initial; pointer-events: none; }
     .map-marker img.is-special-role-marker { filter: brightness(0); opacity: .5; }
-    .map-marker-comment { position: absolute; z-index: 1; width: max-content; max-width: 230px; padding: 8px 10px; border: 1px solid var(--line); border-radius: 9px; background: var(--surface); box-shadow: 0 12px 30px rgba(0,0,0,.35); color: var(--ink); font-size: .76rem; font-weight: 500; line-height: 1.45; text-align: left; white-space: pre-wrap; pointer-events: none; opacity: 0; visibility: hidden; transition: opacity .14s ease, visibility .14s ease; }
+    .map-marker-comment { position: absolute; z-index: 1; display: flex; align-items: flex-start; gap: 8px; width: max-content; max-width: 270px; padding: 8px 10px; border: 1px solid var(--line); border-radius: 9px; background: var(--surface); box-shadow: 0 12px 30px rgba(0,0,0,.35); color: var(--ink); font-size: .76rem; font-weight: 500; line-height: 1.45; text-align: left; white-space: pre-wrap; pointer-events: none; opacity: 0; visibility: hidden; transition: opacity .14s ease, visibility .14s ease; }
+    .map-marker-comment-image { flex: 0 0 58px; width: 58px; height: 42px; border: 1px solid var(--line); border-radius: 5px; object-fit: cover; }
+    .map-marker-comment-text { min-width: 0; }
     .map-marker.has-comment:hover .map-marker-comment { opacity: 1; visibility: visible; }
     .map-marker[data-comment-placement="above"] .map-marker-comment { bottom: calc(100% + 9px); }
     .map-marker[data-comment-placement="below"] .map-marker-comment { top: calc(100% + 9px); }
@@ -219,6 +224,11 @@
     .marker-comment-editor[hidden] { display: none; }
     .marker-comment-input { box-sizing: border-box; width: 100%; min-height: 78px; resize: vertical; padding: 8px 9px; border: 1px solid var(--line); border-radius: 6px; background: var(--bg); color: var(--ink); font: inherit; font-size: .76rem; line-height: 1.45; }
     .marker-comment-input:focus { outline: 1px solid var(--accent); border-color: var(--accent); }
+    .marker-comment-image-field { display: grid; gap: 4px; }
+    .marker-comment-image-field label, .marker-comment-byte-counter { margin: 0; color: var(--muted); font-size: .67rem; font-weight: 750; letter-spacing: .035em; }
+    .marker-comment-image-select { min-width: 0; padding: 7px 9px; border: 1px solid var(--line); border-radius: 6px; outline: none; background: var(--bg); color: var(--ink); font: inherit; font-size: .72rem; }
+    .marker-comment-image-select:focus { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent); }
+    .marker-comment-image-select:disabled { cursor: not-allowed; opacity: .6; }
     .marker-comment-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 5px; }
     .marker-comment-actions .marker-context-action { padding: 8px; text-align: center; }
     .marker-context-role-actions { margin: 0 0 5px; padding: 0 0 5px; border-bottom: 1px solid var(--line); }
@@ -305,7 +315,7 @@
     @media (max-width: 760px) {
       .site-header, main, .site-footer { width: min(100% - 28px, 1240px); }
       .site-header { min-height: 64px; }
-      .squadron-link { width: 30px; height: 30px; justify-content: center; padding: 5px; }
+      .squadron-link { width: auto; height: 30px; justify-content: center; padding: 5px; }
       .squadron-link-label { display: none; }
       .hero { padding-top: 44px; }
       .workspace { grid-template-columns: 1fr; }

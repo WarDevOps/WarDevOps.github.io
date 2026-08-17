@@ -1,6 +1,8 @@
-    import { loadMarkerLayout, saveMarkerLayout as saveMarkerLayoutToStorage } from './marker-storage.js';
+    import { MARKER_LAYOUT_VERSION, loadMarkerLayout, saveMarkerLayout as saveMarkerLayoutToStorage } from './marker-storage.js';
 import { initVisitorCounter } from './visitor-counter.js';
-    import { maps, translations } from './data.js?v=map-variations-20260817';
+import { initDiscordMemberCount } from './discord-stats.js';
+    import { commentImages } from './comment-images.js?v=comment-images-20260817';
+    import { maps, translations } from './data.js?v=comment-images-20260817';
 
 
     const state = { selected: null, team: "Red", query: "", language: "en", theme: "dark", editMode: false, contextMarkerId: null, contextAnnotationId: null, commentMarkerId: null, drawing: null };
@@ -51,11 +53,18 @@ import { initVisitorCounter } from './visitor-counter.js';
     const hiddenMarkers = new Set();
     const hiddenAnnotations = new Set();
     const hiddenMarkerTypes = new Set();
-    const MARKER_STORAGE_KEY = "maptactic-marker-layout-v1";
-    const MARKER_LAYOUT_VERSION = 1;
+    const MARKER_STORAGE_KEY = "maptactic-marker-layout-v2";
     const MAX_IMPORTED_MARKERS = 5000;
     const MAX_IMPORTED_ANNOTATIONS = 5000;
-    const MAX_MARKER_COMMENT_LENGTH = 1000;
+    const MAX_MARKER_COMMENT_BYTES = 40;
+    const COMMENT_TEXT_ENCODER = new TextEncoder();
+    const COMMENT_IMAGES_BY_ID = new Map();
+    commentImages.forEach(image => {
+      const hasSafePath = typeof image?.path === "string" && /^img\/(?:[^/]+\/)*scr_[^/]+\.png$/.test(image.path) && !image.path.split("/").some(part => part === "." || part === "..");
+      if (typeof image?.id !== "string" || !image.id || image.id.length > 240 || typeof image.label !== "string" || image.label.length > 240 || !hasSafePath || COMMENT_IMAGES_BY_ID.has(image.id)) return;
+      COMMENT_IMAGES_BY_ID.set(image.id, Object.freeze({ id: image.id, path: image.path, label: image.label }));
+    });
+    const COMMENT_IMAGES = Object.freeze([...COMMENT_IMAGES_BY_ID.values()]);
     const ANNOTATION_TYPES = new Set(["aimHere", "route"]);
     const MAP_DRAWING_REFERENCE_SIZE = 600;
     const MAP_MARKER_REFERENCE_SIZE = 1440;
@@ -136,7 +145,7 @@ import { initVisitorCounter } from './visitor-counter.js';
       markerTypes.set(label.dataset.i18n, { icon: icon.getAttribute("src") });
     });
     const markerLayout = loadMarkerLayout(MARKER_STORAGE_KEY);
-    const validMarkerLayoutKeys = new Set(maps.flatMap(map => map.variations.flatMap(variation => ["Red", "Blue"].map(team => `${variation.storageKey}|${team}`))));
+    const validMarkerLayoutKeys = new Set(maps.flatMap(map => map.variations.flatMap(variation => ["Red", "Blue"].map(team => `${map.name}::${variation.id}|${team}`))));
 
     function t(key) {
       return translations[state.language][key];
@@ -198,6 +207,9 @@ import { initVisitorCounter } from './visitor-counter.js';
       document.querySelectorAll("[data-i18n-placeholder]").forEach(element => { element.placeholder = t(element.dataset.i18nPlaceholder); });
       document.querySelectorAll("[data-i18n-aria]").forEach(element => { element.setAttribute("aria-label", t(element.dataset.i18nAria)); });
       languageButtons.forEach(button => { button.setAttribute("aria-pressed", String(button.dataset.language === language)); });
+      document.querySelectorAll(".marker-context-menu").forEach(contextMenu => {
+        renderCommentImageOptions(contextMenu, contextMenu.querySelector("[data-marker-comment-image-select]").value);
+      });
       setTheme(state.theme);
       updateSelectedMapDetails();
       imageStatus.textContent = mapStage.classList.contains("load-error") ? t("imageError") : t("loading");
@@ -208,7 +220,7 @@ import { initVisitorCounter } from './visitor-counter.js';
     }
 
     function currentMarkerKey() {
-      return state.selected ? `${state.selected.storageKey}|${state.team}` : null;
+      return state.selected ? `${state.selected.name}::${state.selected.variationId}|${state.team}` : null;
     }
     function currentMarkers() {
       const key = currentMarkerKey();
@@ -276,8 +288,33 @@ import { initVisitorCounter } from './visitor-counter.js';
         ? SPECIAL_TANK_ICON_PATHS[marker.type]?.[state.team] || fallbackPath
         : fallbackPath;
     }
+    function commentByteLength(value) {
+      return COMMENT_TEXT_ENCODER.encode(value).length;
+    }
+    function limitCommentToByteLength(value) {
+      let result = "";
+      let bytes = 0;
+      for (const character of String(value ?? "")) {
+        const characterBytes = COMMENT_TEXT_ENCODER.encode(character).length;
+        if (bytes + characterBytes > MAX_MARKER_COMMENT_BYTES) break;
+        result += character;
+        bytes += characterBytes;
+      }
+      return result;
+    }
+    function normalizeMarkerComment(value) {
+      return limitCommentToByteLength(String(value ?? "").trim());
+    }
     function markerComment(marker) {
-      return isTankMarker(marker) && typeof marker.comment === "string" ? marker.comment.trim() : "";
+      return isTankMarker(marker) && typeof marker.comment === "string" ? normalizeMarkerComment(marker.comment) : "";
+    }
+    function markerCommentImage(marker) {
+      return isTankMarker(marker) && typeof marker.commentImage === "string" && COMMENT_IMAGES_BY_ID.has(marker.commentImage)
+        ? COMMENT_IMAGES_BY_ID.get(marker.commentImage)
+        : null;
+    }
+    function markerHasComment(marker) {
+      return Boolean(markerComment(marker) || markerCommentImage(marker));
     }
     function linkedTankMarker(marker) {
       if (isTankMarker(marker)) return marker;
@@ -446,6 +483,31 @@ import { initVisitorCounter } from './visitor-counter.js';
       actionList.hidden = false;
       editor.hidden = true;
       input.value = "";
+      renderCommentImageOptions(contextMenu);
+      updateCommentByteCounter(input);
+    }
+    function renderCommentImageOptions(contextMenu, selectedImageId = "") {
+      const select = contextMenu.querySelector("[data-marker-comment-image-select]");
+      const placeholder = document.createElement("option");
+      placeholder.value = "";
+      placeholder.textContent = t("noCommentImage");
+      const options = document.createDocumentFragment();
+      options.append(placeholder);
+      COMMENT_IMAGES.forEach(image => {
+        const option = document.createElement("option");
+        option.value = image.id;
+        option.textContent = image.label;
+        options.append(option);
+      });
+      select.replaceChildren(options);
+      select.value = COMMENT_IMAGES_BY_ID.has(selectedImageId) ? selectedImageId : "";
+      select.disabled = COMMENT_IMAGES.length === 0;
+    }
+    function updateCommentByteCounter(input) {
+      const limitedValue = limitCommentToByteLength(input.value);
+      if (input.value !== limitedValue) input.value = limitedValue;
+      const counter = input.closest("[data-marker-comment-editor]").querySelector("[data-marker-comment-byte-counter]");
+      counter.textContent = `${commentByteLength(input.value)} / ${MAX_MARKER_COMMENT_BYTES} B`;
     }
     function showCommentEditor(contextMenu, marker) {
       if (!isTankMarker(marker)) return;
@@ -456,14 +518,19 @@ import { initVisitorCounter } from './visitor-counter.js';
       actionList.hidden = true;
       editor.hidden = false;
       input.value = markerComment(marker);
+      renderCommentImageOptions(contextMenu, marker.commentImage);
+      updateCommentByteCounter(input);
       input.focus();
     }
-    function saveMarkerComment(marker, comment) {
+    function saveMarkerComment(marker, comment, imageId) {
       if (!isTankMarker(marker)) return;
-      const value = comment.trim();
+      const value = normalizeMarkerComment(comment);
+      const image = COMMENT_IMAGES_BY_ID.get(imageId);
       if (value) marker.comment = value;
       else delete marker.comment;
-      persistMarkerLayout(value ? "commentSaved" : "commentRemoved");
+      if (image) marker.commentImage = image.id;
+      else delete marker.commentImage;
+      persistMarkerLayout(value || image ? "commentSaved" : "commentRemoved");
       renderMarkers();
     }
     function hideMarkerContextMenu() {
@@ -800,10 +867,23 @@ import { initVisitorCounter } from './visitor-counter.js';
         icon.style.height = `${markerSize}px`;
         button.append(icon);
         const comment = markerComment(marker);
-        if (comment && !state.editMode) {
+        const commentImage = markerCommentImage(marker);
+        if (markerHasComment(marker) && !state.editMode) {
           const tooltip = document.createElement("span");
           tooltip.className = "map-marker-comment";
-          tooltip.textContent = comment;
+          if (commentImage) {
+            const image = document.createElement("img");
+            image.className = "map-marker-comment-image";
+            image.src = commentImage.path;
+            image.alt = commentImage.label;
+            tooltip.append(image);
+          }
+          if (comment) {
+            const text = document.createElement("span");
+            text.className = "map-marker-comment-text";
+            text.textContent = comment;
+            tooltip.append(text);
+          }
           button.classList.add("has-comment");
           button.dataset.commentPlacement = y > 50 ? "above" : "below";
           button.dataset.commentAlign = x < 25 ? "start" : x > 75 ? "end" : "center";
@@ -879,7 +959,8 @@ import { initVisitorCounter } from './visitor-counter.js';
         layout.markers[key] = markers.map(marker => {
           const hasParentTankId = Object.prototype.hasOwnProperty.call(marker || {}, "parentTankId");
           const hasComment = Object.prototype.hasOwnProperty.call(marker || {}, "comment");
-          if (!marker || typeof marker !== "object" || Array.isArray(marker) || typeof marker.id !== "string" || !marker.id || ids.has(marker.id) || !markerTypes.has(marker.type) || !Number.isFinite(marker.x) || !Number.isFinite(marker.y) || marker.x < 0 || marker.x > 100 || marker.y < 0 || marker.y > 100 || (hasParentTankId && (!isRoleMarker(marker) || typeof marker.parentTankId !== "string" || !marker.parentTankId)) || (hasComment && (!isTankMarker(marker) || typeof marker.comment !== "string" || marker.comment.length > MAX_MARKER_COMMENT_LENGTH))) {
+          const hasCommentImage = Object.prototype.hasOwnProperty.call(marker || {}, "commentImage");
+          if (!marker || typeof marker !== "object" || Array.isArray(marker) || typeof marker.id !== "string" || !marker.id || ids.has(marker.id) || !markerTypes.has(marker.type) || !Number.isFinite(marker.x) || !Number.isFinite(marker.y) || marker.x < 0 || marker.x > 100 || marker.y < 0 || marker.y > 100 || (hasParentTankId && (!isRoleMarker(marker) || typeof marker.parentTankId !== "string" || !marker.parentTankId)) || (hasComment && (!isTankMarker(marker) || typeof marker.comment !== "string" || commentByteLength(marker.comment) > MAX_MARKER_COMMENT_BYTES)) || (hasCommentImage && (!isTankMarker(marker) || typeof marker.commentImage !== "string" || !COMMENT_IMAGES_BY_ID.has(marker.commentImage)))) {
             throw new Error("Invalid marker.");
           }
           markerCount += 1;
@@ -887,7 +968,8 @@ import { initVisitorCounter } from './visitor-counter.js';
           ids.add(marker.id);
           const importedMarker = { id: marker.id, type: marker.type, x: marker.x, y: marker.y };
           if (hasParentTankId) importedMarker.parentTankId = marker.parentTankId;
-          if (hasComment && marker.comment.trim()) importedMarker.comment = marker.comment.trim();
+          if (hasComment && marker.comment.trim()) importedMarker.comment = normalizeMarkerComment(marker.comment);
+          if (hasCommentImage) importedMarker.commentImage = marker.commentImage;
           return importedMarker;
         });
         const attachedTankIds = new Set();
@@ -965,7 +1047,7 @@ import { initVisitorCounter } from './visitor-counter.js';
     }
     function visibleMaps() {
       const term = state.query.trim().toLocaleLowerCase("ko");
-      return maps.filter(map => !term || `${map.name} ${map.aliases} ${map.variations.flatMap(variation => variation.legacyNames).join(" ")}`.toLocaleLowerCase("ko").includes(term));
+      return maps.filter(map => !term || `${map.name} ${map.aliases}`.toLocaleLowerCase("ko").includes(term));
     }
     function renderList() {
       const displayed = visibleMaps();
@@ -1029,13 +1111,8 @@ import { initVisitorCounter } from './visitor-counter.js';
     }
     function restoreFromUrl() {
       const params = new URLSearchParams(window.location.search);
-      const requestedMapName = params.get("map");
-      let map = maps.find(item => item.name === requestedMapName);
-      let variationId = params.get("variation");
-      if (!map && requestedMapName) {
-        map = maps.find(item => item.variations.some(variation => variation.legacyNames.includes(requestedMapName)));
-        variationId = map?.variations.find(variation => variation.legacyNames.includes(requestedMapName))?.id || variationId;
-      }
+      const map = maps.find(item => item.name === params.get("map"));
+      const variationId = params.get("variation");
       const team = params.get("team")?.toLowerCase() === "blue" ? "Blue" : "Red";
       selectMap(map || maps[0], team, variationId);
     }
@@ -1161,7 +1238,11 @@ import { initVisitorCounter } from './visitor-counter.js';
           return;
         }
         if (commentAction === "save" && marker && marker.id === state.commentMarkerId) {
-          saveMarkerComment(marker, contextMenu.querySelector("[data-marker-comment-input]").value);
+          saveMarkerComment(
+            marker,
+            contextMenu.querySelector("[data-marker-comment-input]").value,
+            contextMenu.querySelector("[data-marker-comment-image-select]").value
+          );
           hideMarkerContextMenu();
           return;
         }
@@ -1239,6 +1320,10 @@ import { initVisitorCounter } from './visitor-counter.js';
     bindAnnotationLayer(modalAnnotationLayer, modalMapStage, modalAnnotationContextMenu);
     bindMarkerStage(mapStage, markerLayer, annotationLayer);
     bindMarkerStage(modalMapStage, modalMarkerLayer, modalAnnotationLayer);
+    document.querySelectorAll("[data-marker-comment-input]").forEach(input => {
+      input.addEventListener("input", () => updateCommentByteCounter(input));
+      updateCommentByteCounter(input);
+    });
     bindMarkerContextMenu(markerContextMenu);
     bindMarkerContextMenu(modalMarkerContextMenu);
     bindAnnotationContextMenu(annotationContextMenu);
@@ -1293,3 +1378,4 @@ import { initVisitorCounter } from './visitor-counter.js';
     setLanguage("en");
     restoreFromUrl();
     initVisitorCounter();
+    initDiscordMemberCount();

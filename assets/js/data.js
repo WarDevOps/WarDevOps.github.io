@@ -4,7 +4,7 @@ function createMap({ name, aliases, folder = name, teamImages, sharedImage, vari
     name,
     aliases,
     folder,
-    variations: configuredVariations.map((variation, index) => {
+    variations: configuredVariations.map(variation => {
       const id = variation.id || `${variation.mode}-${variation.number}`;
       return {
         id,
@@ -12,16 +12,23 @@ function createMap({ name, aliases, folder = name, teamImages, sharedImage, vari
         number: variation.number,
         folder: variation.folder || folder,
         teamImages: variation.teamImages || teamImages,
-        sharedImage: variation.sharedImage ?? sharedImage,
-        legacyNames: variation.legacyNames || [],
-        // The first/current variation retains the old map key, preserving saved JSON layouts.
-        storageKey: variation.storageKey || (index === 0 ? name : `${name}::${id}`)
+        sharedImage: variation.sharedImage ?? sharedImage
       };
     })
   };
 }
 
 function standardMapVariations(name) {
+  if (name === "Aredennes") {
+    return [
+      { mode: "domination", number: 1 },
+      {
+        mode: "domination",
+        number: 2,
+        folder: "Aredennes Big"
+      }
+    ];
+  }
   if (name === "Maginot Line") {
     return [
       { mode: "domination", number: 1 },
@@ -29,9 +36,7 @@ function standardMapVariations(name) {
         mode: "domination",
         number: 2,
         folder: "Maginot Line Big",
-        teamImages: { Red: "Red big.png", Blue: "blue big.png" },
-        storageKey: "Maginot Line Big",
-        legacyNames: ["Maginot Line Big"]
+        teamImages: { Red: "Red big.png", Blue: "blue big.png" }
       }
     ];
   }
@@ -42,9 +47,7 @@ function standardMapVariations(name) {
         mode: "domination",
         number: 2,
         folder: "Second Battle of El Alamein Small",
-        teamImages: { Red: "Red Small.png", Blue: "Blue Small.png" },
-        storageKey: "Second Battle of El Alamein Small",
-        legacyNames: ["Second Battle of El Alamein Small"]
+        teamImages: { Red: "Red Small.png", Blue: "Blue Small.png" }
       }
     ];
   }
@@ -52,7 +55,7 @@ function standardMapVariations(name) {
 }
 
 export const maps = [
-      ["38 Parallel", "38선"], ["Aredennes", "아르덴"], ["Aredennes Big", "아르덴 대형"],
+      ["38 Parallel", "38선"], ["Aredennes", "아르덴"],
       ["Abandoned Town", "버려진 소도시"], ["Arctic Pier", "북극의 부두"], ["Arctic Polar Base", "북극"], ["Attica", "아티카"], ["Cargo Port", "카고 포트"], ["Carpathians", "카르파티아 산맥"],
       ["European Province", "유럽 지방"], ["Field of Normandy", "노르망디의 들판"], ["Finland", "핀란드"],
       ["Fields of Poland", "폴란드의 들판"], ["Fire Arc", "파이어 아크"], ["Golden Quarry", "금광 지대"], ["Iberian Castle", "이베리아 성"], ["Japan", "일본"],
@@ -159,6 +162,8 @@ export const translations = {
         addComment: "Add Comment",
         commentTitle: "Comment",
         commentPlaceholder: "Write a tactical note…",
+        commentImage: "Reference Image",
+        noCommentImage: "No image",
         saveComment: "Save Comment",
         cancel: "Cancel",
         commentSaved: "Comment saved.",
@@ -276,6 +281,8 @@ export const translations = {
         addComment: "코멘트 추가",
         commentTitle: "코멘트",
         commentPlaceholder: "전술 메모를 작성하세요…",
+        commentImage: "참조 이미지",
+        noCommentImage: "이미지 없음",
         saveComment: "코멘트 저장",
         cancel: "취소",
         commentSaved: "코멘트를 저장했습니다.",

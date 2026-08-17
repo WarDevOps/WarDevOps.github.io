@@ -42,18 +42,19 @@
   </script>
   <title>WarDevOps | War Thunder Map Tactic</title>
 
-  <link rel="stylesheet" href="assets/css/site.css?v=map-variations-20260817">
+  <link rel="stylesheet" href="assets/css/site.css?v=discord-member-count-header-brand-20260817">
 </head>
 <body>
   <header class="site-header">
     <a class="brand" href="#top" aria-label="WarDevOps MapTactic">
       <span class="brand-mark" aria-hidden="true"><i></i></span>
-      <span class="brand-name"><span data-i18n="brandName">WarDevOps</span> <span>MAPTACTIC</span></span>
+      <span class="brand-name"><span class="brand-owner" data-i18n="brandName">WarDevOps</span> <span class="brand-product">MAPTACTIC</span></span>
     </a>
     <div class="header-actions">
       <a class="squadron-link" href="https://discord.gg/tvCZdBb7BE" target="_blank" rel="noopener noreferrer" aria-label="Join Our Squadron SEOUL &amp; HYNIX on Discord">
         <img src="icon/Discord_Small.png" alt="" width="20" height="20">
         <span class="squadron-link-label">Join Our Squadron <strong>SEOUL &amp; HYNIX</strong></span>
+        <span class="squadron-member-count" id="discord-member-count" aria-live="polite">— / 256</span>
       </a>
       <div class="language-switch" data-i18n-aria="languageSwitch" aria-label="Language selection">
         <button class="language-button" type="button" data-language="en" aria-pressed="true">EN</button>
@@ -130,7 +131,12 @@
             </div>
             <div class="marker-comment-editor" data-marker-comment-editor hidden>
               <p class="marker-context-role-title" data-i18n="commentTitle">Comment</p>
-              <textarea class="marker-comment-input" data-marker-comment-input rows="4" maxlength="1000" data-i18n-placeholder="commentPlaceholder" placeholder="Write a tactical note…"></textarea>
+              <textarea class="marker-comment-input" data-marker-comment-input rows="3" data-i18n-placeholder="commentPlaceholder" placeholder="Write a tactical note…"></textarea>
+              <div class="marker-comment-image-field">
+                <label data-i18n="commentImage">Reference Image</label>
+                <select class="marker-comment-image-select" data-marker-comment-image-select></select>
+              </div>
+              <p class="marker-comment-byte-counter" data-marker-comment-byte-counter aria-live="polite">0 / 40 B</p>
               <div class="marker-comment-actions">
                 <button class="marker-context-action" type="button" data-marker-comment-action="save" data-i18n="saveComment">Save Comment</button>
                 <button class="marker-context-action" type="button" data-marker-comment-action="cancel" data-i18n="cancel">Cancel</button>
@@ -239,7 +245,12 @@
           </div>
           <div class="marker-comment-editor" data-marker-comment-editor hidden>
             <p class="marker-context-role-title" data-i18n="commentTitle">Comment</p>
-            <textarea class="marker-comment-input" data-marker-comment-input rows="4" maxlength="1000" data-i18n-placeholder="commentPlaceholder" placeholder="Write a tactical note…"></textarea>
+            <textarea class="marker-comment-input" data-marker-comment-input rows="3" data-i18n-placeholder="commentPlaceholder" placeholder="Write a tactical note…"></textarea>
+            <div class="marker-comment-image-field">
+              <label data-i18n="commentImage">Reference Image</label>
+              <select class="marker-comment-image-select" data-marker-comment-image-select></select>
+            </div>
+            <p class="marker-comment-byte-counter" data-marker-comment-byte-counter aria-live="polite">0 / 40 B</p>
             <div class="marker-comment-actions">
               <button class="marker-context-action" type="button" data-marker-comment-action="save" data-i18n="saveComment">Save Comment</button>
               <button class="marker-context-action" type="button" data-marker-comment-action="cancel" data-i18n="cancel">Cancel</button>
@@ -266,6 +277,6 @@
 
   <input id="marker-layout-import-file" type="file" accept="application/json,.json" hidden>
 
-  <script type="module" src="assets/js/app.js?v=map-variations-20260817"></script>
+  <script type="module" src="assets/js/app.js?v=discord-member-count-20260817"></script>
 </body>
 </html>
