@@ -1,6 +1,6 @@
     import { loadMarkerLayout, saveMarkerLayout as saveMarkerLayoutToStorage } from './marker-storage.js';
 import { initVisitorCounter } from './visitor-counter.js';
-import { maps, translations } from './data.js?v=route-control-20260817';
+    import { maps, translations } from './data.js?v=map-library-20260817';
 
 
     const state = { selected: null, team: "Red", query: "", language: "en", theme: "dark", editMode: false, contextMarkerId: null, contextAnnotationId: null, drawing: null };
@@ -862,7 +862,7 @@ import { maps, translations } from './data.js?v=route-control-20260817';
     }
 
     function mapPath(map, team) {
-      const image = map.sharedImage || `${team}.png`;
+      const image = map.sharedImage || map.teamImages?.[team] || `${team}.png`;
       return `img/${encodeURIComponent(map.folder)}/${encodeURIComponent(image)}`;
     }
     function visibleMaps() {
