@@ -1,6 +1,6 @@
     import { loadMarkerLayout, saveMarkerLayout as saveMarkerLayoutToStorage } from './marker-storage.js';
 import { initVisitorCounter } from './visitor-counter.js';
-import { maps, translations } from './data.js?v=map-overlays-20260817';
+import { maps, translations } from './data.js?v=danger-route-20260817';
 
 
     const state = { selected: null, team: "Red", query: "", language: "en", theme: "dark", editMode: false, contextMarkerId: null, contextAnnotationId: null, drawing: null };
@@ -57,8 +57,8 @@ import { maps, translations } from './data.js?v=map-overlays-20260817';
     const ANNOTATION_TYPES = new Set(["aimHere", "route"]);
     const MAP_DRAWING_REFERENCE_SIZE = 600;
     const AIM_ARROW_BASE_STROKE = 1;
-    const AIM_ARROW_HEAD_BASE_LENGTH = 3;
-    const AIM_ARROW_HEAD_BASE_HEIGHT = 3;
+    const AIM_ARROW_HEAD_BASE_LENGTH = 6;
+    const AIM_ARROW_HEAD_BASE_HEIGHT = 6;
     const ROUTE_BASE_STROKE = 1;
     // Every map supports these optional transparent area overlays. A missing file is ignored.
     const MAP_AREA_OVERLAYS = Object.freeze([
@@ -359,6 +359,12 @@ import { maps, translations } from './data.js?v=map-overlays-20260817';
       persistMarkerLayout("drawingDeleted");
       renderMarkers();
     }
+    function toggleDangerRoute(annotation) {
+      if (!annotation || annotation.type !== "route") return;
+      annotation.dangerRoute = !annotation.dangerRoute;
+      persistMarkerLayout(annotation.dangerRoute ? "dangerRouteEnabled" : "dangerRouteDisabled");
+      renderMarkers();
+    }
     function applyRoleMarker(tankMarker, roleType) {
       if (!isTankMarker(tankMarker) || !ROLE_MARKER_TYPES.has(roleType)) return;
       const existingRoleMarker = linkedRoleMarker(tankMarker);
@@ -492,8 +498,13 @@ import { maps, translations } from './data.js?v=map-overlays-20260817';
       const stageRect = stage.getBoundingClientRect();
       hideMarkerContextMenu();
       state.contextAnnotationId = annotationButton.dataset.annotationId;
+      const annotation = currentAnnotations().find(item => item.id === state.contextAnnotationId);
       annotationContextMenu.hidden = contextMenu !== annotationContextMenu;
       modalAnnotationContextMenu.hidden = contextMenu !== modalAnnotationContextMenu;
+      const dangerRouteAction = contextMenu.querySelector("[data-annotation-action='dangerRoute']");
+      const isRoute = annotation?.type === "route";
+      dangerRouteAction.hidden = !isRoute;
+      dangerRouteAction.setAttribute("aria-checked", String(Boolean(annotation?.dangerRoute)));
       contextMenu.hidden = false;
       const left = Math.min(Math.max(6, event.clientX - stageRect.left), stageRect.width - contextMenu.offsetWidth - 6);
       const top = Math.min(Math.max(6, event.clientY - stageRect.top), stageRect.height - contextMenu.offsetHeight - 6);
@@ -593,7 +604,7 @@ import { maps, translations } from './data.js?v=map-overlays-20260817';
       const angle = Math.atan2(toY - fromY, toX - fromX) * (180 / Math.PI);
       const drawing = document.createElement("button");
       drawing.type = "button";
-      drawing.className = `map-annotation ${annotation.type === "aimHere" ? "aim-arrow" : "route-line"}${isPreview ? " is-preview" : ""}`;
+      drawing.className = `map-annotation ${annotation.type === "aimHere" ? "aim-arrow" : "route-line"}${annotation.type === "route" && annotation.dangerRoute ? " is-danger-route" : ""}${isPreview ? " is-preview" : ""}`;
       drawing.dataset.annotationId = annotation.id || "preview";
       drawing.style.left = `${fromX}px`;
       drawing.style.width = `${length}px`;
@@ -787,8 +798,10 @@ import { maps, translations } from './data.js?v=map-overlays-20260817';
           const hasValidCoordinates = [annotation?.startX, annotation?.startY, annotation?.endX, annotation?.endY].every(value => Number.isFinite(value) && value >= 0 && value <= 100);
           const isAimHere = annotation?.type === "aimHere";
           const hasRoutePoints = Array.isArray(annotation?.points) && annotation.points.length >= 2 && annotation.points.every(point => point && typeof point === "object" && !Array.isArray(point) && Number.isFinite(point.x) && point.x >= 0 && point.x <= 100 && Number.isFinite(point.y) && point.y >= 0 && point.y <= 100);
+          const isRoute = annotation?.type === "route";
           const hasLegacyRoute = !isAimHere && hasValidCoordinates;
-          if (!annotation || typeof annotation !== "object" || Array.isArray(annotation) || typeof annotation.id !== "string" || !annotation.id || ids.has(annotation.id) || !ANNOTATION_TYPES.has(annotation.type) || (isAimHere && (!hasValidCoordinates || typeof annotation.parentTankId !== "string" || !annotation.parentTankId)) || (!isAimHere && (!hasRoutePoints && !hasLegacyRoute)) || (!isAimHere && Object.prototype.hasOwnProperty.call(annotation, "parentTankId"))) {
+          const hasDangerRoute = Object.prototype.hasOwnProperty.call(annotation || {}, "dangerRoute");
+          if (!annotation || typeof annotation !== "object" || Array.isArray(annotation) || typeof annotation.id !== "string" || !annotation.id || ids.has(annotation.id) || !ANNOTATION_TYPES.has(annotation.type) || (isAimHere && (!hasValidCoordinates || typeof annotation.parentTankId !== "string" || !annotation.parentTankId)) || (!isAimHere && (!hasRoutePoints && !hasLegacyRoute)) || (!isAimHere && Object.prototype.hasOwnProperty.call(annotation, "parentTankId")) || (hasDangerRoute && (!isRoute || typeof annotation.dangerRoute !== "boolean"))) {
             throw new Error("Invalid drawing.");
           }
           const tankMarker = isAimHere ? layout.markers[key]?.find(marker => marker.id === annotation.parentTankId) : null;
@@ -801,8 +814,11 @@ import { maps, translations } from './data.js?v=map-overlays-20260817';
           }
           ids.add(annotation.id);
           if (isAimHere) return { id: annotation.id, type: annotation.type, parentTankId: annotation.parentTankId, startX: annotation.startX, startY: annotation.startY, endX: annotation.endX, endY: annotation.endY };
-          if (hasRoutePoints) return { id: annotation.id, type: annotation.type, points: annotation.points.map(point => ({ x: point.x, y: point.y })) };
-          return { id: annotation.id, type: annotation.type, startX: annotation.startX, startY: annotation.startY, endX: annotation.endX, endY: annotation.endY };
+          const importedRoute = hasRoutePoints
+            ? { id: annotation.id, type: annotation.type, points: annotation.points.map(point => ({ x: point.x, y: point.y })) }
+            : { id: annotation.id, type: annotation.type, startX: annotation.startX, startY: annotation.startY, endX: annotation.endX, endY: annotation.endY };
+          if (annotation.dangerRoute) importedRoute.dangerRoute = true;
+          return importedRoute;
         });
       });
       return layout;
@@ -1042,6 +1058,7 @@ import { maps, translations } from './data.js?v=map-overlays-20260817';
         const action = event.target.closest("[data-annotation-action]")?.dataset.annotationAction;
         if (!action || !state.contextAnnotationId) return;
         const annotation = currentAnnotations().find(item => item.id === state.contextAnnotationId);
+        if (action === "dangerRoute" && annotation) toggleDangerRoute(annotation);
         if (action === "hide" && annotation) hideAnnotation(annotation);
         if (action === "delete") deleteAnnotation(state.contextAnnotationId);
         hideAnnotationContextMenu();

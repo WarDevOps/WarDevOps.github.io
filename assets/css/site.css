@@ -162,7 +162,8 @@
     .aim-arrow { height: 16px; transform-origin: 0 8px; }
     .aim-arrow-shaft { position: absolute; top: 6px; left: 0; height: 4px; background: #fff; }
     .aim-arrow-head { position: absolute; top: 0; display: block; width: 0; height: 0; border-style: solid; border-right-width: 0; border-color: transparent; border-left-color: #fff; pointer-events: none; }
-    .route-line { height: 3px; transform-origin: 0 1.5px; background: repeating-linear-gradient(to right, #fff 0 10px, transparent 10px 20px); }
+    .route-line { height: 3px; transform-origin: 0 1.5px; --route-color: #fff; background: repeating-linear-gradient(to right, var(--route-color) 0 10px, transparent 10px 20px); }
+    .route-line.is-danger-route { --route-color: #E60012; }
     .map-marker { position: absolute; display: block; width: auto; height: auto; padding: 0; transform: translate(-50%, -50%); border: 0; border-radius: 0; background: transparent; box-shadow: none; cursor: pointer; line-height: 0; pointer-events: auto; }
     .map-marker:hover { filter: drop-shadow(0 0 4px var(--accent)); }
     .map-marker img { display: block; width: auto; height: auto; max-width: none; max-height: none; object-fit: initial; pointer-events: none; }
