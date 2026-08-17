@@ -74,6 +74,7 @@ export const translations = {
       en: {
         pageTitle: "WarDevOps | War Thunder Map Tactic",
         metaDescription: "Explore War Thunder maps, team positions, tactical markers, routes, and key combat areas with WarDevOps MapTactic.",
+        brandName: "WarDevOps",
         languageSwitch: "Language selection",
         eyebrow: "TACTICAL MAP LIBRARY",
         heroTitleFirst: "READ",
@@ -190,6 +191,7 @@ export const translations = {
       ko: {
         pageTitle: "WarDevOps | War Thunder Map Tactic",
         metaDescription: "워썬더 지도, 진영별 위치, 전술 범례, 이동 경로와 주요 교전 지역을 WarDevOps MapTactic에서 살펴보세요.",
+        brandName: "부릉부릉",
         languageSwitch: "언어 선택",
         eyebrow: "TACTICAL MAP LIBRARY",
         heroTitleFirst: "READ",
@@ -261,8 +263,8 @@ export const translations = {
         mapAreaOverlays: "지도 구역 오버레이",
         markerViewTitle: "마커 보기",
         markerEditTitle: "드래그하여 위치 변경",
-        lightTheme: "화이트 테마",
-        darkTheme: "다크 테마",
+        lightTheme: "Light",
+        darkTheme: "Dark",
         themeToggle: "색상 테마 전환",
         switchToLightTheme: "화이트 테마로 전환",
         switchToDarkTheme: "다크 테마로 전환",
