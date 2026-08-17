@@ -1,8 +1,8 @@
 export const maps = [
       ["38 Parallel", "38선"], ["Aredennes", "아르덴"], ["Aredennes_Big", "아르덴 대형"],
-      ["Abandoned Town", "버려진 마을"], ["Attica", "아티카"], ["Cargo Port", "카고 포트"], ["Carpathians", "카르파티아 산맥"],
+      ["Abandoned Town", "버려진 소도시"], ["Attica", "아티카"], ["Cargo Port", "카고 포트"], ["Carpathians", "카르파티아 산맥"],
       ["European Province", "유럽 지방"], ["Field of Normandy", "노르망디의 들판"], ["Finland", "핀란드"],
-      ["Fields of Poland", "폴란드의 들판"], ["Fire Arc", "파이어 아크"], ["Golden Quarry", "황금 채석장"], ["Iberian Castle", "이베리아 성"], ["Japan", "일본"],
+      ["Fields of Poland", "폴란드의 들판"], ["Fire Arc", "파이어 아크"], ["Golden Quarry", "금광 지대"], ["Iberian Castle", "이베리아 성"], ["Japan", "일본"],
       ["Maginot Line", "마지노선"], ["Port Novorossiysk", "노보로시스크 항구"], ["Pradesh", "프라데시"],
       ["Mozdok", "모즈도크"], ["Poland", "폴란드"], ["Red Desert", "붉은 사막"], ["Sand of Sinai", "시나이의 모래사장"], ["Second Battle of El Alamein", "엘 알라메인"],
       ["Seversk-13", "세베르스크-13"], ["Sinai", "시나이"], ["Surrounding of Volokolamsk", "볼로콜람스크 포위"],
