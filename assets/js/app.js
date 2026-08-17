@@ -56,6 +56,8 @@ import { maps, translations } from './data.js?v=danger-route-20260817';
     const MAX_IMPORTED_ANNOTATIONS = 5000;
     const ANNOTATION_TYPES = new Set(["aimHere", "route"]);
     const MAP_DRAWING_REFERENCE_SIZE = 600;
+    const MAP_MARKER_REFERENCE_SIZE = 1440;
+    const MAP_MARKER_BASE_SIZE = 32;
     const AIM_ARROW_BASE_STROKE = 1;
     const AIM_ARROW_HEAD_BASE_LENGTH = 6;
     const AIM_ARROW_HEAD_BASE_HEIGHT = 6;
@@ -681,6 +683,7 @@ import { maps, translations } from './data.js?v=danger-route-20260817';
     function renderMarkerLayer(layer, image) {
       layer.replaceChildren();
       if (!state.selected || image.hidden) return;
+      const markerSize = MAP_MARKER_BASE_SIZE * (Math.min(layer.clientWidth, layer.clientHeight) / MAP_MARKER_REFERENCE_SIZE);
       currentMarkers().forEach(marker => {
         const type = markerTypes.get(marker.type);
         const x = Number(marker.x);
@@ -701,6 +704,8 @@ import { maps, translations } from './data.js?v=danger-route-20260817';
         const icon = document.createElement("img");
         icon.src = type.icon;
         icon.alt = "";
+        icon.style.width = `${markerSize}px`;
+        icon.style.height = `${markerSize}px`;
         button.append(icon);
         layer.append(button);
       });
