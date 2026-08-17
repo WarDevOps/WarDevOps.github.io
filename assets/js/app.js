@@ -56,7 +56,7 @@ import { initDiscordMemberCount } from './discord-stats.js';
     const MARKER_STORAGE_KEY = "maptactic-marker-layout-v2";
     const MAX_IMPORTED_MARKERS = 5000;
     const MAX_IMPORTED_ANNOTATIONS = 5000;
-    const MAX_MARKER_COMMENT_BYTES = 40;
+    const MAX_MARKER_COMMENT_BYTES = 120;
     const COMMENT_TEXT_ENCODER = new TextEncoder();
     const COMMENT_IMAGES_BY_ID = new Map();
     commentImages.forEach(image => {
