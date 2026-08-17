@@ -1,6 +1,6 @@
     import { loadMarkerLayout, saveMarkerLayout as saveMarkerLayoutToStorage } from './marker-storage.js';
 import { initVisitorCounter } from './visitor-counter.js';
-import { maps, translations } from './data.js?v=danger-route-20260817';
+import { maps, translations } from './data.js?v=marker-view-only-20260817';
 
 
     const state = { selected: null, team: "Red", query: "", language: "en", theme: "dark", editMode: false, contextMarkerId: null, contextAnnotationId: null, drawing: null };
@@ -957,16 +957,11 @@ import { maps, translations } from './data.js?v=danger-route-20260817';
         event.dataTransfer.setData("application/x-maptactic-marker-id", marker.dataset.markerId);
         event.dataTransfer.setData("text/plain", marker.dataset.markerId);
       });
-      layer.addEventListener("click", event => {
-        const markerButton = event.target.closest(".map-marker");
-        if (!markerButton || state.editMode) return;
-        const marker = currentMarkers().find(item => item.id === markerButton.dataset.markerId);
-        if (marker) hideMarker(marker);
-      });
       layer.addEventListener("contextmenu", event => {
         const markerButton = event.target.closest(".map-marker");
         if (!markerButton) return;
         event.preventDefault();
+        if (!state.editMode) return;
         showMarkerContextMenu(event, markerButton, contextMenu, stage);
       });
     }

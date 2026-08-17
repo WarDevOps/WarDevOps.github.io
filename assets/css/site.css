@@ -164,8 +164,8 @@
     .aim-arrow-head { position: absolute; top: 0; display: block; width: 0; height: 0; border-style: solid; border-right-width: 0; border-color: transparent; border-left-color: #fff; pointer-events: none; }
     .route-line { height: 3px; transform-origin: 0 1.5px; --route-color: #fff; background: repeating-linear-gradient(to right, var(--route-color) 0 10px, transparent 10px 20px); }
     .route-line.is-danger-route { --route-color: #E60012; }
-    .map-marker { position: absolute; display: block; width: auto; height: auto; padding: 0; transform: translate(-50%, -50%); border: 0; border-radius: 0; background: transparent; box-shadow: none; cursor: pointer; line-height: 0; pointer-events: auto; }
-    .map-marker:hover { filter: drop-shadow(0 0 4px var(--accent)); }
+    .map-marker { position: absolute; display: block; width: auto; height: auto; padding: 0; transform: translate(-50%, -50%); border: 0; border-radius: 0; background: transparent; box-shadow: none; cursor: default; line-height: 0; pointer-events: auto; }
+    .map-viewer.is-editing .map-marker:hover, dialog.is-editing .map-marker:hover { filter: drop-shadow(0 0 4px var(--accent)); }
     .map-marker img { display: block; width: auto; height: auto; max-width: none; max-height: none; object-fit: initial; pointer-events: none; }
     .map-viewer.is-editing .map-stage { border-color: var(--accent); box-shadow: inset 0 0 0 1px rgba(214,219,157,.3); }
     .map-stage.is-drawing, .modal-map-stage.is-drawing { cursor: crosshair; }
