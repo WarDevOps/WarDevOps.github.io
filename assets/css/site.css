@@ -203,6 +203,7 @@
     .marker-context-role-actions[hidden] { display: none; }
     .marker-context-role-title { margin: 4px 8px 3px; color: var(--muted); font-size: .66rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
     .marker-context-action { display: block; width: 100%; padding: 8px 10px; border: 0; border-radius: 6px; background: transparent; color: var(--ink); font-size: .77rem; text-align: left; cursor: pointer; }
+    .marker-context-action[hidden] { display: none !important; }
     .marker-context-action:hover { background: var(--surface-raised); }
     .marker-context-action.role[aria-pressed="true"] { background: rgba(214,219,157,.15); color: var(--accent-strong); }
     .marker-context-action.drawing-tool { display: inline-flex; align-items: center; gap: 7px; }
