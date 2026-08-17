@@ -3,13 +3,46 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="War Thunder All Maps">
+  <meta name="description" content="Explore War Thunder maps, team positions, tactical markers, routes, and key combat areas with WarDevOps MapTactic.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="theme-color" content="#111719">
   <meta name="google-adsense-account" content="ca-pub-7687032122626786">
+  <link rel="canonical" href="https://wardevops.github.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="WarDevOps MapTactic">
+  <meta property="og:title" content="WarDevOps | War Thunder Map Tactic">
+  <meta property="og:description" content="Explore War Thunder maps, team positions, tactical markers, routes, and key combat areas.">
+  <meta property="og:url" content="https://wardevops.github.io/">
+  <meta property="og:image" content="https://wardevops.github.io/img/38%20Parallel/Red.png">
+  <meta property="og:image:alt" content="War Thunder tactical map">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="WarDevOps | War Thunder Map Tactic">
+  <meta name="twitter:description" content="Explore War Thunder maps, team positions, tactical markers, routes, and key combat areas.">
+  <meta name="twitter:image" content="https://wardevops.github.io/img/38%20Parallel/Red.png">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7687032122626786" crossorigin="anonymous"></script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "name": "WarDevOps MapTactic",
+          "url": "https://wardevops.github.io/",
+          "description": "War Thunder tactical map library with team map views, marker legends, routes, and combat area overlays.",
+          "inLanguage": ["en", "ko"],
+          "publisher": { "@type": "Organization", "name": "WarDevOps", "url": "https://wardevops.github.io/" }
+        },
+        {
+          "@type": "Organization",
+          "name": "WarDevOps",
+          "url": "https://wardevops.github.io/"
+        }
+      ]
+    }
+  </script>
   <title>WarDevOps | War Thunder Map Tactic</title>
 
-  <link rel="stylesheet" href="assets/css/site.css?v=route-control-20260817">
+  <link rel="stylesheet" href="assets/css/site.css?v=marker-comments-20260817">
 </head>
 <body>
   <header class="site-header">
@@ -76,16 +109,27 @@
           <div class="marker-layer" id="marker-layer" aria-label="Map markers" data-i18n-aria="mapMarkers"></div>
           <span class="map-enlarge-hint" data-i18n="enlargeHint">Click to enlarge</span>
           <div class="marker-context-menu" id="marker-context-menu" role="menu" aria-label="Marker actions" data-i18n-aria="markerActions" hidden>
-            <div class="marker-context-role-actions" data-role-marker-actions hidden>
-              <p class="marker-context-role-title" data-i18n="roleMarker">Role Marker</p>
-              <button class="marker-context-action role" type="button" data-marker-role="battleLine" role="menuitemradio" aria-pressed="false" data-i18n="battleLine">Front Line</button>
-              <button class="marker-context-action role" type="button" data-marker-role="highRiskSpot" role="menuitemradio" aria-pressed="false" data-i18n="highRiskSpot">High-risk Spot</button>
-              <button class="marker-context-action role" type="button" data-marker-role="sniper" role="menuitemradio" aria-pressed="false" data-i18n="sniper">Sniper</button>
-              <button class="marker-context-action role" type="button" data-marker-role="spawnKill" role="menuitemradio" aria-pressed="false" data-i18n="spawnKill">Spawn Kill Spot</button>
+            <div data-marker-action-list>
+              <div class="marker-context-role-actions" data-role-marker-actions hidden>
+                <p class="marker-context-role-title" data-i18n="roleMarker">Role Marker</p>
+                <button class="marker-context-action role" type="button" data-marker-role="battleLine" role="menuitemradio" aria-pressed="false" data-i18n="battleLine">Front Line</button>
+                <button class="marker-context-action role" type="button" data-marker-role="highRiskSpot" role="menuitemradio" aria-pressed="false" data-i18n="highRiskSpot">High-risk Spot</button>
+                <button class="marker-context-action role" type="button" data-marker-role="sniper" role="menuitemradio" aria-pressed="false" data-i18n="sniper">Sniper</button>
+                <button class="marker-context-action role" type="button" data-marker-role="spawnKill" role="menuitemradio" aria-pressed="false" data-i18n="spawnKill">Spawn Kill Spot</button>
+              </div>
+              <button class="marker-context-action drawing-tool" type="button" data-marker-tool="aimHere" role="menuitem"><img src="Legend/Aim%20here.png" alt=""><span data-i18n="aimHere">Aim Here</span></button>
+              <button class="marker-context-action" type="button" data-marker-action="addComment" role="menuitem" data-i18n="addComment">Add Comment</button>
+              <button class="marker-context-action" type="button" data-marker-action="hide" role="menuitem" data-i18n="hideMarker">Hide Marker</button>
+              <button class="marker-context-action delete" type="button" data-marker-action="delete" role="menuitem" data-i18n="deleteMarker">Delete Marker</button>
             </div>
-            <button class="marker-context-action drawing-tool" type="button" data-marker-tool="aimHere" role="menuitem"><img src="Legend/Aim%20here.png" alt=""><span data-i18n="aimHere">Aim Here</span></button>
-            <button class="marker-context-action" type="button" data-marker-action="hide" role="menuitem" data-i18n="hideMarker">Hide Marker</button>
-            <button class="marker-context-action delete" type="button" data-marker-action="delete" role="menuitem" data-i18n="deleteMarker">Delete Marker</button>
+            <div class="marker-comment-editor" data-marker-comment-editor hidden>
+              <p class="marker-context-role-title" data-i18n="commentTitle">Comment</p>
+              <textarea class="marker-comment-input" data-marker-comment-input rows="4" maxlength="1000" data-i18n-placeholder="commentPlaceholder" placeholder="Write a tactical note…"></textarea>
+              <div class="marker-comment-actions">
+                <button class="marker-context-action" type="button" data-marker-comment-action="save" data-i18n="saveComment">Save Comment</button>
+                <button class="marker-context-action" type="button" data-marker-comment-action="cancel" data-i18n="cancel">Cancel</button>
+              </div>
+            </div>
           </div>
           <div class="annotation-context-menu" id="annotation-context-menu" role="menu" aria-label="Drawing actions" data-i18n-aria="drawingActions" hidden>
             <button class="marker-context-action danger-route" type="button" data-annotation-action="dangerRoute" role="menuitemcheckbox" aria-checked="false" data-i18n="dangerRoute" hidden>Danger Route</button>
@@ -132,6 +176,10 @@
         <div class="team-legend" aria-label="Team legend" data-i18n-aria="teamLegend"><span><i class="red-dot"></i>RED</span><span><i class="blue-dot"></i>BLUE</span></div>
       </article>
     </section>
+    <section class="search-guide" aria-labelledby="search-guide-title">
+      <h2 id="search-guide-title" data-i18n="searchGuideTitle">War Thunder Tactical Map Guide</h2>
+      <p data-i18n="searchGuideCopy">Browse map layouts for both teams, compare key combat areas, and use tactical markers to plan routes, positions, and engagements before battle.</p>
+    </section>
   </main>
 
   <footer class="site-footer">
@@ -170,16 +218,27 @@
         <div class="annotation-layer" id="modal-annotation-layer" aria-label="Map drawings" data-i18n-aria="mapDrawings"></div>
         <div class="marker-layer" id="modal-marker-layer" aria-label="Map markers" data-i18n-aria="mapMarkers"></div>
         <div class="marker-context-menu" id="modal-marker-context-menu" role="menu" aria-label="Marker actions" data-i18n-aria="markerActions" hidden>
-          <div class="marker-context-role-actions" data-role-marker-actions hidden>
-            <p class="marker-context-role-title" data-i18n="roleMarker">Role Marker</p>
-            <button class="marker-context-action role" type="button" data-marker-role="battleLine" role="menuitemradio" aria-pressed="false" data-i18n="battleLine">Front Line</button>
-            <button class="marker-context-action role" type="button" data-marker-role="highRiskSpot" role="menuitemradio" aria-pressed="false" data-i18n="highRiskSpot">High-risk Spot</button>
-            <button class="marker-context-action role" type="button" data-marker-role="sniper" role="menuitemradio" aria-pressed="false" data-i18n="sniper">Sniper</button>
-            <button class="marker-context-action role" type="button" data-marker-role="spawnKill" role="menuitemradio" aria-pressed="false" data-i18n="spawnKill">Spawn Kill Spot</button>
+          <div data-marker-action-list>
+            <div class="marker-context-role-actions" data-role-marker-actions hidden>
+              <p class="marker-context-role-title" data-i18n="roleMarker">Role Marker</p>
+              <button class="marker-context-action role" type="button" data-marker-role="battleLine" role="menuitemradio" aria-pressed="false" data-i18n="battleLine">Front Line</button>
+              <button class="marker-context-action role" type="button" data-marker-role="highRiskSpot" role="menuitemradio" aria-pressed="false" data-i18n="highRiskSpot">High-risk Spot</button>
+              <button class="marker-context-action role" type="button" data-marker-role="sniper" role="menuitemradio" aria-pressed="false" data-i18n="sniper">Sniper</button>
+              <button class="marker-context-action role" type="button" data-marker-role="spawnKill" role="menuitemradio" aria-pressed="false" data-i18n="spawnKill">Spawn Kill Spot</button>
+            </div>
+            <button class="marker-context-action drawing-tool" type="button" data-marker-tool="aimHere" role="menuitem"><img src="Legend/Aim%20here.png" alt=""><span data-i18n="aimHere">Aim Here</span></button>
+            <button class="marker-context-action" type="button" data-marker-action="addComment" role="menuitem" data-i18n="addComment">Add Comment</button>
+            <button class="marker-context-action" type="button" data-marker-action="hide" role="menuitem" data-i18n="hideMarker">Hide Marker</button>
+            <button class="marker-context-action delete" type="button" data-marker-action="delete" role="menuitem" data-i18n="deleteMarker">Delete Marker</button>
           </div>
-          <button class="marker-context-action drawing-tool" type="button" data-marker-tool="aimHere" role="menuitem"><img src="Legend/Aim%20here.png" alt=""><span data-i18n="aimHere">Aim Here</span></button>
-          <button class="marker-context-action" type="button" data-marker-action="hide" role="menuitem" data-i18n="hideMarker">Hide Marker</button>
-          <button class="marker-context-action delete" type="button" data-marker-action="delete" role="menuitem" data-i18n="deleteMarker">Delete Marker</button>
+          <div class="marker-comment-editor" data-marker-comment-editor hidden>
+            <p class="marker-context-role-title" data-i18n="commentTitle">Comment</p>
+            <textarea class="marker-comment-input" data-marker-comment-input rows="4" maxlength="1000" data-i18n-placeholder="commentPlaceholder" placeholder="Write a tactical note…"></textarea>
+            <div class="marker-comment-actions">
+              <button class="marker-context-action" type="button" data-marker-comment-action="save" data-i18n="saveComment">Save Comment</button>
+              <button class="marker-context-action" type="button" data-marker-comment-action="cancel" data-i18n="cancel">Cancel</button>
+            </div>
+          </div>
         </div>
         <div class="annotation-context-menu" id="modal-annotation-context-menu" role="menu" aria-label="Drawing actions" data-i18n-aria="drawingActions" hidden>
           <button class="marker-context-action danger-route" type="button" data-annotation-action="dangerRoute" role="menuitemcheckbox" aria-checked="false" data-i18n="dangerRoute" hidden>Danger Route</button>
@@ -201,6 +260,6 @@
 
   <input id="marker-layout-import-file" type="file" accept="application/json,.json" hidden>
 
-  <script type="module" src="assets/js/app.js?v=map-library-20260817"></script>
+  <script type="module" src="assets/js/app.js?v=marker-comments-20260817"></script>
 </body>
 </html>

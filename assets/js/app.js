@@ -1,9 +1,9 @@
     import { loadMarkerLayout, saveMarkerLayout as saveMarkerLayoutToStorage } from './marker-storage.js';
 import { initVisitorCounter } from './visitor-counter.js';
-    import { maps, translations } from './data.js?v=map-library-20260817';
+    import { maps, translations } from './data.js?v=marker-comments-20260817';
 
 
-    const state = { selected: null, team: "Red", query: "", language: "en", theme: "dark", editMode: false, contextMarkerId: null, contextAnnotationId: null, drawing: null };
+    const state = { selected: null, team: "Red", query: "", language: "en", theme: "dark", editMode: false, contextMarkerId: null, contextAnnotationId: null, commentMarkerId: null, drawing: null };
     const $ = (selector) => document.querySelector(selector);
     const mapList = $("#map-list");
     const search = $("#map-search");
@@ -54,6 +54,7 @@ import { initVisitorCounter } from './visitor-counter.js';
     const MARKER_LAYOUT_VERSION = 1;
     const MAX_IMPORTED_MARKERS = 5000;
     const MAX_IMPORTED_ANNOTATIONS = 5000;
+    const MAX_MARKER_COMMENT_LENGTH = 1000;
     const ANNOTATION_TYPES = new Set(["aimHere", "route"]);
     const MAP_DRAWING_REFERENCE_SIZE = 600;
     const MAP_MARKER_REFERENCE_SIZE = 1440;
@@ -226,6 +227,9 @@ import { initVisitorCounter } from './visitor-counter.js';
     function isRoleMarker(marker) {
       return Boolean(marker && ROLE_MARKER_TYPES.has(marker.type));
     }
+    function markerComment(marker) {
+      return isTankMarker(marker) && typeof marker.comment === "string" ? marker.comment.trim() : "";
+    }
     function linkedTankMarker(marker) {
       if (isTankMarker(marker)) return marker;
       if (!isRoleMarker(marker) || typeof marker.parentTankId !== "string") return null;
@@ -386,10 +390,40 @@ import { initVisitorCounter } from './visitor-counter.js';
       persistMarkerLayout("roleMarkerApplied");
       renderMarkers();
     }
+    function resetCommentEditor(contextMenu) {
+      const actionList = contextMenu.querySelector("[data-marker-action-list]");
+      const editor = contextMenu.querySelector("[data-marker-comment-editor]");
+      const input = contextMenu.querySelector("[data-marker-comment-input]");
+      actionList.hidden = false;
+      editor.hidden = true;
+      input.value = "";
+    }
+    function showCommentEditor(contextMenu, marker) {
+      if (!isTankMarker(marker)) return;
+      const actionList = contextMenu.querySelector("[data-marker-action-list]");
+      const editor = contextMenu.querySelector("[data-marker-comment-editor]");
+      const input = contextMenu.querySelector("[data-marker-comment-input]");
+      state.commentMarkerId = marker.id;
+      actionList.hidden = true;
+      editor.hidden = false;
+      input.value = markerComment(marker);
+      input.focus();
+    }
+    function saveMarkerComment(marker, comment) {
+      if (!isTankMarker(marker)) return;
+      const value = comment.trim();
+      if (value) marker.comment = value;
+      else delete marker.comment;
+      persistMarkerLayout(value ? "commentSaved" : "commentRemoved");
+      renderMarkers();
+    }
     function hideMarkerContextMenu() {
       markerContextMenu.hidden = true;
       modalMarkerContextMenu.hidden = true;
+      resetCommentEditor(markerContextMenu);
+      resetCommentEditor(modalMarkerContextMenu);
       state.contextMarkerId = null;
+      state.commentMarkerId = null;
     }
     function hideAnnotationContextMenu() {
       annotationContextMenu.hidden = true;
@@ -481,6 +515,7 @@ import { initVisitorCounter } from './visitor-counter.js';
       const tankMarker = linkedTankMarker(marker);
       roleActions.hidden = !tankMarker;
       contextMenu.querySelector("[data-marker-tool='aimHere']").hidden = !tankMarker;
+      contextMenu.querySelector("[data-marker-action='addComment']").hidden = !isTankMarker(marker);
       if (!tankMarker) return;
       const selectedRoleMarker = linkedRoleMarker(tankMarker);
       roleActions.querySelectorAll("[data-marker-role]").forEach(button => {
@@ -490,6 +525,7 @@ import { initVisitorCounter } from './visitor-counter.js';
     function showMarkerContextMenu(event, markerButton, contextMenu = markerContextMenu, stage = mapStage) {
       const stageRect = stage.getBoundingClientRect();
       hideAnnotationContextMenu();
+      resetCommentEditor(contextMenu);
       state.contextMarkerId = markerButton.dataset.markerId;
       markerContextMenu.hidden = contextMenu !== markerContextMenu;
       modalMarkerContextMenu.hidden = contextMenu !== modalMarkerContextMenu;
@@ -713,6 +749,16 @@ import { initVisitorCounter } from './visitor-counter.js';
         icon.style.width = `${markerSize}px`;
         icon.style.height = `${markerSize}px`;
         button.append(icon);
+        const comment = markerComment(marker);
+        if (comment && !state.editMode) {
+          const tooltip = document.createElement("span");
+          tooltip.className = "map-marker-comment";
+          tooltip.textContent = comment;
+          button.classList.add("has-comment");
+          button.dataset.commentPlacement = y > 50 ? "above" : "below";
+          button.dataset.commentAlign = x < 25 ? "start" : x > 75 ? "end" : "center";
+          button.append(tooltip);
+        }
         layer.append(button);
       });
     }
@@ -782,7 +828,8 @@ import { initVisitorCounter } from './visitor-counter.js';
         const ids = new Set();
         layout.markers[key] = markers.map(marker => {
           const hasParentTankId = Object.prototype.hasOwnProperty.call(marker || {}, "parentTankId");
-          if (!marker || typeof marker !== "object" || Array.isArray(marker) || typeof marker.id !== "string" || !marker.id || ids.has(marker.id) || !markerTypes.has(marker.type) || !Number.isFinite(marker.x) || !Number.isFinite(marker.y) || marker.x < 0 || marker.x > 100 || marker.y < 0 || marker.y > 100 || (hasParentTankId && (!isRoleMarker(marker) || typeof marker.parentTankId !== "string" || !marker.parentTankId))) {
+          const hasComment = Object.prototype.hasOwnProperty.call(marker || {}, "comment");
+          if (!marker || typeof marker !== "object" || Array.isArray(marker) || typeof marker.id !== "string" || !marker.id || ids.has(marker.id) || !markerTypes.has(marker.type) || !Number.isFinite(marker.x) || !Number.isFinite(marker.y) || marker.x < 0 || marker.x > 100 || marker.y < 0 || marker.y > 100 || (hasParentTankId && (!isRoleMarker(marker) || typeof marker.parentTankId !== "string" || !marker.parentTankId)) || (hasComment && (!isTankMarker(marker) || typeof marker.comment !== "string" || marker.comment.length > MAX_MARKER_COMMENT_LENGTH))) {
             throw new Error("Invalid marker.");
           }
           markerCount += 1;
@@ -790,6 +837,7 @@ import { initVisitorCounter } from './visitor-counter.js';
           ids.add(marker.id);
           const importedMarker = { id: marker.id, type: marker.type, x: marker.x, y: marker.y };
           if (hasParentTankId) importedMarker.parentTankId = marker.parentTankId;
+          if (hasComment && marker.comment.trim()) importedMarker.comment = marker.comment.trim();
           return importedMarker;
         });
         const attachedTankIds = new Set();
@@ -1031,6 +1079,7 @@ import { initVisitorCounter } from './visitor-counter.js';
         const roleType = event.target.closest("[data-marker-role]")?.dataset.markerRole;
         const drawingTool = event.target.closest("[data-marker-tool]")?.dataset.markerTool;
         const action = event.target.closest("[data-marker-action]")?.dataset.markerAction;
+        const commentAction = event.target.closest("[data-marker-comment-action]")?.dataset.markerCommentAction;
         if (!state.contextMarkerId) return;
         const marker = currentMarkers().find(item => item.id === state.contextMarkerId);
         if (roleType && marker) {
@@ -1042,6 +1091,19 @@ import { initVisitorCounter } from './visitor-counter.js';
         if (drawingTool === "aimHere" && marker) {
           const tankMarker = linkedTankMarker(marker);
           if (tankMarker) startAimHereDrawing(tankMarker);
+          hideMarkerContextMenu();
+          return;
+        }
+        if (action === "addComment" && marker) {
+          showCommentEditor(contextMenu, marker);
+          return;
+        }
+        if (commentAction === "save" && marker && marker.id === state.commentMarkerId) {
+          saveMarkerComment(marker, contextMenu.querySelector("[data-marker-comment-input]").value);
+          hideMarkerContextMenu();
+          return;
+        }
+        if (commentAction === "cancel") {
           hideMarkerContextMenu();
           return;
         }
