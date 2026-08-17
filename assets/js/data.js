@@ -25,7 +25,7 @@ function standardMapVariations(name) {
       {
         mode: "domination",
         number: 2,
-        folder: "Aredennes Big"
+        folder: "Aredennes/Domination #2"
       }
     ];
   }
@@ -46,7 +46,7 @@ function standardMapVariations(name) {
       {
         mode: "domination",
         number: 2,
-        folder: "Second Battle of El Alamein Small",
+        folder: "Second Battle of El Alamein/Domination #2",
         teamImages: { Red: "Red Small.png", Blue: "Blue Small.png" }
       }
     ];

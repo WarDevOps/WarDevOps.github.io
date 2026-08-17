@@ -2,7 +2,7 @@
 import { initVisitorCounter } from './visitor-counter.js';
 import { initDiscordMemberCount } from './discord-stats.js';
     import { commentImages } from './comment-images.js?v=comment-images-20260817';
-    import { maps, translations } from './data.js?v=comment-images-20260817';
+    import { maps, translations } from './data.js?v=nested-variation-folders-20260817';
 
 
     const state = { selected: null, team: "Red", query: "", language: "en", theme: "dark", editMode: false, contextMarkerId: null, contextAnnotationId: null, commentMarkerId: null, drawing: null };
@@ -259,8 +259,11 @@ import { initDiscordMemberCount } from './discord-stats.js';
     function markerTypeIdentity(type) {
       return `${currentMarkerKey()}|type:${type}`;
     }
+    function encodeAssetPath(path) {
+      return path.split("/").map(segment => encodeURIComponent(segment)).join("/");
+    }
     function mapOverlayPath(map, file) {
-      return `img/${encodeURIComponent(map.folder)}/${encodeURIComponent(file)}`;
+      return `img/${encodeAssetPath(map.folder)}/${encodeURIComponent(file)}`;
     }
     function mapOverlayIdentity(map, file) {
       return `${map.folder}|${file}`;
@@ -1043,7 +1046,7 @@ import { initDiscordMemberCount } from './discord-stats.js';
 
     function mapPath(map, team) {
       const image = map.sharedImage || map.teamImages?.[team] || `${team}.png`;
-      return `img/${encodeURIComponent(map.folder)}/${encodeURIComponent(image)}`;
+      return `img/${encodeAssetPath(map.folder)}/${encodeURIComponent(image)}`;
     }
     function visibleMaps() {
       const term = state.query.trim().toLocaleLowerCase("ko");
