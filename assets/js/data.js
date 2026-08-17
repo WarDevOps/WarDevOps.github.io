@@ -1,6 +1,6 @@
 export const maps = [
-      ["38 Parallel", "38선"], ["Aredennes", "아르덴"], ["Aredennes_Big", "아르덴 대형"],
-      ["Abandoned Town", "버려진 소도시"], ["Attica", "아티카"], ["Cargo Port", "카고 포트"], ["Carpathians", "카르파티아 산맥"],
+      ["38 Parallel", "38선"], ["Aredennes", "아르덴"], ["Aredennes Big", "아르덴 대형"],
+      ["Abandoned Town", "버려진 소도시"], ["Arctic Pier", "북극의 부두"], ["Arctic Polar Base", "북극"], ["Attica", "아티카"], ["Cargo Port", "카고 포트"], ["Carpathians", "카르파티아 산맥"],
       ["European Province", "유럽 지방"], ["Field of Normandy", "노르망디의 들판"], ["Finland", "핀란드"],
       ["Fields of Poland", "폴란드의 들판"], ["Fire Arc", "파이어 아크"], ["Golden Quarry", "금광 지대"], ["Iberian Castle", "이베리아 성"], ["Japan", "일본"],
       ["Maginot Line", "마지노선"], ["Port Novorossiysk", "노보로시스크 항구"], ["Pradesh", "프라데시"],

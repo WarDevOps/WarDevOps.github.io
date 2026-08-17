@@ -170,6 +170,7 @@
     .map-marker { position: absolute; display: block; width: auto; height: auto; padding: 0; transform: translate(-50%, -50%); border: 0; border-radius: 0; background: transparent; box-shadow: none; cursor: default; line-height: 0; pointer-events: auto; }
     .map-viewer.is-editing .map-marker:hover, dialog.is-editing .map-marker:hover { filter: drop-shadow(0 0 4px var(--accent)); }
     .map-marker img { display: block; width: auto; height: auto; max-width: none; max-height: none; object-fit: initial; pointer-events: none; }
+    .map-marker img.is-special-role-marker { filter: brightness(0); opacity: .5; }
     .map-marker-comment { position: absolute; z-index: 1; width: max-content; max-width: 230px; padding: 8px 10px; border: 1px solid var(--line); border-radius: 9px; background: var(--surface); box-shadow: 0 12px 30px rgba(0,0,0,.35); color: var(--ink); font-size: .76rem; font-weight: 500; line-height: 1.45; text-align: left; white-space: pre-wrap; pointer-events: none; opacity: 0; visibility: hidden; transition: opacity .14s ease, visibility .14s ease; }
     .map-marker.has-comment:hover .map-marker-comment { opacity: 1; visibility: visible; }
     .map-marker[data-comment-placement="above"] .map-marker-comment { bottom: calc(100% + 9px); }

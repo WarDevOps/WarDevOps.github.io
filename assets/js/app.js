@@ -1,6 +1,6 @@
     import { loadMarkerLayout, saveMarkerLayout as saveMarkerLayoutToStorage } from './marker-storage.js';
 import { initVisitorCounter } from './visitor-counter.js';
-    import { maps, translations } from './data.js?v=marker-comments-20260817';
+    import { maps, translations } from './data.js?v=special-map-markers-20260817';
 
 
     const state = { selected: null, team: "Red", query: "", language: "en", theme: "dark", editMode: false, contextMarkerId: null, contextAnnotationId: null, commentMarkerId: null, drawing: null };
@@ -101,6 +101,17 @@ import { initVisitorCounter } from './visitor-counter.js';
       "antiAirRed"
     ]);
     const ROLE_MARKER_TYPES = new Set(["battleLine", "highRiskSpot", "sniper", "spawnKill"]);
+    const SPECIAL_MARKER_MAP_NAMES = new Set(["Surrounding of Volokolamsk", "Arctic Polar Base", "Arctic Pier"]);
+    const SPECIAL_TANK_ICON_PATHS = Object.freeze({
+      lightTank: { Red: "Legend/lt w r.png", Blue: "Legend/lt w b.png" },
+      lightTankRed: { Red: "Legend/lt w r.png", Blue: "Legend/lt w b.png" },
+      mainBattleTank: { Red: "Legend/mbt w r.png", Blue: "Legend/mbt w b.png" },
+      mainBattleTankRed: { Red: "Legend/mbt w r.png", Blue: "Legend/mbt w b.png" },
+      tankDestroyer: { Red: "Legend/td w r.png", Blue: "Legend/td w b.png" },
+      tankDestroyerRed: { Red: "Legend/td w r.png", Blue: "Legend/td w b.png" },
+      antiAir: { Red: "Legend/aa w r.png", Blue: "Legend/aa w b.png" },
+      antiAirRed: { Red: "Legend/aa w r.png", Blue: "Legend/aa w b.png" }
+    });
     // Role markers are attached from a tank marker's context menu, never placed directly.
     const PLACEMENT_DISABLED_MARKER_TYPES = new Set([
       ...ROLE_MARKER_TYPES,
@@ -226,6 +237,14 @@ import { initVisitorCounter } from './visitor-counter.js';
     }
     function isRoleMarker(marker) {
       return Boolean(marker && ROLE_MARKER_TYPES.has(marker.type));
+    }
+    function usesSpecialMarkerStyle() {
+      return Boolean(state.selected && SPECIAL_MARKER_MAP_NAMES.has(state.selected.name));
+    }
+    function markerIconPath(marker, fallbackPath) {
+      return usesSpecialMarkerStyle() && isTankMarker(marker)
+        ? SPECIAL_TANK_ICON_PATHS[marker.type]?.[state.team] || fallbackPath
+        : fallbackPath;
     }
     function markerComment(marker) {
       return isTankMarker(marker) && typeof marker.comment === "string" ? marker.comment.trim() : "";
@@ -744,8 +763,9 @@ import { initVisitorCounter } from './visitor-counter.js';
         button.title = t(state.editMode ? "markerEditTitle" : "markerViewTitle");
         button.setAttribute("aria-label", `${t(marker.type)} — ${button.title}`);
         const icon = document.createElement("img");
-        icon.src = type.icon;
+        icon.src = markerIconPath(marker, type.icon);
         icon.alt = "";
+        icon.classList.toggle("is-special-role-marker", usesSpecialMarkerStyle() && isRoleMarker(marker));
         icon.style.width = `${markerSize}px`;
         icon.style.height = `${markerSize}px`;
         button.append(icon);
