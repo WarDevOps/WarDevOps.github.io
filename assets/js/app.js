@@ -207,6 +207,7 @@ import { initDiscordMemberCount } from './discord-stats.js';
       document.querySelectorAll("[data-i18n-placeholder]").forEach(element => { element.placeholder = t(element.dataset.i18nPlaceholder); });
       document.querySelectorAll("[data-i18n-aria]").forEach(element => { element.setAttribute("aria-label", t(element.dataset.i18nAria)); });
       languageButtons.forEach(button => { button.setAttribute("aria-pressed", String(button.dataset.language === language)); });
+      window.dispatchEvent(new CustomEvent("maptactic:languagechange", { detail: { language } }));
       document.querySelectorAll(".marker-context-menu").forEach(contextMenu => {
         renderCommentImageOptions(contextMenu, contextMenu.querySelector("[data-marker-comment-image-select]").value);
       });

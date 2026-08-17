@@ -1,94 +1,20 @@
 <!doctype html>
-<html lang="ko">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Create and save your own War Thunder ground vehicle and aircraft tier list with WarDevOps MapTactic.">
-  <meta name="robots" content="index, follow, max-image-preview:large">
-  <meta name="theme-color" content="#101615">
-  <meta name="google-adsense-account" content="ca-pub-7687032122626786">
-  <link rel="canonical" href="https://wardevops.github.io/Tier/">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="WarDevOps | War Thunder Tier Maker">
-  <meta property="og:description" content="Rank War Thunder ground vehicles and aircraft in a simple drag-and-drop tier board.">
-  <meta property="og:url" content="https://wardevops.github.io/Tier/">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7687032122626786" crossorigin="anonymous"></script>
-  <title>WarDevOps | War Thunder Tier Maker</title>
-  <link rel="stylesheet" href="tier.css?v=20260818">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://wardevops.github.io/?view=tier">
+  <meta http-equiv="refresh" content="0; url=../?view=tier">
+  <title>WarDevOps | War Thunder Tier List</title>
+  <script>
+    const target = new URL("../", window.location.href);
+    target.searchParams.set("view", "tier");
+    target.hash = window.location.hash;
+    window.location.replace(target);
+  </script>
 </head>
 <body>
-  <header class="site-header">
-    <a class="brand" href="../" aria-label="WarDevOps MapTactic home">
-      <span class="brand-mark" aria-hidden="true"><i></i></span>
-      <span class="brand-name"><span>WarDevOps</span> <strong>MAPTACTIC</strong></span>
-    </a>
-    <a class="map-link" href="../">MAP GUIDE</a>
-  </header>
-
-  <main>
-    <section class="hero" aria-labelledby="page-title">
-      <p class="eyebrow">WAR THUNDER · RANKING LAB</p>
-      <h1 id="page-title">BUILD YOUR<br><em>TIER LIST</em></h1>
-      <p class="hero-copy">전차와 항공기 카드를 드래그해 나만의 티어표를 만드세요. 배치는 이 브라우저에 자동 저장됩니다.</p>
-      <div class="category-switch" aria-label="Tier list category">
-        <button class="category-button" type="button" data-category="tank" aria-pressed="true">GROUND FORCES <span>전차</span></button>
-        <button class="category-button" type="button" data-category="air" aria-pressed="false">AIRCRAFT <span>항공기</span></button>
-      </div>
-    </section>
-
-    <section class="tier-maker" aria-labelledby="template-title">
-      <header class="maker-header">
-        <div>
-          <p class="maker-kicker" id="category-label">GROUND FORCES</p>
-          <h2 id="template-title">War Thunder Ground Vehicle Tier List</h2>
-        </div>
-        <button class="reset-button" id="reset-tier" type="button">RESET</button>
-      </header>
-
-      <p class="instructions" id="tier-instructions">카드를 드래그하거나, 카드를 선택한 뒤 원하는 티어 행을 누르세요.</p>
-      <div class="tier-board" id="tier-board" aria-label="Tier board">
-        <div class="tier-row">
-          <div class="tier-label tier-s" aria-hidden="true">S</div>
-          <div class="tier-dropzone" data-zone="s" role="group" tabindex="0" aria-label="S tier"></div>
-        </div>
-        <div class="tier-row">
-          <div class="tier-label tier-a" aria-hidden="true">A</div>
-          <div class="tier-dropzone" data-zone="a" role="group" tabindex="0" aria-label="A tier"></div>
-        </div>
-        <div class="tier-row">
-          <div class="tier-label tier-b" aria-hidden="true">B</div>
-          <div class="tier-dropzone" data-zone="b" role="group" tabindex="0" aria-label="B tier"></div>
-        </div>
-        <div class="tier-row">
-          <div class="tier-label tier-c" aria-hidden="true">C</div>
-          <div class="tier-dropzone" data-zone="c" role="group" tabindex="0" aria-label="C tier"></div>
-        </div>
-        <div class="tier-row">
-          <div class="tier-label tier-d" aria-hidden="true">D</div>
-          <div class="tier-dropzone" data-zone="d" role="group" tabindex="0" aria-label="D tier"></div>
-        </div>
-      </div>
-
-      <section class="card-bank" aria-labelledby="card-bank-title">
-        <div class="bank-heading">
-          <div>
-            <p class="bank-kicker">AVAILABLE UNITS</p>
-            <h2 id="card-bank-title">Unranked</h2>
-          </div>
-          <span class="unit-count" id="unit-count"></span>
-        </div>
-        <div class="card-pool tier-dropzone" id="card-pool" data-zone="pool" role="group" tabindex="0" aria-label="Unranked units"></div>
-      </section>
-
-      <p class="save-status" id="save-status" role="status" aria-live="polite"></p>
-    </section>
-  </main>
-
-  <footer>
-    <p>© 2026 WarDevOps &amp; 부릉부릉. All Rights Reserved.</p>
-    <p>War Thunder and related marks are property of their respective owners.</p>
-  </footer>
-
-  <script type="module" src="tier.js?v=20260818"></script>
+  <p><a href="../?view=tier">Open the War Thunder Tier List</a></p>
 </body>
 </html>

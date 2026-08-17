@@ -42,7 +42,7 @@
   </script>
   <title>WarDevOps | War Thunder Map Tactic</title>
 
-  <link rel="stylesheet" href="assets/css/site.css?v=discord-member-count-header-brand-20260817">
+  <link rel="stylesheet" href="assets/css/site.css?v=integrated-tier-maker-20260818">
 </head>
 <body>
   <header class="site-header">
@@ -66,19 +66,25 @@
   </header>
 
   <main id="top">
-    <section class="hero" aria-labelledby="page-title">
-      <p class="eyebrow" data-i18n="eyebrow">TACTICAL MAP LIBRARY</p>
-      <h1 class="hero-title" id="page-title"><span data-i18n="heroTitleFirst">READ</span><br><em data-i18n="heroTitleSecond">THE WAR</em></h1>
-      <p class="hero-copy" data-i18n="heroCopy">Know yourself and your enemy, and you will win every battle.</p>
-      <div class="search-wrap">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.8-3.8"></path></svg>
-        <label class="sr-only" for="map-search" data-i18n="searchLabel">Search maps</label>
-        <input id="map-search" type="search" autocomplete="off" placeholder="Search by map name (other names supported)" data-i18n-placeholder="searchPlaceholder">
-        <button class="clear-search" id="clear-search" type="button" aria-label="Clear search" data-i18n-aria="clearSearch">×</button>
-      </div>
-    </section>
+    <nav class="content-switcher" aria-label="Content selection" data-tier-aria="contentNavigation">
+      <button class="content-switch-button" type="button" data-content-target="maps" aria-pressed="true" data-tier-text="mapView">TACTICAL MAP LIBRARY</button>
+      <button class="content-switch-button" type="button" data-content-target="tier" aria-pressed="false" data-tier-text="tierView">WAR THUNDER TIER LIST</button>
+    </nav>
 
-    <section class="workspace" aria-label="Tactical map explorer" data-i18n-aria="mapExplorer">
+    <div class="content-view" id="map-content-view" data-content-view="maps">
+      <section class="hero" aria-labelledby="page-title">
+        <p class="eyebrow" data-i18n="eyebrow">TACTICAL MAP LIBRARY</p>
+        <h1 class="hero-title" id="page-title"><span data-i18n="heroTitleFirst">READ</span><br><em data-i18n="heroTitleSecond">THE WAR</em></h1>
+        <p class="hero-copy" data-i18n="heroCopy">Know yourself and your enemy, and you will win every battle.</p>
+        <div class="search-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.8-3.8"></path></svg>
+          <label class="sr-only" for="map-search" data-i18n="searchLabel">Search maps</label>
+          <input id="map-search" type="search" autocomplete="off" placeholder="Search by map name (other names supported)" data-i18n-placeholder="searchPlaceholder">
+          <button class="clear-search" id="clear-search" type="button" aria-label="Clear search" data-i18n-aria="clearSearch">×</button>
+        </div>
+      </section>
+
+      <section class="workspace" aria-label="Tactical map explorer" data-i18n-aria="mapExplorer">
       <aside class="map-index" aria-label="Map list" data-i18n-aria="mapList">
         <div class="index-heading"><h2 data-i18n="selectMap">Select a Map</h2><span id="map-count"></span></div>
         <div class="map-list" id="map-list"></div>
@@ -187,10 +193,51 @@
         </div>
         <div class="team-legend" aria-label="Team legend" data-i18n-aria="teamLegend"><span><i class="red-dot"></i>RED</span><span><i class="blue-dot"></i>BLUE</span></div>
       </article>
-    </section>
-    <section class="search-guide" aria-labelledby="search-guide-title">
-      <h2 id="search-guide-title" data-i18n="searchGuideTitle">War Thunder Tactical Map Guide</h2>
-      <p data-i18n="searchGuideCopy">Browse map layouts for both teams, compare key combat areas, and use tactical markers to plan routes, positions, and engagements before battle.</p>
+      </section>
+    </div>
+
+    <section class="content-view tier-view" id="tier-content-view" data-content-view="tier" aria-labelledby="tier-page-title" hidden>
+      <div class="hero tier-hero">
+        <p class="eyebrow" data-tier-text="tierEyebrow">WAR THUNDER · RANKING LAB</p>
+        <h1 class="hero-title" id="tier-page-title"><span data-tier-text="tierTitleFirst">BUILD YOUR</span><br><em data-tier-text="tierTitleSecond">TIER LIST</em></h1>
+        <p class="hero-copy" data-tier-text="tierHeroCopy">Drag vehicle and aircraft cards to build your own tier list. Your layout is saved automatically in this browser.</p>
+        <div class="tier-category-switch" aria-label="Tier list category" data-tier-aria="categoryNavigation">
+          <button class="tier-category-button" type="button" data-tier-category="tank" aria-pressed="true"><span data-tier-text="groundForces">GROUND FORCES</span> <small data-tier-text="tankShort">TANK</small></button>
+          <button class="tier-category-button" type="button" data-tier-category="air" aria-pressed="false"><span data-tier-text="aircraft">AIRCRAFT</span> <small data-tier-text="airShort">AIR</small></button>
+        </div>
+      </div>
+
+      <section class="tier-maker-shell" aria-labelledby="tier-template-title">
+        <header class="tier-maker-header">
+          <div>
+            <p class="tier-maker-kicker" id="tier-category-label">GROUND FORCES</p>
+            <h2 id="tier-template-title">War Thunder Ground Vehicle Tier List</h2>
+          </div>
+          <button class="tier-reset-button" id="tier-reset" type="button" data-tier-text="reset">RESET</button>
+        </header>
+
+        <p class="tier-instructions" data-tier-text="instructions">Drag a card, or select it and then choose a tier row.</p>
+        <div class="tier-board" aria-label="Tier board" data-tier-aria="tierBoard">
+          <div class="tier-row"><div class="tier-label tier-s" aria-hidden="true">S</div><div class="tier-dropzone" data-tier-zone="s" role="group" tabindex="0" aria-label="S tier"></div></div>
+          <div class="tier-row"><div class="tier-label tier-a" aria-hidden="true">A</div><div class="tier-dropzone" data-tier-zone="a" role="group" tabindex="0" aria-label="A tier"></div></div>
+          <div class="tier-row"><div class="tier-label tier-b" aria-hidden="true">B</div><div class="tier-dropzone" data-tier-zone="b" role="group" tabindex="0" aria-label="B tier"></div></div>
+          <div class="tier-row"><div class="tier-label tier-c" aria-hidden="true">C</div><div class="tier-dropzone" data-tier-zone="c" role="group" tabindex="0" aria-label="C tier"></div></div>
+          <div class="tier-row"><div class="tier-label tier-d" aria-hidden="true">D</div><div class="tier-dropzone" data-tier-zone="d" role="group" tabindex="0" aria-label="D tier"></div></div>
+        </div>
+
+        <section class="tier-card-bank" aria-labelledby="tier-card-bank-title">
+          <div class="tier-bank-heading">
+            <div>
+              <p class="tier-bank-kicker" data-tier-text="availableUnits">AVAILABLE UNITS</p>
+              <h2 id="tier-card-bank-title" data-tier-text="unranked">Unranked</h2>
+            </div>
+            <span class="tier-unit-count" id="tier-unit-count"></span>
+          </div>
+          <div class="tier-card-pool tier-dropzone" id="tier-card-pool" data-tier-zone="pool" role="group" tabindex="0" aria-label="Unranked units" data-tier-aria="unrankedUnits"></div>
+        </section>
+
+        <p class="tier-save-status" id="tier-save-status" role="status" aria-live="polite"></p>
+      </section>
     </section>
   </main>
 
@@ -277,6 +324,7 @@
 
   <input id="marker-layout-import-file" type="file" accept="application/json,.json" hidden>
 
-  <script type="module" src="assets/js/app.js?v=comment-120-bytes-20260818"></script>
+  <script type="module" src="assets/js/app.js?v=integrated-tier-maker-20260818"></script>
+  <script type="module" src="assets/js/tier-maker.js?v=integrated-tier-maker-20260818"></script>
 </body>
 </html>
