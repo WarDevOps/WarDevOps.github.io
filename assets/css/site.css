@@ -116,11 +116,11 @@
 
     .workspace { display: grid; grid-template-columns: minmax(235px, 310px) minmax(0, 1fr); gap: 22px; align-items: stretch; padding-bottom: 72px; }
     .map-index, .map-viewer { border: 1px solid var(--line); border-radius: 18px; background: rgba(23, 32, 31, .8); box-shadow: var(--shadow); }
-    .map-index { display: grid; min-height: 0; overflow: hidden; grid-template-rows: auto minmax(0, 1fr); }
+    .map-index { display: grid; height: 0; min-height: 100%; overflow: hidden; grid-template-rows: auto minmax(0, 1fr); }
     .index-heading { display: flex; align-items: baseline; justify-content: space-between; padding: 20px 20px 14px; border-bottom: 1px solid var(--line); }
     .index-heading h2 { margin: 0; font-size: .95rem; }
     #map-count { color: var(--muted); font-size: .78rem; }
-    .map-list { min-height: 0; max-height: none; padding: 8px; overflow: auto; scrollbar-color: #52635d transparent; }
+    .map-list { min-height: 0; max-height: none; padding: 8px; overflow-x: hidden; overflow-y: scroll; scrollbar-color: #52635d transparent; scrollbar-gutter: stable; }
     .map-card {
       display: flex;
       width: 100%;
@@ -282,6 +282,10 @@
     .tier-card.is-dragging { opacity: .38; }
     .tier-card.is-selected { border-color: var(--accent); box-shadow: 0 0 0 2px var(--accent); }
     .tier-card img { display: block; width: 100%; height: 100%; object-fit: cover; pointer-events: none; }
+    .tier-card-caption { position: absolute; z-index: 1; top: 0; right: 0; left: 0; display: flex; min-width: 0; height: 25px; padding: 4px 6px; align-items: center; gap: 6px; background: linear-gradient(90deg, rgba(5, 8, 8, .94), rgba(5, 8, 8, .78)); color: #fff; line-height: 1; pointer-events: none; }
+    .tier-card .tier-card-flag { width: 25px; height: 16px; flex: 0 0 25px; border: 1px solid rgba(255,255,255,.35); border-radius: 2px; object-fit: cover; box-shadow: 0 1px 3px rgba(0,0,0,.35); }
+    .tier-card-country-code { flex: 0 0 auto; color: var(--accent); font-size: .62rem; font-weight: 900; }
+    .tier-card-equipment-name { min-width: 0; overflow: hidden; font-size: .66rem; font-weight: 850; letter-spacing: .01em; text-overflow: ellipsis; text-shadow: 0 1px 2px #000; white-space: nowrap; }
 
     .tier-card-bank { margin-top: 22px; }
     .tier-bank-heading { padding: 0 2px 12px; }
@@ -373,7 +377,7 @@
       .content-switch-button { padding-inline: 8px; }
       .hero { padding-top: 48px; }
       .workspace { grid-template-columns: 1fr; }
-      .map-index { display: block; }
+      .map-index { display: block; height: auto; min-height: 0; }
       .map-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); max-height: 250px; gap: 3px; }
       .map-card { min-height: 58px; }
       .map-card-arrow { display: none; }
@@ -394,6 +398,9 @@
       .tier-dropzone { min-height: 82px; padding: 4px; gap: 3px; }
       .tier-label { font-size: 1rem; }
       .tier-card { width: 112px; height: 71px; flex-basis: 112px; }
+      .tier-card-caption { height: 21px; padding: 3px 4px; gap: 4px; }
+      .tier-card .tier-card-flag { width: 21px; height: 14px; flex-basis: 21px; }
+      .tier-card-equipment-name { font-size: .58rem; }
       .tier-card-pool { min-height: 168px; }
     }
     @media (max-width: 430px) {

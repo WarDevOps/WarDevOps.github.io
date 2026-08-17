@@ -59,8 +59,21 @@ if (tierRoot) {
   });
 
   const META = Object.freeze({
-    tank: { folder: "Tank", titleKey: "groundTitle", labelKey: "groundForces" },
-    air: { folder: "Air", titleKey: "airTitle", labelKey: "aircraft" }
+    tank: { folder: "Tier/Tank", labelKey: "groundForces", rank: 8, br: { min: "12.0", max: "12.7" } },
+    air: { folder: "Tier/Air", labelKey: "aircraft", rank: 9, br: { min: "14.0", max: "14.7" } }
+  });
+
+  const COUNTRY_FLAGS = Object.freeze({
+    CN: "icon/flag-cn.svg",
+    DE: "icon/flag-de.svg",
+    FR: "icon/flag-fr.svg",
+    IL: "icon/flag-il.svg",
+    IT: "icon/flag-it.svg",
+    JP: "icon/flag-jp.svg",
+    RU: "icon/flag-ru.svg",
+    SE: "icon/flag-se.svg",
+    UK: "icon/flag-uk.svg",
+    US: "icon/flag-us.svg"
   });
 
   const COPY = Object.freeze({
@@ -69,16 +82,14 @@ if (tierRoot) {
       mapView: "TACTICAL MAP LIBRARY",
       tierView: "WAR THUNDER TIER LIST",
       categoryNavigation: "Tier list category",
-      tierEyebrow: "WAR THUNDER · RANKING LAB",
+      tierEyebrow: "WAR THUNDER · TIER LIST",
       tierTitleFirst: "BUILD YOUR",
       tierTitleSecond: "TIER LIST",
-      tierHeroCopy: "Drag vehicle and aircraft cards to build your own tier list. Your layout is saved automatically in this browser.",
+      tierHeroCopy: "Drag vehicle and aircraft cards to build your own tier list.",
       groundForces: "GROUND FORCES",
       tankShort: "TANK",
       aircraft: "AIRCRAFT",
       airShort: "AIR",
-      groundTitle: "War Thunder Ground Vehicle Tier List",
-      airTitle: "War Thunder Aircraft Tier List",
       reset: "RESET",
       instructions: "Drag a card, or select it and then choose a tier row.",
       availableUnits: "AVAILABLE UNITS",
@@ -105,13 +116,11 @@ if (tierRoot) {
       tierEyebrow: "워썬더 · 랭킹 연구소",
       tierTitleFirst: "나만의",
       tierTitleSecond: "티어 리스트",
-      tierHeroCopy: "전차와 항공기 카드를 드래그해 나만의 티어표를 만드세요. 배치는 이 브라우저에 자동 저장됩니다.",
+      tierHeroCopy: "전차와 항공기 카드를 드래그해 나만의 티어표를 만드세요.",
       groundForces: "지상 장비",
       tankShort: "전차",
       aircraft: "항공기",
       airShort: "공중",
-      groundTitle: "워썬더 지상 장비 티어 리스트",
-      airTitle: "워썬더 항공기 티어 리스트",
       reset: "초기화",
       instructions: "카드를 드래그하거나, 카드를 선택한 뒤 원하는 티어 행을 누르세요.",
       availableUnits: "사용 가능한 장비",
@@ -164,6 +173,19 @@ if (tierRoot) {
 
   function itemName(file) {
     return file.replace(/\.png$/i, "");
+  }
+
+  function itemDetails(file) {
+    const [countryCode, ...nameParts] = itemName(file).split(" ");
+    return {
+      countryCode,
+      equipmentName: nameParts.join(" ") || countryCode,
+      flag: COUNTRY_FLAGS[countryCode] || null
+    };
+  }
+
+  function rangeLabel(meta) {
+    return `Rank ${meta.rank} - BR ${meta.br.min} ~ ${meta.br.max}`;
   }
 
   function allIds(category) {
@@ -238,6 +260,7 @@ if (tierRoot) {
     const file = fileForId(id);
     if (!file || !FILES[activeCategory].includes(file)) return null;
     const name = itemName(file);
+    const details = itemDetails(file);
     const card = document.createElement("button");
     card.type = "button";
     card.className = "tier-card";
@@ -254,6 +277,27 @@ if (tierRoot) {
     image.loading = "lazy";
     image.decoding = "async";
     card.append(image);
+
+    const caption = document.createElement("span");
+    caption.className = "tier-card-caption";
+    caption.setAttribute("aria-hidden", "true");
+    if (details.flag) {
+      const flag = document.createElement("img");
+      flag.className = "tier-card-flag";
+      flag.src = details.flag;
+      flag.alt = "";
+      caption.append(flag);
+    } else {
+      const countryCode = document.createElement("span");
+      countryCode.className = "tier-card-country-code";
+      countryCode.textContent = details.countryCode;
+      caption.append(countryCode);
+    }
+    const equipmentName = document.createElement("span");
+    equipmentName.className = "tier-card-equipment-name";
+    equipmentName.textContent = details.equipmentName;
+    caption.append(equipmentName);
+    card.append(caption);
 
     card.addEventListener("click", () => {
       if (suppressNextClick) {
@@ -301,7 +345,7 @@ if (tierRoot) {
   function render() {
     const meta = META[activeCategory];
     categoryLabel.textContent = copy()[meta.labelKey];
-    templateTitle.textContent = copy()[meta.titleKey];
+    templateTitle.textContent = rangeLabel(meta);
     categoryButtons.forEach(button => button.setAttribute("aria-pressed", String(button.dataset.tierCategory === activeCategory)));
 
     dropzones.forEach(zone => {
