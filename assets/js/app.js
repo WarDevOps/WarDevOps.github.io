@@ -1,6 +1,6 @@
     import { loadMarkerLayout, saveMarkerLayout as saveMarkerLayoutToStorage } from './marker-storage.js';
 import { initVisitorCounter } from './visitor-counter.js';
-import { maps, translations } from './data.js?v=marker-view-only-20260817';
+import { maps, translations } from './data.js?v=route-control-20260817';
 
 
     const state = { selected: null, team: "Red", query: "", language: "en", theme: "dark", editMode: false, contextMarkerId: null, contextAnnotationId: null, drawing: null };
@@ -424,6 +424,10 @@ import { maps, translations } from './data.js?v=marker-view-only-20260817';
     }
     function startRouteDrawing() {
       if (!state.selected) return;
+      if (hiddenMarkerTypes.has(markerTypeIdentity("route"))) {
+        setMarkerStatus("routeHidden");
+        return;
+      }
       state.drawing = { type: "route", points: [], endX: null, endY: null };
       hideAnnotationContextMenu();
       updateDrawingState();
@@ -504,8 +508,10 @@ import { maps, translations } from './data.js?v=marker-view-only-20260817';
       annotationContextMenu.hidden = contextMenu !== annotationContextMenu;
       modalAnnotationContextMenu.hidden = contextMenu !== modalAnnotationContextMenu;
       const dangerRouteAction = contextMenu.querySelector("[data-annotation-action='dangerRoute']");
+      const dangerRouteDivider = contextMenu.querySelector("[data-danger-route-divider]");
       const isRoute = annotation?.type === "route";
       dangerRouteAction.hidden = !isRoute;
+      dangerRouteDivider.hidden = !isRoute;
       dangerRouteAction.setAttribute("aria-checked", String(Boolean(annotation?.dangerRoute)));
       contextMenu.hidden = false;
       const left = Math.min(Math.max(6, event.clientX - stageRect.left), stageRect.width - contextMenu.offsetWidth - 6);
@@ -1050,6 +1056,7 @@ import { maps, translations } from './data.js?v=marker-view-only-20260817';
         const annotationButton = event.target.closest(".map-annotation:not(.is-preview)");
         if (!annotationButton) return;
         event.preventDefault();
+        if (!state.editMode) return;
         showAnnotationContextMenu(event, annotationButton, contextMenu, stage);
       });
     }

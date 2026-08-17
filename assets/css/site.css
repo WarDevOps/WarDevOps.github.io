@@ -205,7 +205,9 @@
     .marker-context-action { display: block; width: 100%; padding: 8px 10px; border: 0; border-radius: 6px; background: transparent; color: var(--ink); font-size: .77rem; text-align: left; cursor: pointer; }
     .marker-context-action[hidden] { display: none !important; }
     .marker-context-action:hover { background: var(--surface-raised); }
-    .marker-context-action.role[aria-pressed="true"] { background: rgba(214,219,157,.15); color: var(--accent-strong); }
+    .marker-context-action.role[aria-pressed="true"], .marker-context-action.danger-route[aria-checked="true"] { background: rgba(214,219,157,.15); color: var(--accent-strong); }
+    .annotation-context-divider { height: 1px; margin: 5px 0; background: var(--line); }
+    .annotation-context-divider[hidden] { display: none; }
     .marker-context-action.drawing-tool { display: inline-flex; align-items: center; gap: 7px; }
     .marker-context-action.drawing-tool img { display: block; width: 24px; height: 24px; object-fit: contain; }
     .marker-context-action.delete { color: var(--red); }
