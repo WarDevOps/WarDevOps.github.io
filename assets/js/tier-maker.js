@@ -4,61 +4,19 @@ if (tierRoot) {
   const TIER_ZONES = Object.freeze(["s", "a", "b", "c", "d", "pool"]);
   const STORAGE_KEY = "maptactic-tier-maker-v1";
 
-  const FILES = Object.freeze({
-    tank: [
-      "CN 99A.png",
-      "CN M1A2T.png",
-      "CN VT4A1.png",
-      "DE Leopard 2A7V.png",
-      "FR Leclerc AZUR.png",
-      "FR Leclerc SXXI.png",
-      "FR Leopard 2A6NL.png",
-      "IL Merkava Siman 4M.png",
-      "IT Ariete AMV.png",
-      "IT FSAF SAMP-T (TADS).png",
-      "IT Leopard 2A7HU.png",
-      "JP BM Oplot-T.png",
-      "JP Leopard 2RI.png",
-      "JP TKX.png",
-      "JP Type 10.png",
-      "RU T-80BVM.png",
-      "RU T-90M Arena-M.png",
-      "SE Leopard 2A6.png",
-      "SE Strv 122B PLSS.png",
-      "SE Strv 122B+.png",
-      "UK Challenger 2E.png",
-      "UK Challenger 3 TD.png",
-      "UK M1A2 SEPv3.png",
-      "US M1A2 SEPv2 Trophy-HV.png",
-      "US M1A2 SEPv3.png"
-    ],
-    air: [
-      "CN F-16V.png",
-      "CN J-10C.png",
-      "CN J-15T.png",
-      "DE EF-2000.png",
-      "DE FA-18C Late Hornet.png",
-      "FR Rafale C F3-R.png",
-      "FR Rafale M F3-R.png",
-      "IL F-15C Baz.png",
-      "IL F-15I Ra'am.png",
-      "IL F-16C Block 40 Barak ii.png",
-      "IT F-2000A.png",
-      "IT JAS39EBS HU C Gripen.png",
-      "JP F-15JM Eagle.png",
-      "JP JAS39C Gripen.png",
-      "JP Su-30MKM.png",
-      "RU SU-30SM2.png",
-      "RU Su-34.png",
-      "SE JAS39E Gripen.png",
-      "UK EF-2000 Typhoon.png",
-      "UK FA-18E Block 2 Super Hornet.png",
-      "US F-15C Golden Eagle.png",
-      "US F-16CM PoBIT.png",
-      "US FA-18E Block 2 Super Hornet.png"
-    ],
-    heli: []
-  });
+  const catalogResponse = await fetch(new URL("../data/tier-units.json?v=rb-catalog-20260818", import.meta.url));
+  if (!catalogResponse.ok) throw new Error(`Tier catalog request failed: ${catalogResponse.status}`);
+  const tierCatalog = await catalogResponse.json();
+  if (tierCatalog.battleRatingMode !== "RB") throw new Error("Tier catalog must use Realistic Battles ratings");
+  const UNIT_RECORDS = Object.freeze(Object.fromEntries(
+    ["tank", "air", "heli"].map(category => [category, Object.freeze(tierCatalog.categories?.[category]?.units || [])])
+  ));
+  const FILES = Object.freeze(Object.fromEntries(
+    Object.entries(UNIT_RECORDS).map(([category, units]) => [category, Object.freeze(units.map(unit => unit.file))])
+  ));
+  const UNIT_LOOKUPS = Object.freeze(Object.fromEntries(
+    Object.entries(UNIT_RECORDS).map(([category, units]) => [category, new Map(units.map(unit => [unit.file, unit]))])
+  ));
 
   const META = Object.freeze({
     tank: { folder: "Tier/Tank", labelKey: "groundForces", rank: 8, br: { min: "0.0", max: "12.7" } },
@@ -84,8 +42,6 @@ if (tierRoot) {
       { id: "utility-heli", labelKey: "utilityHeli", icon: "icon/Utillity Heli.png" }
     ])
   });
-
-  const DEFAULT_UNIT_CLASSES = Object.freeze({ tank: "mbt", air: "fighter", heli: "attack-heli" });
 
   const COUNTRY_FLAGS = Object.freeze({
     CN: "icon/flag-cn.svg",
@@ -113,20 +69,6 @@ if (tierRoot) {
     US: { en: "United States", ko: "미국" }
   });
 
-  // Add filename-based rank and BR values here as more unit images are introduced.
-  const UNIT_FILTER_OVERRIDES = Object.freeze({
-    tank: Object.freeze({
-      "IT FSAF SAMP-T (TADS).png": Object.freeze({
-        name: "FSAF SAMP/T (TADS)",
-        rank: 8,
-        br: 12.7
-      })
-    }),
-    air: Object.freeze({
-      "RU Su-34.png": Object.freeze({ unitClass: "striker" })
-    }),
-    heli: Object.freeze({})
-  });
   const BR_INPUT_PATTERN = /^(?:\d{1,2}(?:\.\d?)?)?$/;
 
   const COPY = Object.freeze({
@@ -192,7 +134,7 @@ if (tierRoot) {
       mapView: "TACTICAL MAP LIBRARY",
       tierView: "WAR THUNDER TIER LIST",
       categoryNavigation: "Tier list category",
-      tierEyebrow: "War Thunder Tier List",
+      tierEyebrow: "WAR THUNDER · TIER LIST",
       tierTitleFirst: "BUILD YOUR",
       tierTitleSecond: "TIER LIST",
       tierHeroCopy: "지상 장비, 항공기, 헬리콥터 카드를 드래그해 나만의 티어 리스트를 만드세요.",
@@ -291,26 +233,38 @@ if (tierRoot) {
     return file.replace(/\.png$/i, "");
   }
 
+  function unitRecord(category, file) {
+    return UNIT_LOOKUPS[category]?.get(file) || null;
+  }
+
   function itemDetails(file, category = activeCategory) {
+    const record = unitRecord(category, file);
+    if (record) {
+      return {
+        countryCode: record.countryCode,
+        equipmentName: record.name,
+        flag: COUNTRY_FLAGS[record.countryCode] || null
+      };
+    }
+
     const [countryCode, ...nameParts] = itemName(file).split(" ");
-    const override = UNIT_FILTER_OVERRIDES[category]?.[file];
     return {
       countryCode,
-      equipmentName: override?.name || nameParts.join(" ") || countryCode,
+      equipmentName: nameParts.join(" ") || countryCode,
       flag: COUNTRY_FLAGS[countryCode] || null
     };
   }
 
   function itemRank(category, file) {
-    return UNIT_FILTER_OVERRIDES[category]?.[file]?.rank || META[category].rank;
+    return unitRecord(category, file)?.rank ?? META[category].rank;
   }
 
   function itemBattleRating(category, file) {
-    return UNIT_FILTER_OVERRIDES[category]?.[file]?.br ?? Number(META[category].br.max);
+    return unitRecord(category, file)?.br ?? Number(META[category].br.max);
   }
 
   function itemUnitClass(category, file) {
-    return UNIT_FILTER_OVERRIDES[category]?.[file]?.unitClass || DEFAULT_UNIT_CLASSES[category];
+    return unitRecord(category, file)?.unitClass || "other";
   }
 
   function countryName(countryCode) {
@@ -407,8 +361,8 @@ if (tierRoot) {
   function createCard(id) {
     const file = fileForId(id);
     if (!file || !FILES[activeCategory].includes(file)) return null;
-    const name = itemName(file);
     const details = itemDetails(file);
+    const name = details.equipmentName;
     const card = document.createElement("button");
     card.type = "button";
     card.className = "tier-card";
@@ -564,11 +518,16 @@ if (tierRoot) {
     const currentFilters = filters[activeCategory];
     const details = itemDetails(file);
     const battleRating = itemBattleRating(activeCategory, file);
+    const rankMatches = itemRank(activeCategory, file) === currentFilters.rank;
+    const brMatches = battleRating >= currentFilters.brMin && battleRating <= currentFilters.brMax;
+    const primaryFilterMatches = currentFilters.summaryMode === "rank"
+      ? rankMatches
+      : currentFilters.summaryMode === "br"
+        ? brMatches
+        : rankMatches && brMatches;
     return (currentFilters.country === "all" || details.countryCode === currentFilters.country)
       && (currentFilters.unitClass === "all" || itemUnitClass(activeCategory, file) === currentFilters.unitClass)
-      && itemRank(activeCategory, file) === currentFilters.rank
-      && battleRating >= currentFilters.brMin
-      && battleRating <= currentFilters.brMax;
+      && primaryFilterMatches;
   }
 
   function validateBrInput(input) {
@@ -908,7 +867,7 @@ if (tierRoot) {
       if (["e", "E", "+", "-"].includes(event.key)) event.preventDefault();
       if (event.key === "Enter") input.blur();
     });
-    input.addEventListener("change", () => commitBrFilter(input, boundary));
+    input.addEventListener("blur", () => commitBrFilter(input, boundary));
   });
 
   contentButtons.forEach(button => button.addEventListener("click", () => {
