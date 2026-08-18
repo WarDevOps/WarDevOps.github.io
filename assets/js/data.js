@@ -56,11 +56,14 @@ function standardMapVariations(name) {
 
 export const maps = [
       ["38 Parallel", "38선"], ["Aredennes", "아르덴"],
-      ["Abandoned Town", "버려진 소도시"], ["Arctic Pier", "북극의 부두"], ["Arctic Polar Base", "북극"], ["Attica", "아티카"], ["Cargo Port", "카고 포트"], ["Carpathians", "카르파티아 산맥"],
-      ["European Province", "유럽 지방"], ["Field of Normandy", "노르망디의 들판"], ["Finland", "핀란드"],
-      ["Fields of Poland", "폴란드의 들판"], ["Fire Arc", "파이어 아크"], ["Golden Quarry", "금광 지대"], ["Iberian Castle", "이베리아 성"], ["Japan", "일본"],
+      ["Abandoned Town", "버려진 소도시"], ["Advance to the Rhine", "라인 강 진격"], ["Alaska", "알래스카"], ["American Desert", "아메리칸 데저트"],
+      ["Arctic Pier", "북극의 부두"], ["Arctic Polar Base", "북극"], ["Attica", "아티카"],
+      ["Battle of Hurtgen Forest", "휘르트겐 숲 전투"], ["Breslau", "브레슬라우"], ["Cargo Port", "카고 포트"], ["Carpathians", "카르파티아 산맥"],
+      ["European Province", "유럽 지방"], ["Fields of Normandy", "노르망디의 들판"], ["Finland", "핀란드"],
+      ["Fields of Poland", "폴란드의 들판"], ["Fire Arc", "파이어 아크"], ["Fulda", "풀다"], ["Golden Quarry", "금광 지대"], ["Iberian Castle", "이베리아 성"], ["Japan", "일본"],
+      ["Kuban", "쿠반"],
       ["Maginot Line", "마지노선"], ["Port Novorossiysk", "노보로시스크 항구"], ["Pradesh", "프라데시"],
-      ["Mozdok", "모즈도크"], ["Poland", "폴란드"], ["Red Desert", "붉은 사막"], ["Sand of Sinai", "시나이의 모래사장"], ["Second Battle of El Alamein", "엘 알라메인"],
+      ["Middle East", "중동"], ["Mozdok", "모즈도크"], ["Normandy", "노르망디"], ["Poland", "폴란드"], ["Red Desert", "붉은 사막"], ["Sand of Sinai", "시나이의 모래사장"], ["Second Battle of El Alamein", "엘 알라메인"],
       ["Seversk-13", "세베르스크-13"], ["Sinai", "시나이"], ["Surrounding of Volokolamsk", "볼로콜람스크 포위"],
       ["Sweden", "스웨덴"], ["Test Site-2271", "2271호 실험시설"], ["Vietnam", "베트남"],
       ["White Rock Fortress", "백암요새"]
