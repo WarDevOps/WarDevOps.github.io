@@ -42,7 +42,7 @@
   </script>
   <title>WarDevOps | War Thunder Map Tactic</title>
 
-  <link rel="stylesheet" href="assets/css/site.css?v=tier-card-metadata-20260818">
+  <link rel="stylesheet" href="assets/css/site.css?v=tier-heli-category-20260818">
 </head>
 <body>
   <header class="site-header">
@@ -95,9 +95,12 @@
           <div class="viewer-heading">
             <h2 id="selected-map-name">Select a Map</h2>
             <p id="selected-map-description">Choose a map to view its tactical layout.</p>
-            <div class="map-variation-control">
-              <label id="map-variation-label" for="map-variation" data-i18n="mapVariation">Map Variation</label>
-              <select id="map-variation" aria-labelledby="map-variation-label"></select>
+            <div class="map-meta-row">
+              <div class="map-variation-control">
+                <label id="map-variation-label" for="map-variation" data-i18n="mapVariation">Map Variation</label>
+                <select id="map-variation" aria-labelledby="map-variation-label"></select>
+              </div>
+              <p class="map-last-updated" data-i18n="lastUpdated">Last updated : 2026.08</p>
             </div>
           </div>
           <div class="team-switch" aria-label="Team selection" data-i18n-aria="teamSelection">
@@ -200,10 +203,11 @@
       <div class="hero tier-hero">
         <p class="eyebrow" data-tier-text="tierEyebrow">WAR THUNDER · TIER LIST</p>
         <h1 class="hero-title" id="tier-page-title"><span data-tier-text="tierTitleFirst">BUILD YOUR</span><br><em data-tier-text="tierTitleSecond">TIER LIST</em></h1>
-        <p class="hero-copy" data-tier-text="tierHeroCopy">Drag vehicle and aircraft cards to build your own tier list.</p>
+        <p class="hero-copy" data-tier-text="tierHeroCopy">Drag ground vehicle, aircraft, and helicopter cards to build your own tier list.</p>
         <div class="tier-category-switch" aria-label="Tier list category" data-tier-aria="categoryNavigation">
           <button class="tier-category-button" type="button" data-tier-category="tank" aria-pressed="true"><span data-tier-text="groundForces">GROUND FORCES</span> <small data-tier-text="tankShort">TANK</small></button>
           <button class="tier-category-button" type="button" data-tier-category="air" aria-pressed="false"><span data-tier-text="aircraft">AIRCRAFT</span> <small data-tier-text="airShort">AIR</small></button>
+          <button class="tier-category-button" type="button" data-tier-category="heli" aria-pressed="false"><span data-tier-text="helicopters">HELICOPTERS</span> <small data-tier-text="heliShort">HELI</small></button>
         </div>
       </div>
 
@@ -211,9 +215,12 @@
         <header class="tier-maker-header">
           <div>
             <p class="tier-maker-kicker" id="tier-category-label">GROUND FORCES</p>
-            <h2 id="tier-template-title">Rank 8 - BR 12.0 ~ 12.7</h2>
+            <h2 id="tier-template-title">Rank 8 - BR 0.0 ~ 12.7</h2>
           </div>
-          <button class="tier-reset-button" id="tier-reset" type="button" data-tier-text="reset">RESET</button>
+          <div class="tier-header-actions">
+            <button class="tier-export-button" id="tier-export" type="button" data-tier-text="saveExport">SAVE &amp; EXPORT</button>
+            <button class="tier-reset-button" id="tier-reset" type="button" data-tier-text="reset">RESET</button>
+          </div>
         </header>
 
         <p class="tier-instructions" data-tier-text="instructions">Drag a card, or select it and then choose a tier row.</p>
@@ -225,15 +232,22 @@
           <div class="tier-row"><div class="tier-label tier-d" aria-hidden="true">D</div><div class="tier-dropzone" data-tier-zone="d" role="group" tabindex="0" aria-label="D tier"></div></div>
         </div>
 
-        <section class="tier-card-bank" aria-labelledby="tier-card-bank-title">
-          <div class="tier-bank-heading">
-            <div>
-              <p class="tier-bank-kicker" data-tier-text="availableUnits">AVAILABLE UNITS</p>
-              <h2 id="tier-card-bank-title" data-tier-text="unranked">Unranked</h2>
+        <section class="tier-card-bank" aria-label="Unit filters" data-tier-aria="unitFilters">
+          <div class="tier-filter-bar">
+            <div class="tier-country-filters" id="tier-country-filters" role="group" aria-label="Country filter" data-tier-aria="countryFilter"></div>
+            <div class="tier-rank-filter">
+              <label for="tier-rank-select" data-tier-text="rankFilter">Rank</label>
+              <select id="tier-rank-select" aria-label="Rank filter" data-tier-aria="rankFilter"></select>
+            </div>
+            <div class="tier-br-filter" role="group" aria-label="BR range" data-tier-aria="brFilter">
+              <label for="tier-br-min" data-tier-text="brFilter">BR</label>
+              <input class="tier-br-input" id="tier-br-min" type="text" inputmode="decimal" maxlength="4" autocomplete="off" spellcheck="false" aria-label="Minimum BR" data-tier-aria="brMinimum">
+              <span class="tier-br-separator" aria-hidden="true">~</span>
+              <input class="tier-br-input" id="tier-br-max" type="text" inputmode="decimal" maxlength="4" autocomplete="off" spellcheck="false" aria-label="Maximum BR" data-tier-aria="brMaximum">
             </div>
             <span class="tier-unit-count" id="tier-unit-count"></span>
           </div>
-          <div class="tier-card-pool tier-dropzone" id="tier-card-pool" data-tier-zone="pool" role="group" tabindex="0" aria-label="Unranked units" data-tier-aria="unrankedUnits"></div>
+          <div class="tier-card-pool tier-dropzone" id="tier-card-pool" data-tier-zone="pool" role="group" tabindex="0" aria-label="Filtered units" data-tier-aria="filteredUnits"></div>
         </section>
 
         <p class="tier-save-status" id="tier-save-status" role="status" aria-live="polite"></p>
@@ -324,7 +338,7 @@
 
   <input id="marker-layout-import-file" type="file" accept="application/json,.json" hidden>
 
-  <script type="module" src="assets/js/app.js?v=tier-card-metadata-20260818"></script>
-  <script type="module" src="assets/js/tier-maker.js?v=tier-card-metadata-20260818"></script>
+  <script type="module" src="assets/js/app.js?v=map-last-updated-20260818"></script>
+  <script type="module" src="assets/js/tier-maker.js?v=tier-heli-category-20260818"></script>
 </body>
 </html>

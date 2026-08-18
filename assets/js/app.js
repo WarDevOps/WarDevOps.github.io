@@ -2,7 +2,7 @@
 import { initVisitorCounter } from './visitor-counter.js';
 import { initDiscordMemberCount } from './discord-stats.js';
     import { commentImages } from './comment-images.js?v=comment-images-20260817';
-    import { maps, translations } from './data.js?v=nested-variation-folders-20260817';
+    import { maps, translations } from './data.js?v=map-last-updated-20260818';
 
 
     const state = { selected: null, team: "Red", query: "", language: "en", theme: "dark", editMode: false, contextMarkerId: null, contextAnnotationId: null, commentMarkerId: null, drawing: null };
