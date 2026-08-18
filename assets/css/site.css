@@ -6,6 +6,7 @@
       --line: #35423e;
       --accent: #d6db9d;
       --accent-strong: #edf2b8;
+      --brand-logo-color: #edf2b8;
       --red: #ee7771;
       --blue: #76b6e8;
       --shadow: 0 18px 55px rgba(0, 0, 0, .25);
@@ -52,18 +53,15 @@
     }
     .brand { display: inline-flex; align-items: center; gap: 11px; color: var(--ink); text-decoration: none; }
     .brand-mark {
-      display: grid;
+      display: block;
       flex: 0 0 36px;
       width: 36px;
       height: 36px;
-      place-items: center;
-      padding: 3px;
-      border: 1px solid rgba(214, 219, 157, .42);
-      border-radius: 50%;
-      background: #111719;
-      box-shadow: 0 0 0 1px rgba(0, 0, 0, .12);
+      background-color: var(--brand-logo-color);
+      -webkit-mask: url("../../icon/Logo.svg") center / contain no-repeat;
+      mask: url("../../icon/Logo.svg") center / contain no-repeat;
+      transition: background-color .18s ease;
     }
-    .brand-mark img { display: block; width: 100%; height: 100%; object-fit: contain; }
     .brand-name { font-size: 1.05rem; font-weight: 800; letter-spacing: .04em; }
     .brand-owner { color: var(--ink); }
     .brand-product { color: var(--accent); }
@@ -329,6 +327,7 @@
       --line: #c8d5cb;
       --accent: #708250;
       --accent-strong: #57673d;
+      --brand-logo-color: #708250;
       --red: #c84c46;
       --blue: #327db8;
       --shadow: 0 18px 55px rgba(30, 53, 39, .12);
