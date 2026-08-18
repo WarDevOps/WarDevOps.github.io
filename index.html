@@ -42,7 +42,7 @@
   </script>
   <title>WarDevOps | War Thunder Map Tactic</title>
 
-  <link rel="stylesheet" href="assets/css/site.css?v=tier-heli-category-20260818">
+  <link rel="stylesheet" href="assets/css/site.css?v=tier-class-filters-20260818">
 </head>
 <body>
   <header class="site-header">
@@ -215,7 +215,7 @@
         <header class="tier-maker-header">
           <div>
             <p class="tier-maker-kicker" id="tier-category-label">GROUND FORCES</p>
-            <h2 id="tier-template-title">Rank 8 - BR 0.0 ~ 12.7</h2>
+            <h2 id="tier-template-title">Rank 8 - BR 12.7</h2>
           </div>
           <div class="tier-header-actions">
             <button class="tier-export-button" id="tier-export" type="button" data-tier-text="saveExport">SAVE &amp; EXPORT</button>
@@ -246,6 +246,10 @@
               <input class="tier-br-input" id="tier-br-max" type="text" inputmode="decimal" maxlength="4" autocomplete="off" spellcheck="false" aria-label="Maximum BR" data-tier-aria="brMaximum">
             </div>
             <span class="tier-unit-count" id="tier-unit-count"></span>
+          </div>
+          <div class="tier-class-filter-row">
+            <span class="tier-class-filter-label" data-tier-text="unitClassLabel">CLASS</span>
+            <div class="tier-class-filters" id="tier-class-filters" role="group" aria-label="Unit class filter" data-tier-aria="unitClassFilter"></div>
           </div>
           <div class="tier-card-pool tier-dropzone" id="tier-card-pool" data-tier-zone="pool" role="group" tabindex="0" aria-label="Filtered units" data-tier-aria="filteredUnits"></div>
         </section>
@@ -339,6 +343,6 @@
   <input id="marker-layout-import-file" type="file" accept="application/json,.json" hidden>
 
   <script type="module" src="assets/js/app.js?v=map-last-updated-20260818"></script>
-  <script type="module" src="assets/js/tier-maker.js?v=tier-heli-category-20260818"></script>
+  <script type="module" src="assets/js/tier-maker.js?v=tier-class-filters-20260818"></script>
 </body>
 </html>

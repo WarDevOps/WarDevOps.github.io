@@ -15,6 +15,7 @@ if (tierRoot) {
       "FR Leopard 2A6NL.png",
       "IL Merkava Siman 4M.png",
       "IT Ariete AMV.png",
+      "IT FSAF SAMP-T (TADS).png",
       "IT Leopard 2A7HU.png",
       "JP BM Oplot-T.png",
       "JP Leopard 2RI.png",
@@ -65,6 +66,27 @@ if (tierRoot) {
     heli: { folder: "Tier/Heli", labelKey: "helicopters", rank: 7, br: { min: "0.0", max: "13.0" } }
   });
 
+  const UNIT_CLASSES = Object.freeze({
+    tank: Object.freeze([
+      { id: "lt", labelKey: "lightTank", icon: "icon/LT.png" },
+      { id: "mbt", labelKey: "mainBattleTank", icon: "icon/MBT.png" },
+      { id: "ht", labelKey: "heavyTank", icon: "icon/HT.png" },
+      { id: "td", labelKey: "tankDestroyer", icon: "icon/TD.png" },
+      { id: "aa", labelKey: "antiAir", icon: "icon/AA.png" }
+    ]),
+    air: Object.freeze([
+      { id: "fighter", labelKey: "fighter", icon: "icon/Fighter.png" },
+      { id: "bomber", labelKey: "bomber", icon: "icon/Bomber.png" },
+      { id: "striker", labelKey: "striker", icon: "icon/Striker.png" }
+    ]),
+    heli: Object.freeze([
+      { id: "attack-heli", labelKey: "attackHeli", icon: "icon/Attack Heli.png" },
+      { id: "utility-heli", labelKey: "utilityHeli", icon: "icon/Utillity Heli.png" }
+    ])
+  });
+
+  const DEFAULT_UNIT_CLASSES = Object.freeze({ tank: "mbt", air: "fighter", heli: "attack-heli" });
+
   const COUNTRY_FLAGS = Object.freeze({
     CN: "icon/flag-cn.svg",
     DE: "icon/flag-de.svg",
@@ -93,8 +115,16 @@ if (tierRoot) {
 
   // Add filename-based rank and BR values here as more unit images are introduced.
   const UNIT_FILTER_OVERRIDES = Object.freeze({
-    tank: Object.freeze({}),
-    air: Object.freeze({}),
+    tank: Object.freeze({
+      "IT FSAF SAMP-T (TADS).png": Object.freeze({
+        name: "FSAF SAMP/T (TADS)",
+        rank: 8,
+        br: 12.7
+      })
+    }),
+    air: Object.freeze({
+      "RU Su-34.png": Object.freeze({ unitClass: "striker" })
+    }),
     heli: Object.freeze({})
   });
   const BR_INPUT_PATTERN = /^(?:\d{1,2}(?:\.\d?)?)?$/;
@@ -124,6 +154,19 @@ if (tierRoot) {
       brFilter: "BR range",
       brMinimum: "Minimum BR",
       brMaximum: "Maximum BR",
+      unitClassLabel: "CLASS",
+      unitClassFilter: "Unit class filter",
+      allClasses: "ALL",
+      lightTank: "Light Tank",
+      mainBattleTank: "Main Battle Tank",
+      heavyTank: "Heavy Tank",
+      tankDestroyer: "Tank Destroyer",
+      antiAir: "Anti-Air",
+      attackHeli: "Attack Heli",
+      utilityHeli: "Utility Heli",
+      fighter: "Fighter",
+      bomber: "Bomber",
+      striker: "Striker",
       allCountries: "ALL",
       filteredUnits: "Filtered units",
       noMatchingUnits: "NO MATCHING UNITS",
@@ -168,6 +211,19 @@ if (tierRoot) {
       brFilter: "BR 범위",
       brMinimum: "최소 BR",
       brMaximum: "최대 BR",
+      unitClassLabel: "병과",
+      unitClassFilter: "병과 필터",
+      allClasses: "전체",
+      lightTank: "경전차",
+      mainBattleTank: "주력전차",
+      heavyTank: "중전차",
+      tankDestroyer: "구축전차",
+      antiAir: "대공전차",
+      attackHeli: "공격 헬기",
+      utilityHeli: "다목적 헬기",
+      fighter: "전투기",
+      bomber: "폭격기",
+      striker: "공격기",
       allCountries: "전체",
       filteredUnits: "필터된 장비",
       noMatchingUnits: "조건에 맞는 장비 없음",
@@ -197,6 +253,7 @@ if (tierRoot) {
   const categoryLabel = tierRoot.querySelector("#tier-category-label");
   const templateTitle = tierRoot.querySelector("#tier-template-title");
   const countryFilters = tierRoot.querySelector("#tier-country-filters");
+  const classFilters = tierRoot.querySelector("#tier-class-filters");
   const rankSelect = tierRoot.querySelector("#tier-rank-select");
   const brMinInput = tierRoot.querySelector("#tier-br-min");
   const brMaxInput = tierRoot.querySelector("#tier-br-max");
@@ -213,9 +270,9 @@ if (tierRoot) {
   let suppressNextClick = false;
   let statusState = null;
   const filters = {
-    tank: { country: "all", rank: META.tank.rank, brMin: Number(META.tank.br.min), brMax: Number(META.tank.br.max) },
-    air: { country: "all", rank: META.air.rank, brMin: Number(META.air.br.min), brMax: Number(META.air.br.max) },
-    heli: { country: "all", rank: META.heli.rank, brMin: Number(META.heli.br.min), brMax: Number(META.heli.br.max) }
+    tank: { country: "all", unitClass: "all", rank: META.tank.rank, brMin: Number(META.tank.br.max), brMax: Number(META.tank.br.max), summaryMode: "combined" },
+    air: { country: "all", unitClass: "all", rank: META.air.rank, brMin: Number(META.air.br.max), brMax: Number(META.air.br.max), summaryMode: "combined" },
+    heli: { country: "all", unitClass: "all", rank: META.heli.rank, brMin: Number(META.heli.br.max), brMax: Number(META.heli.br.max), summaryMode: "combined" }
   };
 
   function language() {
@@ -234,11 +291,12 @@ if (tierRoot) {
     return file.replace(/\.png$/i, "");
   }
 
-  function itemDetails(file) {
+  function itemDetails(file, category = activeCategory) {
     const [countryCode, ...nameParts] = itemName(file).split(" ");
+    const override = UNIT_FILTER_OVERRIDES[category]?.[file];
     return {
       countryCode,
-      equipmentName: nameParts.join(" ") || countryCode,
+      equipmentName: override?.name || nameParts.join(" ") || countryCode,
       flag: COUNTRY_FLAGS[countryCode] || null
     };
   }
@@ -251,17 +309,30 @@ if (tierRoot) {
     return UNIT_FILTER_OVERRIDES[category]?.[file]?.br ?? Number(META[category].br.max);
   }
 
+  function itemUnitClass(category, file) {
+    return UNIT_FILTER_OVERRIDES[category]?.[file]?.unitClass || DEFAULT_UNIT_CLASSES[category];
+  }
+
   function countryName(countryCode) {
     return COUNTRY_NAMES[countryCode]?.[language()] || countryCode;
   }
 
   function countriesForCategory(category) {
-    const available = new Set(FILES[category].map(file => itemDetails(file).countryCode));
+    const available = new Set(FILES[category].map(file => itemDetails(file, category).countryCode));
     return Object.keys(COUNTRY_FLAGS).filter(countryCode => available.has(countryCode));
   }
 
-  function rangeLabel(meta) {
-    return `Rank ${meta.rank} - BR ${meta.br.min} ~ ${meta.br.max}`;
+  function brLabel(brMin, brMax) {
+    return brMin === brMax ? brMin.toFixed(1) : `${brMin.toFixed(1)} ~ ${brMax.toFixed(1)}`;
+  }
+
+  function filterSummary() {
+    const currentFilters = filters[activeCategory];
+    const rank = `Rank ${currentFilters.rank}`;
+    const br = `BR ${brLabel(currentFilters.brMin, currentFilters.brMax)}`;
+    if (currentFilters.summaryMode === "rank") return rank;
+    if (currentFilters.summaryMode === "br") return br;
+    return `${rank} - ${br}`;
   }
 
   function allIds(category) {
@@ -428,6 +499,32 @@ if (tierRoot) {
     return button;
   }
 
+  function createUnitClassFilter(unitClass) {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "tier-class-filter";
+    button.dataset.tierUnitClass = unitClass?.id || "all";
+    button.setAttribute("aria-pressed", String(filters[activeCategory].unitClass === button.dataset.tierUnitClass));
+
+    if (!unitClass) {
+      button.classList.add("tier-class-filter-all");
+      button.textContent = copy().allClasses;
+      button.title = copy().allClasses;
+      button.setAttribute("aria-label", copy().allClasses);
+      return button;
+    }
+
+    const label = copy()[unitClass.labelKey];
+    button.title = label;
+    button.setAttribute("aria-label", label);
+    const icon = document.createElement("img");
+    icon.src = unitClass.icon;
+    icon.alt = "";
+    icon.setAttribute("aria-hidden", "true");
+    button.append(icon);
+    return button;
+  }
+
   function renderFilters() {
     const meta = META[activeCategory];
     const availableCountries = countriesForCategory(activeCategory);
@@ -437,6 +534,14 @@ if (tierRoot) {
     countryFilters.replaceChildren(
       createCountryFilter("all"),
       ...availableCountries.map(createCountryFilter)
+    );
+    const availableClasses = UNIT_CLASSES[activeCategory];
+    if (filters[activeCategory].unitClass !== "all" && !availableClasses.some(unitClass => unitClass.id === filters[activeCategory].unitClass)) {
+      filters[activeCategory].unitClass = "all";
+    }
+    classFilters.replaceChildren(
+      createUnitClassFilter(null),
+      ...availableClasses.map(createUnitClassFilter)
     );
 
     rankSelect.replaceChildren(...Array.from({ length: meta.rank }, (_, index) => {
@@ -460,6 +565,7 @@ if (tierRoot) {
     const details = itemDetails(file);
     const battleRating = itemBattleRating(activeCategory, file);
     return (currentFilters.country === "all" || details.countryCode === currentFilters.country)
+      && (currentFilters.unitClass === "all" || itemUnitClass(activeCategory, file) === currentFilters.unitClass)
       && itemRank(activeCategory, file) === currentFilters.rank
       && battleRating >= currentFilters.brMin
       && battleRating <= currentFilters.brMax;
@@ -468,7 +574,8 @@ if (tierRoot) {
   function validateBrInput(input) {
     const value = input.value;
     const numericValue = Number(value);
-    if (BR_INPUT_PATTERN.test(value) && (value === "" || (numericValue >= 0 && numericValue <= 20))) {
+    const categoryMax = Number(META[activeCategory].br.max);
+    if (BR_INPUT_PATTERN.test(value) && (value === "" || (numericValue >= 0 && numericValue <= categoryMax))) {
       input.dataset.lastValid = value;
       return;
     }
@@ -482,7 +589,8 @@ if (tierRoot) {
       return;
     }
     const numericValue = Math.round(Number(value) * 10) / 10;
-    if (!Number.isFinite(numericValue) || numericValue < 0 || numericValue > 20) {
+    const categoryMax = Number(META[activeCategory].br.max);
+    if (!Number.isFinite(numericValue) || numericValue < 0 || numericValue > categoryMax) {
       renderFilters();
       return;
     }
@@ -495,6 +603,7 @@ if (tierRoot) {
       currentFilters.brMax = numericValue;
       if (currentFilters.brMax < currentFilters.brMin) currentFilters.brMin = currentFilters.brMax;
     }
+    currentFilters.summaryMode = "br";
     selectedItemId = null;
     render();
   }
@@ -669,7 +778,7 @@ if (tierRoot) {
   function render() {
     const meta = META[activeCategory];
     categoryLabel.textContent = copy()[meta.labelKey];
-    templateTitle.textContent = rangeLabel(meta);
+    templateTitle.textContent = filterSummary();
     categoryButtons.forEach(button => button.setAttribute("aria-pressed", String(button.dataset.tierCategory === activeCategory)));
     renderFilters();
 
@@ -776,10 +885,19 @@ if (tierRoot) {
     render();
   });
 
+  classFilters.addEventListener("click", event => {
+    const button = event.target.closest("[data-tier-unit-class]");
+    if (!button || !classFilters.contains(button)) return;
+    filters[activeCategory].unitClass = button.dataset.tierUnitClass;
+    selectedItemId = null;
+    render();
+  });
+
   rankSelect.addEventListener("change", () => {
     const rank = Number(rankSelect.value);
     if (!Number.isInteger(rank) || rank < 1 || rank > META[activeCategory].rank) return;
     filters[activeCategory].rank = rank;
+    filters[activeCategory].summaryMode = "rank";
     selectedItemId = null;
     render();
   });
