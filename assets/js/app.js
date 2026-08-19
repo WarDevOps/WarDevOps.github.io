@@ -1,5 +1,6 @@
     import { MARKER_LAYOUT_VERSION, loadMarkerLayout, saveMarkerLayout as saveMarkerLayoutToStorage } from './marker-storage.js';
-    import { initDiscordMemberCount } from './discord-stats.js';
+import { initVisitorCounter } from './visitor-counter.js';
+import { initDiscordMemberCount } from './discord-stats.js';
     import { commentImages } from './comment-images.js?v=comment-images-20260817';
     import { maps, translations } from './data.js?v=new-maps-20260818';
 
@@ -1380,4 +1381,5 @@
     });
     setLanguage("en");
     restoreFromUrl();
+    initVisitorCounter();
     initDiscordMemberCount();
