@@ -634,7 +634,233 @@
         "parentTankId": "38p-red-mbt-18"
       }
     ],
-    "Aredennes::domination-1|Red": [],
+    "Aredennes::domination-1|Red": [
+      {
+        "id": "aredennes-red-unit-01",
+        "type": "lightTankRed",
+        "x": 83.12,
+        "y": 5.76
+      },
+      {
+        "id": "aredennes-red-unit-02",
+        "type": "lightTankRed",
+        "x": 54.24,
+        "y": 18.33
+      },
+      {
+        "id": "aredennes-red-role-01",
+        "type": "highRiskSpot",
+        "x": 54.24,
+        "y": 18.33,
+        "parentTankId": "aredennes-red-unit-02"
+      },
+      {
+        "id": "aredennes-red-unit-03",
+        "type": "lightTankRed",
+        "x": 2.15,
+        "y": 19.93
+      },
+      {
+        "id": "aredennes-red-role-02",
+        "type": "sniper",
+        "x": 2.15,
+        "y": 19.93,
+        "parentTankId": "aredennes-red-unit-03"
+      },
+      {
+        "id": "aredennes-red-unit-04",
+        "type": "mainBattleTankRed",
+        "x": 75.62,
+        "y": 35.83
+      },
+      {
+        "id": "aredennes-red-unit-05",
+        "type": "mainBattleTankRed",
+        "x": 48.47,
+        "y": 35.9
+      },
+      {
+        "id": "aredennes-red-role-03",
+        "type": "highRiskSpot",
+        "x": 48.47,
+        "y": 35.9,
+        "parentTankId": "aredennes-red-unit-05"
+      },
+      {
+        "id": "aredennes-red-unit-06",
+        "type": "mainBattleTankRed",
+        "x": 86.25,
+        "y": 42.85
+      },
+      {
+        "id": "aredennes-red-unit-07",
+        "type": "mainBattleTankRed",
+        "x": 94.17,
+        "y": 44.24
+      },
+      {
+        "id": "aredennes-red-unit-08",
+        "type": "mainBattleTankRed",
+        "x": 37.71,
+        "y": 51.39
+      },
+      {
+        "id": "aredennes-red-role-04",
+        "type": "battleLine",
+        "x": 37.71,
+        "y": 51.39,
+        "parentTankId": "aredennes-red-unit-08"
+      },
+      {
+        "id": "aredennes-red-unit-09",
+        "type": "mainBattleTankRed",
+        "x": 50.35,
+        "y": 52.08
+      },
+      {
+        "id": "aredennes-red-role-05",
+        "type": "highRiskSpot",
+        "x": 50.35,
+        "y": 52.08,
+        "parentTankId": "aredennes-red-unit-09"
+      },
+      {
+        "id": "aredennes-red-unit-10",
+        "type": "mainBattleTankRed",
+        "x": 46.53,
+        "y": 52.15
+      },
+      {
+        "id": "aredennes-red-role-06",
+        "type": "battleLine",
+        "x": 46.53,
+        "y": 52.15,
+        "parentTankId": "aredennes-red-unit-10"
+      },
+      {
+        "id": "aredennes-red-unit-11",
+        "type": "mainBattleTankRed",
+        "x": 43.47,
+        "y": 57.43
+      },
+      {
+        "id": "aredennes-red-role-07",
+        "type": "battleLine",
+        "x": 43.47,
+        "y": 57.43,
+        "parentTankId": "aredennes-red-unit-11"
+      },
+      {
+        "id": "aredennes-red-unit-12",
+        "type": "mainBattleTankRed",
+        "x": 8.12,
+        "y": 58.4
+      },
+      {
+        "id": "aredennes-red-role-08",
+        "type": "spawnKill",
+        "x": 8.12,
+        "y": 58.4,
+        "parentTankId": "aredennes-red-unit-12"
+      },
+      {
+        "id": "aredennes-red-unit-13",
+        "type": "mainBattleTankRed",
+        "x": 67.29,
+        "y": 66.11
+      },
+      {
+        "id": "aredennes-red-role-09",
+        "type": "highRiskSpot",
+        "x": 67.29,
+        "y": 66.11,
+        "parentTankId": "aredennes-red-unit-13"
+      },
+      {
+        "id": "aredennes-red-unit-14",
+        "type": "mainBattleTankRed",
+        "x": 29.93,
+        "y": 67.22
+      },
+      {
+        "id": "aredennes-red-role-10",
+        "type": "battleLine",
+        "x": 29.93,
+        "y": 67.22,
+        "parentTankId": "aredennes-red-unit-14"
+      },
+      {
+        "id": "aredennes-red-unit-15",
+        "type": "mainBattleTankRed",
+        "x": 51.81,
+        "y": 70.49
+      },
+      {
+        "id": "aredennes-red-role-11",
+        "type": "battleLine",
+        "x": 51.81,
+        "y": 70.49,
+        "parentTankId": "aredennes-red-unit-15"
+      },
+      {
+        "id": "aredennes-red-unit-16",
+        "type": "mainBattleTankRed",
+        "x": 80.76,
+        "y": 74.44
+      },
+      {
+        "id": "aredennes-red-role-12",
+        "type": "highRiskSpot",
+        "x": 80.76,
+        "y": 74.44,
+        "parentTankId": "aredennes-red-unit-16"
+      },
+      {
+        "id": "aredennes-red-unit-17",
+        "type": "antiAirRed",
+        "x": 17.78,
+        "y": 79.31
+      },
+      {
+        "id": "aredennes-red-unit-18",
+        "type": "mainBattleTankRed",
+        "x": 74.31,
+        "y": 83.4
+      },
+      {
+        "id": "aredennes-red-role-13",
+        "type": "battleLine",
+        "x": 74.31,
+        "y": 83.4,
+        "parentTankId": "aredennes-red-unit-18"
+      },
+      {
+        "id": "aredennes-red-unit-19",
+        "type": "mainBattleTankRed",
+        "x": 77.08,
+        "y": 91.81
+      },
+      {
+        "id": "aredennes-red-role-14",
+        "type": "battleLine",
+        "x": 77.08,
+        "y": 91.81,
+        "parentTankId": "aredennes-red-unit-19"
+      },
+      {
+        "id": "aredennes-red-unit-20",
+        "type": "mainBattleTankRed",
+        "x": 28.19,
+        "y": 94.51
+      },
+      {
+        "id": "aredennes-red-role-15",
+        "type": "highRiskSpot",
+        "x": 28.19,
+        "y": 94.51,
+        "parentTankId": "aredennes-red-unit-20"
+      }
+    ],
     "Abandoned Town::domination-1|Blue": [
       {
         "id": "mt8bdrf1-wrmyww",
@@ -1265,23 +1491,616 @@
         "y": 22.78
       }
     ],
-    "Aredennes::domination-2|Red": [],
-    "Aredennes::domination-2|Blue": [],
+    "Aredennes::domination-2|Red": [
+      {
+        "id": "aredennes-domination-2-red-unit-01",
+        "type": "mainBattleTankRed",
+        "x": 65.49,
+        "y": 17.5
+      },
+      {
+        "id": "aredennes-domination-2-red-unit-02",
+        "type": "mainBattleTankRed",
+        "x": 52.36,
+        "y": 23.96
+      },
+      {
+        "id": "aredennes-domination-2-red-unit-03",
+        "type": "mainBattleTankRed",
+        "x": 43.26,
+        "y": 43.47
+      },
+      {
+        "id": "aredennes-domination-2-red-role-01",
+        "type": "battleLine",
+        "x": 43.26,
+        "y": 43.47,
+        "parentTankId": "aredennes-domination-2-red-unit-03"
+      },
+      {
+        "id": "aredennes-domination-2-red-unit-04",
+        "type": "mainBattleTankRed",
+        "x": 79.72,
+        "y": 43.54
+      },
+      {
+        "id": "aredennes-domination-2-red-unit-05",
+        "type": "mainBattleTankRed",
+        "x": 70.0,
+        "y": 59.93
+      },
+      {
+        "id": "aredennes-domination-2-red-unit-06",
+        "type": "mainBattleTankRed",
+        "x": 66.88,
+        "y": 61.18
+      },
+      {
+        "id": "aredennes-domination-2-red-unit-07",
+        "type": "mainBattleTankRed",
+        "x": 68.26,
+        "y": 70.0
+      },
+      {
+        "id": "aredennes-domination-2-red-role-02",
+        "type": "battleLine",
+        "x": 68.26,
+        "y": 70.0,
+        "parentTankId": "aredennes-domination-2-red-unit-07"
+      },
+      {
+        "id": "aredennes-domination-2-red-unit-08",
+        "type": "mainBattleTankRed",
+        "x": 59.72,
+        "y": 72.5
+      },
+      {
+        "id": "aredennes-domination-2-red-unit-09",
+        "type": "mainBattleTankRed",
+        "x": 72.57,
+        "y": 78.82
+      },
+      {
+        "id": "aredennes-domination-2-red-role-03",
+        "type": "battleLine",
+        "x": 72.57,
+        "y": 78.82,
+        "parentTankId": "aredennes-domination-2-red-unit-09"
+      },
+      {
+        "id": "aredennes-domination-2-red-unit-10",
+        "type": "antiAirRed",
+        "x": 44.58,
+        "y": 83.54
+      },
+      {
+        "id": "aredennes-domination-2-red-unit-11",
+        "type": "antiAirRed",
+        "x": 16.53,
+        "y": 83.68
+      },
+      {
+        "id": "aredennes-domination-2-red-unit-12",
+        "type": "mainBattleTankRed",
+        "x": 42.57,
+        "y": 83.82
+      },
+      {
+        "id": "aredennes-domination-2-red-role-04",
+        "type": "sniper",
+        "x": 42.57,
+        "y": 83.82,
+        "parentTankId": "aredennes-domination-2-red-unit-12"
+      },
+      {
+        "id": "aredennes-domination-2-red-unit-13",
+        "type": "antiAirRed",
+        "x": 47.57,
+        "y": 84.65
+      },
+      {
+        "id": "aredennes-domination-2-red-unit-14",
+        "type": "mainBattleTankRed",
+        "x": 45.21,
+        "y": 86.74
+      },
+      {
+        "id": "aredennes-domination-2-red-role-05",
+        "type": "spawnKill",
+        "x": 45.21,
+        "y": 86.74,
+        "parentTankId": "aredennes-domination-2-red-unit-14"
+      }
+    ],
+    "Aredennes::domination-2|Blue": [
+      {
+        "id": "aredennes-domination-2-blue-unit-01",
+        "type": "antiAir",
+        "x": 68.75,
+        "y": 3.75
+      },
+      {
+        "id": "aredennes-domination-2-blue-unit-02",
+        "type": "antiAir",
+        "x": 57.15,
+        "y": 7.22
+      },
+      {
+        "id": "aredennes-domination-2-blue-unit-03",
+        "type": "mainBattleTank",
+        "x": 33.12,
+        "y": 33.96
+      },
+      {
+        "id": "aredennes-domination-2-blue-role-01",
+        "type": "sniper",
+        "x": 33.12,
+        "y": 33.96,
+        "parentTankId": "aredennes-domination-2-blue-unit-03"
+      },
+      {
+        "id": "aredennes-domination-2-blue-unit-04",
+        "type": "mainBattleTank",
+        "x": 76.39,
+        "y": 36.53
+      },
+      {
+        "id": "aredennes-domination-2-blue-role-02",
+        "type": "highRiskSpot",
+        "x": 76.39,
+        "y": 36.53,
+        "parentTankId": "aredennes-domination-2-blue-unit-04"
+      },
+      {
+        "id": "aredennes-domination-2-blue-unit-05",
+        "type": "mainBattleTank",
+        "x": 51.46,
+        "y": 49.44
+      },
+      {
+        "id": "aredennes-domination-2-blue-role-03",
+        "type": "highRiskSpot",
+        "x": 51.46,
+        "y": 49.44,
+        "parentTankId": "aredennes-domination-2-blue-unit-05"
+      },
+      {
+        "id": "aredennes-domination-2-blue-unit-06",
+        "type": "mainBattleTank",
+        "x": 64.44,
+        "y": 56.6
+      },
+      {
+        "id": "aredennes-domination-2-blue-role-04",
+        "type": "highRiskSpot",
+        "x": 64.44,
+        "y": 56.6,
+        "parentTankId": "aredennes-domination-2-blue-unit-06"
+      },
+      {
+        "id": "aredennes-domination-2-blue-unit-07",
+        "type": "mainBattleTank",
+        "x": 33.26,
+        "y": 57.36
+      },
+      {
+        "id": "aredennes-domination-2-blue-unit-08",
+        "type": "mainBattleTank",
+        "x": 14.72,
+        "y": 59.31
+      },
+      {
+        "id": "aredennes-domination-2-blue-unit-09",
+        "type": "mainBattleTank",
+        "x": 72.22,
+        "y": 60.28
+      },
+      {
+        "id": "aredennes-domination-2-blue-role-05",
+        "type": "highRiskSpot",
+        "x": 72.22,
+        "y": 60.28,
+        "parentTankId": "aredennes-domination-2-blue-unit-09"
+      },
+      {
+        "id": "aredennes-domination-2-blue-unit-10",
+        "type": "mainBattleTank",
+        "x": 69.93,
+        "y": 66.94
+      },
+      {
+        "id": "aredennes-domination-2-blue-role-06",
+        "type": "highRiskSpot",
+        "x": 69.93,
+        "y": 66.94,
+        "parentTankId": "aredennes-domination-2-blue-unit-10"
+      },
+      {
+        "id": "aredennes-domination-2-blue-unit-11",
+        "type": "mainBattleTank",
+        "x": 96.04,
+        "y": 75.21
+      },
+      {
+        "id": "aredennes-domination-2-blue-role-07",
+        "type": "sniper",
+        "x": 96.04,
+        "y": 75.21,
+        "parentTankId": "aredennes-domination-2-blue-unit-11"
+      },
+      {
+        "id": "aredennes-domination-2-blue-unit-12",
+        "type": "mainBattleTank",
+        "x": 73.12,
+        "y": 75.42
+      },
+      {
+        "id": "aredennes-domination-2-blue-role-08",
+        "type": "battleLine",
+        "x": 73.12,
+        "y": 75.42,
+        "parentTankId": "aredennes-domination-2-blue-unit-12"
+      },
+      {
+        "id": "aredennes-domination-2-blue-unit-13",
+        "type": "mainBattleTank",
+        "x": 77.71,
+        "y": 76.94
+      },
+      {
+        "id": "aredennes-domination-2-blue-role-09",
+        "type": "battleLine",
+        "x": 77.71,
+        "y": 76.94,
+        "parentTankId": "aredennes-domination-2-blue-unit-13"
+      },
+      {
+        "id": "aredennes-domination-2-blue-unit-14",
+        "type": "mainBattleTank",
+        "x": 35.35,
+        "y": 94.51
+      }
+    ],
     "American Desert::domination-1|Blue": [],
     "Arctic Pier::domination-1|Blue": [],
     "Arctic Polar Base::domination-1|Blue": [],
     "Attica::domination-1|Blue": [
       {
-        "id": "mt702spl-awlull",
-        "type": "smokeshell",
-        "x": 76.69,
+        "id": "attica-blue-unit-01",
+        "type": "antiAir",
+        "x": 46.04,
+        "y": 16.04
+      },
+      {
+        "id": "attica-blue-unit-02",
+        "type": "mainBattleTank",
+        "x": 53.75,
+        "y": 16.04
+      },
+      {
+        "id": "attica-blue-role-01",
+        "type": "highRiskSpot",
+        "x": 53.75,
+        "y": 16.04,
+        "parentTankId": "attica-blue-unit-02"
+      },
+      {
+        "id": "attica-blue-unit-03",
+        "type": "antiAir",
+        "x": 49.24,
+        "y": 17.01
+      },
+      {
+        "id": "attica-blue-unit-04",
+        "type": "mainBattleTank",
+        "x": 56.04,
+        "y": 21.04
+      },
+      {
+        "id": "attica-blue-role-02",
+        "type": "sniper",
+        "x": 56.04,
+        "y": 21.04,
+        "parentTankId": "attica-blue-unit-04"
+      },
+      {
+        "id": "attica-blue-unit-05",
+        "type": "mainBattleTank",
+        "x": 58.4,
+        "y": 21.32
+      },
+      {
+        "id": "attica-blue-role-03",
+        "type": "sniper",
+        "x": 58.4,
+        "y": 21.32,
+        "parentTankId": "attica-blue-unit-05"
+      },
+      {
+        "id": "attica-blue-unit-06",
+        "type": "mainBattleTank",
+        "x": 42.71,
+        "y": 29.51
+      },
+      {
+        "id": "attica-blue-role-04",
+        "type": "sniper",
+        "x": 42.71,
+        "y": 29.51,
+        "parentTankId": "attica-blue-unit-06"
+      },
+      {
+        "id": "attica-blue-unit-07",
+        "type": "mainBattleTank",
+        "x": 35.07,
+        "y": 31.53
+      },
+      {
+        "id": "attica-blue-role-05",
+        "type": "battleLine",
+        "x": 35.07,
+        "y": 31.53,
+        "parentTankId": "attica-blue-unit-07"
+      },
+      {
+        "id": "attica-blue-unit-08",
+        "type": "mainBattleTank",
+        "x": 16.94,
+        "y": 32.01
+      },
+      {
+        "id": "attica-blue-role-06",
+        "type": "battleLine",
+        "x": 16.94,
+        "y": 32.01,
+        "parentTankId": "attica-blue-unit-08"
+      },
+      {
+        "id": "attica-blue-unit-09",
+        "type": "mainBattleTank",
+        "x": 24.03,
+        "y": 33.4
+      },
+      {
+        "id": "attica-blue-role-07",
+        "type": "battleLine",
+        "x": 24.03,
+        "y": 33.4,
+        "parentTankId": "attica-blue-unit-09"
+      },
+      {
+        "id": "attica-blue-unit-10",
+        "type": "mainBattleTank",
+        "x": 74.58,
         "y": 40.07
       },
       {
-        "id": "mt702vzz-zs4ubl",
-        "type": "smokeshell",
-        "x": 69.59,
-        "y": 31.2
+        "id": "attica-blue-role-08",
+        "type": "battleLine",
+        "x": 74.58,
+        "y": 40.07,
+        "parentTankId": "attica-blue-unit-10"
+      },
+      {
+        "id": "attica-blue-unit-11",
+        "type": "lightTank",
+        "x": 37.99,
+        "y": 40.49
+      },
+      {
+        "id": "attica-blue-role-09",
+        "type": "battleLine",
+        "x": 37.99,
+        "y": 40.49,
+        "parentTankId": "attica-blue-unit-11"
+      },
+      {
+        "id": "attica-blue-unit-12",
+        "type": "mainBattleTank",
+        "x": 57.22,
+        "y": 41.18
+      },
+      {
+        "id": "attica-blue-role-10",
+        "type": "highRiskSpot",
+        "x": 57.22,
+        "y": 41.18,
+        "parentTankId": "attica-blue-unit-12"
+      },
+      {
+        "id": "attica-blue-unit-13",
+        "type": "mainBattleTank",
+        "x": 78.47,
+        "y": 42.22
+      },
+      {
+        "id": "attica-blue-role-11",
+        "type": "battleLine",
+        "x": 78.47,
+        "y": 42.22,
+        "parentTankId": "attica-blue-unit-13"
+      },
+      {
+        "id": "attica-blue-unit-14",
+        "type": "lightTank",
+        "x": 35.76,
+        "y": 44.03
+      },
+      {
+        "id": "attica-blue-role-12",
+        "type": "highRiskSpot",
+        "x": 35.76,
+        "y": 44.03,
+        "parentTankId": "attica-blue-unit-14"
+      },
+      {
+        "id": "attica-blue-unit-15",
+        "type": "mainBattleTank",
+        "x": 73.61,
+        "y": 45.35
+      },
+      {
+        "id": "attica-blue-role-13",
+        "type": "highRiskSpot",
+        "x": 73.61,
+        "y": 45.35,
+        "parentTankId": "attica-blue-unit-15"
+      },
+      {
+        "id": "attica-blue-unit-16",
+        "type": "mainBattleTank",
+        "x": 15.62,
+        "y": 45.56
+      },
+      {
+        "id": "attica-blue-role-14",
+        "type": "battleLine",
+        "x": 15.62,
+        "y": 45.56,
+        "parentTankId": "attica-blue-unit-16"
+      },
+      {
+        "id": "attica-blue-unit-17",
+        "type": "mainBattleTank",
+        "x": 86.11,
+        "y": 48.4
+      },
+      {
+        "id": "attica-blue-role-15",
+        "type": "highRiskSpot",
+        "x": 86.11,
+        "y": 48.4,
+        "parentTankId": "attica-blue-unit-17"
+      },
+      {
+        "id": "attica-blue-unit-18",
+        "type": "lightTank",
+        "x": 54.93,
+        "y": 50.07
+      },
+      {
+        "id": "attica-blue-role-16",
+        "type": "highRiskSpot",
+        "x": 54.93,
+        "y": 50.07,
+        "parentTankId": "attica-blue-unit-18"
+      },
+      {
+        "id": "attica-blue-unit-19",
+        "type": "mainBattleTank",
+        "x": 75.35,
+        "y": 61.32
+      },
+      {
+        "id": "attica-blue-role-17",
+        "type": "spawnKill",
+        "x": 75.35,
+        "y": 61.32,
+        "parentTankId": "attica-blue-unit-19"
+      },
+      {
+        "id": "attica-blue-unit-20",
+        "type": "lightTank",
+        "x": 5.0,
+        "y": 62.43
+      },
+      {
+        "id": "attica-blue-role-18",
+        "type": "highRiskSpot",
+        "x": 5.0,
+        "y": 62.43,
+        "parentTankId": "attica-blue-unit-20"
+      },
+      {
+        "id": "attica-blue-unit-21",
+        "type": "mainBattleTank",
+        "x": 69.17,
+        "y": 70.14
+      },
+      {
+        "id": "attica-blue-role-19",
+        "type": "spawnKill",
+        "x": 69.17,
+        "y": 70.14,
+        "parentTankId": "attica-blue-unit-21"
+      },
+      {
+        "id": "attica-blue-unit-22",
+        "type": "mainBattleTank",
+        "x": 44.51,
+        "y": 70.76
+      },
+      {
+        "id": "attica-blue-role-20",
+        "type": "highRiskSpot",
+        "x": 44.51,
+        "y": 70.76,
+        "parentTankId": "attica-blue-unit-22"
+      },
+      {
+        "id": "attica-blue-unit-23",
+        "type": "mainBattleTank",
+        "x": 24.17,
+        "y": 75.49
+      },
+      {
+        "id": "attica-blue-role-21",
+        "type": "spawnKill",
+        "x": 24.17,
+        "y": 75.49,
+        "parentTankId": "attica-blue-unit-23"
+      },
+      {
+        "id": "attica-blue-unit-24",
+        "type": "mainBattleTank",
+        "x": 18.19,
+        "y": 77.22
+      },
+      {
+        "id": "attica-blue-role-22",
+        "type": "spawnKill",
+        "x": 18.19,
+        "y": 77.22,
+        "parentTankId": "attica-blue-unit-24"
+      },
+      {
+        "id": "attica-blue-unit-25",
+        "type": "mainBattleTank",
+        "x": 51.88,
+        "y": 78.19
+      },
+      {
+        "id": "attica-blue-role-23",
+        "type": "highRiskSpot",
+        "x": 51.88,
+        "y": 78.19,
+        "parentTankId": "attica-blue-unit-25"
+      },
+      {
+        "id": "attica-blue-unit-26",
+        "type": "mainBattleTank",
+        "x": 62.08,
+        "y": 83.19
+      },
+      {
+        "id": "attica-blue-role-24",
+        "type": "spawnKill",
+        "x": 62.08,
+        "y": 83.19,
+        "parentTankId": "attica-blue-unit-26"
+      },
+      {
+        "id": "attica-blue-unit-27",
+        "type": "mainBattleTank",
+        "x": 46.18,
+        "y": 83.89
+      },
+      {
+        "id": "attica-blue-role-25",
+        "type": "spawnKill",
+        "x": 46.18,
+        "y": 83.89,
+        "parentTankId": "attica-blue-unit-27"
       }
     ],
     "Battle of Hurtgen Forest::domination-1|Blue": [
@@ -1327,10 +2146,275 @@
     ],
     "Attica::domination-1|Red": [
       {
-        "id": "mt8b482t-lvsove",
-        "type": "smokeshell",
-        "x": 77.93,
-        "y": 59.13
+        "id": "attica-red-unit-01",
+        "type": "mainBattleTankRed",
+        "x": 56.88,
+        "y": 24.44
+      },
+      {
+        "id": "attica-red-role-01",
+        "type": "spawnKill",
+        "x": 56.88,
+        "y": 24.44,
+        "parentTankId": "attica-red-unit-01"
+      },
+      {
+        "id": "attica-red-unit-02",
+        "type": "mainBattleTankRed",
+        "x": 20.9,
+        "y": 24.79
+      },
+      {
+        "id": "attica-red-role-02",
+        "type": "spawnKill",
+        "x": 20.9,
+        "y": 24.79,
+        "parentTankId": "attica-red-unit-02"
+      },
+      {
+        "id": "attica-red-unit-03",
+        "type": "mainBattleTankRed",
+        "x": 36.39,
+        "y": 27.99
+      },
+      {
+        "id": "attica-red-role-03",
+        "type": "highRiskSpot",
+        "x": 36.39,
+        "y": 27.99,
+        "parentTankId": "attica-red-unit-03"
+      },
+      {
+        "id": "attica-red-unit-04",
+        "type": "mainBattleTankRed",
+        "x": 44.38,
+        "y": 30.56
+      },
+      {
+        "id": "attica-red-role-04",
+        "type": "spawnKill",
+        "x": 44.38,
+        "y": 30.56,
+        "parentTankId": "attica-red-unit-04"
+      },
+      {
+        "id": "attica-red-unit-05",
+        "type": "mainBattleTankRed",
+        "x": 70.83,
+        "y": 35.0
+      },
+      {
+        "id": "attica-red-role-05",
+        "type": "spawnKill",
+        "x": 70.83,
+        "y": 35.0,
+        "parentTankId": "attica-red-unit-05"
+      },
+      {
+        "id": "attica-red-unit-06",
+        "type": "lightTankRed",
+        "x": 4.1,
+        "y": 39.51
+      },
+      {
+        "id": "attica-red-role-06",
+        "type": "highRiskSpot",
+        "x": 4.1,
+        "y": 39.51,
+        "parentTankId": "attica-red-unit-06"
+      },
+      {
+        "id": "attica-red-unit-07",
+        "type": "mainBattleTankRed",
+        "x": 86.11,
+        "y": 50.76
+      },
+      {
+        "id": "attica-red-role-07",
+        "type": "highRiskSpot",
+        "x": 86.11,
+        "y": 50.76,
+        "parentTankId": "attica-red-unit-07"
+      },
+      {
+        "id": "attica-red-unit-08",
+        "type": "mainBattleTankRed",
+        "x": 69.1,
+        "y": 50.97
+      },
+      {
+        "id": "attica-red-role-08",
+        "type": "highRiskSpot",
+        "x": 69.1,
+        "y": 50.97,
+        "parentTankId": "attica-red-unit-08"
+      },
+      {
+        "id": "attica-red-unit-09",
+        "type": "mainBattleTankRed",
+        "x": 14.51,
+        "y": 54.31
+      },
+      {
+        "id": "attica-red-role-09",
+        "type": "battleLine",
+        "x": 14.51,
+        "y": 54.31,
+        "parentTankId": "attica-red-unit-09"
+      },
+      {
+        "id": "attica-red-unit-10",
+        "type": "mainBattleTankRed",
+        "x": 78.96,
+        "y": 56.25
+      },
+      {
+        "id": "attica-red-role-10",
+        "type": "highRiskSpot",
+        "x": 78.96,
+        "y": 56.25,
+        "parentTankId": "attica-red-unit-10"
+      },
+      {
+        "id": "attica-red-unit-11",
+        "type": "mainBattleTankRed",
+        "x": 76.11,
+        "y": 58.13
+      },
+      {
+        "id": "attica-red-role-11",
+        "type": "battleLine",
+        "x": 76.11,
+        "y": 58.13,
+        "parentTankId": "attica-red-unit-11"
+      },
+      {
+        "id": "attica-red-unit-12",
+        "type": "mainBattleTankRed",
+        "x": 54.37,
+        "y": 58.54
+      },
+      {
+        "id": "attica-red-role-12",
+        "type": "battleLine",
+        "x": 54.37,
+        "y": 58.54,
+        "parentTankId": "attica-red-unit-12"
+      },
+      {
+        "id": "attica-red-unit-13",
+        "type": "mainBattleTankRed",
+        "x": 47.15,
+        "y": 62.92
+      },
+      {
+        "id": "attica-red-role-13",
+        "type": "battleLine",
+        "x": 47.15,
+        "y": 62.92,
+        "parentTankId": "attica-red-unit-13"
+      },
+      {
+        "id": "attica-red-unit-14",
+        "type": "mainBattleTankRed",
+        "x": 42.64,
+        "y": 65.9
+      },
+      {
+        "id": "attica-red-role-14",
+        "type": "sniper",
+        "x": 42.64,
+        "y": 65.9,
+        "parentTankId": "attica-red-unit-14"
+      },
+      {
+        "id": "attica-red-unit-15",
+        "type": "mainBattleTankRed",
+        "x": 24.93,
+        "y": 67.71
+      },
+      {
+        "id": "attica-red-unit-16",
+        "type": "mainBattleTankRed",
+        "x": 15.69,
+        "y": 69.31
+      },
+      {
+        "id": "attica-red-role-15",
+        "type": "battleLine",
+        "x": 15.69,
+        "y": 69.31,
+        "parentTankId": "attica-red-unit-16"
+      },
+      {
+        "id": "attica-red-unit-17",
+        "type": "mainBattleTankRed",
+        "x": 34.58,
+        "y": 70.07
+      },
+      {
+        "id": "attica-red-role-16",
+        "type": "battleLine",
+        "x": 34.58,
+        "y": 70.07,
+        "parentTankId": "attica-red-unit-17"
+      },
+      {
+        "id": "attica-red-unit-18",
+        "type": "mainBattleTankRed",
+        "x": 40.56,
+        "y": 72.85
+      },
+      {
+        "id": "attica-red-role-17",
+        "type": "sniper",
+        "x": 40.56,
+        "y": 72.85,
+        "parentTankId": "attica-red-unit-18"
+      },
+      {
+        "id": "attica-red-unit-19",
+        "type": "mainBattleTankRed",
+        "x": 43.19,
+        "y": 73.33
+      },
+      {
+        "id": "attica-red-role-18",
+        "type": "spawnKill",
+        "x": 43.19,
+        "y": 73.33,
+        "parentTankId": "attica-red-unit-19"
+      },
+      {
+        "id": "attica-red-unit-20",
+        "type": "mainBattleTankRed",
+        "x": 52.15,
+        "y": 73.82
+      },
+      {
+        "id": "attica-red-role-19",
+        "type": "highRiskSpot",
+        "x": 52.15,
+        "y": 73.82,
+        "parentTankId": "attica-red-unit-20"
+      },
+      {
+        "id": "attica-red-unit-21",
+        "type": "antiAirRed",
+        "x": 51.18,
+        "y": 78.12
+      },
+      {
+        "id": "attica-red-unit-22",
+        "type": "antiAirRed",
+        "x": 47.15,
+        "y": 78.4
+      },
+      {
+        "id": "attica-red-unit-23",
+        "type": "antiAirRed",
+        "x": 54.93,
+        "y": 80.0
       }
     ],
     "Seversk-13::domination-1|Red": [],
@@ -1765,6 +2849,594 @@
         "type": "tankDestroyer",
         "x": 63.33,
         "y": 92.85
+      }
+    ],
+    "Aredennes::domination-1|Blue": [
+      {
+        "id": "aredennes-blue-unit-01",
+        "type": "lightTank",
+        "x": 8.26,
+        "y": 14.03
+      },
+      {
+        "id": "aredennes-blue-role-01",
+        "type": "sniper",
+        "x": 8.26,
+        "y": 14.03,
+        "parentTankId": "aredennes-blue-unit-01"
+      },
+      {
+        "id": "aredennes-blue-unit-02",
+        "type": "antiAir",
+        "x": 89.79,
+        "y": 15.21
+      },
+      {
+        "id": "aredennes-blue-unit-03",
+        "type": "mainBattleTank",
+        "x": 44.03,
+        "y": 25.28
+      },
+      {
+        "id": "aredennes-blue-role-02",
+        "type": "battleLine",
+        "x": 44.03,
+        "y": 25.28,
+        "parentTankId": "aredennes-blue-unit-03"
+      },
+      {
+        "id": "aredennes-blue-unit-04",
+        "type": "mainBattleTank",
+        "x": 45.76,
+        "y": 30.07
+      },
+      {
+        "id": "aredennes-blue-role-03",
+        "type": "battleLine",
+        "x": 45.76,
+        "y": 30.07,
+        "parentTankId": "aredennes-blue-unit-04"
+      },
+      {
+        "id": "aredennes-blue-unit-05",
+        "type": "mainBattleTank",
+        "x": 57.22,
+        "y": 38.54
+      },
+      {
+        "id": "aredennes-blue-role-04",
+        "type": "battleLine",
+        "x": 57.22,
+        "y": 38.54,
+        "parentTankId": "aredennes-blue-unit-05"
+      },
+      {
+        "id": "aredennes-blue-unit-06",
+        "type": "mainBattleTank",
+        "x": 47.29,
+        "y": 41.74
+      },
+      {
+        "id": "aredennes-blue-role-05",
+        "type": "battleLine",
+        "x": 47.29,
+        "y": 41.74,
+        "parentTankId": "aredennes-blue-unit-06"
+      },
+      {
+        "id": "aredennes-blue-unit-07",
+        "type": "mainBattleTank",
+        "x": 51.04,
+        "y": 41.74
+      },
+      {
+        "id": "aredennes-blue-role-06",
+        "type": "battleLine",
+        "x": 51.04,
+        "y": 41.74,
+        "parentTankId": "aredennes-blue-unit-07"
+      },
+      {
+        "id": "aredennes-blue-unit-08",
+        "type": "mainBattleTank",
+        "x": 94.38,
+        "y": 42.64
+      },
+      {
+        "id": "aredennes-blue-role-07",
+        "type": "spawnKill",
+        "x": 94.38,
+        "y": 42.64,
+        "parentTankId": "aredennes-blue-unit-08"
+      },
+      {
+        "id": "aredennes-blue-unit-09",
+        "type": "mainBattleTank",
+        "x": 55.07,
+        "y": 49.72
+      },
+      {
+        "id": "aredennes-blue-role-08",
+        "type": "battleLine",
+        "x": 55.07,
+        "y": 49.72,
+        "parentTankId": "aredennes-blue-unit-09"
+      },
+      {
+        "id": "aredennes-blue-unit-10",
+        "type": "mainBattleTank",
+        "x": 84.17,
+        "y": 51.04
+      },
+      {
+        "id": "aredennes-blue-role-09",
+        "type": "sniper",
+        "x": 84.17,
+        "y": 51.04,
+        "parentTankId": "aredennes-blue-unit-10"
+      },
+      {
+        "id": "aredennes-blue-unit-11",
+        "type": "mainBattleTank",
+        "x": 56.74,
+        "y": 52.08
+      },
+      {
+        "id": "aredennes-blue-role-10",
+        "type": "highRiskSpot",
+        "x": 56.74,
+        "y": 52.08,
+        "parentTankId": "aredennes-blue-unit-11"
+      },
+      {
+        "id": "aredennes-blue-unit-12",
+        "type": "mainBattleTank",
+        "x": 69.31,
+        "y": 52.43
+      },
+      {
+        "id": "aredennes-blue-role-11",
+        "type": "battleLine",
+        "x": 69.31,
+        "y": 52.43,
+        "parentTankId": "aredennes-blue-unit-12"
+      },
+      {
+        "id": "aredennes-blue-unit-13",
+        "type": "lightTank",
+        "x": 11.74,
+        "y": 57.85
+      },
+      {
+        "id": "aredennes-blue-role-12",
+        "type": "spawnKill",
+        "x": 11.74,
+        "y": 57.85,
+        "parentTankId": "aredennes-blue-unit-13"
+      },
+      {
+        "id": "aredennes-blue-unit-14",
+        "type": "lightTank",
+        "x": 7.15,
+        "y": 63.89
+      },
+      {
+        "id": "aredennes-blue-unit-15",
+        "type": "mainBattleTank",
+        "x": 70.97,
+        "y": 65.21
+      },
+      {
+        "id": "aredennes-blue-role-13",
+        "type": "battleLine",
+        "x": 70.97,
+        "y": 65.21,
+        "parentTankId": "aredennes-blue-unit-15"
+      },
+      {
+        "id": "aredennes-blue-unit-16",
+        "type": "mainBattleTank",
+        "x": 97.22,
+        "y": 82.43
+      },
+      {
+        "id": "aredennes-blue-role-14",
+        "type": "battleLine",
+        "x": 97.22,
+        "y": 82.43,
+        "parentTankId": "aredennes-blue-unit-16"
+      },
+      {
+        "id": "aredennes-blue-unit-17",
+        "type": "mainBattleTank",
+        "x": 43.96,
+        "y": 88.47
+      },
+      {
+        "id": "aredennes-blue-role-15",
+        "type": "highRiskSpot",
+        "x": 43.96,
+        "y": 88.47,
+        "parentTankId": "aredennes-blue-unit-17"
+      },
+      {
+        "id": "aredennes-blue-unit-18",
+        "type": "mainBattleTank",
+        "x": 97.99,
+        "y": 88.89
+      },
+      {
+        "id": "aredennes-blue-role-16",
+        "type": "highRiskSpot",
+        "x": 97.99,
+        "y": 88.89,
+        "parentTankId": "aredennes-blue-unit-18"
+      },
+      {
+        "id": "aredennes-blue-unit-19",
+        "type": "mainBattleTank",
+        "x": 97.08,
+        "y": 91.04
+      },
+      {
+        "id": "aredennes-blue-role-17",
+        "type": "highRiskSpot",
+        "x": 97.08,
+        "y": 91.04,
+        "parentTankId": "aredennes-blue-unit-19"
+      },
+      {
+        "id": "aredennes-blue-unit-20",
+        "type": "mainBattleTank",
+        "x": 28.54,
+        "y": 91.88
+      },
+      {
+        "id": "aredennes-blue-unit-21",
+        "type": "mainBattleTank",
+        "x": 96.32,
+        "y": 97.01
+      },
+      {
+        "id": "aredennes-blue-role-18",
+        "type": "highRiskSpot",
+        "x": 96.32,
+        "y": 97.01,
+        "parentTankId": "aredennes-blue-unit-21"
+      }
+    ],
+    "Sun City::domination-1|Blue": [
+      {
+        "id": "sun-city-blue-unit-01",
+        "type": "mainBattleTank",
+        "x": 82.43,
+        "y": 27.22
+      },
+      {
+        "id": "sun-city-blue-role-01",
+        "type": "sniper",
+        "x": 82.43,
+        "y": 27.22,
+        "parentTankId": "sun-city-blue-unit-01"
+      },
+      {
+        "id": "sun-city-blue-unit-02",
+        "type": "mainBattleTank",
+        "x": 1.94,
+        "y": 35.07
+      },
+      {
+        "id": "sun-city-blue-role-02",
+        "type": "highRiskSpot",
+        "x": 1.94,
+        "y": 35.07,
+        "parentTankId": "sun-city-blue-unit-02"
+      },
+      {
+        "id": "sun-city-blue-unit-03",
+        "type": "mainBattleTank",
+        "x": 77.22,
+        "y": 35.14
+      },
+      {
+        "id": "sun-city-blue-role-03",
+        "type": "battleLine",
+        "x": 77.22,
+        "y": 35.14,
+        "parentTankId": "sun-city-blue-unit-03"
+      },
+      {
+        "id": "sun-city-blue-unit-04",
+        "type": "mainBattleTank",
+        "x": 30.49,
+        "y": 35.42
+      },
+      {
+        "id": "sun-city-blue-role-04",
+        "type": "sniper",
+        "x": 30.49,
+        "y": 35.42,
+        "parentTankId": "sun-city-blue-unit-04"
+      },
+      {
+        "id": "sun-city-blue-unit-05",
+        "type": "mainBattleTank",
+        "x": 66.46,
+        "y": 37.15
+      },
+      {
+        "id": "sun-city-blue-role-05",
+        "type": "battleLine",
+        "x": 66.46,
+        "y": 37.15,
+        "parentTankId": "sun-city-blue-unit-05"
+      },
+      {
+        "id": "sun-city-blue-unit-06",
+        "type": "mainBattleTank",
+        "x": 53.61,
+        "y": 39.38
+      },
+      {
+        "id": "sun-city-blue-role-06",
+        "type": "highRiskSpot",
+        "x": 53.61,
+        "y": 39.38,
+        "parentTankId": "sun-city-blue-unit-06"
+      },
+      {
+        "id": "sun-city-blue-unit-07",
+        "type": "mainBattleTank",
+        "x": 34.86,
+        "y": 43.19
+      },
+      {
+        "id": "sun-city-blue-role-07",
+        "type": "battleLine",
+        "x": 34.86,
+        "y": 43.19,
+        "parentTankId": "sun-city-blue-unit-07"
+      },
+      {
+        "id": "sun-city-blue-unit-08",
+        "type": "mainBattleTank",
+        "x": 22.01,
+        "y": 43.96
+      },
+      {
+        "id": "sun-city-blue-role-08",
+        "type": "battleLine",
+        "x": 22.01,
+        "y": 43.96,
+        "parentTankId": "sun-city-blue-unit-08"
+      },
+      {
+        "id": "sun-city-blue-unit-09",
+        "type": "mainBattleTank",
+        "x": 3.47,
+        "y": 46.04
+      },
+      {
+        "id": "sun-city-blue-role-09",
+        "type": "highRiskSpot",
+        "x": 3.47,
+        "y": 46.04,
+        "parentTankId": "sun-city-blue-unit-09"
+      },
+      {
+        "id": "sun-city-blue-unit-10",
+        "type": "mainBattleTank",
+        "x": 53.61,
+        "y": 64.31
+      },
+      {
+        "id": "sun-city-blue-role-10",
+        "type": "highRiskSpot",
+        "x": 53.61,
+        "y": 64.31,
+        "parentTankId": "sun-city-blue-unit-10"
+      },
+      {
+        "id": "sun-city-blue-unit-11",
+        "type": "mainBattleTank",
+        "x": 23.89,
+        "y": 65.07
+      },
+      {
+        "id": "sun-city-blue-unit-12",
+        "type": "mainBattleTank",
+        "x": 75.35,
+        "y": 65.07
+      },
+      {
+        "id": "sun-city-blue-unit-13",
+        "type": "mainBattleTank",
+        "x": 46.88,
+        "y": 65.35
+      },
+      {
+        "id": "sun-city-blue-role-11",
+        "type": "battleLine",
+        "x": 46.88,
+        "y": 65.35,
+        "parentTankId": "sun-city-blue-unit-13"
+      },
+      {
+        "id": "sun-city-blue-unit-14",
+        "type": "mainBattleTank",
+        "x": 88.26,
+        "y": 68.33
+      },
+      {
+        "id": "sun-city-blue-role-12",
+        "type": "highRiskSpot",
+        "x": 88.26,
+        "y": 68.33,
+        "parentTankId": "sun-city-blue-unit-14"
+      }
+    ],
+    "Sun City::domination-1|Red": [
+      {
+        "id": "sun-city-red-unit-01",
+        "type": "mainBattleTankRed",
+        "x": 10.9,
+        "y": 30.69
+      },
+      {
+        "id": "sun-city-red-unit-02",
+        "type": "mainBattleTankRed",
+        "x": 87.78,
+        "y": 30.97
+      },
+      {
+        "id": "sun-city-red-role-01",
+        "type": "highRiskSpot",
+        "x": 87.78,
+        "y": 30.97,
+        "parentTankId": "sun-city-red-unit-02"
+      },
+      {
+        "id": "sun-city-red-unit-03",
+        "type": "mainBattleTankRed",
+        "x": 46.81,
+        "y": 32.29
+      },
+      {
+        "id": "sun-city-red-role-02",
+        "type": "battleLine",
+        "x": 46.81,
+        "y": 32.29,
+        "parentTankId": "sun-city-red-unit-03"
+      },
+      {
+        "id": "sun-city-red-unit-04",
+        "type": "mainBattleTankRed",
+        "x": 50.56,
+        "y": 33.82
+      },
+      {
+        "id": "sun-city-red-role-03",
+        "type": "highRiskSpot",
+        "x": 50.56,
+        "y": 33.82,
+        "parentTankId": "sun-city-red-unit-04"
+      },
+      {
+        "id": "sun-city-red-unit-05",
+        "type": "mainBattleTankRed",
+        "x": 76.46,
+        "y": 44.86
+      },
+      {
+        "id": "sun-city-red-role-04",
+        "type": "highRiskSpot",
+        "x": 76.46,
+        "y": 44.86,
+        "parentTankId": "sun-city-red-unit-05"
+      },
+      {
+        "id": "sun-city-red-unit-06",
+        "type": "mainBattleTankRed",
+        "x": 29.24,
+        "y": 45.0
+      },
+      {
+        "id": "sun-city-red-role-05",
+        "type": "highRiskSpot",
+        "x": 29.24,
+        "y": 45.0,
+        "parentTankId": "sun-city-red-unit-06"
+      },
+      {
+        "id": "sun-city-red-unit-07",
+        "type": "mainBattleTankRed",
+        "x": 6.18,
+        "y": 47.71
+      },
+      {
+        "id": "sun-city-red-role-06",
+        "type": "highRiskSpot",
+        "x": 6.18,
+        "y": 47.71,
+        "parentTankId": "sun-city-red-unit-07"
+      },
+      {
+        "id": "sun-city-red-unit-08",
+        "type": "mainBattleTankRed",
+        "x": 22.01,
+        "y": 52.57
+      },
+      {
+        "id": "sun-city-red-role-07",
+        "type": "battleLine",
+        "x": 22.01,
+        "y": 52.57,
+        "parentTankId": "sun-city-red-unit-08"
+      },
+      {
+        "id": "sun-city-red-unit-09",
+        "type": "mainBattleTankRed",
+        "x": 69.03,
+        "y": 54.1
+      },
+      {
+        "id": "sun-city-red-role-08",
+        "type": "battleLine",
+        "x": 69.03,
+        "y": 54.1,
+        "parentTankId": "sun-city-red-unit-09"
+      },
+      {
+        "id": "sun-city-red-unit-10",
+        "type": "mainBattleTankRed",
+        "x": 34.38,
+        "y": 56.04
+      },
+      {
+        "id": "sun-city-red-role-09",
+        "type": "battleLine",
+        "x": 34.38,
+        "y": 56.04,
+        "parentTankId": "sun-city-red-unit-10"
+      },
+      {
+        "id": "sun-city-red-unit-11",
+        "type": "mainBattleTankRed",
+        "x": 30.49,
+        "y": 63.61
+      },
+      {
+        "id": "sun-city-red-role-10",
+        "type": "sniper",
+        "x": 30.49,
+        "y": 63.61,
+        "parentTankId": "sun-city-red-unit-11"
+      },
+      {
+        "id": "sun-city-red-unit-12",
+        "type": "mainBattleTankRed",
+        "x": 1.67,
+        "y": 70.49
+      },
+      {
+        "id": "sun-city-red-role-11",
+        "type": "sniper",
+        "x": 1.67,
+        "y": 70.49,
+        "parentTankId": "sun-city-red-unit-12"
+      },
+      {
+        "id": "sun-city-red-unit-13",
+        "type": "mainBattleTankRed",
+        "x": 82.92,
+        "y": 70.76
+      },
+      {
+        "id": "sun-city-red-role-12",
+        "type": "spawnKill",
+        "x": 82.92,
+        "y": 70.76,
+        "parentTankId": "sun-city-red-unit-13"
       }
     ]
   },
@@ -4322,14 +5994,2805 @@
         "dangerRoute": true
       }
     ],
-    "Aredennes::domination-2|Red": [],
-    "Aredennes::domination-2|Blue": [],
+    "Aredennes::domination-2|Red": [
+      {
+        "id": "aredennes-domination-2-red-aim-01",
+        "type": "aimHere",
+        "parentTankId": "aredennes-domination-2-red-unit-05",
+        "startX": 70.0,
+        "startY": 59.93,
+        "endX": 71.86,
+        "endY": 27.88
+      },
+      {
+        "id": "aredennes-domination-2-red-aim-02",
+        "type": "aimHere",
+        "parentTankId": "aredennes-domination-2-red-unit-05",
+        "startX": 70.0,
+        "startY": 59.93,
+        "endX": 69.96,
+        "endY": 27.59
+      },
+      {
+        "id": "aredennes-domination-2-red-aim-03",
+        "type": "aimHere",
+        "parentTankId": "aredennes-domination-2-red-unit-13",
+        "startX": 47.57,
+        "startY": 84.65,
+        "endX": 71.28,
+        "endY": 81.62
+      },
+      {
+        "id": "aredennes-domination-2-red-aim-04",
+        "type": "aimHere",
+        "parentTankId": "aredennes-domination-2-red-unit-02",
+        "startX": 52.36,
+        "startY": 23.96,
+        "endX": 65.55,
+        "endY": 22.3
+      },
+      {
+        "id": "aredennes-domination-2-red-aim-05",
+        "type": "aimHere",
+        "parentTankId": "aredennes-domination-2-red-unit-03",
+        "startX": 43.26,
+        "startY": 43.47,
+        "endX": 42.46,
+        "endY": 35.76
+      },
+      {
+        "id": "aredennes-domination-2-red-aim-06",
+        "type": "aimHere",
+        "parentTankId": "aredennes-domination-2-red-unit-05",
+        "startX": 70.0,
+        "startY": 59.93,
+        "endX": 83.13,
+        "endY": 47.0
+      },
+      {
+        "id": "aredennes-domination-2-red-aim-07",
+        "type": "aimHere",
+        "parentTankId": "aredennes-domination-2-red-unit-03",
+        "startX": 43.26,
+        "startY": 43.47,
+        "endX": 42.47,
+        "endY": 55.14
+      },
+      {
+        "id": "aredennes-domination-2-red-aim-08",
+        "type": "aimHere",
+        "parentTankId": "aredennes-domination-2-red-unit-06",
+        "startX": 66.88,
+        "startY": 61.18,
+        "endX": 65.69,
+        "endY": 26.82
+      },
+      {
+        "id": "aredennes-domination-2-red-aim-09",
+        "type": "aimHere",
+        "parentTankId": "aredennes-domination-2-red-unit-03",
+        "startX": 43.26,
+        "startY": 43.47,
+        "endX": 52.02,
+        "endY": 40.29
+      },
+      {
+        "id": "aredennes-domination-2-red-aim-10",
+        "type": "aimHere",
+        "parentTankId": "aredennes-domination-2-red-unit-12",
+        "startX": 42.57,
+        "startY": 83.82,
+        "endX": 42.47,
+        "endY": 76.46
+      },
+      {
+        "id": "aredennes-domination-2-red-aim-11",
+        "type": "aimHere",
+        "parentTankId": "aredennes-domination-2-red-unit-13",
+        "startX": 47.57,
+        "startY": 84.65,
+        "endX": 53.46,
+        "endY": 72.66
+      },
+      {
+        "id": "aredennes-domination-2-red-aim-12",
+        "type": "aimHere",
+        "parentTankId": "aredennes-domination-2-red-unit-04",
+        "startX": 79.72,
+        "startY": 43.54,
+        "endX": 76.33,
+        "endY": 27.65
+      },
+      {
+        "id": "aredennes-domination-2-red-aim-13",
+        "type": "aimHere",
+        "parentTankId": "aredennes-domination-2-red-unit-08",
+        "startX": 59.72,
+        "startY": 72.5,
+        "endX": 61.16,
+        "endY": 65.05
+      },
+      {
+        "id": "aredennes-domination-2-red-route-01",
+        "type": "route",
+        "points": [
+          {
+            "x": 18.16,
+            "y": 3.12
+          },
+          {
+            "x": 18.45,
+            "y": 5.74
+          },
+          {
+            "x": 18.94,
+            "y": 3.21
+          },
+          {
+            "x": 19.29,
+            "y": 5.63
+          },
+          {
+            "x": 19.09,
+            "y": 8.34
+          },
+          {
+            "x": 18.45,
+            "y": 11.17
+          },
+          {
+            "x": 18.59,
+            "y": 13.62
+          },
+          {
+            "x": 19.3,
+            "y": 11.05
+          },
+          {
+            "x": 19.93,
+            "y": 8.36
+          },
+          {
+            "x": 20.29,
+            "y": 5.69
+          },
+          {
+            "x": 21.28,
+            "y": 3.02
+          },
+          {
+            "x": 21.02,
+            "y": 5.76
+          },
+          {
+            "x": 21.26,
+            "y": 8.46
+          },
+          {
+            "x": 21.84,
+            "y": 5.76
+          },
+          {
+            "x": 21.95,
+            "y": 8.33
+          },
+          {
+            "x": 22.81,
+            "y": 5.77
+          },
+          {
+            "x": 22.76,
+            "y": 8.4
+          },
+          {
+            "x": 22.03,
+            "y": 11.02
+          },
+          {
+            "x": 21.92,
+            "y": 13.67
+          },
+          {
+            "x": 23.35,
+            "y": 11.16
+          },
+          {
+            "x": 22.87,
+            "y": 13.81
+          },
+          {
+            "x": 24.04,
+            "y": 11.04
+          },
+          {
+            "x": 23.69,
+            "y": 8.45
+          },
+          {
+            "x": 21.31,
+            "y": 11.08
+          },
+          {
+            "x": 17.24,
+            "y": 10.92
+          },
+          {
+            "x": 17.39,
+            "y": 13.62
+          },
+          {
+            "x": 17.27,
+            "y": 8.16
+          },
+          {
+            "x": 21.84,
+            "y": 3.12
+          },
+          {
+            "x": 22.35,
+            "y": 3.15
+          }
+        ]
+      },
+      {
+        "id": "aredennes-domination-2-red-route-02",
+        "type": "route",
+        "points": [
+          {
+            "x": 43.82,
+            "y": 85.17
+          },
+          {
+            "x": 41.15,
+            "y": 85.28
+          },
+          {
+            "x": 38.4,
+            "y": 84.94
+          },
+          {
+            "x": 35.66,
+            "y": 84.38
+          },
+          {
+            "x": 32.98,
+            "y": 83.65
+          },
+          {
+            "x": 30.35,
+            "y": 82.82
+          },
+          {
+            "x": 27.69,
+            "y": 81.85
+          }
+        ]
+      },
+      {
+        "id": "aredennes-domination-2-red-route-03",
+        "type": "route",
+        "points": [
+          {
+            "x": 49.48,
+            "y": 84.51
+          },
+          {
+            "x": 52.19,
+            "y": 84.2
+          },
+          {
+            "x": 54.97,
+            "y": 83.85
+          },
+          {
+            "x": 57.69,
+            "y": 83.43
+          },
+          {
+            "x": 60.44,
+            "y": 82.85
+          },
+          {
+            "x": 63.09,
+            "y": 82.05
+          },
+          {
+            "x": 65.74,
+            "y": 81.15
+          },
+          {
+            "x": 68.38,
+            "y": 80.25
+          }
+        ]
+      },
+      {
+        "id": "aredennes-domination-2-red-route-04",
+        "type": "route",
+        "points": [
+          {
+            "x": 20.95,
+            "y": 13.75
+          },
+          {
+            "x": 20.48,
+            "y": 11.25
+          },
+          {
+            "x": 19.99,
+            "y": 13.75
+          }
+        ]
+      },
+      {
+        "id": "aredennes-domination-2-red-route-05",
+        "type": "route",
+        "points": [
+          {
+            "x": 9.48,
+            "y": 13.74
+          },
+          {
+            "x": 10.38,
+            "y": 11.03
+          },
+          {
+            "x": 9.86,
+            "y": 8.55
+          },
+          {
+            "x": 9.36,
+            "y": 10.86
+          },
+          {
+            "x": 10.03,
+            "y": 5.8
+          },
+          {
+            "x": 10.44,
+            "y": 3.16
+          },
+          {
+            "x": 11.58,
+            "y": 5.68
+          },
+          {
+            "x": 11.17,
+            "y": 2.98
+          },
+          {
+            "x": 12.4,
+            "y": 5.83
+          },
+          {
+            "x": 12.95,
+            "y": 3.12
+          },
+          {
+            "x": 12.81,
+            "y": 5.62
+          },
+          {
+            "x": 12.33,
+            "y": 2.92
+          },
+          {
+            "x": 13.16,
+            "y": 5.62
+          },
+          {
+            "x": 11.79,
+            "y": 2.98
+          }
+        ]
+      },
+      {
+        "id": "aredennes-domination-2-red-route-06",
+        "type": "route",
+        "points": [
+          {
+            "x": 47.89,
+            "y": 79.92
+          },
+          {
+            "x": 45.17,
+            "y": 80.24
+          },
+          {
+            "x": 41.01,
+            "y": 80.35
+          },
+          {
+            "x": 38.23,
+            "y": 80.42
+          },
+          {
+            "x": 35.45,
+            "y": 80.42
+          },
+          {
+            "x": 32.67,
+            "y": 80.42
+          },
+          {
+            "x": 29.9,
+            "y": 80.35
+          },
+          {
+            "x": 27.12,
+            "y": 80.35
+          }
+        ]
+      },
+      {
+        "id": "aredennes-domination-2-red-route-07",
+        "type": "route",
+        "points": [
+          {
+            "x": 21.14,
+            "y": 37.51
+          },
+          {
+            "x": 19.78,
+            "y": 39.73
+          },
+          {
+            "x": 18.54,
+            "y": 42.23
+          },
+          {
+            "x": 17.6,
+            "y": 44.83
+          },
+          {
+            "x": 17.36,
+            "y": 47.6
+          },
+          {
+            "x": 17.29,
+            "y": 50.38
+          },
+          {
+            "x": 17.43,
+            "y": 53.16
+          },
+          {
+            "x": 17.57,
+            "y": 55.94
+          },
+          {
+            "x": 17.78,
+            "y": 58.72
+          },
+          {
+            "x": 18.02,
+            "y": 61.49
+          },
+          {
+            "x": 18.26,
+            "y": 64.24
+          },
+          {
+            "x": 18.58,
+            "y": 67.01
+          },
+          {
+            "x": 18.85,
+            "y": 69.76
+          },
+          {
+            "x": 19.32,
+            "y": 72.52
+          },
+          {
+            "x": 20.27,
+            "y": 75.11
+          },
+          {
+            "x": 21.59,
+            "y": 77.55
+          },
+          {
+            "x": 22.33,
+            "y": 78.7
+          }
+        ]
+      },
+      {
+        "id": "aredennes-domination-2-red-route-08",
+        "type": "route",
+        "points": [
+          {
+            "x": 35.38,
+            "y": 47.92
+          },
+          {
+            "x": 33.01,
+            "y": 49.33
+          },
+          {
+            "x": 30.58,
+            "y": 50.8
+          },
+          {
+            "x": 28.26,
+            "y": 52.29
+          },
+          {
+            "x": 26.02,
+            "y": 53.94
+          },
+          {
+            "x": 24.03,
+            "y": 55.9
+          },
+          {
+            "x": 22.22,
+            "y": 57.97
+          },
+          {
+            "x": 20.48,
+            "y": 60.18
+          },
+          {
+            "x": 18.85,
+            "y": 62.4
+          }
+        ]
+      },
+      {
+        "id": "aredennes-domination-2-red-route-09",
+        "type": "route",
+        "points": [
+          {
+            "x": 26.21,
+            "y": 3.13
+          },
+          {
+            "x": 26.78,
+            "y": 5.76
+          },
+          {
+            "x": 27.07,
+            "y": 2.98
+          },
+          {
+            "x": 27.68,
+            "y": 5.7
+          }
+        ]
+      },
+      {
+        "id": "aredennes-domination-2-red-route-10",
+        "type": "route",
+        "points": [
+          {
+            "x": 5.64,
+            "y": 3.06
+          },
+          {
+            "x": 5.83,
+            "y": 5.67
+          },
+          {
+            "x": 6.42,
+            "y": 3.12
+          },
+          {
+            "x": 6.75,
+            "y": 5.88
+          },
+          {
+            "x": 6.69,
+            "y": 8.57
+          },
+          {
+            "x": 6.77,
+            "y": 11.04
+          },
+          {
+            "x": 7.53,
+            "y": 8.61
+          },
+          {
+            "x": 7.8,
+            "y": 5.87
+          },
+          {
+            "x": 8.02,
+            "y": 3.06
+          },
+          {
+            "x": 5.83,
+            "y": 8.45
+          },
+          {
+            "x": 6.01,
+            "y": 10.92
+          }
+        ]
+      },
+      {
+        "id": "aredennes-domination-2-red-route-11",
+        "type": "route",
+        "points": [
+          {
+            "x": 50.53,
+            "y": 78.96
+          },
+          {
+            "x": 53.03,
+            "y": 77.67
+          },
+          {
+            "x": 55.32,
+            "y": 76.16
+          },
+          {
+            "x": 57.5,
+            "y": 74.44
+          }
+        ]
+      },
+      {
+        "id": "aredennes-domination-2-red-route-12",
+        "type": "route",
+        "points": [
+          {
+            "x": 70.92,
+            "y": 69.41
+          },
+          {
+            "x": 73.5,
+            "y": 68.47
+          },
+          {
+            "x": 75.96,
+            "y": 67.03
+          },
+          {
+            "x": 77.68,
+            "y": 64.98
+          },
+          {
+            "x": 78.24,
+            "y": 62.23
+          },
+          {
+            "x": 78.57,
+            "y": 59.48
+          },
+          {
+            "x": 78.82,
+            "y": 56.7
+          },
+          {
+            "x": 79.05,
+            "y": 53.92
+          },
+          {
+            "x": 79.26,
+            "y": 51.14
+          },
+          {
+            "x": 79.47,
+            "y": 48.36
+          },
+          {
+            "x": 79.66,
+            "y": 45.6
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "aredennes-domination-2-red-route-13",
+        "type": "route",
+        "points": [
+          {
+            "x": 63.02,
+            "y": 17.67
+          },
+          {
+            "x": 60.23,
+            "y": 18.08
+          },
+          {
+            "x": 57.5,
+            "y": 18.47
+          },
+          {
+            "x": 54.77,
+            "y": 18.87
+          },
+          {
+            "x": 51.98,
+            "y": 19.27
+          },
+          {
+            "x": 49.22,
+            "y": 19.67
+          },
+          {
+            "x": 46.51,
+            "y": 20.25
+          },
+          {
+            "x": 43.93,
+            "y": 21.31
+          },
+          {
+            "x": 41.42,
+            "y": 22.49
+          },
+          {
+            "x": 38.93,
+            "y": 23.74
+          },
+          {
+            "x": 36.49,
+            "y": 25.06
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "aredennes-domination-2-red-route-14",
+        "type": "route",
+        "points": [
+          {
+            "x": 40.59,
+            "y": 23.61
+          },
+          {
+            "x": 43.37,
+            "y": 23.68
+          },
+          {
+            "x": 46.12,
+            "y": 23.69
+          },
+          {
+            "x": 48.92,
+            "y": 23.75
+          },
+          {
+            "x": 50.26,
+            "y": 23.76
+          }
+        ],
+        "dangerRoute": true
+      }
+    ],
+    "Aredennes::domination-2|Blue": [
+      {
+        "id": "aredennes-domination-2-blue-aim-01",
+        "type": "aimHere",
+        "parentTankId": "aredennes-domination-2-blue-unit-11",
+        "startX": 96.04,
+        "startY": 75.21,
+        "endX": 79.0,
+        "endY": 78.7
+      },
+      {
+        "id": "aredennes-domination-2-blue-aim-02",
+        "type": "aimHere",
+        "parentTankId": "aredennes-domination-2-blue-unit-07",
+        "startX": 33.26,
+        "startY": 57.36,
+        "endX": 29.7,
+        "endY": 71.73
+      },
+      {
+        "id": "aredennes-domination-2-blue-aim-03",
+        "type": "aimHere",
+        "parentTankId": "aredennes-domination-2-blue-unit-08",
+        "startX": 14.72,
+        "startY": 59.31,
+        "endX": 16.08,
+        "endY": 77.5
+      },
+      {
+        "id": "aredennes-domination-2-blue-aim-04",
+        "type": "aimHere",
+        "parentTankId": "aredennes-domination-2-blue-unit-05",
+        "startX": 51.46,
+        "startY": 49.44,
+        "endX": 47.57,
+        "endY": 47.91
+      },
+      {
+        "id": "aredennes-domination-2-blue-aim-05",
+        "type": "aimHere",
+        "parentTankId": "aredennes-domination-2-blue-unit-04",
+        "startX": 76.39,
+        "startY": 36.53,
+        "endX": 74.42,
+        "endY": 41.7
+      },
+      {
+        "id": "aredennes-domination-2-blue-aim-06",
+        "type": "aimHere",
+        "parentTankId": "aredennes-domination-2-blue-unit-05",
+        "startX": 51.46,
+        "startY": 49.44,
+        "endX": 54.16,
+        "endY": 53.49
+      },
+      {
+        "id": "aredennes-domination-2-blue-aim-07",
+        "type": "aimHere",
+        "parentTankId": "aredennes-domination-2-blue-unit-08",
+        "startX": 14.72,
+        "startY": 59.31,
+        "endX": 21.63,
+        "endY": 71.25
+      },
+      {
+        "id": "aredennes-domination-2-blue-aim-08",
+        "type": "aimHere",
+        "parentTankId": "aredennes-domination-2-blue-unit-14",
+        "startX": 35.35,
+        "startY": 94.51,
+        "endX": 30.41,
+        "endY": 87.06
+      },
+      {
+        "id": "aredennes-domination-2-blue-route-01",
+        "type": "route",
+        "points": [
+          {
+            "x": 18.16,
+            "y": 3.12
+          },
+          {
+            "x": 18.45,
+            "y": 5.74
+          },
+          {
+            "x": 18.94,
+            "y": 3.21
+          },
+          {
+            "x": 19.29,
+            "y": 5.63
+          },
+          {
+            "x": 19.09,
+            "y": 8.34
+          },
+          {
+            "x": 18.45,
+            "y": 11.17
+          },
+          {
+            "x": 18.59,
+            "y": 13.62
+          },
+          {
+            "x": 19.3,
+            "y": 11.05
+          },
+          {
+            "x": 19.93,
+            "y": 8.36
+          },
+          {
+            "x": 20.29,
+            "y": 5.69
+          },
+          {
+            "x": 21.28,
+            "y": 3.02
+          },
+          {
+            "x": 21.02,
+            "y": 5.76
+          },
+          {
+            "x": 21.26,
+            "y": 8.46
+          },
+          {
+            "x": 21.84,
+            "y": 5.76
+          },
+          {
+            "x": 21.95,
+            "y": 8.33
+          },
+          {
+            "x": 22.81,
+            "y": 5.77
+          },
+          {
+            "x": 22.76,
+            "y": 8.4
+          },
+          {
+            "x": 22.03,
+            "y": 11.02
+          },
+          {
+            "x": 21.92,
+            "y": 13.67
+          },
+          {
+            "x": 23.35,
+            "y": 11.16
+          },
+          {
+            "x": 22.87,
+            "y": 13.81
+          },
+          {
+            "x": 24.04,
+            "y": 11.04
+          },
+          {
+            "x": 23.69,
+            "y": 8.45
+          },
+          {
+            "x": 21.31,
+            "y": 11.08
+          },
+          {
+            "x": 17.24,
+            "y": 10.92
+          },
+          {
+            "x": 17.39,
+            "y": 13.62
+          },
+          {
+            "x": 17.27,
+            "y": 8.16
+          },
+          {
+            "x": 21.84,
+            "y": 3.12
+          },
+          {
+            "x": 22.35,
+            "y": 3.15
+          }
+        ]
+      },
+      {
+        "id": "aredennes-domination-2-blue-route-02",
+        "type": "route",
+        "points": [
+          {
+            "x": 76.19,
+            "y": 20.66
+          },
+          {
+            "x": 77.96,
+            "y": 22.82
+          },
+          {
+            "x": 79.67,
+            "y": 25.03
+          },
+          {
+            "x": 81.28,
+            "y": 27.27
+          },
+          {
+            "x": 82.74,
+            "y": 29.62
+          },
+          {
+            "x": 83.93,
+            "y": 32.15
+          },
+          {
+            "x": 84.24,
+            "y": 34.9
+          },
+          {
+            "x": 84.2,
+            "y": 37.67
+          },
+          {
+            "x": 84.03,
+            "y": 40.45
+          },
+          {
+            "x": 83.78,
+            "y": 43.23
+          },
+          {
+            "x": 83.42,
+            "y": 45.95
+          },
+          {
+            "x": 82.9,
+            "y": 48.7
+          },
+          {
+            "x": 82.08,
+            "y": 51.35
+          },
+          {
+            "x": 80.66,
+            "y": 53.75
+          },
+          {
+            "x": 79.02,
+            "y": 56.01
+          },
+          {
+            "x": 77.32,
+            "y": 58.23
+          },
+          {
+            "x": 75.6,
+            "y": 60.38
+          },
+          {
+            "x": 74.72,
+            "y": 61.48
+          }
+        ]
+      },
+      {
+        "id": "aredennes-domination-2-blue-route-03",
+        "type": "route",
+        "points": [
+          {
+            "x": 13.55,
+            "y": 57.78
+          },
+          {
+            "x": 12.21,
+            "y": 55.4
+          },
+          {
+            "x": 10.9,
+            "y": 52.93
+          },
+          {
+            "x": 9.97,
+            "y": 50.38
+          },
+          {
+            "x": 11.16,
+            "y": 47.95
+          },
+          {
+            "x": 13.14,
+            "y": 46.0
+          },
+          {
+            "x": 15.03,
+            "y": 43.96
+          },
+          {
+            "x": 16.94,
+            "y": 41.94
+          },
+          {
+            "x": 18.98,
+            "y": 40.0
+          },
+          {
+            "x": 21.06,
+            "y": 38.2
+          }
+        ]
+      },
+      {
+        "id": "aredennes-domination-2-blue-route-04",
+        "type": "route",
+        "points": [
+          {
+            "x": 20.95,
+            "y": 13.75
+          },
+          {
+            "x": 20.48,
+            "y": 11.25
+          },
+          {
+            "x": 19.99,
+            "y": 13.75
+          }
+        ]
+      },
+      {
+        "id": "aredennes-domination-2-blue-route-05",
+        "type": "route",
+        "points": [
+          {
+            "x": 74.03,
+            "y": 20.59
+          },
+          {
+            "x": 74.1,
+            "y": 23.16
+          },
+          {
+            "x": 73.96,
+            "y": 25.97
+          },
+          {
+            "x": 73.55,
+            "y": 28.71
+          },
+          {
+            "x": 72.18,
+            "y": 31.01
+          },
+          {
+            "x": 69.41,
+            "y": 31.15
+          },
+          {
+            "x": 66.66,
+            "y": 30.85
+          },
+          {
+            "x": 63.89,
+            "y": 30.52
+          },
+          {
+            "x": 61.22,
+            "y": 30.9
+          },
+          {
+            "x": 59.41,
+            "y": 33.07
+          },
+          {
+            "x": 58.63,
+            "y": 34.21
+          }
+        ]
+      },
+      {
+        "id": "aredennes-domination-2-blue-route-06",
+        "type": "route",
+        "points": [
+          {
+            "x": 74.9,
+            "y": 23.99
+          },
+          {
+            "x": 75.17,
+            "y": 26.77
+          },
+          {
+            "x": 75.42,
+            "y": 29.55
+          },
+          {
+            "x": 75.62,
+            "y": 32.33
+          },
+          {
+            "x": 75.69,
+            "y": 33.72
+          }
+        ]
+      },
+      {
+        "id": "aredennes-domination-2-blue-route-07",
+        "type": "route",
+        "points": [
+          {
+            "x": 9.48,
+            "y": 13.74
+          },
+          {
+            "x": 10.38,
+            "y": 11.03
+          },
+          {
+            "x": 9.86,
+            "y": 8.55
+          },
+          {
+            "x": 9.36,
+            "y": 10.86
+          },
+          {
+            "x": 10.03,
+            "y": 5.8
+          },
+          {
+            "x": 10.44,
+            "y": 3.16
+          },
+          {
+            "x": 11.58,
+            "y": 5.68
+          },
+          {
+            "x": 11.17,
+            "y": 2.98
+          },
+          {
+            "x": 12.4,
+            "y": 5.83
+          },
+          {
+            "x": 12.95,
+            "y": 3.12
+          },
+          {
+            "x": 12.81,
+            "y": 5.62
+          },
+          {
+            "x": 12.33,
+            "y": 2.92
+          },
+          {
+            "x": 13.16,
+            "y": 5.62
+          },
+          {
+            "x": 11.79,
+            "y": 2.98
+          }
+        ]
+      },
+      {
+        "id": "aredennes-domination-2-blue-route-08",
+        "type": "route",
+        "points": [
+          {
+            "x": 82.78,
+            "y": 51.98
+          },
+          {
+            "x": 82.67,
+            "y": 54.76
+          },
+          {
+            "x": 82.47,
+            "y": 57.53
+          },
+          {
+            "x": 82.1,
+            "y": 60.29
+          },
+          {
+            "x": 81.61,
+            "y": 63.04
+          },
+          {
+            "x": 80.94,
+            "y": 65.73
+          },
+          {
+            "x": 80.03,
+            "y": 68.37
+          },
+          {
+            "x": 78.76,
+            "y": 70.81
+          }
+        ]
+      },
+      {
+        "id": "aredennes-domination-2-blue-route-09",
+        "type": "route",
+        "points": [
+          {
+            "x": 39.87,
+            "y": 19.56
+          },
+          {
+            "x": 42.08,
+            "y": 17.88
+          },
+          {
+            "x": 44.31,
+            "y": 16.22
+          },
+          {
+            "x": 46.49,
+            "y": 14.49
+          },
+          {
+            "x": 48.72,
+            "y": 12.76
+          },
+          {
+            "x": 50.84,
+            "y": 11.0
+          },
+          {
+            "x": 53.07,
+            "y": 9.55
+          }
+        ]
+      },
+      {
+        "id": "aredennes-domination-2-blue-route-10",
+        "type": "route",
+        "points": [
+          {
+            "x": 84.79,
+            "y": 43.3
+          },
+          {
+            "x": 85.12,
+            "y": 46.05
+          },
+          {
+            "x": 85.52,
+            "y": 48.85
+          },
+          {
+            "x": 85.99,
+            "y": 51.59
+          },
+          {
+            "x": 86.58,
+            "y": 54.33
+          },
+          {
+            "x": 87.33,
+            "y": 56.98
+          },
+          {
+            "x": 88.24,
+            "y": 59.6
+          },
+          {
+            "x": 89.21,
+            "y": 62.17
+          },
+          {
+            "x": 90.25,
+            "y": 64.78
+          },
+          {
+            "x": 91.49,
+            "y": 67.26
+          },
+          {
+            "x": 93.33,
+            "y": 69.34
+          },
+          {
+            "x": 95.35,
+            "y": 71.25
+          },
+          {
+            "x": 96.81,
+            "y": 73.48
+          }
+        ]
+      },
+      {
+        "id": "aredennes-domination-2-blue-route-11",
+        "type": "route",
+        "points": [
+          {
+            "x": 27.68,
+            "y": 5.7
+          },
+          {
+            "x": 27.07,
+            "y": 2.98
+          },
+          {
+            "x": 26.78,
+            "y": 5.76
+          },
+          {
+            "x": 26.21,
+            "y": 3.13
+          }
+        ]
+      },
+      {
+        "id": "aredennes-domination-2-blue-route-12",
+        "type": "route",
+        "points": [
+          {
+            "x": 5.64,
+            "y": 3.06
+          },
+          {
+            "x": 5.83,
+            "y": 5.67
+          },
+          {
+            "x": 6.42,
+            "y": 3.12
+          },
+          {
+            "x": 6.75,
+            "y": 5.88
+          },
+          {
+            "x": 6.69,
+            "y": 8.57
+          },
+          {
+            "x": 6.77,
+            "y": 11.04
+          },
+          {
+            "x": 7.53,
+            "y": 8.61
+          },
+          {
+            "x": 7.8,
+            "y": 5.87
+          },
+          {
+            "x": 8.02,
+            "y": 3.06
+          },
+          {
+            "x": 5.83,
+            "y": 8.45
+          },
+          {
+            "x": 6.01,
+            "y": 10.92
+          }
+        ]
+      },
+      {
+        "id": "aredennes-domination-2-blue-route-13",
+        "type": "route",
+        "points": [
+          {
+            "x": 72.61,
+            "y": 17.15
+          },
+          {
+            "x": 71.77,
+            "y": 14.48
+          },
+          {
+            "x": 70.86,
+            "y": 11.86
+          },
+          {
+            "x": 69.79,
+            "y": 9.27
+          },
+          {
+            "x": 68.45,
+            "y": 6.84
+          },
+          {
+            "x": 66.17,
+            "y": 5.44
+          },
+          {
+            "x": 63.4,
+            "y": 5.21
+          },
+          {
+            "x": 60.74,
+            "y": 6.06
+          },
+          {
+            "x": 59.46,
+            "y": 6.55
+          }
+        ]
+      },
+      {
+        "id": "aredennes-domination-2-blue-route-14",
+        "type": "route",
+        "points": [
+          {
+            "x": 33.69,
+            "y": 32.21
+          },
+          {
+            "x": 34.76,
+            "y": 29.76
+          },
+          {
+            "x": 36.93,
+            "y": 28.2
+          },
+          {
+            "x": 39.34,
+            "y": 28.85
+          }
+        ]
+      },
+      {
+        "id": "aredennes-domination-2-blue-route-15",
+        "type": "route",
+        "points": [
+          {
+            "x": 37.27,
+            "y": 95.09
+          },
+          {
+            "x": 40.28,
+            "y": 94.79
+          },
+          {
+            "x": 43.01,
+            "y": 94.4
+          },
+          {
+            "x": 45.79,
+            "y": 93.84
+          },
+          {
+            "x": 48.46,
+            "y": 93.04
+          },
+          {
+            "x": 50.93,
+            "y": 91.81
+          },
+          {
+            "x": 53.37,
+            "y": 90.46
+          },
+          {
+            "x": 55.81,
+            "y": 89.11
+          },
+          {
+            "x": 58.23,
+            "y": 87.76
+          },
+          {
+            "x": 60.66,
+            "y": 86.42
+          },
+          {
+            "x": 63.09,
+            "y": 85.06
+          },
+          {
+            "x": 65.51,
+            "y": 83.71
+          },
+          {
+            "x": 67.95,
+            "y": 82.35
+          },
+          {
+            "x": 70.38,
+            "y": 80.99
+          },
+          {
+            "x": 72.8,
+            "y": 79.65
+          },
+          {
+            "x": 75.14,
+            "y": 78.33
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "aredennes-domination-2-blue-route-16",
+        "type": "route",
+        "points": [
+          {
+            "x": 75.77,
+            "y": 38.23
+          },
+          {
+            "x": 75.83,
+            "y": 40.94
+          },
+          {
+            "x": 75.83,
+            "y": 43.72
+          },
+          {
+            "x": 75.75,
+            "y": 46.46
+          },
+          {
+            "x": 75.56,
+            "y": 49.28
+          },
+          {
+            "x": 75.25,
+            "y": 52.03
+          },
+          {
+            "x": 74.79,
+            "y": 54.74
+          },
+          {
+            "x": 74.01,
+            "y": 57.45
+          },
+          {
+            "x": 73.49,
+            "y": 58.72
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "aredennes-domination-2-blue-route-17",
+        "type": "route",
+        "points": [
+          {
+            "x": 55.14,
+            "y": 29.56
+          },
+          {
+            "x": 57.92,
+            "y": 29.72
+          },
+          {
+            "x": 60.68,
+            "y": 30.01
+          },
+          {
+            "x": 62.04,
+            "y": 30.18
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "aredennes-domination-2-blue-route-18",
+        "type": "route",
+        "points": [
+          {
+            "x": 34.05,
+            "y": 55.19
+          },
+          {
+            "x": 34.48,
+            "y": 52.47
+          },
+          {
+            "x": 34.29,
+            "y": 49.72
+          },
+          {
+            "x": 33.18,
+            "y": 47.17
+          },
+          {
+            "x": 31.89,
+            "y": 44.74
+          },
+          {
+            "x": 31.35,
+            "y": 42.02
+          },
+          {
+            "x": 31.16,
+            "y": 40.6
+          }
+        ],
+        "dangerRoute": true
+      }
+    ],
     "American Desert::domination-1|Blue": [],
     "Arctic Pier::domination-1|Blue": [],
     "Arctic Polar Base::domination-1|Blue": [],
-    "Attica::domination-1|Blue": [],
+    "Attica::domination-1|Blue": [
+      {
+        "id": "attica-blue-aim-01",
+        "type": "aimHere",
+        "parentTankId": "attica-blue-unit-07",
+        "startX": 35.07,
+        "startY": 31.53,
+        "endX": 27.42,
+        "endY": 53.46
+      },
+      {
+        "id": "attica-blue-aim-02",
+        "type": "aimHere",
+        "parentTankId": "attica-blue-unit-13",
+        "startX": 78.47,
+        "startY": 42.22,
+        "endX": 78.15,
+        "endY": 47.93
+      },
+      {
+        "id": "attica-blue-aim-03",
+        "type": "aimHere",
+        "parentTankId": "attica-blue-unit-18",
+        "startX": 54.93,
+        "startY": 50.07,
+        "endX": 46.61,
+        "endY": 48.81
+      },
+      {
+        "id": "attica-blue-aim-04",
+        "type": "aimHere",
+        "parentTankId": "attica-blue-unit-18",
+        "startX": 54.93,
+        "startY": 50.07,
+        "endX": 55.55,
+        "endY": 42.42
+      },
+      {
+        "id": "attica-blue-aim-05",
+        "type": "aimHere",
+        "parentTankId": "attica-blue-unit-15",
+        "startX": 73.61,
+        "startY": 45.35,
+        "endX": 83.24,
+        "endY": 53.88
+      },
+      {
+        "id": "attica-blue-aim-06",
+        "type": "aimHere",
+        "parentTankId": "attica-blue-unit-04",
+        "startX": 56.04,
+        "startY": 21.04,
+        "endX": 50.28,
+        "endY": 50.02
+      },
+      {
+        "id": "attica-blue-aim-07",
+        "type": "aimHere",
+        "parentTankId": "attica-blue-unit-16",
+        "startX": 15.62,
+        "startY": 45.56,
+        "endX": 20.17,
+        "endY": 52.65
+      },
+      {
+        "id": "attica-blue-aim-08",
+        "type": "aimHere",
+        "parentTankId": "attica-blue-unit-19",
+        "startX": 75.35,
+        "startY": 61.32,
+        "endX": 67.82,
+        "endY": 79.76
+      },
+      {
+        "id": "attica-blue-aim-09",
+        "type": "aimHere",
+        "parentTankId": "attica-blue-unit-16",
+        "startX": 15.62,
+        "startY": 45.56,
+        "endX": 16.6,
+        "endY": 33.61
+      },
+      {
+        "id": "attica-blue-aim-10",
+        "type": "aimHere",
+        "parentTankId": "attica-blue-unit-17",
+        "startX": 86.11,
+        "startY": 48.4,
+        "endX": 85.34,
+        "endY": 54.1
+      },
+      {
+        "id": "attica-blue-aim-11",
+        "type": "aimHere",
+        "parentTankId": "attica-blue-unit-05",
+        "startX": 58.4,
+        "startY": 21.32,
+        "endX": 60.74,
+        "endY": 30.65
+      },
+      {
+        "id": "attica-blue-aim-12",
+        "type": "aimHere",
+        "parentTankId": "attica-blue-unit-14",
+        "startX": 35.76,
+        "startY": 44.03,
+        "endX": 36.18,
+        "endY": 59.24
+      },
+      {
+        "id": "attica-blue-aim-13",
+        "type": "aimHere",
+        "parentTankId": "attica-blue-unit-09",
+        "startX": 24.03,
+        "startY": 33.4,
+        "endX": 24.06,
+        "endY": 46.53
+      },
+      {
+        "id": "attica-blue-route-01",
+        "type": "route",
+        "points": [
+          {
+            "x": 29.83,
+            "y": 10.57
+          },
+          {
+            "x": 30.81,
+            "y": 13.16
+          },
+          {
+            "x": 31.87,
+            "y": 15.72
+          },
+          {
+            "x": 33.54,
+            "y": 17.99
+          },
+          {
+            "x": 35.42,
+            "y": 19.98
+          },
+          {
+            "x": 37.31,
+            "y": 22.05
+          },
+          {
+            "x": 39.11,
+            "y": 24.2
+          },
+          {
+            "x": 40.72,
+            "y": 26.42
+          },
+          {
+            "x": 41.55,
+            "y": 27.53
+          }
+        ]
+      },
+      {
+        "id": "attica-blue-route-02",
+        "type": "route",
+        "points": [
+          {
+            "x": 68.78,
+            "y": 26.35
+          },
+          {
+            "x": 68.51,
+            "y": 23.61
+          },
+          {
+            "x": 68.26,
+            "y": 20.83
+          },
+          {
+            "x": 68.12,
+            "y": 18.06
+          },
+          {
+            "x": 68.3,
+            "y": 15.28
+          },
+          {
+            "x": 69.51,
+            "y": 12.81
+          },
+          {
+            "x": 71.44,
+            "y": 10.82
+          },
+          {
+            "x": 67.2,
+            "y": 16.24
+          },
+          {
+            "x": 64.73,
+            "y": 17.49
+          },
+          {
+            "x": 62.19,
+            "y": 18.58
+          },
+          {
+            "x": 59.53,
+            "y": 19.47
+          }
+        ]
+      },
+      {
+        "id": "attica-blue-route-03",
+        "type": "route",
+        "points": [
+          {
+            "x": 14.64,
+            "y": 31.04
+          },
+          {
+            "x": 13.61,
+            "y": 28.51
+          },
+          {
+            "x": 15.35,
+            "y": 26.49
+          },
+          {
+            "x": 17.53,
+            "y": 24.77
+          },
+          {
+            "x": 19.85,
+            "y": 22.11
+          },
+          {
+            "x": 19.65,
+            "y": 24.83
+          },
+          {
+            "x": 20.56,
+            "y": 27.46
+          },
+          {
+            "x": 22.09,
+            "y": 29.74
+          },
+          {
+            "x": 22.57,
+            "y": 32.09
+          },
+          {
+            "x": 19.9,
+            "y": 32.26
+          },
+          {
+            "x": 20.41,
+            "y": 20.78
+          },
+          {
+            "x": 21.73,
+            "y": 18.37
+          },
+          {
+            "x": 23.31,
+            "y": 16.07
+          },
+          {
+            "x": 25.02,
+            "y": 13.93
+          },
+          {
+            "x": 26.9,
+            "y": 11.86
+          },
+          {
+            "x": 27.88,
+            "y": 10.84
+          }
+        ]
+      },
+      {
+        "id": "attica-blue-route-04",
+        "type": "route",
+        "points": [
+          {
+            "x": 22.29,
+            "y": 35.62
+          },
+          {
+            "x": 20.53,
+            "y": 37.75
+          },
+          {
+            "x": 18.99,
+            "y": 40.11
+          },
+          {
+            "x": 17.5,
+            "y": 42.43
+          },
+          {
+            "x": 16.77,
+            "y": 43.58
+          }
+        ]
+      },
+      {
+        "id": "attica-blue-route-05",
+        "type": "route",
+        "points": [
+          {
+            "x": 42.53,
+            "y": 13.33
+          },
+          {
+            "x": 39.84,
+            "y": 12.52
+          },
+          {
+            "x": 37.19,
+            "y": 11.63
+          },
+          {
+            "x": 34.6,
+            "y": 10.72
+          },
+          {
+            "x": 31.96,
+            "y": 9.75
+          }
+        ]
+      },
+      {
+        "id": "attica-blue-route-06",
+        "type": "route",
+        "points": [
+          {
+            "x": 34.49,
+            "y": 29.49
+          },
+          {
+            "x": 34.41,
+            "y": 26.74
+          },
+          {
+            "x": 34.8,
+            "y": 23.99
+          },
+          {
+            "x": 35.52,
+            "y": 21.28
+          }
+        ]
+      },
+      {
+        "id": "attica-blue-route-07",
+        "type": "route",
+        "points": [
+          {
+            "x": 70.54,
+            "y": 34.74
+          },
+          {
+            "x": 72.08,
+            "y": 37.03
+          },
+          {
+            "x": 74.15,
+            "y": 38.47
+          }
+        ]
+      },
+      {
+        "id": "attica-blue-route-08",
+        "type": "route",
+        "points": [
+          {
+            "x": 79.4,
+            "y": 40.53
+          },
+          {
+            "x": 81.57,
+            "y": 42.28
+          },
+          {
+            "x": 83.38,
+            "y": 44.38
+          },
+          {
+            "x": 85.1,
+            "y": 46.57
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "attica-blue-route-09",
+        "type": "route",
+        "points": [
+          {
+            "x": 50.55,
+            "y": 33.91
+          },
+          {
+            "x": 52.81,
+            "y": 35.53
+          },
+          {
+            "x": 54.93,
+            "y": 37.3
+          },
+          {
+            "x": 56.56,
+            "y": 39.44
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "attica-blue-route-10",
+        "type": "route",
+        "points": [
+          {
+            "x": 67.15,
+            "y": 65.7
+          },
+          {
+            "x": 66.54,
+            "y": 62.97
+          },
+          {
+            "x": 65.94,
+            "y": 60.28
+          },
+          {
+            "x": 65.33,
+            "y": 57.56
+          },
+          {
+            "x": 65.02,
+            "y": 56.19
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "attica-blue-route-11",
+        "type": "route",
+        "points": [
+          {
+            "x": 49.14,
+            "y": 61.57
+          },
+          {
+            "x": 48.35,
+            "y": 63.99
+          },
+          {
+            "x": 47.08,
+            "y": 66.4
+          },
+          {
+            "x": 45.72,
+            "y": 69.06
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "attica-blue-route-12",
+        "type": "route",
+        "points": [
+          {
+            "x": 15.1,
+            "y": 32.88
+          },
+          {
+            "x": 13.57,
+            "y": 35.23
+          },
+          {
+            "x": 12.04,
+            "y": 37.59
+          },
+          {
+            "x": 10.53,
+            "y": 39.9
+          },
+          {
+            "x": 9.02,
+            "y": 42.26
+          },
+          {
+            "x": 7.54,
+            "y": 44.62
+          },
+          {
+            "x": 6.11,
+            "y": 46.99
+          },
+          {
+            "x": 4.85,
+            "y": 49.48
+          },
+          {
+            "x": 3.77,
+            "y": 52.05
+          },
+          {
+            "x": 3.09,
+            "y": 54.62
+          },
+          {
+            "x": 3.64,
+            "y": 57.33
+          },
+          {
+            "x": 4.24,
+            "y": 60.04
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "attica-blue-route-13",
+        "type": "route",
+        "points": [
+          {
+            "x": 49.89,
+            "y": 34.15
+          },
+          {
+            "x": 49.87,
+            "y": 36.57
+          },
+          {
+            "x": 47.61,
+            "y": 38.16
+          },
+          {
+            "x": 45.31,
+            "y": 39.78
+          },
+          {
+            "x": 43.01,
+            "y": 41.41
+          },
+          {
+            "x": 40.59,
+            "y": 42.67
+          },
+          {
+            "x": 37.91,
+            "y": 43.48
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "attica-blue-route-14",
+        "type": "route",
+        "points": [
+          {
+            "x": 56.2,
+            "y": 42.73
+          },
+          {
+            "x": 55.72,
+            "y": 45.35
+          },
+          {
+            "x": 55.63,
+            "y": 48.08
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "attica-blue-route-15",
+        "type": "route",
+        "points": [
+          {
+            "x": 53.0,
+            "y": 76.07
+          },
+          {
+            "x": 55.52,
+            "y": 76.16
+          },
+          {
+            "x": 58.13,
+            "y": 76.61
+          },
+          {
+            "x": 60.06,
+            "y": 78.34
+          },
+          {
+            "x": 60.62,
+            "y": 81.03
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "attica-blue-route-16",
+        "type": "route",
+        "points": [
+          {
+            "x": 16.25,
+            "y": 69.55
+          },
+          {
+            "x": 16.25,
+            "y": 72.33
+          },
+          {
+            "x": 16.91,
+            "y": 74.98
+          }
+        ],
+        "dangerRoute": true
+      }
+    ],
     "Battle of Hurtgen Forest::domination-1|Blue": [],
-    "Attica::domination-1|Red": [],
+    "Attica::domination-1|Red": [
+      {
+        "id": "attica-red-aim-01",
+        "type": "aimHere",
+        "parentTankId": "attica-red-unit-14",
+        "startX": 42.64,
+        "startY": 65.9,
+        "endX": 75.28,
+        "endY": 26.77
+      },
+      {
+        "id": "attica-red-aim-02",
+        "type": "aimHere",
+        "parentTankId": "attica-red-unit-17",
+        "startX": 34.58,
+        "startY": 70.07,
+        "endX": 29.92,
+        "endY": 51.67
+      },
+      {
+        "id": "attica-red-aim-03",
+        "type": "aimHere",
+        "parentTankId": "attica-red-unit-13",
+        "startX": 47.15,
+        "startY": 62.92,
+        "endX": 43.77,
+        "endY": 71.84
+      },
+      {
+        "id": "attica-red-aim-04",
+        "type": "aimHere",
+        "parentTankId": "attica-red-unit-09",
+        "startX": 14.51,
+        "startY": 54.31,
+        "endX": 15.64,
+        "endY": 67.71
+      },
+      {
+        "id": "attica-red-aim-05",
+        "type": "aimHere",
+        "parentTankId": "attica-red-unit-15",
+        "startX": 24.93,
+        "startY": 67.71,
+        "endX": 26.94,
+        "endY": 53.02
+      },
+      {
+        "id": "attica-red-aim-06",
+        "type": "aimHere",
+        "parentTankId": "attica-red-unit-16",
+        "startX": 15.69,
+        "startY": 69.31,
+        "endX": 22.17,
+        "endY": 51.71
+      },
+      {
+        "id": "attica-red-aim-07",
+        "type": "aimHere",
+        "parentTankId": "attica-red-unit-08",
+        "startX": 69.1,
+        "startY": 50.97,
+        "endX": 75.03,
+        "endY": 56.92
+      },
+      {
+        "id": "attica-red-aim-08",
+        "type": "aimHere",
+        "parentTankId": "attica-red-unit-04",
+        "startX": 44.38,
+        "startY": 30.56,
+        "endX": 50.29,
+        "endY": 35.3
+      },
+      {
+        "id": "attica-red-aim-09",
+        "type": "aimHere",
+        "parentTankId": "attica-red-unit-19",
+        "startX": 43.19,
+        "startY": 73.33,
+        "endX": 46.3,
+        "endY": 64.26
+      },
+      {
+        "id": "attica-red-aim-10",
+        "type": "aimHere",
+        "parentTankId": "attica-red-unit-07",
+        "startX": 86.11,
+        "startY": 50.76,
+        "endX": 85.06,
+        "endY": 46.32
+      },
+      {
+        "id": "attica-red-route-01",
+        "type": "route",
+        "points": [
+          {
+            "x": 71.52,
+            "y": 90.94
+          },
+          {
+            "x": 70.21,
+            "y": 88.49
+          },
+          {
+            "x": 68.96,
+            "y": 85.99
+          },
+          {
+            "x": 67.77,
+            "y": 83.51
+          },
+          {
+            "x": 66.69,
+            "y": 80.96
+          },
+          {
+            "x": 66.81,
+            "y": 78.27
+          },
+          {
+            "x": 68.24,
+            "y": 75.89
+          },
+          {
+            "x": 69.76,
+            "y": 73.57
+          },
+          {
+            "x": 71.12,
+            "y": 71.16
+          },
+          {
+            "x": 72.44,
+            "y": 68.67
+          },
+          {
+            "x": 73.58,
+            "y": 66.15
+          },
+          {
+            "x": 73.68,
+            "y": 63.37
+          },
+          {
+            "x": 74.33,
+            "y": 60.71
+          },
+          {
+            "x": 75.15,
+            "y": 59.7
+          }
+        ]
+      },
+      {
+        "id": "attica-red-route-02",
+        "type": "route",
+        "points": [
+          {
+            "x": 39.55,
+            "y": 74.89
+          },
+          {
+            "x": 38.16,
+            "y": 77.33
+          },
+          {
+            "x": 36.26,
+            "y": 79.37
+          },
+          {
+            "x": 34.21,
+            "y": 81.17
+          },
+          {
+            "x": 31.8,
+            "y": 82.58
+          },
+          {
+            "x": 29.42,
+            "y": 84.06
+          },
+          {
+            "x": 27.95,
+            "y": 86.35
+          },
+          {
+            "x": 27.2,
+            "y": 89.0
+          }
+        ]
+      },
+      {
+        "id": "attica-red-route-03",
+        "type": "route",
+        "points": [
+          {
+            "x": 51.46,
+            "y": 61.63
+          },
+          {
+            "x": 49.58,
+            "y": 63.68
+          },
+          {
+            "x": 47.64,
+            "y": 65.69
+          },
+          {
+            "x": 46.74,
+            "y": 66.67
+          }
+        ]
+      },
+      {
+        "id": "attica-red-route-04",
+        "type": "route",
+        "points": [
+          {
+            "x": 67.87,
+            "y": 85.76
+          },
+          {
+            "x": 65.31,
+            "y": 84.72
+          },
+          {
+            "x": 62.69,
+            "y": 83.95
+          },
+          {
+            "x": 60.9,
+            "y": 81.89
+          },
+          {
+            "x": 60.49,
+            "y": 79.13
+          },
+          {
+            "x": 59.11,
+            "y": 76.84
+          },
+          {
+            "x": 56.67,
+            "y": 75.69
+          },
+          {
+            "x": 53.92,
+            "y": 76.17
+          },
+          {
+            "x": 52.96,
+            "y": 75.48
+          }
+        ]
+      },
+      {
+        "id": "attica-red-route-05",
+        "type": "route",
+        "points": [
+          {
+            "x": 76.18,
+            "y": 55.59
+          },
+          {
+            "x": 75.8,
+            "y": 52.85
+          },
+          {
+            "x": 75.44,
+            "y": 50.12
+          },
+          {
+            "x": 75.24,
+            "y": 48.74
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "attica-red-route-06",
+        "type": "route",
+        "points": [
+          {
+            "x": 14.66,
+            "y": 67.69
+          },
+          {
+            "x": 13.15,
+            "y": 65.4
+          },
+          {
+            "x": 11.64,
+            "y": 63.09
+          },
+          {
+            "x": 10.1,
+            "y": 60.73
+          },
+          {
+            "x": 8.63,
+            "y": 58.39
+          },
+          {
+            "x": 7.17,
+            "y": 56.01
+          },
+          {
+            "x": 5.78,
+            "y": 53.57
+          },
+          {
+            "x": 4.95,
+            "y": 50.98
+          },
+          {
+            "x": 4.68,
+            "y": 48.23
+          },
+          {
+            "x": 4.4,
+            "y": 45.45
+          },
+          {
+            "x": 4.19,
+            "y": 42.68
+          },
+          {
+            "x": 4.1,
+            "y": 41.35
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "attica-red-route-07",
+        "type": "route",
+        "points": [
+          {
+            "x": 35.28,
+            "y": 34.12
+          },
+          {
+            "x": 34.72,
+            "y": 31.39
+          },
+          {
+            "x": 34.85,
+            "y": 28.97
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "attica-red-route-08",
+        "type": "route",
+        "points": [
+          {
+            "x": 75.18,
+            "y": 56.24
+          },
+          {
+            "x": 73.09,
+            "y": 54.37
+          },
+          {
+            "x": 71.03,
+            "y": 52.54
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "attica-red-route-09",
+        "type": "route",
+        "points": [
+          {
+            "x": 46.53,
+            "y": 31.8
+          },
+          {
+            "x": 48.77,
+            "y": 33.3
+          },
+          {
+            "x": 50.26,
+            "y": 35.48
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "attica-red-route-10",
+        "type": "route",
+        "points": [
+          {
+            "x": 75.42,
+            "y": 42.89
+          },
+          {
+            "x": 74.76,
+            "y": 40.17
+          },
+          {
+            "x": 73.19,
+            "y": 37.95
+          },
+          {
+            "x": 72.28,
+            "y": 36.88
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "attica-red-route-11",
+        "type": "route",
+        "points": [
+          {
+            "x": 21.58,
+            "y": 27.19
+          },
+          {
+            "x": 22.45,
+            "y": 29.81
+          },
+          {
+            "x": 23.36,
+            "y": 32.49
+          },
+          {
+            "x": 24.2,
+            "y": 35.09
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "attica-red-route-12",
+        "type": "route",
+        "points": [
+          {
+            "x": 85.24,
+            "y": 52.35
+          },
+          {
+            "x": 83.37,
+            "y": 54.16
+          },
+          {
+            "x": 81.32,
+            "y": 56.04
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "attica-red-route-13",
+        "type": "route",
+        "points": [
+          {
+            "x": 34.9,
+            "y": 55.0
+          },
+          {
+            "x": 38.36,
+            "y": 55.86
+          },
+          {
+            "x": 40.76,
+            "y": 57.22
+          },
+          {
+            "x": 42.54,
+            "y": 59.34
+          },
+          {
+            "x": 44.14,
+            "y": 61.64
+          },
+          {
+            "x": 45.64,
+            "y": 63.73
+          }
+        ],
+        "dangerRoute": true
+      }
+    ],
     "Seversk-13::domination-1|Red": [],
     "Surrounding of Volokolamsk::domination-1|Red": [],
     "Sweden::domination-1|Blue": [],
@@ -5041,7 +9504,10 @@
           }
         ]
       }
-    ]
+    ],
+    "Aredennes::domination-1|Blue": [],
+    "Sun City::domination-1|Blue": [],
+    "Sun City::domination-1|Red": []
   },
   "updatedAt": "2026-08-25T08:26:00.552Z",
   "exportedAt": "2026-08-25T08:26:16.402Z"
