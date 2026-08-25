@@ -183,7 +183,7 @@ if (tierRoot) {
       filterCount: (shown, total) => `표시 ${shown} · 전체 ${total}`,
       mapDocumentTitle: "WarDevOps | 워썬더 전술 지도",
       tierDocumentTitle: "WarDevOps | 워썬더 티어 리스트",
-      mapDescription: "워썬더 지도, 진영별 위치, 전술 범례, 이동 경로와 주요 교전 지역을 WarDevOps MapTactic에서 살펴보세요.",
+      mapDescription: "워썬더 전술 지도, 진영별 중요 위치, 이동 경로와 주요 교전 지역을 WarDevOps MapTactic에서 살펴보세요.",
       tierDescription: "WarDevOps MapTactic에서 워썬더 지상 장비, 항공기와 헬리콥터 티어 리스트를 만들고 저장하세요."
     }
   });

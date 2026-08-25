@@ -195,7 +195,6 @@ import { initDiscordMemberCount } from './discord-stats.js';
     function updateSelectedMapDetails() {
       if (!state.selected) return;
       $("#selected-map-name").textContent = mapLabel(state.selected);
-      $("#selected-map-description").textContent = `${mapVariationLabel(state.selected)} · ${state.team.toUpperCase()} ${t("teamTacticalMap")}`;
       mapImage.alt = `${mapLabel(state.selected)} ${mapVariationLabel(state.selected)} ${state.team}`;
       renderMapVariationSelect();
     }
