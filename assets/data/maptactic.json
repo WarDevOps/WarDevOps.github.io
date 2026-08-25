@@ -382,7 +382,86 @@
     ],
     "38 Parallel::domination-1|Red": [],
     "Aredennes::domination-1|Red": [],
-    "Abandoned Town::domination-1|Red": [],
+    "Abandoned Town::domination-1|Blue": [
+      {
+        "id": "mt8bdrf1-wrmyww",
+        "type": "mainBattleTank",
+        "x": 33.95,
+        "y": 82.18
+      },
+      {
+        "id": "mt8be5xa-ubg1l7",
+        "type": "mainBattleTank",
+        "x": 55.05,
+        "y": 83.07
+      },
+      {
+        "id": "mt8be8to-mu2dfz",
+        "type": "mainBattleTank",
+        "x": 65.96,
+        "y": 34.57
+      },
+      {
+        "id": "mt8beb0o-td9awi",
+        "type": "mainBattleTank",
+        "x": 57.54,
+        "y": 45.12
+      },
+      {
+        "id": "mt8bf536-iigidz",
+        "type": "mainBattleTank",
+        "x": 63.48,
+        "y": 24.37
+      },
+      {
+        "id": "mt8bfz07-aymmo2",
+        "type": "battleLine",
+        "x": 63.48,
+        "y": 24.37,
+        "parentTankId": "mt8bf536-iigidz"
+      },
+      {
+        "id": "mt8bg0gu-pfqb1l",
+        "type": "battleLine",
+        "x": 65.96,
+        "y": 34.57,
+        "parentTankId": "mt8be8to-mu2dfz"
+      },
+      {
+        "id": "mt8bg2b9-jgbe3t",
+        "type": "sniper",
+        "x": 57.54,
+        "y": 45.12,
+        "parentTankId": "mt8beb0o-td9awi"
+      },
+      {
+        "id": "mt8bg49b-k5210d",
+        "type": "sniper",
+        "x": 55.05,
+        "y": 83.07,
+        "parentTankId": "mt8be5xa-ubg1l7"
+      },
+      {
+        "id": "mt8bg5ap-z6217h",
+        "type": "battleLine",
+        "x": 33.95,
+        "y": 82.18,
+        "parentTankId": "mt8bdrf1-wrmyww"
+      },
+      {
+        "id": "mt8bmx6g-l8yzvf",
+        "type": "mainBattleTank",
+        "x": 39.8,
+        "y": 60.19
+      },
+      {
+        "id": "mt8bn63v-g8iiio",
+        "type": "battleLine",
+        "x": 39.8,
+        "y": 60.19,
+        "parentTankId": "mt8bmx6g-l8yzvf"
+      }
+    ],
     "Advance to the Rhine::domination-1|Red": [],
     "Alaska::domination-1|Red": [
       {
@@ -769,6 +848,12 @@
         "x": 65.25,
         "y": 87.76,
         "parentTankId": "mt4mpo64-gz261j"
+      },
+      {
+        "id": "mt8b4p7v-goalvc",
+        "type": "smokeshell",
+        "x": 14.98,
+        "y": 23.31
       }
     ],
     "Aredennes::domination-2|Red": [],
@@ -829,6 +914,102 @@
         "x": 64.01,
         "y": 89.27,
         "parentTankId": "mt703qyf-9ujapw"
+      }
+    ],
+    "Attica::domination-1|Red": [
+      {
+        "id": "mt8b482t-lvsove",
+        "type": "smokeshell",
+        "x": 77.93,
+        "y": 59.13
+      }
+    ],
+    "Seversk-13::domination-1|Red": [],
+    "Surrounding of Volokolamsk::domination-1|Red": [],
+    "Sweden::domination-1|Blue": [],
+    "Abandoned Town::domination-1|Red": [
+      {
+        "id": "mt8blqvk-uwzzmk",
+        "type": "mainBattleTankRed",
+        "x": 44.86,
+        "y": 31.82
+      },
+      {
+        "id": "mt8blwwt-3706it",
+        "type": "battleLine",
+        "x": 44.86,
+        "y": 31.82,
+        "parentTankId": "mt8blqvk-uwzzmk"
+      },
+      {
+        "id": "mt8bm5uq-ig9cu3",
+        "type": "mainBattleTankRed",
+        "x": 54.26,
+        "y": 20.47
+      },
+      {
+        "id": "mt8bmbfo-8gmvmo",
+        "type": "smokeshell",
+        "x": 49.82,
+        "y": 21.45
+      },
+      {
+        "id": "mt8bmha3-ypgwh5",
+        "type": "highRiskSpot",
+        "x": 54.26,
+        "y": 20.47,
+        "parentTankId": "mt8bm5uq-ig9cu3"
+      },
+      {
+        "id": "mt8bmod8-0hd6yi",
+        "type": "mainBattleTankRed",
+        "x": 30.05,
+        "y": 43.26
+      },
+      {
+        "id": "mt8bn9cq-fi6cd4",
+        "type": "mainBattleTankRed",
+        "x": 35.9,
+        "y": 57.8
+      },
+      {
+        "id": "mt8bnaox-j44a2v",
+        "type": "battleLine",
+        "x": 35.9,
+        "y": 57.8,
+        "parentTankId": "mt8bn9cq-fi6cd4"
+      },
+      {
+        "id": "mt8bncuo-sdjqle",
+        "type": "mainBattleTankRed",
+        "x": 26.51,
+        "y": 69.77
+      },
+      {
+        "id": "mt8bnobc-kgrwac",
+        "type": "smokeshell",
+        "x": 13.56,
+        "y": 53.01
+      },
+      {
+        "id": "mt8bns5i-opevnv",
+        "type": "smokeshell",
+        "x": 21.19,
+        "y": 61.43
+      },
+      {
+        "id": "mt8bnul7-06yvjj",
+        "type": "highRiskSpot",
+        "x": 26.51,
+        "y": 69.77,
+        "parentTankId": "mt8bncuo-sdjqle"
+      },
+      {
+        "id": "mt8bnypp-ekjaa6",
+        "type": "sniper",
+        "x": 30.05,
+        "y": 43.26,
+        "parentTankId": "mt8bmod8-0hd6yi"
       }
     ]
   },
@@ -1753,7 +1934,62 @@
     ],
     "38 Parallel::domination-1|Red": [],
     "Aredennes::domination-1|Red": [],
-    "Abandoned Town::domination-1|Red": [],
+    "Abandoned Town::domination-1|Blue": [
+      {
+        "id": "mt8bga0r-skr6al",
+        "type": "aimHere",
+        "parentTankId": "mt8be5xa-ubg1l7",
+        "startX": 55.05,
+        "startY": 83.07,
+        "endX": 7.18,
+        "endY": 46.98
+      },
+      {
+        "id": "mt8bi4tv-lz1gym",
+        "type": "aimHere",
+        "parentTankId": "mt8be5xa-ubg1l7",
+        "startX": 55.05,
+        "startY": 83.07,
+        "endX": 33.42,
+        "endY": 60.72
+      },
+      {
+        "id": "mt8bl0bl-nnt9fm",
+        "type": "aimHere",
+        "parentTankId": "mt8beb0o-td9awi",
+        "startX": 57.54,
+        "startY": 45.12,
+        "endX": 48.49,
+        "endY": 18.52
+      },
+      {
+        "id": "mt8bl7j5-f6x2b9",
+        "type": "aimHere",
+        "parentTankId": "mt8bdrf1-wrmyww",
+        "startX": 33.95,
+        "startY": 82.18,
+        "endX": 7.71,
+        "endY": 44.94
+      },
+      {
+        "id": "mt8blhzf-cgqzvn",
+        "type": "aimHere",
+        "parentTankId": "mt8bf536-iigidz",
+        "startX": 63.48,
+        "startY": 24.37,
+        "endX": 51.15,
+        "endY": 19.76
+      },
+      {
+        "id": "mt8blmyl-l4chnw",
+        "type": "aimHere",
+        "parentTankId": "mt8be8to-mu2dfz",
+        "startX": 65.96,
+        "startY": 34.57,
+        "endX": 44.24,
+        "endY": 37.76
+      }
+    ],
     "Advance to the Rhine::domination-1|Red": [],
     "Alaska::domination-1|Red": [
       {
@@ -2551,8 +2787,50 @@
     "Arctic Pier::domination-1|Blue": [],
     "Arctic Polar Base::domination-1|Blue": [],
     "Attica::domination-1|Blue": [],
-    "Battle of Hurtgen Forest::domination-1|Blue": []
+    "Battle of Hurtgen Forest::domination-1|Blue": [],
+    "Attica::domination-1|Red": [],
+    "Seversk-13::domination-1|Red": [],
+    "Surrounding of Volokolamsk::domination-1|Red": [],
+    "Sweden::domination-1|Blue": [],
+    "Abandoned Town::domination-1|Red": [
+      {
+        "id": "mt8bm247-ju38ka",
+        "type": "aimHere",
+        "parentTankId": "mt8blqvk-uwzzmk",
+        "startX": 44.86,
+        "startY": 31.82,
+        "endX": 53.64,
+        "endY": 56.64
+      },
+      {
+        "id": "mt8bmfvb-vqtgvj",
+        "type": "aimHere",
+        "parentTankId": "mt8bm5uq-ig9cu3",
+        "startX": 54.26,
+        "startY": 20.47,
+        "endX": 63.48,
+        "endY": 24.99
+      },
+      {
+        "id": "mt8bob7p-zs1912",
+        "type": "aimHere",
+        "parentTankId": "mt8bmod8-0hd6yi",
+        "startX": 30.05,
+        "startY": 43.26,
+        "endX": 60.64,
+        "endY": 56.11
+      },
+      {
+        "id": "mt8bomqz-sytva8",
+        "type": "aimHere",
+        "parentTankId": "mt8bncuo-sdjqle",
+        "startX": 26.51,
+        "startY": 69.77,
+        "endX": 37.85,
+        "endY": 77.57
+      }
+    ]
   },
-  "updatedAt": "2026-08-24T08:55:41.931Z",
-  "exportedAt": "2026-08-25T06:42:25.762Z"
+  "updatedAt": "2026-08-25T07:07:32.267Z",
+  "exportedAt": "2026-08-25T07:15:59.063Z"
 }
