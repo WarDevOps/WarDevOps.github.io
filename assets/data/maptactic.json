@@ -380,7 +380,273 @@
         "parentTankId": "msz8q0k3-645ydu"
       }
     ],
-    "38 Parallel::domination-1|Red": [],
+    "38 Parallel::domination-1|Red": [
+      {
+        "id": "38p-red-mbt-01",
+        "type": "mainBattleTankRed",
+        "x": 46.32,
+        "y": 24.03
+      },
+      {
+        "id": "38p-red-role-01",
+        "type": "sniper",
+        "x": 46.32,
+        "y": 24.03,
+        "parentTankId": "38p-red-mbt-01"
+      },
+      {
+        "id": "38p-red-mbt-02",
+        "type": "mainBattleTankRed",
+        "x": 53.96,
+        "y": 23.06
+      },
+      {
+        "id": "38p-red-role-02",
+        "type": "sniper",
+        "x": 53.96,
+        "y": 23.06,
+        "parentTankId": "38p-red-mbt-02"
+      },
+      {
+        "id": "38p-red-mbt-03",
+        "type": "mainBattleTankRed",
+        "x": 66.6,
+        "y": 27.64
+      },
+      {
+        "id": "38p-red-role-03",
+        "type": "sniper",
+        "x": 66.6,
+        "y": 27.64,
+        "parentTankId": "38p-red-mbt-03"
+      },
+      {
+        "id": "38p-red-mbt-04",
+        "type": "mainBattleTankRed",
+        "x": 80.07,
+        "y": 35.63
+      },
+      {
+        "id": "38p-red-role-04",
+        "type": "sniper",
+        "x": 80.07,
+        "y": 35.63,
+        "parentTankId": "38p-red-mbt-04"
+      },
+      {
+        "id": "38p-red-mbt-05",
+        "type": "mainBattleTankRed",
+        "x": 15.14,
+        "y": 37.92
+      },
+      {
+        "id": "38p-red-role-05",
+        "type": "sniper",
+        "x": 15.14,
+        "y": 37.92,
+        "parentTankId": "38p-red-mbt-05"
+      },
+      {
+        "id": "38p-red-mbt-06",
+        "type": "mainBattleTankRed",
+        "x": 48.54,
+        "y": 38.68
+      },
+      {
+        "id": "38p-red-role-06",
+        "type": "battleLine",
+        "x": 48.54,
+        "y": 38.68,
+        "parentTankId": "38p-red-mbt-06"
+      },
+      {
+        "id": "38p-red-mbt-07",
+        "type": "mainBattleTankRed",
+        "x": 87.29,
+        "y": 45.14
+      },
+      {
+        "id": "38p-red-role-07",
+        "type": "battleLine",
+        "x": 87.29,
+        "y": 45.14,
+        "parentTankId": "38p-red-mbt-07"
+      },
+      {
+        "id": "38p-red-mbt-08",
+        "type": "mainBattleTankRed",
+        "x": 37.85,
+        "y": 45.42
+      },
+      {
+        "id": "38p-red-role-08",
+        "type": "battleLine",
+        "x": 37.85,
+        "y": 45.42,
+        "parentTankId": "38p-red-mbt-08"
+      },
+      {
+        "id": "38p-red-mbt-09",
+        "type": "mainBattleTankRed",
+        "x": 56.25,
+        "y": 45.63
+      },
+      {
+        "id": "38p-red-role-09",
+        "type": "battleLine",
+        "x": 56.25,
+        "y": 45.63,
+        "parentTankId": "38p-red-mbt-09"
+      },
+      {
+        "id": "38p-red-mbt-10",
+        "type": "mainBattleTankRed",
+        "x": 51.67,
+        "y": 46.67
+      },
+      {
+        "id": "38p-red-role-10",
+        "type": "battleLine",
+        "x": 51.67,
+        "y": 46.67,
+        "parentTankId": "38p-red-mbt-10"
+      },
+      {
+        "id": "38p-red-lt-01",
+        "type": "lightTankRed",
+        "x": 78.33,
+        "y": 46.32
+      },
+      {
+        "id": "38p-red-role-11",
+        "type": "battleLine",
+        "x": 78.33,
+        "y": 46.32,
+        "parentTankId": "38p-red-lt-01"
+      },
+      {
+        "id": "38p-red-mbt-11",
+        "type": "mainBattleTankRed",
+        "x": 21.6,
+        "y": 47.43
+      },
+      {
+        "id": "38p-red-role-12",
+        "type": "sniper",
+        "x": 21.6,
+        "y": 47.43,
+        "parentTankId": "38p-red-mbt-11"
+      },
+      {
+        "id": "38p-red-mbt-12",
+        "type": "mainBattleTankRed",
+        "x": 27.36,
+        "y": 48.47
+      },
+      {
+        "id": "38p-red-role-13",
+        "type": "battleLine",
+        "x": 27.36,
+        "y": 48.47,
+        "parentTankId": "38p-red-mbt-12"
+      },
+      {
+        "id": "38p-red-mbt-13",
+        "type": "mainBattleTankRed",
+        "x": 52.85,
+        "y": 54.65
+      },
+      {
+        "id": "38p-red-role-14",
+        "type": "highRiskSpot",
+        "x": 52.85,
+        "y": 54.65,
+        "parentTankId": "38p-red-mbt-13"
+      },
+      {
+        "id": "38p-red-mbt-14",
+        "type": "mainBattleTankRed",
+        "x": 66.53,
+        "y": 56.04
+      },
+      {
+        "id": "38p-red-role-15",
+        "type": "highRiskSpot",
+        "x": 66.53,
+        "y": 56.04,
+        "parentTankId": "38p-red-mbt-14"
+      },
+      {
+        "id": "38p-red-mbt-15",
+        "type": "mainBattleTankRed",
+        "x": 53.89,
+        "y": 57.85
+      },
+      {
+        "id": "38p-red-role-16",
+        "type": "highRiskSpot",
+        "x": 53.89,
+        "y": 57.85,
+        "parentTankId": "38p-red-mbt-15"
+      },
+      {
+        "id": "38p-red-mbt-16",
+        "type": "mainBattleTankRed",
+        "x": 18.68,
+        "y": 74.38
+      },
+      {
+        "id": "38p-red-role-17",
+        "type": "highRiskSpot",
+        "x": 18.68,
+        "y": 74.38,
+        "parentTankId": "38p-red-mbt-16"
+      },
+      {
+        "id": "38p-red-mbt-17",
+        "type": "mainBattleTankRed",
+        "x": 78.47,
+        "y": 77.08
+      },
+      {
+        "id": "38p-red-role-18",
+        "type": "spawnKill",
+        "x": 78.47,
+        "y": 77.08,
+        "parentTankId": "38p-red-mbt-17"
+      },
+      {
+        "id": "38p-red-mbt-18",
+        "type": "mainBattleTankRed",
+        "x": 48.26,
+        "y": 81.81
+      },
+      {
+        "id": "38p-red-role-19",
+        "type": "spawnKill",
+        "x": 48.26,
+        "y": 81.81,
+        "parentTankId": "38p-red-mbt-18"
+      },
+      {
+        "id": "38p-red-aa-01",
+        "type": "antiAirRed",
+        "x": 41.81,
+        "y": 9.1
+      },
+      {
+        "id": "38p-red-aa-02",
+        "type": "antiAirRed",
+        "x": 58.68,
+        "y": 2.64
+      },
+      {
+        "id": "38p-red-aa-03",
+        "type": "antiAirRed",
+        "x": 60.76,
+        "y": 3.47
+      }
+    ],
     "Aredennes::domination-1|Red": [],
     "Abandoned Town::domination-1|Blue": [
       {
