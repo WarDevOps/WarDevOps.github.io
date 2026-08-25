@@ -61,51 +61,68 @@ function findTeamFile(fileNames, team, requireExact) {
   return candidates.length === 1 ? candidates[0] : null;
 }
 
-async function discoverTeamImages(relativeFolder, { requireExact = false, failOnPartial = false } = {}) {
+async function discoverMapImages(relativeFolder, { requireExact = false, failOnPartial = false } = {}) {
   const absoluteFolder = safeImageFolder(relativeFolder);
   const entries = await directoryEntries(absoluteFolder);
   const fileNames = entries.filter(entry => entry.isFile()).map(entry => entry.name);
+  const folderBaseName = path.posix.basename(toPosix(relativeFolder));
+  const sharedName = `${folderBaseName}.png`.toLowerCase();
+  const sharedImage = fileNames.find(fileName => fileName.toLowerCase() === sharedName);
+  if (sharedImage) return { sharedImage };
+
   const red = findTeamFile(fileNames, "Red", requireExact);
   const blue = findTeamFile(fileNames, "Blue", requireExact);
   if (failOnPartial && Boolean(red) !== Boolean(blue)) {
     throw new Error(`Both Red and Blue PNG files are required: ${relativeFolder}`);
   }
   if (!red || !blue) return null;
-  return { Red: red, Blue: blue };
+  return { teamImages: { Red: red, Blue: blue } };
 }
 
 async function configuredVariation(definition) {
   const mode = String(definition.mode || "domination").toLowerCase();
   const number = Number(definition.number || 1);
   const folder = toPosix(definition.folder);
-  const teamImages = definition.teamImages || await discoverTeamImages(folder);
+  const imageConfig = definition.sharedImage
+    ? { sharedImage: definition.sharedImage }
+    : definition.teamImages
+      ? { teamImages: definition.teamImages }
+      : await discoverMapImages(folder);
   if (!Object.hasOwn(MODE_ORDER, mode) || !Number.isInteger(number) || number < 1) {
     throw new Error(`Invalid variation metadata for ${folder}`);
   }
-  if (!teamImages?.Red || !teamImages?.Blue) {
-    throw new Error(`Red/Blue images are missing for configured variation: ${folder}`);
+  if (!imageConfig?.sharedImage && (!imageConfig?.teamImages?.Red || !imageConfig?.teamImages?.Blue)) {
+    throw new Error(`A shared image or Red/Blue images are required for configured variation: ${folder}`);
   }
 
   const absoluteFolder = safeImageFolder(folder);
-  for (const team of ["Red", "Blue"]) {
-    if (!await fileExists(path.join(absoluteFolder, teamImages[team]))) {
-      throw new Error(`${team} image is missing for configured variation: ${folder}/${teamImages[team]}`);
+  if (imageConfig.sharedImage) {
+    if (!await fileExists(path.join(absoluteFolder, imageConfig.sharedImage))) {
+      throw new Error(`Shared image is missing for configured variation: ${folder}/${imageConfig.sharedImage}`);
+    }
+  } else {
+    for (const team of ["Red", "Blue"]) {
+      if (!await fileExists(path.join(absoluteFolder, imageConfig.teamImages[team]))) {
+        throw new Error(`${team} image is missing for configured variation: ${folder}/${imageConfig.teamImages[team]}`);
+      }
     }
   }
-  return { mode, number, folder, teamImages };
+  return { mode, number, folder, ...imageConfig };
 }
 
 function compactVariation(variation, rootFolder) {
   const result = { mode: variation.mode, number: variation.number };
   if (variation.folder !== rootFolder) result.folder = variation.folder;
-  if (variation.teamImages.Red !== "Red.png" || variation.teamImages.Blue !== "Blue.png") {
+  if (variation.sharedImage) {
+    result.sharedImage = variation.sharedImage;
+  } else if (variation.teamImages.Red !== "Red.png" || variation.teamImages.Blue !== "Blue.png") {
     result.teamImages = variation.teamImages;
   }
   return result;
 }
 
 async function discoverMap(folderName, metadata) {
-  const rootImages = await discoverTeamImages(folderName, { requireExact: true, failOnPartial: true });
+  const rootImages = await discoverMapImages(folderName, { requireExact: true, failOnPartial: true });
   if (!rootImages) return null;
 
   const mapMetadata = metadata.maps?.[folderName] || {};
@@ -117,7 +134,7 @@ async function discoverMap(folderName, metadata) {
     throw new Error(`Invalid default mode for ${folderName}: ${defaultMode}`);
   }
 
-  const variations = [{ mode: defaultMode, number: 1, folder: folderName, teamImages: rootImages }];
+  const variations = [{ mode: defaultMode, number: 1, folder: folderName, ...rootImages }];
   const rootEntries = await directoryEntries(path.join(IMG_ROOT, folderName));
   for (const entry of rootEntries.filter(item => item.isDirectory())) {
     const match = entry.name.match(VARIATION_FOLDER_PATTERN);
@@ -125,9 +142,9 @@ async function discoverMap(folderName, metadata) {
     const mode = match[1].toLowerCase();
     const number = Number(match[2]);
     const variationFolder = toPosix(path.join(folderName, entry.name));
-    const teamImages = await discoverTeamImages(variationFolder, { failOnPartial: true });
-    if (!teamImages) continue;
-    variations.push({ mode, number, folder: variationFolder, teamImages });
+    const imageConfig = await discoverMapImages(variationFolder, { failOnPartial: true });
+    if (!imageConfig) continue;
+    variations.push({ mode, number, folder: variationFolder, ...imageConfig });
   }
 
   for (const definition of mapMetadata.extraVariations || []) {
@@ -203,7 +220,7 @@ async function generate() {
     console.warn(`Korean name fallback: ${unknownTranslations.map(map => map.name).join(", ")}`);
   }
   if (unusedMetadata.length) {
-    console.warn(`Metadata without a complete Red/Blue map folder: ${unusedMetadata.join(", ")}`);
+    console.warn(`Metadata without a usable shared or Red/Blue map image: ${unusedMetadata.join(", ")}`);
   }
 }
 

@@ -8,7 +8,8 @@
       "variations": [
         {
           "mode": "domination",
-          "number": 1
+          "number": 1,
+          "sharedImage": "38 Parallel.png"
         }
       ]
     },
@@ -19,7 +20,8 @@
       "variations": [
         {
           "mode": "domination",
-          "number": 1
+          "number": 1,
+          "sharedImage": "Abandoned Town.png"
         }
       ]
     },
@@ -30,7 +32,8 @@
       "variations": [
         {
           "mode": "domination",
-          "number": 1
+          "number": 1,
+          "sharedImage": "Advance to the Rhine.png"
         }
       ]
     },
@@ -41,7 +44,8 @@
       "variations": [
         {
           "mode": "domination",
-          "number": 1
+          "number": 1,
+          "sharedImage": "Alaska.png"
         }
       ]
     },
@@ -52,7 +56,8 @@
       "variations": [
         {
           "mode": "domination",
-          "number": 1
+          "number": 1,
+          "sharedImage": "American Desert.png"
         }
       ]
     },
@@ -63,7 +68,8 @@
       "variations": [
         {
           "mode": "domination",
-          "number": 1
+          "number": 1,
+          "sharedImage": "Arctic Pier.png"
         }
       ]
     },
@@ -74,7 +80,8 @@
       "variations": [
         {
           "mode": "domination",
-          "number": 1
+          "number": 1,
+          "sharedImage": "Arctic Polar Base.png"
         }
       ]
     },
@@ -85,7 +92,8 @@
       "variations": [
         {
           "mode": "domination",
-          "number": 1
+          "number": 1,
+          "sharedImage": "Aredennes.png"
         },
         {
           "mode": "domination",
@@ -101,7 +109,8 @@
       "variations": [
         {
           "mode": "domination",
-          "number": 1
+          "number": 1,
+          "sharedImage": "Attica.png"
         }
       ]
     },
@@ -123,7 +132,8 @@
       "variations": [
         {
           "mode": "domination",
-          "number": 1
+          "number": 1,
+          "sharedImage": "Breslau.png"
         }
       ]
     },
@@ -167,7 +177,8 @@
       "variations": [
         {
           "mode": "domination",
-          "number": 1
+          "number": 1,
+          "sharedImage": "European Province.png"
         }
       ]
     },
@@ -244,7 +255,8 @@
       "variations": [
         {
           "mode": "domination",
-          "number": 1
+          "number": 1,
+          "sharedImage": "iberian castle.png"
         }
       ]
     },
