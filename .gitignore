@@ -4,6 +4,5 @@
 
 # Local tactical-map extraction tools and reviewed coordinates.
 /scripts/import-map-tactics.py
-/scripts/tactical-layouts/
 /scripts/LOCAL_TACTICAL_AUTOMATION.md
 /scripts/__pycache__/
