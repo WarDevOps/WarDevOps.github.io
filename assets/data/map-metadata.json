@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "maps": {
+    "38 Parallel": { "ko": "38선" },
+    "Abandoned Town": { "ko": "버려진 소도시" },
+    "Advance to the Rhine": { "ko": "라인 강 진격" },
+    "Alaska": { "ko": "알래스카" },
+    "American Desert": { "ko": "아메리칸 데저트" },
+    "Arctic Pier": { "ko": "북극의 부두" },
+    "Arctic Polar Base": { "ko": "북극" },
+    "Aredennes": { "ko": "아르덴" },
+    "Attica": { "ko": "아티카" },
+    "Battle of Hurtgen Forest": { "ko": "휘르트겐 숲 전투" },
+    "Breslau": { "ko": "브레슬라우" },
+    "Campania": { "ko": "캄파니아" },
+    "Cargo Port": { "ko": "카고 포트" },
+    "Carpathians": { "ko": "카르파티아 산맥" },
+    "European Province": { "ko": "유럽 지방" },
+    "Fields of Normandy": { "ko": "노르망디의 들판" },
+    "Fields of Poland": { "ko": "폴란드의 들판" },
+    "Finland": { "ko": "핀란드" },
+    "Fire Arc": { "ko": "파이어 아크" },
+    "Fulda": { "ko": "풀다" },
+    "Golden Quarry": { "ko": "금광 지대" },
+    "Iberian Castle": { "ko": "이베리아 성" },
+    "Japan": { "ko": "일본" },
+    "Kuban": { "ko": "쿠반" },
+    "Maginot Line": {
+      "ko": "마지노선",
+      "extraVariations": [
+        {
+          "mode": "domination",
+          "number": 2,
+          "folder": "Maginot Line Big",
+          "teamImages": { "Red": "Red big.png", "Blue": "blue big.png" }
+        }
+      ]
+    },
+    "Middle East": { "ko": "중동" },
+    "Mozdok": { "ko": "모즈도크" },
+    "Normandy": { "ko": "노르망디" },
+    "Poland": { "ko": "폴란드" },
+    "Port Novorossiysk": { "ko": "노보로시스크 항구", "defaultMode": "conquest" },
+    "Pradesh": { "ko": "프라데시" },
+    "Red Desert": { "ko": "붉은 사막" },
+    "Sand of Sinai": { "ko": "시나이의 모래사장" },
+    "Second Battle of El Alamein": { "ko": "엘 알라메인" },
+    "Seversk-13": { "ko": "세베르스크-13" },
+    "Sinai": { "ko": "시나이" },
+    "Surrounding of Volokolamsk": { "ko": "볼로콜람스크 포위" },
+    "Sweden": { "ko": "스웨덴" },
+    "Test Site-2271": { "ko": "2271호 실험시설" },
+    "Vietnam": { "ko": "베트남" },
+    "White Rock Fortress": { "ko": "백암요새" }
+  }
+}

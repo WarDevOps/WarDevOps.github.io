@@ -1,8 +1,7 @@
     import { MARKER_LAYOUT_VERSION, loadMarkerLayout, saveMarkerLayout as saveMarkerLayoutToStorage } from './marker-storage.js';
-import { initVisitorCounter } from './visitor-counter.js';
 import { initDiscordMemberCount } from './discord-stats.js';
     import { commentImages } from './comment-images.js?v=comment-images-20260817';
-    import { maps, translations } from './data.js?v=new-maps-20260818';
+    import { maps, translations } from './data.js?v=automatic-map-catalog-v1';
 
 
     const state = { selected: null, team: "Red", query: "", language: "en", theme: "dark", editMode: false, contextMarkerId: null, contextAnnotationId: null, commentMarkerId: null, drawing: null };
@@ -54,6 +53,8 @@ import { initDiscordMemberCount } from './discord-stats.js';
     const hiddenAnnotations = new Set();
     const hiddenMarkerTypes = new Set();
     const MARKER_STORAGE_KEY = "maptactic-marker-layout-v2";
+    const DEFAULT_MARKER_LAYOUT_URL = new URL("../data/maptactic.json", import.meta.url);
+    const DEFAULT_MARKER_LAYOUT_FILENAME = "Maptatic.json";
     const MAX_IMPORTED_MARKERS = 5000;
     const MAX_IMPORTED_ANNOTATIONS = 5000;
     const MAX_MARKER_COMMENT_BYTES = 120;
@@ -938,13 +939,28 @@ import { initDiscordMemberCount } from './discord-stats.js';
       renderMarkers();
       setMarkerStatus();
     }
-    function exportMarkerLayoutData() {
+    async function exportMarkerLayoutData() {
       const exportData = { ...markerLayout, exportedAt: new Date().toISOString() };
       const blob = new Blob([JSON.stringify(exportData, null, 2)], { type: "application/json" });
+      if (typeof window.showSaveFilePicker === "function") {
+        try {
+          const fileHandle = await window.showSaveFilePicker({
+            suggestedName: DEFAULT_MARKER_LAYOUT_FILENAME,
+            types: [{ description: "JSON files", accept: { "application/json": [".json"] } }]
+          });
+          const writable = await fileHandle.createWritable();
+          await writable.write(blob);
+          await writable.close();
+          setMarkerStatus("exportedJson");
+        } catch (error) {
+          if (error?.name !== "AbortError") setMarkerStatus("exportFailed");
+        }
+        return;
+      }
       const url = URL.createObjectURL(blob);
       const download = document.createElement("a");
       download.href = url;
-      download.download = "maptactic-marker-layout.json";
+      download.download = DEFAULT_MARKER_LAYOUT_FILENAME;
       document.body.append(download);
       download.click();
       download.remove();
@@ -1018,24 +1034,32 @@ import { initDiscordMemberCount } from './discord-stats.js';
       });
       return layout;
     }
+    function applyMarkerLayout(importedLayout) {
+      markerLayout.version = importedLayout.version;
+      markerLayout.markers = importedLayout.markers;
+      markerLayout.annotations = importedLayout.annotations;
+      delete markerLayout.updatedAt;
+      hiddenMarkers.clear();
+      hiddenAnnotations.clear();
+      hiddenMarkerTypes.clear();
+      hideMarkerContextMenu();
+      hideAnnotationContextMenu();
+      updateLegendVisibility();
+      renderMarkers();
+    }
+    async function importDefaultMarkerLayout() {
+      const response = await fetch(DEFAULT_MARKER_LAYOUT_URL, { cache: "no-store" });
+      if (!response.ok) throw new Error("Default marker layout could not be loaded.");
+      applyMarkerLayout(validateImportedMarkerLayout(await response.json()));
+    }
     async function importMarkerLayoutFile(file) {
       if (!file || file.size > 2 * 1024 * 1024) {
         setMarkerStatus("invalidJson");
         return;
       }
       try {
-        const importedLayout = validateImportedMarkerLayout(JSON.parse(await file.text()));
-        markerLayout.version = importedLayout.version;
-        markerLayout.markers = importedLayout.markers;
-        markerLayout.annotations = importedLayout.annotations;
-        delete markerLayout.updatedAt;
-        hiddenMarkers.clear();
-        hiddenAnnotations.clear();
-        hiddenMarkerTypes.clear();
-        hideMarkerContextMenu();
-        updateLegendVisibility();
+        applyMarkerLayout(validateImportedMarkerLayout(JSON.parse(await file.text())));
         persistMarkerLayout("importedJson");
-        renderMarkers();
       } catch (error) {
         setMarkerStatus("invalidJson");
       }
@@ -1130,7 +1154,7 @@ import { initDiscordMemberCount } from './discord-stats.js';
       renderMarkers();
       setMarkerStatus("hiddenReset");
     }
-    function resetAllPlacedMarkers() {
+    async function resetAllPlacedMarkers() {
       if (!window.confirm(t("confirmResetAll"))) return;
       markerLayout.markers = {};
       markerLayout.annotations = {};
@@ -1140,8 +1164,14 @@ import { initDiscordMemberCount } from './discord-stats.js';
       hideMarkerContextMenu();
       hideAnnotationContextMenu();
       updateLegendVisibility();
-      persistMarkerLayout("allMarkersReset");
       renderMarkers();
+      try {
+        await importDefaultMarkerLayout();
+        persistMarkerLayout("defaultLayoutRestored");
+      } catch (error) {
+        persistMarkerLayout("allMarkersReset");
+        setMarkerStatus("defaultLayoutLoadError");
+      }
     }
     function bindMarkerLayer(layer, stage, contextMenu) {
       layer.addEventListener("dragstart", event => {
@@ -1380,6 +1410,13 @@ import { initDiscordMemberCount } from './discord-stats.js';
       modalMarkerLayer.replaceChildren();
     });
     setLanguage("en");
+    if (!markerLayout.updatedAt) {
+      try {
+        await importDefaultMarkerLayout();
+        saveMarkerLayoutToStorage(MARKER_STORAGE_KEY, markerLayout);
+      } catch (error) {
+        setMarkerStatus("defaultLayoutLoadError");
+      }
+    }
     restoreFromUrl();
-    initVisitorCounter();
     initDiscordMemberCount();

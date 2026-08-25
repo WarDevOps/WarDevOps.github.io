@@ -1,0 +1,479 @@
+{
+  "version": 1,
+  "maps": [
+    {
+      "name": "38 Parallel",
+      "aliases": "38선",
+      "folder": "38 Parallel",
+      "variations": [
+        {
+          "mode": "domination",
+          "number": 1
+        }
+      ]
+    },
+    {
+      "name": "Abandoned Town",
+      "aliases": "버려진 소도시",
+      "folder": "Abandoned Town",
+      "variations": [
+        {
+          "mode": "domination",
+          "number": 1
+        }
+      ]
+    },
+    {
+      "name": "Advance to the Rhine",
+      "aliases": "라인 강 진격",
+      "folder": "Advance to the Rhine",
+      "variations": [
+        {
+          "mode": "domination",
+          "number": 1
+        }
+      ]
+    },
+    {
+      "name": "Alaska",
+      "aliases": "알래스카",
+      "folder": "Alaska",
+      "variations": [
+        {
+          "mode": "domination",
+          "number": 1
+        }
+      ]
+    },
+    {
+      "name": "American Desert",
+      "aliases": "아메리칸 데저트",
+      "folder": "American Desert",
+      "variations": [
+        {
+          "mode": "domination",
+          "number": 1
+        }
+      ]
+    },
+    {
+      "name": "Arctic Pier",
+      "aliases": "북극의 부두",
+      "folder": "Arctic Pier",
+      "variations": [
+        {
+          "mode": "domination",
+          "number": 1
+        }
+      ]
+    },
+    {
+      "name": "Arctic Polar Base",
+      "aliases": "북극",
+      "folder": "Arctic Polar Base",
+      "variations": [
+        {
+          "mode": "domination",
+          "number": 1
+        }
+      ]
+    },
+    {
+      "name": "Aredennes",
+      "aliases": "아르덴",
+      "folder": "Aredennes",
+      "variations": [
+        {
+          "mode": "domination",
+          "number": 1
+        },
+        {
+          "mode": "domination",
+          "number": 2,
+          "folder": "Aredennes/Domination #2"
+        }
+      ]
+    },
+    {
+      "name": "Attica",
+      "aliases": "아티카",
+      "folder": "Attica",
+      "variations": [
+        {
+          "mode": "domination",
+          "number": 1
+        }
+      ]
+    },
+    {
+      "name": "Battle of Hurtgen Forest",
+      "aliases": "휘르트겐 숲 전투",
+      "folder": "Battle of Hurtgen Forest",
+      "variations": [
+        {
+          "mode": "domination",
+          "number": 1
+        }
+      ]
+    },
+    {
+      "name": "Breslau",
+      "aliases": "브레슬라우",
+      "folder": "Breslau",
+      "variations": [
+        {
+          "mode": "domination",
+          "number": 1
+        }
+      ]
+    },
+    {
+      "name": "Campania",
+      "aliases": "캄파니아",
+      "folder": "Campania",
+      "variations": [
+        {
+          "mode": "domination",
+          "number": 1
+        }
+      ]
+    },
+    {
+      "name": "Cargo Port",
+      "aliases": "카고 포트",
+      "folder": "Cargo Port",
+      "variations": [
+        {
+          "mode": "domination",
+          "number": 1
+        }
+      ]
+    },
+    {
+      "name": "Carpathians",
+      "aliases": "카르파티아 산맥",
+      "folder": "Carpathians",
+      "variations": [
+        {
+          "mode": "domination",
+          "number": 1
+        }
+      ]
+    },
+    {
+      "name": "European Province",
+      "aliases": "유럽 지방",
+      "folder": "European Province",
+      "variations": [
+        {
+          "mode": "domination",
+          "number": 1
+        }
+      ]
+    },
+    {
+      "name": "Fields of Normandy",
+      "aliases": "노르망디의 들판",
+      "folder": "Fields of Normandy",
+      "variations": [
+        {
+          "mode": "domination",
+          "number": 1
+        }
+      ]
+    },
+    {
+      "name": "Fields of Poland",
+      "aliases": "폴란드의 들판",
+      "folder": "Fields of Poland",
+      "variations": [
+        {
+          "mode": "domination",
+          "number": 1
+        }
+      ]
+    },
+    {
+      "name": "Finland",
+      "aliases": "핀란드",
+      "folder": "Finland",
+      "variations": [
+        {
+          "mode": "domination",
+          "number": 1
+        }
+      ]
+    },
+    {
+      "name": "Fire Arc",
+      "aliases": "파이어 아크",
+      "folder": "Fire Arc",
+      "variations": [
+        {
+          "mode": "domination",
+          "number": 1
+        }
+      ]
+    },
+    {
+      "name": "Fulda",
+      "aliases": "풀다",
+      "folder": "Fulda",
+      "variations": [
+        {
+          "mode": "domination",
+          "number": 1
+        }
+      ]
+    },
+    {
+      "name": "Golden Quarry",
+      "aliases": "금광 지대",
+      "folder": "Golden Quarry",
+      "variations": [
+        {
+          "mode": "domination",
+          "number": 1
+        }
+      ]
+    },
+    {
+      "name": "Iberian Castle",
+      "aliases": "이베리아 성",
+      "folder": "Iberian Castle",
+      "variations": [
+        {
+          "mode": "domination",
+          "number": 1
+        }
+      ]
+    },
+    {
+      "name": "Japan",
+      "aliases": "일본",
+      "folder": "Japan",
+      "variations": [
+        {
+          "mode": "domination",
+          "number": 1
+        }
+      ]
+    },
+    {
+      "name": "Kuban",
+      "aliases": "쿠반",
+      "folder": "Kuban",
+      "variations": [
+        {
+          "mode": "domination",
+          "number": 1
+        }
+      ]
+    },
+    {
+      "name": "Maginot Line",
+      "aliases": "마지노선",
+      "folder": "Maginot Line",
+      "variations": [
+        {
+          "mode": "domination",
+          "number": 1
+        },
+        {
+          "mode": "domination",
+          "number": 2,
+          "folder": "Maginot Line Big",
+          "teamImages": {
+            "Red": "Red big.png",
+            "Blue": "blue big.png"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Middle East",
+      "aliases": "중동",
+      "folder": "Middle East",
+      "variations": [
+        {
+          "mode": "domination",
+          "number": 1
+        }
+      ]
+    },
+    {
+      "name": "Mozdok",
+      "aliases": "모즈도크",
+      "folder": "Mozdok",
+      "variations": [
+        {
+          "mode": "domination",
+          "number": 1
+        }
+      ]
+    },
+    {
+      "name": "Normandy",
+      "aliases": "노르망디",
+      "folder": "Normandy",
+      "variations": [
+        {
+          "mode": "domination",
+          "number": 1
+        }
+      ]
+    },
+    {
+      "name": "Poland",
+      "aliases": "폴란드",
+      "folder": "Poland",
+      "variations": [
+        {
+          "mode": "domination",
+          "number": 1
+        }
+      ]
+    },
+    {
+      "name": "Port Novorossiysk",
+      "aliases": "노보로시스크 항구",
+      "folder": "Port Novorossiysk",
+      "variations": [
+        {
+          "mode": "conquest",
+          "number": 1
+        }
+      ]
+    },
+    {
+      "name": "Pradesh",
+      "aliases": "프라데시",
+      "folder": "Pradesh",
+      "variations": [
+        {
+          "mode": "domination",
+          "number": 1
+        }
+      ]
+    },
+    {
+      "name": "Red Desert",
+      "aliases": "붉은 사막",
+      "folder": "Red Desert",
+      "variations": [
+        {
+          "mode": "domination",
+          "number": 1
+        }
+      ]
+    },
+    {
+      "name": "Sand of Sinai",
+      "aliases": "시나이의 모래사장",
+      "folder": "Sand of Sinai",
+      "variations": [
+        {
+          "mode": "domination",
+          "number": 1
+        }
+      ]
+    },
+    {
+      "name": "Second Battle of El Alamein",
+      "aliases": "엘 알라메인",
+      "folder": "Second Battle of El Alamein",
+      "variations": [
+        {
+          "mode": "domination",
+          "number": 1
+        },
+        {
+          "mode": "domination",
+          "number": 2,
+          "folder": "Second Battle of El Alamein/Domination #2",
+          "teamImages": {
+            "Red": "Red Small.png",
+            "Blue": "Blue Small.png"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Seversk-13",
+      "aliases": "세베르스크-13",
+      "folder": "Seversk-13",
+      "variations": [
+        {
+          "mode": "domination",
+          "number": 1
+        }
+      ]
+    },
+    {
+      "name": "Sinai",
+      "aliases": "시나이",
+      "folder": "Sinai",
+      "variations": [
+        {
+          "mode": "domination",
+          "number": 1
+        }
+      ]
+    },
+    {
+      "name": "Surrounding of Volokolamsk",
+      "aliases": "볼로콜람스크 포위",
+      "folder": "Surrounding of Volokolamsk",
+      "variations": [
+        {
+          "mode": "domination",
+          "number": 1
+        }
+      ]
+    },
+    {
+      "name": "Sweden",
+      "aliases": "스웨덴",
+      "folder": "Sweden",
+      "variations": [
+        {
+          "mode": "domination",
+          "number": 1
+        }
+      ]
+    },
+    {
+      "name": "Test Site-2271",
+      "aliases": "2271호 실험시설",
+      "folder": "Test Site-2271",
+      "variations": [
+        {
+          "mode": "domination",
+          "number": 1
+        }
+      ]
+    },
+    {
+      "name": "Vietnam",
+      "aliases": "베트남",
+      "folder": "Vietnam",
+      "variations": [
+        {
+          "mode": "domination",
+          "number": 1
+        }
+      ]
+    },
+    {
+      "name": "White Rock Fortress",
+      "aliases": "백암요새",
+      "folder": "White Rock Fortress",
+      "variations": [
+        {
+          "mode": "domination",
+          "number": 1
+        }
+      ]
+    }
+  ]
+}

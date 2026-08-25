@@ -1,3 +1,10 @@
+const mapCatalogResponse = await fetch(new URL("../data/map-catalog.json", import.meta.url), { cache: "no-store" });
+if (!mapCatalogResponse.ok) throw new Error(`Map catalog request failed: ${mapCatalogResponse.status}`);
+const mapCatalogPayload = await mapCatalogResponse.json();
+if (mapCatalogPayload.version !== 1 || !Array.isArray(mapCatalogPayload.maps)) {
+  throw new Error("Unsupported map catalog format");
+}
+
 function createMap({ name, aliases, folder = name, teamImages, sharedImage, variations }) {
   const configuredVariations = variations?.length ? variations : [{ mode: "domination", number: 1 }];
   return {
@@ -18,63 +25,7 @@ function createMap({ name, aliases, folder = name, teamImages, sharedImage, vari
   };
 }
 
-function standardMapVariations(name) {
-  if (name === "Aredennes") {
-    return [
-      { mode: "domination", number: 1 },
-      {
-        mode: "domination",
-        number: 2,
-        folder: "Aredennes/Domination #2"
-      }
-    ];
-  }
-  if (name === "Maginot Line") {
-    return [
-      { mode: "domination", number: 1 },
-      {
-        mode: "domination",
-        number: 2,
-        folder: "Maginot Line Big",
-        teamImages: { Red: "Red big.png", Blue: "blue big.png" }
-      }
-    ];
-  }
-  if (name === "Second Battle of El Alamein") {
-    return [
-      { mode: "domination", number: 1 },
-      {
-        mode: "domination",
-        number: 2,
-        folder: "Second Battle of El Alamein/Domination #2",
-        teamImages: { Red: "Red Small.png", Blue: "Blue Small.png" }
-      }
-    ];
-  }
-  return [{ mode: name === "Port Novorossiysk" ? "conquest" : "domination", number: 1 }];
-}
-
-export const maps = [
-      ["38 Parallel", "38선"], ["Aredennes", "아르덴"],
-      ["Abandoned Town", "버려진 소도시"], ["Advance to the Rhine", "라인 강 진격"], ["Alaska", "알래스카"], ["American Desert", "아메리칸 데저트"],
-      ["Arctic Pier", "북극의 부두"], ["Arctic Polar Base", "북극"], ["Attica", "아티카"],
-      ["Battle of Hurtgen Forest", "휘르트겐 숲 전투"], ["Breslau", "브레슬라우"], ["Cargo Port", "카고 포트"], ["Carpathians", "카르파티아 산맥"],
-      ["European Province", "유럽 지방"], ["Fields of Normandy", "노르망디의 들판"], ["Finland", "핀란드"],
-      ["Fields of Poland", "폴란드의 들판"], ["Fire Arc", "파이어 아크"], ["Fulda", "풀다"], ["Golden Quarry", "금광 지대"], ["Iberian Castle", "이베리아 성"], ["Japan", "일본"],
-      ["Kuban", "쿠반"],
-      ["Maginot Line", "마지노선"], ["Port Novorossiysk", "노보로시스크 항구"], ["Pradesh", "프라데시"],
-      ["Middle East", "중동"], ["Mozdok", "모즈도크"], ["Normandy", "노르망디"], ["Poland", "폴란드"], ["Red Desert", "붉은 사막"], ["Sand of Sinai", "시나이의 모래사장"], ["Second Battle of El Alamein", "엘 알라메인"],
-      ["Seversk-13", "세베르스크-13"], ["Sinai", "시나이"], ["Surrounding of Volokolamsk", "볼로콜람스크 포위"],
-      ["Sweden", "스웨덴"], ["Test Site-2271", "2271호 실험시설"], ["Vietnam", "베트남"],
-      ["White Rock Fortress", "백암요새"]
-    ].map(([name, aliases, folder = name]) => createMap({
-      name,
-      aliases,
-      folder,
-      variations: standardMapVariations(name)
-    })).concat([
-      createMap({ name: "Campania", aliases: "캄파니아", folder: "Campania" })
-    ]);
+export const maps = mapCatalogPayload.maps.map(createMap);
 
 export const translations = {
       en: {
@@ -121,9 +72,6 @@ export const translations = {
         notRecommended: "Not Recommended",
         smokeshell: "Use Smoke Shell",
         teamLegend: "Team legend",
-        visitorStatistics: "Visitor statistics",
-        visitsToday: "TODAY",
-        visitsTotal: "TOTAL",
         copyright: "© 2026 WarDevOps & 부릉부릉. All Rights Reserved.",
         copyrightNotice: "All content on this website, including text, images, graphics, and other materials, is the property of the site owner. Unauthorized reproduction, distribution, or use is prohibited.",
         enlargedMapView: "Enlarged map view",
@@ -142,7 +90,8 @@ export const translations = {
         editorIdle: "Enter edit mode to drag icons from the legend onto the map.",
         editorActive: "Drag tank icons onto the map. Click Route to draw a route, or right-click a tank to aim.",
         savedLocally: "Saved in this browser.",
-        exportedJson: "JSON export downloaded.",
+        exportedJson: "JSON file saved.",
+        exportFailed: "JSON file could not be saved.",
         importJson: "Import JSON",
         importedJson: "JSON layout imported.",
         invalidJson: "Choose a valid marker-layout JSON file.",
@@ -161,6 +110,8 @@ export const translations = {
         resetAllMarkers: "Reset All Markers",
         confirmResetAll: "Delete every placed marker and drawing from all maps and teams? This cannot be undone.",
         allMarkersReset: "All placed markers and drawings were deleted.",
+        defaultLayoutRestored: "The default marker layout was restored.",
+        defaultLayoutLoadError: "The default marker layout could not be loaded.",
         markerActions: "Marker actions",
         roleMarker: "Role Marker",
         addComment: "Add Comment",
@@ -241,9 +192,6 @@ export const translations = {
         notRecommended: "비추천 지역",
         smokeshell: "연막 포탄 사용 추천",
         teamLegend: "진영 범례",
-        visitorStatistics: "방문 통계",
-        visitsToday: "오늘 방문",
-        visitsTotal: "전체 방문",
         copyright: "© 2026 WarDevOps & 부릉부릉. All Rights Reserved.",
         copyrightNotice: "All content on this website, including text, images, graphics, and other materials, is the property of the site owner. Unauthorized reproduction, distribution, or use is prohibited.",
         enlargedMapView: "확대 지도 보기",
@@ -262,7 +210,8 @@ export const translations = {
         editorIdle: "편집 모드에서 범례 아이콘을 지도 위로 드래그해 배치하세요.",
         editorActive: "전차 아이콘을 지도 위로 드래그해 배치하세요. Route를 클릭하면 경로를 그리고, 전차를 우클릭하면 조준 화살표를 그릴 수 있습니다.",
         savedLocally: "이 브라우저에 저장했습니다.",
-        exportedJson: "JSON 파일을 내려받았습니다.",
+        exportedJson: "JSON 파일을 저장했습니다.",
+        exportFailed: "JSON 파일을 저장하지 못했습니다.",
         importJson: "JSON 불러오기",
         importedJson: "JSON 배치를 불러왔습니다.",
         invalidJson: "올바른 범례 배치 JSON 파일을 선택하세요.",
@@ -281,6 +230,8 @@ export const translations = {
         resetAllMarkers: "모든 범례 초기화",
         confirmResetAll: "모든 맵과 진영에 배치한 범례와 도형을 삭제할까요? 이 작업은 되돌릴 수 없습니다.",
         allMarkersReset: "배치한 모든 범례와 도형을 삭제했습니다.",
+        defaultLayoutRestored: "기본 범례 배치를 복원했습니다.",
+        defaultLayoutLoadError: "기본 범례 배치를 불러오지 못했습니다.",
         markerActions: "범례 동작",
         roleMarker: "역할 마커",
         addComment: "코멘트 추가",
