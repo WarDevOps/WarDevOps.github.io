@@ -3,17 +3,17 @@ import { initDiscordMemberCount } from "./discord-stats.js";
 const copy = {
   en: {
     copyright: "© 2026 WarDevOps & 부릉부릉. All Rights Reserved.",
-    copyrightNotice: "All content on this website, including text, images, graphics, and other materials, is the property of the site owner. Unauthorized reproduction, distribution, or use is prohibited.",
+    copyrightNotice: "Unofficial fan project. Not affiliated with or endorsed by Gaijin Entertainment. War Thunder and related game materials belong to their respective rights holders.",
     lightTheme: "LIGHT",
     darkTheme: "DARK",
     switchToLightTheme: "Switch to light theme",
     switchToDarkTheme: "Switch to dark theme",
   },
   ko: {
-    copyright: "© 2026 WarDevOps & 부릉부릉. 모든 권리 보유.",
-    copyrightNotice: "이 웹사이트의 텍스트, 이미지, 그래픽 및 기타 모든 콘텐츠는 사이트 소유자의 자산입니다. 무단 복제, 배포 및 사용을 금합니다.",
-    lightTheme: "라이트",
-    darkTheme: "다크",
+    copyright: "© 2026 WarDevOps & 부릉부릉. All Rights Reserved.",
+    copyrightNotice: "Unofficial fan project. Not affiliated with or endorsed by Gaijin Entertainment. War Thunder and related game materials belong to their respective rights holders.",
+    lightTheme: "LIGHT",
+    darkTheme: "DARK",
     switchToLightTheme: "라이트 모드로 전환",
     switchToDarkTheme: "다크 모드로 전환",
   },

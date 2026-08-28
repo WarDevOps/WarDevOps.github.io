@@ -78,7 +78,7 @@ export const translations = {
         smokeshell: "Use Smoke Shell",
         teamLegend: "Team legend",
         copyright: "© 2026 WarDevOps & 부릉부릉. All Rights Reserved.",
-        copyrightNotice: "All content on this website, including text, images, graphics, and other materials, is the property of the site owner. Unauthorized reproduction, distribution, or use is prohibited.",
+        copyrightNotice: "Unofficial fan project. Not affiliated with or endorsed by Gaijin Entertainment. War Thunder and related game materials belong to their respective rights holders.",
         enlargedMapView: "Enlarged map view",
         closeEnlargedView: "Close enlarged view",
         noResults: "No matching maps found.<br>Try another name or a map alias.",

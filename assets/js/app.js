@@ -823,28 +823,44 @@ import { initDiscordMemberCount } from './discord-stats.js';
         : [];
     }
     function renderAnnotation(layer, annotation, isPreview = false) {
-      if (annotation.type !== "route") {
-        renderAnnotationSegment(layer, annotation, isPreview);
+      if (annotation.type === "route") {
+        renderRouteAnnotation(layer, annotation, isPreview);
         return;
       }
-      const points = routePoints(annotation);
-      let routeOffset = 0;
-      for (let index = 1; index < points.length; index += 1) {
-        routeOffset += renderAnnotationSegment(layer, {
-          ...annotation,
-          startX: points[index - 1].x,
-          startY: points[index - 1].y,
-          endX: points[index].x,
-          endY: points[index].y
-        }, isPreview, routeOffset);
-      }
+      renderAnnotationSegment(layer, annotation, isPreview);
     }
-    function renderAnnotationSegment(layer, annotation, isPreview = false, routeOffset = 0) {
+    function renderRouteAnnotation(layer, annotation, isPreview = false) {
+      const points = routePoints(annotation);
+      if (points.length < 2) return;
+      const width = layer.clientWidth;
+      const height = layer.clientHeight;
+      const renderedPoints = points.map(point => ({
+        x: (Number(point.x) / 100) * width,
+        y: (Number(point.y) / 100) * height
+      }));
+      if (renderedPoints.some(point => !Number.isFinite(point.x) || !Number.isFinite(point.y))) return;
+      const mapScale = Math.min(width, height) / MAP_DRAWING_REFERENCE_SIZE;
+      const drawing = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+      drawing.classList.add("map-annotation", "route-line");
+      if (annotation.dangerRoute) drawing.classList.add("is-danger-route");
+      if (isPreview) drawing.classList.add("is-preview");
+      drawing.dataset.annotationId = annotation.id || "preview";
+      drawing.setAttribute("viewBox", `0 0 ${width} ${height}`);
+      drawing.setAttribute("preserveAspectRatio", "none");
+      drawing.setAttribute("role", "button");
+      drawing.setAttribute("aria-label", t(annotation.type));
+      const route = document.createElementNS("http://www.w3.org/2000/svg", "polyline");
+      route.setAttribute("points", renderedPoints.map(point => `${point.x},${point.y}`).join(" "));
+      route.setAttribute("stroke-width", String(ROUTE_BASE_STROKE * mapScale));
+      drawing.append(route);
+      layer.append(drawing);
+    }
+    function renderAnnotationSegment(layer, annotation, isPreview = false) {
       const startX = Number(annotation.startX);
       const startY = Number(annotation.startY);
       const endX = Number(annotation.endX);
       const endY = Number(annotation.endY);
-      if (![startX, startY, endX, endY].every(Number.isFinite)) return 0;
+      if (![startX, startY, endX, endY].every(Number.isFinite)) return;
       const width = layer.clientWidth;
       const height = layer.clientHeight;
       const mapScale = Math.min(width, height) / MAP_DRAWING_REFERENCE_SIZE;
@@ -853,7 +869,7 @@ import { initDiscordMemberCount } from './discord-stats.js';
       const toX = (endX / 100) * width;
       const toY = (endY / 100) * height;
       const length = Math.hypot(toX - fromX, toY - fromY);
-      if (length < 1) return length;
+      if (length < 1) return;
       const angle = Math.atan2(toY - fromY, toX - fromX) * (180 / Math.PI);
       const drawing = document.createElement("button");
       drawing.type = "button";
@@ -863,38 +879,29 @@ import { initDiscordMemberCount } from './discord-stats.js';
       drawing.style.width = `${length}px`;
       drawing.style.transform = `rotate(${angle}deg)`;
       drawing.setAttribute("aria-label", t(annotation.type));
-      if (annotation.type === "aimHere") {
-        const strokeWidth = AIM_ARROW_BASE_STROKE * mapScale;
-        const scaledHeadLength = AIM_ARROW_HEAD_BASE_LENGTH * mapScale;
-        const headLength = Math.min(scaledHeadLength, length);
-        const headHeight = AIM_ARROW_HEAD_BASE_HEIGHT * mapScale * (headLength / scaledHeadLength);
-        const arrowHeight = Math.max(strokeWidth, headHeight);
-        drawing.style.height = `${arrowHeight}px`;
-        drawing.style.top = `${fromY - (arrowHeight / 2)}px`;
-        drawing.style.transformOrigin = `0 ${arrowHeight / 2}px`;
-        const shaft = document.createElement("span");
-        shaft.className = "aim-arrow-shaft";
-        shaft.style.top = `${(arrowHeight - strokeWidth) / 2}px`;
-        shaft.style.height = `${strokeWidth}px`;
-        shaft.style.width = `${Math.max(0, length - headLength)}px`;
-        const arrowHead = document.createElement("span");
-        arrowHead.className = "aim-arrow-head";
-        arrowHead.setAttribute("aria-hidden", "true");
-        arrowHead.style.left = `${Math.max(0, length - headLength)}px`;
-        arrowHead.style.top = `${(arrowHeight - headHeight) / 2}px`;
-        arrowHead.style.borderTopWidth = `${headHeight / 2}px`;
-        arrowHead.style.borderBottomWidth = `${headHeight / 2}px`;
-        arrowHead.style.borderLeftWidth = `${headLength}px`;
-        drawing.append(shaft, arrowHead);
-      } else {
-        const strokeWidth = ROUTE_BASE_STROKE * mapScale;
-        drawing.style.height = `${strokeWidth}px`;
-        drawing.style.top = `${fromY - (strokeWidth / 2)}px`;
-        drawing.style.transformOrigin = `0 ${strokeWidth / 2}px`;
-        drawing.style.backgroundPositionX = `${-routeOffset}px`;
-      }
+      const strokeWidth = AIM_ARROW_BASE_STROKE * mapScale;
+      const scaledHeadLength = AIM_ARROW_HEAD_BASE_LENGTH * mapScale;
+      const headLength = Math.min(scaledHeadLength, length);
+      const headHeight = AIM_ARROW_HEAD_BASE_HEIGHT * mapScale * (headLength / scaledHeadLength);
+      const arrowHeight = Math.max(strokeWidth, headHeight);
+      drawing.style.height = `${arrowHeight}px`;
+      drawing.style.top = `${fromY - (arrowHeight / 2)}px`;
+      drawing.style.transformOrigin = `0 ${arrowHeight / 2}px`;
+      const shaft = document.createElement("span");
+      shaft.className = "aim-arrow-shaft";
+      shaft.style.top = `${(arrowHeight - strokeWidth) / 2}px`;
+      shaft.style.height = `${strokeWidth}px`;
+      shaft.style.width = `${Math.max(0, length - headLength)}px`;
+      const arrowHead = document.createElement("span");
+      arrowHead.className = "aim-arrow-head";
+      arrowHead.setAttribute("aria-hidden", "true");
+      arrowHead.style.left = `${Math.max(0, length - headLength)}px`;
+      arrowHead.style.top = `${(arrowHeight - headHeight) / 2}px`;
+      arrowHead.style.borderTopWidth = `${headHeight / 2}px`;
+      arrowHead.style.borderBottomWidth = `${headHeight / 2}px`;
+      arrowHead.style.borderLeftWidth = `${headLength}px`;
+      drawing.append(shaft, arrowHead);
       layer.append(drawing);
-      return length;
     }
     function renderAnnotationLayer(layer, image) {
       layer.replaceChildren();
