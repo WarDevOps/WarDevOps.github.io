@@ -125,7 +125,7 @@ if (tierRoot) {
       storageError: "This browser could not save the layout.",
       filterCount: (shown, total) => `${shown} shown · ${total} available`,
       mapDocumentTitle: "WarDevOps | War Thunder Map Tactic",
-      tierDocumentTitle: "WarDevOps | War Thunder Tier List",
+      tierDocumentTitle: "War Thunder Tier List Maker | WarDevOps",
       mapDescription: "Explore War Thunder maps, team positions, tactical markers, routes, and key combat areas with WarDevOps MapTactic.",
       tierDescription: "Create and save a War Thunder ground vehicle, aircraft, or helicopter tier list with WarDevOps MapTactic."
     },
@@ -182,7 +182,7 @@ if (tierRoot) {
       storageError: "이 브라우저에 배치를 저장할 수 없습니다.",
       filterCount: (shown, total) => `표시 ${shown} · 전체 ${total}`,
       mapDocumentTitle: "WarDevOps | 워썬더 전술 지도",
-      tierDocumentTitle: "WarDevOps | 워썬더 티어 리스트",
+      tierDocumentTitle: "워썬더 티어 리스트 메이커 | WarDevOps",
       mapDescription: "워썬더 전술 지도, 진영별 중요 위치, 이동 경로와 주요 교전 지역을 WarDevOps MapTactic에서 살펴보세요.",
       tierDescription: "WarDevOps MapTactic에서 워썬더 지상 장비, 항공기와 헬리콥터 티어 리스트를 만들고 저장하세요."
     }
@@ -206,7 +206,7 @@ if (tierRoot) {
   const descriptionMeta = document.querySelector('meta[name="description"]');
 
   let activeCategory = "tank";
-  let activeView = "maps";
+  let activeView = "tier";
   let selectedItemId = null;
   let draggedItemId = null;
   let suppressNextClick = false;
@@ -786,7 +786,7 @@ if (tierRoot) {
   }
 
   function setContentView(view, { updateHistory = false, moveFocus = false } = {}) {
-    activeView = view === "tier" ? "tier" : "maps";
+    activeView = "tier";
     contentViews.forEach(element => { element.hidden = element.dataset.contentView !== activeView; });
     contentButtons.forEach(button => button.setAttribute("aria-pressed", String(button.dataset.contentTarget === activeView)));
     document.body.dataset.contentView = activeView;
@@ -902,5 +902,5 @@ if (tierRoot) {
   window.addEventListener("maptactic:languagechange", updateLanguage);
 
   updateLanguage();
-  setContentView(new URLSearchParams(window.location.search).get("view") === "tier" ? "tier" : "maps");
+  setContentView("tier");
 }

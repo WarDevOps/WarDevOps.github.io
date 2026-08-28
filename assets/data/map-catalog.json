@@ -2,20 +2,24 @@
   "version": 1,
   "maps": [
     {
-      "name": "38 Parallel",
+      "name": "38th Parallel",
       "aliases": "38선",
-      "folder": "38 Parallel",
+      "slug": "38th-parallel",
+      "updated": "2026-08-25",
+      "folder": "38th Parallel",
       "variations": [
         {
           "mode": "domination",
           "number": 1,
-          "sharedImage": "38 Parallel.png"
+          "sharedImage": "38th Parallel.png"
         }
       ]
     },
     {
       "name": "Abandoned Town",
       "aliases": "버려진 소도시",
+      "slug": "abandoned-town",
+      "updated": "2026-08-25",
       "folder": "Abandoned Town",
       "variations": [
         {
@@ -28,6 +32,8 @@
     {
       "name": "Advance to the Rhine",
       "aliases": "라인 강 진격",
+      "slug": "advance-to-the-rhine",
+      "updated": "2026-08-25",
       "folder": "Advance to the Rhine",
       "variations": [
         {
@@ -40,6 +46,8 @@
     {
       "name": "Alaska",
       "aliases": "알래스카",
+      "slug": "alaska",
+      "updated": "2026-08-25",
       "folder": "Alaska",
       "variations": [
         {
@@ -52,6 +60,8 @@
     {
       "name": "American Desert",
       "aliases": "아메리칸 데저트",
+      "slug": "american-desert",
+      "updated": "2026-08-25",
       "folder": "American Desert",
       "variations": [
         {
@@ -64,6 +74,8 @@
     {
       "name": "Aral Sea",
       "aliases": "아랄 해",
+      "slug": "aral-sea",
+      "updated": "2026-08-25",
       "folder": "Aral Sea",
       "variations": [
         {
@@ -76,6 +88,8 @@
     {
       "name": "Arctic Pier",
       "aliases": "북극의 부두",
+      "slug": "arctic-pier",
+      "updated": "2026-08-25",
       "folder": "Arctic Pier",
       "variations": [
         {
@@ -88,6 +102,8 @@
     {
       "name": "Arctic Polar Base",
       "aliases": "북극",
+      "slug": "arctic-polar-base",
+      "updated": "2026-08-25",
       "folder": "Arctic Polar Base",
       "variations": [
         {
@@ -98,37 +114,43 @@
       ]
     },
     {
-      "name": "Aredennes",
+      "name": "Ardennes",
       "aliases": "아르덴",
-      "folder": "Aredennes",
+      "slug": "ardennes",
+      "updated": "2026-08-25",
+      "folder": "Ardennes",
       "variations": [
         {
           "mode": "domination",
           "number": 1,
-          "sharedImage": "Aredennes.png"
+          "sharedImage": "Ardennes.png"
         },
         {
           "mode": "domination",
           "number": 2,
-          "folder": "Aredennes/Domination #2"
+          "folder": "Ardennes/Domination #2"
         }
       ]
     },
     {
-      "name": "Ash river",
+      "name": "Ash River",
       "aliases": "애쉬 리버",
-      "folder": "Ash river",
+      "slug": "ash-river",
+      "updated": "2026-08-25",
+      "folder": "Ash River",
       "variations": [
         {
           "mode": "domination",
           "number": 1,
-          "sharedImage": "Ash river.png"
+          "sharedImage": "Ash River.png"
         }
       ]
     },
     {
       "name": "Attica",
       "aliases": "아티카",
+      "slug": "attica",
+      "updated": "2026-08-16",
       "folder": "Attica",
       "variations": [
         {
@@ -139,9 +161,11 @@
       ]
     },
     {
-      "name": "Battle of Hurtgen Forest",
+      "name": "Battle of Hürtgen Forest",
       "aliases": "휘르트겐 숲 전투",
-      "folder": "Battle of Hurtgen Forest",
+      "slug": "battle-of-hurtgen-forest",
+      "updated": "2026-08-18",
+      "folder": "Battle of Hürtgen Forest",
       "variations": [
         {
           "mode": "domination",
@@ -152,6 +176,8 @@
     {
       "name": "Berlin",
       "aliases": "베를린",
+      "slug": "berlin",
+      "updated": "2026-08-25",
       "folder": "Berlin",
       "variations": [
         {
@@ -164,6 +190,8 @@
     {
       "name": "Breslau",
       "aliases": "브레슬라우",
+      "slug": "breslau",
+      "updated": "2026-08-25",
       "folder": "Breslau",
       "variations": [
         {
@@ -176,6 +204,8 @@
     {
       "name": "Campania",
       "aliases": "캄파니아",
+      "slug": "campania",
+      "updated": "2026-08-17",
       "folder": "Campania",
       "variations": [
         {
@@ -187,6 +217,8 @@
     {
       "name": "Cargo Port",
       "aliases": "카고 포트",
+      "slug": "cargo-port",
+      "updated": "2026-08-16",
       "folder": "Cargo Port",
       "variations": [
         {
@@ -198,6 +230,8 @@
     {
       "name": "Carpathians",
       "aliases": "카르파티아 산맥",
+      "slug": "carpathians",
+      "updated": "2026-08-16",
       "folder": "Carpathians",
       "variations": [
         {
@@ -209,6 +243,8 @@
     {
       "name": "European Province",
       "aliases": "유럽 지방",
+      "slug": "european-province",
+      "updated": "2026-08-16",
       "folder": "European Province",
       "variations": [
         {
@@ -221,6 +257,8 @@
     {
       "name": "Fields of Normandy",
       "aliases": "노르망디의 들판",
+      "slug": "fields-of-normandy",
+      "updated": "2026-08-18",
       "folder": "Fields of Normandy",
       "variations": [
         {
@@ -232,6 +270,8 @@
     {
       "name": "Fields of Poland",
       "aliases": "폴란드의 들판",
+      "slug": "fields-of-poland",
+      "updated": "2026-08-17",
       "folder": "Fields of Poland",
       "variations": [
         {
@@ -243,6 +283,8 @@
     {
       "name": "Finland",
       "aliases": "핀란드",
+      "slug": "finland",
+      "updated": "2026-08-16",
       "folder": "Finland",
       "variations": [
         {
@@ -254,6 +296,8 @@
     {
       "name": "Fire Arc",
       "aliases": "파이어 아크",
+      "slug": "fire-arc",
+      "updated": "2026-08-16",
       "folder": "Fire Arc",
       "variations": [
         {
@@ -265,6 +309,8 @@
     {
       "name": "Frozen Pass",
       "aliases": "얼어붙은 산길",
+      "slug": "frozen-pass",
+      "updated": "2026-08-25",
       "folder": "Frozen Pass",
       "variations": [
         {
@@ -277,6 +323,8 @@
     {
       "name": "Fulda",
       "aliases": "풀다",
+      "slug": "fulda",
+      "updated": "2026-08-18",
       "folder": "Fulda",
       "variations": [
         {
@@ -288,6 +336,8 @@
     {
       "name": "Golden Quarry",
       "aliases": "금광 지대",
+      "slug": "golden-quarry",
+      "updated": "2026-08-17",
       "folder": "Golden Quarry",
       "variations": [
         {
@@ -299,6 +349,8 @@
     {
       "name": "Iberian Castle",
       "aliases": "이베리아 성",
+      "slug": "iberian-castle",
+      "updated": "2026-08-16",
       "folder": "Iberian Castle",
       "variations": [
         {
@@ -311,6 +363,8 @@
     {
       "name": "Japan",
       "aliases": "일본",
+      "slug": "japan",
+      "updated": "2026-08-16",
       "folder": "Japan",
       "variations": [
         {
@@ -322,6 +376,8 @@
     {
       "name": "Jungle",
       "aliases": "정글",
+      "slug": "jungle",
+      "updated": "2026-08-25",
       "folder": "Jungle",
       "variations": [
         {
@@ -334,6 +390,8 @@
     {
       "name": "Kuban",
       "aliases": "쿠반",
+      "slug": "kuban",
+      "updated": "2026-08-18",
       "folder": "Kuban",
       "variations": [
         {
@@ -345,6 +403,8 @@
     {
       "name": "Maginot Line",
       "aliases": "마지노선",
+      "slug": "maginot-line",
+      "updated": "2026-08-16",
       "folder": "Maginot Line",
       "variations": [
         {
@@ -365,6 +425,8 @@
     {
       "name": "Middle East",
       "aliases": "중동",
+      "slug": "middle-east",
+      "updated": "2026-08-18",
       "folder": "Middle East",
       "variations": [
         {
@@ -376,6 +438,8 @@
     {
       "name": "Mozdok",
       "aliases": "모즈도크",
+      "slug": "mozdok",
+      "updated": "2026-08-17",
       "folder": "Mozdok",
       "variations": [
         {
@@ -387,6 +451,8 @@
     {
       "name": "Normandy",
       "aliases": "노르망디",
+      "slug": "normandy",
+      "updated": "2026-08-18",
       "folder": "Normandy",
       "variations": [
         {
@@ -398,6 +464,8 @@
     {
       "name": "Poland",
       "aliases": "폴란드",
+      "slug": "poland",
+      "updated": "2026-08-17",
       "folder": "Poland",
       "variations": [
         {
@@ -409,6 +477,8 @@
     {
       "name": "Port Novorossiysk",
       "aliases": "노보로시스크 항구",
+      "slug": "port-novorossiysk",
+      "updated": "2026-08-16",
       "folder": "Port Novorossiysk",
       "variations": [
         {
@@ -420,6 +490,8 @@
     {
       "name": "Pradesh",
       "aliases": "프라데시",
+      "slug": "pradesh",
+      "updated": "2026-08-16",
       "folder": "Pradesh",
       "variations": [
         {
@@ -431,6 +503,8 @@
     {
       "name": "Red Desert",
       "aliases": "붉은 사막",
+      "slug": "red-desert",
+      "updated": "2026-08-25",
       "folder": "Red Desert",
       "variations": [
         {
@@ -441,19 +515,24 @@
       ]
     },
     {
-      "name": "Sand of Sinai",
+      "name": "Sands of Sinai",
       "aliases": "시나이의 모래사장",
-      "folder": "Sand of Sinai",
+      "slug": "sands-of-sinai",
+      "updated": "2026-08-17",
+      "folder": "Sands of Sinai",
       "variations": [
         {
           "mode": "domination",
-          "number": 1
+          "number": 1,
+          "sharedImage": "Sands of Sinai.png"
         }
       ]
     },
     {
       "name": "Second Battle of El Alamein",
       "aliases": "엘 알라메인",
+      "slug": "second-battle-of-el-alamein",
+      "updated": "2026-08-17",
       "folder": "Second Battle of El Alamein",
       "variations": [
         {
@@ -474,6 +553,8 @@
     {
       "name": "Seversk-13",
       "aliases": "세베르스크-13",
+      "slug": "seversk-13",
+      "updated": "2026-08-16",
       "folder": "Seversk-13",
       "variations": [
         {
@@ -485,6 +566,8 @@
     {
       "name": "Sinai",
       "aliases": "시나이",
+      "slug": "sinai",
+      "updated": "2026-08-16",
       "folder": "Sinai",
       "variations": [
         {
@@ -496,6 +579,8 @@
     {
       "name": "Spaceport",
       "aliases": "우주공항",
+      "slug": "spaceport",
+      "updated": "2026-08-25",
       "folder": "Spaceport",
       "variations": [
         {
@@ -508,6 +593,8 @@
     {
       "name": "Stalingrad",
       "aliases": "스탈린그라드",
+      "slug": "stalingrad",
+      "updated": "2026-08-25",
       "folder": "Stalingrad",
       "variations": [
         {
@@ -520,6 +607,8 @@
     {
       "name": "Sun City",
       "aliases": "선 시티",
+      "slug": "sun-city",
+      "updated": "2026-08-25",
       "folder": "Sun City",
       "variations": [
         {
@@ -530,9 +619,11 @@
       ]
     },
     {
-      "name": "Surrounding of Volokolamsk",
+      "name": "Surroundings of Volokolamsk",
       "aliases": "볼로콜람스크 포위",
-      "folder": "Surrounding of Volokolamsk",
+      "slug": "surroundings-of-volokolamsk",
+      "updated": "2026-08-16",
+      "folder": "Surroundings of Volokolamsk",
       "variations": [
         {
           "mode": "domination",
@@ -543,6 +634,8 @@
     {
       "name": "Sweden",
       "aliases": "스웨덴",
+      "slug": "sweden",
+      "updated": "2026-08-16",
       "folder": "Sweden",
       "variations": [
         {
@@ -554,6 +647,8 @@
     {
       "name": "Test Site-2271",
       "aliases": "2271호 실험시설",
+      "slug": "test-site-2271",
+      "updated": "2026-08-16",
       "folder": "Test Site-2271",
       "variations": [
         {
@@ -565,6 +660,8 @@
     {
       "name": "Vietnam",
       "aliases": "베트남",
+      "slug": "vietnam",
+      "updated": "2026-08-16",
       "folder": "Vietnam",
       "variations": [
         {
@@ -576,6 +673,8 @@
     {
       "name": "White Rock Fortress",
       "aliases": "백암요새",
+      "slug": "white-rock-fortress",
+      "updated": "2026-08-16",
       "folder": "White Rock Fortress",
       "variations": [
         {

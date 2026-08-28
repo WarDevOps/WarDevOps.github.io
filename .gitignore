@@ -6,3 +6,6 @@
 /scripts/import-map-tactics.py
 /scripts/LOCAL_TACTICAL_AUTOMATION.md
 /scripts/__pycache__/
+
+# Map detail pages are generated from index.html and map metadata during deployment.
+/maps/

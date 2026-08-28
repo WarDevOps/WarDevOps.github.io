@@ -8,11 +8,14 @@ The map list is generated from the folders under `img/`.
 
 1. Create `img/<English map name>/`.
 2. Add `Red.png` and `Blue.png` to that folder.
-3. Commit and push the images.
+3. Add the Korean label and the map-specific `updated` date (`YYYY-MM-DD`) to
+   `assets/data/map-metadata.json`.
+4. Commit and push the images and metadata.
 
 The `Build map catalog and deploy Pages` GitHub Actions workflow scans the
-folders, generates `assets/data/map-catalog.json` in its deployment workspace,
-and publishes the complete site. It does not create a bot commit. The site
+folders, generates `assets/data/map-catalog.json`, physical map pages under
+`/maps/<map-slug>/`, and `sitemap.xml` in its deployment workspace, then
+publishes the complete site. It does not create a bot commit. The site
 loads that catalog directly, so `data.js`, `app.js`, and `index.html` do not
 need to be edited for each new map.
 
@@ -21,9 +24,10 @@ After committing this automation for the first time, set the repository's
 The repository currently uses the legacy `main / (root)` source, which cannot
 deploy a catalog commit created with `GITHUB_TOKEN`.
 
-Korean display names are optional. Add a matching entry to
-`assets/data/map-metadata.json`; otherwise the English folder name is used in
-both languages.
+Every usable map requires an `updated` date in `assets/data/map-metadata.json`.
+Korean display names remain optional; without one, the English folder name is
+used in both languages. A stable `slug` can also be supplied when the generated
+URL should not follow the English name.
 
 Variation folders are detected automatically when they use names such as
 `Domination #2`, `Conquest #2`, or `Battle #2`. Put one Red PNG and one Blue

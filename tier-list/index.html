@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <base href="/">
+  <meta name="description" content="Build and export a War Thunder Ground Forces, aircraft, or helicopter tier list with WarDevOps.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#111719">
+  <meta name="google-adsense-account" content="ca-pub-7687032122626786">
+  <link rel="canonical" href="https://wardevops.github.io/tier-list/">
+  <link rel="icon" href="/icon/Favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="WarDevOps">
+  <meta property="og:title" content="War Thunder Tier List Maker | WarDevOps">
+  <meta property="og:description" content="Build and export your own War Thunder vehicle tier list.">
+  <meta property="og:url" content="https://wardevops.github.io/tier-list/">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="War Thunder Tier List Maker | WarDevOps">
+  <meta name="twitter:description" content="Build and export your own War Thunder vehicle tier list.">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7687032122626786" crossorigin="anonymous"></script>
+  <title>War Thunder Tier List Maker | WarDevOps</title>
+  <link rel="stylesheet" href="/assets/css/site.css?v=site-structure-20260828">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="WarDevOps MapTactic">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span class="brand-name"><span class="brand-owner">WarDevOps</span> <span class="brand-product">MAPTACTIC</span></span>
+    </a>
+    <nav class="primary-nav" aria-label="Primary navigation">
+      <a href="/">MAP LIBRARY</a>
+      <a href="/tier-list/" aria-current="page">TIER LIST</a>
+    </nav>
+    <div class="header-actions">
+      <div class="language-switch" aria-label="Language selection">
+        <button class="language-button" type="button" data-language="en" aria-pressed="true">EN</button>
+        <span class="language-divider" aria-hidden="true">|</span>
+        <button class="language-button" type="button" data-language="ko" aria-pressed="false">KR</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="tier-view" id="tier-content-view" aria-labelledby="tier-page-title">
+      <div class="hero tier-hero">
+        <p class="eyebrow" data-tier-text="tierEyebrow">WAR THUNDER · TIER LIST</p>
+        <h1 class="hero-title" id="tier-page-title"><span data-tier-text="tierTitleFirst">BUILD YOUR</span><br><em data-tier-text="tierTitleSecond">TIER LIST</em></h1>
+        <p class="hero-copy" data-tier-text="tierHeroCopy">Drag ground vehicle, aircraft, and helicopter cards to build your own tier list.</p>
+        <div class="tier-category-switch" aria-label="Tier list category" data-tier-aria="categoryNavigation">
+          <button class="tier-category-button" type="button" data-tier-category="tank" aria-pressed="true"><span data-tier-text="groundForces">GROUND FORCES</span> <small data-tier-text="tankShort">TANK</small></button>
+          <button class="tier-category-button" type="button" data-tier-category="air" aria-pressed="false"><span data-tier-text="aircraft">AIRCRAFT</span> <small data-tier-text="airShort">AIR</small></button>
+          <button class="tier-category-button" type="button" data-tier-category="heli" aria-pressed="false"><span data-tier-text="helicopters">HELICOPTERS</span> <small data-tier-text="heliShort">HELI</small></button>
+        </div>
+      </div>
+
+      <section class="tier-maker-shell" aria-labelledby="tier-template-title">
+        <header class="tier-maker-header">
+          <div>
+            <p class="tier-maker-kicker" id="tier-category-label">GROUND FORCES</p>
+            <h2 id="tier-template-title">Rank 8 - BR 12.7</h2>
+          </div>
+          <div class="tier-header-actions">
+            <button class="tier-export-button" id="tier-export" type="button" data-tier-text="saveExport">SAVE &amp; EXPORT</button>
+            <button class="tier-reset-button" id="tier-reset" type="button" data-tier-text="reset">RESET</button>
+          </div>
+        </header>
+
+        <p class="tier-instructions" data-tier-text="instructions">Drag a card, or select it and then choose a tier row.</p>
+        <div class="tier-board" aria-label="Tier board" data-tier-aria="tierBoard">
+          <div class="tier-row"><div class="tier-label tier-s" aria-hidden="true">S</div><div class="tier-dropzone" data-tier-zone="s" role="group" tabindex="0" aria-label="S tier"></div></div>
+          <div class="tier-row"><div class="tier-label tier-a" aria-hidden="true">A</div><div class="tier-dropzone" data-tier-zone="a" role="group" tabindex="0" aria-label="A tier"></div></div>
+          <div class="tier-row"><div class="tier-label tier-b" aria-hidden="true">B</div><div class="tier-dropzone" data-tier-zone="b" role="group" tabindex="0" aria-label="B tier"></div></div>
+          <div class="tier-row"><div class="tier-label tier-c" aria-hidden="true">C</div><div class="tier-dropzone" data-tier-zone="c" role="group" tabindex="0" aria-label="C tier"></div></div>
+          <div class="tier-row"><div class="tier-label tier-d" aria-hidden="true">D</div><div class="tier-dropzone" data-tier-zone="d" role="group" tabindex="0" aria-label="D tier"></div></div>
+        </div>
+
+        <section class="tier-card-bank" aria-label="Unit filters" data-tier-aria="unitFilters">
+          <div class="tier-filter-bar">
+            <div class="tier-country-filters" id="tier-country-filters" role="group" aria-label="Country filter" data-tier-aria="countryFilter"></div>
+            <div class="tier-rank-filter">
+              <label for="tier-rank-select" data-tier-text="rankFilter">Rank</label>
+              <select id="tier-rank-select" aria-label="Rank filter" data-tier-aria="rankFilter"></select>
+            </div>
+            <div class="tier-br-filter" role="group" aria-label="BR range" data-tier-aria="brFilter">
+              <label for="tier-br-min" data-tier-text="brFilter">BR</label>
+              <input class="tier-br-input" id="tier-br-min" type="text" inputmode="decimal" maxlength="4" autocomplete="off" spellcheck="false" aria-label="Minimum BR" data-tier-aria="brMinimum">
+              <span class="tier-br-separator" aria-hidden="true">~</span>
+              <input class="tier-br-input" id="tier-br-max" type="text" inputmode="decimal" maxlength="4" autocomplete="off" spellcheck="false" aria-label="Maximum BR" data-tier-aria="brMaximum">
+            </div>
+            <span class="tier-unit-count" id="tier-unit-count"></span>
+          </div>
+          <div class="tier-class-filter-row">
+            <span class="tier-class-filter-label" data-tier-text="unitClassLabel">CLASS</span>
+            <div class="tier-class-filters" id="tier-class-filters" role="group" aria-label="Unit class filter" data-tier-aria="unitClassFilter"></div>
+          </div>
+          <div class="tier-card-pool tier-dropzone" id="tier-card-pool" data-tier-zone="pool" role="group" tabindex="0" aria-label="Filtered units" data-tier-aria="filteredUnits"></div>
+        </section>
+
+        <p class="tier-save-status" id="tier-save-status" role="status" aria-live="polite"></p>
+      </section>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-community">
+      <a class="community-link" href="https://discord.gg/mXvjd9MKyV" target="_blank" rel="noopener noreferrer">
+        <img src="/icon/Discord_Small.png" alt="" width="22" height="22">
+        <span data-page-i18n="joinCommunity">Join the WarDevOps community</span>
+        <span class="member-count" id="discord-member-count" aria-live="polite"></span>
+      </a>
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle light mode">LIGHT</button>
+    </div>
+    <nav class="footer-links" aria-label="Legal and privacy links">
+      <a href="/privacy/">Privacy Policy / 개인정보 처리방침</a>
+      <button type="button" data-consent-settings>Privacy &amp; cookie settings / 개인정보 및 쿠키 설정</button>
+    </nav>
+    <p class="consent-settings-status" data-consent-status role="status" aria-live="polite" hidden></p>
+    <p data-page-i18n="copyright">© 2026 WarDevOps &amp; 부릉부릉. All Rights Reserved.</p>
+    <p data-page-i18n="copyrightNotice">All content on this website, including text, images, graphics, and other materials, is the property of the site owner. Unauthorized reproduction, distribution, or use is prohibited.</p>
+  </footer>
+
+  <script type="module" src="/assets/js/tier-page.js?v=20260828"></script>
+  <script type="module" src="/assets/js/tier-maker.js?v=separate-page-20260828"></script>
+  <script type="module" src="/assets/js/consent-controls.js?v=20260828"></script>
+</body>
+</html>

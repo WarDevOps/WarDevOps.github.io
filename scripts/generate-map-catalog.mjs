@@ -10,6 +10,9 @@ const REPO_ROOT = path.resolve(SCRIPT_DIR, "..");
 const IMG_ROOT = path.join(REPO_ROOT, "img");
 const METADATA_PATH = path.join(REPO_ROOT, "assets", "data", "map-metadata.json");
 const OUTPUT_PATH = path.join(REPO_ROOT, "assets", "data", "map-catalog.json");
+const ROOT_PAGE_PATH = path.join(REPO_ROOT, "index.html");
+const MAP_ROUTE_ROOT = path.join(REPO_ROOT, "maps");
+const SITEMAP_PATH = path.join(REPO_ROOT, "sitemap.xml");
 const VARIATION_FOLDER_PATTERN = /^(domination|conquest|battle)\s*#(\d+)$/i;
 const MODE_ORDER = Object.freeze({ domination: 0, conquest: 1, battle: 2 });
 const CHECK_ONLY = process.argv.includes("--check");
@@ -17,6 +20,28 @@ const WATCH_MODE = process.argv.includes("--watch");
 
 function toPosix(value) {
   return value.split(path.sep).join("/");
+}
+
+function mapSlug(value) {
+  return value
+    .normalize("NFKD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/&/g, " and ")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
+
+function escapeHtml(value) {
+  return String(value)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;");
+}
+
+function encodeUrlPath(value) {
+  return toPosix(value).split("/").map(encodeURIComponent).join("/");
 }
 
 function safeImageFolder(relativeFolder) {
@@ -129,7 +154,15 @@ async function discoverMap(folderName, metadata) {
   if (mapMetadata.disabled) return null;
   const name = mapMetadata.en || folderName;
   const aliases = mapMetadata.ko || name;
+  const slug = mapMetadata.slug || mapSlug(name);
+  const updated = String(mapMetadata.updated || "");
   const defaultMode = String(mapMetadata.defaultMode || "domination").toLowerCase();
+  if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(slug)) {
+    throw new Error(`Invalid map slug for ${folderName}: ${slug}`);
+  }
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(updated)) {
+    throw new Error(`Missing or invalid updated date for ${folderName}`);
+  }
   if (!Object.hasOwn(MODE_ORDER, defaultMode)) {
     throw new Error(`Invalid default mode for ${folderName}: ${defaultMode}`);
   }
@@ -162,6 +195,8 @@ async function discoverMap(folderName, metadata) {
   return {
     name,
     aliases,
+    slug,
+    updated,
     folder: folderName,
     variations: variations.map(variation => compactVariation(variation, folderName))
   };
@@ -181,6 +216,8 @@ async function buildCatalog() {
 
   const collator = new Intl.Collator("en", { numeric: true, sensitivity: "base" });
   maps.sort((left, right) => collator.compare(left.name, right.name));
+  const duplicateSlugs = maps.map(map => map.slug).filter((slug, index, slugs) => slugs.indexOf(slug) !== index);
+  if (duplicateSlugs.length) throw new Error(`Duplicate map slugs: ${[...new Set(duplicateSlugs)].join(", ")}`);
   const unknownTranslations = maps.filter(map => map.aliases === map.name && !metadata.maps?.[map.folder]?.ko);
   const registeredFolders = new Set(maps.map(map => map.folder));
   const unusedMetadata = Object.keys(metadata.maps).filter(folder => !registeredFolders.has(folder) && !metadata.maps[folder].disabled);
@@ -189,6 +226,63 @@ async function buildCatalog() {
     unknownTranslations,
     unusedMetadata
   };
+}
+
+function replacePageValue(source, pattern, replacement, label) {
+  if (!pattern.test(source)) throw new Error(`Map route template is missing ${label}`);
+  return source.replace(pattern, replacement);
+}
+
+function mapPreviewUrl(map) {
+  const variation = map.variations[0];
+  const folder = variation.folder || map.folder;
+  const image = variation.sharedImage || variation.teamImages?.Red || "Red.png";
+  return `https://wardevops.github.io/img/${encodeUrlPath(folder)}/${encodeURIComponent(image)}`;
+}
+
+function renderMapRoutePage(rootPage, map) {
+  const title = `${escapeHtml(map.name)} Tactical Map | WarDevOps MapTactic`;
+  const description = `Explore the ${escapeHtml(map.name)} tactical map, team positions, routes, markers, and key combat areas for War Thunder Ground Battles.`;
+  const canonical = `https://wardevops.github.io/maps/${map.slug}/`;
+  const preview = mapPreviewUrl(map);
+  let page = rootPage;
+  page = replacePageValue(page, /<meta name="description" content="[^"]*">/, `<meta name="description" content="${description}">`, "description");
+  page = replacePageValue(page, /<link rel="canonical" href="[^"]*">/, `<link rel="canonical" href="${canonical}">`, "canonical URL");
+  page = replacePageValue(page, /<meta property="og:title" content="[^"]*">/, `<meta property="og:title" content="${title}">`, "Open Graph title");
+  page = replacePageValue(page, /<meta property="og:description" content="[^"]*">/, `<meta property="og:description" content="${description}">`, "Open Graph description");
+  page = replacePageValue(page, /<meta property="og:url" content="[^"]*">/, `<meta property="og:url" content="${canonical}">`, "Open Graph URL");
+  page = replacePageValue(page, /<meta property="og:image" content="[^"]*">/, `<meta property="og:image" content="${preview}">`, "Open Graph image");
+  page = replacePageValue(page, /<meta property="og:image:alt" content="[^"]*">/, `<meta property="og:image:alt" content="${escapeHtml(map.name)} tactical map">`, "Open Graph image alt");
+  page = replacePageValue(page, /<meta name="twitter:title" content="[^"]*">/, `<meta name="twitter:title" content="${title}">`, "X title");
+  page = replacePageValue(page, /<meta name="twitter:description" content="[^"]*">/, `<meta name="twitter:description" content="${description}">`, "X description");
+  page = replacePageValue(page, /<meta name="twitter:image" content="[^"]*">/, `<meta name="twitter:image" content="${preview}">`, "X image");
+  page = replacePageValue(page, /<title>[^<]*<\/title>/, `<title>${title}</title>`, "document title");
+  return page;
+}
+
+function renderSitemap(maps) {
+  const staticRoutes = [
+    { url: "https://wardevops.github.io/", updated: "2026-08-28" },
+    { url: "https://wardevops.github.io/tier-list/", updated: "2026-08-28" },
+    { url: "https://wardevops.github.io/privacy/", updated: "2026-08-28" }
+  ];
+  const routes = [...staticRoutes, ...maps.map(map => ({
+    url: `https://wardevops.github.io/maps/${map.slug}/`,
+    updated: map.updated
+  }))];
+  const entries = routes.map(route => `  <url>\n    <loc>${route.url}</loc>\n    <lastmod>${route.updated}</lastmod>\n  </url>`).join("\n");
+  return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${entries}\n</urlset>\n`;
+}
+
+async function writeSiteArtifacts(payload) {
+  const rootPage = await fs.readFile(ROOT_PAGE_PATH, "utf8");
+  for (const map of payload.maps) {
+    const routeFolder = path.join(MAP_ROUTE_ROOT, map.slug);
+    await fs.mkdir(routeFolder, { recursive: true });
+    await fs.writeFile(path.join(routeFolder, "index.html"), renderMapRoutePage(rootPage, map), "utf8");
+  }
+  await fs.writeFile(SITEMAP_PATH, renderSitemap(payload.maps), "utf8");
+  console.log(`Generated ${payload.maps.length} map routes and sitemap.xml.`);
 }
 
 async function generate() {
@@ -215,6 +309,8 @@ async function generate() {
   } else {
     console.log(`Map catalog is unchanged (${payload.maps.length} maps).`);
   }
+
+  if (!CHECK_ONLY) await writeSiteArtifacts(payload);
 
   if (unknownTranslations.length) {
     console.warn(`Korean name fallback: ${unknownTranslations.map(map => map.name).join(", ")}`);

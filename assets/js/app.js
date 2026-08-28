@@ -36,6 +36,7 @@ import { initDiscordMemberCount } from './discord-stats.js';
     const mapOverlayLayer = $("#map-overlay-layer");
     const markerLayer = $("#marker-layer");
     const annotationLayer = $("#annotation-layer");
+    const legendGroups = [...document.querySelectorAll("[data-legend-group]")];
     const legendItems = Array.from(document.querySelectorAll(".legend-list .legend-item"));
     const toggleEditor = $("#toggle-editor");
     const saveMarkerLayout = $("#save-marker-layout");
@@ -46,6 +47,8 @@ import { initDiscordMemberCount } from './discord-stats.js';
     const resetAllMarkers = $("#reset-all-markers");
     const markerStatus = $("#marker-status");
     const markerEditorNote = $("#marker-editor-note");
+    const mapLastUpdated = $("#map-last-updated");
+    const editorActions = [...document.querySelectorAll("[data-editor-action]")];
     const markerContextMenu = $("#marker-context-menu");
     const annotationContextMenu = $("#annotation-context-menu");
     const markerTypes = new Map();
@@ -63,7 +66,7 @@ import { initDiscordMemberCount } from './discord-stats.js';
     commentImages.forEach(image => {
       const hasSafePath = typeof image?.path === "string" && /^img\/(?:[^/]+\/)*scr_[^/]+\.png$/.test(image.path) && !image.path.split("/").some(part => part === "." || part === "..");
       if (typeof image?.id !== "string" || !image.id || image.id.length > 240 || typeof image.label !== "string" || image.label.length > 240 || !hasSafePath || COMMENT_IMAGES_BY_ID.has(image.id)) return;
-      COMMENT_IMAGES_BY_ID.set(image.id, Object.freeze({ id: image.id, path: image.path, label: image.label }));
+      COMMENT_IMAGES_BY_ID.set(image.id, Object.freeze({ id: image.id, path: `/${image.path}`, label: image.label }));
     });
     const COMMENT_IMAGES = Object.freeze([...COMMENT_IMAGES_BY_ID.values()]);
     const ANNOTATION_TYPES = new Set(["aimHere", "route"]);
@@ -112,16 +115,16 @@ import { initDiscordMemberCount } from './discord-stats.js';
       "antiAirRed"
     ]);
     const ROLE_MARKER_TYPES = new Set(["battleLine", "highRiskSpot", "sniper", "spawnKill"]);
-    const SPECIAL_MARKER_MAP_NAMES = new Set(["Surrounding of Volokolamsk", "Arctic Polar Base", "Arctic Pier"]);
+    const SPECIAL_MARKER_MAP_NAMES = new Set(["Surroundings of Volokolamsk", "Arctic Polar Base", "Arctic Pier"]);
     const SPECIAL_TANK_ICON_PATHS = Object.freeze({
-      lightTank: { Red: "Legend/lt w r.png", Blue: "Legend/lt w b.png" },
-      lightTankRed: { Red: "Legend/lt w r.png", Blue: "Legend/lt w b.png" },
-      mainBattleTank: { Red: "Legend/mbt w r.png", Blue: "Legend/mbt w b.png" },
-      mainBattleTankRed: { Red: "Legend/mbt w r.png", Blue: "Legend/mbt w b.png" },
-      tankDestroyer: { Red: "Legend/td w r.png", Blue: "Legend/td w b.png" },
-      tankDestroyerRed: { Red: "Legend/td w r.png", Blue: "Legend/td w b.png" },
-      antiAir: { Red: "Legend/aa w r.png", Blue: "Legend/aa w b.png" },
-      antiAirRed: { Red: "Legend/aa w r.png", Blue: "Legend/aa w b.png" }
+      lightTank: { Red: "/Legend/lt w r.png", Blue: "/Legend/lt w b.png" },
+      lightTankRed: { Red: "/Legend/lt w r.png", Blue: "/Legend/lt w b.png" },
+      mainBattleTank: { Red: "/Legend/mbt w r.png", Blue: "/Legend/mbt w b.png" },
+      mainBattleTankRed: { Red: "/Legend/mbt w r.png", Blue: "/Legend/mbt w b.png" },
+      tankDestroyer: { Red: "/Legend/td w r.png", Blue: "/Legend/td w b.png" },
+      tankDestroyerRed: { Red: "/Legend/td w r.png", Blue: "/Legend/td w b.png" },
+      antiAir: { Red: "/Legend/aa w r.png", Blue: "/Legend/aa w b.png" },
+      antiAirRed: { Red: "/Legend/aa w r.png", Blue: "/Legend/aa w b.png" }
     });
     // Role markers are attached from a tank marker's context menu, never placed directly.
     const PLACEMENT_DISABLED_MARKER_TYPES = new Set([
@@ -146,6 +149,27 @@ import { initDiscordMemberCount } from './discord-stats.js';
       markerTypes.set(label.dataset.i18n, { icon: icon.getAttribute("src") });
     });
     const markerLayout = loadMarkerLayout(MARKER_STORAGE_KEY);
+    const LEGACY_MAP_NAMES = new Map([
+      ["38 Parallel", "38th Parallel"],
+      ["Aredennes", "Ardennes"],
+      ["Ash river", "Ash River"],
+      ["Battle of Hurtgen Forest", "Battle of Hürtgen Forest"],
+      ["Sand of Sinai", "Sands of Sinai"],
+      ["Surrounding of Volokolamsk", "Surroundings of Volokolamsk"]
+    ]);
+    ["markers", "annotations"].forEach(section => {
+      if (!markerLayout[section] || typeof markerLayout[section] !== "object" || Array.isArray(markerLayout[section])) return;
+      Object.entries(markerLayout[section]).forEach(([key, value]) => {
+        const separator = key.indexOf("::");
+        if (separator < 0) return;
+        const currentName = key.slice(0, separator);
+        const correctedName = LEGACY_MAP_NAMES.get(currentName);
+        if (!correctedName) return;
+        const correctedKey = `${correctedName}${key.slice(separator)}`;
+        if (!(correctedKey in markerLayout[section])) markerLayout[section][correctedKey] = value;
+        delete markerLayout[section][key];
+      });
+    });
     const validMarkerLayoutKeys = new Set(maps.flatMap(map => map.variations.flatMap(variation => ["Red", "Blue"].map(team => `${map.name}::${variation.id}|${team}`))));
 
     function t(key) {
@@ -192,10 +216,42 @@ import { initDiscordMemberCount } from './discord-stats.js';
       themeToggle.textContent = t(isLight ? "darkTheme" : "lightTheme");
       themeToggle.setAttribute("aria-label", t(isLight ? "switchToDarkTheme" : "switchToLightTheme"));
     }
+    function updateMapDocumentMetadata() {
+      if (!state.selected) return;
+      const pageTitle = `${state.selected.name} War Thunder Map Guide | WarDevOps`;
+      const pageDescription = `Explore key engagement areas and movement routes for ${state.selected.name} in War Thunder Ground Battles.`;
+      const canonicalUrl = `https://wardevops.github.io/maps/${state.selected.slug}/`;
+      const previewUrl = `https://wardevops.github.io${mapPath(state.selected, state.team)}`;
+      document.title = pageTitle;
+      document.querySelector('meta[name="description"]').setAttribute("content", pageDescription);
+      document.querySelector('link[rel="canonical"]').setAttribute("href", canonicalUrl);
+      document.querySelector('meta[property="og:title"]').setAttribute("content", pageTitle);
+      document.querySelector('meta[property="og:description"]').setAttribute("content", pageDescription);
+      document.querySelector('meta[property="og:url"]').setAttribute("content", canonicalUrl);
+      document.querySelector('meta[property="og:image"]').setAttribute("content", previewUrl);
+      document.querySelector('meta[name="twitter:title"]').setAttribute("content", pageTitle);
+      document.querySelector('meta[name="twitter:description"]').setAttribute("content", pageDescription);
+      document.querySelector('meta[name="twitter:image"]').setAttribute("content", previewUrl);
+    }
+    function updateLibraryDocumentMetadata() {
+      document.title = t("pageTitle");
+      document.querySelector('meta[name="description"]').setAttribute("content", t("metaDescription"));
+      document.querySelector('link[rel="canonical"]').setAttribute("href", "https://wardevops.github.io/");
+      document.querySelector('meta[property="og:title"]').setAttribute("content", "WarDevOps | War Thunder Map Tactic");
+      document.querySelector('meta[property="og:description"]').setAttribute("content", t("metaDescription"));
+      document.querySelector('meta[property="og:url"]').setAttribute("content", "https://wardevops.github.io/");
+      document.querySelector('meta[property="og:image"]').setAttribute("content", "https://wardevops.github.io/img/38th%20Parallel/38th%20Parallel.png");
+      document.querySelector('meta[name="twitter:title"]').setAttribute("content", "WarDevOps | War Thunder Map Tactic");
+      document.querySelector('meta[name="twitter:description"]').setAttribute("content", t("metaDescription"));
+      document.querySelector('meta[name="twitter:image"]').setAttribute("content", "https://wardevops.github.io/img/38th%20Parallel/38th%20Parallel.png");
+    }
     function updateSelectedMapDetails() {
       if (!state.selected) return;
       $("#selected-map-name").textContent = mapLabel(state.selected);
       mapImage.alt = `${mapLabel(state.selected)} ${mapVariationLabel(state.selected)} ${state.team}`;
+      mapLastUpdated.dateTime = state.selected.updated;
+      mapLastUpdated.textContent = state.selected.updated;
+      if (/^\/maps\/[^/]+\/?$/.test(window.location.pathname)) updateMapDocumentMetadata();
       renderMapVariationSelect();
     }
     function setLanguage(language) {
@@ -264,7 +320,7 @@ import { initDiscordMemberCount } from './discord-stats.js';
       return path.split("/").map(segment => encodeURIComponent(segment)).join("/");
     }
     function mapOverlayPath(map, file) {
-      return `img/${encodeAssetPath(map.folder)}/${encodeURIComponent(file)}`;
+      return `/img/${encodeAssetPath(map.folder)}/${encodeURIComponent(file)}`;
     }
     function mapOverlayIdentity(map, file) {
       return `${map.folder}|${file}`;
@@ -397,15 +453,25 @@ import { initDiscordMemberCount } from './discord-stats.js';
     }
     function buildModalLegend() {
       modalLegendList.replaceChildren();
-      legendItems.forEach(source => {
-        const item = source.cloneNode(true);
-        item.classList.add("modal-legend-item");
-        const placementEnabled = isLegendPlacementEnabled(item.dataset.markerType);
-        item.draggable = state.editMode && placementEnabled;
-        item.classList.toggle("is-placement-disabled", state.editMode && !placementEnabled && !isDrawingTool(item.dataset.markerType));
-        item.setAttribute("aria-disabled", String(state.editMode && !placementEnabled && !isDrawingTool(item.dataset.markerType)));
-        bindLegendItem(item);
-        modalLegendList.append(item);
+      legendGroups.forEach(sourceGroup => {
+        const group = document.createElement("details");
+        group.className = "legend-group";
+        group.open = sourceGroup.open;
+        group.append(sourceGroup.querySelector("summary").cloneNode(true));
+        const list = document.createElement("ul");
+        list.className = "legend-list";
+        sourceGroup.querySelectorAll(".legend-item").forEach(source => {
+          const item = source.cloneNode(true);
+          item.classList.add("modal-legend-item");
+          const placementEnabled = isLegendPlacementEnabled(item.dataset.markerType);
+          item.draggable = state.editMode && placementEnabled;
+          item.classList.toggle("is-placement-disabled", state.editMode && !placementEnabled && !isDrawingTool(item.dataset.markerType));
+          item.setAttribute("aria-disabled", String(state.editMode && !placementEnabled && !isDrawingTool(item.dataset.markerType)));
+          bindLegendItem(item);
+          list.append(item);
+        });
+        group.append(list);
+        modalLegendList.append(group);
       });
       updateLegendVisibility();
     }
@@ -740,22 +806,23 @@ import { initDiscordMemberCount } from './discord-stats.js';
         return;
       }
       const points = routePoints(annotation);
+      let routeOffset = 0;
       for (let index = 1; index < points.length; index += 1) {
-        renderAnnotationSegment(layer, {
+        routeOffset += renderAnnotationSegment(layer, {
           ...annotation,
           startX: points[index - 1].x,
           startY: points[index - 1].y,
           endX: points[index].x,
           endY: points[index].y
-        }, isPreview);
+        }, isPreview, routeOffset);
       }
     }
-    function renderAnnotationSegment(layer, annotation, isPreview = false) {
+    function renderAnnotationSegment(layer, annotation, isPreview = false, routeOffset = 0) {
       const startX = Number(annotation.startX);
       const startY = Number(annotation.startY);
       const endX = Number(annotation.endX);
       const endY = Number(annotation.endY);
-      if (![startX, startY, endX, endY].every(Number.isFinite)) return;
+      if (![startX, startY, endX, endY].every(Number.isFinite)) return 0;
       const width = layer.clientWidth;
       const height = layer.clientHeight;
       const mapScale = Math.min(width, height) / MAP_DRAWING_REFERENCE_SIZE;
@@ -764,7 +831,7 @@ import { initDiscordMemberCount } from './discord-stats.js';
       const toX = (endX / 100) * width;
       const toY = (endY / 100) * height;
       const length = Math.hypot(toX - fromX, toY - fromY);
-      if (length < 1) return;
+      if (length < 1) return length;
       const angle = Math.atan2(toY - fromY, toX - fromX) * (180 / Math.PI);
       const drawing = document.createElement("button");
       drawing.type = "button";
@@ -802,8 +869,10 @@ import { initDiscordMemberCount } from './discord-stats.js';
         drawing.style.height = `${strokeWidth}px`;
         drawing.style.top = `${fromY - (strokeWidth / 2)}px`;
         drawing.style.transformOrigin = `0 ${strokeWidth / 2}px`;
+        drawing.style.backgroundPositionX = `${-routeOffset}px`;
       }
       layer.append(drawing);
+      return length;
     }
     function renderAnnotationLayer(layer, image) {
       layer.replaceChildren();
@@ -922,6 +991,9 @@ import { initDiscordMemberCount } from './discord-stats.js';
       modalToggleEditor.textContent = editorLabel;
       markerEditorNote.textContent = editorNote;
       modalMarkerEditorNote.textContent = editorNote;
+      markerEditorNote.hidden = !state.editMode;
+      modalMarkerEditorNote.hidden = !state.editMode;
+      editorActions.forEach(action => { action.hidden = !state.editMode; });
       allLegendItems().forEach(item => {
         const placementEnabled = isLegendPlacementEnabled(item.dataset.markerType);
         const drawingTool = isDrawingTool(item.dataset.markerType);
@@ -1070,7 +1142,7 @@ import { initDiscordMemberCount } from './discord-stats.js';
 
     function mapPath(map, team) {
       const image = map.sharedImage || map.teamImages?.[team] || `${team}.png`;
-      return `img/${encodeAssetPath(map.folder)}/${encodeURIComponent(image)}`;
+      return `/img/${encodeAssetPath(map.folder)}/${encodeURIComponent(image)}`;
     }
     function visibleMaps() {
       const term = state.query.trim().toLocaleLowerCase("ko");
@@ -1086,18 +1158,18 @@ import { initDiscordMemberCount } from './discord-stats.js';
       mapList.innerHTML = displayed.map(map => {
         const selectedVariation = state.selected?.name === map.name ? state.selected : expandMapVariation(map);
         return `
-        <button class="map-card ${state.selected?.name === map.name ? "active" : ""}" type="button" data-map="${map.name}">
+        <a class="map-card ${state.selected?.name === map.name ? "active" : ""}" href="/maps/${map.slug}/" data-map="${map.name}">
           <span class="map-card-content"><span class="map-card-name">${mapLabel(map)}</span><span class="map-variation-tag">${mapVariationLabel(selectedVariation)}</span></span><span class="map-card-arrow" aria-hidden="true">→</span>
-        </button>`;
+        </a>`;
       }).join("");
     }
-    function updateUrl() {
+    function updateUrl(historyMode = "replace") {
       if (!state.selected) return;
-      const url = new URL(window.location);
-      url.searchParams.set("map", state.selected.name);
-      url.searchParams.set("variation", state.selected.variationId);
-      url.searchParams.set("team", state.team.toLowerCase());
-      window.history.replaceState({}, "", url);
+      const url = new URL(`/maps/${state.selected.slug}/`, window.location.origin);
+      if (state.selected.variationId !== state.selected.variations[0].id) url.searchParams.set("variation", state.selected.variationId);
+      if (state.team === "Blue") url.searchParams.set("team", "blue");
+      window.history[`${historyMode}State`]({}, "", url);
+      updateMapDocumentMetadata();
     }
     function setModalMapSource() {
       if (!state.selected) return;
@@ -1109,7 +1181,7 @@ import { initDiscordMemberCount } from './discord-stats.js';
       modalImage.src = mapPath(state.selected, state.team);
       $("#modal-title").textContent = `${mapLabel(state.selected)} · ${mapVariationLabel(state.selected)} · ${state.team.toUpperCase()} ${t("teamLabel")}`;
     }
-    function selectMap(map, team = state.team, variationId) {
+    function selectMap(map, team = state.team, variationId, { historyMode = "replace", syncUrl = true } = {}) {
       const baseMap = findBaseMap(map);
       const preferredVariationId = variationId || (state.selected?.name === baseMap.name ? state.selected.variationId : null);
       cancelDrawing();
@@ -1131,17 +1203,29 @@ import { initDiscordMemberCount } from './discord-stats.js';
       mapImage.src = mapPath(state.selected, team);
       if (dialog.open) setModalMapSource();
       renderList();
-      updateUrl();
+      if (syncUrl) updateUrl(historyMode);
     }
     function setTeam(team) {
       if (state.selected) selectMap(state.selected, team);
     }
     function restoreFromUrl() {
       const params = new URLSearchParams(window.location.search);
-      const map = maps.find(item => item.name === params.get("map"));
+      const routeMatch = window.location.pathname.match(/^\/maps\/([^/]+)\/?$/);
+      const routeSlug = routeMatch ? decodeURIComponent(routeMatch[1]) : null;
+      const legacyName = params.get("map");
+      const correctedLegacyName = LEGACY_MAP_NAMES.get(legacyName) || legacyName;
+      const routeMap = maps.find(item => item.slug === routeSlug);
+      const legacyMap = maps.find(item => item.name === correctedLegacyName);
       const variationId = params.get("variation");
       const team = params.get("team")?.toLowerCase() === "blue" ? "Blue" : "Red";
-      selectMap(map || maps[0], team, variationId);
+      if (routeMap) {
+        selectMap(routeMap, team, variationId, { syncUrl: false });
+      } else if (legacyMap) {
+        selectMap(legacyMap, team, variationId);
+      } else {
+        updateLibraryDocumentMetadata();
+        selectMap(maps[0], team, variationId, { syncUrl: false });
+      }
     }
     function resetHiddenMarkersForCurrentMap() {
       const markerKey = currentMarkerKey();
@@ -1319,7 +1403,9 @@ import { initDiscordMemberCount } from './discord-stats.js';
     mapList.addEventListener("click", event => {
       const card = event.target.closest("[data-map]");
       if (!card) return;
-      selectMap(maps.find(map => map.name === card.dataset.map));
+      if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+      event.preventDefault();
+      selectMap(maps.find(map => map.name === card.dataset.map), state.team, undefined, { historyMode: "push" });
     });
     search.addEventListener("input", () => {
       state.query = search.value;
@@ -1394,6 +1480,7 @@ import { initDiscordMemberCount } from './discord-stats.js';
       modalMarkerLayer.replaceChildren();
     });
     window.addEventListener("resize", renderMarkers);
+    window.addEventListener("popstate", restoreFromUrl);
     mapImage.addEventListener("click", () => {
       if (!state.selected || mapImage.hidden) return;
       openMapModal();

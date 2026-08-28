@@ -65,6 +65,10 @@
     .brand-name { font-size: 1.05rem; font-weight: 800; letter-spacing: .04em; }
     .brand-owner { color: var(--ink); }
     .brand-product { color: var(--accent); }
+    .primary-nav { display: flex; align-items: center; justify-content: center; gap: 4px; margin-left: auto; }
+    .primary-nav a { padding: 9px 10px; border-radius: 8px; color: var(--muted); font-size: .72rem; font-weight: 850; letter-spacing: .055em; text-decoration: none; transition: color .18s, background .18s; }
+    .primary-nav a:hover, .primary-nav a:focus-visible { color: var(--ink); background: rgba(255,255,255,.05); }
+    .primary-nav a[aria-current="page"] { color: var(--accent); }
     .header-actions { display: flex; align-items: center; gap: 18px; }
     .squadron-link { display: inline-flex; align-items: center; gap: 7px; color: var(--muted); font-family: Arial, "Helvetica Neue", sans-serif; font-size: .72rem; font-weight: 650; letter-spacing: .01em; line-height: 1.2; text-decoration: none; white-space: nowrap; transition: color .18s; }
     .squadron-link:hover, .squadron-link:focus-visible { color: var(--accent); }
@@ -131,6 +135,7 @@
       background: transparent;
       color: var(--ink);
       text-align: left;
+      text-decoration: none;
       cursor: pointer;
       transition: background .16s, border-color .16s, transform .16s;
     }
@@ -164,6 +169,7 @@
     .marker-tool.primary, .marker-tool[aria-pressed="true"] { border-color: var(--accent); background: var(--accent); color: #171b1a; }
     .marker-status { min-height: 1.2em; color: var(--muted); font-size: .74rem; }
     .marker-editor-note { width: 100%; margin: 1px 0 0; color: var(--muted); font-size: .74rem; line-height: 1.45; }
+    [data-editor-action][hidden], .marker-editor-note[hidden], .modal-marker-editor-note[hidden] { display: none; }
     .map-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(208px, 245px); gap: 16px; align-items: start; padding: 0 clamp(12px, 3vw, 28px) 20px; }
     .map-stage { position: relative; min-height: 470px; display: grid; overflow: hidden; place-items: center; border: 1px solid var(--line); border-radius: 12px; background: #0d1111; }
     .map-enlarge-hint { position: absolute; right: 14px; bottom: 12px; z-index: 1; padding: 7px 9px; border: 1px solid rgba(255,255,255,.13); border-radius: 7px; background: rgba(10, 14, 13, .78); color: #d7ded9; font-size: .73rem; pointer-events: none; }
@@ -208,7 +214,11 @@
     .legend-panel { display: grid; height: var(--side-panel-height); min-height: 0; grid-template-rows: auto auto minmax(0, 1fr); border: 1px solid var(--line); border-radius: 12px; background: rgba(13, 19, 18, .82); overflow: hidden; }
     .legend-heading { margin: 0; padding: 14px 15px 11px; border-bottom: 1px solid var(--line); font-size: .88rem; letter-spacing: .02em; }
     .legend-note { margin: 0; padding: 0 15px 12px; color: var(--muted); font-size: .73rem; line-height: 1.45; }
-    .legend-list { display: grid; min-height: 0; gap: 2px; margin: 0; padding: 6px 7px 8px; overflow-x: hidden; overflow-y: auto; list-style: none; scrollbar-color: #52635d transparent; scrollbar-gutter: stable; }
+    .legend-groups { min-height: 0; padding: 7px; overflow-x: hidden; overflow-y: auto; scrollbar-color: #52635d transparent; scrollbar-gutter: stable; }
+    .legend-group { border-bottom: 1px solid rgba(154, 168, 162, .14); }
+    .legend-group:last-child { border-bottom: 0; }
+    .legend-group summary { padding: 10px 8px; color: var(--accent); font-size: .7rem; font-weight: 850; letter-spacing: .075em; text-transform: uppercase; cursor: pointer; }
+    .legend-list { display: grid; min-height: 0; gap: 2px; margin: 0; padding: 0 0 7px; list-style: none; }
     .legend-actions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; padding: 8px 10px; border-bottom: 1px solid var(--line); }
     .legend-actions .marker-tool, .modal-legend-actions .marker-tool { width: 100%; }
     .legend-item { display: flex; align-items: center; gap: 10px; min-height: 38px; padding: 5px 8px; border-radius: 7px; color: #d8e1db; font-size: .79rem; cursor: pointer; transition: opacity .18s, filter .18s, background .18s; }
@@ -375,6 +385,8 @@
     .modal-legend-region { grid-column: 2; grid-row: 1; min-width: 0; padding: 12px 10px; overflow: auto; border-left: 1px solid var(--line); background: rgba(13,19,18,.36); }
     .modal-legend-note { margin: 0 0 6px; color: var(--muted); font-size: .7rem; }
     .modal-legend-list { display: grid; gap: 2px; margin: 0; padding: 0; list-style: none; }
+    .modal-legend-list .legend-group summary { padding: 8px 5px; font-size: .65rem; }
+    .modal-legend-list .legend-list { padding-bottom: 5px; }
     .modal-legend-actions { display: grid; gap: 6px; margin-top: 8px; padding-top: 8px; border-top: 1px solid var(--line); }
     .modal-legend-list .legend-item { min-height: 34px; padding: 4px 7px; font-size: .72rem; }
     .modal-legend-list .legend-icon { flex-basis: 24px; width: 24px; height: 24px; }
@@ -391,13 +403,18 @@
     dialog.is-editing .modal-legend-list .legend-item.is-placement-disabled:hover { cursor: not-allowed; opacity: .48; outline: 0; }
 
     .site-footer { width: min(1240px, calc(100% - 40px)); padding: 0 0 30px; margin: 0 auto; color: #718079; font-size: .75rem; text-align: center; }
+    .footer-community { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 10px; margin-bottom: 18px; }
+    .community-link { display: inline-flex; align-items: center; gap: 8px; padding: 8px 11px; border: 1px solid var(--line); border-radius: 9px; color: var(--ink); font-weight: 750; text-decoration: none; transition: border-color .18s, color .18s; }
+    .community-link:hover, .community-link:focus-visible { border-color: var(--accent); color: var(--accent); }
+    .community-link img { display: block; object-fit: contain; }
+    .member-count { padding-left: 8px; border-left: 1px solid var(--line); color: var(--muted); font-variant-numeric: tabular-nums; }
+    .footer-links { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 8px 18px; margin-bottom: 18px; }
+    .footer-links a, .footer-links button { padding: 2px 0; border: 0; background: transparent; color: var(--muted); font: inherit; font-weight: 750; text-decoration: underline; text-decoration-color: rgba(154, 168, 162, .45); text-underline-offset: 3px; cursor: pointer; transition: color .18s, text-decoration-color .18s; }
+    .footer-links a:hover, .footer-links a:focus-visible, .footer-links button:hover, .footer-links button:focus-visible { color: var(--accent); text-decoration-color: currentColor; }
+    .consent-settings-status { max-width: 720px; margin: -8px auto 16px; color: var(--muted); line-height: 1.55; }
     @media (max-width: 760px) {
       .site-header, main, .site-footer { width: min(100% - 28px, 1240px); }
       .site-header { min-height: 64px; }
-      .squadron-link { width: auto; height: 30px; justify-content: center; padding: 5px; }
-      .squadron-link-label { display: none; }
-      .content-switcher { display: grid; width: 100%; grid-template-columns: 1fr 1fr; }
-      .content-switch-button { padding-inline: 8px; }
       .hero { padding-top: 48px; }
       .workspace { grid-template-columns: 1fr; }
       .map-index { height: min(70vh, 620px); }
@@ -432,6 +449,13 @@
       .tier-card-equipment-name { font-size: .58rem; }
       .tier-card-pool { min-height: 168px; }
     }
+    @media (max-width: 560px) {
+      .site-header { gap: 8px; }
+      .brand-name { display: none; }
+      .primary-nav { gap: 0; }
+      .primary-nav a { padding-inline: 7px; font-size: .65rem; }
+      .header-actions { gap: 6px; }
+    }
     @media (max-width: 430px) {
       h1 { font-size: 3rem; }
       .map-list { grid-template-columns: 1fr; }
@@ -439,10 +463,9 @@
       .team-switch { margin-top: 18px; }
       .team-button { min-width: 104px; }
       .legend-list { grid-template-columns: 1fr; }
-      .site-header { gap: 8px; }
-      .site-header { flex-wrap: wrap; justify-content: center; padding: 10px 0; }
-      .header-actions { width: 100%; justify-content: center; gap: 6px; }
-      .theme-toggle { padding: 8px; }
+      .site-header { flex-wrap: nowrap; justify-content: space-between; padding: 8px 0; }
+      .brand-mark { flex-basis: 30px; width: 30px; height: 30px; }
+      .language-button { padding-inline: 6px; }
       .modal-toolbar { align-items: flex-start; }
       .modal-toolbar-actions { gap: 5px; }
       .modal-team-switch .team-button { min-width: 58px; padding: 7px; }
