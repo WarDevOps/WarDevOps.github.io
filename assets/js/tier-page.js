@@ -2,7 +2,6 @@ import { initDiscordMemberCount } from "./discord-stats.js";
 
 const copy = {
   en: {
-    joinCommunity: "Join the WarDevOps community",
     copyright: "© 2026 WarDevOps & 부릉부릉. All Rights Reserved.",
     copyrightNotice: "All content on this website, including text, images, graphics, and other materials, is the property of the site owner. Unauthorized reproduction, distribution, or use is prohibited.",
     lightTheme: "LIGHT",
@@ -11,7 +10,6 @@ const copy = {
     switchToDarkTheme: "Switch to dark theme",
   },
   ko: {
-    joinCommunity: "WarDevOps 커뮤니티 참여",
     copyright: "© 2026 WarDevOps & 부릉부릉. 모든 권리 보유.",
     copyrightNotice: "이 웹사이트의 텍스트, 이미지, 그래픽 및 기타 모든 콘텐츠는 사이트 소유자의 자산입니다. 무단 복제, 배포 및 사용을 금합니다.",
     lightTheme: "라이트",

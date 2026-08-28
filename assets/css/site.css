@@ -465,7 +465,10 @@
       .legend-list { grid-template-columns: 1fr; }
       .site-header { flex-wrap: nowrap; justify-content: space-between; padding: 8px 0; }
       .brand-mark { flex-basis: 30px; width: 30px; height: 30px; }
+      .primary-nav a:first-child { font-size: 0; }
+      .primary-nav a:first-child::after { content: "MAPS"; font-size: .65rem; }
       .language-button { padding-inline: 6px; }
+      .theme-toggle { padding-inline: 7px; }
       .modal-toolbar { align-items: flex-start; }
       .modal-toolbar-actions { gap: 5px; }
       .modal-team-switch .team-button { min-width: 58px; padding: 7px; }

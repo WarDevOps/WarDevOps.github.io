@@ -83,7 +83,8 @@ import { initDiscordMemberCount } from './discord-stats.js';
       { type: "dangerArea", file: "DangerArea.png" },
       { type: "notRecommended", file: "NotRecommended.png" },
       { type: "antiAirArea", file: "AntiAirArea.png" },
-      { type: "spawnArea", file: "SpawnArea.png" }
+      { type: "spawnArea", file: "SpawnAreaBlue.png", team: "Blue" },
+      { type: "spawnArea", file: "SpawnAreaRed.png", team: "Red" }
     ]);
     const unavailableMapOverlayFiles = new Set();
     // Larger values render above smaller values. Equal-priority markers keep their placement order.
@@ -148,6 +149,7 @@ import { initDiscordMemberCount } from './discord-stats.js';
       item.tabIndex = 0;
       markerTypes.set(label.dataset.i18n, { icon: icon.getAttribute("src") });
     });
+    const validMapNames = new Set(maps.map(map => map.name));
     const markerLayout = loadMarkerLayout(MARKER_STORAGE_KEY);
     const LEGACY_MAP_NAMES = new Map([
       ["38 Parallel", "38th Parallel"],
@@ -170,6 +172,12 @@ import { initDiscordMemberCount } from './discord-stats.js';
         delete markerLayout[section][key];
       });
     });
+    const storedMapUpdated = markerLayout.mapUpdated;
+    markerLayout.mapUpdated = Object.fromEntries(maps.map(map => {
+      const legacyName = [...LEGACY_MAP_NAMES.entries()].find(([, correctedName]) => correctedName === map.name)?.[0];
+      const storedDate = storedMapUpdated?.[map.name] || (legacyName ? storedMapUpdated?.[legacyName] : null);
+      return [map.name, typeof storedDate === "string" && /^\d{4}-\d{2}-\d{2}$/.test(storedDate) ? storedDate : map.updated];
+    }));
     const validMarkerLayoutKeys = new Set(maps.flatMap(map => map.variations.flatMap(variation => ["Red", "Blue"].map(team => `${map.name}::${variation.id}|${team}`))));
 
     function t(key) {
@@ -249,8 +257,9 @@ import { initDiscordMemberCount } from './discord-stats.js';
       if (!state.selected) return;
       $("#selected-map-name").textContent = mapLabel(state.selected);
       mapImage.alt = `${mapLabel(state.selected)} ${mapVariationLabel(state.selected)} ${state.team}`;
-      mapLastUpdated.dateTime = state.selected.updated;
-      mapLastUpdated.textContent = state.selected.updated;
+      const mapUpdated = markerLayout.mapUpdated?.[state.selected.name] || state.selected.updated;
+      mapLastUpdated.dateTime = mapUpdated;
+      mapLastUpdated.textContent = mapUpdated;
       if (/^\/maps\/[^/]+\/?$/.test(window.location.pathname)) updateMapDocumentMetadata();
       renderMapVariationSelect();
     }
@@ -297,8 +306,19 @@ import { initDiscordMemberCount } from './discord-stats.js';
       markerStatus.textContent = message;
       modalMarkerStatus.textContent = message;
     }
-    function persistMarkerLayout(statusKey = "savedLocally") {
+    function localIsoDate() {
+      const now = new Date();
+      return new Date(now.getTime() - (now.getTimezoneOffset() * 60000)).toISOString().slice(0, 10);
+    }
+    function touchCurrentMapUpdated() {
+      if (!state.selected) return;
+      if (!markerLayout.mapUpdated || typeof markerLayout.mapUpdated !== "object" || Array.isArray(markerLayout.mapUpdated)) markerLayout.mapUpdated = {};
+      markerLayout.mapUpdated[state.selected.name] = localIsoDate();
+      updateSelectedMapDetails();
+    }
+    function persistMarkerLayout(statusKey = "savedLocally", { touchMap = false } = {}) {
       try {
+        if (touchMap) touchCurrentMapUpdated();
         saveMarkerLayoutToStorage(MARKER_STORAGE_KEY, markerLayout);
         setMarkerStatus(statusKey);
         return true;
@@ -326,7 +346,9 @@ import { initDiscordMemberCount } from './discord-stats.js';
       return `${map.folder}|${file}`;
     }
     function currentMapOverlays() {
-      return state.selected ? MAP_AREA_OVERLAYS : [];
+      return state.selected
+        ? MAP_AREA_OVERLAYS.filter(overlay => !overlay.team || overlay.team === state.team)
+        : [];
     }
     function isMarkerHidden(marker) {
       return hiddenMarkers.has(markerIdentity(marker)) || hiddenMarkerTypes.has(markerTypeIdentity(marker.type));
@@ -504,7 +526,7 @@ import { initDiscordMemberCount } from './discord-stats.js';
         markerLayout.annotations[currentMarkerKey()] = annotations.filter(annotation => !linkedAnnotationIds.has(annotation.id));
         [...linkedAnnotationIds].forEach(id => hiddenAnnotations.delete(`${currentMarkerKey()}|${id}`));
       }
-      persistMarkerLayout("markerDeleted");
+      persistMarkerLayout("markerDeleted", { touchMap: true });
       renderMarkers();
     }
     function hideAnnotation(annotation) {
@@ -518,13 +540,13 @@ import { initDiscordMemberCount } from './discord-stats.js';
       if (!annotation) return;
       markerLayout.annotations[currentMarkerKey()] = annotations.filter(item => item.id !== annotationId);
       hiddenAnnotations.delete(annotationIdentity(annotation));
-      persistMarkerLayout("drawingDeleted");
+      persistMarkerLayout("drawingDeleted", { touchMap: true });
       renderMarkers();
     }
     function toggleDangerRoute(annotation) {
       if (!annotation || annotation.type !== "route") return;
       annotation.dangerRoute = !annotation.dangerRoute;
-      persistMarkerLayout(annotation.dangerRoute ? "dangerRouteEnabled" : "dangerRouteDisabled");
+      persistMarkerLayout(annotation.dangerRoute ? "dangerRouteEnabled" : "dangerRouteDisabled", { touchMap: true });
       renderMarkers();
     }
     function applyRoleMarker(tankMarker, roleType) {
@@ -543,7 +565,7 @@ import { initDiscordMemberCount } from './discord-stats.js';
           parentTankId: tankMarker.id
         });
       }
-      persistMarkerLayout("roleMarkerApplied");
+      persistMarkerLayout("roleMarkerApplied", { touchMap: true });
       renderMarkers();
     }
     function resetCommentEditor(contextMenu) {
@@ -600,7 +622,7 @@ import { initDiscordMemberCount } from './discord-stats.js';
       else delete marker.comment;
       if (image) marker.commentImage = image.id;
       else delete marker.commentImage;
-      persistMarkerLayout(value || image ? "commentSaved" : "commentRemoved");
+      persistMarkerLayout(value || image ? "commentSaved" : "commentRemoved", { touchMap: true });
       renderMarkers();
     }
     function hideMarkerContextMenu() {
@@ -677,7 +699,7 @@ import { initDiscordMemberCount } from './discord-stats.js';
       currentAnnotations().push({ id: createLayoutId(), ...drawing });
       state.drawing = null;
       updateDrawingState();
-      persistMarkerLayout(drawing.type === "aimHere" ? "aimHereDrawn" : "routeDrawn");
+      persistMarkerLayout(drawing.type === "aimHere" ? "aimHereDrawn" : "routeDrawn", { touchMap: true });
       renderMarkers();
       return true;
     }
@@ -688,7 +710,7 @@ import { initDiscordMemberCount } from './discord-stats.js';
         currentAnnotations().push({ id: createLayoutId(), type: "route", points: drawing.points.map(point => ({ x: point.x, y: point.y })) });
         state.drawing = null;
         updateDrawingState();
-        persistMarkerLayout("routeDrawn");
+        persistMarkerLayout("routeDrawn", { touchMap: true });
         renderMarkers();
       } else {
         cancelDrawing();
@@ -1011,7 +1033,14 @@ import { initDiscordMemberCount } from './discord-stats.js';
       setMarkerStatus();
     }
     async function exportMarkerLayoutData() {
-      const exportData = { ...markerLayout, exportedAt: new Date().toISOString() };
+      const exportData = {
+        version: markerLayout.version,
+        mapUpdated: markerLayout.mapUpdated || {},
+        markers: markerLayout.markers,
+        annotations: markerLayout.annotations,
+        ...(markerLayout.updatedAt ? { updatedAt: markerLayout.updatedAt } : {}),
+        exportedAt: new Date().toISOString()
+      };
       const blob = new Blob([JSON.stringify(exportData, null, 2)], { type: "application/json" });
       if (typeof window.showSaveFilePicker === "function") {
         try {
@@ -1039,10 +1068,19 @@ import { initDiscordMemberCount } from './discord-stats.js';
       setMarkerStatus("exportedJson");
     }
     function validateImportedMarkerLayout(data) {
-      if (!data || typeof data !== "object" || Array.isArray(data) || data.version !== MARKER_LAYOUT_VERSION || !data.markers || typeof data.markers !== "object" || Array.isArray(data.markers) || (data.annotations !== undefined && (!data.annotations || typeof data.annotations !== "object" || Array.isArray(data.annotations)))) {
+      if (!data || typeof data !== "object" || Array.isArray(data) || data.version !== MARKER_LAYOUT_VERSION || !data.markers || typeof data.markers !== "object" || Array.isArray(data.markers) || (data.mapUpdated !== undefined && (!data.mapUpdated || typeof data.mapUpdated !== "object" || Array.isArray(data.mapUpdated))) || (data.annotations !== undefined && (!data.annotations || typeof data.annotations !== "object" || Array.isArray(data.annotations)))) {
         throw new Error("Invalid marker layout.");
       }
-      const layout = { version: MARKER_LAYOUT_VERSION, markers: {}, annotations: {} };
+      const layout = {
+        version: MARKER_LAYOUT_VERSION,
+        mapUpdated: Object.fromEntries(maps.map(map => [map.name, map.updated])),
+        markers: {},
+        annotations: {}
+      };
+      Object.entries(data.mapUpdated || {}).forEach(([mapName, updated]) => {
+        if (!validMapNames.has(mapName) || typeof updated !== "string" || !/^\d{4}-\d{2}-\d{2}$/.test(updated)) throw new Error("Invalid map update date.");
+        layout.mapUpdated[mapName] = updated;
+      });
       let markerCount = 0;
       Object.entries(data.markers).forEach(([key, markers]) => {
         if (!validMarkerLayoutKeys.has(key) || !Array.isArray(markers)) throw new Error("Invalid marker group.");
@@ -1107,6 +1145,7 @@ import { initDiscordMemberCount } from './discord-stats.js';
     }
     function applyMarkerLayout(importedLayout) {
       markerLayout.version = importedLayout.version;
+      markerLayout.mapUpdated = importedLayout.mapUpdated;
       markerLayout.markers = importedLayout.markers;
       markerLayout.annotations = importedLayout.annotations;
       delete markerLayout.updatedAt;
@@ -1116,6 +1155,7 @@ import { initDiscordMemberCount } from './discord-stats.js';
       hideMarkerContextMenu();
       hideAnnotationContextMenu();
       updateLegendVisibility();
+      updateSelectedMapDetails();
       renderMarkers();
     }
     async function importDefaultMarkerLayout() {
@@ -1326,7 +1366,7 @@ import { initDiscordMemberCount } from './discord-stats.js';
         } else {
           return;
         }
-        persistMarkerLayout();
+        persistMarkerLayout("savedLocally", { touchMap: true });
         renderMarkers();
       });
     }

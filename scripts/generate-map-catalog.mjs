@@ -9,6 +9,7 @@ const SCRIPT_DIR = path.dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = path.resolve(SCRIPT_DIR, "..");
 const IMG_ROOT = path.join(REPO_ROOT, "img");
 const METADATA_PATH = path.join(REPO_ROOT, "assets", "data", "map-metadata.json");
+const MAP_LAYOUT_PATH = path.join(REPO_ROOT, "assets", "data", "maptactic.json");
 const OUTPUT_PATH = path.join(REPO_ROOT, "assets", "data", "map-catalog.json");
 const ROOT_PAGE_PATH = path.join(REPO_ROOT, "index.html");
 const MAP_ROUTE_ROOT = path.join(REPO_ROOT, "maps");
@@ -146,7 +147,7 @@ function compactVariation(variation, rootFolder) {
   return result;
 }
 
-async function discoverMap(folderName, metadata) {
+async function discoverMap(folderName, metadata, mapUpdated) {
   const rootImages = await discoverMapImages(folderName, { requireExact: true, failOnPartial: true });
   if (!rootImages) return null;
 
@@ -155,13 +156,13 @@ async function discoverMap(folderName, metadata) {
   const name = mapMetadata.en || folderName;
   const aliases = mapMetadata.ko || name;
   const slug = mapMetadata.slug || mapSlug(name);
-  const updated = String(mapMetadata.updated || "");
+  const updated = String(mapUpdated?.[name] || "");
   const defaultMode = String(mapMetadata.defaultMode || "domination").toLowerCase();
   if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(slug)) {
     throw new Error(`Invalid map slug for ${folderName}: ${slug}`);
   }
   if (!/^\d{4}-\d{2}-\d{2}$/.test(updated)) {
-    throw new Error(`Missing or invalid updated date for ${folderName}`);
+    throw new Error(`Missing or invalid mapUpdated date in Maptatic.json for ${name}`);
   }
   if (!Object.hasOwn(MODE_ORDER, defaultMode)) {
     throw new Error(`Invalid default mode for ${folderName}: ${defaultMode}`);
@@ -203,14 +204,17 @@ async function discoverMap(folderName, metadata) {
 }
 
 async function buildCatalog() {
-  const metadata = await readJson(METADATA_PATH);
+  const [metadata, mapLayout] = await Promise.all([readJson(METADATA_PATH), readJson(MAP_LAYOUT_PATH)]);
   if (metadata.version !== 1 || !metadata.maps || typeof metadata.maps !== "object") {
     throw new Error("Unsupported map metadata format");
+  }
+  if (mapLayout.version !== 2 || !mapLayout.mapUpdated || typeof mapLayout.mapUpdated !== "object" || Array.isArray(mapLayout.mapUpdated)) {
+    throw new Error("Maptatic.json must contain a mapUpdated object");
   }
   const entries = await directoryEntries(IMG_ROOT);
   const maps = [];
   for (const entry of entries.filter(item => item.isDirectory())) {
-    const map = await discoverMap(entry.name, metadata);
+    const map = await discoverMap(entry.name, metadata, mapLayout.mapUpdated);
     if (map) maps.push(map);
   }
 
@@ -221,10 +225,13 @@ async function buildCatalog() {
   const unknownTranslations = maps.filter(map => map.aliases === map.name && !metadata.maps?.[map.folder]?.ko);
   const registeredFolders = new Set(maps.map(map => map.folder));
   const unusedMetadata = Object.keys(metadata.maps).filter(folder => !registeredFolders.has(folder) && !metadata.maps[folder].disabled);
+  const catalogMapNames = new Set(maps.map(map => map.name));
+  const unusedMapUpdates = Object.keys(mapLayout.mapUpdated).filter(name => !catalogMapNames.has(name));
   return {
     payload: { version: 1, maps },
     unknownTranslations,
-    unusedMetadata
+    unusedMetadata,
+    unusedMapUpdates
   };
 }
 
@@ -286,7 +293,7 @@ async function writeSiteArtifacts(payload) {
 }
 
 async function generate() {
-  const { payload, unknownTranslations, unusedMetadata } = await buildCatalog();
+  const { payload, unknownTranslations, unusedMetadata, unusedMapUpdates } = await buildCatalog();
   const serialized = `${JSON.stringify(payload, null, 2)}\n`;
   let current = "";
   try {
@@ -318,17 +325,25 @@ async function generate() {
   if (unusedMetadata.length) {
     console.warn(`Metadata without a usable shared or Red/Blue map image: ${unusedMetadata.join(", ")}`);
   }
+  if (unusedMapUpdates.length) {
+    console.warn(`Maptatic.json dates without a usable map: ${unusedMapUpdates.join(", ")}`);
+  }
 }
 
 await generate();
 
 if (WATCH_MODE) {
   let timer = null;
-  console.log("Watching img/ for map changes. Press Ctrl+C to stop.");
-  const watcher = watch(IMG_ROOT, { recursive: true }, () => {
+  console.log("Watching img/, map metadata, and Maptatic.json. Press Ctrl+C to stop.");
+  const scheduleGenerate = () => {
     clearTimeout(timer);
     timer = setTimeout(() => generate().catch(error => console.error(error)), 300);
-  });
-  process.once("SIGINT", () => watcher.close());
-  process.once("SIGTERM", () => watcher.close());
+  };
+  const watchers = [
+    watch(IMG_ROOT, { recursive: true }, scheduleGenerate),
+    watch(METADATA_PATH, scheduleGenerate),
+    watch(MAP_LAYOUT_PATH, scheduleGenerate)
+  ];
+  process.once("SIGINT", () => watchers.forEach(watcher => watcher.close()));
+  process.once("SIGTERM", () => watchers.forEach(watcher => watcher.close()));
 }

@@ -1,13 +1,14 @@
 export const MARKER_LAYOUT_VERSION = 2;
 
 export function createEmptyMarkerLayout() {
-  return { version: MARKER_LAYOUT_VERSION, markers: {}, annotations: {} };
+  return { version: MARKER_LAYOUT_VERSION, mapUpdated: {}, markers: {}, annotations: {} };
 }
 
 export function loadMarkerLayout(storageKey) {
   try {
     const saved = JSON.parse(localStorage.getItem(storageKey));
     if (saved?.version === MARKER_LAYOUT_VERSION && saved.markers && typeof saved.markers === "object") {
+      if (!saved.mapUpdated || typeof saved.mapUpdated !== "object" || Array.isArray(saved.mapUpdated)) saved.mapUpdated = {};
       if (!saved.annotations || typeof saved.annotations !== "object" || Array.isArray(saved.annotations)) saved.annotations = {};
       return saved;
     }

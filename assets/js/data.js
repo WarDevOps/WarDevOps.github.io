@@ -151,8 +151,7 @@ export const translations = {
         routeDrawn: "Route placed.",
         legendTypeHidden: "Markers for this legend are hidden.",
         legendTypeShown: "Markers for this legend are shown.",
-        modalLegendHint: "Click an icon to hide or restore that marker type.",
-        joinSquadron: "Join the WarDevOps community"
+        modalLegendHint: "Click an icon to hide or restore that marker type."
       },
       ko: {
         pageTitle: "WarDevOps | War Thunder Map Tactic",
@@ -275,8 +274,7 @@ export const translations = {
         routeDrawn: "이동 경로를 배치했습니다.",
         legendTypeHidden: "이 마커의 아이콘을 숨겼습니다.",
         legendTypeShown: "이 마커의 아이콘을 표시했습니다.",
-        modalLegendHint: "아이콘을 클릭하면 해당 종류의 마커를 숨기거나 다시 표시합니다.",
-        joinSquadron: "WarDevOps 커뮤니티 참여"
+        modalLegendHint: "아이콘을 클릭하면 해당 종류의 마커를 숨기거나 다시 표시합니다."
       }
     };
 
