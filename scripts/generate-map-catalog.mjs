@@ -91,18 +91,20 @@ async function discoverMapImages(relativeFolder, { requireExact = false, failOnP
   const absoluteFolder = safeImageFolder(relativeFolder);
   const entries = await directoryEntries(absoluteFolder);
   const fileNames = entries.filter(entry => entry.isFile()).map(entry => entry.name);
-  const folderBaseName = path.posix.basename(toPosix(relativeFolder));
-  const sharedName = `${folderBaseName}.png`.toLowerCase();
-  const sharedImage = fileNames.find(fileName => fileName.toLowerCase() === sharedName);
-  if (sharedImage) return { sharedImage };
-
+  const pathParts = toPosix(relativeFolder).split("/").filter(Boolean);
+  const sharedNames = new Set([
+    `${pathParts.at(-1)}.png`.toLowerCase(),
+    `${pathParts[0]}.png`.toLowerCase()
+  ]);
+  const sharedImage = fileNames.find(fileName => sharedNames.has(fileName.toLowerCase()));
   const red = findTeamFile(fileNames, "Red", requireExact);
   const blue = findTeamFile(fileNames, "Blue", requireExact);
+  if (red && blue) return { teamImages: { Red: red, Blue: blue } };
+  if (sharedImage) return { sharedImage };
   if (failOnPartial && Boolean(red) !== Boolean(blue)) {
     throw new Error(`Both Red and Blue PNG files are required: ${relativeFolder}`);
   }
-  if (!red || !blue) return null;
-  return { teamImages: { Red: red, Blue: blue } };
+  return null;
 }
 
 async function configuredVariation(definition) {

@@ -10,8 +10,20 @@
       "variations": [
         {
           "mode": "domination",
-          "number": 1,
-          "sharedImage": "38th Parallel.png"
+          "number": 1
+        }
+      ]
+    },
+    {
+      "name": "Abandoned Factory",
+      "aliases": "버려진 공장",
+      "slug": "abandoned-factory",
+      "updated": "2026-08-30",
+      "folder": "Abandoned Factory",
+      "variations": [
+        {
+          "mode": "domination",
+          "number": 1
         }
       ]
     },
@@ -24,8 +36,7 @@
       "variations": [
         {
           "mode": "domination",
-          "number": 1,
-          "sharedImage": "Abandoned Town.png"
+          "number": 1
         }
       ]
     },
@@ -38,8 +49,7 @@
       "variations": [
         {
           "mode": "domination",
-          "number": 1,
-          "sharedImage": "Advance to the Rhine.png"
+          "number": 1
         }
       ]
     },
@@ -52,8 +62,7 @@
       "variations": [
         {
           "mode": "domination",
-          "number": 1,
-          "sharedImage": "Alaska.png"
+          "number": 1
         }
       ]
     },
@@ -66,8 +75,7 @@
       "variations": [
         {
           "mode": "domination",
-          "number": 1,
-          "sharedImage": "American Desert.png"
+          "number": 1
         }
       ]
     },
@@ -80,8 +88,7 @@
       "variations": [
         {
           "mode": "domination",
-          "number": 1,
-          "sharedImage": "Aral Sea.png"
+          "number": 1
         }
       ]
     },
@@ -94,8 +101,7 @@
       "variations": [
         {
           "mode": "domination",
-          "number": 1,
-          "sharedImage": "Arctic Pier.png"
+          "number": 1
         }
       ]
     },
@@ -108,8 +114,7 @@
       "variations": [
         {
           "mode": "domination",
-          "number": 1,
-          "sharedImage": "Arctic Polar Base.png"
+          "number": 1
         }
       ]
     },
@@ -122,13 +127,18 @@
       "variations": [
         {
           "mode": "domination",
-          "number": 1,
-          "sharedImage": "Ardennes.png"
+          "number": 1
         },
         {
           "mode": "domination",
           "number": 2,
           "folder": "Ardennes/Domination #2"
+        },
+        {
+          "mode": "conquest",
+          "number": 1,
+          "folder": "Ardennes/Conquest #1",
+          "sharedImage": "Ardennes.png"
         }
       ]
     },
@@ -155,8 +165,7 @@
       "variations": [
         {
           "mode": "domination",
-          "number": 1,
-          "sharedImage": "Attica.png"
+          "number": 1
         }
       ]
     },
@@ -170,6 +179,18 @@
         {
           "mode": "domination",
           "number": 1
+        },
+        {
+          "mode": "domination",
+          "number": 2,
+          "folder": "Battle of Hürtgen Forest/Domination #2",
+          "sharedImage": "Battle of Hürtgen Forest.png"
+        },
+        {
+          "mode": "conquest",
+          "number": 3,
+          "folder": "Battle of Hürtgen Forest/Conquest #3",
+          "sharedImage": "Battle of Hürtgen Forest.png"
         }
       ]
     },
@@ -196,8 +217,7 @@
       "variations": [
         {
           "mode": "domination",
-          "number": 1,
-          "sharedImage": "Breslau.png"
+          "number": 1
         }
       ]
     },
@@ -249,8 +269,7 @@
       "variations": [
         {
           "mode": "domination",
-          "number": 1,
-          "sharedImage": "European Province.png"
+          "number": 1
         }
       ]
     },
@@ -307,6 +326,19 @@
       ]
     },
     {
+      "name": "Flanders",
+      "aliases": "플랑드르",
+      "slug": "flanders",
+      "updated": "2026-08-30",
+      "folder": "Flanders",
+      "variations": [
+        {
+          "mode": "domination",
+          "number": 1
+        }
+      ]
+    },
+    {
       "name": "Frozen Pass",
       "aliases": "얼어붙은 산길",
       "slug": "frozen-pass",
@@ -355,8 +387,7 @@
       "variations": [
         {
           "mode": "domination",
-          "number": 1,
-          "sharedImage": "iberian castle.png"
+          "number": 1
         }
       ]
     },
@@ -388,6 +419,20 @@
       ]
     },
     {
+      "name": "Karelia",
+      "aliases": "카렐리야",
+      "slug": "karelia",
+      "updated": "2026-08-30",
+      "folder": "Karelia",
+      "variations": [
+        {
+          "mode": "domination",
+          "number": 1,
+          "sharedImage": "Karelia.png"
+        }
+      ]
+    },
+    {
       "name": "Kuban",
       "aliases": "쿠반",
       "slug": "kuban",
@@ -414,7 +459,7 @@
         {
           "mode": "domination",
           "number": 2,
-          "folder": "Maginot Line Big",
+          "folder": "Maginot Line/Domination #2",
           "teamImages": {
             "Red": "Red big.png",
             "Blue": "blue big.png"
@@ -458,6 +503,26 @@
         {
           "mode": "domination",
           "number": 1
+        }
+      ]
+    },
+    {
+      "name": "North Holland",
+      "aliases": "북부 네덜란드",
+      "slug": "north-holland",
+      "updated": "2026-08-30",
+      "folder": "North Holland",
+      "variations": [
+        {
+          "mode": "domination",
+          "number": 1,
+          "sharedImage": "North Holland.png"
+        },
+        {
+          "mode": "domination",
+          "number": 2,
+          "folder": "North Holland/Domination #2",
+          "sharedImage": "North Holland.png"
         }
       ]
     },
@@ -509,8 +574,7 @@
       "variations": [
         {
           "mode": "domination",
-          "number": 1,
-          "sharedImage": "Red Desert.png"
+          "number": 1
         }
       ]
     },
@@ -523,8 +587,7 @@
       "variations": [
         {
           "mode": "domination",
-          "number": 1,
-          "sharedImage": "Sands of Sinai.png"
+          "number": 1
         }
       ]
     },
@@ -613,8 +676,7 @@
       "variations": [
         {
           "mode": "domination",
-          "number": 1,
-          "sharedImage": "Sun City.png"
+          "number": 1
         }
       ]
     },
@@ -654,6 +716,26 @@
         {
           "mode": "domination",
           "number": 1
+        }
+      ]
+    },
+    {
+      "name": "Tunisia",
+      "aliases": "튀니지",
+      "slug": "tunisia",
+      "updated": "2026-08-30",
+      "folder": "Tunisia",
+      "variations": [
+        {
+          "mode": "domination",
+          "number": 1,
+          "sharedImage": "Tunisia.png"
+        },
+        {
+          "mode": "domination",
+          "number": 2,
+          "folder": "Tunisia/Domination #2",
+          "sharedImage": "Tunisia.png"
         }
       ]
     },

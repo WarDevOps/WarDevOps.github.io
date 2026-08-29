@@ -2,6 +2,7 @@
   "version": 1,
   "maps": {
     "38th Parallel": { "ko": "38선" },
+    "Abandoned Factory": { "ko": "버려진 공장" },
     "Abandoned Town": { "ko": "버려진 소도시" },
     "Advance to the Rhine": { "ko": "라인 강 진격" },
     "Alaska": { "ko": "알래스카" },
@@ -23,27 +24,20 @@
     "Fields of Poland": { "ko": "폴란드의 들판" },
     "Finland": { "ko": "핀란드" },
     "Fire Arc": { "ko": "파이어 아크" },
+    "Flanders": { "ko": "플랑드르" },
     "Frozen Pass": { "ko": "얼어붙은 산길" },
     "Fulda": { "ko": "풀다" },
     "Golden Quarry": { "ko": "금광 지대" },
     "Iberian Castle": { "ko": "이베리아 성" },
     "Japan": { "ko": "일본" },
     "Jungle": { "ko": "정글" },
+    "Karelia": { "ko": "카렐리야" },
     "Kuban": { "ko": "쿠반" },
-    "Maginot Line": {
-      "ko": "마지노선",
-      "extraVariations": [
-        {
-          "mode": "domination",
-          "number": 2,
-          "folder": "Maginot Line Big",
-          "teamImages": { "Red": "Red big.png", "Blue": "blue big.png" }
-        }
-      ]
-    },
+    "Maginot Line": { "ko": "마지노선" },
     "Middle East": { "ko": "중동" },
     "Mozdok": { "ko": "모즈도크" },
     "Normandy": { "ko": "노르망디" },
+    "North Holland": { "ko": "북부 네덜란드" },
     "Poland": { "ko": "폴란드" },
     "Port Novorossiysk": { "ko": "노보로시스크 항구", "defaultMode": "conquest" },
     "Pradesh": { "ko": "프라데시" },
@@ -58,6 +52,7 @@
     "Surroundings of Volokolamsk": { "ko": "볼로콜람스크 포위" },
     "Sweden": { "ko": "스웨덴" },
     "Test Site-2271": { "ko": "2271호 실험시설" },
+    "Tunisia": { "ko": "튀니지" },
     "Vietnam": { "ko": "베트남" },
     "White Rock Fortress": { "ko": "백암요새" }
   }
