@@ -99,8 +99,8 @@ async function discoverMapImages(relativeFolder, { requireExact = false, failOnP
   const sharedImage = fileNames.find(fileName => sharedNames.has(fileName.toLowerCase()));
   const red = findTeamFile(fileNames, "Red", requireExact);
   const blue = findTeamFile(fileNames, "Blue", requireExact);
-  if (red && blue) return { teamImages: { Red: red, Blue: blue } };
   if (sharedImage) return { sharedImage };
+  if (red && blue) return { teamImages: { Red: red, Blue: blue } };
   if (failOnPartial && Boolean(red) !== Boolean(blue)) {
     throw new Error(`Both Red and Blue PNG files are required: ${relativeFolder}`);
   }
