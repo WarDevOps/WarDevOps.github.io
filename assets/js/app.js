@@ -769,13 +769,14 @@ import { initDiscordMemberCount } from './discord-stats.js';
       }
       return true;
     }
-    function updateContextRoleActions(contextMenu, marker) {
+    function updateMarkerContextActions(contextMenu, marker) {
       const roleActions = contextMenu.querySelector("[data-role-marker-actions]");
       const tankMarker = linkedTankMarker(marker);
-      roleActions.hidden = !tankMarker;
-      contextMenu.querySelector("[data-marker-tool='aimHere']").hidden = !tankMarker;
-      contextMenu.querySelector("[data-marker-action='addComment']").hidden = !isTankMarker(marker);
-      if (!tankMarker) return;
+      roleActions.hidden = !state.editMode || !tankMarker;
+      contextMenu.querySelector("[data-marker-tool='aimHere']").hidden = !state.editMode || !tankMarker;
+      contextMenu.querySelector("[data-marker-action='addComment']").hidden = !state.editMode || !isTankMarker(marker);
+      contextMenu.querySelector("[data-marker-action='delete']").hidden = !state.editMode;
+      if (!state.editMode || !tankMarker) return;
       const selectedRoleMarker = linkedRoleMarker(tankMarker);
       roleActions.querySelectorAll("[data-marker-role]").forEach(button => {
         button.setAttribute("aria-pressed", String(button.dataset.markerRole === selectedRoleMarker?.type));
@@ -788,7 +789,7 @@ import { initDiscordMemberCount } from './discord-stats.js';
       state.contextMarkerId = markerButton.dataset.markerId;
       markerContextMenu.hidden = contextMenu !== markerContextMenu;
       modalMarkerContextMenu.hidden = contextMenu !== modalMarkerContextMenu;
-      updateContextRoleActions(contextMenu, currentMarkers().find(marker => marker.id === state.contextMarkerId));
+      updateMarkerContextActions(contextMenu, currentMarkers().find(marker => marker.id === state.contextMarkerId));
       contextMenu.hidden = false;
       const left = Math.min(Math.max(6, event.clientX - stageRect.left), stageRect.width - contextMenu.offsetWidth - 6);
       const top = Math.min(Math.max(6, event.clientY - stageRect.top), stageRect.height - contextMenu.offsetHeight - 6);
@@ -1010,8 +1011,14 @@ import { initDiscordMemberCount } from './discord-stats.js';
         button.style.top = `${Math.min(100, Math.max(0, y))}%`;
         button.style.zIndex = String(markerRenderZIndex(marker.type));
         button.dataset.markerPriority = String(markerRenderZIndex(marker.type));
-        button.title = t(state.editMode ? "markerEditTitle" : "markerViewTitle");
-        button.setAttribute("aria-label", `${t(marker.type)} — ${button.title}`);
+        const markerLabel = t(marker.type);
+        if (state.editMode) {
+          const editTitle = t("markerEditTitle");
+          button.title = editTitle;
+          button.setAttribute("aria-label", `${markerLabel} — ${editTitle}`);
+        } else {
+          button.setAttribute("aria-label", markerLabel);
+        }
         const icon = document.createElement("img");
         icon.src = markerIconPath(marker, type.icon);
         icon.alt = "";
@@ -1403,7 +1410,6 @@ import { initDiscordMemberCount } from './discord-stats.js';
         const markerButton = event.target.closest(".map-marker");
         if (!markerButton) return;
         event.preventDefault();
-        if (!state.editMode) return;
         showMarkerContextMenu(event, markerButton, contextMenu, stage);
       });
     }
