@@ -1,7 +1,7 @@
     import { MARKER_LAYOUT_VERSION, loadMarkerLayout, saveMarkerLayout as saveMarkerLayoutToStorage } from './marker-storage.js';
 import { initDiscordMemberCount } from './discord-stats.js';
     import { commentImages } from './comment-images.js?v=comment-images-20260817';
-    import { maps, translations } from './data.js?v=automatic-map-catalog-v1';
+    import { maps, translations } from './data.js?v=marker-reset-20260831';
 
 
     const state = { selected: null, team: "Red", query: "", language: "en", theme: "dark", editMode: false, contextMarkerId: null, contextAnnotationId: null, commentMarkerId: null, drawing: null };
@@ -61,6 +61,7 @@ import { initDiscordMemberCount } from './discord-stats.js';
     const DEFAULT_MARKER_LAYOUT_FILENAME = "Maptatic.json";
     const MAX_IMPORTED_MARKERS = 5000;
     const MAX_IMPORTED_ANNOTATIONS = 5000;
+    const MAX_IMPORTED_ROUTE_POINTS = 25000;
     const MAX_MARKER_COMMENT_BYTES = 120;
     const COMMENT_TEXT_ENCODER = new TextEncoder();
     const COMMENT_IMAGES_BY_ID = new Map();
@@ -1143,7 +1144,7 @@ import { initDiscordMemberCount } from './discord-stats.js';
           if (annotationCount > MAX_IMPORTED_ANNOTATIONS) throw new Error("Too many drawings.");
           if (hasRoutePoints) {
             routePointCount += annotation.points.length;
-            if (routePointCount > MAX_IMPORTED_ANNOTATIONS) throw new Error("Too many route points.");
+            if (routePointCount > MAX_IMPORTED_ROUTE_POINTS) throw new Error("Too many route points.");
           }
           ids.add(annotation.id);
           if (isAimHere) return { id: annotation.id, type: annotation.type, parentTankId: annotation.parentTankId, startX: annotation.startX, startY: annotation.startY, endX: annotation.endX, endY: annotation.endY };
@@ -1292,20 +1293,11 @@ import { initDiscordMemberCount } from './discord-stats.js';
     }
     async function resetAllPlacedMarkers() {
       if (!window.confirm(t("confirmResetAll"))) return;
-      markerLayout.markers = {};
-      markerLayout.annotations = {};
-      hiddenMarkers.clear();
-      hiddenAnnotations.clear();
-      hiddenMarkerTypes.clear();
-      hideMarkerContextMenu();
-      hideAnnotationContextMenu();
-      updateLegendVisibility();
-      renderMarkers();
       try {
         await importDefaultMarkerLayout();
         persistMarkerLayout("defaultLayoutRestored");
       } catch (error) {
-        persistMarkerLayout("allMarkersReset");
+        console.error("Default marker layout reset failed.", error);
         setMarkerStatus("defaultLayoutLoadError");
       }
     }

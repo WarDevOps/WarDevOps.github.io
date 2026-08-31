@@ -8304,7 +8304,7 @@
         "parentTankId": "maginot-line-red-unit-18"
       }
     ],
-    "Port Novorossiysk::domination-1|Red": [
+    "Port Novorossiysk::conquest-1|Red": [
       {
         "id": "port-novorossiysk-red-unit-01",
         "type": "mainBattleTankRed",
@@ -9181,7 +9181,7 @@
         "parentTankId": "maginot-line-blue-unit-14"
       }
     ],
-    "Port Novorossiysk::domination-1|Blue": [
+    "Port Novorossiysk::conquest-1|Blue": [
       {
         "id": "port-novorossiysk-blue-unit-01",
         "type": "mainBattleTank",
@@ -37563,7 +37563,7 @@
         "dangerRoute": true
       }
     ],
-    "Port Novorossiysk::domination-1|Red": [
+    "Port Novorossiysk::conquest-1|Red": [
       {
         "id": "port-novorossiysk-red-aim-01",
         "type": "aimHere",
@@ -39609,7 +39609,7 @@
         "dangerRoute": true
       }
     ],
-    "Port Novorossiysk::domination-1|Blue": [
+    "Port Novorossiysk::conquest-1|Blue": [
       {
         "id": "port-novorossiysk-blue-aim-01",
         "type": "aimHere",

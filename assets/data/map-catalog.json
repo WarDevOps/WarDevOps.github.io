@@ -416,6 +416,15 @@
             "min": 1
           },
           "sharedImage": "Eastern Europe.png"
+        },
+        {
+          "mode": "domination",
+          "number": 2,
+          "br": {
+            "min": 1
+          },
+          "folder": "Eastern Europe/Domination #2",
+          "sharedImage": "Eastern Europe.png"
         }
       ]
     },
