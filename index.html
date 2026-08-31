@@ -49,7 +49,7 @@
   </script>
   <title>WarDevOps | War Thunder Map Tactic</title>
 
-  <link rel="stylesheet" href="/assets/css/site.css?v=panel-height-20260831">
+  <link rel="stylesheet" href="/assets/css/site.css?v=copy-link-placement-20260831">
 </head>
 <body>
   <header class="site-header">
@@ -106,10 +106,6 @@
         <div class="viewer-top">
           <div class="viewer-heading">
             <h2 id="selected-map-name">Select a Map</h2>
-            <section class="map-tactical-summary" id="map-tactical-summary" aria-labelledby="map-tactical-summary-title" hidden>
-              <h3 id="map-tactical-summary-title" data-i18n="tacticalSummary">Tactical Summary</h3>
-              <blockquote id="map-tactical-summary-copy"></blockquote>
-            </section>
             <div class="map-meta-row">
               <div class="map-variation-control">
                 <label id="map-variation-label" for="map-variation" data-i18n="mapVariation">Map Variation</label>
@@ -119,22 +115,17 @@
               <p class="map-last-updated"><span data-i18n="lastUpdatedLabel">Last updated</span> <time id="map-last-updated" datetime=""></time></p>
             </div>
           </div>
-          <div class="viewer-actions">
-            <div class="viewer-action-row">
-              <button class="copy-link" id="copy-link" type="button" aria-describedby="copy-link-status" aria-label="Copy a link to the current map, team, and mode" data-i18n-aria="copyLinkAria">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.1.1l2-2a5 5 0 0 0-7.1-7.1l-1.1 1.1"></path><path d="M14 11a5 5 0 0 0-7.1-.1l-2 2A5 5 0 0 0 12 20l1.1-1.1"></path></svg>
-                <span data-copy-link-label data-i18n="copyLink">COPY LINK</span>
-              </button>
-              <div class="team-switch" aria-label="Team selection" data-i18n-aria="teamSelection">
-                <button class="team-button red" type="button" data-team="Red" aria-pressed="true">RED</button>
-                <button class="team-button blue" type="button" data-team="Blue" aria-pressed="false">BLUE</button>
-              </div>
-            </div>
-            <span class="copy-link-status" id="copy-link-status" role="status" aria-live="polite"></span>
+          <div class="team-switch" aria-label="Team selection" data-i18n-aria="teamSelection">
+            <button class="team-button red" type="button" data-team="Red" aria-pressed="true">RED</button>
+            <button class="team-button blue" type="button" data-team="Blue" aria-pressed="false">BLUE</button>
           </div>
         </div>
         <div class="marker-tools" aria-label="Marker editor" data-i18n-aria="markerTools">
           <button class="marker-tool primary" id="toggle-editor" type="button" aria-pressed="false" data-i18n="editMarkers">Edit Map</button>
+          <button class="copy-link" id="copy-link" type="button" aria-label="Copy a link to the current map, team, and mode" data-i18n-aria="copyLinkAria">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.1.1l2-2a5 5 0 0 0-7.1-7.1l-1.1 1.1"></path><path d="M14 11a5 5 0 0 0-7.1-.1l-2 2A5 5 0 0 0 12 20l1.1-1.1"></path></svg>
+            <span data-copy-link-label data-i18n="copyLink">COPY LINK</span>
+          </button>
           <button class="marker-tool" id="save-marker-layout" type="button" data-editor-action data-i18n="saveLocally" hidden>Save Locally</button>
           <button class="marker-tool" id="export-marker-layout" type="button" data-editor-action data-i18n="exportJson" hidden>Export JSON</button>
           <button class="marker-tool" id="import-marker-layout" type="button" data-editor-action data-i18n="importJson" hidden>Import JSON</button>
@@ -142,7 +133,8 @@
           <p class="marker-editor-note" id="marker-editor-note" hidden>Drag icons from the legend onto the map.</p>
         </div>
         <div class="map-layout">
-          <div class="map-stage" id="map-stage">
+          <div class="map-primary-column">
+            <div class="map-stage" id="map-stage">
           <span class="image-loading" id="image-status">Now Loading…</span>
           <img id="map-image" alt="" hidden>
           <div class="map-overlay-layer" id="map-overlay-layer" aria-label="Map area overlays" data-i18n-aria="mapAreaOverlays"></div>
@@ -183,6 +175,11 @@
             <button class="marker-context-action" type="button" data-annotation-action="hide" role="menuitem" data-i18n="hideDrawing">Hide Drawing</button>
             <button class="marker-context-action delete" type="button" data-annotation-action="delete" role="menuitem" data-i18n="deleteDrawing">Delete Drawing</button>
           </div>
+            </div>
+            <section class="map-tactical-summary" id="map-tactical-summary" aria-labelledby="map-tactical-summary-title" hidden>
+              <h3 id="map-tactical-summary-title" data-i18n="tacticalSummary">Tactical Summary</h3>
+              <blockquote id="map-tactical-summary-copy"></blockquote>
+            </section>
           </div>
           <aside class="legend-panel" aria-label="Map legend" data-i18n-aria="mapLegend">
             <h3 class="legend-heading" data-i18n="mapLegend">Map Legend</h3>
@@ -326,7 +323,7 @@
 
   <input id="marker-layout-import-file" type="file" accept="application/json,.json" hidden>
 
-  <script type="module" src="/assets/js/app.js?v=panel-height-20260831"></script>
+  <script type="module" src="/assets/js/app.js?v=team-area-overlays-20260831"></script>
   <script type="module" src="/assets/js/consent-controls.js?v=20260828"></script>
 </body>
 </html>

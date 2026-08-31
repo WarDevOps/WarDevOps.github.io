@@ -185,7 +185,7 @@
       "name": "Ardennes",
       "aliases": "아르덴",
       "slug": "ardennes",
-      "updated": "2026-08-25",
+      "updated": "2026-08-31",
       "br": {
         "min": 3.7
       },
@@ -245,7 +245,7 @@
       "name": "Attica",
       "aliases": "아티카",
       "slug": "attica",
-      "updated": "2026-08-16",
+      "updated": "2026-08-31",
       "br": {
         "min": 1
       },
@@ -768,7 +768,8 @@
           "number": 1,
           "br": {
             "min": 5
-          }
+          },
+          "sharedImage": "Middle East.png"
         }
       ]
     },
@@ -1216,7 +1217,7 @@
       "name": "White Rock Fortress",
       "aliases": "백암요새",
       "slug": "white-rock-fortress",
-      "updated": "2026-08-16",
+      "updated": "2026-08-31",
       "br": {
         "min": 1,
         "max": 8.7

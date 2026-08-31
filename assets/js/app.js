@@ -11,7 +11,6 @@ import { initDiscordMemberCount } from './discord-stats.js';
     const mapBattleRating = $("#map-battle-rating");
     const copyLink = $("#copy-link");
     const copyLinkLabel = copyLink.querySelector("[data-copy-link-label]");
-    const copyLinkStatus = $("#copy-link-status");
     const mapTacticalSummary = $("#map-tactical-summary");
     const mapTacticalSummaryCopy = $("#map-tactical-summary-copy");
     const search = $("#map-search");
@@ -88,7 +87,11 @@ import { initDiscordMemberCount } from './discord-stats.js';
     // Every map supports these optional transparent area overlays. A missing file is ignored.
     const MAP_AREA_OVERLAYS = Object.freeze([
       { type: "coreArea", file: "CoreArea.png" },
+      { type: "coreArea", file: "CoreAreaBlue.png", team: "Blue" },
+      { type: "coreArea", file: "CoreAreaRed.png", team: "Red" },
       { type: "dangerArea", file: "DangerArea.png" },
+      { type: "dangerArea", file: "DangerAreaBlue.png", team: "Blue" },
+      { type: "dangerArea", file: "DangerAreaRed.png", team: "Red" },
       { type: "notRecommended", file: "NotRecommended.png" },
       { type: "antiAirArea", file: "AntiAirArea.png" },
       { type: "spawnArea", file: "SpawnAreaBlue.png", team: "Blue" },
@@ -1300,16 +1303,13 @@ import { initDiscordMemberCount } from './discord-stats.js';
         }
         copyLink.classList.add("copied");
         copyLinkLabel.textContent = t("linkCopied");
-        copyLinkStatus.textContent = t("linkCopiedStatus");
       } catch (error) {
         copyLink.classList.add("failed");
         copyLinkLabel.textContent = t("copyLinkFailed");
-        copyLinkStatus.textContent = t("copyLinkFailedStatus");
       }
       copyLinkFeedbackTimer = window.setTimeout(() => {
         copyLink.classList.remove("copied", "failed");
         copyLinkLabel.textContent = t("copyLink");
-        copyLinkStatus.textContent = "";
       }, 2200);
     }
     function setModalMapSource() {
@@ -1534,7 +1534,7 @@ import { initDiscordMemberCount } from './discord-stats.js';
 
     function syncMapIndexHeight() {
       const viewerHeight = Math.ceil(mapViewer.getBoundingClientRect().height);
-      workspace.style.setProperty("--side-panel-height", `${viewerHeight}px`);
+      workspace.style.setProperty("--map-index-height", `${viewerHeight}px`);
     }
 
     if ("ResizeObserver" in window) {

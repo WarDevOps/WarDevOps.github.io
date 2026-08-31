@@ -128,7 +128,7 @@
 
     .workspace { --side-panel-height: clamp(480px, calc(100vh - 150px), 720px); display: grid; grid-template-columns: minmax(235px, 310px) minmax(0, 1fr); gap: 22px; align-items: start; padding-bottom: 72px; }
     .map-index, .map-viewer { border: 1px solid var(--line); border-radius: 18px; background: rgba(23, 32, 31, .8); box-shadow: var(--shadow); }
-    .map-index { display: grid; height: var(--side-panel-height); min-height: 0; overflow: hidden; grid-template-rows: auto auto minmax(0, 1fr); }
+    .map-index { display: grid; height: var(--map-index-height, var(--side-panel-height)); min-height: 0; overflow: hidden; grid-template-rows: auto auto minmax(0, 1fr); }
     .index-heading { display: flex; align-items: baseline; justify-content: space-between; padding: 20px 20px 14px; border-bottom: 1px solid var(--line); }
     .index-heading h2 { margin: 0; font-size: .95rem; }
     #map-count { color: var(--muted); font-size: .78rem; }
@@ -162,12 +162,12 @@
     .viewer-heading { min-width: 0; flex: 1; }
     .viewer-top h2 { margin: 0; font-size: clamp(1.5rem, 3vw, 2.1rem); letter-spacing: -.03em; }
     .viewer-top p { margin: 7px 0 0; color: var(--muted); font-size: .9rem; }
-    .map-tactical-summary { max-width: 760px; margin-top: 18px; padding: 13px 16px 14px; border-left: 3px solid var(--accent); border-radius: 0 10px 10px 0; background: rgba(214, 219, 157, .07); }
+    .map-tactical-summary { width: 100%; padding: 13px 16px 14px; border-left: 3px solid var(--accent); border-radius: 0 10px 10px 0; background: rgba(214, 219, 157, .07); }
     .map-tactical-summary[hidden] { display: none; }
     .map-tactical-summary h3 { margin: 0 0 7px; color: var(--accent); font-size: .67rem; font-weight: 900; letter-spacing: .105em; text-transform: uppercase; }
     .map-tactical-summary blockquote { margin: 0; }
-    .viewer-top .map-tactical-summary p { margin: 0; color: var(--ink); font-size: clamp(.82rem, 1.5vw, .9rem); line-height: 1.58; }
-    .viewer-top .map-tactical-summary p + p { margin-top: 3px; }
+    .map-tactical-summary p { margin: 0; color: var(--ink); font-size: clamp(.82rem, 1.5vw, .9rem); line-height: 1.58; }
+    .map-tactical-summary p + p { margin-top: 3px; }
     .map-meta-row { display: flex; margin-top: 13px; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
     .map-variation-control { display: inline-flex; align-items: center; gap: 8px; }
     .map-variation-control label { color: var(--muted); font-size: .7rem; font-weight: 800; letter-spacing: .055em; text-transform: uppercase; }
@@ -175,14 +175,11 @@
     .viewer-top .map-last-updated { margin: 0 0 0 auto; color: var(--muted); font-size: .7rem; font-weight: 750; letter-spacing: .035em; text-align: right; white-space: nowrap; }
     #map-variation { min-width: 150px; padding: 7px 28px 7px 10px; border: 1px solid var(--line); border-radius: 8px; outline: none; background: #111719; color: var(--ink); font: inherit; font-size: .77rem; font-weight: 750; cursor: pointer; }
     #map-variation:hover, #map-variation:focus-visible { border-color: #56675f; }
-    .viewer-actions { display: grid; justify-items: end; gap: 5px; flex-shrink: 0; }
-    .viewer-action-row { display: flex; align-items: stretch; gap: 8px; }
-    .copy-link { display: inline-flex; align-items: center; justify-content: center; gap: 7px; min-width: 116px; padding: 9px 12px; border: 1px solid var(--accent); border-radius: 10px; background: rgba(214, 219, 157, .08); color: var(--accent); font-size: .72rem; font-weight: 850; letter-spacing: .055em; cursor: pointer; transition: .18s; }
+    .copy-link { display: inline-flex; align-items: center; justify-content: center; gap: 7px; min-width: 116px; padding: 8px 10px; border: 1px solid var(--accent); border-radius: 8px; background: rgba(214, 219, 157, .08); color: var(--accent); font-size: .75rem; font-weight: 750; cursor: pointer; transition: .18s; }
     .copy-link svg { width: 16px; height: 16px; }
     .copy-link:hover, .copy-link:focus-visible { background: var(--accent); color: #171b1a; }
     .copy-link.copied { border-color: #83d49d; background: rgba(131, 212, 157, .14); color: #9ae5b1; }
     .copy-link.failed { border-color: var(--red); color: var(--red); }
-    .copy-link-status { min-height: 1em; color: var(--muted); font-size: .65rem; }
     .team-switch { display: inline-flex; flex-shrink: 0; padding: 4px; gap: 4px; border: 1px solid var(--line); border-radius: 10px; background: #111719; }
     .team-button { min-width: 84px; padding: 9px 12px; border: 1px solid transparent; border-radius: 7px; background: transparent; color: var(--muted); font-size: .84rem; font-weight: 800; cursor: pointer; transition: .18s; }
     .team-button[aria-pressed="true"] { color: #171b1a; }
@@ -196,6 +193,7 @@
     .marker-editor-note { width: 100%; margin: 1px 0 0; color: var(--muted); font-size: .74rem; line-height: 1.45; }
     [data-editor-action][hidden], .marker-editor-note[hidden], .modal-marker-editor-note[hidden] { display: none; }
     .map-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(208px, 245px); gap: 16px; align-items: start; padding: 0 clamp(12px, 3vw, 28px) 20px; }
+    .map-primary-column { display: grid; min-width: 0; gap: 14px; }
     .map-stage { position: relative; min-height: 470px; display: grid; overflow: hidden; place-items: center; border: 1px solid var(--line); border-radius: 12px; background: #0d1111; }
     .map-enlarge-hint { position: absolute; right: 14px; bottom: 12px; z-index: 1; padding: 7px 9px; border: 1px solid rgba(255,255,255,.13); border-radius: 7px; background: rgba(10, 14, 13, .78); color: #d7ded9; font-size: .73rem; pointer-events: none; }
     .map-overlay-layer, .annotation-layer, .marker-layer { position: absolute; overflow: hidden; pointer-events: none; }
@@ -489,10 +487,6 @@
       h1 { font-size: 3rem; }
       .map-list { grid-template-columns: 1fr; }
       .viewer-top { display: block; }
-      .viewer-actions { margin-top: 18px; align-items: stretch; justify-items: stretch; }
-      .viewer-action-row { display: grid; grid-template-columns: minmax(0, 1fr); }
-      .copy-link { width: 100%; }
-      .viewer-actions .team-switch { margin-top: 0; }
       .team-switch { margin-top: 18px; }
       .team-button { min-width: 104px; }
       .legend-list { grid-template-columns: 1fr; }
