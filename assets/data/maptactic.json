@@ -6232,8 +6232,420 @@
         "parentTankId": "iberian-castle-blue-unit-23"
       }
     ],
-    "Sands of Sinai::domination-1|Red": [],
-    "Sands of Sinai::domination-1|Blue": [],
+    "Sands of Sinai::domination-1|Red": [
+      {
+        "id": "sands-of-sinai-red-unit-01",
+        "type": "mainBattleTankRed",
+        "x": 43.61,
+        "y": 23.82
+      },
+      {
+        "id": "sands-of-sinai-red-unit-02",
+        "type": "mainBattleTankRed",
+        "x": 23.89,
+        "y": 25.76
+      },
+      {
+        "id": "sands-of-sinai-red-unit-03",
+        "type": "mainBattleTankRed",
+        "x": 79.65,
+        "y": 32.43
+      },
+      {
+        "id": "sands-of-sinai-red-unit-04",
+        "type": "mainBattleTankRed",
+        "x": 90.83,
+        "y": 34.72
+      },
+      {
+        "id": "sands-of-sinai-red-unit-05",
+        "type": "mainBattleTankRed",
+        "x": 59.24,
+        "y": 44.44
+      },
+      {
+        "id": "sands-of-sinai-red-role-01",
+        "type": "highRiskSpot",
+        "x": 59.24,
+        "y": 44.44,
+        "parentTankId": "sands-of-sinai-red-unit-05"
+      },
+      {
+        "id": "sands-of-sinai-red-unit-06",
+        "type": "mainBattleTankRed",
+        "x": 69.65,
+        "y": 45.83
+      },
+      {
+        "id": "sands-of-sinai-red-role-02",
+        "type": "highRiskSpot",
+        "x": 69.65,
+        "y": 45.83,
+        "parentTankId": "sands-of-sinai-red-unit-06"
+      },
+      {
+        "id": "sands-of-sinai-red-unit-07",
+        "type": "mainBattleTankRed",
+        "x": 96.04,
+        "y": 47.5
+      },
+      {
+        "id": "sands-of-sinai-red-role-03",
+        "type": "highRiskSpot",
+        "x": 96.04,
+        "y": 47.5,
+        "parentTankId": "sands-of-sinai-red-unit-07"
+      },
+      {
+        "id": "sands-of-sinai-red-unit-08",
+        "type": "mainBattleTankRed",
+        "x": 87.36,
+        "y": 50.62
+      },
+      {
+        "id": "sands-of-sinai-red-role-04",
+        "type": "battleLine",
+        "x": 87.36,
+        "y": 50.62,
+        "parentTankId": "sands-of-sinai-red-unit-08"
+      },
+      {
+        "id": "sands-of-sinai-red-unit-09",
+        "type": "mainBattleTankRed",
+        "x": 83.26,
+        "y": 52.99
+      },
+      {
+        "id": "sands-of-sinai-red-role-05",
+        "type": "battleLine",
+        "x": 83.26,
+        "y": 52.99,
+        "parentTankId": "sands-of-sinai-red-unit-09"
+      },
+      {
+        "id": "sands-of-sinai-red-unit-10",
+        "type": "mainBattleTankRed",
+        "x": 30.49,
+        "y": 53.54
+      },
+      {
+        "id": "sands-of-sinai-red-role-06",
+        "type": "battleLine",
+        "x": 30.49,
+        "y": 53.54,
+        "parentTankId": "sands-of-sinai-red-unit-10"
+      },
+      {
+        "id": "sands-of-sinai-red-unit-11",
+        "type": "mainBattleTankRed",
+        "x": 88.19,
+        "y": 55.83
+      },
+      {
+        "id": "sands-of-sinai-red-role-07",
+        "type": "battleLine",
+        "x": 88.19,
+        "y": 55.83,
+        "parentTankId": "sands-of-sinai-red-unit-11"
+      },
+      {
+        "id": "sands-of-sinai-red-unit-12",
+        "type": "mainBattleTankRed",
+        "x": 74.93,
+        "y": 58.19
+      },
+      {
+        "id": "sands-of-sinai-red-role-08",
+        "type": "battleLine",
+        "x": 74.93,
+        "y": 58.19,
+        "parentTankId": "sands-of-sinai-red-unit-12"
+      },
+      {
+        "id": "sands-of-sinai-red-unit-13",
+        "type": "mainBattleTankRed",
+        "x": 65.42,
+        "y": 58.33
+      },
+      {
+        "id": "sands-of-sinai-red-role-09",
+        "type": "battleLine",
+        "x": 65.42,
+        "y": 58.33,
+        "parentTankId": "sands-of-sinai-red-unit-13"
+      },
+      {
+        "id": "sands-of-sinai-red-unit-14",
+        "type": "mainBattleTankRed",
+        "x": 58.47,
+        "y": 58.82
+      },
+      {
+        "id": "sands-of-sinai-red-role-10",
+        "type": "battleLine",
+        "x": 58.47,
+        "y": 58.82,
+        "parentTankId": "sands-of-sinai-red-unit-14"
+      },
+      {
+        "id": "sands-of-sinai-red-unit-15",
+        "type": "tankDestroyerRed",
+        "x": 77.15,
+        "y": 65.14
+      },
+      {
+        "id": "sands-of-sinai-red-role-11",
+        "type": "highRiskSpot",
+        "x": 77.15,
+        "y": 65.14,
+        "parentTankId": "sands-of-sinai-red-unit-15"
+      },
+      {
+        "id": "sands-of-sinai-red-unit-16",
+        "type": "tankDestroyerRed",
+        "x": 17.99,
+        "y": 72.36
+      },
+      {
+        "id": "sands-of-sinai-red-role-12",
+        "type": "sniper",
+        "x": 17.99,
+        "y": 72.36,
+        "parentTankId": "sands-of-sinai-red-unit-16"
+      },
+      {
+        "id": "sands-of-sinai-red-unit-17",
+        "type": "tankDestroyerRed",
+        "x": 51.04,
+        "y": 79.38
+      },
+      {
+        "id": "sands-of-sinai-red-role-13",
+        "type": "highRiskSpot",
+        "x": 51.04,
+        "y": 79.38,
+        "parentTankId": "sands-of-sinai-red-unit-17"
+      },
+      {
+        "id": "sands-of-sinai-red-unit-18",
+        "type": "tankDestroyerRed",
+        "x": 67.92,
+        "y": 88.82
+      },
+      {
+        "id": "sands-of-sinai-red-role-14",
+        "type": "highRiskSpot",
+        "x": 67.92,
+        "y": 88.82,
+        "parentTankId": "sands-of-sinai-red-unit-18"
+      },
+      {
+        "id": "sands-of-sinai-red-unit-19",
+        "type": "antiAirRed",
+        "x": 92.01,
+        "y": 90.69
+      },
+      {
+        "id": "sands-of-sinai-red-unit-20",
+        "type": "antiAirRed",
+        "x": 37.85,
+        "y": 94.58
+      }
+    ],
+    "Sands of Sinai::domination-1|Blue": [
+      {
+        "id": "sands-of-sinai-blue-unit-01",
+        "type": "antiAir",
+        "x": 37.85,
+        "y": 5.83
+      },
+      {
+        "id": "sands-of-sinai-blue-unit-02",
+        "type": "antiAir",
+        "x": 94.65,
+        "y": 13.26
+      },
+      {
+        "id": "sands-of-sinai-blue-unit-03",
+        "type": "tankDestroyer",
+        "x": 57.29,
+        "y": 17.08
+      },
+      {
+        "id": "sands-of-sinai-blue-role-01",
+        "type": "sniper",
+        "x": 57.29,
+        "y": 17.08,
+        "parentTankId": "sands-of-sinai-blue-unit-03"
+      },
+      {
+        "id": "sands-of-sinai-blue-unit-04",
+        "type": "tankDestroyer",
+        "x": 19.03,
+        "y": 23.47
+      },
+      {
+        "id": "sands-of-sinai-blue-role-02",
+        "type": "highRiskSpot",
+        "x": 19.03,
+        "y": 23.47,
+        "parentTankId": "sands-of-sinai-blue-unit-04"
+      },
+      {
+        "id": "sands-of-sinai-blue-unit-05",
+        "type": "tankDestroyer",
+        "x": 75.76,
+        "y": 28.96
+      },
+      {
+        "id": "sands-of-sinai-blue-role-03",
+        "type": "highRiskSpot",
+        "x": 75.76,
+        "y": 28.96,
+        "parentTankId": "sands-of-sinai-blue-unit-05"
+      },
+      {
+        "id": "sands-of-sinai-blue-unit-06",
+        "type": "mainBattleTank",
+        "x": 72.64,
+        "y": 37.22
+      },
+      {
+        "id": "sands-of-sinai-blue-role-04",
+        "type": "highRiskSpot",
+        "x": 72.64,
+        "y": 37.22,
+        "parentTankId": "sands-of-sinai-blue-unit-06"
+      },
+      {
+        "id": "sands-of-sinai-blue-unit-07",
+        "type": "mainBattleTank",
+        "x": 90.62,
+        "y": 42.64
+      },
+      {
+        "id": "sands-of-sinai-blue-role-05",
+        "type": "battleLine",
+        "x": 90.62,
+        "y": 42.64,
+        "parentTankId": "sands-of-sinai-blue-unit-07"
+      },
+      {
+        "id": "sands-of-sinai-blue-unit-08",
+        "type": "mainBattleTank",
+        "x": 74.58,
+        "y": 42.71
+      },
+      {
+        "id": "sands-of-sinai-blue-role-06",
+        "type": "battleLine",
+        "x": 74.58,
+        "y": 42.71,
+        "parentTankId": "sands-of-sinai-blue-unit-08"
+      },
+      {
+        "id": "sands-of-sinai-blue-unit-09",
+        "type": "mainBattleTank",
+        "x": 62.43,
+        "y": 42.99
+      },
+      {
+        "id": "sands-of-sinai-blue-role-07",
+        "type": "highRiskSpot",
+        "x": 62.43,
+        "y": 42.99,
+        "parentTankId": "sands-of-sinai-blue-unit-09"
+      },
+      {
+        "id": "sands-of-sinai-blue-unit-10",
+        "type": "mainBattleTank",
+        "x": 39.24,
+        "y": 45
+      },
+      {
+        "id": "sands-of-sinai-blue-role-08",
+        "type": "battleLine",
+        "x": 39.24,
+        "y": 45,
+        "parentTankId": "sands-of-sinai-blue-unit-10"
+      },
+      {
+        "id": "sands-of-sinai-blue-unit-11",
+        "type": "mainBattleTank",
+        "x": 84.44,
+        "y": 48.61
+      },
+      {
+        "id": "sands-of-sinai-blue-role-09",
+        "type": "battleLine",
+        "x": 84.44,
+        "y": 48.61,
+        "parentTankId": "sands-of-sinai-blue-unit-11"
+      },
+      {
+        "id": "sands-of-sinai-blue-unit-12",
+        "type": "mainBattleTank",
+        "x": 88.96,
+        "y": 48.61
+      },
+      {
+        "id": "sands-of-sinai-blue-role-10",
+        "type": "battleLine",
+        "x": 88.96,
+        "y": 48.61,
+        "parentTankId": "sands-of-sinai-blue-unit-12"
+      },
+      {
+        "id": "sands-of-sinai-blue-unit-13",
+        "type": "mainBattleTank",
+        "x": 58.33,
+        "y": 54.03
+      },
+      {
+        "id": "sands-of-sinai-blue-role-11",
+        "type": "highRiskSpot",
+        "x": 58.33,
+        "y": 54.03,
+        "parentTankId": "sands-of-sinai-blue-unit-13"
+      },
+      {
+        "id": "sands-of-sinai-blue-unit-14",
+        "type": "mainBattleTank",
+        "x": 95.62,
+        "y": 54.79
+      },
+      {
+        "id": "sands-of-sinai-blue-role-12",
+        "type": "highRiskSpot",
+        "x": 95.62,
+        "y": 54.79,
+        "parentTankId": "sands-of-sinai-blue-unit-14"
+      },
+      {
+        "id": "sands-of-sinai-blue-unit-15",
+        "type": "mainBattleTank",
+        "x": 88.19,
+        "y": 56.94
+      },
+      {
+        "id": "sands-of-sinai-blue-unit-16",
+        "type": "mainBattleTank",
+        "x": 76.46,
+        "y": 60.42
+      },
+      {
+        "id": "sands-of-sinai-blue-unit-17",
+        "type": "mainBattleTank",
+        "x": 46.67,
+        "y": 75.35
+      },
+      {
+        "id": "sands-of-sinai-blue-unit-18",
+        "type": "mainBattleTank",
+        "x": 25.69,
+        "y": 76.04
+      }
+    ],
     "European Province::domination-1|Red": [
       {
         "id": "european-province-red-unit-01",
@@ -11416,13 +11828,13 @@
       {
         "id": "second-battle-of-el-alamein-red-unit-08",
         "type": "mainBattleTankRed",
-        "x": 74.44,
+        "x": 74.38,
         "y": 31.94
       },
       {
         "id": "second-battle-of-el-alamein-red-role-06",
         "type": "battleLine",
-        "x": 74.44,
+        "x": 74.38,
         "y": 31.94,
         "parentTankId": "second-battle-of-el-alamein-red-unit-08"
       },
@@ -11460,7 +11872,7 @@
       },
       {
         "id": "second-battle-of-el-alamein-red-role-09",
-        "type": "sniper",
+        "type": "spawnKill",
         "x": 71.81,
         "y": 40.56,
         "parentTankId": "second-battle-of-el-alamein-red-unit-11"
@@ -11539,7 +11951,7 @@
       {
         "id": "second-battle-of-el-alamein-red-unit-18",
         "type": "antiAirRed",
-        "x": 92.22,
+        "x": 92.15,
         "y": 68.19
       }
     ],
@@ -11736,213 +12148,616 @@
       {
         "id": "second-battle-of-el-alamein-blue-unit-01",
         "type": "mainBattleTank",
-        "x": 38.82,
-        "y": 2.29
-      },
-      {
-        "id": "second-battle-of-el-alamein-blue-role-01",
-        "type": "sniper",
-        "x": 38.82,
-        "y": 2.29,
-        "parentTankId": "second-battle-of-el-alamein-blue-unit-01"
+        "x": 52.08,
+        "y": 23.19
       },
       {
         "id": "second-battle-of-el-alamein-blue-unit-02",
-        "type": "antiAir",
-        "x": 51.94,
-        "y": 9.72
+        "type": "mainBattleTank",
+        "x": 59.38,
+        "y": 30.9
+      },
+      {
+        "id": "second-battle-of-el-alamein-blue-role-01",
+        "type": "highRiskSpot",
+        "x": 59.38,
+        "y": 30.9,
+        "parentTankId": "second-battle-of-el-alamein-blue-unit-02"
       },
       {
         "id": "second-battle-of-el-alamein-blue-unit-03",
         "type": "mainBattleTank",
-        "x": 80.62,
-        "y": 10.07
+        "x": 91.18,
+        "y": 36.32
       },
       {
         "id": "second-battle-of-el-alamein-blue-role-02",
         "type": "battleLine",
-        "x": 80.62,
-        "y": 10.07,
+        "x": 91.18,
+        "y": 36.32,
         "parentTankId": "second-battle-of-el-alamein-blue-unit-03"
       },
       {
         "id": "second-battle-of-el-alamein-blue-unit-04",
-        "type": "antiAir",
-        "x": 41.6,
-        "y": 15.28
+        "type": "mainBattleTank",
+        "x": 69.17,
+        "y": 41.67
+      },
+      {
+        "id": "second-battle-of-el-alamein-blue-role-03",
+        "type": "battleLine",
+        "x": 69.17,
+        "y": 41.67,
+        "parentTankId": "second-battle-of-el-alamein-blue-unit-04"
       },
       {
         "id": "second-battle-of-el-alamein-blue-unit-05",
         "type": "mainBattleTank",
-        "x": 64.93,
-        "y": 16.74
+        "x": 36.32,
+        "y": 42.71
       },
       {
-        "id": "second-battle-of-el-alamein-blue-role-03",
-        "type": "sniper",
-        "x": 64.93,
-        "y": 16.74,
+        "id": "second-battle-of-el-alamein-blue-role-04",
+        "type": "highRiskSpot",
+        "x": 36.32,
+        "y": 42.71,
         "parentTankId": "second-battle-of-el-alamein-blue-unit-05"
       },
       {
         "id": "second-battle-of-el-alamein-blue-unit-06",
-        "type": "antiAir",
-        "x": 39.93,
-        "y": 17.01
+        "type": "mainBattleTank",
+        "x": 87.64,
+        "y": 48.12
+      },
+      {
+        "id": "second-battle-of-el-alamein-blue-role-05",
+        "type": "spawnKill",
+        "x": 87.64,
+        "y": 48.12,
+        "parentTankId": "second-battle-of-el-alamein-blue-unit-06"
       },
       {
         "id": "second-battle-of-el-alamein-blue-unit-07",
         "type": "mainBattleTank",
-        "x": 72.08,
-        "y": 18.68
-      },
-      {
-        "id": "second-battle-of-el-alamein-blue-role-04",
-        "type": "battleLine",
-        "x": 72.08,
-        "y": 18.68,
-        "parentTankId": "second-battle-of-el-alamein-blue-unit-07"
+        "x": 17.15,
+        "y": 48.33
       },
       {
         "id": "second-battle-of-el-alamein-blue-unit-08",
         "type": "mainBattleTank",
-        "x": 59.65,
-        "y": 21.25
+        "x": 65.07,
+        "y": 49.93
       },
       {
-        "id": "second-battle-of-el-alamein-blue-role-05",
+        "id": "second-battle-of-el-alamein-blue-role-06",
         "type": "battleLine",
-        "x": 59.65,
-        "y": 21.25,
+        "x": 65.07,
+        "y": 49.93,
         "parentTankId": "second-battle-of-el-alamein-blue-unit-08"
       },
       {
         "id": "second-battle-of-el-alamein-blue-unit-09",
         "type": "mainBattleTank",
-        "x": 95.76,
-        "y": 22.36
+        "x": 9.93,
+        "y": 50.97
       },
       {
         "id": "second-battle-of-el-alamein-blue-unit-10",
         "type": "mainBattleTank",
-        "x": 26.74,
-        "y": 22.92
+        "x": 81.04,
+        "y": 56.32
       },
       {
-        "id": "second-battle-of-el-alamein-blue-role-06",
-        "type": "spawnKill",
-        "x": 26.74,
-        "y": 22.92,
+        "id": "second-battle-of-el-alamein-blue-role-07",
+        "type": "highRiskSpot",
+        "x": 81.04,
+        "y": 56.32,
         "parentTankId": "second-battle-of-el-alamein-blue-unit-10"
       },
       {
         "id": "second-battle-of-el-alamein-blue-unit-11",
-        "type": "mainBattleTank",
-        "x": 58.54,
-        "y": 27.01
-      },
-      {
-        "id": "second-battle-of-el-alamein-blue-role-07",
-        "type": "battleLine",
-        "x": 58.54,
-        "y": 27.01,
-        "parentTankId": "second-battle-of-el-alamein-blue-unit-11"
+        "type": "antiAir",
+        "x": 81.32,
+        "y": 59.03
       },
       {
         "id": "second-battle-of-el-alamein-blue-unit-12",
-        "type": "mainBattleTank",
-        "x": 68.61,
-        "y": 27.78
-      },
-      {
-        "id": "second-battle-of-el-alamein-blue-role-08",
-        "type": "highRiskSpot",
-        "x": 68.61,
-        "y": 27.78,
-        "parentTankId": "second-battle-of-el-alamein-blue-unit-12"
+        "type": "antiAir",
+        "x": 75.35,
+        "y": 65.35
       },
       {
         "id": "second-battle-of-el-alamein-blue-unit-13",
         "type": "mainBattleTank",
-        "x": 49.86,
-        "y": 32.92
+        "x": 12.92,
+        "y": 67.78
       },
       {
-        "id": "second-battle-of-el-alamein-blue-role-09",
-        "type": "sniper",
-        "x": 49.86,
-        "y": 32.92,
+        "id": "second-battle-of-el-alamein-blue-role-08",
+        "type": "highRiskSpot",
+        "x": 12.92,
+        "y": 67.78,
         "parentTankId": "second-battle-of-el-alamein-blue-unit-13"
       },
       {
         "id": "second-battle-of-el-alamein-blue-unit-14",
         "type": "mainBattleTank",
-        "x": 71.53,
-        "y": 36.04
+        "x": 45.97,
+        "y": 70
       },
       {
-        "id": "second-battle-of-el-alamein-blue-role-10",
-        "type": "highRiskSpot",
-        "x": 71.53,
-        "y": 36.04,
+        "id": "second-battle-of-el-alamein-blue-role-09",
+        "type": "battleLine",
+        "x": 45.97,
+        "y": 70,
         "parentTankId": "second-battle-of-el-alamein-blue-unit-14"
       },
       {
         "id": "second-battle-of-el-alamein-blue-unit-15",
         "type": "mainBattleTank",
-        "x": 54.65,
-        "y": 40.69
+        "x": 37.43,
+        "y": 77.36
       },
       {
-        "id": "second-battle-of-el-alamein-blue-role-11",
-        "type": "highRiskSpot",
-        "x": 54.65,
-        "y": 40.69,
+        "id": "second-battle-of-el-alamein-blue-role-10",
+        "type": "battleLine",
+        "x": 37.43,
+        "y": 77.36,
         "parentTankId": "second-battle-of-el-alamein-blue-unit-15"
       },
       {
         "id": "second-battle-of-el-alamein-blue-unit-16",
         "type": "mainBattleTank",
-        "x": 53.33,
-        "y": 51.04
+        "x": 34.44,
+        "y": 81.25
       },
       {
-        "id": "second-battle-of-el-alamein-blue-role-12",
-        "type": "highRiskSpot",
-        "x": 53.33,
-        "y": 51.04,
+        "id": "second-battle-of-el-alamein-blue-role-11",
+        "type": "battleLine",
+        "x": 34.44,
+        "y": 81.25,
         "parentTankId": "second-battle-of-el-alamein-blue-unit-16"
       },
       {
         "id": "second-battle-of-el-alamein-blue-unit-17",
         "type": "mainBattleTank",
-        "x": 64.31,
-        "y": 55.76
+        "x": 11.39,
+        "y": 85.76
+      },
+      {
+        "id": "second-battle-of-el-alamein-blue-role-12",
+        "type": "battleLine",
+        "x": 11.39,
+        "y": 85.76,
+        "parentTankId": "second-battle-of-el-alamein-blue-unit-17"
       },
       {
         "id": "second-battle-of-el-alamein-blue-unit-18",
         "type": "mainBattleTank",
-        "x": 61.53,
-        "y": 57.5
-      },
-      {
-        "id": "second-battle-of-el-alamein-blue-unit-19",
-        "type": "lightTank",
-        "x": 67.85,
-        "y": 57.78
+        "x": 80.49,
+        "y": 92.99
       },
       {
         "id": "second-battle-of-el-alamein-blue-role-13",
-        "type": "sniper",
-        "x": 67.85,
-        "y": 57.78,
-        "parentTankId": "second-battle-of-el-alamein-blue-unit-19"
+        "type": "spawnKill",
+        "x": 80.49,
+        "y": 92.99,
+        "parentTankId": "second-battle-of-el-alamein-blue-unit-18"
       },
       {
-        "id": "second-battle-of-el-alamein-blue-unit-20",
-        "type": "lightTank",
-        "x": 82.29,
-        "y": 63.68
+        "id": "second-battle-of-el-alamein-blue-unit-19",
+        "type": "mainBattleTank",
+        "x": 55.35,
+        "y": 94.03
+      },
+      {
+        "id": "second-battle-of-el-alamein-blue-role-14",
+        "type": "spawnKill",
+        "x": 55.35,
+        "y": 94.03,
+        "parentTankId": "second-battle-of-el-alamein-blue-unit-19"
+      }
+    ],
+    "Second Battle of El Alamein::domination-2|Red": [
+      {
+        "id": "second-battle-of-el-alamein-domination-2-red-unit-01",
+        "type": "tankDestroyerRed",
+        "x": 2.15,
+        "y": 1.74
+      },
+      {
+        "id": "second-battle-of-el-alamein-domination-2-red-unit-02",
+        "type": "mainBattleTankRed",
+        "x": 48.33,
+        "y": 3.54
+      },
+      {
+        "id": "second-battle-of-el-alamein-domination-2-red-role-01",
+        "type": "spawnKill",
+        "x": 48.33,
+        "y": 3.54,
+        "parentTankId": "second-battle-of-el-alamein-domination-2-red-unit-02"
+      },
+      {
+        "id": "second-battle-of-el-alamein-domination-2-red-unit-03",
+        "type": "antiAirRed",
+        "x": 40.56,
+        "y": 12.36
+      },
+      {
+        "id": "second-battle-of-el-alamein-domination-2-red-unit-04",
+        "type": "antiAirRed",
+        "x": 37.71,
+        "y": 21.11
+      },
+      {
+        "id": "second-battle-of-el-alamein-domination-2-red-unit-05",
+        "type": "mainBattleTankRed",
+        "x": 67.64,
+        "y": 24.72
+      },
+      {
+        "id": "second-battle-of-el-alamein-domination-2-red-role-02",
+        "type": "battleLine",
+        "x": 67.64,
+        "y": 24.72,
+        "parentTankId": "second-battle-of-el-alamein-domination-2-red-unit-05"
+      },
+      {
+        "id": "second-battle-of-el-alamein-domination-2-red-unit-06",
+        "type": "mainBattleTankRed",
+        "x": 56.67,
+        "y": 29.86
+      },
+      {
+        "id": "second-battle-of-el-alamein-domination-2-red-role-03",
+        "type": "highRiskSpot",
+        "x": 56.67,
+        "y": 29.86,
+        "parentTankId": "second-battle-of-el-alamein-domination-2-red-unit-06"
+      },
+      {
+        "id": "second-battle-of-el-alamein-domination-2-red-unit-07",
+        "type": "mainBattleTankRed",
+        "x": 39.51,
+        "y": 35.56
+      },
+      {
+        "id": "second-battle-of-el-alamein-domination-2-red-role-04",
+        "type": "sniper",
+        "x": 39.51,
+        "y": 35.56,
+        "parentTankId": "second-battle-of-el-alamein-domination-2-red-unit-07"
+      },
+      {
+        "id": "second-battle-of-el-alamein-domination-2-red-unit-08",
+        "type": "mainBattleTankRed",
+        "x": 15.21,
+        "y": 37.92
+      },
+      {
+        "id": "second-battle-of-el-alamein-domination-2-red-role-05",
+        "type": "sniper",
+        "x": 15.21,
+        "y": 37.92,
+        "parentTankId": "second-battle-of-el-alamein-domination-2-red-unit-08"
+      },
+      {
+        "id": "second-battle-of-el-alamein-domination-2-red-unit-09",
+        "type": "mainBattleTankRed",
+        "x": 50.62,
+        "y": 38.61
+      },
+      {
+        "id": "second-battle-of-el-alamein-domination-2-red-role-06",
+        "type": "battleLine",
+        "x": 50.62,
+        "y": 38.61,
+        "parentTankId": "second-battle-of-el-alamein-domination-2-red-unit-09"
+      },
+      {
+        "id": "second-battle-of-el-alamein-domination-2-red-unit-10",
+        "type": "mainBattleTankRed",
+        "x": 67.36,
+        "y": 40.42
+      },
+      {
+        "id": "second-battle-of-el-alamein-domination-2-red-role-07",
+        "type": "highRiskSpot",
+        "x": 67.36,
+        "y": 40.42,
+        "parentTankId": "second-battle-of-el-alamein-domination-2-red-unit-10"
+      },
+      {
+        "id": "second-battle-of-el-alamein-domination-2-red-unit-11",
+        "type": "mainBattleTankRed",
+        "x": 34.79,
+        "y": 41.53
+      },
+      {
+        "id": "second-battle-of-el-alamein-domination-2-red-role-08",
+        "type": "battleLine",
+        "x": 34.79,
+        "y": 41.53,
+        "parentTankId": "second-battle-of-el-alamein-domination-2-red-unit-11"
+      },
+      {
+        "id": "second-battle-of-el-alamein-domination-2-red-unit-12",
+        "type": "mainBattleTankRed",
+        "x": 93.4,
+        "y": 43.61
+      },
+      {
+        "id": "second-battle-of-el-alamein-domination-2-red-unit-13",
+        "type": "mainBattleTankRed",
+        "x": 23.75,
+        "y": 58.75
+      },
+      {
+        "id": "second-battle-of-el-alamein-domination-2-red-role-09",
+        "type": "sniper",
+        "x": 23.75,
+        "y": 58.75,
+        "parentTankId": "second-battle-of-el-alamein-domination-2-red-unit-13"
+      },
+      {
+        "id": "second-battle-of-el-alamein-domination-2-red-unit-14",
+        "type": "mainBattleTankRed",
+        "x": 21.94,
+        "y": 64.03
+      },
+      {
+        "id": "second-battle-of-el-alamein-domination-2-red-role-10",
+        "type": "battleLine",
+        "x": 21.94,
+        "y": 64.03,
+        "parentTankId": "second-battle-of-el-alamein-domination-2-red-unit-14"
+      },
+      {
+        "id": "second-battle-of-el-alamein-domination-2-red-unit-15",
+        "type": "mainBattleTankRed",
+        "x": 3.96,
+        "y": 70.76
+      },
+      {
+        "id": "second-battle-of-el-alamein-domination-2-red-role-11",
+        "type": "battleLine",
+        "x": 3.96,
+        "y": 70.76,
+        "parentTankId": "second-battle-of-el-alamein-domination-2-red-unit-15"
+      },
+      {
+        "id": "second-battle-of-el-alamein-domination-2-red-unit-16",
+        "type": "mainBattleTankRed",
+        "x": 63.75,
+        "y": 78.82
+      },
+      {
+        "id": "second-battle-of-el-alamein-domination-2-red-unit-17",
+        "type": "mainBattleTankRed",
+        "x": 17.99,
+        "y": 92.99
+      },
+      {
+        "id": "second-battle-of-el-alamein-domination-2-red-role-12",
+        "type": "highRiskSpot",
+        "x": 17.99,
+        "y": 92.99,
+        "parentTankId": "second-battle-of-el-alamein-domination-2-red-unit-17"
+      }
+    ],
+    "Second Battle of El Alamein::domination-2|Blue": [
+      {
+        "id": "second-battle-of-el-alamein-domination-2-blue-unit-01",
+        "type": "mainBattleTank",
+        "x": 52.08,
+        "y": 23.19
+      },
+      {
+        "id": "second-battle-of-el-alamein-domination-2-blue-unit-02",
+        "type": "mainBattleTank",
+        "x": 59.38,
+        "y": 30.9
+      },
+      {
+        "id": "second-battle-of-el-alamein-domination-2-blue-role-01",
+        "type": "highRiskSpot",
+        "x": 59.38,
+        "y": 30.9,
+        "parentTankId": "second-battle-of-el-alamein-domination-2-blue-unit-02"
+      },
+      {
+        "id": "second-battle-of-el-alamein-domination-2-blue-unit-03",
+        "type": "mainBattleTank",
+        "x": 91.18,
+        "y": 36.32
+      },
+      {
+        "id": "second-battle-of-el-alamein-domination-2-blue-role-02",
+        "type": "battleLine",
+        "x": 91.18,
+        "y": 36.32,
+        "parentTankId": "second-battle-of-el-alamein-domination-2-blue-unit-03"
+      },
+      {
+        "id": "second-battle-of-el-alamein-domination-2-blue-unit-04",
+        "type": "mainBattleTank",
+        "x": 69.17,
+        "y": 41.67
+      },
+      {
+        "id": "second-battle-of-el-alamein-domination-2-blue-role-03",
+        "type": "battleLine",
+        "x": 69.17,
+        "y": 41.67,
+        "parentTankId": "second-battle-of-el-alamein-domination-2-blue-unit-04"
+      },
+      {
+        "id": "second-battle-of-el-alamein-domination-2-blue-unit-05",
+        "type": "mainBattleTank",
+        "x": 36.32,
+        "y": 42.71
+      },
+      {
+        "id": "second-battle-of-el-alamein-domination-2-blue-role-04",
+        "type": "highRiskSpot",
+        "x": 36.32,
+        "y": 42.71,
+        "parentTankId": "second-battle-of-el-alamein-domination-2-blue-unit-05"
+      },
+      {
+        "id": "second-battle-of-el-alamein-domination-2-blue-unit-06",
+        "type": "mainBattleTank",
+        "x": 87.64,
+        "y": 48.12
+      },
+      {
+        "id": "second-battle-of-el-alamein-domination-2-blue-role-05",
+        "type": "spawnKill",
+        "x": 87.64,
+        "y": 48.12,
+        "parentTankId": "second-battle-of-el-alamein-domination-2-blue-unit-06"
+      },
+      {
+        "id": "second-battle-of-el-alamein-domination-2-blue-unit-07",
+        "type": "mainBattleTank",
+        "x": 17.15,
+        "y": 48.33
+      },
+      {
+        "id": "second-battle-of-el-alamein-domination-2-blue-unit-08",
+        "type": "mainBattleTank",
+        "x": 65.07,
+        "y": 49.93
+      },
+      {
+        "id": "second-battle-of-el-alamein-domination-2-blue-role-06",
+        "type": "battleLine",
+        "x": 65.07,
+        "y": 49.93,
+        "parentTankId": "second-battle-of-el-alamein-domination-2-blue-unit-08"
+      },
+      {
+        "id": "second-battle-of-el-alamein-domination-2-blue-unit-09",
+        "type": "mainBattleTank",
+        "x": 9.93,
+        "y": 50.97
+      },
+      {
+        "id": "second-battle-of-el-alamein-domination-2-blue-unit-10",
+        "type": "mainBattleTank",
+        "x": 81.04,
+        "y": 56.32
+      },
+      {
+        "id": "second-battle-of-el-alamein-domination-2-blue-role-07",
+        "type": "highRiskSpot",
+        "x": 81.04,
+        "y": 56.32,
+        "parentTankId": "second-battle-of-el-alamein-domination-2-blue-unit-10"
+      },
+      {
+        "id": "second-battle-of-el-alamein-domination-2-blue-unit-11",
+        "type": "antiAir",
+        "x": 81.32,
+        "y": 59.03
+      },
+      {
+        "id": "second-battle-of-el-alamein-domination-2-blue-unit-12",
+        "type": "antiAir",
+        "x": 75.35,
+        "y": 65.35
+      },
+      {
+        "id": "second-battle-of-el-alamein-domination-2-blue-unit-13",
+        "type": "mainBattleTank",
+        "x": 12.92,
+        "y": 67.78
+      },
+      {
+        "id": "second-battle-of-el-alamein-domination-2-blue-role-08",
+        "type": "highRiskSpot",
+        "x": 12.92,
+        "y": 67.78,
+        "parentTankId": "second-battle-of-el-alamein-domination-2-blue-unit-13"
+      },
+      {
+        "id": "second-battle-of-el-alamein-domination-2-blue-unit-14",
+        "type": "mainBattleTank",
+        "x": 45.97,
+        "y": 70
+      },
+      {
+        "id": "second-battle-of-el-alamein-domination-2-blue-role-09",
+        "type": "battleLine",
+        "x": 45.97,
+        "y": 70,
+        "parentTankId": "second-battle-of-el-alamein-domination-2-blue-unit-14"
+      },
+      {
+        "id": "second-battle-of-el-alamein-domination-2-blue-unit-15",
+        "type": "mainBattleTank",
+        "x": 37.43,
+        "y": 77.36
+      },
+      {
+        "id": "second-battle-of-el-alamein-domination-2-blue-role-10",
+        "type": "battleLine",
+        "x": 37.43,
+        "y": 77.36,
+        "parentTankId": "second-battle-of-el-alamein-domination-2-blue-unit-15"
+      },
+      {
+        "id": "second-battle-of-el-alamein-domination-2-blue-unit-16",
+        "type": "mainBattleTank",
+        "x": 34.44,
+        "y": 81.25
+      },
+      {
+        "id": "second-battle-of-el-alamein-domination-2-blue-role-11",
+        "type": "battleLine",
+        "x": 34.44,
+        "y": 81.25,
+        "parentTankId": "second-battle-of-el-alamein-domination-2-blue-unit-16"
+      },
+      {
+        "id": "second-battle-of-el-alamein-domination-2-blue-unit-17",
+        "type": "mainBattleTank",
+        "x": 11.39,
+        "y": 85.76
+      },
+      {
+        "id": "second-battle-of-el-alamein-domination-2-blue-role-12",
+        "type": "battleLine",
+        "x": 11.39,
+        "y": 85.76,
+        "parentTankId": "second-battle-of-el-alamein-domination-2-blue-unit-17"
+      },
+      {
+        "id": "second-battle-of-el-alamein-domination-2-blue-unit-18",
+        "type": "mainBattleTank",
+        "x": 80.49,
+        "y": 92.99
+      },
+      {
+        "id": "second-battle-of-el-alamein-domination-2-blue-role-13",
+        "type": "spawnKill",
+        "x": 80.49,
+        "y": 92.99,
+        "parentTankId": "second-battle-of-el-alamein-domination-2-blue-unit-18"
+      },
+      {
+        "id": "second-battle-of-el-alamein-domination-2-blue-unit-19",
+        "type": "mainBattleTank",
+        "x": 55.35,
+        "y": 94.03
+      },
+      {
+        "id": "second-battle-of-el-alamein-domination-2-blue-role-14",
+        "type": "spawnKill",
+        "x": 55.35,
+        "y": 94.03,
+        "parentTankId": "second-battle-of-el-alamein-domination-2-blue-unit-19"
       }
     ]
   },
@@ -27286,8 +28101,244 @@
         "endY": 17.21
       }
     ],
-    "Sands of Sinai::domination-1|Red": [],
-    "Sands of Sinai::domination-1|Blue": [],
+    "Sands of Sinai::domination-1|Red": [
+      {
+        "id": "sands-of-sinai-red-aim-01",
+        "type": "aimHere",
+        "parentTankId": "sands-of-sinai-red-unit-02",
+        "startX": 23.89,
+        "startY": 25.76,
+        "endX": 26.93,
+        "endY": 14.36
+      },
+      {
+        "id": "sands-of-sinai-red-aim-02",
+        "type": "aimHere",
+        "parentTankId": "sands-of-sinai-red-unit-05",
+        "startX": 59.24,
+        "startY": 44.44,
+        "endX": 65.7,
+        "endY": 45.71
+      },
+      {
+        "id": "sands-of-sinai-red-aim-03",
+        "type": "aimHere",
+        "parentTankId": "sands-of-sinai-red-unit-04",
+        "startX": 90.83,
+        "startY": 34.72,
+        "endX": 82.56,
+        "endY": 38.27
+      },
+      {
+        "id": "sands-of-sinai-red-aim-04",
+        "type": "aimHere",
+        "parentTankId": "sands-of-sinai-red-unit-13",
+        "startX": 65.42,
+        "startY": 58.33,
+        "endX": 65.26,
+        "endY": 67.03
+      },
+      {
+        "id": "sands-of-sinai-red-aim-05",
+        "type": "aimHere",
+        "parentTankId": "sands-of-sinai-red-unit-05",
+        "startX": 59.24,
+        "startY": 44.44,
+        "endX": 42.3,
+        "endY": 50.23
+      },
+      {
+        "id": "sands-of-sinai-red-aim-06",
+        "type": "aimHere",
+        "parentTankId": "sands-of-sinai-red-unit-18",
+        "startX": 67.92,
+        "startY": 88.82,
+        "endX": 66.59,
+        "endY": 80.52
+      },
+      {
+        "id": "sands-of-sinai-red-aim-07",
+        "type": "aimHere",
+        "parentTankId": "sands-of-sinai-red-unit-06",
+        "startX": 69.65,
+        "startY": 45.83,
+        "endX": 74.52,
+        "endY": 48.05
+      },
+      {
+        "id": "sands-of-sinai-red-aim-08",
+        "type": "aimHere",
+        "parentTankId": "sands-of-sinai-red-unit-06",
+        "startX": 69.65,
+        "startY": 45.83,
+        "endX": 75.9,
+        "endY": 46.18
+      },
+      {
+        "id": "sands-of-sinai-red-aim-09",
+        "type": "aimHere",
+        "parentTankId": "sands-of-sinai-red-unit-03",
+        "startX": 79.65,
+        "startY": 32.43,
+        "endX": 81.94,
+        "endY": 38.77
+      },
+      {
+        "id": "sands-of-sinai-red-aim-10",
+        "type": "aimHere",
+        "parentTankId": "sands-of-sinai-red-unit-04",
+        "startX": 90.83,
+        "startY": 34.72,
+        "endX": 91.29,
+        "endY": 27.82
+      },
+      {
+        "id": "sands-of-sinai-red-aim-11",
+        "type": "aimHere",
+        "parentTankId": "sands-of-sinai-red-unit-17",
+        "startX": 51.04,
+        "startY": 79.38,
+        "endX": 55.51,
+        "endY": 79.6
+      },
+      {
+        "id": "sands-of-sinai-red-aim-12",
+        "type": "aimHere",
+        "parentTankId": "sands-of-sinai-red-unit-16",
+        "startX": 17.99,
+        "startY": 72.36,
+        "endX": 24.33,
+        "endY": 67.49
+      },
+      {
+        "id": "sands-of-sinai-red-aim-13",
+        "type": "aimHere",
+        "parentTankId": "sands-of-sinai-red-unit-07",
+        "startX": 96.04,
+        "startY": 47.5,
+        "endX": 88.06,
+        "endY": 48.96
+      },
+      {
+        "id": "sands-of-sinai-red-aim-14",
+        "type": "aimHere",
+        "parentTankId": "sands-of-sinai-red-unit-06",
+        "startX": 69.65,
+        "startY": 45.83,
+        "endX": 71.88,
+        "endY": 40.76
+      },
+      {
+        "id": "sands-of-sinai-red-aim-15",
+        "type": "aimHere",
+        "parentTankId": "sands-of-sinai-red-unit-17",
+        "startX": 51.04,
+        "startY": 79.38,
+        "endX": 54.4,
+        "endY": 73.24
+      },
+      {
+        "id": "sands-of-sinai-red-aim-16",
+        "type": "aimHere",
+        "parentTankId": "sands-of-sinai-red-unit-14",
+        "startX": 58.47,
+        "startY": 58.82,
+        "endX": 61.7,
+        "endY": 53.95
+      },
+      {
+        "id": "sands-of-sinai-red-aim-17",
+        "type": "aimHere",
+        "parentTankId": "sands-of-sinai-red-unit-03",
+        "startX": 79.65,
+        "startY": 32.43,
+        "endX": 82.16,
+        "endY": 27.83
+      }
+    ],
+    "Sands of Sinai::domination-1|Blue": [
+      {
+        "id": "sands-of-sinai-blue-aim-01",
+        "type": "aimHere",
+        "parentTankId": "sands-of-sinai-blue-unit-03",
+        "startX": 57.29,
+        "startY": 17.08,
+        "endX": 57.07,
+        "endY": 27.5
+      },
+      {
+        "id": "sands-of-sinai-blue-aim-02",
+        "type": "aimHere",
+        "parentTankId": "sands-of-sinai-blue-unit-02",
+        "startX": 94.65,
+        "startY": 13.26,
+        "endX": 95.42,
+        "endY": 7.64
+      },
+      {
+        "id": "sands-of-sinai-blue-aim-03",
+        "type": "aimHere",
+        "parentTankId": "sands-of-sinai-blue-unit-10",
+        "startX": 39.24,
+        "startY": 45,
+        "endX": 35.74,
+        "endY": 40.36
+      },
+      {
+        "id": "sands-of-sinai-blue-aim-04",
+        "type": "aimHere",
+        "parentTankId": "sands-of-sinai-blue-unit-17",
+        "startX": 46.67,
+        "startY": 75.35,
+        "endX": 43.86,
+        "endY": 80.23
+      },
+      {
+        "id": "sands-of-sinai-blue-aim-05",
+        "type": "aimHere",
+        "parentTankId": "sands-of-sinai-blue-unit-08",
+        "startX": 74.58,
+        "startY": 42.71,
+        "endX": 74.6,
+        "endY": 47.85
+      },
+      {
+        "id": "sands-of-sinai-blue-aim-06",
+        "type": "aimHere",
+        "parentTankId": "sands-of-sinai-blue-unit-04",
+        "startX": 19.03,
+        "startY": 23.47,
+        "endX": 22.99,
+        "endY": 27.57
+      },
+      {
+        "id": "sands-of-sinai-blue-aim-07",
+        "type": "aimHere",
+        "parentTankId": "sands-of-sinai-blue-unit-03",
+        "startX": 57.29,
+        "startY": 17.08,
+        "endX": 61.67,
+        "endY": 14.65
+      },
+      {
+        "id": "sands-of-sinai-blue-aim-08",
+        "type": "aimHere",
+        "parentTankId": "sands-of-sinai-blue-unit-10",
+        "startX": 39.24,
+        "startY": 45,
+        "endX": 42.8,
+        "endY": 47.48
+      },
+      {
+        "id": "sands-of-sinai-blue-aim-09",
+        "type": "aimHere",
+        "parentTankId": "sands-of-sinai-blue-unit-07",
+        "startX": 90.62,
+        "startY": 42.64,
+        "endX": 90.26,
+        "endY": 47.64
+      }
+    ],
     "European Province::domination-1|Red": [
       {
         "id": "european-province-red-aim-01",
@@ -38605,714 +39656,6 @@
         "startY": 53.4,
         "endX": 74.33,
         "endY": 72.5
-      },
-      {
-        "id": "pradesh-red-route-01",
-        "type": "route",
-        "points": [
-          {
-            "x": 72.77,
-            "y": 87.21
-          },
-          {
-            "x": 72.92,
-            "y": 89.76
-          },
-          {
-            "x": 73.51,
-            "y": 87.22
-          },
-          {
-            "x": 73.8,
-            "y": 90.0
-          },
-          {
-            "x": 74.12,
-            "y": 87.19
-          },
-          {
-            "x": 74.9,
-            "y": 90.06
-          },
-          {
-            "x": 74.63,
-            "y": 92.78
-          },
-          {
-            "x": 73.92,
-            "y": 95.21
-          },
-          {
-            "x": 73.97,
-            "y": 97.89
-          },
-          {
-            "x": 74.54,
-            "y": 95.17
-          },
-          {
-            "x": 75.02,
-            "y": 92.81
-          },
-          {
-            "x": 75.33,
-            "y": 95.24
-          },
-          {
-            "x": 75.83,
-            "y": 97.77
-          },
-          {
-            "x": 72.95,
-            "y": 97.64
-          },
-          {
-            "x": 73.02,
-            "y": 95.14
-          },
-          {
-            "x": 72.91,
-            "y": 92.54
-          }
-        ]
-      },
-      {
-        "id": "pradesh-red-route-02",
-        "type": "route",
-        "points": [
-          {
-            "x": 85.51,
-            "y": 89.98
-          },
-          {
-            "x": 85.49,
-            "y": 92.57
-          },
-          {
-            "x": 85.55,
-            "y": 95.21
-          },
-          {
-            "x": 86.27,
-            "y": 92.48
-          },
-          {
-            "x": 86.34,
-            "y": 95.15
-          },
-          {
-            "x": 87.0,
-            "y": 92.54
-          },
-          {
-            "x": 87.37,
-            "y": 89.86
-          },
-          {
-            "x": 86.0,
-            "y": 87.31
-          },
-          {
-            "x": 86.39,
-            "y": 89.78
-          }
-        ]
-      },
-      {
-        "id": "pradesh-red-route-03",
-        "type": "route",
-        "points": [
-          {
-            "x": 91.19,
-            "y": 94.89
-          },
-          {
-            "x": 89.83,
-            "y": 92.58
-          },
-          {
-            "x": 89.94,
-            "y": 89.92
-          },
-          {
-            "x": 89.13,
-            "y": 92.46
-          },
-          {
-            "x": 88.97,
-            "y": 89.95
-          },
-          {
-            "x": 88.92,
-            "y": 87.22
-          },
-          {
-            "x": 88.18,
-            "y": 89.9
-          },
-          {
-            "x": 88.34,
-            "y": 87.15
-          },
-          {
-            "x": 90.79,
-            "y": 92.59
-          },
-          {
-            "x": 90.44,
-            "y": 95.25
-          },
-          {
-            "x": 89.99,
-            "y": 97.91
-          }
-        ]
-      },
-      {
-        "id": "pradesh-red-route-04",
-        "type": "route",
-        "points": [
-          {
-            "x": 46.37,
-            "y": 9.64
-          },
-          {
-            "x": 44.63,
-            "y": 11.6
-          },
-          {
-            "x": 42.71,
-            "y": 13.65
-          },
-          {
-            "x": 40.37,
-            "y": 15.13
-          },
-          {
-            "x": 37.68,
-            "y": 15.6
-          },
-          {
-            "x": 34.97,
-            "y": 15.52
-          },
-          {
-            "x": 32.23,
-            "y": 16.03
-          },
-          {
-            "x": 30.41,
-            "y": 18.02
-          },
-          {
-            "x": 29.47,
-            "y": 20.64
-          },
-          {
-            "x": 28.97,
-            "y": 23.39
-          }
-        ]
-      },
-      {
-        "id": "pradesh-red-route-05",
-        "type": "route",
-        "points": [
-          {
-            "x": 54.71,
-            "y": 40.36
-          },
-          {
-            "x": 55.33,
-            "y": 37.65
-          },
-          {
-            "x": 55.96,
-            "y": 34.95
-          },
-          {
-            "x": 56.58,
-            "y": 32.24
-          }
-        ]
-      },
-      {
-        "id": "pradesh-red-route-06",
-        "type": "route",
-        "points": [
-          {
-            "x": 70.8,
-            "y": 26.29
-          },
-          {
-            "x": 72.32,
-            "y": 28.59
-          },
-          {
-            "x": 73.85,
-            "y": 30.92
-          },
-          {
-            "x": 75.38,
-            "y": 33.23
-          },
-          {
-            "x": 76.9,
-            "y": 35.54
-          },
-          {
-            "x": 78.44,
-            "y": 37.89
-          },
-          {
-            "x": 79.91,
-            "y": 40.21
-          },
-          {
-            "x": 81.84,
-            "y": 41.88
-          }
-        ]
-      },
-      {
-        "id": "pradesh-red-route-07",
-        "type": "route",
-        "points": [
-          {
-            "x": 93.88,
-            "y": 89.91
-          },
-          {
-            "x": 94.15,
-            "y": 87.12
-          },
-          {
-            "x": 94.81,
-            "y": 89.89
-          },
-          {
-            "x": 91.19,
-            "y": 89.88
-          }
-        ]
-      },
-      {
-        "id": "pradesh-red-route-08",
-        "type": "route",
-        "points": [
-          {
-            "x": 84.51,
-            "y": 97.83
-          },
-          {
-            "x": 84.34,
-            "y": 95.0
-          },
-          {
-            "x": 84.35,
-            "y": 92.36
-          }
-        ]
-      },
-      {
-        "id": "pradesh-red-route-09",
-        "type": "route",
-        "points": [
-          {
-            "x": 59.05,
-            "y": 24.25
-          },
-          {
-            "x": 60.06,
-            "y": 21.7
-          },
-          {
-            "x": 61.26,
-            "y": 19.18
-          },
-          {
-            "x": 62.77,
-            "y": 16.84
-          }
-        ]
-      },
-      {
-        "id": "pradesh-red-route-10",
-        "type": "route",
-        "points": [
-          {
-            "x": 72.51,
-            "y": 51.49
-          },
-          {
-            "x": 76.12,
-            "y": 53.59
-          },
-          {
-            "x": 74.08,
-            "y": 55.22
-          },
-          {
-            "x": 74.13,
-            "y": 57.48
-          }
-        ]
-      },
-      {
-        "id": "pradesh-red-route-11",
-        "type": "route",
-        "points": [
-          {
-            "x": 87.17,
-            "y": 97.96
-          },
-          {
-            "x": 87.57,
-            "y": 95.26
-          },
-          {
-            "x": 88.43,
-            "y": 92.61
-          },
-          {
-            "x": 88.42,
-            "y": 95.21
-          },
-          {
-            "x": 88.01,
-            "y": 97.93
-          }
-        ]
-      },
-      {
-        "id": "pradesh-red-route-12",
-        "type": "route",
-        "points": [
-          {
-            "x": 79.9,
-            "y": 89.79
-          },
-          {
-            "x": 80.04,
-            "y": 87.21
-          },
-          {
-            "x": 80.31,
-            "y": 89.79
-          },
-          {
-            "x": 79.41,
-            "y": 87.01
-          },
-          {
-            "x": 79.48,
-            "y": 90.0
-          }
-        ]
-      },
-      {
-        "id": "pradesh-red-route-13",
-        "type": "route",
-        "points": [
-          {
-            "x": 75.62,
-            "y": 90.09
-          },
-          {
-            "x": 75.55,
-            "y": 92.71
-          },
-          {
-            "x": 76.45,
-            "y": 95.04
-          },
-          {
-            "x": 76.58,
-            "y": 97.82
-          }
-        ]
-      },
-      {
-        "id": "pradesh-red-route-14",
-        "type": "route",
-        "points": [
-          {
-            "x": 78.33,
-            "y": 87.1
-          },
-          {
-            "x": 78.76,
-            "y": 89.83
-          },
-          {
-            "x": 78.89,
-            "y": 87.11
-          }
-        ]
-      },
-      {
-        "id": "pradesh-red-route-15",
-        "type": "route",
-        "points": [
-          {
-            "x": 77.13,
-            "y": 89.97
-          },
-          {
-            "x": 76.5,
-            "y": 87.09
-          },
-          {
-            "x": 76.3,
-            "y": 90.0
-          },
-          {
-            "x": 77.59,
-            "y": 87.24
-          }
-        ]
-      },
-      {
-        "id": "pradesh-red-route-16",
-        "type": "route",
-        "points": [
-          {
-            "x": 39.27,
-            "y": 42.27
-          },
-          {
-            "x": 39.29,
-            "y": 38.22
-          },
-          {
-            "x": 38.54,
-            "y": 34.83
-          }
-        ]
-      },
-      {
-        "id": "pradesh-red-route-17",
-        "type": "route",
-        "points": [
-          {
-            "x": 29.68,
-            "y": 27.64
-          },
-          {
-            "x": 31.28,
-            "y": 30.07
-          },
-          {
-            "x": 31.27,
-            "y": 27.38
-          }
-        ]
-      },
-      {
-        "id": "pradesh-red-route-18",
-        "type": "route",
-        "points": [
-          {
-            "x": 23.72,
-            "y": 53.72
-          },
-          {
-            "x": 24.48,
-            "y": 56.39
-          },
-          {
-            "x": 25.22,
-            "y": 59.04
-          },
-          {
-            "x": 25.92,
-            "y": 61.75
-          },
-          {
-            "x": 26.6,
-            "y": 64.48
-          },
-          {
-            "x": 27.44,
-            "y": 67.08
-          },
-          {
-            "x": 27.18,
-            "y": 68.42
-          }
-        ],
-        "dangerRoute": true
-      },
-      {
-        "id": "pradesh-red-route-19",
-        "type": "route",
-        "points": [
-          {
-            "x": 84.06,
-            "y": 64.03
-          },
-          {
-            "x": 86.84,
-            "y": 63.89
-          },
-          {
-            "x": 89.62,
-            "y": 63.96
-          },
-          {
-            "x": 92.4,
-            "y": 63.88
-          },
-          {
-            "x": 91.74,
-            "y": 60.49
-          },
-          {
-            "x": 89.56,
-            "y": 58.82
-          },
-          {
-            "x": 87.2,
-            "y": 57.36
-          },
-          {
-            "x": 85.39,
-            "y": 55.23
-          },
-          {
-            "x": 84.31,
-            "y": 52.68
-          },
-          {
-            "x": 83.96,
-            "y": 49.97
-          },
-          {
-            "x": 84.61,
-            "y": 47.33
-          },
-          {
-            "x": 86.46,
-            "y": 45.21
-          },
-          {
-            "x": 87.27,
-            "y": 44.36
-          }
-        ],
-        "dangerRoute": true
-      },
-      {
-        "id": "pradesh-red-route-20",
-        "type": "route",
-        "points": [
-          {
-            "x": 38.6,
-            "y": 70.76
-          },
-          {
-            "x": 41.85,
-            "y": 71.52
-          },
-          {
-            "x": 44.03,
-            "y": 73.19
-          },
-          {
-            "x": 46.04,
-            "y": 75.07
-          },
-          {
-            "x": 37.6,
-            "y": 70.24
-          },
-          {
-            "x": 34.92,
-            "y": 69.53
-          },
-          {
-            "x": 32.12,
-            "y": 69.27
-          },
-          {
-            "x": 29.34,
-            "y": 69.17
-          },
-          {
-            "x": 27.95,
-            "y": 69.17
-          }
-        ],
-        "dangerRoute": true
-      },
-      {
-        "id": "pradesh-red-route-21",
-        "type": "route",
-        "points": [
-          {
-            "x": 27.62,
-            "y": 28.28
-          },
-          {
-            "x": 26.08,
-            "y": 30.56
-          },
-          {
-            "x": 24.1,
-            "y": 32.57
-          },
-          {
-            "x": 21.72,
-            "y": 33.38
-          },
-          {
-            "x": 19.92,
-            "y": 35.36
-          },
-          {
-            "x": 19.37,
-            "y": 36.62
-          }
-        ],
-        "dangerRoute": true
-      },
-      {
-        "id": "pradesh-red-route-22",
-        "type": "route",
-        "points": [
-          {
-            "x": 38.5,
-            "y": 72.95
-          },
-          {
-            "x": 39.17,
-            "y": 75.59
-          },
-          {
-            "x": 38.75,
-            "y": 78.33
-          }
-        ],
-        "dangerRoute": true
-      },
-      {
-        "id": "pradesh-red-route-23",
-        "type": "route",
-        "points": [
-          {
-            "x": 22.55,
-            "y": 34.24
-          },
-          {
-            "x": 20.93,
-            "y": 36.5
-          },
-          {
-            "x": 21.2,
-            "y": 39.0
-          }
-        ],
-        "dangerRoute": true
       }
     ],
     "Second Battle of El Alamein::domination-1|Red": [
@@ -39322,8 +39665,8 @@
         "parentTankId": "second-battle-of-el-alamein-red-unit-10",
         "startX": 42.15,
         "startY": 36.32,
-        "endX": 56.25,
-        "endY": 17.51
+        "endX": 56.22,
+        "endY": 17.49
       },
       {
         "id": "second-battle-of-el-alamein-red-aim-02",
@@ -39332,7 +39675,7 @@
         "startX": 75.69,
         "startY": 25.69,
         "endX": 50.68,
-        "endY": 19.14
+        "endY": 19.12
       },
       {
         "id": "second-battle-of-el-alamein-red-aim-03",
@@ -39375,56 +39718,56 @@
         "type": "route",
         "points": [
           {
-            "x": 95.35,
-            "y": 43.23
+            "x": 85.93,
+            "y": 15.68
+          },
+          {
+            "x": 88.66,
+            "y": 15.77
+          },
+          {
+            "x": 90.78,
+            "y": 17.31
+          },
+          {
+            "x": 91.73,
+            "y": 19.94
+          },
+          {
+            "x": 92.4,
+            "y": 22.64
+          },
+          {
+            "x": 92.87,
+            "y": 25.4
+          },
+          {
+            "x": 93.41,
+            "y": 28.11
+          },
+          {
+            "x": 93.96,
+            "y": 30.83
+          },
+          {
+            "x": 94.49,
+            "y": 33.57
+          },
+          {
+            "x": 94.95,
+            "y": 36.36
+          },
+          {
+            "x": 95.31,
+            "y": 39.06
           },
           {
             "x": 95.42,
-            "y": 40.45
+            "y": 41.84
           },
           {
-            "x": 95.16,
-            "y": 37.68
-          },
-          {
-            "x": 94.74,
-            "y": 34.96
-          },
-          {
-            "x": 94.24,
-            "y": 32.19
-          },
-          {
-            "x": 93.72,
-            "y": 29.48
-          },
-          {
-            "x": 93.16,
-            "y": 26.77
-          },
-          {
-            "x": 92.66,
-            "y": 24.02
-          },
-          {
-            "x": 92.09,
-            "y": 21.26
-          },
-          {
-            "x": 91.32,
-            "y": 18.61
-          },
-          {
-            "x": 89.96,
-            "y": 16.23
-          },
-          {
-            "x": 87.33,
-            "y": 15.56
-          },
-          {
-            "x": 85.93,
-            "y": 15.68
+            "x": 95.35,
+            "y": 43.23
           }
         ]
       },
@@ -39433,28 +39776,48 @@
         "type": "route",
         "points": [
           {
-            "x": 74.31,
-            "y": 94.54
+            "x": 77.91,
+            "y": 26.76
           },
           {
-            "x": 74.07,
-            "y": 92.13
+            "x": 80.17,
+            "y": 28.31
           },
           {
-            "x": 73.79,
-            "y": 94.59
+            "x": 82.19,
+            "y": 30.24
           },
           {
-            "x": 74.71,
-            "y": 92.22
+            "x": 83.41,
+            "y": 32.67
           },
           {
-            "x": 74.86,
-            "y": 94.58
+            "x": 83.5,
+            "y": 35.47
           },
           {
-            "x": 75.34,
-            "y": 97.15
+            "x": 83.68,
+            "y": 38.23
+          },
+          {
+            "x": 83.89,
+            "y": 41.01
+          },
+          {
+            "x": 84.13,
+            "y": 43.79
+          },
+          {
+            "x": 81.42,
+            "y": 43.03
+          },
+          {
+            "x": 79.33,
+            "y": 41.28
+          },
+          {
+            "x": 78.8,
+            "y": 40.02
           }
         ]
       },
@@ -39463,32 +39826,20 @@
         "type": "route",
         "points": [
           {
-            "x": 75.92,
-            "y": 86.47
+            "x": 81.05,
+            "y": 50.34
           },
           {
-            "x": 76.43,
-            "y": 89.38
+            "x": 78.77,
+            "y": 48.91
           },
           {
-            "x": 76.45,
-            "y": 92.1
+            "x": 76.1,
+            "y": 48.25
           },
           {
-            "x": 75.88,
-            "y": 94.41
-          },
-          {
-            "x": 75.99,
-            "y": 97.31
-          },
-          {
-            "x": 76.95,
-            "y": 89.3
-          },
-          {
-            "x": 77.06,
-            "y": 86.65
+            "x": 74.78,
+            "y": 47.74
           }
         ]
       },
@@ -39497,217 +39848,15 @@
         "type": "route",
         "points": [
           {
-            "x": 78.81,
-            "y": 40.02
-          },
-          {
-            "x": 80.3,
-            "y": 42.23
-          },
-          {
-            "x": 82.57,
-            "y": 43.85
-          },
-          {
-            "x": 84.52,
-            "y": 45.81
-          },
-          {
-            "x": 84.03,
-            "y": 42.41
-          },
-          {
-            "x": 83.78,
-            "y": 39.62
-          },
-          {
-            "x": 83.58,
-            "y": 36.84
-          },
-          {
-            "x": 83.5,
-            "y": 34.07
-          },
-          {
-            "x": 82.97,
-            "y": 31.42
-          },
-          {
-            "x": 81.3,
-            "y": 29.18
-          },
-          {
-            "x": 79.06,
-            "y": 27.53
-          },
-          {
-            "x": 77.91,
-            "y": 26.76
-          }
-        ]
-      },
-      {
-        "id": "second-battle-of-el-alamein-red-route-05",
-        "type": "route",
-        "points": [
-          {
-            "x": 84.76,
-            "y": 86.61
-          },
-          {
-            "x": 85.04,
-            "y": 89.31
-          },
-          {
-            "x": 85.53,
-            "y": 86.69
-          },
-          {
-            "x": 85.82,
-            "y": 89.16
-          },
-          {
-            "x": 85.69,
-            "y": 91.88
-          },
-          {
-            "x": 85.88,
-            "y": 94.61
-          },
-          {
-            "x": 86.43,
-            "y": 91.95
-          },
-          {
-            "x": 86.87,
-            "y": 89.24
-          },
-          {
-            "x": 87.84,
-            "y": 86.55
-          },
-          {
-            "x": 87.6,
-            "y": 89.32
-          },
-          {
-            "x": 88.37,
-            "y": 86.61
-          },
-          {
-            "x": 88.47,
-            "y": 89.31
-          },
-          {
-            "x": 88.53,
-            "y": 91.89
-          },
-          {
-            "x": 87.88,
-            "y": 94.66
-          },
-          {
-            "x": 87.89,
-            "y": 92.0
-          },
-          {
-            "x": 85.04,
-            "y": 94.71
-          },
-          {
-            "x": 85.16,
-            "y": 97.16
-          }
-        ]
-      },
-      {
-        "id": "second-battle-of-el-alamein-red-route-06",
-        "type": "route",
-        "points": [
-          {
-            "x": 90.95,
-            "y": 86.59
-          },
-          {
-            "x": 91.17,
-            "y": 89.31
-          },
-          {
-            "x": 91.55,
-            "y": 86.67
-          },
-          {
-            "x": 91.63,
-            "y": 89.31
-          },
-          {
-            "x": 92.11,
-            "y": 86.7
-          }
-        ]
-      },
-      {
-        "id": "second-battle-of-el-alamein-red-route-07",
-        "type": "route",
-        "points": [
-          {
-            "x": 81.11,
-            "y": 50.35
-          },
-          {
-            "x": 78.77,
-            "y": 48.91
-          },
-          {
-            "x": 76.09,
-            "y": 48.25
-          },
-          {
-            "x": 74.8,
-            "y": 47.74
-          }
-        ]
-      },
-      {
-        "id": "second-battle-of-el-alamein-red-route-08",
-        "type": "route",
-        "points": [
-          {
-            "x": 92.41,
-            "y": 89.26
-          },
-          {
-            "x": 90.25,
-            "y": 92.0
-          },
-          {
-            "x": 89.97,
-            "y": 94.71
-          },
-          {
-            "x": 89.47,
-            "y": 97.31
-          },
-          {
-            "x": 90.62,
-            "y": 94.6
-          }
-        ]
-      },
-      {
-        "id": "second-battle-of-el-alamein-red-route-09",
-        "type": "route",
-        "points": [
-          {
-            "x": 82.09,
+            "x": 82.05,
             "y": 60.57
           },
           {
-            "x": 79.59,
+            "x": 79.56,
             "y": 59.42
           },
           {
-            "x": 77.21,
+            "x": 77.19,
             "y": 58.02
           },
           {
@@ -39719,284 +39868,74 @@
             "y": 56.04
           },
           {
-            "x": 69.39,
+            "x": 69.38,
             "y": 56.59
           },
           {
-            "x": 68.16,
+            "x": 68.15,
             "y": 57.23
           }
         ]
       },
       {
-        "id": "second-battle-of-el-alamein-red-route-10",
+        "id": "second-battle-of-el-alamein-red-route-05",
         "type": "route",
         "points": [
           {
-            "x": 72.45,
-            "y": 92.14
-          },
-          {
-            "x": 72.51,
-            "y": 97.05
-          },
-          {
-            "x": 73.37,
-            "y": 94.6
-          },
-          {
-            "x": 73.51,
-            "y": 97.29
-          }
-        ]
-      },
-      {
-        "id": "second-battle-of-el-alamein-red-route-11",
-        "type": "route",
-        "points": [
-          {
-            "x": 79.34,
-            "y": 89.18
-          },
-          {
-            "x": 79.47,
-            "y": 86.61
-          },
-          {
-            "x": 79.76,
-            "y": 89.17
-          },
-          {
-            "x": 78.92,
-            "y": 86.39
-          },
-          {
-            "x": 78.92,
-            "y": 89.38
-          }
-        ]
-      },
-      {
-        "id": "second-battle-of-el-alamein-red-route-12",
-        "type": "route",
-        "points": [
-          {
-            "x": 83.93,
-            "y": 97.16
-          },
-          {
-            "x": 83.77,
-            "y": 94.45
-          },
-          {
-            "x": 83.71,
-            "y": 91.93
-          },
-          {
-            "x": 83.82,
-            "y": 89.15
-          },
-          {
-            "x": 84.96,
-            "y": 91.94
-          }
-        ]
-      },
-      {
-        "id": "second-battle-of-el-alamein-red-route-13",
-        "type": "route",
-        "points": [
-          {
-            "x": 86.64,
-            "y": 97.31
-          },
-          {
-            "x": 87.06,
-            "y": 94.75
-          },
-          {
-            "x": 87.6,
-            "y": 97.33
-          },
-          {
-            "x": 88.52,
-            "y": 97.28
-          }
-        ]
-      },
-      {
-        "id": "second-battle-of-el-alamein-red-route-14",
-        "type": "route",
-        "points": [
-          {
-            "x": 72.95,
-            "y": 86.6
-          },
-          {
-            "x": 72.46,
-            "y": 89.25
-          },
-          {
-            "x": 72.24,
-            "y": 86.54
-          },
-          {
-            "x": 73.32,
-            "y": 89.43
-          },
-          {
-            "x": 73.57,
-            "y": 86.56
-          },
-          {
-            "x": 73.31,
-            "y": 92.09
-          }
-        ]
-      },
-      {
-        "id": "second-battle-of-el-alamein-red-route-15",
-        "type": "route",
-        "points": [
-          {
-            "x": 62.66,
-            "y": 32.52
+            "x": 68.21,
+            "y": 37.42
           },
           {
             "x": 64.8,
-            "y": 34.42
+            "y": 34.43
           },
           {
-            "x": 67.05,
-            "y": 36.36
-          },
-          {
-            "x": 68.22,
-            "y": 37.43
+            "x": 62.66,
+            "y": 32.52
           }
         ]
       },
       {
-        "id": "second-battle-of-el-alamein-red-route-16",
-        "type": "route",
-        "points": [
-          {
-            "x": 90.11,
-            "y": 89.32
-          },
-          {
-            "x": 89.27,
-            "y": 91.96
-          },
-          {
-            "x": 88.63,
-            "y": 94.38
-          },
-          {
-            "x": 88.58,
-            "y": 94.9
-          }
-        ]
-      },
-      {
-        "id": "second-battle-of-el-alamein-red-route-17",
-        "type": "route",
-        "points": [
-          {
-            "x": 78.39,
-            "y": 86.46
-          },
-          {
-            "x": 78.15,
-            "y": 89.23
-          },
-          {
-            "x": 77.77,
-            "y": 86.46
-          }
-        ]
-      },
-      {
-        "id": "second-battle-of-el-alamein-red-route-18",
-        "type": "route",
-        "points": [
-          {
-            "x": 74.35,
-            "y": 89.43
-          },
-          {
-            "x": 74.61,
-            "y": 86.61
-          },
-          {
-            "x": 75.06,
-            "y": 89.45
-          }
-        ]
-      },
-      {
-        "id": "second-battle-of-el-alamein-red-route-19",
-        "type": "route",
-        "points": [
-          {
-            "x": 93.67,
-            "y": 86.46
-          },
-          {
-            "x": 93.36,
-            "y": 89.3
-          },
-          {
-            "x": 92.82,
-            "y": 86.6
-          },
-          {
-            "x": 94.26,
-            "y": 89.27
-          }
-        ]
-      },
-      {
-        "id": "second-battle-of-el-alamein-red-route-20",
+        "id": "second-battle-of-el-alamein-red-route-06",
         "type": "route",
         "points": [
           {
             "x": 31.32,
-            "y": 18.88
+            "y": 18.89
           },
           {
-            "x": 29.17,
+            "x": 29.13,
             "y": 20.94
           },
           {
             "x": 27.53,
-            "y": 23.24
+            "y": 23.23
           },
           {
-            "x": 26.41,
-            "y": 25.74
+            "x": 26.4,
+            "y": 25.73
           },
           {
-            "x": 26.77,
-            "y": 28.44
+            "x": 26.76,
+            "y": 28.45
           },
           {
-            "x": 27.73,
-            "y": 31.05
+            "x": 27.72,
+            "y": 31.03
           },
           {
             "x": 28.82,
-            "y": 33.58
+            "y": 33.59
           },
           {
-            "x": 30.01,
-            "y": 36.11
+            "x": 30,
+            "y": 36.13
           }
         ],
         "dangerRoute": true
       },
       {
-        "id": "second-battle-of-el-alamein-red-route-21",
+        "id": "second-battle-of-el-alamein-red-route-07",
         "type": "route",
         "points": [
           {
@@ -40004,12 +39943,12 @@
             "y": 62.14
           },
           {
-            "x": 61.68,
+            "x": 61.67,
             "y": 61.9
           },
           {
-            "x": 64.02,
-            "y": 60.53
+            "x": 63.99,
+            "y": 60.54
           },
           {
             "x": 64.91,
@@ -40019,7 +39958,7 @@
         "dangerRoute": true
       },
       {
-        "id": "second-battle-of-el-alamein-red-route-22",
+        "id": "second-battle-of-el-alamein-red-route-08",
         "type": "route",
         "points": [
           {
@@ -40031,11 +39970,11 @@
             "y": 35.32
           },
           {
-            "x": 67.67,
+            "x": 67.65,
             "y": 37.01
           },
           {
-            "x": 68.74,
+            "x": 68.73,
             "y": 37.85
           }
         ],
@@ -40060,633 +39999,181 @@
         "startY": 52.99,
         "endX": 82.62,
         "endY": 46.39
-      },
-      {
-        "id": "pradesh-blue-route-01",
-        "type": "route",
-        "points": [
-          {
-            "x": 72.95,
-            "y": 97.64
-          },
-          {
-            "x": 73.02,
-            "y": 95.14
-          },
-          {
-            "x": 72.91,
-            "y": 92.54
-          },
-          {
-            "x": 72.92,
-            "y": 89.76
-          },
-          {
-            "x": 72.77,
-            "y": 87.21
-          },
-          {
-            "x": 73.8,
-            "y": 90.0
-          },
-          {
-            "x": 74.12,
-            "y": 87.19
-          },
-          {
-            "x": 74.9,
-            "y": 90.06
-          },
-          {
-            "x": 74.63,
-            "y": 92.78
-          },
-          {
-            "x": 73.92,
-            "y": 95.21
-          },
-          {
-            "x": 73.97,
-            "y": 97.89
-          },
-          {
-            "x": 74.54,
-            "y": 95.17
-          },
-          {
-            "x": 75.02,
-            "y": 92.81
-          },
-          {
-            "x": 75.33,
-            "y": 95.24
-          },
-          {
-            "x": 75.83,
-            "y": 97.77
-          },
-          {
-            "x": 73.51,
-            "y": 87.22
-          }
-        ]
-      },
-      {
-        "id": "pradesh-blue-route-02",
-        "type": "route",
-        "points": [
-          {
-            "x": 24.49,
-            "y": 68.46
-          },
-          {
-            "x": 24.83,
-            "y": 65.69
-          },
-          {
-            "x": 25.12,
-            "y": 62.98
-          },
-          {
-            "x": 25.45,
-            "y": 60.17
-          },
-          {
-            "x": 26.32,
-            "y": 57.56
-          },
-          {
-            "x": 27.47,
-            "y": 55.03
-          },
-          {
-            "x": 28.55,
-            "y": 52.47
-          },
-          {
-            "x": 28.82,
-            "y": 51.11
-          }
-        ]
-      },
-      {
-        "id": "pradesh-blue-route-03",
-        "type": "route",
-        "points": [
-          {
-            "x": 86.34,
-            "y": 95.15
-          },
-          {
-            "x": 86.27,
-            "y": 92.48
-          },
-          {
-            "x": 86.39,
-            "y": 89.78
-          },
-          {
-            "x": 86.0,
-            "y": 87.31
-          },
-          {
-            "x": 85.51,
-            "y": 89.98
-          },
-          {
-            "x": 85.49,
-            "y": 92.57
-          },
-          {
-            "x": 85.55,
-            "y": 95.21
-          },
-          {
-            "x": 87.0,
-            "y": 92.54
-          },
-          {
-            "x": 87.37,
-            "y": 89.86
-          }
-        ]
-      },
-      {
-        "id": "pradesh-blue-route-04",
-        "type": "route",
-        "points": [
-          {
-            "x": 91.19,
-            "y": 94.89
-          },
-          {
-            "x": 89.83,
-            "y": 92.58
-          },
-          {
-            "x": 89.94,
-            "y": 89.92
-          },
-          {
-            "x": 89.13,
-            "y": 92.46
-          },
-          {
-            "x": 88.97,
-            "y": 89.95
-          },
-          {
-            "x": 88.92,
-            "y": 87.22
-          },
-          {
-            "x": 88.18,
-            "y": 89.9
-          },
-          {
-            "x": 88.34,
-            "y": 87.15
-          },
-          {
-            "x": 90.79,
-            "y": 92.59
-          },
-          {
-            "x": 90.44,
-            "y": 95.25
-          },
-          {
-            "x": 89.99,
-            "y": 97.91
-          }
-        ]
-      },
-      {
-        "id": "pradesh-blue-route-05",
-        "type": "route",
-        "points": [
-          {
-            "x": 64.57,
-            "y": 79.93
-          },
-          {
-            "x": 64.02,
-            "y": 77.35
-          },
-          {
-            "x": 63.44,
-            "y": 74.58
-          },
-          {
-            "x": 63.12,
-            "y": 71.84
-          },
-          {
-            "x": 62.95,
-            "y": 69.06
-          },
-          {
-            "x": 62.78,
-            "y": 66.28
-          },
-          {
-            "x": 62.62,
-            "y": 63.54
-          },
-          {
-            "x": 62.47,
-            "y": 60.71
-          },
-          {
-            "x": 62.36,
-            "y": 59.34
-          }
-        ]
-      },
-      {
-        "id": "pradesh-blue-route-06",
-        "type": "route",
-        "points": [
-          {
-            "x": 75.84,
-            "y": 61.27
-          },
-          {
-            "x": 78.44,
-            "y": 60.35
-          },
-          {
-            "x": 80.88,
-            "y": 59.03
-          },
-          {
-            "x": 81.93,
-            "y": 58.14
-          }
-        ]
-      },
-      {
-        "id": "pradesh-blue-route-07",
-        "type": "route",
-        "points": [
-          {
-            "x": 91.19,
-            "y": 89.88
-          },
-          {
-            "x": 94.81,
-            "y": 89.89
-          },
-          {
-            "x": 94.15,
-            "y": 87.12
-          },
-          {
-            "x": 93.88,
-            "y": 89.91
-          }
-        ]
-      },
-      {
-        "id": "pradesh-blue-route-08",
-        "type": "route",
-        "points": [
-          {
-            "x": 84.51,
-            "y": 97.83
-          },
-          {
-            "x": 84.34,
-            "y": 95.0
-          },
-          {
-            "x": 84.35,
-            "y": 92.36
-          }
-        ]
-      },
-      {
-        "id": "pradesh-blue-route-09",
-        "type": "route",
-        "points": [
-          {
-            "x": 26.33,
-            "y": 72.39
-          },
-          {
-            "x": 27.44,
-            "y": 69.89
-          },
-          {
-            "x": 29.44,
-            "y": 67.92
-          },
-          {
-            "x": 30.2,
-            "y": 66.79
-          }
-        ]
-      },
-      {
-        "id": "pradesh-blue-route-10",
-        "type": "route",
-        "points": [
-          {
-            "x": 88.43,
-            "y": 92.61
-          },
-          {
-            "x": 88.42,
-            "y": 95.21
-          },
-          {
-            "x": 88.01,
-            "y": 97.93
-          },
-          {
-            "x": 87.57,
-            "y": 95.26
-          },
-          {
-            "x": 87.17,
-            "y": 97.96
-          }
-        ]
-      },
-      {
-        "id": "pradesh-blue-route-11",
-        "type": "route",
-        "points": [
-          {
-            "x": 80.31,
-            "y": 89.79
-          },
-          {
-            "x": 80.04,
-            "y": 87.21
-          },
-          {
-            "x": 79.9,
-            "y": 89.79
-          },
-          {
-            "x": 79.41,
-            "y": 87.01
-          },
-          {
-            "x": 79.48,
-            "y": 90.0
-          }
-        ]
-      },
-      {
-        "id": "pradesh-blue-route-12",
-        "type": "route",
-        "points": [
-          {
-            "x": 75.62,
-            "y": 90.09
-          },
-          {
-            "x": 75.55,
-            "y": 92.71
-          },
-          {
-            "x": 76.45,
-            "y": 95.04
-          },
-          {
-            "x": 76.58,
-            "y": 97.82
-          }
-        ]
-      },
-      {
-        "id": "pradesh-blue-route-13",
-        "type": "route",
-        "points": [
-          {
-            "x": 78.33,
-            "y": 87.1
-          },
-          {
-            "x": 78.76,
-            "y": 89.83
-          },
-          {
-            "x": 78.89,
-            "y": 87.11
-          }
-        ]
-      },
-      {
-        "id": "pradesh-blue-route-14",
-        "type": "route",
-        "points": [
-          {
-            "x": 77.59,
-            "y": 87.24
-          },
-          {
-            "x": 76.3,
-            "y": 90.0
-          },
-          {
-            "x": 76.5,
-            "y": 87.09
-          },
-          {
-            "x": 77.13,
-            "y": 89.97
-          }
-        ]
-      },
-      {
-        "id": "pradesh-blue-route-15",
-        "type": "route",
-        "points": [
-          {
-            "x": 85.33,
-            "y": 54.39
-          },
-          {
-            "x": 84.41,
-            "y": 51.98
-          },
-          {
-            "x": 83.92,
-            "y": 49.27
-          },
-          {
-            "x": 84.76,
-            "y": 46.7
-          },
-          {
-            "x": 86.51,
-            "y": 44.57
-          },
-          {
-            "x": 88.61,
-            "y": 42.87
-          },
-          {
-            "x": 88.22,
-            "y": 40.27
-          },
-          {
-            "x": 86.25,
-            "y": 38.33
-          },
-          {
-            "x": 84.25,
-            "y": 36.41
-          },
-          {
-            "x": 81.83,
-            "y": 35.04
-          },
-          {
-            "x": 79.45,
-            "y": 33.56
-          },
-          {
-            "x": 77.74,
-            "y": 31.42
-          }
-        ],
-        "dangerRoute": true
-      },
-      {
-        "id": "pradesh-blue-route-16",
-        "type": "route",
-        "points": [
-          {
-            "x": 23.29,
-            "y": 50.51
-          },
-          {
-            "x": 22.04,
-            "y": 47.66
-          },
-          {
-            "x": 21.94,
-            "y": 44.9
-          }
-        ],
-        "dangerRoute": true
       }
     ],
     "Second Battle of El Alamein::domination-1|Blue": [
       {
         "id": "second-battle-of-el-alamein-blue-aim-01",
         "type": "aimHere",
-        "parentTankId": "second-battle-of-el-alamein-blue-unit-10",
-        "startX": 26.74,
-        "startY": 22.92,
-        "endX": 23.32,
-        "endY": 73.54
+        "parentTankId": "second-battle-of-el-alamein-blue-unit-05",
+        "startX": 36.32,
+        "startY": 42.71,
+        "endX": 66.23,
+        "endY": 13.59
       },
       {
         "id": "second-battle-of-el-alamein-blue-aim-02",
         "type": "aimHere",
-        "parentTankId": "second-battle-of-el-alamein-blue-unit-05",
-        "startX": 64.93,
-        "startY": 16.74,
-        "endX": 75.83,
-        "endY": 41.13
+        "parentTankId": "second-battle-of-el-alamein-blue-unit-04",
+        "startX": 69.17,
+        "startY": 41.67,
+        "endX": 70.73,
+        "endY": 32.58
       },
       {
         "id": "second-battle-of-el-alamein-blue-aim-03",
         "type": "aimHere",
-        "parentTankId": "second-battle-of-el-alamein-blue-unit-19",
-        "startX": 67.85,
-        "startY": 57.78,
-        "endX": 84.07,
-        "endY": 46.05
+        "parentTankId": "second-battle-of-el-alamein-blue-unit-13",
+        "startX": 12.92,
+        "startY": 67.78,
+        "endX": 20.96,
+        "endY": 63.72
       },
       {
         "id": "second-battle-of-el-alamein-blue-aim-04",
         "type": "aimHere",
-        "parentTankId": "second-battle-of-el-alamein-blue-unit-11",
-        "startX": 58.54,
-        "startY": 27.01,
-        "endX": 50.86,
-        "endY": 17.12
+        "parentTankId": "second-battle-of-el-alamein-blue-unit-14",
+        "startX": 45.97,
+        "startY": 70,
+        "endX": 46.22,
+        "endY": 61.95
       },
       {
         "id": "second-battle-of-el-alamein-blue-aim-05",
         "type": "aimHere",
-        "parentTankId": "second-battle-of-el-alamein-blue-unit-03",
-        "startX": 80.62,
-        "startY": 10.07,
-        "endX": 86.8,
-        "endY": 9.91
+        "parentTankId": "second-battle-of-el-alamein-blue-unit-16",
+        "startX": 34.44,
+        "startY": 81.25,
+        "endX": 24.02,
+        "endY": 65.77
       },
       {
         "id": "second-battle-of-el-alamein-blue-aim-06",
         "type": "aimHere",
-        "parentTankId": "second-battle-of-el-alamein-blue-unit-09",
-        "startX": 95.76,
-        "startY": 22.36,
-        "endX": 94.44,
-        "endY": 43.75
+        "parentTankId": "second-battle-of-el-alamein-blue-unit-16",
+        "startX": 34.44,
+        "startY": 81.25,
+        "endX": 29.49,
+        "endY": 79.16
       },
       {
         "id": "second-battle-of-el-alamein-blue-aim-07",
         "type": "aimHere",
-        "parentTankId": "second-battle-of-el-alamein-blue-unit-12",
-        "startX": 68.61,
-        "startY": 27.78,
-        "endX": 76.05,
-        "endY": 31.23
+        "parentTankId": "second-battle-of-el-alamein-blue-unit-18",
+        "startX": 80.49,
+        "startY": 92.99,
+        "endX": 72.64,
+        "endY": 64.99
+      },
+      {
+        "id": "second-battle-of-el-alamein-blue-aim-08",
+        "type": "aimHere",
+        "parentTankId": "second-battle-of-el-alamein-blue-unit-04",
+        "startX": 69.17,
+        "startY": 41.67,
+        "endX": 60,
+        "endY": 36.14
+      },
+      {
+        "id": "second-battle-of-el-alamein-blue-aim-09",
+        "type": "aimHere",
+        "parentTankId": "second-battle-of-el-alamein-blue-unit-16",
+        "startX": 34.44,
+        "startY": 81.25,
+        "endX": 40.36,
+        "endY": 85.53
+      },
+      {
+        "id": "second-battle-of-el-alamein-blue-aim-10",
+        "type": "aimHere",
+        "parentTankId": "second-battle-of-el-alamein-blue-unit-10",
+        "startX": 81.04,
+        "startY": 56.32,
+        "endX": 77.14,
+        "endY": 44.45
+      },
+      {
+        "id": "second-battle-of-el-alamein-blue-aim-11",
+        "type": "aimHere",
+        "parentTankId": "second-battle-of-el-alamein-blue-unit-06",
+        "startX": 87.64,
+        "startY": 48.12,
+        "endX": 76.86,
+        "endY": 43.9
+      },
+      {
+        "id": "second-battle-of-el-alamein-blue-aim-12",
+        "type": "aimHere",
+        "parentTankId": "second-battle-of-el-alamein-blue-unit-04",
+        "startX": 69.17,
+        "startY": 41.67,
+        "endX": 63.92,
+        "endY": 35.84
+      },
+      {
+        "id": "second-battle-of-el-alamein-blue-aim-13",
+        "type": "aimHere",
+        "parentTankId": "second-battle-of-el-alamein-blue-unit-01",
+        "startX": 52.08,
+        "startY": 23.19,
+        "endX": 49.42,
+        "endY": 18.13
       },
       {
         "id": "second-battle-of-el-alamein-blue-route-01",
         "type": "route",
         "points": [
           {
-            "x": 37.96,
-            "y": 43.67
+            "x": 83.09,
+            "y": 93.55
           },
           {
-            "x": 39.07,
-            "y": 41.31
+            "x": 85.65,
+            "y": 92.5
           },
           {
-            "x": 40.66,
-            "y": 39.03
+            "x": 87.86,
+            "y": 90.84
           },
           {
-            "x": 42.4,
-            "y": 36.85
+            "x": 89.38,
+            "y": 88.55
           },
           {
-            "x": 43.9,
-            "y": 34.6
+            "x": 90.17,
+            "y": 85.9
           },
           {
-            "x": 43.7,
-            "y": 31.83
+            "x": 90.48,
+            "y": 83.17
           },
           {
-            "x": 43.02,
-            "y": 29.15
+            "x": 90.52,
+            "y": 80.38
           },
           {
-            "x": 41.9,
-            "y": 26.83
+            "x": 89.72,
+            "y": 77.73
           },
           {
-            "x": 40.31,
-            "y": 24.56
+            "x": 87.97,
+            "y": 75.61
           },
           {
-            "x": 38.92,
-            "y": 22.15
+            "x": 85.6,
+            "y": 74.17
           },
           {
-            "x": 38.47,
-            "y": 20.83
+            "x": 83.5,
+            "y": 72.39
+          },
+          {
+            "x": 82.6,
+            "y": 69.83
+          },
+          {
+            "x": 82.5,
+            "y": 68.44
           }
         ]
       },
@@ -40695,20 +40182,20 @@
         "type": "route",
         "points": [
           {
-            "x": 74.71,
-            "y": 92.22
+            "x": 92.05,
+            "y": 39.14
           },
           {
-            "x": 73.79,
-            "y": 94.59
+            "x": 92.01,
+            "y": 41.9
           },
           {
-            "x": 75.34,
-            "y": 97.15
+            "x": 91.49,
+            "y": 44.63
           },
           {
-            "x": 74.86,
-            "y": 94.58
+            "x": 90.47,
+            "y": 47.17
           }
         ]
       },
@@ -40717,36 +40204,16 @@
         "type": "route",
         "points": [
           {
-            "x": 75.99,
-            "y": 97.31
+            "x": 83.67,
+            "y": 53.3
           },
           {
-            "x": 76.97,
-            "y": 94.59
+            "x": 84.64,
+            "y": 55.76
           },
           {
-            "x": 76.45,
-            "y": 92.1
-          },
-          {
-            "x": 75.88,
-            "y": 94.41
-          },
-          {
-            "x": 76.43,
-            "y": 89.38
-          },
-          {
-            "x": 77.06,
-            "y": 86.65
-          },
-          {
-            "x": 76.95,
-            "y": 89.3
-          },
-          {
-            "x": 75.92,
-            "y": 86.47
+            "x": 83.88,
+            "y": 59.25
           }
         ]
       },
@@ -40755,72 +40222,16 @@
         "type": "route",
         "points": [
           {
-            "x": 85.16,
-            "y": 97.16
+            "x": 62.04,
+            "y": 34.87
           },
           {
-            "x": 85.04,
-            "y": 94.71
+            "x": 58.83,
+            "y": 35.37
           },
           {
-            "x": 85.69,
-            "y": 91.88
-          },
-          {
-            "x": 85.82,
-            "y": 89.16
-          },
-          {
-            "x": 85.53,
-            "y": 86.69
-          },
-          {
-            "x": 85.04,
-            "y": 89.31
-          },
-          {
-            "x": 84.76,
-            "y": 86.61
-          },
-          {
-            "x": 87.84,
-            "y": 86.55
-          },
-          {
-            "x": 87.6,
-            "y": 89.32
-          },
-          {
-            "x": 88.37,
-            "y": 86.61
-          },
-          {
-            "x": 88.47,
-            "y": 89.31
-          },
-          {
-            "x": 88.53,
-            "y": 91.89
-          },
-          {
-            "x": 87.88,
-            "y": 94.66
-          },
-          {
-            "x": 87.89,
-            "y": 92.0
-          },
-          {
-            "x": 86.87,
-            "y": 89.24
-          },
-          {
-            "x": 86.43,
-            "y": 91.95
-          },
-          {
-            "x": 85.88,
-            "y": 94.61
+            "x": 60.32,
+            "y": 37.57
           }
         ]
       },
@@ -40829,24 +40240,32 @@
         "type": "route",
         "points": [
           {
-            "x": 90.95,
-            "y": 86.59
+            "x": 73.22,
+            "y": 76.5
           },
           {
-            "x": 91.17,
-            "y": 89.31
+            "x": 71.49,
+            "y": 78.65
           },
           {
-            "x": 91.55,
-            "y": 86.67
+            "x": 69.79,
+            "y": 80.8
           },
           {
-            "x": 91.63,
-            "y": 89.31
+            "x": 68.03,
+            "y": 82.91
           },
           {
-            "x": 92.11,
-            "y": 86.7
+            "x": 66.18,
+            "y": 84.91
+          },
+          {
+            "x": 64.16,
+            "y": 86.78
+          },
+          {
+            "x": 61.92,
+            "y": 88.04
           }
         ]
       },
@@ -40855,40 +40274,20 @@
         "type": "route",
         "points": [
           {
-            "x": 65.7,
-            "y": 14.07
+            "x": 79.53,
+            "y": 67.18
           },
           {
-            "x": 64.69,
-            "y": 11.54
+            "x": 76.92,
+            "y": 68.15
           },
           {
-            "x": 62.88,
-            "y": 9.47
+            "x": 74.27,
+            "y": 68.85
           },
           {
-            "x": 65.61,
-            "y": 9.3
-          },
-          {
-            "x": 68.31,
-            "y": 9.95
-          },
-          {
-            "x": 71.05,
-            "y": 10.48
-          },
-          {
-            "x": 73.82,
-            "y": 10.69
-          },
-          {
-            "x": 76.6,
-            "y": 10.56
-          },
-          {
-            "x": 77.95,
-            "y": 10.43
+            "x": 72.88,
+            "y": 68.82
           }
         ]
       },
@@ -40897,16 +40296,20 @@
         "type": "route",
         "points": [
           {
-            "x": 60.18,
-            "y": 8.16
+            "x": 74.9,
+            "y": 74.31
           },
           {
-            "x": 57.4,
-            "y": 7.92
+            "x": 76.55,
+            "y": 72.12
           },
           {
-            "x": 54.62,
-            "y": 7.92
+            "x": 78.15,
+            "y": 69.87
+          },
+          {
+            "x": 80.06,
+            "y": 68.17
           }
         ]
       },
@@ -40915,24 +40318,16 @@
         "type": "route",
         "points": [
           {
-            "x": 92.41,
-            "y": 89.26
+            "x": 70.02,
+            "y": 51.21
           },
           {
-            "x": 90.25,
-            "y": 92.0
+            "x": 72.05,
+            "y": 53.13
           },
           {
-            "x": 89.97,
-            "y": 94.71
-          },
-          {
-            "x": 89.47,
-            "y": 97.31
-          },
-          {
-            "x": 90.62,
-            "y": 94.6
+            "x": 73.44,
+            "y": 55.52
           }
         ]
       },
@@ -40941,423 +40336,1452 @@
         "type": "route",
         "points": [
           {
-            "x": 27.22,
-            "y": 21.08
+            "x": 4.59,
+            "y": 70.69
           },
           {
-            "x": 28.05,
-            "y": 18.5
+            "x": 4.93,
+            "y": 67.94
           },
           {
-            "x": 29.23,
-            "y": 16.0
+            "x": 5.5,
+            "y": 65.21
           },
           {
-            "x": 31.02,
-            "y": 13.9
+            "x": 6.2,
+            "y": 62.55
+          },
+          {
+            "x": 7.05,
+            "y": 59.84
+          },
+          {
+            "x": 7.88,
+            "y": 57.22
+          },
+          {
+            "x": 8.74,
+            "y": 54.58
+          },
+          {
+            "x": 13.67,
+            "y": 58.06
+          },
+          {
+            "x": 15.66,
+            "y": 56.11
+          },
+          {
+            "x": 16.41,
+            "y": 53.57
+          },
+          {
+            "x": 16.28,
+            "y": 50.87
+          },
+          {
+            "x": 12.56,
+            "y": 58.92
+          },
+          {
+            "x": 10.11,
+            "y": 60.22
+          },
+          {
+            "x": 7.53,
+            "y": 61.25
           }
-        ]
+        ],
+        "dangerRoute": true
       },
       {
         "id": "second-battle-of-el-alamein-blue-route-10",
         "type": "route",
         "points": [
           {
-            "x": 48.42,
-            "y": 35.36
+            "x": 39.96,
+            "y": 76.6
           },
           {
-            "x": 46.14,
-            "y": 33.87
+            "x": 42.08,
+            "y": 74.86
           },
           {
-            "x": 45.1,
-            "y": 31.32
+            "x": 43.99,
+            "y": 72.81
           },
           {
-            "x": 43.62,
-            "y": 29.02
-          },
-          {
-            "x": 45.8,
-            "y": 30.8
-          },
-          {
-            "x": 48.27,
-            "y": 31.84
+            "x": 44.9,
+            "y": 71.77
           }
-        ]
+        ],
+        "dangerRoute": true
       },
       {
         "id": "second-battle-of-el-alamein-blue-route-11",
         "type": "route",
         "points": [
           {
-            "x": 56.41,
-            "y": 25.34
+            "x": 39.22,
+            "y": 78.93
           },
           {
-            "x": 56.09,
-            "y": 22.52
+            "x": 41.48,
+            "y": 80.48
           },
           {
-            "x": 55.06,
-            "y": 20.04
-          },
-          {
-            "x": 53.24,
-            "y": 17.94
-          },
-          {
-            "x": 52.3,
-            "y": 16.9
+            "x": 43.69,
+            "y": 82.19
           }
-        ]
+        ],
+        "dangerRoute": true
       },
       {
         "id": "second-battle-of-el-alamein-blue-route-12",
         "type": "route",
         "points": [
           {
-            "x": 79.76,
-            "y": 89.17
+            "x": 60.72,
+            "y": 32.95
           },
           {
-            "x": 79.47,
-            "y": 86.61
+            "x": 62.64,
+            "y": 34.93
           },
           {
-            "x": 79.34,
-            "y": 89.18
+            "x": 64.86,
+            "y": 36.6
           },
           {
-            "x": 78.92,
-            "y": 86.39
+            "x": 67.32,
+            "y": 37.86
           },
           {
-            "x": 78.92,
-            "y": 89.38
+            "x": 69.97,
+            "y": 38.78
+          },
+          {
+            "x": 72.47,
+            "y": 40.01
           }
-        ]
+        ],
+        "dangerRoute": true
       },
       {
         "id": "second-battle-of-el-alamein-blue-route-13",
         "type": "route",
         "points": [
           {
-            "x": 83.93,
-            "y": 97.16
+            "x": 13.98,
+            "y": 70.26
           },
           {
-            "x": 83.77,
-            "y": 94.45
+            "x": 15.7,
+            "y": 72.42
           },
           {
-            "x": 83.71,
-            "y": 91.93
+            "x": 18.16,
+            "y": 73.82
           },
           {
-            "x": 83.82,
-            "y": 89.15
+            "x": 20.66,
+            "y": 75.01
           },
           {
-            "x": 84.96,
-            "y": 91.94
+            "x": 23.16,
+            "y": 76.19
+          },
+          {
+            "x": 25.69,
+            "y": 77.34
+          },
+          {
+            "x": 28.21,
+            "y": 78.48
+          },
+          {
+            "x": 30.78,
+            "y": 79.62
+          },
+          {
+            "x": 32.03,
+            "y": 80.18
           }
-        ]
+        ],
+        "dangerRoute": true
       },
       {
         "id": "second-battle-of-el-alamein-blue-route-14",
         "type": "route",
         "points": [
           {
-            "x": 86.64,
-            "y": 97.31
+            "x": 10.06,
+            "y": 84.41
           },
           {
-            "x": 87.06,
-            "y": 94.75
+            "x": 9.67,
+            "y": 81.62
           },
           {
-            "x": 87.6,
-            "y": 97.33
+            "x": 9.75,
+            "y": 78.87
           },
           {
-            "x": 88.52,
-            "y": 97.28
+            "x": 10.4,
+            "y": 76.15
+          },
+          {
+            "x": 11.15,
+            "y": 73.48
+          },
+          {
+            "x": 11.91,
+            "y": 70.8
+          },
+          {
+            "x": 12.3,
+            "y": 69.54
+          }
+        ],
+        "dangerRoute": true
+      }
+    ],
+    "Second Battle of El Alamein::domination-2|Red": [
+      {
+        "id": "second-battle-of-el-alamein-domination-2-red-aim-01",
+        "type": "aimHere",
+        "parentTankId": "second-battle-of-el-alamein-domination-2-red-unit-10",
+        "startX": 67.36,
+        "startY": 40.42,
+        "endX": 72.2,
+        "endY": 57.73
+      },
+      {
+        "id": "second-battle-of-el-alamein-domination-2-red-aim-02",
+        "type": "aimHere",
+        "parentTankId": "second-battle-of-el-alamein-domination-2-red-unit-08",
+        "startX": 15.21,
+        "startY": 37.92,
+        "endX": 21.9,
+        "endY": 49.78
+      },
+      {
+        "id": "second-battle-of-el-alamein-domination-2-red-aim-03",
+        "type": "aimHere",
+        "parentTankId": "second-battle-of-el-alamein-domination-2-red-unit-06",
+        "startX": 56.67,
+        "startY": 29.86,
+        "endX": 48.57,
+        "endY": 5.17
+      },
+      {
+        "id": "second-battle-of-el-alamein-domination-2-red-aim-04",
+        "type": "aimHere",
+        "parentTankId": "second-battle-of-el-alamein-domination-2-red-unit-10",
+        "startX": 67.36,
+        "startY": 40.42,
+        "endX": 76.33,
+        "endY": 41.78
+      },
+      {
+        "id": "second-battle-of-el-alamein-domination-2-red-aim-05",
+        "type": "aimHere",
+        "parentTankId": "second-battle-of-el-alamein-domination-2-red-unit-16",
+        "startX": 63.75,
+        "startY": 78.82,
+        "endX": 73.4,
+        "endY": 72.57
+      },
+      {
+        "id": "second-battle-of-el-alamein-domination-2-red-aim-06",
+        "type": "aimHere",
+        "parentTankId": "second-battle-of-el-alamein-domination-2-red-unit-15",
+        "startX": 3.96,
+        "startY": 70.76,
+        "endX": 8.74,
+        "endY": 85.07
+      },
+      {
+        "id": "second-battle-of-el-alamein-domination-2-red-aim-07",
+        "type": "aimHere",
+        "parentTankId": "second-battle-of-el-alamein-domination-2-red-unit-14",
+        "startX": 21.94,
+        "startY": 64.03,
+        "endX": 25.56,
+        "endY": 69.15
+      },
+      {
+        "id": "second-battle-of-el-alamein-domination-2-red-aim-08",
+        "type": "aimHere",
+        "parentTankId": "second-battle-of-el-alamein-domination-2-red-unit-12",
+        "startX": 93.4,
+        "startY": 43.61,
+        "endX": 87.88,
+        "endY": 55.68
+      },
+      {
+        "id": "second-battle-of-el-alamein-domination-2-red-aim-09",
+        "type": "aimHere",
+        "parentTankId": "second-battle-of-el-alamein-domination-2-red-unit-06",
+        "startX": 56.67,
+        "startY": 29.86,
+        "endX": 59.79,
+        "endY": 32.23
+      },
+      {
+        "id": "second-battle-of-el-alamein-domination-2-red-aim-10",
+        "type": "aimHere",
+        "parentTankId": "second-battle-of-el-alamein-domination-2-red-unit-05",
+        "startX": 67.64,
+        "startY": 24.72,
+        "endX": 72.19,
+        "endY": 26.45
+      },
+      {
+        "id": "second-battle-of-el-alamein-domination-2-red-route-01",
+        "type": "route",
+        "points": [
+          {
+            "x": 4.16,
+            "y": 68.72
+          },
+          {
+            "x": 4.98,
+            "y": 66.09
+          },
+          {
+            "x": 6.3,
+            "y": 63.67
+          },
+          {
+            "x": 8.45,
+            "y": 61.88
+          },
+          {
+            "x": 10.59,
+            "y": 60.18
+          },
+          {
+            "x": 13,
+            "y": 58.81
+          },
+          {
+            "x": 15.41,
+            "y": 57.41
+          },
+          {
+            "x": 16.43,
+            "y": 54.96
+          },
+          {
+            "x": 15.92,
+            "y": 52.19
+          },
+          {
+            "x": 14.87,
+            "y": 49.69
+          },
+          {
+            "x": 14.99,
+            "y": 47.07
+          },
+          {
+            "x": 17.55,
+            "y": 46.17
           }
         ]
       },
       {
-        "id": "second-battle-of-el-alamein-blue-route-15",
+        "id": "second-battle-of-el-alamein-domination-2-red-route-02",
         "type": "route",
         "points": [
           {
-            "x": 72.24,
-            "y": 86.54
+            "x": 34.3,
+            "y": 26.31
           },
           {
-            "x": 72.46,
-            "y": 89.25
+            "x": 35.41,
+            "y": 28.82
           },
           {
-            "x": 72.95,
-            "y": 86.6
+            "x": 37.87,
+            "y": 30.06
           },
           {
-            "x": 73.32,
-            "y": 89.43
+            "x": 40.52,
+            "y": 30.83
           },
           {
-            "x": 73.57,
-            "y": 86.56
+            "x": 43.14,
+            "y": 31.71
           },
           {
-            "x": 73.31,
-            "y": 92.09
+            "x": 45.58,
+            "y": 33.03
+          },
+          {
+            "x": 47.59,
+            "y": 35
+          },
+          {
+            "x": 49.51,
+            "y": 37.01
           }
         ]
       },
       {
-        "id": "second-battle-of-el-alamein-blue-route-16",
+        "id": "second-battle-of-el-alamein-domination-2-red-route-03",
         "type": "route",
         "points": [
           {
-            "x": 73.51,
+            "x": 34.66,
+            "y": 39.24
+          },
+          {
+            "x": 33.83,
+            "y": 36.58
+          },
+          {
+            "x": 32.31,
+            "y": 34.29
+          },
+          {
+            "x": 30.7,
+            "y": 32.03
+          },
+          {
+            "x": 29.79,
+            "y": 29.4
+          },
+          {
+            "x": 29.16,
+            "y": 26.7
+          },
+          {
+            "x": 27.34,
+            "y": 28.46
+          },
+          {
+            "x": 26.88,
+            "y": 31.22
+          },
+          {
+            "x": 26.35,
+            "y": 33.92
+          },
+          {
+            "x": 25.73,
+            "y": 36.63
+          },
+          {
+            "x": 24.86,
+            "y": 39.26
+          },
+          {
+            "x": 22.76,
+            "y": 41.08
+          },
+          {
+            "x": 21.38,
+            "y": 43.44
+          },
+          {
+            "x": 21.08,
+            "y": 46.22
+          },
+          {
+            "x": 20.97,
+            "y": 47.6
+          }
+        ]
+      },
+      {
+        "id": "second-battle-of-el-alamein-domination-2-red-route-04",
+        "type": "route",
+        "points": [
+          {
+            "x": 55.97,
+            "y": 21.56
+          },
+          {
+            "x": 55.16,
+            "y": 18.98
+          },
+          {
+            "x": 57.01,
+            "y": 21.18
+          },
+          {
+            "x": 59.29,
+            "y": 22.77
+          },
+          {
+            "x": 61.94,
+            "y": 23.54
+          },
+          {
+            "x": 64.69,
+            "y": 23.89
+          },
+          {
+            "x": 65.97,
+            "y": 23.99
+          }
+        ]
+      },
+      {
+        "id": "second-battle-of-el-alamein-domination-2-red-route-05",
+        "type": "route",
+        "points": [
+          {
+            "x": 51.79,
+            "y": 16.57
+          },
+          {
+            "x": 49.17,
+            "y": 15.66
+          },
+          {
+            "x": 47.32,
+            "y": 13.6
+          }
+        ]
+      },
+      {
+        "id": "second-battle-of-el-alamein-domination-2-red-route-06",
+        "type": "route",
+        "points": [
+          {
+            "x": 42.36,
+            "y": 21.44
+          },
+          {
+            "x": 43.07,
+            "y": 24.12
+          },
+          {
+            "x": 44.09,
+            "y": 26.69
+          },
+          {
+            "x": 45.05,
+            "y": 27.5
+          }
+        ]
+      },
+      {
+        "id": "second-battle-of-el-alamein-domination-2-red-route-07",
+        "type": "route",
+        "points": [
+          {
+            "x": 41.37,
+            "y": 4.34
+          },
+          {
+            "x": 43.9,
+            "y": 3.31
+          },
+          {
+            "x": 46.56,
+            "y": 2.95
+          }
+        ]
+      },
+      {
+        "id": "second-battle-of-el-alamein-domination-2-red-route-08",
+        "type": "route",
+        "points": [
+          {
+            "x": 67.66,
+            "y": 37.23
+          },
+          {
+            "x": 69.11,
+            "y": 39.89
+          },
+          {
+            "x": 68.88,
+            "y": 36.74
+          },
+          {
+            "x": 66.44,
+            "y": 36.25
+          },
+          {
+            "x": 63.65,
+            "y": 37
+          },
+          {
+            "x": 63.5,
+            "y": 33.68
+          },
+          {
+            "x": 62.5,
+            "y": 36.11
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "second-battle-of-el-alamein-domination-2-red-route-09",
+        "type": "route",
+        "points": [
+          {
+            "x": 4.38,
+            "y": 73.16
+          },
+          {
+            "x": 5.13,
+            "y": 75.89
+          },
+          {
+            "x": 5.92,
+            "y": 78.49
+          },
+          {
+            "x": 6.75,
+            "y": 81.21
+          },
+          {
+            "x": 7.67,
+            "y": 83.85
+          },
+          {
+            "x": 8.72,
+            "y": 86.39
+          },
+          {
+            "x": 10.45,
+            "y": 88.51
+          },
+          {
+            "x": 12.75,
+            "y": 90.12
+          },
+          {
+            "x": 15.05,
+            "y": 91.62
+          },
+          {
+            "x": 16.18,
+            "y": 92.33
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "second-battle-of-el-alamein-domination-2-red-route-10",
+        "type": "route",
+        "points": [
+          {
+            "x": 20.62,
+            "y": 92.15
+          },
+          {
+            "x": 23.09,
+            "y": 90.83
+          },
+          {
+            "x": 25.59,
+            "y": 89.71
+          },
+          {
+            "x": 28.39,
+            "y": 89.29
+          },
+          {
+            "x": 31.09,
+            "y": 88.89
+          },
+          {
+            "x": 33.85,
+            "y": 88.61
+          },
+          {
+            "x": 36.63,
+            "y": 88.61
+          },
+          {
+            "x": 39.41,
+            "y": 88.31
+          },
+          {
+            "x": 41.9,
+            "y": 87.22
+          },
+          {
+            "x": 44.11,
+            "y": 85.48
+          },
+          {
+            "x": 46,
+            "y": 83.51
+          },
+          {
+            "x": 48.57,
+            "y": 82.46
+          },
+          {
+            "x": 51.38,
+            "y": 82.42
+          },
+          {
+            "x": 54.12,
+            "y": 82.51
+          },
+          {
+            "x": 56.83,
+            "y": 82.82
+          },
+          {
+            "x": 59.56,
+            "y": 82.32
+          },
+          {
+            "x": 61.8,
+            "y": 80.78
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "second-battle-of-el-alamein-domination-2-red-route-11",
+        "type": "route",
+        "points": [
+          {
+            "x": 45.6,
+            "y": 27.77
+          },
+          {
+            "x": 48.05,
+            "y": 28.94
+          },
+          {
+            "x": 50.59,
+            "y": 30.15
+          },
+          {
+            "x": 53.09,
+            "y": 31.33
+          },
+          {
+            "x": 55.6,
+            "y": 32.53
+          },
+          {
+            "x": 56.87,
+            "y": 33.05
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "second-battle-of-el-alamein-domination-2-red-route-12",
+        "type": "route",
+        "points": [
+          {
+            "x": 84.18,
+            "y": 33.26
+          },
+          {
+            "x": 81.21,
+            "y": 31.45
+          },
+          {
+            "x": 79.38,
+            "y": 31.04
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "second-battle-of-el-alamein-domination-2-red-route-13",
+        "type": "route",
+        "points": [
+          {
+            "x": 93.19,
+            "y": 41.22
+          },
+          {
+            "x": 92.68,
+            "y": 38.47
+          },
+          {
+            "x": 91.47,
+            "y": 36.01
+          },
+          {
+            "x": 89.59,
+            "y": 33.97
+          }
+        ],
+        "dangerRoute": true
+      }
+    ],
+    "Second Battle of El Alamein::domination-2|Blue": [
+      {
+        "id": "second-battle-of-el-alamein-domination-2-blue-aim-01",
+        "type": "aimHere",
+        "parentTankId": "second-battle-of-el-alamein-domination-2-blue-unit-07",
+        "startX": 17.15,
+        "startY": 48.33,
+        "endX": 28.61,
+        "endY": 24.32
+      },
+      {
+        "id": "second-battle-of-el-alamein-domination-2-blue-aim-02",
+        "type": "aimHere",
+        "parentTankId": "second-battle-of-el-alamein-domination-2-blue-unit-10",
+        "startX": 81.04,
+        "startY": 56.32,
+        "endX": 68.83,
+        "endY": 25.58
+      },
+      {
+        "id": "second-battle-of-el-alamein-domination-2-blue-aim-03",
+        "type": "aimHere",
+        "parentTankId": "second-battle-of-el-alamein-domination-2-blue-unit-01",
+        "startX": 52.08,
+        "startY": 23.19,
+        "endX": 48.57,
+        "endY": 14.11
+      },
+      {
+        "id": "second-battle-of-el-alamein-domination-2-blue-aim-04",
+        "type": "aimHere",
+        "parentTankId": "second-battle-of-el-alamein-domination-2-blue-unit-13",
+        "startX": 12.92,
+        "startY": 67.78,
+        "endX": 20.96,
+        "endY": 63.72
+      },
+      {
+        "id": "second-battle-of-el-alamein-domination-2-blue-aim-05",
+        "type": "aimHere",
+        "parentTankId": "second-battle-of-el-alamein-domination-2-blue-unit-09",
+        "startX": 9.93,
+        "startY": 50.97,
+        "endX": 30.23,
+        "endY": 25.03
+      },
+      {
+        "id": "second-battle-of-el-alamein-domination-2-blue-aim-06",
+        "type": "aimHere",
+        "parentTankId": "second-battle-of-el-alamein-domination-2-blue-unit-08",
+        "startX": 65.07,
+        "startY": 49.93,
+        "endX": 61.33,
+        "endY": 40.32
+      },
+      {
+        "id": "second-battle-of-el-alamein-domination-2-blue-aim-07",
+        "type": "aimHere",
+        "parentTankId": "second-battle-of-el-alamein-domination-2-blue-unit-16",
+        "startX": 34.44,
+        "startY": 81.25,
+        "endX": 30.95,
+        "endY": 75.96
+      },
+      {
+        "id": "second-battle-of-el-alamein-domination-2-blue-aim-08",
+        "type": "aimHere",
+        "parentTankId": "second-battle-of-el-alamein-domination-2-blue-unit-18",
+        "startX": 80.49,
+        "startY": 92.99,
+        "endX": 72.8,
+        "endY": 71.49
+      },
+      {
+        "id": "second-battle-of-el-alamein-domination-2-blue-aim-09",
+        "type": "aimHere",
+        "parentTankId": "second-battle-of-el-alamein-domination-2-blue-unit-08",
+        "startX": 65.07,
+        "startY": 49.93,
+        "endX": 68.16,
+        "endY": 42.87
+      },
+      {
+        "id": "second-battle-of-el-alamein-domination-2-blue-aim-10",
+        "type": "aimHere",
+        "parentTankId": "second-battle-of-el-alamein-domination-2-blue-unit-16",
+        "startX": 34.44,
+        "startY": 81.25,
+        "endX": 54.63,
+        "endY": 91.89
+      },
+      {
+        "id": "second-battle-of-el-alamein-domination-2-blue-aim-11",
+        "type": "aimHere",
+        "parentTankId": "second-battle-of-el-alamein-domination-2-blue-unit-17",
+        "startX": 11.39,
+        "startY": 85.76,
+        "endX": 4.73,
+        "endY": 71.53
+      },
+      {
+        "id": "second-battle-of-el-alamein-domination-2-blue-route-01",
+        "type": "route",
+        "points": [
+          {
+            "x": 54.14,
+            "y": 95.97
+          },
+          {
+            "x": 51.48,
+            "y": 96.82
+          },
+          {
+            "x": 48.78,
+            "y": 97.5
+          },
+          {
+            "x": 46.01,
+            "y": 97.64
+          },
+          {
+            "x": 43.23,
+            "y": 97.64
+          },
+          {
+            "x": 40.45,
+            "y": 97.64
+          },
+          {
+            "x": 37.67,
+            "y": 97.64
+          },
+          {
+            "x": 34.9,
+            "y": 97.64
+          },
+          {
+            "x": 32.15,
             "y": 97.29
           },
           {
-            "x": 73.37,
-            "y": 94.6
+            "x": 29.46,
+            "y": 96.72
           },
           {
-            "x": 72.45,
-            "y": 92.14
+            "x": 26.7,
+            "y": 96.11
           },
           {
-            "x": 72.51,
-            "y": 97.05
+            "x": 23.99,
+            "y": 95.52
+          },
+          {
+            "x": 21.28,
+            "y": 94.93
+          },
+          {
+            "x": 18.69,
+            "y": 94.03
+          },
+          {
+            "x": 16.2,
+            "y": 92.71
+          },
+          {
+            "x": 13.94,
+            "y": 91.11
+          },
+          {
+            "x": 12.25,
+            "y": 88.93
+          },
+          {
+            "x": 11.66,
+            "y": 87.68
           }
         ]
       },
       {
-        "id": "second-battle-of-el-alamein-blue-route-17",
+        "id": "second-battle-of-el-alamein-domination-2-blue-route-02",
         "type": "route",
         "points": [
           {
-            "x": 90.11,
-            "y": 89.32
+            "x": 88.95,
+            "y": 76.6
           },
           {
-            "x": 89.27,
-            "y": 91.96
+            "x": 90.24,
+            "y": 78.99
           },
           {
-            "x": 88.63,
-            "y": 94.38
+            "x": 90.56,
+            "y": 81.77
           },
           {
-            "x": 88.58,
-            "y": 94.9
+            "x": 90.38,
+            "y": 84.55
+          },
+          {
+            "x": 89.86,
+            "y": 87.24
+          },
+          {
+            "x": 88.71,
+            "y": 89.75
+          },
+          {
+            "x": 86.81,
+            "y": 91.77
+          },
+          {
+            "x": 84.41,
+            "y": 93.13
+          },
+          {
+            "x": 83.09,
+            "y": 93.55
           }
         ]
       },
       {
-        "id": "second-battle-of-el-alamein-blue-route-18",
+        "id": "second-battle-of-el-alamein-domination-2-blue-route-03",
         "type": "route",
         "points": [
           {
-            "x": 72.53,
-            "y": 16.67
+            "x": 92.05,
+            "y": 39.14
           },
           {
-            "x": 72.65,
-            "y": 13.93
+            "x": 92.01,
+            "y": 41.9
           },
           {
-            "x": 70.9,
-            "y": 11.81
+            "x": 91.49,
+            "y": 44.62
           },
           {
-            "x": 69.86,
-            "y": 10.92
+            "x": 90.48,
+            "y": 47.17
+          },
+          {
+            "x": 89,
+            "y": 49.57
+          },
+          {
+            "x": 87.47,
+            "y": 51.91
+          },
+          {
+            "x": 86.05,
+            "y": 54.29
           }
         ]
       },
       {
-        "id": "second-battle-of-el-alamein-blue-route-19",
+        "id": "second-battle-of-el-alamein-domination-2-blue-route-04",
         "type": "route",
         "points": [
           {
-            "x": 78.39,
-            "y": 86.46
+            "x": 74.82,
+            "y": 74.41
           },
           {
-            "x": 78.15,
-            "y": 89.23
+            "x": 73.22,
+            "y": 76.5
           },
           {
-            "x": 77.77,
-            "y": 86.46
+            "x": 71.49,
+            "y": 78.65
+          },
+          {
+            "x": 69.79,
+            "y": 80.8
+          },
+          {
+            "x": 68.03,
+            "y": 82.91
+          },
+          {
+            "x": 66.18,
+            "y": 84.91
+          },
+          {
+            "x": 64.16,
+            "y": 86.78
+          },
+          {
+            "x": 61.79,
+            "y": 88.07
+          },
+          {
+            "x": 59.03,
+            "y": 88.23
+          },
+          {
+            "x": 56.43,
+            "y": 87.55
+          },
+          {
+            "x": 54,
+            "y": 86.55
+          },
+          {
+            "x": 51.51,
+            "y": 85.59
+          },
+          {
+            "x": 49.01,
+            "y": 84.61
+          },
+          {
+            "x": 46.5,
+            "y": 83.61
+          },
+          {
+            "x": 58.31,
+            "y": 92.47
+          },
+          {
+            "x": 59.9,
+            "y": 90.17
+          },
+          {
+            "x": 60.72,
+            "y": 89.05
           }
         ]
       },
       {
-        "id": "second-battle-of-el-alamein-blue-route-20",
+        "id": "second-battle-of-el-alamein-domination-2-blue-route-05",
         "type": "route",
         "points": [
           {
-            "x": 74.35,
-            "y": 89.43
+            "x": 84.15,
+            "y": 54.38
           },
           {
-            "x": 74.61,
-            "y": 86.61
+            "x": 82.99,
+            "y": 52.1
           },
           {
-            "x": 75.06,
-            "y": 89.45
+            "x": 81.2,
+            "y": 49.94
+          },
+          {
+            "x": 79.27,
+            "y": 47.99
+          },
+          {
+            "x": 78.44,
+            "y": 46.88
           }
         ]
       },
       {
-        "id": "second-battle-of-el-alamein-blue-route-21",
+        "id": "second-battle-of-el-alamein-domination-2-blue-route-06",
         "type": "route",
         "points": [
           {
-            "x": 92.82,
-            "y": 86.6
+            "x": 67.69,
+            "y": 67.34
           },
           {
-            "x": 93.36,
-            "y": 89.3
+            "x": 70.19,
+            "y": 68.14
           },
           {
-            "x": 93.67,
-            "y": 86.46
+            "x": 72.9,
+            "y": 68.88
           },
           {
-            "x": 94.26,
-            "y": 89.27
+            "x": 74.29,
+            "y": 68.88
           }
         ]
       },
       {
-        "id": "second-battle-of-el-alamein-blue-route-22",
+        "id": "second-battle-of-el-alamein-domination-2-blue-route-07",
         "type": "route",
         "points": [
           {
-            "x": 81.49,
-            "y": 66.15
+            "x": 67.52,
+            "y": 50.12
           },
           {
-            "x": 81.16,
-            "y": 68.87
+            "x": 70.02,
+            "y": 51.21
           },
           {
-            "x": 78.81,
-            "y": 70.18
+            "x": 72.05,
+            "y": 53.13
           },
           {
-            "x": 76.1,
-            "y": 70.74
+            "x": 73.44,
+            "y": 55.52
+          }
+        ]
+      },
+      {
+        "id": "second-battle-of-el-alamein-domination-2-blue-route-08",
+        "type": "route",
+        "points": [
+          {
+            "x": 42.5,
+            "y": 57.05
           },
           {
-            "x": 73.35,
-            "y": 70.96
+            "x": 42.75,
+            "y": 59.85
           },
           {
-            "x": 70.57,
-            "y": 70.64
+            "x": 44.38,
+            "y": 62.05
           },
           {
-            "x": 67.84,
-            "y": 70.1
+            "x": 45.28,
+            "y": 63.08
+          }
+        ]
+      },
+      {
+        "id": "second-battle-of-el-alamein-domination-2-blue-route-09",
+        "type": "route",
+        "points": [
+          {
+            "x": 4.58,
+            "y": 70.68
           },
           {
-            "x": 65.14,
-            "y": 69.41
+            "x": 4.93,
+            "y": 67.95
           },
           {
-            "x": 62.54,
-            "y": 68.5
+            "x": 5.5,
+            "y": 65.22
           },
           {
-            "x": 60.09,
-            "y": 67.05
+            "x": 6.2,
+            "y": 62.55
           },
           {
-            "x": 59.0,
-            "y": 66.28
+            "x": 7.05,
+            "y": 59.84
+          },
+          {
+            "x": 7.88,
+            "y": 57.22
+          },
+          {
+            "x": 8.74,
+            "y": 54.59
+          },
+          {
+            "x": 13.68,
+            "y": 58.05
+          },
+          {
+            "x": 15.66,
+            "y": 56.11
+          },
+          {
+            "x": 16.42,
+            "y": 53.59
+          },
+          {
+            "x": 16.27,
+            "y": 50.87
+          },
+          {
+            "x": 12.56,
+            "y": 58.92
+          },
+          {
+            "x": 10.11,
+            "y": 60.22
+          },
+          {
+            "x": 7.53,
+            "y": 61.25
           }
         ],
         "dangerRoute": true
       },
       {
-        "id": "second-battle-of-el-alamein-blue-route-23",
+        "id": "second-battle-of-el-alamein-domination-2-blue-route-10",
         "type": "route",
         "points": [
           {
-            "x": 65.44,
-            "y": 59.27
+            "x": 62.95,
+            "y": 33.7
           },
           {
-            "x": 63.09,
-            "y": 60.74
+            "x": 62.11,
+            "y": 36.54
           },
           {
-            "x": 60.43,
-            "y": 61.56
+            "x": 59.68,
+            "y": 35.23
           },
           {
-            "x": 59.08,
-            "y": 61.77
+            "x": 61.19,
+            "y": 37.37
+          },
+          {
+            "x": 62.8,
+            "y": 34.88
+          },
+          {
+            "x": 60.68,
+            "y": 32.95
+          },
+          {
+            "x": 62.15,
+            "y": 35.77
+          },
+          {
+            "x": 63.65,
+            "y": 37
           }
         ],
         "dangerRoute": true
       },
       {
-        "id": "second-battle-of-el-alamein-blue-route-24",
+        "id": "second-battle-of-el-alamein-domination-2-blue-route-11",
         "type": "route",
         "points": [
           {
-            "x": 61.55,
-            "y": 22.32
+            "x": 39.96,
+            "y": 76.6
           },
           {
-            "x": 63.94,
-            "y": 23.8
+            "x": 42.08,
+            "y": 74.86
           },
           {
-            "x": 66.23,
-            "y": 25.34
+            "x": 43.99,
+            "y": 72.81
           },
           {
-            "x": 67.4,
-            "y": 26.04
+            "x": 44.9,
+            "y": 71.77
           }
         ],
         "dangerRoute": true
       },
       {
-        "id": "second-battle-of-el-alamein-blue-route-25",
+        "id": "second-battle-of-el-alamein-domination-2-blue-route-12",
         "type": "route",
         "points": [
           {
-            "x": 62.32,
-            "y": 32.09
+            "x": 39.22,
+            "y": 78.93
           },
           {
-            "x": 64.92,
-            "y": 33.16
+            "x": 41.48,
+            "y": 80.48
           },
           {
-            "x": 67.44,
-            "y": 34.14
+            "x": 43.68,
+            "y": 82.17
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "second-battle-of-el-alamein-domination-2-blue-route-13",
+        "type": "route",
+        "points": [
+          {
+            "x": 42.82,
+            "y": 55.7
           },
           {
-            "x": 69.96,
-            "y": 35.08
+            "x": 42.99,
+            "y": 53.02
+          },
+          {
+            "x": 42.6,
+            "y": 50.31
+          },
+          {
+            "x": 41.01,
+            "y": 48.06
+          },
+          {
+            "x": 39.27,
+            "y": 45.87
+          },
+          {
+            "x": 38.38,
+            "y": 44.81
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "second-battle-of-el-alamein-domination-2-blue-route-14",
+        "type": "route",
+        "points": [
+          {
+            "x": 67.78,
+            "y": 37.03
+          },
+          {
+            "x": 67.66,
+            "y": 39.94
+          },
+          {
+            "x": 68.57,
+            "y": 36.77
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "second-battle-of-el-alamein-domination-2-blue-route-15",
+        "type": "route",
+        "points": [
+          {
+            "x": 10.06,
+            "y": 84.4
+          },
+          {
+            "x": 9.67,
+            "y": 81.63
+          },
+          {
+            "x": 9.74,
+            "y": 78.86
+          },
+          {
+            "x": 10.41,
+            "y": 76.14
+          },
+          {
+            "x": 11.15,
+            "y": 73.47
+          },
+          {
+            "x": 11.9,
+            "y": 70.81
+          },
+          {
+            "x": 12.3,
+            "y": 69.54
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "second-battle-of-el-alamein-domination-2-blue-route-16",
+        "type": "route",
+        "points": [
+          {
+            "x": 83.84,
+            "y": 29.15
+          },
+          {
+            "x": 81.99,
+            "y": 31.03
+          },
+          {
+            "x": 79.38,
+            "y": 31.04
           }
         ],
         "dangerRoute": true
