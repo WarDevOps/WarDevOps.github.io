@@ -230,7 +230,7 @@ export const translations = {
         exportJson: "JSON 내보내기",
         resetHidden: "숨긴 마커 복원",
         editorIdle: "지도 편집을 선택하면 편집 도구가 표시됩니다.",
-        editorActive: "전차 아이콘을 지도 위로 드래그해 배치하세요. Route를 클릭하면 경로를 그리고, 전차를 우클릭하면 조준 화살표를 그릴 수 있습니다.",
+        editorActive: "전차 아이콘을 지도 위로 드래그해 배치하세요. 지도 마커에서 이동 경로를 클릭하면 경로를 그리고, 전차 마커를 우클릭하면 조준 화살표와 역할을 설정할 수 있습니다.",
         savedLocally: "이 브라우저에 저장했습니다.",
         exportedJson: "JSON 파일을 저장했습니다.",
         exportFailed: "JSON 파일을 저장하지 못했습니다.",
