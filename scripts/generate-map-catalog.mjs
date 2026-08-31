@@ -308,7 +308,7 @@ function renderTacticalSummary(map) {
   const sentences = map.tacticalSummary?.en || [];
   const hidden = sentences.length ? "" : " hidden";
   const paragraphs = sentences.map(sentence => `\n                <p>${escapeHtml(sentence)}</p>`).join("");
-  return `<section class="map-tactical-summary" id="map-tactical-summary" aria-labelledby="map-tactical-summary-title"${hidden}>\n              <h3 id="map-tactical-summary-title" data-i18n="tacticalSummary">Tactical Summary</h3>\n              <blockquote id="map-tactical-summary-copy">${paragraphs}\n              </blockquote>\n            </section>`;
+  return `<details class="map-tactical-summary" id="map-tactical-summary" aria-labelledby="map-tactical-summary-title"${hidden}>\n              <summary id="map-tactical-summary-title">\n                <span data-i18n="tacticalSummary">Tactical Summary</span>\n                <span class="map-tactical-summary-toggle" aria-hidden="true"></span>\n              </summary>\n              <blockquote id="map-tactical-summary-copy">${paragraphs}\n              </blockquote>\n            </details>`;
 }
 
 function renderMapRoutePage(rootPage, map) {
@@ -328,7 +328,7 @@ function renderMapRoutePage(rootPage, map) {
   page = replacePageValue(page, /<meta name="twitter:description" content="[^"]*">/, `<meta name="twitter:description" content="${description}">`, "X description");
   page = replacePageValue(page, /<meta name="twitter:image" content="[^"]*">/, `<meta name="twitter:image" content="${preview}">`, "X image");
   page = replacePageValue(page, /<title>[^<]*<\/title>/, `<title>${title}</title>`, "document title");
-  page = replacePageValue(page, /<section class="map-tactical-summary"[\s\S]*?<\/section>/, renderTacticalSummary(map), "tactical summary");
+  page = replacePageValue(page, /<details class="map-tactical-summary"[\s\S]*?<\/details>/, renderTacticalSummary(map), "tactical summary");
   return page;
 }
 

@@ -4,7 +4,7 @@ import { initDiscordMemberCount } from './discord-stats.js';
     import { maps, translations } from './data.js?v=share-links-20260831';
 
 
-    const state = { selected: null, team: "Red", query: "", language: "en", theme: "dark", editMode: false, contextMarkerId: null, contextAnnotationId: null, commentMarkerId: null, drawing: null };
+    const state = { selected: null, team: "Red", query: "", language: "en", theme: "dark", editMode: false, focusedTankMarkerId: null, contextMarkerId: null, contextAnnotationId: null, commentMarkerId: null, drawing: null };
     const $ = (selector) => document.querySelector(selector);
     const mapList = $("#map-list");
     const mapVariationSelect = $("#map-variation");
@@ -299,6 +299,8 @@ import { initDiscordMemberCount } from './discord-stats.js';
       if (!state.selected) return;
       $("#selected-map-name").textContent = mapLabel(state.selected);
       const summarySentences = mapTacticalSummarySentences(state.selected);
+      if (mapTacticalSummary.dataset.mapName !== state.selected.name) mapTacticalSummary.open = false;
+      mapTacticalSummary.dataset.mapName = state.selected.name;
       mapTacticalSummary.hidden = summarySentences.length === 0;
       mapTacticalSummaryCopy.replaceChildren(...summarySentences.map(sentence => {
         const paragraph = document.createElement("p");
@@ -1006,6 +1008,7 @@ import { initDiscordMemberCount } from './discord-stats.js';
         button.className = "map-marker";
         button.dataset.markerId = marker.id;
         button.dataset.markerType = marker.type;
+        button.classList.toggle("is-dimmed", Boolean(state.focusedTankMarkerId) && marker.id !== state.focusedTankMarkerId);
         button.draggable = state.editMode && isMarkerPlacementEnabled(marker.type);
         button.style.left = `${Math.min(100, Math.max(0, x))}%`;
         button.style.top = `${Math.min(100, Math.max(0, y))}%`;
@@ -1018,6 +1021,7 @@ import { initDiscordMemberCount } from './discord-stats.js';
           button.setAttribute("aria-label", `${markerLabel} — ${editTitle}`);
         } else {
           button.setAttribute("aria-label", markerLabel);
+          if (isTankMarker(marker)) button.setAttribute("aria-pressed", String(marker.id === state.focusedTankMarkerId));
         }
         const icon = document.createElement("img");
         icon.src = markerIconPath(marker, type.icon);
@@ -1053,6 +1057,8 @@ import { initDiscordMemberCount } from './discord-stats.js';
       });
     }
     function renderMarkers() {
+      const focusedTankMarker = currentMarkers().find(marker => marker.id === state.focusedTankMarkerId);
+      if (state.focusedTankMarkerId && (!isTankMarker(focusedTankMarker) || isMarkerHidden(focusedTankMarker))) state.focusedTankMarkerId = null;
       syncMarkerLayer(mapOverlayLayer, mapImage, mapStage);
       renderMapOverlayLayer(mapOverlayLayer, mapImage);
       syncMarkerLayer(annotationLayer, mapImage, mapStage);
@@ -1092,6 +1098,7 @@ import { initDiscordMemberCount } from './discord-stats.js';
     function setEditorMode(enabled) {
       if (!enabled) cancelDrawing();
       state.editMode = enabled;
+      state.focusedTankMarkerId = null;
       hideMarkerContextMenu();
       updateMarkerEditor();
       renderMarkers();
@@ -1333,6 +1340,7 @@ import { initDiscordMemberCount } from './discord-stats.js';
       const baseMap = findBaseMap(map);
       const preferredVariationId = variationId || (state.selected?.name === baseMap.name ? state.selected.variationId : null);
       cancelDrawing();
+      state.focusedTankMarkerId = null;
       state.selected = expandMapVariation(baseMap, preferredVariationId);
       state.team = team;
       hideMarkerContextMenu();
@@ -1396,6 +1404,19 @@ import { initDiscordMemberCount } from './discord-stats.js';
       }
     }
     function bindMarkerLayer(layer, stage, contextMenu) {
+      layer.addEventListener("click", event => {
+        if (state.editMode || state.focusedTankMarkerId) return;
+        const markerButton = event.target.closest(".map-marker");
+        if (!markerButton) return;
+        const marker = currentMarkers().find(item => item.id === markerButton.dataset.markerId);
+        if (!isTankMarker(marker)) return;
+        event.preventDefault();
+        event.stopPropagation();
+        hideMarkerContextMenu();
+        hideAnnotationContextMenu();
+        state.focusedTankMarkerId = marker.id;
+        renderMarkers();
+      });
       layer.addEventListener("dragstart", event => {
         const marker = event.target.closest(".map-marker");
         if (!state.editMode || !marker || !isMarkerPlacementEnabled(marker.dataset.markerType) || !event.dataTransfer) {
@@ -1598,6 +1619,10 @@ import { initDiscordMemberCount } from './discord-stats.js';
     bindAnnotationContextMenu(annotationContextMenu);
     bindAnnotationContextMenu(modalAnnotationContextMenu);
     document.addEventListener("click", event => {
+      if (!state.editMode && state.focusedTankMarkerId) {
+        state.focusedTankMarkerId = null;
+        renderMarkers();
+      }
       if (!markerContextMenu.contains(event.target) && !modalMarkerContextMenu.contains(event.target)) hideMarkerContextMenu();
       if (!annotationContextMenu.contains(event.target) && !modalAnnotationContextMenu.contains(event.target)) hideAnnotationContextMenu();
     });
@@ -1639,11 +1664,13 @@ import { initDiscordMemberCount } from './discord-stats.js';
     dialog.addEventListener("click", event => { if (event.target === dialog) dialog.close(); });
     dialog.addEventListener("close", () => {
       cancelDrawing();
+      state.focusedTankMarkerId = null;
       hideMarkerContextMenu();
       hideAnnotationContextMenu();
       modalMapOverlayLayer.replaceChildren();
       modalAnnotationLayer.replaceChildren();
       modalMarkerLayer.replaceChildren();
+      renderMarkers();
     });
     setLanguage("en");
     if (!markerLayout.updatedAt) {

@@ -164,8 +164,12 @@
     .viewer-top p { margin: 7px 0 0; color: var(--muted); font-size: .9rem; }
     .map-tactical-summary { width: 100%; padding: 13px 16px 14px; border-left: 3px solid var(--accent); border-radius: 0 10px 10px 0; background: rgba(214, 219, 157, .07); }
     .map-tactical-summary[hidden] { display: none; }
-    .map-tactical-summary h3 { margin: 0 0 7px; color: var(--accent); font-size: .67rem; font-weight: 900; letter-spacing: .105em; text-transform: uppercase; }
-    .map-tactical-summary blockquote { margin: 0; }
+    .map-tactical-summary summary { display: flex; align-items: center; justify-content: space-between; gap: 12px; color: var(--accent); font-size: .67rem; font-weight: 900; letter-spacing: .105em; list-style: none; text-transform: uppercase; cursor: pointer; }
+    .map-tactical-summary summary::-webkit-details-marker { display: none; }
+    .map-tactical-summary summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; border-radius: 2px; }
+    .map-tactical-summary-toggle::before { content: "+"; display: block; font-size: 1rem; line-height: 1; }
+    .map-tactical-summary[open] .map-tactical-summary-toggle::before { content: "−"; }
+    .map-tactical-summary blockquote { margin: 11px 0 0; padding-top: 10px; border-top: 1px solid rgba(214, 219, 157, .16); }
     .map-tactical-summary p { margin: 0; color: var(--ink); font-size: clamp(.82rem, 1.5vw, .9rem); line-height: 1.58; }
     .map-tactical-summary p + p { margin-top: 3px; }
     .map-meta-row { display: flex; margin-top: 13px; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
@@ -210,7 +214,8 @@
     .route-line polyline { fill: none; stroke: var(--route-color); stroke-dasharray: 10 10; pointer-events: stroke; }
     .route-line.is-preview polyline { pointer-events: none; }
     .route-line.is-danger-route { --route-color: #E60012; }
-    .map-marker { position: absolute; display: block; width: auto; height: auto; padding: 0; transform: translate(-50%, -50%); border: 0; border-radius: 0; background: transparent; box-shadow: none; cursor: default; line-height: 0; pointer-events: auto; }
+    .map-marker { position: absolute; display: block; width: auto; height: auto; padding: 0; transform: translate(-50%, -50%); border: 0; border-radius: 0; background: transparent; box-shadow: none; cursor: default; line-height: 0; pointer-events: auto; transition: opacity .16s ease; }
+    .map-marker.is-dimmed { opacity: .05; }
     .map-viewer.is-editing .map-marker:hover, dialog.is-editing .map-marker:hover { filter: drop-shadow(0 0 4px var(--accent)); }
     .map-marker img { display: block; width: auto; height: auto; max-width: none; max-height: none; object-fit: initial; pointer-events: none; }
     .map-marker img.is-special-role-marker { filter: brightness(0); opacity: .5; }

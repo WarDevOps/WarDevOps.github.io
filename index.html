@@ -49,7 +49,7 @@
   </script>
   <title>WarDevOps | War Thunder Map Tactic</title>
 
-  <link rel="stylesheet" href="/assets/css/site.css?v=copy-link-placement-20260831">
+  <link rel="stylesheet" href="/assets/css/site.css?v=collapsible-summary-20260831">
 </head>
 <body>
   <header class="site-header">
@@ -176,10 +176,13 @@
             <button class="marker-context-action delete" type="button" data-annotation-action="delete" role="menuitem" data-i18n="deleteDrawing">Delete Drawing</button>
           </div>
             </div>
-            <section class="map-tactical-summary" id="map-tactical-summary" aria-labelledby="map-tactical-summary-title" hidden>
-              <h3 id="map-tactical-summary-title" data-i18n="tacticalSummary">Tactical Summary</h3>
+            <details class="map-tactical-summary" id="map-tactical-summary" aria-labelledby="map-tactical-summary-title" hidden>
+              <summary id="map-tactical-summary-title">
+                <span data-i18n="tacticalSummary">Tactical Summary</span>
+                <span class="map-tactical-summary-toggle" aria-hidden="true"></span>
+              </summary>
               <blockquote id="map-tactical-summary-copy"></blockquote>
-            </section>
+            </details>
           </div>
           <aside class="legend-panel" aria-label="Map legend" data-i18n-aria="mapLegend">
             <h3 class="legend-heading" data-i18n="mapLegend">Map Legend</h3>
@@ -323,7 +326,7 @@
 
   <input id="marker-layout-import-file" type="file" accept="application/json,.json" hidden>
 
-  <script type="module" src="/assets/js/app.js?v=team-area-overlays-20260831"></script>
+  <script type="module" src="/assets/js/app.js?v=collapsible-summary-20260831"></script>
   <script type="module" src="/assets/js/consent-controls.js?v=20260828"></script>
 </body>
 </html>

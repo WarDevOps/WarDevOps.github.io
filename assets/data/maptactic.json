@@ -1,13 +1,13 @@
 {
   "version": 2,
   "mapUpdated": {
-    "38th Parallel": "2026-08-25",
-    "Abandoned Factory": "2026-08-30",
+    "38th Parallel": "2026-08-31",
+    "Abandoned Factory": "2026-08-31",
     "Abandoned Town": "2026-08-31",
     "Advance to the Rhine": "2026-08-25",
     "Alaska": "2026-08-31",
     "American Desert": "2026-08-25",
-    "Aral Sea": "2026-08-25",
+    "Aral Sea": "2026-08-31",
     "Arctic Pier": "2026-08-25",
     "Arctic Polar Base": "2026-08-25",
     "Ardennes": "2026-08-31",
@@ -41,7 +41,7 @@
     "North Holland": "2026-08-30",
     "Poland": "2026-08-17",
     "Port Novorossiysk": "2026-08-16",
-    "Pradesh": "2026-08-16",
+    "Pradesh": "2026-08-31",
     "Red Desert": "2026-08-25",
     "Sands of Sinai": "2026-08-17",
     "Second Battle of El Alamein": "2026-08-17",
@@ -4637,19 +4637,6 @@
         "parentTankId": "38p-blue-mbt-07"
       },
       {
-        "id": "38p-blue-mbt-08",
-        "type": "mainBattleTank",
-        "x": 20.07,
-        "y": 51.74
-      },
-      {
-        "id": "38p-blue-mbt-08-role",
-        "type": "battleLine",
-        "x": 20.07,
-        "y": 51.74,
-        "parentTankId": "38p-blue-mbt-08"
-      },
-      {
         "id": "38p-blue-mbt-09",
         "type": "mainBattleTank",
         "x": 22.96,
@@ -5408,7 +5395,7 @@
       },
       {
         "id": "aral-sea-red-role-01",
-        "type": "battleLine",
+        "type": "spawnKill",
         "x": 57.22,
         "y": 20,
         "parentTankId": "aral-sea-red-unit-01"
@@ -5421,7 +5408,7 @@
       },
       {
         "id": "aral-sea-red-role-02",
-        "type": "battleLine",
+        "type": "spawnKill",
         "x": 7.43,
         "y": 22.22,
         "parentTankId": "aral-sea-red-unit-02"
@@ -5433,139 +5420,55 @@
         "y": 33.68
       },
       {
-        "id": "aral-sea-red-unit-04",
-        "type": "mainBattleTankRed",
-        "x": 33.4,
-        "y": 37.71
-      },
-      {
         "id": "aral-sea-red-unit-05",
         "type": "mainBattleTankRed",
-        "x": 51.6,
-        "y": 47.15
+        "x": 51.42,
+        "y": 37.76
       },
       {
         "id": "aral-sea-red-role-03",
         "type": "highRiskSpot",
-        "x": 51.6,
-        "y": 47.15,
+        "x": 51.42,
+        "y": 37.76,
         "parentTankId": "aral-sea-red-unit-05"
-      },
-      {
-        "id": "aral-sea-red-unit-06",
-        "type": "mainBattleTankRed",
-        "x": 82.43,
-        "y": 48.82
-      },
-      {
-        "id": "aral-sea-red-role-04",
-        "type": "highRiskSpot",
-        "x": 82.43,
-        "y": 48.82,
-        "parentTankId": "aral-sea-red-unit-06"
       },
       {
         "id": "aral-sea-red-unit-07",
         "type": "mainBattleTankRed",
-        "x": 36.25,
-        "y": 52.57
+        "x": 35.64,
+        "y": 52.39
       },
       {
         "id": "aral-sea-red-role-05",
         "type": "battleLine",
-        "x": 36.25,
-        "y": 52.57,
+        "x": 35.64,
+        "y": 52.39,
         "parentTankId": "aral-sea-red-unit-07"
-      },
-      {
-        "id": "aral-sea-red-unit-08",
-        "type": "mainBattleTankRed",
-        "x": 11.53,
-        "y": 53.68
-      },
-      {
-        "id": "aral-sea-red-role-06",
-        "type": "battleLine",
-        "x": 11.53,
-        "y": 53.68,
-        "parentTankId": "aral-sea-red-unit-08"
-      },
-      {
-        "id": "aral-sea-red-unit-09",
-        "type": "mainBattleTankRed",
-        "x": 24.65,
-        "y": 54.65
-      },
-      {
-        "id": "aral-sea-red-role-07",
-        "type": "battleLine",
-        "x": 24.65,
-        "y": 54.65,
-        "parentTankId": "aral-sea-red-unit-09"
-      },
-      {
-        "id": "aral-sea-red-unit-10",
-        "type": "mainBattleTankRed",
-        "x": 30.76,
-        "y": 54.79
-      },
-      {
-        "id": "aral-sea-red-role-08",
-        "type": "battleLine",
-        "x": 30.76,
-        "y": 54.79,
-        "parentTankId": "aral-sea-red-unit-10"
-      },
-      {
-        "id": "aral-sea-red-unit-11",
-        "type": "mainBattleTankRed",
-        "x": 17.5,
-        "y": 61.6
-      },
-      {
-        "id": "aral-sea-red-role-09",
-        "type": "battleLine",
-        "x": 17.5,
-        "y": 61.6,
-        "parentTankId": "aral-sea-red-unit-11"
-      },
-      {
-        "id": "aral-sea-red-unit-12",
-        "type": "mainBattleTankRed",
-        "x": 9.93,
-        "y": 62.36
-      },
-      {
-        "id": "aral-sea-red-role-10",
-        "type": "battleLine",
-        "x": 9.93,
-        "y": 62.36,
-        "parentTankId": "aral-sea-red-unit-12"
       },
       {
         "id": "aral-sea-red-unit-13",
         "type": "mainBattleTankRed",
-        "x": 21.6,
-        "y": 62.99
+        "x": 21.1,
+        "y": 62.59
       },
       {
         "id": "aral-sea-red-role-11",
         "type": "battleLine",
-        "x": 21.6,
-        "y": 62.99,
+        "x": 21.1,
+        "y": 62.59,
         "parentTankId": "aral-sea-red-unit-13"
       },
       {
         "id": "aral-sea-red-unit-14",
         "type": "mainBattleTankRed",
-        "x": 33.68,
-        "y": 63.26
+        "x": 33.07,
+        "y": 65.51
       },
       {
         "id": "aral-sea-red-role-12",
         "type": "sniper",
-        "x": 33.68,
-        "y": 63.26,
+        "x": 33.07,
+        "y": 65.51,
         "parentTankId": "aral-sea-red-unit-14"
       },
       {
@@ -5576,52 +5479,33 @@
       },
       {
         "id": "aral-sea-red-role-13",
-        "type": "battleLine",
+        "type": "sniper",
         "x": 53.89,
         "y": 72.5,
         "parentTankId": "aral-sea-red-unit-15"
       },
       {
-        "id": "aral-sea-red-unit-16",
-        "type": "mainBattleTankRed",
-        "x": 81.11,
-        "y": 76.18
-      },
-      {
-        "id": "aral-sea-red-role-14",
-        "type": "highRiskSpot",
-        "x": 81.11,
-        "y": 76.18,
-        "parentTankId": "aral-sea-red-unit-16"
-      },
-      {
-        "id": "aral-sea-red-unit-17",
-        "type": "mainBattleTankRed",
-        "x": 84.58,
-        "y": 78.61
-      },
-      {
-        "id": "aral-sea-red-role-15",
+        "id": "mtgshb6w-t0b504",
         "type": "spawnKill",
-        "x": 84.58,
-        "y": 78.61,
-        "parentTankId": "aral-sea-red-unit-17"
+        "x": 41.11,
+        "y": 33.68,
+        "parentTankId": "aral-sea-red-unit-03"
+      },
+      {
+        "id": "mtgsjrn0-60jh43",
+        "type": "mainBattleTankRed",
+        "x": 26.51,
+        "y": 37.49
+      },
+      {
+        "id": "mtgsjt2e-lshq10",
+        "type": "spawnKill",
+        "x": 26.51,
+        "y": 37.49,
+        "parentTankId": "mtgsjrn0-60jh43"
       }
     ],
     "Aral Sea::domination-1|Blue": [
-      {
-        "id": "aral-sea-blue-unit-01",
-        "type": "mainBattleTank",
-        "x": 66.88,
-        "y": 20
-      },
-      {
-        "id": "aral-sea-blue-role-01",
-        "type": "sniper",
-        "x": 66.88,
-        "y": 20,
-        "parentTankId": "aral-sea-blue-unit-01"
-      },
       {
         "id": "aral-sea-blue-unit-02",
         "type": "mainBattleTank",
@@ -5630,36 +5514,10 @@
       },
       {
         "id": "aral-sea-blue-role-02",
-        "type": "spawnKill",
+        "type": "sniper",
         "x": 56.11,
         "y": 21.04,
         "parentTankId": "aral-sea-blue-unit-02"
-      },
-      {
-        "id": "aral-sea-blue-unit-03",
-        "type": "mainBattleTank",
-        "x": 13.06,
-        "y": 24.93
-      },
-      {
-        "id": "aral-sea-blue-role-03",
-        "type": "battleLine",
-        "x": 13.06,
-        "y": 24.93,
-        "parentTankId": "aral-sea-blue-unit-03"
-      },
-      {
-        "id": "aral-sea-blue-unit-04",
-        "type": "mainBattleTank",
-        "x": 17.5,
-        "y": 34.03
-      },
-      {
-        "id": "aral-sea-blue-role-04",
-        "type": "battleLine",
-        "x": 17.5,
-        "y": 34.03,
-        "parentTankId": "aral-sea-blue-unit-04"
       },
       {
         "id": "aral-sea-blue-unit-05",
@@ -5682,7 +5540,7 @@
       },
       {
         "id": "aral-sea-blue-role-06",
-        "type": "spawnKill",
+        "type": "sniper",
         "x": 33.12,
         "y": 36.25,
         "parentTankId": "aral-sea-blue-unit-06"
@@ -5703,34 +5561,15 @@
       {
         "id": "aral-sea-blue-unit-08",
         "type": "mainBattleTank",
-        "x": 42.08,
-        "y": 40.62
+        "x": 41.49,
+        "y": 43.61
       },
       {
         "id": "aral-sea-blue-role-08",
         "type": "battleLine",
-        "x": 42.08,
-        "y": 40.62,
+        "x": 41.49,
+        "y": 43.61,
         "parentTankId": "aral-sea-blue-unit-08"
-      },
-      {
-        "id": "aral-sea-blue-unit-09",
-        "type": "mainBattleTank",
-        "x": 82.43,
-        "y": 46.67
-      },
-      {
-        "id": "aral-sea-blue-role-09",
-        "type": "highRiskSpot",
-        "x": 82.43,
-        "y": 46.67,
-        "parentTankId": "aral-sea-blue-unit-09"
-      },
-      {
-        "id": "aral-sea-blue-unit-10",
-        "type": "mainBattleTank",
-        "x": 24.65,
-        "y": 58.4
       },
       {
         "id": "aral-sea-blue-unit-11",
@@ -5741,8 +5580,48 @@
       {
         "id": "aral-sea-blue-unit-12",
         "type": "mainBattleTank",
-        "x": 52.36,
-        "y": 70.49
+        "x": 54.97,
+        "y": 70.65
+      },
+      {
+        "id": "mtgsd7ro-7ru92r",
+        "type": "spawnKill",
+        "x": 33.89,
+        "y": 59.86,
+        "parentTankId": "aral-sea-blue-unit-11"
+      },
+      {
+        "id": "mtgseka6-b4mn02",
+        "type": "spawnKill",
+        "x": 54.97,
+        "y": 70.65,
+        "parentTankId": "aral-sea-blue-unit-12"
+      },
+      {
+        "id": "mtgsfqp5-pmg0vi",
+        "type": "mainBattleTank",
+        "x": 51.33,
+        "y": 49.64
+      },
+      {
+        "id": "mtgsfs00-seluha",
+        "type": "highRiskSpot",
+        "x": 51.33,
+        "y": 49.64,
+        "parentTankId": "mtgsfqp5-pmg0vi"
+      },
+      {
+        "id": "mtgsl49x-f5qlx3",
+        "type": "mainBattleTank",
+        "x": 23.67,
+        "y": 53.01
+      },
+      {
+        "id": "mtgsl584-9etjy5",
+        "type": "highRiskSpot",
+        "x": 23.67,
+        "y": 53.01,
+        "parentTankId": "mtgsl49x-f5qlx3"
       }
     ],
     "Iberian Castle::domination-1|Red": [
@@ -10402,14 +10281,14 @@
       {
         "id": "abandoned-factory-red-unit-05",
         "type": "mainBattleTankRed",
-        "x": 76.32,
-        "y": 52.15
+        "x": 73.67,
+        "y": 53.45
       },
       {
         "id": "abandoned-factory-red-role-04",
         "type": "battleLine",
-        "x": 76.32,
-        "y": 52.15,
+        "x": 73.67,
+        "y": 53.45,
         "parentTankId": "abandoned-factory-red-unit-05"
       },
       {
@@ -10420,7 +10299,7 @@
       },
       {
         "id": "abandoned-factory-red-role-05",
-        "type": "battleLine",
+        "type": "highRiskSpot",
         "x": 89.65,
         "y": 53.61,
         "parentTankId": "abandoned-factory-red-unit-06"
@@ -10446,7 +10325,7 @@
       },
       {
         "id": "abandoned-factory-red-role-07",
-        "type": "battleLine",
+        "type": "sniper",
         "x": 68.54,
         "y": 58.47,
         "parentTankId": "abandoned-factory-red-unit-08"
@@ -10454,14 +10333,14 @@
       {
         "id": "abandoned-factory-red-unit-09",
         "type": "mainBattleTankRed",
-        "x": 11.32,
-        "y": 60.56
+        "x": 10.46,
+        "y": 57.27
       },
       {
         "id": "abandoned-factory-red-role-08",
         "type": "battleLine",
-        "x": 11.32,
-        "y": 60.56,
+        "x": 10.46,
+        "y": 57.27,
         "parentTankId": "abandoned-factory-red-unit-09"
       },
       {
@@ -10472,10 +10351,43 @@
       },
       {
         "id": "abandoned-factory-red-role-09",
-        "type": "battleLine",
+        "type": "sniper",
         "x": 51.04,
         "y": 60.56,
         "parentTankId": "abandoned-factory-red-unit-10"
+      },
+      {
+        "id": "mtgrh169-udu114",
+        "type": "spawnKill",
+        "x": 46.53,
+        "y": 35.62,
+        "parentTankId": "abandoned-factory-red-unit-03"
+      },
+      {
+        "id": "mtgrid28-1jhie3",
+        "type": "mainBattleTankRed",
+        "x": 7.27,
+        "y": 54.07
+      },
+      {
+        "id": "mtgrik41-6rvua2",
+        "type": "highRiskSpot",
+        "x": 7.27,
+        "y": 54.07,
+        "parentTankId": "mtgrid28-1jhie3"
+      },
+      {
+        "id": "mtgsa9rl-m4glzj",
+        "type": "mainBattleTankRed",
+        "x": 77.57,
+        "y": 44.14
+      },
+      {
+        "id": "mtgsab16-640rru",
+        "type": "highRiskSpot",
+        "x": 77.57,
+        "y": 44.14,
+        "parentTankId": "mtgsa9rl-m4glzj"
       }
     ],
     "Ardennes::conquest-1|Red": [],
@@ -10598,6 +10510,59 @@
         "type": "mainBattleTank",
         "x": 10,
         "y": 73.19
+      },
+      {
+        "id": "mtgrb3m3-828tvi",
+        "type": "spawnKill",
+        "x": 81.67,
+        "y": 57.5,
+        "parentTankId": "abandoned-factory-blue-unit-08"
+      },
+      {
+        "id": "mtgrd4z3-9ax1j7",
+        "type": "spawnKill",
+        "x": 10,
+        "y": 73.19,
+        "parentTankId": "abandoned-factory-blue-unit-10"
+      },
+      {
+        "id": "mtgrdf45-jijep2",
+        "type": "mainBattleTank",
+        "x": 30.94,
+        "y": 69.68
+      },
+      {
+        "id": "mtgrdhv0-6y9na6",
+        "type": "highRiskSpot",
+        "x": 30.94,
+        "y": 69.68,
+        "parentTankId": "mtgrdf45-jijep2"
+      },
+      {
+        "id": "mtgrds78-un3x13",
+        "type": "mainBattleTank",
+        "x": 35.99,
+        "y": 63.03
+      },
+      {
+        "id": "mtgrdu0v-5fhc0h",
+        "type": "highRiskSpot",
+        "x": 35.99,
+        "y": 63.03,
+        "parentTankId": "mtgrds78-un3x13"
+      },
+      {
+        "id": "mtgs8i8b-0b5zvr",
+        "type": "mainBattleTank",
+        "x": 57.71,
+        "y": 58.33
+      },
+      {
+        "id": "mtgs8j6q-2usd07",
+        "type": "highRiskSpot",
+        "x": 57.71,
+        "y": 58.33,
+        "parentTankId": "mtgs8i8b-0b5zvr"
       }
     ],
     "Jungle::domination-1|Red": [],
@@ -11566,7 +11531,7 @@
       },
       {
         "id": "pradesh-red-role-01",
-        "type": "spawnKill",
+        "type": "sniper",
         "x": 48.06,
         "y": 8.96,
         "parentTankId": "pradesh-red-unit-02"
@@ -11585,7 +11550,7 @@
       },
       {
         "id": "pradesh-red-role-02",
-        "type": "highRiskSpot",
+        "type": "sniper",
         "x": 64.03,
         "y": 20.49,
         "parentTankId": "pradesh-red-unit-04"
@@ -11598,7 +11563,7 @@
       },
       {
         "id": "pradesh-red-role-03",
-        "type": "highRiskSpot",
+        "type": "sniper",
         "x": 31.32,
         "y": 21.53,
         "parentTankId": "pradesh-red-unit-05"
@@ -11624,7 +11589,7 @@
       },
       {
         "id": "pradesh-red-role-05",
-        "type": "spawnKill",
+        "type": "sniper",
         "x": 68.33,
         "y": 26.6,
         "parentTankId": "pradesh-red-unit-07"
@@ -11650,7 +11615,7 @@
       },
       {
         "id": "pradesh-red-role-07",
-        "type": "highRiskSpot",
+        "type": "sniper",
         "x": 22.29,
         "y": 40.42,
         "parentTankId": "pradesh-red-unit-09"
@@ -11697,14 +11662,14 @@
       {
         "id": "pradesh-red-unit-13",
         "type": "mainBattleTankRed",
-        "x": 82.22,
-        "y": 47.08
+        "x": 82.45,
+        "y": 46.98
       },
       {
         "id": "pradesh-red-role-11",
         "type": "battleLine",
-        "x": 82.22,
-        "y": 47.08,
+        "x": 82.45,
+        "y": 46.98,
         "parentTankId": "pradesh-red-unit-13"
       },
       {
@@ -11964,7 +11929,7 @@
       },
       {
         "id": "pradesh-blue-role-01",
-        "type": "battleLine",
+        "type": "spawnKill",
         "x": 76.25,
         "y": 29.31,
         "parentTankId": "pradesh-blue-unit-01"
@@ -12035,32 +12000,6 @@
         "parentTankId": "pradesh-blue-unit-06"
       },
       {
-        "id": "pradesh-blue-unit-07",
-        "type": "lightTank",
-        "x": 86.53,
-        "y": 55.69
-      },
-      {
-        "id": "pradesh-blue-role-07",
-        "type": "battleLine",
-        "x": 86.53,
-        "y": 55.69,
-        "parentTankId": "pradesh-blue-unit-07"
-      },
-      {
-        "id": "pradesh-blue-unit-08",
-        "type": "mainBattleTank",
-        "x": 51.39,
-        "y": 57.15
-      },
-      {
-        "id": "pradesh-blue-role-08",
-        "type": "battleLine",
-        "x": 51.39,
-        "y": 57.15,
-        "parentTankId": "pradesh-blue-unit-08"
-      },
-      {
         "id": "pradesh-blue-unit-09",
         "type": "mainBattleTank",
         "x": 62.36,
@@ -12081,7 +12020,7 @@
       },
       {
         "id": "pradesh-blue-role-10",
-        "type": "highRiskSpot",
+        "type": "sniper",
         "x": 72.71,
         "y": 58.13,
         "parentTankId": "pradesh-blue-unit-10"
@@ -12107,7 +12046,7 @@
       },
       {
         "id": "pradesh-blue-role-12",
-        "type": "battleLine",
+        "type": "sniper",
         "x": 44.03,
         "y": 73.4,
         "parentTankId": "pradesh-blue-unit-12"
@@ -12138,10 +12077,23 @@
       },
       {
         "id": "pradesh-blue-role-13",
-        "type": "spawnKill",
+        "type": "sniper",
         "x": 64.65,
         "y": 81.74,
         "parentTankId": "pradesh-blue-unit-16"
+      },
+      {
+        "id": "mtgrop6a-6aqstf",
+        "type": "mainBattleTank",
+        "x": 66.58,
+        "y": 26.5
+      },
+      {
+        "id": "mtgrora1-g4ktt8",
+        "type": "spawnKill",
+        "x": 66.58,
+        "y": 26.5,
+        "parentTankId": "mtgrop6a-6aqstf"
       }
     ],
     "Second Battle of El Alamein::domination-1|Blue": [
@@ -12759,7 +12711,8 @@
         "y": 94.03,
         "parentTankId": "second-battle-of-el-alamein-domination-2-blue-unit-19"
       }
-    ]
+    ],
+    "Poland::domination-1|Blue": []
   },
   "annotations": {
     "Campania::domination-1|Red": [
@@ -21969,15 +21922,6 @@
         "endY": 49.24
       },
       {
-        "id": "38p-blue-aim-09",
-        "type": "aimHere",
-        "parentTankId": "38p-blue-mbt-09",
-        "startX": 22.96,
-        "startY": 52.03,
-        "endX": 14.44,
-        "endY": 35.62
-      },
-      {
         "id": "38p-blue-aim-10",
         "type": "aimHere",
         "parentTankId": "38p-blue-mbt-10",
@@ -22023,15 +21967,6 @@
         "endY": 40.35
       },
       {
-        "id": "38p-blue-aim-15",
-        "type": "aimHere",
-        "parentTankId": "38p-blue-mbt-15",
-        "startX": 77.78,
-        "startY": 62.36,
-        "endX": 84.31,
-        "endY": 34.38
-      },
-      {
         "id": "38p-blue-aim-16",
         "type": "aimHere",
         "parentTankId": "38p-blue-mbt-15",
@@ -22048,15 +21983,6 @@
         "startY": 79.44,
         "endX": 69.44,
         "endY": 28.75
-      },
-      {
-        "id": "38p-blue-aim-18",
-        "type": "aimHere",
-        "parentTankId": "38p-blue-mbt-17",
-        "startX": 31.18,
-        "startY": 80.76,
-        "endX": 15,
-        "endY": 35.14
       },
       {
         "id": "38p-blue-aim-19",
@@ -22349,7 +22275,8 @@
             "x": 51.24,
             "y": 57
           }
-        ]
+        ],
+        "dangerRoute": true
       },
       {
         "id": "mtcq895w-eml8tt",
@@ -22399,13 +22326,373 @@
             "y": 53.72
           }
         ]
+      },
+      {
+        "id": "mtgr8up7-csf40t",
+        "type": "aimHere",
+        "parentTankId": "38p-blue-mbt-12",
+        "startX": 61.18,
+        "startY": 53.33,
+        "endX": 69.68,
+        "endY": 39.44
+      },
+      {
+        "id": "mtgr978r-70hnji",
+        "type": "aimHere",
+        "parentTankId": "38p-blue-mbt-13",
+        "startX": 50.42,
+        "startY": 56.81,
+        "endX": 64.81,
+        "endY": 49.02
+      },
+      {
+        "id": "mtgr9syu-nrvcaq",
+        "type": "aimHere",
+        "parentTankId": "38p-blue-mbt-17",
+        "startX": 31.18,
+        "startY": 80.76,
+        "endX": 14.54,
+        "endY": 37.94
+      },
+      {
+        "id": "mtgr9wqv-mi1fq6",
+        "type": "aimHere",
+        "parentTankId": "38p-blue-mbt-09",
+        "startX": 22.96,
+        "startY": 52.03,
+        "endX": 14.8,
+        "endY": 37.41
       }
     ],
     "Ardennes::domination-1|Blue": [],
     "Sun City::domination-1|Red": [],
     "Sun City::domination-1|Blue": [],
-    "Aral Sea::domination-1|Red": [],
-    "Aral Sea::domination-1|Blue": [],
+    "Aral Sea::domination-1|Red": [
+      {
+        "id": "mtgsh394-0632uw",
+        "type": "aimHere",
+        "parentTankId": "aral-sea-red-unit-13",
+        "startX": 21.1,
+        "startY": 62.59,
+        "endX": 20.21,
+        "endY": 34.57
+      },
+      {
+        "id": "mtgshgws-yx1i8m",
+        "type": "aimHere",
+        "parentTankId": "aral-sea-red-unit-03",
+        "startX": 41.11,
+        "startY": 33.68,
+        "endX": 11.52,
+        "endY": 13.56
+      },
+      {
+        "id": "mtgsi4ni-p6tom2",
+        "type": "aimHere",
+        "parentTankId": "aral-sea-red-unit-05",
+        "startX": 51.42,
+        "startY": 37.76,
+        "endX": 31.56,
+        "endY": 35.81
+      },
+      {
+        "id": "mtgsiank-7dxwki",
+        "type": "aimHere",
+        "parentTankId": "aral-sea-red-unit-15",
+        "startX": 53.89,
+        "startY": 72.5,
+        "endX": 76.51,
+        "endY": 16.22
+      },
+      {
+        "id": "mtgsicu8-gj2y5z",
+        "type": "aimHere",
+        "parentTankId": "aral-sea-red-unit-01",
+        "startX": 57.22,
+        "startY": 20,
+        "endX": 88.12,
+        "endY": 10.1
+      },
+      {
+        "id": "mtgsjxh6-dyycdm",
+        "type": "aimHere",
+        "parentTankId": "mtgsjrn0-60jh43",
+        "startX": 26.51,
+        "startY": 37.49,
+        "endX": 10.28,
+        "endY": 14
+      },
+      {
+        "id": "mtgsjz14-81g5sq",
+        "type": "aimHere",
+        "parentTankId": "aral-sea-red-unit-02",
+        "startX": 7.43,
+        "startY": 22.22,
+        "endX": 9.75,
+        "endY": 13.11
+      },
+      {
+        "id": "mtgsmvt8-6dfeiw",
+        "type": "aimHere",
+        "parentTankId": "aral-sea-red-unit-07",
+        "startX": 35.64,
+        "startY": 52.39,
+        "endX": 42.2,
+        "endY": 43.7
+      },
+      {
+        "id": "mtgsn7r4-i0b2in",
+        "type": "aimHere",
+        "parentTankId": "aral-sea-red-unit-14",
+        "startX": 33.07,
+        "startY": 65.51,
+        "endX": 34.22,
+        "endY": 35.01
+      },
+      {
+        "id": "mtgsndq6-i37qdh",
+        "type": "aimHere",
+        "parentTankId": "aral-sea-red-unit-13",
+        "startX": 21.1,
+        "startY": 62.59,
+        "endX": 6.38,
+        "endY": 37.94
+      },
+      {
+        "id": "mtgsobj2-ja7383",
+        "type": "route",
+        "points": [
+          {
+            "x": 12.85,
+            "y": 87.23
+          },
+          {
+            "x": 18.88,
+            "y": 80.76
+          },
+          {
+            "x": 19.86,
+            "y": 75.09
+          },
+          {
+            "x": 21.1,
+            "y": 63.03
+          }
+        ]
+      },
+      {
+        "id": "mtgsohc6-ubx23o",
+        "type": "route",
+        "points": [
+          {
+            "x": 88.83,
+            "y": 88.65
+          },
+          {
+            "x": 77.75,
+            "y": 85.02
+          },
+          {
+            "x": 68.18,
+            "y": 85.9
+          },
+          {
+            "x": 57.98,
+            "y": 81.03
+          },
+          {
+            "x": 53.99,
+            "y": 73.4
+          }
+        ]
+      },
+      {
+        "id": "mtgsomiw-tgujv6",
+        "type": "route",
+        "points": [
+          {
+            "x": 50,
+            "y": 67.99
+          },
+          {
+            "x": 51.42,
+            "y": 58.42
+          },
+          {
+            "x": 51.51,
+            "y": 38.03
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "mtgsp51y-0in601",
+        "type": "route",
+        "points": [
+          {
+            "x": 19.32,
+            "y": 81.47
+          },
+          {
+            "x": 32.62,
+            "y": 78.46
+          },
+          {
+            "x": 33.69,
+            "y": 70.21
+          },
+          {
+            "x": 33.33,
+            "y": 66.13
+          }
+        ]
+      },
+      {
+        "id": "mtgspdvx-ewzrh4",
+        "type": "route",
+        "points": [
+          {
+            "x": 43.09,
+            "y": 42.55
+          },
+          {
+            "x": 41.58,
+            "y": 34.21
+          }
+        ],
+        "dangerRoute": true
+      }
+    ],
+    "Aral Sea::domination-1|Blue": [
+      {
+        "id": "mtgsdnlu-7ylmm4",
+        "type": "aimHere",
+        "parentTankId": "aral-sea-blue-unit-11",
+        "startX": 33.89,
+        "startY": 59.86,
+        "endX": 7,
+        "endY": 84.22
+      },
+      {
+        "id": "mtgsdyc6-fvrglk",
+        "type": "aimHere",
+        "parentTankId": "aral-sea-blue-unit-06",
+        "startX": 33.12,
+        "startY": 36.25,
+        "endX": 33.24,
+        "endY": 60.9
+      },
+      {
+        "id": "mtgse50u-k6zdg4",
+        "type": "aimHere",
+        "parentTankId": "aral-sea-blue-unit-05",
+        "startX": 22.36,
+        "startY": 34.03,
+        "endX": 19.86,
+        "endY": 59.3
+      },
+      {
+        "id": "mtgse7gk-2lqmif",
+        "type": "aimHere",
+        "parentTankId": "aral-sea-blue-unit-07",
+        "startX": 10,
+        "startY": 37.85,
+        "endX": 10.55,
+        "endY": 58.15
+      },
+      {
+        "id": "mtgsegz2-10nclb",
+        "type": "aimHere",
+        "parentTankId": "aral-sea-blue-unit-02",
+        "startX": 56.11,
+        "startY": 21.04,
+        "endX": 70.22,
+        "endY": 81.03
+      },
+      {
+        "id": "mtgsenqy-5yekfj",
+        "type": "aimHere",
+        "parentTankId": "aral-sea-blue-unit-12",
+        "startX": 54.97,
+        "startY": 70.65,
+        "endX": 13.38,
+        "endY": 87.94
+      },
+      {
+        "id": "mtgsfism-i45hkl",
+        "type": "aimHere",
+        "parentTankId": "aral-sea-blue-unit-08",
+        "startX": 41.49,
+        "startY": 43.61,
+        "endX": 35.73,
+        "endY": 59.39
+      },
+      {
+        "id": "mtgsg37o-iqp4be",
+        "type": "route",
+        "points": [
+          {
+            "x": 51.33,
+            "y": 32.71
+          },
+          {
+            "x": 51.51,
+            "y": 50.08
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "mtgsgpik-d8q70h",
+        "type": "aimHere",
+        "parentTankId": "mtgsfqp5-pmg0vi",
+        "startX": 51.33,
+        "startY": 49.64,
+        "endX": 31.29,
+        "endY": 59.93
+      },
+      {
+        "id": "mtgsk7ku-fdjowp",
+        "type": "aimHere",
+        "parentTankId": "aral-sea-blue-unit-12",
+        "startX": 54.97,
+        "startY": 70.65,
+        "endX": 85.11,
+        "endY": 87.76
+      },
+      {
+        "id": "mtgskkak-pualrp",
+        "type": "route",
+        "points": [
+          {
+            "x": 51.6,
+            "y": 50.7
+          },
+          {
+            "x": 51.33,
+            "y": 58.95
+          },
+          {
+            "x": 51.42,
+            "y": 62.41
+          },
+          {
+            "x": 54.61,
+            "y": 70.65
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "mtgsni7u-ns6miz",
+        "type": "aimHere",
+        "parentTankId": "aral-sea-blue-unit-05",
+        "startX": 22.36,
+        "startY": 34.03,
+        "endX": 7.98,
+        "endY": 59.22
+      }
+    ],
     "Iberian Castle::domination-1|Red": [
       {
         "id": "iberian-castle-red-aim-01",
@@ -31092,113 +31379,6 @@
         "endY": 31.18
       },
       {
-        "id": "abandoned-factory-red-aim-02",
-        "type": "aimHere",
-        "parentTankId": "abandoned-factory-red-unit-08",
-        "startX": 68.54,
-        "startY": 58.47,
-        "endX": 62.64,
-        "endY": 37.29
-      },
-      {
-        "id": "abandoned-factory-red-route-01",
-        "type": "route",
-        "points": [
-          {
-            "x": 26.11,
-            "y": 54.97
-          },
-          {
-            "x": 25.97,
-            "y": 57.74
-          },
-          {
-            "x": 25.87,
-            "y": 60.52
-          },
-          {
-            "x": 26.63,
-            "y": 63.16
-          },
-          {
-            "x": 27.38,
-            "y": 65.82
-          },
-          {
-            "x": 27.74,
-            "y": 68.54
-          },
-          {
-            "x": 28.11,
-            "y": 71.26
-          },
-          {
-            "x": 28.51,
-            "y": 74.06
-          },
-          {
-            "x": 28.85,
-            "y": 76.81
-          },
-          {
-            "x": 29.48,
-            "y": 79.48
-          },
-          {
-            "x": 30.63,
-            "y": 81.99
-          },
-          {
-            "x": 31.8,
-            "y": 84.55
-          },
-          {
-            "x": 28.76,
-            "y": 80.07
-          },
-          {
-            "x": 26.36,
-            "y": 78.82
-          },
-          {
-            "x": 23.83,
-            "y": 77.5
-          },
-          {
-            "x": 21.45,
-            "y": 76.25
-          },
-          {
-            "x": 18.93,
-            "y": 74.93
-          },
-          {
-            "x": 16.53,
-            "y": 73.58
-          },
-          {
-            "x": 14.55,
-            "y": 71.62
-          },
-          {
-            "x": 13.33,
-            "y": 69.13
-          },
-          {
-            "x": 12.69,
-            "y": 66.44
-          },
-          {
-            "x": 12.08,
-            "y": 63.72
-          },
-          {
-            "x": 11.81,
-            "y": 62.41
-          }
-        ]
-      },
-      {
         "id": "abandoned-factory-red-route-02",
         "type": "route",
         "points": [
@@ -31247,6 +31427,330 @@
             "y": 62.32
           }
         ]
+      },
+      {
+        "id": "mtgrfv0j-v9jexb",
+        "type": "aimHere",
+        "parentTankId": "abandoned-factory-red-unit-05",
+        "startX": 73.67,
+        "startY": 53.45,
+        "endX": 61.53,
+        "endY": 39
+      },
+      {
+        "id": "mtgrg0jb-krh9m0",
+        "type": "aimHere",
+        "parentTankId": "abandoned-factory-red-unit-08",
+        "startX": 68.54,
+        "startY": 58.47,
+        "endX": 61.62,
+        "endY": 34.39
+      },
+      {
+        "id": "mtgrg8ff-mq8e49",
+        "type": "aimHere",
+        "parentTankId": "abandoned-factory-red-unit-08",
+        "startX": 68.54,
+        "startY": 58.47,
+        "endX": 68.09,
+        "endY": 21.09
+      },
+      {
+        "id": "mtgrgevd-mhr0us",
+        "type": "aimHere",
+        "parentTankId": "abandoned-factory-red-unit-07",
+        "startX": 93.33,
+        "startY": 54.72,
+        "endX": 93.09,
+        "endY": 40.51
+      },
+      {
+        "id": "mtgrglj3-kmrzy6",
+        "type": "aimHere",
+        "parentTankId": "abandoned-factory-red-unit-06",
+        "startX": 89.65,
+        "startY": 53.61,
+        "endX": 83.69,
+        "endY": 46.18
+      },
+      {
+        "id": "mtgrgwb5-ttyswz",
+        "type": "aimHere",
+        "parentTankId": "abandoned-factory-red-unit-02",
+        "startX": 34.58,
+        "startY": 31.46,
+        "endX": 60.02,
+        "endY": 18.25
+      },
+      {
+        "id": "mtgrgyxl-bw4vh0",
+        "type": "aimHere",
+        "parentTankId": "abandoned-factory-red-unit-03",
+        "startX": 46.53,
+        "startY": 35.62,
+        "endX": 60.73,
+        "endY": 9.74
+      },
+      {
+        "id": "mtgrh7sx-qjgmno",
+        "type": "aimHere",
+        "parentTankId": "abandoned-factory-red-unit-01",
+        "startX": 15,
+        "startY": 22.78,
+        "endX": 75.36,
+        "endY": 21.45
+      },
+      {
+        "id": "mtgrhmpz-pc1gyy",
+        "type": "route",
+        "points": [
+          {
+            "x": 26.51,
+            "y": 54.61
+          },
+          {
+            "x": 28.99,
+            "y": 48.22
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "mtgrihq9-ubodhk",
+        "type": "aimHere",
+        "parentTankId": "mtgrid28-1jhie3",
+        "startX": 7.27,
+        "startY": 54.07,
+        "endX": 6.65,
+        "endY": 27.48
+      },
+      {
+        "id": "mtgrj0cb-2yhw19",
+        "type": "aimHere",
+        "parentTankId": "abandoned-factory-red-unit-09",
+        "startX": 10.46,
+        "startY": 57.27,
+        "endX": 24.73,
+        "endY": 33.59
+      },
+      {
+        "id": "mtgrj617-3xzeda",
+        "type": "route",
+        "points": [
+          {
+            "x": 11.52,
+            "y": 62.14
+          },
+          {
+            "x": 7.35,
+            "y": 55.05
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "mtgrjpdp-cu66bm",
+        "type": "route",
+        "points": [
+          {
+            "x": 26.24,
+            "y": 55.05
+          },
+          {
+            "x": 25.88,
+            "y": 62.67
+          },
+          {
+            "x": 27.92,
+            "y": 66.31
+          },
+          {
+            "x": 29.52,
+            "y": 79.43
+          },
+          {
+            "x": 31.65,
+            "y": 83.86
+          }
+        ]
+      },
+      {
+        "id": "mtgrjsxp-nvy6ox",
+        "type": "route",
+        "points": [
+          {
+            "x": 29.52,
+            "y": 82.09
+          },
+          {
+            "x": 23.31,
+            "y": 78.72
+          }
+        ]
+      },
+      {
+        "id": "mtgrjztn-lqunc8",
+        "type": "route",
+        "points": [
+          {
+            "x": 23.23,
+            "y": 78.72
+          },
+          {
+            "x": 14,
+            "y": 72.25
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "mtgrk2k3-uu01fy",
+        "type": "route",
+        "points": [
+          {
+            "x": 13.92,
+            "y": 71.54
+          },
+          {
+            "x": 11.7,
+            "y": 62.76
+          }
+        ]
+      },
+      {
+        "id": "mtgrkmu1-507iir",
+        "type": "route",
+        "points": [
+          {
+            "x": 71.81,
+            "y": 65.69
+          },
+          {
+            "x": 74.38,
+            "y": 59.93
+          },
+          {
+            "x": 75.27,
+            "y": 55.23
+          },
+          {
+            "x": 74.29,
+            "y": 53.9
+          }
+        ]
+      },
+      {
+        "id": "mtgrksit-npwbo5",
+        "type": "route",
+        "points": [
+          {
+            "x": 73.23,
+            "y": 76.33
+          },
+          {
+            "x": 82.45,
+            "y": 68.61
+          },
+          {
+            "x": 90.7,
+            "y": 59.84
+          },
+          {
+            "x": 93.09,
+            "y": 55.49
+          }
+        ]
+      },
+      {
+        "id": "mtgrkyth-1l8j09",
+        "type": "route",
+        "points": [
+          {
+            "x": 84.4,
+            "y": 66.4
+          },
+          {
+            "x": 84.4,
+            "y": 61.52
+          },
+          {
+            "x": 84.58,
+            "y": 59.48
+          },
+          {
+            "x": 88.83,
+            "y": 54.61
+          }
+        ]
+      },
+      {
+        "id": "mtgrl5lx-wcv0ax",
+        "type": "route",
+        "points": [
+          {
+            "x": 69.95,
+            "y": 74.82
+          },
+          {
+            "x": 71.46,
+            "y": 66.13
+          }
+        ]
+      },
+      {
+        "id": "mtgrl8a9-3emq7b",
+        "type": "route",
+        "points": [
+          {
+            "x": 71.1,
+            "y": 66.13
+          },
+          {
+            "x": 68.89,
+            "y": 60.01
+          }
+        ]
+      },
+      {
+        "id": "mtgrlekl-62adsr",
+        "type": "aimHere",
+        "parentTankId": "abandoned-factory-red-unit-10",
+        "startX": 51.04,
+        "startY": 60.56,
+        "endX": 44.5,
+        "endY": 38.11
+      },
+      {
+        "id": "mtgrma3x-t07wbw",
+        "type": "route",
+        "points": [
+          {
+            "x": 8.86,
+            "y": 36.78
+          },
+          {
+            "x": 14.62,
+            "y": 23.22
+          }
+        ]
+      },
+      {
+        "id": "mtgsadoq-idrgad",
+        "type": "aimHere",
+        "parentTankId": "mtgsa9rl-m4glzj",
+        "startX": 77.57,
+        "startY": 44.14,
+        "endX": 76.16,
+        "endY": 15.06
+      },
+      {
+        "id": "mtgsaio0-izagoc",
+        "type": "aimHere",
+        "parentTankId": "mtgsa9rl-m4glzj",
+        "startX": 77.57,
+        "startY": 44.14,
+        "endX": 56.47,
+        "endY": 14.09
       }
     ],
     "Ardennes::conquest-1|Red": [],
@@ -31291,15 +31795,6 @@
         "endY": 57.43
       },
       {
-        "id": "abandoned-factory-blue-aim-05",
-        "type": "aimHere",
-        "parentTankId": "abandoned-factory-blue-unit-10",
-        "startX": 10,
-        "startY": 73.19,
-        "endX": 22.83,
-        "endY": 78.45
-      },
-      {
         "id": "abandoned-factory-blue-route-01",
         "type": "route",
         "points": [
@@ -31342,92 +31837,6 @@
         ]
       },
       {
-        "id": "abandoned-factory-blue-route-02",
-        "type": "route",
-        "points": [
-          {
-            "x": 31.42,
-            "y": 10.49
-          },
-          {
-            "x": 28.8,
-            "y": 11.48
-          },
-          {
-            "x": 26.22,
-            "y": 12.47
-          },
-          {
-            "x": 23.66,
-            "y": 13.45
-          },
-          {
-            "x": 21.04,
-            "y": 14.44
-          },
-          {
-            "x": 18.42,
-            "y": 15.44
-          },
-          {
-            "x": 15.86,
-            "y": 16.41
-          },
-          {
-            "x": 13.39,
-            "y": 17.74
-          },
-          {
-            "x": 11.42,
-            "y": 19.65
-          },
-          {
-            "x": 10.04,
-            "y": 22.07
-          },
-          {
-            "x": 9.07,
-            "y": 24.68
-          },
-          {
-            "x": 8.03,
-            "y": 27.05
-          },
-          {
-            "x": 11.46,
-            "y": 27.53
-          },
-          {
-            "x": 11.28,
-            "y": 24.79
-          },
-          {
-            "x": 11.01,
-            "y": 22.05
-          },
-          {
-            "x": 11.46,
-            "y": 28.92
-          },
-          {
-            "x": 11.18,
-            "y": 31.7
-          },
-          {
-            "x": 10.63,
-            "y": 34.41
-          },
-          {
-            "x": 10.06,
-            "y": 37.13
-          },
-          {
-            "x": 9.76,
-            "y": 38.51
-          }
-        ]
-      },
-      {
         "id": "abandoned-factory-blue-route-03",
         "type": "route",
         "points": [
@@ -31450,6 +31859,206 @@
           {
             "x": 50.69,
             "y": 43.85
+          }
+        ]
+      },
+      {
+        "id": "mtgrb787-xtx2ze",
+        "type": "aimHere",
+        "parentTankId": "abandoned-factory-blue-unit-08",
+        "startX": 81.67,
+        "startY": 57.5,
+        "endX": 72.17,
+        "endY": 77.66
+      },
+      {
+        "id": "mtgrbjkp-e04685",
+        "type": "aimHere",
+        "parentTankId": "abandoned-factory-blue-unit-03",
+        "startX": 93.54,
+        "startY": 41.6,
+        "endX": 91.32,
+        "endY": 55.58
+      },
+      {
+        "id": "mtgrbq9p-l3psft",
+        "type": "aimHere",
+        "parentTankId": "abandoned-factory-blue-unit-04",
+        "startX": 25.07,
+        "startY": 45.97,
+        "endX": 25,
+        "endY": 70.74
+      },
+      {
+        "id": "mtgrc5m7-x8keuf",
+        "type": "route",
+        "points": [
+          {
+            "x": 33.69,
+            "y": 10.36
+          },
+          {
+            "x": 24.11,
+            "y": 13.29
+          }
+        ]
+      },
+      {
+        "id": "mtgrc909-jd31nz",
+        "type": "route",
+        "points": [
+          {
+            "x": 24.11,
+            "y": 13.56
+          },
+          {
+            "x": 12.59,
+            "y": 17.01
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "mtgrced9-iz9lpm",
+        "type": "route",
+        "points": [
+          {
+            "x": 12.76,
+            "y": 17.01
+          },
+          {
+            "x": 9.75,
+            "y": 21.98
+          },
+          {
+            "x": 7.89,
+            "y": 28.27
+          }
+        ]
+      },
+      {
+        "id": "mtgrcjxf-ldadaa",
+        "type": "route",
+        "points": [
+          {
+            "x": 10.9,
+            "y": 21.62
+          },
+          {
+            "x": 11.97,
+            "y": 30.84
+          },
+          {
+            "x": 9.66,
+            "y": 40.42
+          }
+        ]
+      },
+      {
+        "id": "mtgrdb3n-obmqdy",
+        "type": "aimHere",
+        "parentTankId": "abandoned-factory-blue-unit-10",
+        "startX": 10,
+        "startY": 73.19,
+        "endX": 32.18,
+        "endY": 82.98
+      },
+      {
+        "id": "mtgrdkz7-s0oiou",
+        "type": "aimHere",
+        "parentTankId": "mtgrdf45-jijep2",
+        "startX": 30.94,
+        "startY": 69.68,
+        "endX": 80.77,
+        "endY": 72.78
+      },
+      {
+        "id": "mtgrdy69-81ksdp",
+        "type": "aimHere",
+        "parentTankId": "mtgrds78-un3x13",
+        "startX": 35.99,
+        "startY": 63.03,
+        "endX": 6.56,
+        "endY": 68.44
+      },
+      {
+        "id": "mtgreul9-ejhxmw",
+        "type": "aimHere",
+        "parentTankId": "abandoned-factory-blue-unit-07",
+        "startX": 80.14,
+        "startY": 47.5,
+        "endX": 90.43,
+        "endY": 52.65
+      },
+      {
+        "id": "mtgrf62d-ifewjm",
+        "type": "aimHere",
+        "parentTankId": "abandoned-factory-blue-unit-06",
+        "startX": 73.12,
+        "startY": 46.88,
+        "endX": 47.96,
+        "endY": 52.39
+      },
+      {
+        "id": "mtgs8op8-46okbf",
+        "type": "aimHere",
+        "parentTankId": "mtgs8i8b-0b5zvr",
+        "startX": 57.71,
+        "startY": 58.33,
+        "endX": 43.88,
+        "endY": 66.93
+      },
+      {
+        "id": "mtgs939g-y9rr76",
+        "type": "route",
+        "points": [
+          {
+            "x": 24.91,
+            "y": 46.54
+          },
+          {
+            "x": 28.72,
+            "y": 37.14
+          },
+          {
+            "x": 28.99,
+            "y": 30.05
+          },
+          {
+            "x": 29.25,
+            "y": 21.18
+          },
+          {
+            "x": 29.25,
+            "y": 12.31
+          }
+        ]
+      },
+      {
+        "id": "mtgs989s-j4vv32",
+        "type": "route",
+        "points": [
+          {
+            "x": 48.76,
+            "y": 32.97
+          },
+          {
+            "x": 58.42,
+            "y": 12.05
+          }
+        ]
+      },
+      {
+        "id": "mtgs9atw-ndagqv",
+        "type": "route",
+        "points": [
+          {
+            "x": 64.1,
+            "y": 11.52
+          },
+          {
+            "x": 76.86,
+            "y": 24.99
           }
         ]
       }
@@ -34201,58 +34810,13 @@
     ],
     "Pradesh::domination-1|Red": [
       {
-        "id": "pradesh-red-aim-01",
-        "type": "aimHere",
-        "parentTankId": "pradesh-red-unit-02",
-        "startX": 48.06,
-        "startY": 8.96,
-        "endX": 46.7,
-        "endY": 13.41
-      },
-      {
-        "id": "pradesh-red-aim-02",
-        "type": "aimHere",
-        "parentTankId": "pradesh-red-unit-04",
-        "startX": 64.03,
-        "startY": 20.49,
-        "endX": 54.22,
-        "endY": 37.55
-      },
-      {
-        "id": "pradesh-red-aim-03",
-        "type": "aimHere",
-        "parentTankId": "pradesh-red-unit-14",
-        "startX": 78.61,
-        "startY": 53.4,
-        "endX": 91.96,
-        "endY": 62.57
-      },
-      {
         "id": "pradesh-red-aim-04",
         "type": "aimHere",
         "parentTankId": "pradesh-red-unit-13",
-        "startX": 82.22,
-        "startY": 47.08,
+        "startX": 82.45,
+        "startY": 46.98,
         "endX": 85.11,
         "endY": 56.47
-      },
-      {
-        "id": "pradesh-red-aim-05",
-        "type": "aimHere",
-        "parentTankId": "pradesh-red-unit-12",
-        "startX": 22.01,
-        "startY": 47.08,
-        "endX": 27.92,
-        "endY": 65.39
-      },
-      {
-        "id": "pradesh-red-aim-06",
-        "type": "aimHere",
-        "parentTankId": "pradesh-red-unit-10",
-        "startX": 73.75,
-        "startY": 41.88,
-        "endX": 78.61,
-        "endY": 47.7
       },
       {
         "id": "pradesh-red-aim-07",
@@ -34264,33 +34828,6 @@
         "endY": 85.84
       },
       {
-        "id": "pradesh-red-aim-08",
-        "type": "aimHere",
-        "parentTankId": "pradesh-red-unit-12",
-        "startX": 22.01,
-        "startY": 47.08,
-        "endX": 25.22,
-        "endY": 58.78
-      },
-      {
-        "id": "pradesh-red-aim-09",
-        "type": "aimHere",
-        "parentTankId": "pradesh-red-unit-12",
-        "startX": 22.01,
-        "startY": 47.08,
-        "endX": 19.46,
-        "endY": 39.98
-      },
-      {
-        "id": "pradesh-red-aim-10",
-        "type": "aimHere",
-        "parentTankId": "pradesh-red-unit-15",
-        "startX": 47.92,
-        "startY": 76.53,
-        "endX": 54.96,
-        "endY": 79.61
-      },
-      {
         "id": "pradesh-red-aim-11",
         "type": "aimHere",
         "parentTankId": "pradesh-red-unit-14",
@@ -34298,6 +34835,324 @@
         "startY": 53.4,
         "endX": 74.33,
         "endY": 72.5
+      },
+      {
+        "id": "mtgrxwu0-ghd66j",
+        "type": "route",
+        "points": [
+          {
+            "x": 82.54,
+            "y": 47.25
+          },
+          {
+            "x": 83.87,
+            "y": 45.47
+          },
+          {
+            "x": 82.01,
+            "y": 44.59
+          },
+          {
+            "x": 81.56,
+            "y": 43.79
+          },
+          {
+            "x": 83.07,
+            "y": 42.28
+          },
+          {
+            "x": 81.21,
+            "y": 41.84
+          },
+          {
+            "x": 81.21,
+            "y": 40.86
+          },
+          {
+            "x": 78.73,
+            "y": 34.92
+          },
+          {
+            "x": 77.4,
+            "y": 31.29
+          },
+          {
+            "x": 75,
+            "y": 28.54
+          },
+          {
+            "x": 72.25,
+            "y": 26.5
+          },
+          {
+            "x": 70.04,
+            "y": 25.79
+          },
+          {
+            "x": 67.82,
+            "y": 24.73
+          },
+          {
+            "x": 66.14,
+            "y": 23.57
+          },
+          {
+            "x": 64.63,
+            "y": 21.89
+          },
+          {
+            "x": 64.72,
+            "y": 19.67
+          },
+          {
+            "x": 64.72,
+            "y": 17.9
+          },
+          {
+            "x": 63.57,
+            "y": 15.95
+          },
+          {
+            "x": 63.03,
+            "y": 14.97
+          }
+        ]
+      },
+      {
+        "id": "mtgryvza-k17avu",
+        "type": "route",
+        "points": [
+          {
+            "x": 47.87,
+            "y": 76.5
+          },
+          {
+            "x": 42.64,
+            "y": 71.45
+          },
+          {
+            "x": 40.16,
+            "y": 70.39
+          },
+          {
+            "x": 31.29,
+            "y": 68.53
+          },
+          {
+            "x": 27.21,
+            "y": 69.32
+          },
+          {
+            "x": 27.21,
+            "y": 67.73
+          },
+          {
+            "x": 27.75,
+            "y": 66.84
+          },
+          {
+            "x": 26.42,
+            "y": 64
+          },
+          {
+            "x": 25.18,
+            "y": 58.51
+          },
+          {
+            "x": 24.02,
+            "y": 50.97
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "mtgrz7zm-22t7kv",
+        "type": "route",
+        "points": [
+          {
+            "x": 37.41,
+            "y": 70.48
+          },
+          {
+            "x": 38.83,
+            "y": 73.58
+          },
+          {
+            "x": 39.36,
+            "y": 77.3
+          },
+          {
+            "x": 38.39,
+            "y": 80.49
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "mtgrzi72-5ra1up",
+        "type": "aimHere",
+        "parentTankId": "pradesh-red-unit-15",
+        "startX": 47.92,
+        "startY": 76.53,
+        "endX": 64.36,
+        "endY": 83.69
+      },
+      {
+        "id": "mtgrztsy-q9nqic",
+        "type": "aimHere",
+        "parentTankId": "pradesh-red-unit-09",
+        "startX": 22.29,
+        "startY": 40.42,
+        "endX": 72.25,
+        "endY": 73.49
+      },
+      {
+        "id": "mtgrzzds-a3bo65",
+        "type": "aimHere",
+        "parentTankId": "pradesh-red-unit-12",
+        "startX": 22.01,
+        "startY": 47.08,
+        "endX": 25.8,
+        "endY": 57.27
+      },
+      {
+        "id": "mtgs02lu-zk4ezp",
+        "type": "aimHere",
+        "parentTankId": "pradesh-red-unit-08",
+        "startX": 19.03,
+        "startY": 38.47,
+        "endX": 30.76,
+        "endY": 65.6
+      },
+      {
+        "id": "mtgs0bjb-5f4em9",
+        "type": "aimHere",
+        "parentTankId": "pradesh-red-unit-09",
+        "startX": 22.29,
+        "startY": 40.42,
+        "endX": 63.92,
+        "endY": 82.98
+      },
+      {
+        "id": "mtgs0k0a-5vmnxp",
+        "type": "aimHere",
+        "parentTankId": "pradesh-red-unit-11",
+        "startX": 54.03,
+        "startY": 43.61,
+        "endX": 52.57,
+        "endY": 48.58
+      },
+      {
+        "id": "mtgs0nqc-112kxw",
+        "type": "aimHere",
+        "parentTankId": "pradesh-red-unit-07",
+        "startX": 68.33,
+        "startY": 26.6,
+        "endX": 31.56,
+        "endY": 65.24
+      },
+      {
+        "id": "mtgs0vlq-to0q6n",
+        "type": "aimHere",
+        "parentTankId": "pradesh-red-unit-05",
+        "startX": 31.32,
+        "startY": 21.53,
+        "endX": 31.38,
+        "endY": 64.62
+      },
+      {
+        "id": "mtgs0z3e-017bqn",
+        "type": "aimHere",
+        "parentTankId": "pradesh-red-unit-02",
+        "startX": 48.06,
+        "startY": 8.96,
+        "endX": 31.65,
+        "endY": 64.8
+      },
+      {
+        "id": "mtgs139k-11gi77",
+        "type": "aimHere",
+        "parentTankId": "pradesh-red-unit-04",
+        "startX": 64.03,
+        "startY": 20.49,
+        "endX": 31.56,
+        "endY": 64.8
+      },
+      {
+        "id": "mtgs15yo-6kc4u4",
+        "type": "aimHere",
+        "parentTankId": "pradesh-red-unit-10",
+        "startX": 73.75,
+        "startY": 41.88,
+        "endX": 32.53,
+        "endY": 65.24
+      },
+      {
+        "id": "mtgs1jt4-ag1xa7",
+        "type": "aimHere",
+        "parentTankId": "pradesh-red-unit-06",
+        "startX": 28.61,
+        "startY": 25.9,
+        "endX": 92.91,
+        "endY": 64.09
+      },
+      {
+        "id": "mtgs26zw-q3j13l",
+        "type": "route",
+        "points": [
+          {
+            "x": 53.9,
+            "y": 43.17
+          },
+          {
+            "x": 57.45,
+            "y": 30.67
+          },
+          {
+            "x": 60.02,
+            "y": 21.09
+          },
+          {
+            "x": 63.57,
+            "y": 16.04
+          }
+        ]
+      },
+      {
+        "id": "mtgs2e9o-gumert",
+        "type": "aimHere",
+        "parentTankId": "pradesh-red-unit-05",
+        "startX": 31.32,
+        "startY": 21.53,
+        "endX": 64.9,
+        "endY": 82.89
+      },
+      {
+        "id": "mtgs2j40-1qsrhb",
+        "type": "aimHere",
+        "parentTankId": "pradesh-red-unit-06",
+        "startX": 28.61,
+        "startY": 25.9,
+        "endX": 78.02,
+        "endY": 50.53
+      },
+      {
+        "id": "mtgs2oig-c45q86",
+        "type": "aimHere",
+        "parentTankId": "pradesh-red-unit-06",
+        "startX": 28.61,
+        "startY": 25.9,
+        "endX": 63.83,
+        "endY": 82.62
+      },
+      {
+        "id": "mtgs495k-qx96k8",
+        "type": "aimHere",
+        "parentTankId": "pradesh-red-unit-10",
+        "startX": 73.75,
+        "startY": 41.88,
+        "endX": 86.97,
+        "endY": 57.8
       }
     ],
     "Second Battle of El Alamein::domination-1|Red": [
@@ -34641,6 +35496,211 @@
         "startY": 52.99,
         "endX": 82.62,
         "endY": 46.39
+      },
+      {
+        "id": "mtgrot81-dul3zo",
+        "type": "aimHere",
+        "parentTankId": "mtgrop6a-6aqstf",
+        "startX": 66.58,
+        "startY": 26.5,
+        "endX": 47.7,
+        "endY": 6.37
+      },
+      {
+        "id": "mtgrove5-mv5c62",
+        "type": "aimHere",
+        "parentTankId": "mtgrop6a-6aqstf",
+        "startX": 66.58,
+        "startY": 26.5,
+        "endX": 42.11,
+        "endY": 13.64
+      },
+      {
+        "id": "mtgrp1a9-a2a9ar",
+        "type": "aimHere",
+        "parentTankId": "pradesh-blue-unit-11",
+        "startX": 31.32,
+        "startY": 64.79,
+        "endX": 30.94,
+        "endY": 21.8
+      },
+      {
+        "id": "mtgrq1gf-pc1y43",
+        "type": "aimHere",
+        "parentTankId": "pradesh-blue-unit-16",
+        "startX": 64.65,
+        "startY": 81.74,
+        "endX": 41.76,
+        "endY": 13.47
+      },
+      {
+        "id": "mtgrq8f1-8mc158",
+        "type": "aimHere",
+        "parentTankId": "pradesh-blue-unit-03",
+        "startX": 24.03,
+        "startY": 47.71,
+        "endX": 65.43,
+        "endY": 22.69
+      },
+      {
+        "id": "mtgrqmu3-u21g4q",
+        "type": "aimHere",
+        "parentTankId": "pradesh-blue-unit-09",
+        "startX": 62.36,
+        "startY": 57.22,
+        "endX": 71.55,
+        "endY": 44.05
+      },
+      {
+        "id": "mtgrreca-mmcfti",
+        "type": "aimHere",
+        "parentTankId": "pradesh-blue-unit-05",
+        "startX": 25.21,
+        "startY": 51.74,
+        "endX": 20.3,
+        "endY": 45.74
+      },
+      {
+        "id": "mtgrrjqr-3njjmm",
+        "type": "aimHere",
+        "parentTankId": "pradesh-blue-unit-04",
+        "startX": 29.44,
+        "startY": 48.75,
+        "endX": 35.11,
+        "endY": 51.06
+      },
+      {
+        "id": "mtgrrudv-fk1m3g",
+        "type": "aimHere",
+        "parentTankId": "pradesh-blue-unit-02",
+        "startX": 23.26,
+        "startY": 42.29,
+        "endX": 63.12,
+        "endY": 15.95
+      },
+      {
+        "id": "mtgrs4f8-36gt2c",
+        "type": "aimHere",
+        "parentTankId": "pradesh-blue-unit-11",
+        "startX": 31.32,
+        "startY": 64.79,
+        "endX": 47.07,
+        "endY": 8.5
+      },
+      {
+        "id": "mtgrs9r9-gumqe0",
+        "type": "aimHere",
+        "parentTankId": "pradesh-blue-unit-11",
+        "startX": 31.32,
+        "startY": 64.79,
+        "endX": 74.21,
+        "endY": 41.93
+      },
+      {
+        "id": "mtgrsd8d-38u19h",
+        "type": "aimHere",
+        "parentTankId": "pradesh-blue-unit-11",
+        "startX": 31.32,
+        "startY": 64.79,
+        "endX": 94.24,
+        "endY": 38.2
+      },
+      {
+        "id": "mtgrsi3p-g2g530",
+        "type": "aimHere",
+        "parentTankId": "pradesh-blue-unit-10",
+        "startX": 72.71,
+        "startY": 58.13,
+        "endX": 48.49,
+        "endY": 8.68
+      },
+      {
+        "id": "mtgrstku-s8dzdk",
+        "type": "aimHere",
+        "parentTankId": "pradesh-blue-unit-12",
+        "startX": 44.03,
+        "startY": 73.4,
+        "endX": 31.2,
+        "endY": 21.62
+      },
+      {
+        "id": "mtgs4o6q-08xdyn",
+        "type": "route",
+        "points": [
+          {
+            "x": 67.11,
+            "y": 27.21
+          },
+          {
+            "x": 70.13,
+            "y": 27.83
+          },
+          {
+            "x": 69.95,
+            "y": 35.63
+          },
+          {
+            "x": 70.48,
+            "y": 42.64
+          },
+          {
+            "x": 73.23,
+            "y": 54.52
+          },
+          {
+            "x": 74.74,
+            "y": 60.9
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "mtgs4y3a-dswsgh",
+        "type": "route",
+        "points": [
+          {
+            "x": 26.06,
+            "y": 73.05
+          },
+          {
+            "x": 26.86,
+            "y": 70.48
+          },
+          {
+            "x": 29.08,
+            "y": 68.08
+          },
+          {
+            "x": 31.2,
+            "y": 67.02
+          },
+          {
+            "x": 31.29,
+            "y": 65.6
+          }
+        ]
+      },
+      {
+        "id": "mtgs58ti-t8mbvd",
+        "type": "route",
+        "points": [
+          {
+            "x": 64.54,
+            "y": 80.49
+          },
+          {
+            "x": 63.03,
+            "y": 72.07
+          },
+          {
+            "x": 62.77,
+            "y": 60.01
+          },
+          {
+            "x": 62.59,
+            "y": 58.15
+          }
+        ]
       }
     ],
     "Second Battle of El Alamein::domination-1|Blue": [
@@ -36428,8 +37488,9 @@
         ],
         "dangerRoute": true
       }
-    ]
+    ],
+    "Poland::domination-1|Blue": []
   },
-  "updatedAt": "2026-08-31T03:40:19.798Z",
-  "exportedAt": "2026-08-31T03:40:29.804Z"
+  "updatedAt": "2026-08-31T05:26:13.992Z",
+  "exportedAt": "2026-08-31T05:38:24.351Z"
 }
