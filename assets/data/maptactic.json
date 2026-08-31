@@ -3,9 +3,9 @@
   "mapUpdated": {
     "38th Parallel": "2026-08-25",
     "Abandoned Factory": "2026-08-30",
-    "Abandoned Town": "2026-08-25",
+    "Abandoned Town": "2026-08-31",
     "Advance to the Rhine": "2026-08-25",
-    "Alaska": "2026-08-25",
+    "Alaska": "2026-08-31",
     "American Desert": "2026-08-25",
     "Aral Sea": "2026-08-25",
     "Arctic Pier": "2026-08-25",
@@ -24,7 +24,7 @@
     "Fields of Normandy": "2026-08-18",
     "Fields of Poland": "2026-08-17",
     "Finland": "2026-08-16",
-    "Fire Arc": "2026-08-16",
+    "Fire Arc": "2026-08-31",
     "Flanders": "2026-08-30",
     "Frozen Pass": "2026-08-25",
     "Fulda": "2026-08-18",
@@ -1067,7 +1067,7 @@
       },
       {
         "id": "mt8dmvu0-9xwgek",
-        "type": "spawnKill",
+        "type": "highRiskSpot",
         "x": 27.21,
         "y": 69.59,
         "parentTankId": "mt8dmu5h-04y1a5"
@@ -1110,6 +1110,19 @@
         "x": 44.06,
         "y": 93.53,
         "parentTankId": "mt8dos6s-hezrxr"
+      },
+      {
+        "id": "mtgocpxh-t68nfs",
+        "type": "mainBattleTank",
+        "x": 23.67,
+        "y": 46.8
+      },
+      {
+        "id": "mtgocr6h-imbmfv",
+        "type": "spawnKill",
+        "x": 23.67,
+        "y": 46.8,
+        "parentTankId": "mtgocpxh-t68nfs"
       }
     ],
     "Advance to the Rhine::domination-1|Red": [],
@@ -1421,7 +1434,7 @@
       },
       {
         "id": "msz931ku-z2slrb",
-        "type": "sniper",
+        "type": "battleLine",
         "x": 31.04,
         "y": 44.07,
         "parentTankId": "msz92zei-efzyvj"
@@ -9938,7 +9951,15 @@
     "Battle of Hürtgen Forest::domination-1|Red": [],
     "Eastern Europe::domination-1|Red": [],
     "Middle East::domination-1|Red": [],
-    "Middle East::domination-1|Blue": []
+    "Middle East::domination-1|Blue": [],
+    "Advance to the Rhine::domination-1|Blue": [],
+    "Ash River::domination-1|Blue": [],
+    "Berlin::domination-1|Blue": [],
+    "Breslau::domination-1|Blue": [],
+    "Carpathians::domination-1|Blue": [],
+    "Eastern Europe::domination-1|Blue": [],
+    "Fields of Normandy::domination-1|Blue": [],
+    "Fields of Poland::domination-1|Blue": []
   },
   "annotations": {
     "Campania::domination-1|Red": [
@@ -11466,15 +11487,6 @@
         "endY": 73.84
       },
       {
-        "id": "mt8dmyzk-h4z80s",
-        "type": "aimHere",
-        "parentTankId": "mt8dmu5h-04y1a5",
-        "startX": 27.21,
-        "startY": 69.59,
-        "endX": 8.42,
-        "endY": 32.88
-      },
-      {
         "id": "mt8dn27s-ymdxdh",
         "type": "aimHere",
         "parentTankId": "mt8dmhks-7exoq8",
@@ -11509,6 +11521,33 @@
         "startY": 93.53,
         "endX": 41.84,
         "endY": 45.12
+      },
+      {
+        "id": "mtgocbrh-rh55o0",
+        "type": "aimHere",
+        "parentTankId": "mt8dmu5h-04y1a5",
+        "startX": 27.21,
+        "startY": 69.59,
+        "endX": 38.21,
+        "endY": 60.1
+      },
+      {
+        "id": "mtgocfqq-m76g1h",
+        "type": "aimHere",
+        "parentTankId": "mt8dmu5h-04y1a5",
+        "startX": 27.21,
+        "startY": 69.59,
+        "endX": 8.86,
+        "endY": 37.67
+      },
+      {
+        "id": "mtgoct6z-bgejyc",
+        "type": "aimHere",
+        "parentTankId": "mtgocpxh-t68nfs",
+        "startX": 23.67,
+        "startY": 46.8,
+        "endX": 10.28,
+        "endY": 32.17
       }
     ],
     "Advance to the Rhine::domination-1|Red": [],
@@ -35250,90 +35289,6 @@
         ]
       },
       {
-        "id": "fire-arc-red-route-02",
-        "type": "route",
-        "points": [
-          {
-            "x": 87.11,
-            "y": 13.71
-          },
-          {
-            "x": 87.45,
-            "y": 11.24
-          },
-          {
-            "x": 87.98,
-            "y": 13.76
-          },
-          {
-            "x": 88.38,
-            "y": 11.13
-          },
-          {
-            "x": 88.36,
-            "y": 8.44
-          },
-          {
-            "x": 88.92,
-            "y": 5.77
-          },
-          {
-            "x": 89.06,
-            "y": 8.3
-          },
-          {
-            "x": 89.13,
-            "y": 11.01
-          },
-          {
-            "x": 89.78,
-            "y": 8.37
-          },
-          {
-            "x": 86.95,
-            "y": 8.41
-          },
-          {
-            "x": 87.32,
-            "y": 5.67
-          },
-          {
-            "x": 88.3,
-            "y": 2.95
-          },
-          {
-            "x": 88.08,
-            "y": 5.74
-          },
-          {
-            "x": 88.85,
-            "y": 3.06
-          }
-        ]
-      },
-      {
-        "id": "fire-arc-red-route-03",
-        "type": "route",
-        "points": [
-          {
-            "x": 89.91,
-            "y": 13.76
-          },
-          {
-            "x": 90.36,
-            "y": 11.15
-          },
-          {
-            "x": 90.72,
-            "y": 8.43
-          },
-          {
-            "x": 91.08,
-            "y": 11.01
-          }
-        ]
-      },
-      {
         "id": "fire-arc-red-route-04",
         "type": "route",
         "points": [
@@ -35414,200 +35369,6 @@
           {
             "x": 41.32,
             "y": 38.72
-          }
-        ]
-      },
-      {
-        "id": "fire-arc-red-route-06",
-        "type": "route",
-        "points": [
-          {
-            "x": 80.24,
-            "y": 5.62
-          },
-          {
-            "x": 79.98,
-            "y": 3.05
-          },
-          {
-            "x": 79.83,
-            "y": 5.62
-          },
-          {
-            "x": 79.34,
-            "y": 2.85
-          },
-          {
-            "x": 78.69,
-            "y": 5.65
-          },
-          {
-            "x": 78.81,
-            "y": 2.9
-          },
-          {
-            "x": 79.41,
-            "y": 5.83
-          },
-          {
-            "x": 78.25,
-            "y": 2.91
-          }
-        ]
-      },
-      {
-        "id": "fire-arc-red-route-07",
-        "type": "route",
-        "points": [
-          {
-            "x": 77.51,
-            "y": 3.11
-          },
-          {
-            "x": 77.04,
-            "y": 5.78
-          },
-          {
-            "x": 76.88,
-            "y": 8.54
-          },
-          {
-            "x": 76.39,
-            "y": 10.85
-          },
-          {
-            "x": 76.17,
-            "y": 8.59
-          }
-        ]
-      },
-      {
-        "id": "fire-arc-red-route-08",
-        "type": "route",
-        "points": [
-          {
-            "x": 75.05,
-            "y": 3.05
-          },
-          {
-            "x": 74.81,
-            "y": 5.88
-          },
-          {
-            "x": 74.55,
-            "y": 8.61
-          },
-          {
-            "x": 73.85,
-            "y": 11.04
-          },
-          {
-            "x": 73.73,
-            "y": 8.54
-          },
-          {
-            "x": 73,
-            "y": 10.92
-          },
-          {
-            "x": 72.85,
-            "y": 8.42
-          },
-          {
-            "x": 72.85,
-            "y": 5.65
-          },
-          {
-            "x": 72.66,
-            "y": 2.98
-          },
-          {
-            "x": 73.76,
-            "y": 5.87
-          }
-        ]
-      },
-      {
-        "id": "fire-arc-red-route-09",
-        "type": "route",
-        "points": [
-          {
-            "x": 84.41,
-            "y": 13.61
-          },
-          {
-            "x": 84.3,
-            "y": 10.92
-          },
-          {
-            "x": 84.26,
-            "y": 8.2
-          },
-          {
-            "x": 84.33,
-            "y": 5.62
-          },
-          {
-            "x": 85.41,
-            "y": 8.41
-          },
-          {
-            "x": 86.42,
-            "y": 11.04
-          },
-          {
-            "x": 86.19,
-            "y": 8.32
-          },
-          {
-            "x": 86.31,
-            "y": 5.61
-          },
-          {
-            "x": 85.95,
-            "y": 3.16
-          },
-          {
-            "x": 85.52,
-            "y": 5.77
-          },
-          {
-            "x": 85.24,
-            "y": 3.06
-          },
-          {
-            "x": 85.51,
-            "y": 11.17
-          },
-          {
-            "x": 85.62,
-            "y": 13.63
-          }
-        ]
-      },
-      {
-        "id": "fire-arc-red-route-10",
-        "type": "route",
-        "points": [
-          {
-            "x": 93.8,
-            "y": 5.76
-          },
-          {
-            "x": 94.09,
-            "y": 2.91
-          },
-          {
-            "x": 94.76,
-            "y": 5.71
-          },
-          {
-            "x": 91.13,
-            "y": 5.71
-          },
-          {
-            "x": 89.86,
-            "y": 5.76
           }
         ]
       },
@@ -35876,15 +35637,6 @@
         "endY": 36.25
       },
       {
-        "id": "fire-arc-blue-aim-05",
-        "type": "aimHere",
-        "parentTankId": "fire-arc-blue-unit-15",
-        "startX": 70.62,
-        "startY": 97.01,
-        "endX": 55.07,
-        "endY": 99.17
-      },
-      {
         "id": "fire-arc-blue-aim-06",
         "type": "aimHere",
         "parentTankId": "fire-arc-blue-unit-04",
@@ -35963,252 +35715,6 @@
         ]
       },
       {
-        "id": "fire-arc-blue-route-02",
-        "type": "route",
-        "points": [
-          {
-            "x": 87.11,
-            "y": 13.71
-          },
-          {
-            "x": 87.45,
-            "y": 11.24
-          },
-          {
-            "x": 87.98,
-            "y": 13.76
-          },
-          {
-            "x": 88.38,
-            "y": 11.13
-          },
-          {
-            "x": 88.36,
-            "y": 8.44
-          },
-          {
-            "x": 88.92,
-            "y": 5.77
-          },
-          {
-            "x": 89.06,
-            "y": 8.3
-          },
-          {
-            "x": 89.13,
-            "y": 11.01
-          },
-          {
-            "x": 89.78,
-            "y": 8.37
-          },
-          {
-            "x": 86.95,
-            "y": 8.41
-          },
-          {
-            "x": 87.32,
-            "y": 5.67
-          },
-          {
-            "x": 88.3,
-            "y": 2.95
-          },
-          {
-            "x": 88.08,
-            "y": 5.74
-          },
-          {
-            "x": 88.85,
-            "y": 3.06
-          }
-        ]
-      },
-      {
-        "id": "fire-arc-blue-route-03",
-        "type": "route",
-        "points": [
-          {
-            "x": 58.75,
-            "y": 46.7
-          },
-          {
-            "x": 61.34,
-            "y": 45.69
-          },
-          {
-            "x": 63.66,
-            "y": 44.17
-          },
-          {
-            "x": 64.83,
-            "y": 43.47
-          }
-        ]
-      },
-      {
-        "id": "fire-arc-blue-route-04",
-        "type": "route",
-        "points": [
-          {
-            "x": 90.72,
-            "y": 8.43
-          },
-          {
-            "x": 90.36,
-            "y": 11.15
-          },
-          {
-            "x": 89.91,
-            "y": 13.76
-          },
-          {
-            "x": 91.08,
-            "y": 11.01
-          }
-        ]
-      },
-      {
-        "id": "fire-arc-blue-route-05",
-        "type": "route",
-        "points": [
-          {
-            "x": 58.63,
-            "y": 85.06
-          },
-          {
-            "x": 56.42,
-            "y": 86.78
-          },
-          {
-            "x": 54.12,
-            "y": 88.33
-          },
-          {
-            "x": 51.7,
-            "y": 89.72
-          },
-          {
-            "x": 49.16,
-            "y": 90.8
-          },
-          {
-            "x": 47.79,
-            "y": 91.13
-          }
-        ]
-      },
-      {
-        "id": "fire-arc-blue-route-06",
-        "type": "route",
-        "points": [
-          {
-            "x": 78.25,
-            "y": 2.91
-          },
-          {
-            "x": 78.69,
-            "y": 5.65
-          },
-          {
-            "x": 78.81,
-            "y": 2.9
-          },
-          {
-            "x": 79.41,
-            "y": 5.83
-          },
-          {
-            "x": 79.98,
-            "y": 3.05
-          },
-          {
-            "x": 79.83,
-            "y": 5.62
-          },
-          {
-            "x": 79.34,
-            "y": 2.85
-          },
-          {
-            "x": 80.24,
-            "y": 5.62
-          }
-        ]
-      },
-      {
-        "id": "fire-arc-blue-route-07",
-        "type": "route",
-        "points": [
-          {
-            "x": 77.51,
-            "y": 3.11
-          },
-          {
-            "x": 77.04,
-            "y": 5.78
-          },
-          {
-            "x": 76.88,
-            "y": 8.54
-          },
-          {
-            "x": 76.39,
-            "y": 10.85
-          },
-          {
-            "x": 76.17,
-            "y": 8.59
-          }
-        ]
-      },
-      {
-        "id": "fire-arc-blue-route-08",
-        "type": "route",
-        "points": [
-          {
-            "x": 75.05,
-            "y": 3.05
-          },
-          {
-            "x": 74.81,
-            "y": 5.88
-          },
-          {
-            "x": 74.55,
-            "y": 8.61
-          },
-          {
-            "x": 73.85,
-            "y": 11.04
-          },
-          {
-            "x": 73.73,
-            "y": 8.54
-          },
-          {
-            "x": 73,
-            "y": 10.92
-          },
-          {
-            "x": 72.85,
-            "y": 8.42
-          },
-          {
-            "x": 72.85,
-            "y": 5.65
-          },
-          {
-            "x": 72.66,
-            "y": 2.98
-          },
-          {
-            "x": 73.76,
-            "y": 5.87
-          }
-        ]
-      },
-      {
         "id": "fire-arc-blue-route-09",
         "type": "route",
         "points": [
@@ -36251,64 +35757,6 @@
         ]
       },
       {
-        "id": "fire-arc-blue-route-10",
-        "type": "route",
-        "points": [
-          {
-            "x": 86.42,
-            "y": 11.04
-          },
-          {
-            "x": 86.19,
-            "y": 8.32
-          },
-          {
-            "x": 86.31,
-            "y": 5.61
-          },
-          {
-            "x": 85.95,
-            "y": 3.16
-          },
-          {
-            "x": 85.52,
-            "y": 5.77
-          },
-          {
-            "x": 85.24,
-            "y": 3.06
-          },
-          {
-            "x": 84.33,
-            "y": 5.62
-          },
-          {
-            "x": 84.26,
-            "y": 8.2
-          },
-          {
-            "x": 84.3,
-            "y": 10.92
-          },
-          {
-            "x": 84.41,
-            "y": 13.61
-          },
-          {
-            "x": 85.51,
-            "y": 11.17
-          },
-          {
-            "x": 85.62,
-            "y": 13.63
-          },
-          {
-            "x": 85.41,
-            "y": 8.41
-          }
-        ]
-      },
-      {
         "id": "fire-arc-blue-route-11",
         "type": "route",
         "points": [
@@ -36341,67 +35789,6 @@
             "y": 65.62
           }
         ]
-      },
-      {
-        "id": "fire-arc-blue-route-12",
-        "type": "route",
-        "points": [
-          {
-            "x": 93.8,
-            "y": 5.76
-          },
-          {
-            "x": 94.09,
-            "y": 2.91
-          },
-          {
-            "x": 94.76,
-            "y": 5.71
-          },
-          {
-            "x": 91.13,
-            "y": 5.71
-          },
-          {
-            "x": 89.86,
-            "y": 5.76
-          }
-        ]
-      },
-      {
-        "id": "fire-arc-blue-route-13",
-        "type": "route",
-        "points": [
-          {
-            "x": 32.05,
-            "y": 85.08
-          },
-          {
-            "x": 34.41,
-            "y": 86.47
-          },
-          {
-            "x": 36.91,
-            "y": 87.76
-          },
-          {
-            "x": 39.41,
-            "y": 88.95
-          },
-          {
-            "x": 42,
-            "y": 90.03
-          },
-          {
-            "x": 44.59,
-            "y": 90.92
-          },
-          {
-            "x": 45.68,
-            "y": 91.3
-          }
-        ],
-        "dangerRoute": true
       },
       {
         "id": "fire-arc-blue-route-14",
@@ -40968,8 +40355,16 @@
     "Battle of Hürtgen Forest::domination-1|Red": [],
     "Eastern Europe::domination-1|Red": [],
     "Middle East::domination-1|Red": [],
-    "Middle East::domination-1|Blue": []
+    "Middle East::domination-1|Blue": [],
+    "Advance to the Rhine::domination-1|Blue": [],
+    "Ash River::domination-1|Blue": [],
+    "Berlin::domination-1|Blue": [],
+    "Breslau::domination-1|Blue": [],
+    "Carpathians::domination-1|Blue": [],
+    "Eastern Europe::domination-1|Blue": [],
+    "Fields of Normandy::domination-1|Blue": [],
+    "Fields of Poland::domination-1|Blue": []
   },
-  "updatedAt": "2026-08-31T02:27:47.093Z",
-  "exportedAt": "2026-08-31T02:31:37.867Z"
+  "updatedAt": "2026-08-31T03:40:19.798Z",
+  "exportedAt": "2026-08-31T03:40:29.804Z"
 }
