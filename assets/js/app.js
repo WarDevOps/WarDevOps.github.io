@@ -1,7 +1,7 @@
     import { MARKER_LAYOUT_VERSION, loadMarkerLayout, saveMarkerLayout as saveMarkerLayoutToStorage } from './marker-storage.js';
 import { initDiscordMemberCount } from './discord-stats.js';
     import { commentImages } from './comment-images.js?v=comment-images-20260817';
-    import { maps, translations } from './data.js?v=marker-reset-20260831';
+    import { maps, translations } from './data.js?v=share-links-20260831';
 
 
     const state = { selected: null, team: "Red", query: "", language: "en", theme: "dark", editMode: false, contextMarkerId: null, contextAnnotationId: null, commentMarkerId: null, drawing: null };
@@ -9,6 +9,11 @@ import { initDiscordMemberCount } from './discord-stats.js';
     const mapList = $("#map-list");
     const mapVariationSelect = $("#map-variation");
     const mapBattleRating = $("#map-battle-rating");
+    const copyLink = $("#copy-link");
+    const copyLinkLabel = copyLink.querySelector("[data-copy-link-label]");
+    const copyLinkStatus = $("#copy-link-status");
+    const mapTacticalSummary = $("#map-tactical-summary");
+    const mapTacticalSummaryCopy = $("#map-tactical-summary-copy");
     const search = $("#map-search");
     const clearSearch = $("#clear-search");
     const mapImage = $("#map-image");
@@ -33,6 +38,7 @@ import { initDiscordMemberCount } from './discord-stats.js';
     const modalAnnotationContextMenu = $("#modal-annotation-context-menu");
     const languageButtons = document.querySelectorAll(".language-button");
     const themeToggle = $("#theme-toggle");
+    const workspace = $(".workspace");
     const mapViewer = $(".map-viewer");
     const mapOverlayLayer = $("#map-overlay-layer");
     const markerLayer = $("#marker-layer");
@@ -141,6 +147,7 @@ import { initDiscordMemberCount } from './discord-stats.js';
       "notRecommended"
     ]);
     let legendDragActive = false;
+    let copyLinkFeedbackTimer = null;
 
     legendItems.forEach(item => {
       const label = item.querySelector("[data-i18n]");
@@ -188,12 +195,38 @@ import { initDiscordMemberCount } from './discord-stats.js';
     function mapLabel(map) {
       return state.language === "ko" ? map.aliases : map.name;
     }
+    function renderRecentUpdates() {
+      document.querySelectorAll("[data-recent-map]").forEach(link => {
+        const map = maps.find(candidate => candidate.name === link.dataset.recentMap);
+        if (!map) return;
+        link.querySelector(".recent-update-name").textContent = mapLabel(map);
+        const time = link.querySelector("time");
+        time.dateTime = map.updated;
+        time.textContent = new Intl.DateTimeFormat(state.language === "ko" ? "ko-KR" : "en-US", {
+          month: "short",
+          day: "numeric",
+          timeZone: "UTC"
+        }).format(new Date(`${map.updated}T00:00:00Z`));
+      });
+    }
     function mapVariationLabel(variation) {
       return `${t(variation.mode)} #${variation.number}`;
     }
     function mapBattleRatingLabel(map) {
       const min = Number(map.br.min).toFixed(1);
       return map.br.max == null ? `BR ${min}+` : `BR ${min} ~ ${Number(map.br.max).toFixed(1)}`;
+    }
+    function mapTacticalSummarySentences(map, language = state.language) {
+      const summaries = map?.tacticalSummary;
+      if (!summaries || typeof summaries !== "object") return [];
+      const sentences = summaries[language] || summaries.en;
+      return Array.isArray(sentences) ? sentences : [];
+    }
+    function mapDocumentDescription(map) {
+      const summary = mapTacticalSummarySentences(map).join(" ");
+      if (summary) return summary;
+      if (state.language === "ko") return `${mapLabel(map)}의 주요 교전 지역과 이동 경로를 살펴보고 워썬더 지상전 전술을 계획하세요.`;
+      return `Explore key engagement areas and movement routes for ${map.name} in War Thunder Ground Battles.`;
     }
     function findBaseMap(map) {
       return maps.find(candidate => candidate.name === map?.name) || map;
@@ -233,7 +266,7 @@ import { initDiscordMemberCount } from './discord-stats.js';
     function updateMapDocumentMetadata() {
       if (!state.selected) return;
       const pageTitle = `${state.selected.name} War Thunder Map Guide | WarDevOps`;
-      const pageDescription = `Explore key engagement areas and movement routes for ${state.selected.name} in War Thunder Ground Battles.`;
+      const pageDescription = mapDocumentDescription(state.selected);
       const canonicalUrl = `https://wardevops.github.io/maps/${state.selected.slug}/`;
       const previewUrl = `https://wardevops.github.io${mapPath(state.selected, state.team)}`;
       document.title = pageTitle;
@@ -262,6 +295,13 @@ import { initDiscordMemberCount } from './discord-stats.js';
     function updateSelectedMapDetails() {
       if (!state.selected) return;
       $("#selected-map-name").textContent = mapLabel(state.selected);
+      const summarySentences = mapTacticalSummarySentences(state.selected);
+      mapTacticalSummary.hidden = summarySentences.length === 0;
+      mapTacticalSummaryCopy.replaceChildren(...summarySentences.map(sentence => {
+        const paragraph = document.createElement("p");
+        paragraph.textContent = sentence;
+        return paragraph;
+      }));
       mapBattleRating.textContent = mapBattleRatingLabel(state.selected);
       mapImage.alt = `${mapLabel(state.selected)} ${mapVariationLabel(state.selected)} ${state.team}`;
       const mapUpdated = markerLayout.mapUpdated?.[state.selected.name] || state.selected.updated;
@@ -279,6 +319,7 @@ import { initDiscordMemberCount } from './discord-stats.js';
       document.querySelectorAll("[data-i18n-placeholder]").forEach(element => { element.placeholder = t(element.dataset.i18nPlaceholder); });
       document.querySelectorAll("[data-i18n-aria]").forEach(element => { element.setAttribute("aria-label", t(element.dataset.i18nAria)); });
       languageButtons.forEach(button => { button.setAttribute("aria-pressed", String(button.dataset.language === language)); });
+      renderRecentUpdates();
       window.dispatchEvent(new CustomEvent("maptactic:languagechange", { detail: { language } }));
       document.querySelectorAll(".marker-context-menu").forEach(contextMenu => {
         renderCommentImageOptions(contextMenu, contextMenu.querySelector("[data-marker-comment-image-select]").value);
@@ -1217,13 +1258,59 @@ import { initDiscordMemberCount } from './discord-stats.js';
         </a>`;
       }).join("");
     }
+    function currentMapUrl() {
+      if (!state.selected) return null;
+      const url = new URL(`/maps/${state.selected.slug}/`, window.location.origin);
+      url.searchParams.set("team", state.team.toLowerCase());
+      url.searchParams.set("mode", state.selected.variationId);
+      return url;
+    }
     function updateUrl(historyMode = "replace") {
       if (!state.selected) return;
-      const url = new URL(`/maps/${state.selected.slug}/`, window.location.origin);
-      if (state.selected.variationId !== state.selected.variations[0].id) url.searchParams.set("variation", state.selected.variationId);
-      if (state.team === "Blue") url.searchParams.set("team", "blue");
+      const url = currentMapUrl();
       window.history[`${historyMode}State`]({}, "", url);
       updateMapDocumentMetadata();
+    }
+    function copyTextFallback(value) {
+      const textarea = document.createElement("textarea");
+      textarea.value = value;
+      textarea.setAttribute("readonly", "");
+      textarea.style.position = "fixed";
+      textarea.style.opacity = "0";
+      document.body.append(textarea);
+      textarea.select();
+      const copied = document.execCommand("copy");
+      textarea.remove();
+      if (!copied) throw new Error("Copy command failed");
+    }
+    async function copyCurrentMapLink() {
+      const url = currentMapUrl();
+      if (!url) return;
+      window.clearTimeout(copyLinkFeedbackTimer);
+      copyLink.classList.remove("copied", "failed");
+      try {
+        if (navigator.clipboard?.writeText) {
+          try {
+            await navigator.clipboard.writeText(url.href);
+          } catch (error) {
+            copyTextFallback(url.href);
+          }
+        } else {
+          copyTextFallback(url.href);
+        }
+        copyLink.classList.add("copied");
+        copyLinkLabel.textContent = t("linkCopied");
+        copyLinkStatus.textContent = t("linkCopiedStatus");
+      } catch (error) {
+        copyLink.classList.add("failed");
+        copyLinkLabel.textContent = t("copyLinkFailed");
+        copyLinkStatus.textContent = t("copyLinkFailedStatus");
+      }
+      copyLinkFeedbackTimer = window.setTimeout(() => {
+        copyLink.classList.remove("copied", "failed");
+        copyLinkLabel.textContent = t("copyLink");
+        copyLinkStatus.textContent = "";
+      }, 2200);
     }
     function setModalMapSource() {
       if (!state.selected) return;
@@ -1270,7 +1357,7 @@ import { initDiscordMemberCount } from './discord-stats.js';
       const correctedLegacyName = LEGACY_MAP_NAMES.get(legacyName) || legacyName;
       const routeMap = maps.find(item => item.slug === routeSlug);
       const legacyMap = maps.find(item => item.name === correctedLegacyName);
-      const variationId = params.get("variation");
+      const variationId = params.get("mode") || params.get("variation");
       const team = params.get("team")?.toLowerCase() === "blue" ? "Blue" : "Red";
       if (routeMap) {
         selectMap(routeMap, team, variationId, { syncUrl: false });
@@ -1445,6 +1532,17 @@ import { initDiscordMemberCount } from './discord-stats.js';
       window.requestAnimationFrame(renderMarkers);
     }
 
+    function syncMapIndexHeight() {
+      const viewerHeight = Math.ceil(mapViewer.getBoundingClientRect().height);
+      workspace.style.setProperty("--side-panel-height", `${viewerHeight}px`);
+    }
+
+    if ("ResizeObserver" in window) {
+      const mapViewerResizeObserver = new ResizeObserver(syncMapIndexHeight);
+      mapViewerResizeObserver.observe(mapViewer);
+    }
+    syncMapIndexHeight();
+
     mapList.addEventListener("click", event => {
       const card = event.target.closest("[data-map]");
       if (!card) return;
@@ -1461,6 +1559,7 @@ import { initDiscordMemberCount } from './discord-stats.js';
     mapVariationSelect.addEventListener("change", () => {
       if (state.selected) selectMap(state.selected, state.team, mapVariationSelect.value);
     });
+    copyLink.addEventListener("click", copyCurrentMapLink);
     document.querySelectorAll(".team-button").forEach(button => button.addEventListener("click", () => setTeam(button.dataset.team)));
     languageButtons.forEach(button => button.addEventListener("click", () => setLanguage(button.dataset.language)));
     themeToggle.addEventListener("click", () => setTheme(state.theme === "dark" ? "light" : "dark"));

@@ -49,7 +49,7 @@
   </script>
   <title>WarDevOps | War Thunder Map Tactic</title>
 
-  <link rel="stylesheet" href="/assets/css/site.css?v=site-structure-20260828">
+  <link rel="stylesheet" href="/assets/css/site.css?v=panel-height-20260831">
 </head>
 <body>
   <header class="site-header">
@@ -73,10 +73,21 @@
 
   <main id="top">
     <div class="content-view" id="map-content-view">
-      <section class="hero" aria-labelledby="page-title">
-        <p class="eyebrow" data-i18n="eyebrow">TACTICAL MAP LIBRARY</p>
-        <h1 class="hero-title" id="page-title"><span data-i18n="heroTitleFirst">READ</span><br><em data-i18n="heroTitleSecond">THE WAR</em></h1>
-        <p class="hero-copy" data-i18n="heroCopy">Know yourself and your enemy, and you will win every battle.</p>
+      <section class="hero home-hero" aria-labelledby="page-title">
+        <div class="hero-intro">
+          <p class="eyebrow" data-i18n="eyebrow">TACTICAL MAP LIBRARY</p>
+          <h1 class="hero-title" id="page-title"><span data-i18n="heroTitleFirst">READ</span><br><em data-i18n="heroTitleSecond">THE WAR</em></h1>
+          <p class="hero-copy" data-i18n="heroCopy">Complete Map Strategies & Guides for War Thunder Ground Battles</p>
+        </div>
+        <aside class="recent-updates" aria-labelledby="recent-updates-title">
+          <h2 id="recent-updates-title" data-i18n="recentlyUpdated">Recently Updated</h2>
+          <ol>
+            <li><a href="/maps/eastern-europe/" data-recent-map="Eastern Europe"><span class="recent-update-name">Eastern Europe</span><time datetime="2026-08-31">Aug 31</time></a></li>
+            <li><a href="/maps/flanders/" data-recent-map="Flanders"><span class="recent-update-name">Flanders</span><time datetime="2026-08-30">Aug 30</time></a></li>
+            <li><a href="/maps/karelia/" data-recent-map="Karelia"><span class="recent-update-name">Karelia</span><time datetime="2026-08-30">Aug 30</time></a></li>
+            <li><a href="/maps/abandoned-factory/" data-recent-map="Abandoned Factory"><span class="recent-update-name">Abandoned Factory</span><time datetime="2026-08-30">Aug 30</time></a></li>
+          </ol>
+        </aside>
       </section>
 
       <section class="workspace" aria-label="Tactical map explorer" data-i18n-aria="mapExplorer">
@@ -95,6 +106,10 @@
         <div class="viewer-top">
           <div class="viewer-heading">
             <h2 id="selected-map-name">Select a Map</h2>
+            <section class="map-tactical-summary" id="map-tactical-summary" aria-labelledby="map-tactical-summary-title" hidden>
+              <h3 id="map-tactical-summary-title" data-i18n="tacticalSummary">Tactical Summary</h3>
+              <blockquote id="map-tactical-summary-copy"></blockquote>
+            </section>
             <div class="map-meta-row">
               <div class="map-variation-control">
                 <label id="map-variation-label" for="map-variation" data-i18n="mapVariation">Map Variation</label>
@@ -104,9 +119,18 @@
               <p class="map-last-updated"><span data-i18n="lastUpdatedLabel">Last updated</span> <time id="map-last-updated" datetime=""></time></p>
             </div>
           </div>
-          <div class="team-switch" aria-label="Team selection" data-i18n-aria="teamSelection">
-            <button class="team-button red" type="button" data-team="Red" aria-pressed="true">RED</button>
-            <button class="team-button blue" type="button" data-team="Blue" aria-pressed="false">BLUE</button>
+          <div class="viewer-actions">
+            <div class="viewer-action-row">
+              <button class="copy-link" id="copy-link" type="button" aria-describedby="copy-link-status" aria-label="Copy a link to the current map, team, and mode" data-i18n-aria="copyLinkAria">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.1.1l2-2a5 5 0 0 0-7.1-7.1l-1.1 1.1"></path><path d="M14 11a5 5 0 0 0-7.1-.1l-2 2A5 5 0 0 0 12 20l1.1-1.1"></path></svg>
+                <span data-copy-link-label data-i18n="copyLink">COPY LINK</span>
+              </button>
+              <div class="team-switch" aria-label="Team selection" data-i18n-aria="teamSelection">
+                <button class="team-button red" type="button" data-team="Red" aria-pressed="true">RED</button>
+                <button class="team-button blue" type="button" data-team="Blue" aria-pressed="false">BLUE</button>
+              </div>
+            </div>
+            <span class="copy-link-status" id="copy-link-status" role="status" aria-live="polite"></span>
           </div>
         </div>
         <div class="marker-tools" aria-label="Marker editor" data-i18n-aria="markerTools">
@@ -302,7 +326,7 @@
 
   <input id="marker-layout-import-file" type="file" accept="application/json,.json" hidden>
 
-  <script type="module" src="/assets/js/app.js?v=marker-reset-20260831"></script>
+  <script type="module" src="/assets/js/app.js?v=panel-height-20260831"></script>
   <script type="module" src="/assets/js/consent-controls.js?v=20260828"></script>
 </body>
 </html>

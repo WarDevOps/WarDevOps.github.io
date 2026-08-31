@@ -5,7 +5,7 @@ if (mapCatalogPayload.version !== 1 || !Array.isArray(mapCatalogPayload.maps)) {
   throw new Error("Unsupported map catalog format");
 }
 
-function createMap({ name, aliases, slug, updated, br, folder = name, teamImages, sharedImage, variations }) {
+function createMap({ name, aliases, slug, updated, br, tacticalSummary, folder = name, teamImages, sharedImage, variations }) {
   const configuredVariations = variations?.length ? variations : [{ mode: "domination", number: 1 }];
   return {
     name,
@@ -13,6 +13,7 @@ function createMap({ name, aliases, slug, updated, br, folder = name, teamImages
     slug,
     updated,
     br,
+    tacticalSummary,
     folder,
     variations: configuredVariations.map(variation => {
       const id = variation.id || `${variation.mode}-${variation.number}`;
@@ -41,6 +42,7 @@ export const translations = {
         heroTitleFirst: "READ",
         heroTitleSecond: "THE WAR",
         heroCopy: "Complete Map Strategies & Guides for War Thunder Ground Battles",
+        recentlyUpdated: "Recently Updated",
         searchGuideTitle: "War Thunder Map Strategies & Guides",
         searchGuideCopy: "Explore each map and identify key engagement areas. Plan your routes, positions, and engagements before the battle begins.",
         searchLabel: "Search maps",
@@ -50,7 +52,14 @@ export const translations = {
         mapList: "Map list",
         selectMap: "Select a Map",
         selectMapPrompt: "Choose a map to view its tactical layout.",
+        tacticalSummary: "Tactical Summary",
         mapVariation: "Map Variation",
+        copyLink: "COPY LINK",
+        copyLinkAria: "Copy a link to the current map, team, and mode",
+        linkCopied: "LINK COPIED",
+        linkCopiedStatus: "Link copied to clipboard.",
+        copyLinkFailed: "COPY FAILED",
+        copyLinkFailedStatus: "The link could not be copied.",
         lastUpdatedLabel: "Last updated",
         domination: "Domination",
         conquest: "Conquest",
@@ -163,6 +172,7 @@ export const translations = {
         heroTitleFirst: "READ",
         heroTitleSecond: "THE WAR",
         heroCopy: "워썬더 지상전의 모든 맵 공략 & 가이드",
+        recentlyUpdated: "최근 업데이트",
         searchGuideTitle: "워썬더 맵 공략 & 가이드",
         searchGuideCopy: "지도를 살펴보고 중요 교전 지역을 확인 하세요. 전투 시작 전에 이동 경로, 위치, 교전 계획을 세울 수 있습니다.",
         searchLabel: "맵 검색",
@@ -172,7 +182,14 @@ export const translations = {
         mapList: "맵 목록",
         selectMap: "맵 선택",
         selectMapPrompt: "전술 지도를 보려면 맵을 선택하세요.",
+        tacticalSummary: "전술 요약",
         mapVariation: "맵 바리에이션",
+        copyLink: "링크 복사",
+        copyLinkAria: "현재 맵, 팀, 모드 링크 복사",
+        linkCopied: "복사 완료",
+        linkCopiedStatus: "링크를 클립보드에 복사했습니다.",
+        copyLinkFailed: "복사 실패",
+        copyLinkFailedStatus: "링크를 복사하지 못했습니다.",
         lastUpdatedLabel: "마지막 업데이트",
         domination: "도미네이션",
         conquest: "컨퀘스트",

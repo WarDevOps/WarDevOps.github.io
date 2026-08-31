@@ -56,6 +56,24 @@ function battleRating(value, context) {
   return max === null ? { min } : { min, max };
 }
 
+function tacticalSummary(value, context) {
+  if (value == null) return null;
+  if (!value || typeof value !== "object" || Array.isArray(value)) {
+    throw new Error(`Invalid tactical summary for ${context}`);
+  }
+  const result = {};
+  for (const language of ["en", "ko"]) {
+    const sentences = value[language];
+    if (sentences == null) continue;
+    if (!Array.isArray(sentences) || sentences.length < 2 || sentences.length > 4 || sentences.some(sentence => typeof sentence !== "string" || !sentence.trim())) {
+      throw new Error(`Tactical summary for ${context} (${language}) must contain 2 to 4 non-empty sentences`);
+    }
+    result[language] = sentences.map(sentence => sentence.trim());
+  }
+  if (!result.en) throw new Error(`English tactical summary is required for ${context}`);
+  return result;
+}
+
 function safeImageFolder(relativeFolder) {
   const absoluteFolder = path.resolve(IMG_ROOT, relativeFolder);
   const rootPrefix = `${path.resolve(IMG_ROOT)}${path.sep}`;
@@ -161,9 +179,6 @@ function compactVariation(variation, rootFolder) {
 }
 
 async function discoverMap(folderName, metadata, mapUpdated) {
-  const rootImages = await discoverMapImages(folderName, { requireExact: true, failOnPartial: true });
-  if (!rootImages) return null;
-
   const mapMetadata = metadata.maps?.[folderName] || {};
   if (mapMetadata.disabled) return null;
   const name = mapMetadata.en || folderName;
@@ -172,6 +187,7 @@ async function discoverMap(folderName, metadata, mapUpdated) {
   const updated = String(mapUpdated?.[name] || "");
   const defaultMode = String(mapMetadata.defaultMode || "domination").toLowerCase();
   const mapBr = battleRating(mapMetadata.br ?? metadata.defaultBr, folderName);
+  const mapTacticalSummary = tacticalSummary(mapMetadata.tacticalSummary, folderName);
   const variationBrs = mapMetadata.variationBrs ?? {};
   if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(slug)) {
     throw new Error(`Invalid map slug for ${folderName}: ${slug}`);
@@ -186,14 +202,29 @@ async function discoverMap(folderName, metadata, mapUpdated) {
     throw new Error(`Invalid variation BR metadata for ${folderName}`);
   }
 
-  const variations = [{ mode: defaultMode, number: 1, folder: folderName, ...rootImages }];
   const rootEntries = await directoryEntries(path.join(IMG_ROOT, folderName));
+  let primaryFolder = folderName;
+  let rootImages = await discoverMapImages(folderName, { requireExact: true, failOnPartial: true });
+  if (!rootImages) {
+    const primaryEntry = rootEntries.find(entry => {
+      const match = entry.isDirectory() ? entry.name.match(VARIATION_FOLDER_PATTERN) : null;
+      return match && match[1].toLowerCase() === defaultMode && Number(match[2]) === 1;
+    });
+    if (primaryEntry) {
+      primaryFolder = toPosix(path.join(folderName, primaryEntry.name));
+      rootImages = await discoverMapImages(primaryFolder, { failOnPartial: true });
+    }
+  }
+  if (!rootImages) return null;
+
+  const variations = [{ mode: defaultMode, number: 1, folder: primaryFolder, ...rootImages }];
   for (const entry of rootEntries.filter(item => item.isDirectory())) {
     const match = entry.name.match(VARIATION_FOLDER_PATTERN);
     if (!match) continue;
     const mode = match[1].toLowerCase();
     const number = Number(match[2]);
     const variationFolder = toPosix(path.join(folderName, entry.name));
+    if (variationFolder === primaryFolder) continue;
     const imageConfig = await discoverMapImages(variationFolder, { failOnPartial: true });
     if (!imageConfig) continue;
     variations.push({ mode, number, folder: variationFolder, ...imageConfig });
@@ -222,6 +253,7 @@ async function discoverMap(folderName, metadata, mapUpdated) {
     slug,
     updated,
     br: mapBr,
+    ...(mapTacticalSummary ? { tacticalSummary: mapTacticalSummary } : {}),
     folder: folderName,
     variations: variations.map(variation => compactVariation(variation, folderName))
   };
@@ -272,9 +304,16 @@ function mapPreviewUrl(map) {
   return `https://wardevops.github.io/img/${encodeUrlPath(folder)}/${encodeURIComponent(image)}`;
 }
 
+function renderTacticalSummary(map) {
+  const sentences = map.tacticalSummary?.en || [];
+  const hidden = sentences.length ? "" : " hidden";
+  const paragraphs = sentences.map(sentence => `\n                <p>${escapeHtml(sentence)}</p>`).join("");
+  return `<section class="map-tactical-summary" id="map-tactical-summary" aria-labelledby="map-tactical-summary-title"${hidden}>\n              <h3 id="map-tactical-summary-title" data-i18n="tacticalSummary">Tactical Summary</h3>\n              <blockquote id="map-tactical-summary-copy">${paragraphs}\n              </blockquote>\n            </section>`;
+}
+
 function renderMapRoutePage(rootPage, map) {
   const title = `${escapeHtml(map.name)} Tactical Map | WarDevOps MapTactic`;
-  const description = `Explore the ${escapeHtml(map.name)} tactical map, team positions, routes, markers, and key combat areas for War Thunder Ground Battles.`;
+  const description = escapeHtml(map.tacticalSummary?.en?.join(" ") || `Explore the ${map.name} tactical map, team positions, routes, markers, and key combat areas for War Thunder Ground Battles.`);
   const canonical = `https://wardevops.github.io/maps/${map.slug}/`;
   const preview = mapPreviewUrl(map);
   let page = rootPage;
@@ -289,6 +328,7 @@ function renderMapRoutePage(rootPage, map) {
   page = replacePageValue(page, /<meta name="twitter:description" content="[^"]*">/, `<meta name="twitter:description" content="${description}">`, "X description");
   page = replacePageValue(page, /<meta name="twitter:image" content="[^"]*">/, `<meta name="twitter:image" content="${preview}">`, "X image");
   page = replacePageValue(page, /<title>[^<]*<\/title>/, `<title>${title}</title>`, "document title");
+  page = replacePageValue(page, /<section class="map-tactical-summary"[\s\S]*?<\/section>/, renderTacticalSummary(map), "tactical summary");
   return page;
 }
 

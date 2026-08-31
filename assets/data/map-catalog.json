@@ -407,6 +407,16 @@
       "br": {
         "min": 1
       },
+      "tacticalSummary": {
+        "en": [
+          "Long-range engagements dominate the north-south corridors.",
+          "Fast vehicles can contest the eastern flank early, while the central urban area favors close-range fighting."
+        ],
+        "ko": [
+          "남북으로 이어지는 주요 통로에서는 장거리 교전이 중심이 됩니다.",
+          "기동력이 뛰어난 차량은 초반에 동쪽 측면을 선점할 수 있으며, 중앙 시가지는 근거리 전투에 유리합니다."
+        ]
+      },
       "folder": "Eastern Europe",
       "variations": [
         {
@@ -865,6 +875,7 @@
           "br": {
             "min": 2.3
           },
+          "folder": "Port Novorossiysk/Conquest #1",
           "sharedImage": "Port Novorossiysk.png"
         }
       ]
