@@ -898,6 +898,7 @@ import { initDiscordMemberCount } from './discord-stats.js';
       drawing.classList.add("map-annotation", "route-line");
       if (annotation.dangerRoute) drawing.classList.add("is-danger-route");
       if (isPreview) drawing.classList.add("is-preview");
+      drawing.classList.toggle("is-dimmed", !isPreview && Boolean(state.focusedTankMarkerId));
       drawing.dataset.annotationId = annotation.id || "preview";
       drawing.setAttribute("viewBox", `0 0 ${width} ${height}`);
       drawing.setAttribute("preserveAspectRatio", "none");
@@ -928,6 +929,7 @@ import { initDiscordMemberCount } from './discord-stats.js';
       const drawing = document.createElement("button");
       drawing.type = "button";
       drawing.className = `map-annotation ${annotation.type === "aimHere" ? "aim-arrow" : "route-line"}${annotation.type === "route" && annotation.dangerRoute ? " is-danger-route" : ""}${isPreview ? " is-preview" : ""}`;
+      drawing.classList.toggle("is-dimmed", !isPreview && Boolean(state.focusedTankMarkerId) && annotation.parentTankId !== state.focusedTankMarkerId);
       drawing.dataset.annotationId = annotation.id || "preview";
       drawing.style.left = `${fromX}px`;
       drawing.style.width = `${length}px`;
@@ -985,6 +987,7 @@ import { initDiscordMemberCount } from './discord-stats.js';
         if (unavailableMapOverlayFiles.has(overlayIdentity)) return;
         const overlay = document.createElement("img");
         overlay.className = "map-area-overlay";
+        overlay.classList.toggle("is-dimmed", Boolean(state.focusedTankMarkerId));
         overlay.src = mapOverlayPath(state.selected, overlayConfig.file);
         overlay.alt = "";
         overlay.addEventListener("error", () => {
@@ -1008,7 +1011,8 @@ import { initDiscordMemberCount } from './discord-stats.js';
         button.className = "map-marker";
         button.dataset.markerId = marker.id;
         button.dataset.markerType = marker.type;
-        button.classList.toggle("is-dimmed", Boolean(state.focusedTankMarkerId) && marker.id !== state.focusedTankMarkerId);
+        const belongsToFocusedTank = marker.id === state.focusedTankMarkerId || marker.parentTankId === state.focusedTankMarkerId;
+        button.classList.toggle("is-dimmed", Boolean(state.focusedTankMarkerId) && !belongsToFocusedTank);
         button.draggable = state.editMode && isMarkerPlacementEnabled(marker.type);
         button.style.left = `${Math.min(100, Math.max(0, x))}%`;
         button.style.top = `${Math.min(100, Math.max(0, y))}%`;
@@ -1405,7 +1409,7 @@ import { initDiscordMemberCount } from './discord-stats.js';
     }
     function bindMarkerLayer(layer, stage, contextMenu) {
       layer.addEventListener("click", event => {
-        if (state.editMode || state.focusedTankMarkerId) return;
+        if (state.editMode) return;
         const markerButton = event.target.closest(".map-marker");
         if (!markerButton) return;
         const marker = currentMarkers().find(item => item.id === markerButton.dataset.markerId);
