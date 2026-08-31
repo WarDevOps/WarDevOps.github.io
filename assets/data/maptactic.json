@@ -56,7 +56,7 @@
     "Tunisia": "2026-08-30",
     "Vietnam": "2026-08-16",
     "Volokolamsk": "2026-08-31",
-    "White Rock Fortress": "2026-08-16"
+    "White Rock Fortress": "2026-08-31"
   },
   "markers": {
     "Campania::domination-1|Red": [
@@ -1554,14 +1554,14 @@
       {
         "id": "white-rock-fortress-red-unit-03",
         "type": "lightTankRed",
-        "x": 24.65,
-        "y": 21.94
+        "x": 24.38,
+        "y": 21.45
       },
       {
         "id": "white-rock-fortress-red-role-02",
         "type": "highRiskSpot",
-        "x": 24.65,
-        "y": 21.94,
+        "x": 24.38,
+        "y": 21.45,
         "parentTankId": "white-rock-fortress-red-unit-03"
       },
       {
@@ -1575,19 +1575,6 @@
         "type": "mainBattleTankRed",
         "x": 62.29,
         "y": 25.62
-      },
-      {
-        "id": "white-rock-fortress-red-unit-06",
-        "type": "mainBattleTankRed",
-        "x": 31.18,
-        "y": 32.57
-      },
-      {
-        "id": "white-rock-fortress-red-role-03",
-        "type": "highRiskSpot",
-        "x": 31.18,
-        "y": 32.57,
-        "parentTankId": "white-rock-fortress-red-unit-06"
       },
       {
         "id": "white-rock-fortress-red-unit-07",
@@ -1761,6 +1748,72 @@
         "x": 74.03,
         "y": 76.88,
         "parentTankId": "white-rock-fortress-red-unit-22"
+      },
+      {
+        "id": "mtgm724z-t39eap",
+        "type": "lightTankRed",
+        "x": 7.53,
+        "y": 36.52
+      },
+      {
+        "id": "mtgm74ld-437h70",
+        "type": "lightTankRed",
+        "x": 16.4,
+        "y": 21.71
+      },
+      {
+        "id": "mtgm7k0a-yvfzl4",
+        "type": "sniper",
+        "x": 7.53,
+        "y": 36.52,
+        "parentTankId": "mtgm724z-t39eap"
+      },
+      {
+        "id": "mtgm7mc4-8htb0a",
+        "type": "battleLine",
+        "x": 16.4,
+        "y": 21.71,
+        "parentTankId": "mtgm74ld-437h70"
+      },
+      {
+        "id": "mtgm8beb-6gspjm",
+        "type": "spawnKill",
+        "x": 50.62,
+        "y": 15.49,
+        "parentTankId": "white-rock-fortress-red-unit-02"
+      },
+      {
+        "id": "mtgm8cpx-e573na",
+        "type": "spawnKill",
+        "x": 47.78,
+        "y": 23.54,
+        "parentTankId": "white-rock-fortress-red-unit-04"
+      },
+      {
+        "id": "mtgm8dsg-ha2l75",
+        "type": "spawnKill",
+        "x": 62.29,
+        "y": 25.62,
+        "parentTankId": "white-rock-fortress-red-unit-05"
+      },
+      {
+        "id": "mtgm8er8-e56qtx",
+        "type": "spawnKill",
+        "x": 79.72,
+        "y": 33.06,
+        "parentTankId": "white-rock-fortress-red-unit-07"
+      },
+      {
+        "id": "mtgmaf67-e1mmwe",
+        "type": "smokeshell",
+        "x": 33.07,
+        "y": 18.25
+      },
+      {
+        "id": "mtgmauuz-vqx3az",
+        "type": "smokeshell",
+        "x": 30.76,
+        "y": 33.42
       }
     ],
     "Vietnam::domination-1|Red": [
@@ -3038,7 +3091,7 @@
       },
       {
         "id": "attica-blue-role-01",
-        "type": "highRiskSpot",
+        "type": "sniper",
         "x": 53.75,
         "y": 16.04,
         "parentTankId": "attica-blue-unit-02"
@@ -3141,19 +3194,6 @@
         "parentTankId": "attica-blue-unit-10"
       },
       {
-        "id": "attica-blue-unit-11",
-        "type": "lightTank",
-        "x": 37.99,
-        "y": 40.49
-      },
-      {
-        "id": "attica-blue-role-09",
-        "type": "battleLine",
-        "x": 37.99,
-        "y": 40.49,
-        "parentTankId": "attica-blue-unit-11"
-      },
-      {
         "id": "attica-blue-unit-12",
         "type": "mainBattleTank",
         "x": 57.22,
@@ -3195,28 +3235,15 @@
       {
         "id": "attica-blue-unit-15",
         "type": "mainBattleTank",
-        "x": 73.61,
-        "y": 45.35
+        "x": 75,
+        "y": 45.65
       },
       {
         "id": "attica-blue-role-13",
         "type": "highRiskSpot",
-        "x": 73.61,
-        "y": 45.35,
+        "x": 75,
+        "y": 45.65,
         "parentTankId": "attica-blue-unit-15"
-      },
-      {
-        "id": "attica-blue-unit-16",
-        "type": "mainBattleTank",
-        "x": 15.62,
-        "y": 45.56
-      },
-      {
-        "id": "attica-blue-role-14",
-        "type": "battleLine",
-        "x": 15.62,
-        "y": 45.56,
-        "parentTankId": "attica-blue-unit-16"
       },
       {
         "id": "attica-blue-unit-17",
@@ -3232,19 +3259,6 @@
         "parentTankId": "attica-blue-unit-17"
       },
       {
-        "id": "attica-blue-unit-18",
-        "type": "lightTank",
-        "x": 54.93,
-        "y": 50.07
-      },
-      {
-        "id": "attica-blue-role-16",
-        "type": "highRiskSpot",
-        "x": 54.93,
-        "y": 50.07,
-        "parentTankId": "attica-blue-unit-18"
-      },
-      {
         "id": "attica-blue-unit-19",
         "type": "mainBattleTank",
         "x": 75.35,
@@ -3252,7 +3266,7 @@
       },
       {
         "id": "attica-blue-role-17",
-        "type": "spawnKill",
+        "type": "highRiskSpot",
         "x": 75.35,
         "y": 61.32,
         "parentTankId": "attica-blue-unit-19"
@@ -3271,19 +3285,6 @@
         "parentTankId": "attica-blue-unit-20"
       },
       {
-        "id": "attica-blue-unit-21",
-        "type": "mainBattleTank",
-        "x": 69.17,
-        "y": 70.14
-      },
-      {
-        "id": "attica-blue-role-19",
-        "type": "spawnKill",
-        "x": 69.17,
-        "y": 70.14,
-        "parentTankId": "attica-blue-unit-21"
-      },
-      {
         "id": "attica-blue-unit-22",
         "type": "mainBattleTank",
         "x": 44.51,
@@ -3297,29 +3298,16 @@
         "parentTankId": "attica-blue-unit-22"
       },
       {
-        "id": "attica-blue-unit-23",
-        "type": "mainBattleTank",
-        "x": 24.17,
-        "y": 75.49
-      },
-      {
-        "id": "attica-blue-role-21",
-        "type": "spawnKill",
-        "x": 24.17,
-        "y": 75.49,
-        "parentTankId": "attica-blue-unit-23"
-      },
-      {
         "id": "attica-blue-unit-24",
         "type": "mainBattleTank",
-        "x": 18.19,
-        "y": 77.22
+        "x": 23.76,
+        "y": 75.26
       },
       {
         "id": "attica-blue-role-22",
         "type": "spawnKill",
-        "x": 18.19,
-        "y": 77.22,
+        "x": 23.76,
+        "y": 75.26,
         "parentTankId": "attica-blue-unit-24"
       },
       {
@@ -3360,6 +3348,37 @@
         "x": 46.18,
         "y": 83.89,
         "parentTankId": "attica-blue-unit-27"
+      },
+      {
+        "id": "mtgkyjv2-q51sfe",
+        "type": "smokeshell",
+        "x": 68.62,
+        "y": 31.29
+      },
+      {
+        "id": "mtgkymim-z2jk6b",
+        "type": "smokeshell",
+        "x": 62.41,
+        "y": 35.01
+      },
+      {
+        "id": "mtgkyrhu-3aculb",
+        "type": "smokeshell",
+        "x": 76.69,
+        "y": 39.53
+      },
+      {
+        "id": "mtgl6cls-51h2tw",
+        "type": "mainBattleTank",
+        "x": 69.24,
+        "y": 70.21
+      },
+      {
+        "id": "mtgl6dth-firqjy",
+        "type": "highRiskSpot",
+        "x": 69.24,
+        "y": 70.21,
+        "parentTankId": "mtgl6cls-51h2tw"
       }
     ],
     "Battle of Hürtgen Forest::domination-1|Blue": [
@@ -9671,7 +9690,7 @@
       },
       {
         "id": "white-rock-fortress-blue-role-01",
-        "type": "spawnKill",
+        "type": "sniper",
         "x": 38.06,
         "y": 13.68,
         "parentTankId": "white-rock-fortress-blue-unit-03"
@@ -9681,12 +9700,6 @@
         "type": "antiAir",
         "x": 84.72,
         "y": 18.12
-      },
-      {
-        "id": "white-rock-fortress-blue-unit-05",
-        "type": "tankDestroyer",
-        "x": 56.18,
-        "y": 22.08
       },
       {
         "id": "white-rock-fortress-blue-unit-06",
@@ -9721,19 +9734,6 @@
         "parentTankId": "white-rock-fortress-blue-unit-08"
       },
       {
-        "id": "white-rock-fortress-blue-unit-09",
-        "type": "mainBattleTank",
-        "x": 33.96,
-        "y": 30.69
-      },
-      {
-        "id": "white-rock-fortress-blue-role-04",
-        "type": "highRiskSpot",
-        "x": 33.96,
-        "y": 30.69,
-        "parentTankId": "white-rock-fortress-blue-unit-09"
-      },
-      {
         "id": "white-rock-fortress-blue-unit-10",
         "type": "lightTank",
         "x": 8.12,
@@ -9741,7 +9741,7 @@
       },
       {
         "id": "white-rock-fortress-blue-role-05",
-        "type": "battleLine",
+        "type": "highRiskSpot",
         "x": 8.12,
         "y": 34.44,
         "parentTankId": "white-rock-fortress-blue-unit-10"
@@ -9754,7 +9754,7 @@
       },
       {
         "id": "white-rock-fortress-blue-role-06",
-        "type": "highRiskSpot",
+        "type": "sniper",
         "x": 88.26,
         "y": 40.69,
         "parentTankId": "white-rock-fortress-blue-unit-11"
@@ -9854,6 +9854,78 @@
         "type": "mainBattleTank",
         "x": 62.99,
         "y": 90.69
+      },
+      {
+        "id": "mtglxm8a-unueg8",
+        "type": "spawnKill",
+        "x": 62.99,
+        "y": 90.69,
+        "parentTankId": "white-rock-fortress-blue-unit-20"
+      },
+      {
+        "id": "mtglxnmv-ywasp2",
+        "type": "spawnKill",
+        "x": 30.28,
+        "y": 84.79,
+        "parentTankId": "white-rock-fortress-blue-unit-19"
+      },
+      {
+        "id": "mtglxpdv-iyv4q1",
+        "type": "spawnKill",
+        "x": 16.6,
+        "y": 68.89,
+        "parentTankId": "white-rock-fortress-blue-unit-17"
+      },
+      {
+        "id": "mtglyeqh-g9zyyj",
+        "type": "lightTank",
+        "x": 12.94,
+        "y": 42.28
+      },
+      {
+        "id": "mtglyfng-r0f5qq",
+        "type": "spawnKill",
+        "x": 12.94,
+        "y": 42.28,
+        "parentTankId": "mtglyeqh-g9zyyj"
+      },
+      {
+        "id": "mtglzvpp-vke0zj",
+        "type": "mainBattleTank",
+        "x": 72.25,
+        "y": 73.84
+      },
+      {
+        "id": "mtglzxhg-4vlvdh",
+        "type": "sniper",
+        "x": 72.25,
+        "y": 73.84,
+        "parentTankId": "mtglzvpp-vke0zj"
+      },
+      {
+        "id": "mtgm1dgt-boz9bw",
+        "type": "lightTank",
+        "x": 28.01,
+        "y": 15.24
+      },
+      {
+        "id": "mtgm1ffy-pm07fm",
+        "type": "highRiskSpot",
+        "x": 28.01,
+        "y": 15.24,
+        "parentTankId": "mtgm1dgt-boz9bw"
+      },
+      {
+        "id": "mtgm2xdv-nyllbc",
+        "type": "antiAir",
+        "x": 55.94,
+        "y": 22.33
+      },
+      {
+        "id": "mtgmbofm-fqgv6a",
+        "type": "smokeshell",
+        "x": 32.89,
+        "y": 17.37
       }
     ],
     "Abandoned Factory::domination-1|Red": [],
@@ -12174,15 +12246,6 @@
     "American Desert::domination-1|Red": [],
     "White Rock Fortress::domination-1|Red": [
       {
-        "id": "white-rock-fortress-red-aim-01",
-        "type": "aimHere",
-        "parentTankId": "white-rock-fortress-red-unit-10",
-        "startX": 34.58,
-        "startY": 50.42,
-        "endX": 42.42,
-        "endY": 42.07
-      },
-      {
         "id": "white-rock-fortress-red-aim-02",
         "type": "aimHere",
         "parentTankId": "white-rock-fortress-red-unit-21",
@@ -12192,24 +12255,6 @@
         "endY": 61.05
       },
       {
-        "id": "white-rock-fortress-red-aim-03",
-        "type": "aimHere",
-        "parentTankId": "white-rock-fortress-red-unit-21",
-        "startX": 72.99,
-        "startY": 74.58,
-        "endX": 74.81,
-        "endY": 68.64
-      },
-      {
-        "id": "white-rock-fortress-red-aim-04",
-        "type": "aimHere",
-        "parentTankId": "white-rock-fortress-red-unit-08",
-        "startX": 31.18,
-        "startY": 42.01,
-        "endX": 35,
-        "endY": 37.49
-      },
-      {
         "id": "white-rock-fortress-red-aim-05",
         "type": "aimHere",
         "parentTankId": "white-rock-fortress-red-unit-16",
@@ -12217,246 +12262,6 @@
         "startY": 60.14,
         "endX": 66.67,
         "endY": 57.08
-      },
-      {
-        "id": "white-rock-fortress-red-route-01",
-        "type": "route",
-        "points": [
-          {
-            "x": 20.69,
-            "y": 86.97
-          },
-          {
-            "x": 17.38,
-            "y": 86.98
-          },
-          {
-            "x": 19.22,
-            "y": 89.65
-          },
-          {
-            "x": 18.86,
-            "y": 87.25
-          },
-          {
-            "x": 18.44,
-            "y": 89.79
-          },
-          {
-            "x": 18.16,
-            "y": 87.15
-          },
-          {
-            "x": 17.24,
-            "y": 89.6
-          },
-          {
-            "x": 17.2,
-            "y": 92.35
-          },
-          {
-            "x": 17.24,
-            "y": 94.97
-          },
-          {
-            "x": 17.32,
-            "y": 97.64
-          },
-          {
-            "x": 18.43,
-            "y": 95.16
-          },
-          {
-            "x": 18.57,
-            "y": 97.64
-          },
-          {
-            "x": 19.09,
-            "y": 92.44
-          }
-        ]
-      },
-      {
-        "id": "white-rock-fortress-red-route-02",
-        "type": "route",
-        "points": [
-          {
-            "x": 23.8,
-            "y": 38.53
-          },
-          {
-            "x": 23.47,
-            "y": 41.28
-          },
-          {
-            "x": 23.33,
-            "y": 44.06
-          },
-          {
-            "x": 23.26,
-            "y": 46.84
-          },
-          {
-            "x": 23.08,
-            "y": 49.64
-          },
-          {
-            "x": 21.39,
-            "y": 51.74
-          },
-          {
-            "x": 19.34,
-            "y": 53.65
-          },
-          {
-            "x": 22.37,
-            "y": 53.18
-          },
-          {
-            "x": 24.9,
-            "y": 51.98
-          },
-          {
-            "x": 27.51,
-            "y": 51.06
-          },
-          {
-            "x": 30.17,
-            "y": 50.17
-          },
-          {
-            "x": 32.79,
-            "y": 49.74
-          },
-          {
-            "x": 18.77,
-            "y": 55.2
-          }
-        ]
-      },
-      {
-        "id": "white-rock-fortress-red-route-03",
-        "type": "route",
-        "points": [
-          {
-            "x": 50.26,
-            "y": 85.55
-          },
-          {
-            "x": 52.66,
-            "y": 84.19
-          },
-          {
-            "x": 55.38,
-            "y": 83.68
-          },
-          {
-            "x": 58.16,
-            "y": 83.75
-          },
-          {
-            "x": 60.94,
-            "y": 83.82
-          },
-          {
-            "x": 63.65,
-            "y": 83.29
-          },
-          {
-            "x": 66.12,
-            "y": 82.08
-          },
-          {
-            "x": 68.57,
-            "y": 80.76
-          },
-          {
-            "x": 71.01,
-            "y": 79.35
-          },
-          {
-            "x": 66.43,
-            "y": 70.82
-          },
-          {
-            "x": 64.17,
-            "y": 72.47
-          },
-          {
-            "x": 61.91,
-            "y": 74.14
-          },
-          {
-            "x": 59.68,
-            "y": 75.81
-          },
-          {
-            "x": 57.51,
-            "y": 77.53
-          },
-          {
-            "x": 55.41,
-            "y": 79.36
-          },
-          {
-            "x": 54.09,
-            "y": 81.75
-          },
-          {
-            "x": 67.53,
-            "y": 70
-          },
-          {
-            "x": 69.3,
-            "y": 67.93
-          },
-          {
-            "x": 69.69,
-            "y": 65.21
-          },
-          {
-            "x": 69.99,
-            "y": 62.45
-          }
-        ]
-      },
-      {
-        "id": "white-rock-fortress-red-route-04",
-        "type": "route",
-        "points": [
-          {
-            "x": 12.9,
-            "y": 87.15
-          },
-          {
-            "x": 12.74,
-            "y": 89.65
-          },
-          {
-            "x": 12.26,
-            "y": 86.94
-          },
-          {
-            "x": 12.33,
-            "y": 89.86
-          },
-          {
-            "x": 11.8,
-            "y": 87.04
-          },
-          {
-            "x": 11.59,
-            "y": 89.68
-          },
-          {
-            "x": 11.18,
-            "y": 87.04
-          },
-          {
-            "x": 13.16,
-            "y": 89.65
-          }
-        ]
       },
       {
         "id": "white-rock-fortress-red-route-05",
@@ -12515,156 +12320,6 @@
           {
             "x": 15.22,
             "y": 55.92
-          }
-        ]
-      },
-      {
-        "id": "white-rock-fortress-red-route-07",
-        "type": "route",
-        "points": [
-          {
-            "x": 5.57,
-            "y": 87.09
-          },
-          {
-            "x": 5.78,
-            "y": 89.7
-          },
-          {
-            "x": 6.35,
-            "y": 87.15
-          },
-          {
-            "x": 6.75,
-            "y": 89.92
-          },
-          {
-            "x": 5.78,
-            "y": 92.46
-          },
-          {
-            "x": 5.94,
-            "y": 95.01
-          },
-          {
-            "x": 5.85,
-            "y": 97.49
-          },
-          {
-            "x": 6.77,
-            "y": 95.14
-          },
-          {
-            "x": 6.84,
-            "y": 97.76
-          },
-          {
-            "x": 7.47,
-            "y": 92.64
-          },
-          {
-            "x": 7.72,
-            "y": 89.92
-          },
-          {
-            "x": 7.97,
-            "y": 87.15
-          },
-          {
-            "x": 6.98,
-            "y": 87.08
-          }
-        ]
-      },
-      {
-        "id": "white-rock-fortress-red-route-08",
-        "type": "route",
-        "points": [
-          {
-            "x": 26.25,
-            "y": 87.14
-          },
-          {
-            "x": 26.78,
-            "y": 89.77
-          },
-          {
-            "x": 27,
-            "y": 86.97
-          }
-        ]
-      },
-      {
-        "id": "white-rock-fortress-red-route-09",
-        "type": "route",
-        "points": [
-          {
-            "x": 23.98,
-            "y": 95.04
-          },
-          {
-            "x": 23.63,
-            "y": 92.53
-          },
-          {
-            "x": 23.28,
-            "y": 95.17
-          },
-          {
-            "x": 22.9,
-            "y": 97.77
-          },
-          {
-            "x": 22.05,
-            "y": 95.04
-          },
-          {
-            "x": 22.7,
-            "y": 92.47
-          },
-          {
-            "x": 22.77,
-            "y": 89.84
-          },
-          {
-            "x": 22.34,
-            "y": 87.16
-          },
-          {
-            "x": 21.85,
-            "y": 89.79
-          },
-          {
-            "x": 21.77,
-            "y": 87.15
-          },
-          {
-            "x": 21.04,
-            "y": 89.79
-          },
-          {
-            "x": 21.19,
-            "y": 87.07
-          },
-          {
-            "x": 20.29,
-            "y": 89.72
-          },
-          {
-            "x": 19.84,
-            "y": 92.47
-          },
-          {
-            "x": 21.3,
-            "y": 95.12
-          },
-          {
-            "x": 21.95,
-            "y": 92.43
-          },
-          {
-            "x": 21.85,
-            "y": 97.68
           }
         ]
       },
@@ -12815,24 +12470,6 @@
         ]
       },
       {
-        "id": "white-rock-fortress-red-route-15",
-        "type": "route",
-        "points": [
-          {
-            "x": 9.08,
-            "y": 92.61
-          },
-          {
-            "x": 10.41,
-            "y": 95.1
-          },
-          {
-            "x": 9.43,
-            "y": 97.77
-          }
-        ]
-      },
-      {
         "id": "white-rock-fortress-red-route-16",
         "type": "route",
         "points": [
@@ -12945,27 +12582,241 @@
         "dangerRoute": true
       },
       {
-        "id": "white-rock-fortress-red-route-20",
+        "id": "mtgm660h-4yg7k9",
         "type": "route",
         "points": [
           {
-            "x": 24.25,
-            "y": 37.84
+            "x": 48.94,
+            "y": 86.26
           },
           {
-            "x": 26.35,
-            "y": 36.07
+            "x": 53.9,
+            "y": 83.69
           },
           {
-            "x": 28.58,
-            "y": 34.41
+            "x": 63.03,
+            "y": 84.04
           },
           {
-            "x": 29.66,
-            "y": 33.65
+            "x": 73.58,
+            "y": 77.04
           }
-        ],
-        "dangerRoute": true
+        ]
+      },
+      {
+        "id": "mtgm6g4j-a4o8a8",
+        "type": "route",
+        "points": [
+          {
+            "x": 54.17,
+            "y": 82.98
+          },
+          {
+            "x": 55.23,
+            "y": 78.9
+          },
+          {
+            "x": 69.42,
+            "y": 68.7
+          },
+          {
+            "x": 70.22,
+            "y": 61.34
+          },
+          {
+            "x": 73.05,
+            "y": 60.19
+          }
+        ]
+      },
+      {
+        "id": "mtgm6k6z-qulwom",
+        "type": "route",
+        "points": [
+          {
+            "x": 53.37,
+            "y": 67.9
+          },
+          {
+            "x": 58.51,
+            "y": 64.89
+          },
+          {
+            "x": 60.46,
+            "y": 61.88
+          }
+        ]
+      },
+      {
+        "id": "mtgm7bwh-w6p3qr",
+        "type": "aimHere",
+        "parentTankId": "white-rock-fortress-red-unit-03",
+        "startX": 24.38,
+        "startY": 21.45,
+        "endX": 47.96,
+        "endY": 18.61
+      },
+      {
+        "id": "mtgm7s3v-xa6dov",
+        "type": "aimHere",
+        "parentTankId": "white-rock-fortress-red-unit-09",
+        "startX": 18.26,
+        "startY": 45.07,
+        "endX": 38.3,
+        "endY": 14.89
+      },
+      {
+        "id": "mtgm7vsg-phngsv",
+        "type": "aimHere",
+        "parentTankId": "white-rock-fortress-red-unit-01",
+        "startX": 38.75,
+        "startY": 15.49,
+        "endX": 52.22,
+        "endY": 20.65
+      },
+      {
+        "id": "mtgm7xwv-6lc0mj",
+        "type": "aimHere",
+        "parentTankId": "white-rock-fortress-red-unit-02",
+        "startX": 50.62,
+        "startY": 15.49,
+        "endX": 56.21,
+        "endY": 17.55
+      },
+      {
+        "id": "mtgm81u8-qslkk6",
+        "type": "aimHere",
+        "parentTankId": "white-rock-fortress-red-unit-05",
+        "startX": 62.29,
+        "startY": 25.62,
+        "endX": 74.29,
+        "endY": 23.04
+      },
+      {
+        "id": "mtgm84o5-0kdfpz",
+        "type": "aimHere",
+        "parentTankId": "white-rock-fortress-red-unit-07",
+        "startX": 79.72,
+        "startY": 33.06,
+        "endX": 75.54,
+        "endY": 27.21
+      },
+      {
+        "id": "mtgm887s-ek9int",
+        "type": "aimHere",
+        "parentTankId": "white-rock-fortress-red-unit-04",
+        "startX": 47.78,
+        "startY": 23.54,
+        "endX": 56.3,
+        "endY": 18.08
+      },
+      {
+        "id": "mtgm8lho-dgj11l",
+        "type": "aimHere",
+        "parentTankId": "white-rock-fortress-red-unit-13",
+        "startX": 44.58,
+        "startY": 54.37,
+        "endX": 56.12,
+        "endY": 48.22
+      },
+      {
+        "id": "mtgm8nei-1e2yv6",
+        "type": "aimHere",
+        "parentTankId": "white-rock-fortress-red-unit-15",
+        "startX": 46.46,
+        "startY": 56.32,
+        "endX": 56.38,
+        "endY": 48.13
+      },
+      {
+        "id": "mtgm8q9z-o6w33x",
+        "type": "aimHere",
+        "parentTankId": "white-rock-fortress-red-unit-12",
+        "startX": 42.29,
+        "startY": 52.71,
+        "endX": 49.73,
+        "endY": 42.72
+      },
+      {
+        "id": "mtgm8w7i-ohb9zc",
+        "type": "aimHere",
+        "parentTankId": "white-rock-fortress-red-unit-10",
+        "startX": 34.58,
+        "startY": 50.42,
+        "endX": 54.43,
+        "endY": 29.43
+      },
+      {
+        "id": "mtgm8zy7-iebnrl",
+        "type": "aimHere",
+        "parentTankId": "white-rock-fortress-red-unit-08",
+        "startX": 31.18,
+        "startY": 42.01,
+        "endX": 43.53,
+        "endY": 27.92
+      },
+      {
+        "id": "mtgm9ao0-5pc5qg",
+        "type": "aimHere",
+        "parentTankId": "mtgm74ld-437h70",
+        "startX": 16.4,
+        "startY": 21.71,
+        "endX": 21.72,
+        "endY": 20.47
+      },
+      {
+        "id": "mtgm9fy4-ahmovs",
+        "type": "aimHere",
+        "parentTankId": "mtgm724z-t39eap",
+        "startX": 7.53,
+        "startY": 36.52,
+        "endX": 49.2,
+        "endY": 16.57
+      },
+      {
+        "id": "mtgm9l3p-6ytc8p",
+        "type": "aimHere",
+        "parentTankId": "white-rock-fortress-red-unit-19",
+        "startX": 60.14,
+        "startY": 61.74,
+        "endX": 59.75,
+        "endY": 51.77
+      },
+      {
+        "id": "mtgm9qwd-crgfxz",
+        "type": "aimHere",
+        "parentTankId": "white-rock-fortress-red-unit-22",
+        "startX": 74.03,
+        "startY": 76.88,
+        "endX": 85.47,
+        "endY": 40.95
+      },
+      {
+        "id": "mtgm9u5c-vlht0f",
+        "type": "aimHere",
+        "parentTankId": "white-rock-fortress-red-unit-21",
+        "startX": 72.99,
+        "startY": 74.58,
+        "endX": 85.73,
+        "endY": 40.77
+      },
+      {
+        "id": "mtgma43e-sw6gbi",
+        "type": "aimHere",
+        "parentTankId": "white-rock-fortress-red-unit-11",
+        "startX": 47.85,
+        "startY": 52.22,
+        "endX": 56.47,
+        "endY": 47.25
+      },
+      {
+        "id": "mtgmb7uj-j0vp2l",
+        "type": "aimHere",
+        "parentTankId": "white-rock-fortress-red-unit-16",
+        "startX": 73.33,
+        "startY": 60.14,
+        "endX": 77.31,
+        "endY": 54.87
       }
     ],
     "Vietnam::domination-1|Red": [
@@ -21096,69 +20947,6 @@
     "Arctic Polar Base::domination-1|Blue": [],
     "Attica::domination-1|Blue": [
       {
-        "id": "attica-blue-aim-01",
-        "type": "aimHere",
-        "parentTankId": "attica-blue-unit-07",
-        "startX": 35.07,
-        "startY": 31.53,
-        "endX": 27.42,
-        "endY": 53.46
-      },
-      {
-        "id": "attica-blue-aim-02",
-        "type": "aimHere",
-        "parentTankId": "attica-blue-unit-13",
-        "startX": 78.47,
-        "startY": 42.22,
-        "endX": 78.15,
-        "endY": 47.93
-      },
-      {
-        "id": "attica-blue-aim-03",
-        "type": "aimHere",
-        "parentTankId": "attica-blue-unit-18",
-        "startX": 54.93,
-        "startY": 50.07,
-        "endX": 46.61,
-        "endY": 48.81
-      },
-      {
-        "id": "attica-blue-aim-04",
-        "type": "aimHere",
-        "parentTankId": "attica-blue-unit-18",
-        "startX": 54.93,
-        "startY": 50.07,
-        "endX": 55.55,
-        "endY": 42.42
-      },
-      {
-        "id": "attica-blue-aim-05",
-        "type": "aimHere",
-        "parentTankId": "attica-blue-unit-15",
-        "startX": 73.61,
-        "startY": 45.35,
-        "endX": 83.24,
-        "endY": 53.88
-      },
-      {
-        "id": "attica-blue-aim-06",
-        "type": "aimHere",
-        "parentTankId": "attica-blue-unit-04",
-        "startX": 56.04,
-        "startY": 21.04,
-        "endX": 50.28,
-        "endY": 50.02
-      },
-      {
-        "id": "attica-blue-aim-07",
-        "type": "aimHere",
-        "parentTankId": "attica-blue-unit-16",
-        "startX": 15.62,
-        "startY": 45.56,
-        "endX": 20.17,
-        "endY": 52.65
-      },
-      {
         "id": "attica-blue-aim-08",
         "type": "aimHere",
         "parentTankId": "attica-blue-unit-19",
@@ -21168,15 +20956,6 @@
         "endY": 79.76
       },
       {
-        "id": "attica-blue-aim-09",
-        "type": "aimHere",
-        "parentTankId": "attica-blue-unit-16",
-        "startX": 15.62,
-        "startY": 45.56,
-        "endX": 16.6,
-        "endY": 33.61
-      },
-      {
         "id": "attica-blue-aim-10",
         "type": "aimHere",
         "parentTankId": "attica-blue-unit-17",
@@ -21184,33 +20963,6 @@
         "startY": 48.4,
         "endX": 85.34,
         "endY": 54.1
-      },
-      {
-        "id": "attica-blue-aim-11",
-        "type": "aimHere",
-        "parentTankId": "attica-blue-unit-05",
-        "startX": 58.4,
-        "startY": 21.32,
-        "endX": 60.74,
-        "endY": 30.65
-      },
-      {
-        "id": "attica-blue-aim-12",
-        "type": "aimHere",
-        "parentTankId": "attica-blue-unit-14",
-        "startX": 35.76,
-        "startY": 44.03,
-        "endX": 36.18,
-        "endY": 59.24
-      },
-      {
-        "id": "attica-blue-aim-13",
-        "type": "aimHere",
-        "parentTankId": "attica-blue-unit-09",
-        "startX": 24.03,
-        "startY": 33.4,
-        "endX": 24.06,
-        "endY": 46.53
       },
       {
         "id": "attica-blue-route-01",
@@ -21251,152 +21003,6 @@
           {
             "x": 41.55,
             "y": 27.53
-          }
-        ]
-      },
-      {
-        "id": "attica-blue-route-02",
-        "type": "route",
-        "points": [
-          {
-            "x": 68.78,
-            "y": 26.35
-          },
-          {
-            "x": 68.51,
-            "y": 23.61
-          },
-          {
-            "x": 68.26,
-            "y": 20.83
-          },
-          {
-            "x": 68.12,
-            "y": 18.06
-          },
-          {
-            "x": 68.3,
-            "y": 15.28
-          },
-          {
-            "x": 69.51,
-            "y": 12.81
-          },
-          {
-            "x": 71.44,
-            "y": 10.82
-          },
-          {
-            "x": 67.2,
-            "y": 16.24
-          },
-          {
-            "x": 64.73,
-            "y": 17.49
-          },
-          {
-            "x": 62.19,
-            "y": 18.58
-          },
-          {
-            "x": 59.53,
-            "y": 19.47
-          }
-        ]
-      },
-      {
-        "id": "attica-blue-route-03",
-        "type": "route",
-        "points": [
-          {
-            "x": 14.64,
-            "y": 31.04
-          },
-          {
-            "x": 13.61,
-            "y": 28.51
-          },
-          {
-            "x": 15.35,
-            "y": 26.49
-          },
-          {
-            "x": 17.53,
-            "y": 24.77
-          },
-          {
-            "x": 19.85,
-            "y": 22.11
-          },
-          {
-            "x": 19.65,
-            "y": 24.83
-          },
-          {
-            "x": 20.56,
-            "y": 27.46
-          },
-          {
-            "x": 22.09,
-            "y": 29.74
-          },
-          {
-            "x": 22.57,
-            "y": 32.09
-          },
-          {
-            "x": 19.9,
-            "y": 32.26
-          },
-          {
-            "x": 20.41,
-            "y": 20.78
-          },
-          {
-            "x": 21.73,
-            "y": 18.37
-          },
-          {
-            "x": 23.31,
-            "y": 16.07
-          },
-          {
-            "x": 25.02,
-            "y": 13.93
-          },
-          {
-            "x": 26.9,
-            "y": 11.86
-          },
-          {
-            "x": 27.88,
-            "y": 10.84
-          }
-        ]
-      },
-      {
-        "id": "attica-blue-route-04",
-        "type": "route",
-        "points": [
-          {
-            "x": 22.29,
-            "y": 35.62
-          },
-          {
-            "x": 20.53,
-            "y": 37.75
-          },
-          {
-            "x": 18.99,
-            "y": 40.11
-          },
-          {
-            "x": 17.5,
-            "y": 42.43
-          },
-          {
-            "x": 16.77,
-            "y": 43.58
           }
         ]
       },
@@ -21449,24 +21055,6 @@
         ]
       },
       {
-        "id": "attica-blue-route-07",
-        "type": "route",
-        "points": [
-          {
-            "x": 70.54,
-            "y": 34.74
-          },
-          {
-            "x": 72.08,
-            "y": 37.03
-          },
-          {
-            "x": 74.15,
-            "y": 38.47
-          }
-        ]
-      },
-      {
         "id": "attica-blue-route-08",
         "type": "route",
         "points": [
@@ -21485,33 +21073,6 @@
           {
             "x": 85.1,
             "y": 46.57
-          }
-        ],
-        "dangerRoute": true
-      },
-      {
-        "id": "attica-blue-route-10",
-        "type": "route",
-        "points": [
-          {
-            "x": 67.15,
-            "y": 65.7
-          },
-          {
-            "x": 66.54,
-            "y": 62.97
-          },
-          {
-            "x": 65.94,
-            "y": 60.28
-          },
-          {
-            "x": 65.33,
-            "y": 57.56
-          },
-          {
-            "x": 65.02,
-            "y": 56.19
           }
         ],
         "dangerRoute": true
@@ -21630,69 +21191,398 @@
         "dangerRoute": true
       },
       {
-        "id": "attica-blue-route-14",
+        "id": "mtgkxz5d-7twc1r",
+        "type": "aimHere",
+        "parentTankId": "attica-blue-unit-15",
+        "startX": 75,
+        "startY": 45.65,
+        "endX": 80.77,
+        "endY": 55.94
+      },
+      {
+        "id": "mtgkyeih-zjto79",
+        "type": "aimHere",
+        "parentTankId": "attica-blue-unit-10",
+        "startX": 74.58,
+        "startY": 40.07,
+        "endX": 42.55,
+        "endY": 69.94
+      },
+      {
+        "id": "mtgkz7lz-rqpnk2",
+        "type": "aimHere",
+        "parentTankId": "attica-blue-unit-06",
+        "startX": 42.71,
+        "startY": 29.51,
+        "endX": 78.37,
+        "endY": 58.77
+      },
+      {
+        "id": "mtgkzdin-qi1u0k",
+        "type": "aimHere",
+        "parentTankId": "attica-blue-unit-13",
+        "startX": 78.47,
+        "startY": 42.22,
+        "endX": 80.06,
+        "endY": 56.73
+      },
+      {
+        "id": "mtgkzrth-wbzal2",
         "type": "route",
         "points": [
           {
-            "x": 56.2,
-            "y": 42.73
+            "x": 72.96,
+            "y": 10.01
           },
           {
-            "x": 55.72,
-            "y": 45.35
+            "x": 69.51,
+            "y": 12.85
           },
           {
-            "x": 55.63,
-            "y": 48.08
+            "x": 68.26,
+            "y": 16.48
+          },
+          {
+            "x": 69.68,
+            "y": 28.36
+          }
+        ]
+      },
+      {
+        "id": "mtgl01bf-eyiwv4",
+        "type": "route",
+        "points": [
+          {
+            "x": 43,
+            "y": 13.47
+          },
+          {
+            "x": 52.66,
+            "y": 15.59
+          }
+        ]
+      },
+      {
+        "id": "mtgl04nl-bullae",
+        "type": "route",
+        "points": [
+          {
+            "x": 67.91,
+            "y": 16.22
+          },
+          {
+            "x": 57.09,
+            "y": 20.38
+          }
+        ]
+      },
+      {
+        "id": "mtgl0c51-lvmb4y",
+        "type": "aimHere",
+        "parentTankId": "attica-blue-unit-05",
+        "startX": 58.4,
+        "startY": 21.32,
+        "endX": 70.3,
+        "endY": 69.41
+      },
+      {
+        "id": "mtgl0i87-uvg73i",
+        "type": "aimHere",
+        "parentTankId": "attica-blue-unit-04",
+        "startX": 56.04,
+        "startY": 21.04,
+        "endX": 52.22,
+        "endY": 74.73
+      },
+      {
+        "id": "mtgl0q9b-i8h61t",
+        "type": "aimHere",
+        "parentTankId": "attica-blue-unit-25",
+        "startX": 51.88,
+        "startY": 78.19,
+        "endX": 31.91,
+        "endY": 82.27
+      },
+      {
+        "id": "mtgl1a1v-2oudyw",
+        "type": "aimHere",
+        "parentTankId": "attica-blue-unit-24",
+        "startX": 23.76,
+        "startY": 75.26,
+        "endX": 26.86,
+        "endY": 89.8
+      },
+      {
+        "id": "mtgl1d8j-y1gcgq",
+        "type": "aimHere",
+        "parentTankId": "attica-blue-unit-27",
+        "startX": 46.18,
+        "startY": 83.89,
+        "endX": 30.58,
+        "endY": 90.07
+      },
+      {
+        "id": "mtgl1fwv-uor6oo",
+        "type": "aimHere",
+        "parentTankId": "attica-blue-unit-26",
+        "startX": 62.08,
+        "startY": 83.19,
+        "endX": 71.81,
+        "endY": 88.74
+      },
+      {
+        "id": "mtgl2hwn-2iusri",
+        "type": "route",
+        "points": [
+          {
+            "x": 60.91,
+            "y": 54.16
+          },
+          {
+            "x": 62.15,
+            "y": 60.19
+          },
+          {
+            "x": 61.79,
+            "y": 71.63
+          },
+          {
+            "x": 50.89,
+            "y": 71.45
+          },
+          {
+            "x": 52.75,
+            "y": 75.53
           }
         ],
         "dangerRoute": true
       },
       {
-        "id": "attica-blue-route-15",
+        "id": "mtgl2rvp-fsaozh",
         "type": "route",
         "points": [
           {
-            "x": 53,
-            "y": 76.07
+            "x": 52.66,
+            "y": 75.97
           },
           {
-            "x": 55.52,
-            "y": 76.16
-          },
-          {
-            "x": 58.13,
-            "y": 76.61
-          },
-          {
-            "x": 60.06,
-            "y": 78.34
-          },
-          {
-            "x": 60.62,
-            "y": 81.03
+            "x": 52.48,
+            "y": 78.01
           }
         ],
         "dangerRoute": true
       },
       {
-        "id": "attica-blue-route-16",
+        "id": "mtgl36s5-gdiqdl",
         "type": "route",
         "points": [
           {
-            "x": 16.25,
-            "y": 69.55
+            "x": 50,
+            "y": 33.5
           },
           {
-            "x": 16.25,
-            "y": 72.33
-          },
-          {
-            "x": 16.91,
-            "y": 74.98
+            "x": 57.27,
+            "y": 40.6
           }
         ],
         "dangerRoute": true
+      },
+      {
+        "id": "mtgl3oh1-sce51t",
+        "type": "aimHere",
+        "parentTankId": "attica-blue-unit-14",
+        "startX": 35.76,
+        "startY": 44.03,
+        "endX": 24.11,
+        "endY": 54.61
+      },
+      {
+        "id": "mtgl3vcj-gazp2z",
+        "type": "aimHere",
+        "parentTankId": "attica-blue-unit-14",
+        "startX": 35.76,
+        "startY": 44.03,
+        "endX": 50.98,
+        "endY": 58.33
+      },
+      {
+        "id": "mtgl4dxz-2qa1cx",
+        "type": "aimHere",
+        "parentTankId": "attica-blue-unit-12",
+        "startX": 57.22,
+        "startY": 41.18,
+        "endX": 47.96,
+        "endY": 64.09
+      },
+      {
+        "id": "mtgl4xsj-uqucw7",
+        "type": "route",
+        "points": [
+          {
+            "x": 28.81,
+            "y": 9.74
+          },
+          {
+            "x": 24.91,
+            "y": 14.18
+          },
+          {
+            "x": 19.41,
+            "y": 23.49
+          },
+          {
+            "x": 13.65,
+            "y": 28.72
+          },
+          {
+            "x": 16.04,
+            "y": 32.09
+          }
+        ]
+      },
+      {
+        "id": "mtgl52s7-0ej52l",
+        "type": "route",
+        "points": [
+          {
+            "x": 19.41,
+            "y": 24.37
+          },
+          {
+            "x": 22.07,
+            "y": 29.43
+          },
+          {
+            "x": 23.76,
+            "y": 33.24
+          }
+        ]
+      },
+      {
+        "id": "mtgl58ch-8h8qfe",
+        "type": "aimHere",
+        "parentTankId": "attica-blue-unit-08",
+        "startX": 16.94,
+        "startY": 32.01,
+        "endX": 15.42,
+        "endY": 69.86
+      },
+      {
+        "id": "mtgl5cf7-mujmqy",
+        "type": "aimHere",
+        "parentTankId": "attica-blue-unit-09",
+        "startX": 24.03,
+        "startY": 33.4,
+        "endX": 24.29,
+        "endY": 68.26
+      },
+      {
+        "id": "mtgl5fnf-5w226b",
+        "type": "aimHere",
+        "parentTankId": "attica-blue-unit-07",
+        "startX": 35.07,
+        "startY": 31.53,
+        "endX": 24.64,
+        "endY": 68.53
+      },
+      {
+        "id": "mtgl5j5n-qojave",
+        "type": "aimHere",
+        "parentTankId": "attica-blue-unit-20",
+        "startX": 5,
+        "startY": 62.43,
+        "endX": 35.02,
+        "endY": 55.58
+      },
+      {
+        "id": "mtgl5mmj-lfq0ra",
+        "type": "aimHere",
+        "parentTankId": "attica-blue-unit-20",
+        "startX": 5,
+        "startY": 62.43,
+        "endX": 25.26,
+        "endY": 66.75
+      },
+      {
+        "id": "mtgl63uf-s5c97g",
+        "type": "aimHere",
+        "parentTankId": "attica-blue-unit-22",
+        "startX": 44.51,
+        "startY": 70.76,
+        "endX": 28.28,
+        "endY": 84.31
+      },
+      {
+        "id": "mtgl6ga7-3tvocz",
+        "type": "aimHere",
+        "parentTankId": "mtgl6cls-51h2tw",
+        "startX": 69.24,
+        "startY": 70.21,
+        "endX": 67.56,
+        "endY": 86.7
+      },
+      {
+        "id": "mtgl6osl-0i24og",
+        "type": "aimHere",
+        "parentTankId": "attica-blue-unit-09",
+        "startX": 24.03,
+        "startY": 33.4,
+        "endX": 34.49,
+        "endY": 69.41
+      },
+      {
+        "id": "mtgl6sad-z0pwlb",
+        "type": "aimHere",
+        "parentTankId": "attica-blue-unit-07",
+        "startX": 35.07,
+        "startY": 31.53,
+        "endX": 14.98,
+        "endY": 68.97
+      },
+      {
+        "id": "mtgl79hr-jyx99d",
+        "type": "aimHere",
+        "parentTankId": "attica-blue-unit-02",
+        "startX": 53.75,
+        "startY": 16.04,
+        "endX": 43.09,
+        "endY": 70.83
+      },
+      {
+        "id": "mtgl7kdp-n45w7r",
+        "type": "route",
+        "points": [
+          {
+            "x": 57.54,
+            "y": 41.4
+          },
+          {
+            "x": 61.97,
+            "y": 44.59
+          },
+          {
+            "x": 60.73,
+            "y": 53.9
+          }
+        ]
+      },
+      {
+        "id": "mtgl7olv-50jwsk",
+        "type": "route",
+        "points": [
+          {
+            "x": 69.06,
+            "y": 32.88
+          },
+          {
+            "x": 69.15,
+            "y": 35.72
+          },
+          {
+            "x": 73.67,
+            "y": 39.27
+          }
+        ]
       }
     ],
     "Battle of Hürtgen Forest::domination-1|Blue": [],
@@ -40412,24 +40302,6 @@
         "endY": 84.14
       },
       {
-        "id": "white-rock-fortress-blue-aim-02",
-        "type": "aimHere",
-        "parentTankId": "white-rock-fortress-blue-unit-10",
-        "startX": 8.12,
-        "startY": 34.44,
-        "endX": 11.62,
-        "endY": 45.52
-      },
-      {
-        "id": "white-rock-fortress-blue-aim-03",
-        "type": "aimHere",
-        "parentTankId": "white-rock-fortress-blue-unit-06",
-        "startX": 23.54,
-        "startY": 23.89,
-        "endX": 21.81,
-        "endY": 44.88
-      },
-      {
         "id": "white-rock-fortress-blue-aim-04",
         "type": "aimHere",
         "parentTankId": "white-rock-fortress-blue-unit-06",
@@ -40437,15 +40309,6 @@
         "startY": 23.89,
         "endX": 15.34,
         "endY": 36.25
-      },
-      {
-        "id": "white-rock-fortress-blue-aim-05",
-        "type": "aimHere",
-        "parentTankId": "white-rock-fortress-blue-unit-10",
-        "startX": 8.12,
-        "startY": 34.44,
-        "endX": 17.94,
-        "endY": 45.17
       },
       {
         "id": "white-rock-fortress-blue-aim-06",
@@ -40457,15 +40320,6 @@
         "endY": 61.32
       },
       {
-        "id": "white-rock-fortress-blue-aim-07",
-        "type": "aimHere",
-        "parentTankId": "white-rock-fortress-blue-unit-11",
-        "startX": 88.26,
-        "startY": 40.69,
-        "endX": 85.87,
-        "endY": 45.89
-      },
-      {
         "id": "white-rock-fortress-blue-aim-08",
         "type": "aimHere",
         "parentTankId": "white-rock-fortress-blue-unit-14",
@@ -40473,64 +40327,6 @@
         "startY": 53.75,
         "endX": 75.48,
         "endY": 58.75
-      },
-      {
-        "id": "white-rock-fortress-blue-route-01",
-        "type": "route",
-        "points": [
-          {
-            "x": 20.69,
-            "y": 86.97
-          },
-          {
-            "x": 17.38,
-            "y": 86.98
-          },
-          {
-            "x": 19.22,
-            "y": 89.65
-          },
-          {
-            "x": 18.86,
-            "y": 87.25
-          },
-          {
-            "x": 18.44,
-            "y": 89.79
-          },
-          {
-            "x": 18.16,
-            "y": 87.15
-          },
-          {
-            "x": 17.24,
-            "y": 89.6
-          },
-          {
-            "x": 17.2,
-            "y": 92.35
-          },
-          {
-            "x": 17.24,
-            "y": 94.97
-          },
-          {
-            "x": 17.32,
-            "y": 97.64
-          },
-          {
-            "x": 18.43,
-            "y": 95.16
-          },
-          {
-            "x": 18.57,
-            "y": 97.64
-          },
-          {
-            "x": 19.09,
-            "y": 92.44
-          }
-        ]
       },
       {
         "id": "white-rock-fortress-blue-route-02",
@@ -40583,102 +40379,6 @@
         ]
       },
       {
-        "id": "white-rock-fortress-blue-route-03",
-        "type": "route",
-        "points": [
-          {
-            "x": 12.9,
-            "y": 87.15
-          },
-          {
-            "x": 12.74,
-            "y": 89.65
-          },
-          {
-            "x": 12.26,
-            "y": 86.94
-          },
-          {
-            "x": 12.33,
-            "y": 89.86
-          },
-          {
-            "x": 11.8,
-            "y": 87.04
-          },
-          {
-            "x": 11.59,
-            "y": 89.68
-          },
-          {
-            "x": 11.18,
-            "y": 87.04
-          },
-          {
-            "x": 13.16,
-            "y": 89.65
-          }
-        ]
-      },
-      {
-        "id": "white-rock-fortress-blue-route-04",
-        "type": "route",
-        "points": [
-          {
-            "x": 7.97,
-            "y": 87.15
-          },
-          {
-            "x": 7.72,
-            "y": 89.92
-          },
-          {
-            "x": 7.47,
-            "y": 92.64
-          },
-          {
-            "x": 6.77,
-            "y": 95.14
-          },
-          {
-            "x": 6.84,
-            "y": 97.76
-          },
-          {
-            "x": 5.94,
-            "y": 95.01
-          },
-          {
-            "x": 5.85,
-            "y": 97.49
-          },
-          {
-            "x": 5.78,
-            "y": 92.46
-          },
-          {
-            "x": 5.78,
-            "y": 89.7
-          },
-          {
-            "x": 5.57,
-            "y": 87.09
-          },
-          {
-            "x": 6.75,
-            "y": 89.92
-          },
-          {
-            "x": 6.98,
-            "y": 87.08
-          },
-          {
-            "x": 6.35,
-            "y": 87.15
-          }
-        ]
-      },
-      {
         "id": "white-rock-fortress-blue-route-05",
         "type": "route",
         "points": [
@@ -40713,144 +40413,6 @@
           {
             "x": 88.01,
             "y": 38.87
-          }
-        ]
-      },
-      {
-        "id": "white-rock-fortress-blue-route-06",
-        "type": "route",
-        "points": [
-          {
-            "x": 26.25,
-            "y": 87.14
-          },
-          {
-            "x": 26.78,
-            "y": 89.77
-          },
-          {
-            "x": 27,
-            "y": 86.97
-          }
-        ]
-      },
-      {
-        "id": "white-rock-fortress-blue-route-07",
-        "type": "route",
-        "points": [
-          {
-            "x": 19.84,
-            "y": 92.47
-          },
-          {
-            "x": 20.29,
-            "y": 89.72
-          },
-          {
-            "x": 21.19,
-            "y": 87.07
-          },
-          {
-            "x": 21.04,
-            "y": 89.79
-          },
-          {
-            "x": 21.77,
-            "y": 87.15
-          },
-          {
-            "x": 21.85,
-            "y": 89.79
-          },
-          {
-            "x": 21.95,
-            "y": 92.43
-          },
-          {
-            "x": 22.05,
-            "y": 95.04
-          },
-          {
-            "x": 22.7,
-            "y": 92.47
-          },
-          {
-            "x": 22.77,
-            "y": 89.84
-          },
-          {
-            "x": 22.34,
-            "y": 87.16
-          },
-          {
-            "x": 21.28,
-            "y": 92.53
-          },
-          {
-            "x": 21.3,
-            "y": 95.12
-          },
-          {
-            "x": 21.85,
-            "y": 97.68
-          },
-          {
-            "x": 23.28,
-            "y": 95.17
-          },
-          {
-            "x": 22.9,
-            "y": 97.77
-          },
-          {
-            "x": 23.98,
-            "y": 95.04
-          },
-          {
-            "x": 23.63,
-            "y": 92.53
-          }
-        ]
-      },
-      {
-        "id": "white-rock-fortress-blue-route-08",
-        "type": "route",
-        "points": [
-          {
-            "x": 75.26,
-            "y": 28.5
-          },
-          {
-            "x": 75.82,
-            "y": 31.1
-          },
-          {
-            "x": 76.46,
-            "y": 33.78
-          },
-          {
-            "x": 77.25,
-            "y": 36.46
-          },
-          {
-            "x": 77.95,
-            "y": 39.1
-          },
-          {
-            "x": 78.28,
-            "y": 41.87
-          },
-          {
-            "x": 78.58,
-            "y": 44.62
-          },
-          {
-            "x": 78.91,
-            "y": 47.42
-          },
-          {
-            "x": 79.19,
-            "y": 49.95
           }
         ]
       },
@@ -40893,40 +40455,6 @@
         ]
       },
       {
-        "id": "white-rock-fortress-blue-route-10",
-        "type": "route",
-        "points": [
-          {
-            "x": 75.91,
-            "y": 78.16
-          },
-          {
-            "x": 75.59,
-            "y": 80.73
-          },
-          {
-            "x": 74.41,
-            "y": 83.22
-          },
-          {
-            "x": 72.36,
-            "y": 85.1
-          },
-          {
-            "x": 70.09,
-            "y": 86.69
-          },
-          {
-            "x": 67.69,
-            "y": 88.13
-          },
-          {
-            "x": 65.26,
-            "y": 89.45
-          }
-        ]
-      },
-      {
         "id": "white-rock-fortress-blue-route-11",
         "type": "route",
         "points": [
@@ -40961,40 +40489,6 @@
         ]
       },
       {
-        "id": "white-rock-fortress-blue-route-12",
-        "type": "route",
-        "points": [
-          {
-            "x": 43.26,
-            "y": 25.79
-          },
-          {
-            "x": 45.24,
-            "y": 24.15
-          },
-          {
-            "x": 47.41,
-            "y": 22.38
-          },
-          {
-            "x": 50.1,
-            "y": 21.94
-          },
-          {
-            "x": 48.96,
-            "y": 24.03
-          },
-          {
-            "x": 46.84,
-            "y": 25.88
-          },
-          {
-            "x": 45.68,
-            "y": 26.6
-          }
-        ]
-      },
-      {
         "id": "white-rock-fortress-blue-route-13",
         "type": "route",
         "points": [
@@ -41013,36 +40507,6 @@
           {
             "x": 57.01,
             "y": 37.96
-          }
-        ]
-      },
-      {
-        "id": "white-rock-fortress-blue-route-14",
-        "type": "route",
-        "points": [
-          {
-            "x": 28.13,
-            "y": 16.57
-          },
-          {
-            "x": 26.63,
-            "y": 18.72
-          },
-          {
-            "x": 24.23,
-            "y": 21.08
-          },
-          {
-            "x": 21.82,
-            "y": 20.73
-          },
-          {
-            "x": 19.27,
-            "y": 20.55
-          },
-          {
-            "x": 18.03,
-            "y": 21.15
           }
         ]
       },
@@ -41073,24 +40537,6 @@
           {
             "x": 40.46,
             "y": 14.2
-          }
-        ]
-      },
-      {
-        "id": "white-rock-fortress-blue-route-16",
-        "type": "route",
-        "points": [
-          {
-            "x": 9.08,
-            "y": 92.61
-          },
-          {
-            "x": 10.41,
-            "y": 95.1
-          },
-          {
-            "x": 9.43,
-            "y": 97.77
           }
         ]
       },
@@ -41173,54 +40619,343 @@
         "dangerRoute": true
       },
       {
-        "id": "white-rock-fortress-blue-route-19",
+        "id": "mtglwame-nsco9h",
+        "type": "aimHere",
+        "parentTankId": "white-rock-fortress-blue-unit-16",
+        "startX": 65.83,
+        "startY": 56.32,
+        "endX": 42.73,
+        "endY": 62.5
+      },
+      {
+        "id": "mtglwe22-e5cpve",
+        "type": "aimHere",
+        "parentTankId": "white-rock-fortress-blue-unit-13",
+        "startX": 56.94,
+        "startY": 47.5,
+        "endX": 45.83,
+        "endY": 56.82
+      },
+      {
+        "id": "mtglwh0o-a1aknz",
+        "type": "aimHere",
+        "parentTankId": "white-rock-fortress-blue-unit-13",
+        "startX": 56.94,
+        "startY": 47.5,
+        "endX": 44.15,
+        "endY": 54.78
+      },
+      {
+        "id": "mtglwjca-s7lx2d",
+        "type": "aimHere",
+        "parentTankId": "white-rock-fortress-blue-unit-12",
+        "startX": 50,
+        "startY": 42.5,
+        "endX": 42.46,
+        "endY": 53.01
+      },
+      {
+        "id": "mtglxijw-8t4xqm",
         "type": "route",
         "points": [
           {
-            "x": 11.01,
-            "y": 41.95
+            "x": 63.3,
+            "y": 90.69
           },
           {
-            "x": 10.02,
-            "y": 39.4
+            "x": 72.7,
+            "y": 84.75
           },
           {
-            "x": 9.03,
-            "y": 36.77
+            "x": 75,
+            "y": 82.36
+          },
+          {
+            "x": 75.18,
+            "y": 78.9
+          },
+          {
+            "x": 75,
+            "y": 77.13
+          }
+        ]
+      },
+      {
+        "id": "mtglxs3a-x90kk4",
+        "type": "aimHere",
+        "parentTankId": "white-rock-fortress-blue-unit-17",
+        "startX": 16.6,
+        "startY": 68.89,
+        "endX": 16.4,
+        "endY": 56.82
+      },
+      {
+        "id": "mtglxwjm-3pf1ql",
+        "type": "aimHere",
+        "parentTankId": "white-rock-fortress-blue-unit-19",
+        "startX": 30.28,
+        "startY": 84.79,
+        "endX": 46.63,
+        "endY": 84.57
+      },
+      {
+        "id": "mtglyneq-cyznmt",
+        "type": "aimHere",
+        "parentTankId": "mtglyeqh-g9zyyj",
+        "startX": 12.94,
+        "startY": 42.28,
+        "endX": 16.58,
+        "endY": 55.49
+      },
+      {
+        "id": "mtglyrnw-8t6u81",
+        "type": "aimHere",
+        "parentTankId": "white-rock-fortress-blue-unit-10",
+        "startX": 8.12,
+        "startY": 34.44,
+        "endX": 12.59,
+        "endY": 55.4
+      },
+      {
+        "id": "mtglywb7-a4eyyp",
+        "type": "aimHere",
+        "parentTankId": "white-rock-fortress-blue-unit-10",
+        "startX": 8.12,
+        "startY": 34.44,
+        "endX": 24.91,
+        "endY": 48.22
+      },
+      {
+        "id": "mtglz596-5973q8",
+        "type": "aimHere",
+        "parentTankId": "white-rock-fortress-blue-unit-08",
+        "startX": 43.26,
+        "startY": 27.85,
+        "endX": 32.62,
+        "endY": 40.33
+      },
+      {
+        "id": "mtglzkqk-4rbijs",
+        "type": "aimHere",
+        "parentTankId": "white-rock-fortress-blue-unit-11",
+        "startX": 88.26,
+        "startY": 40.69,
+        "endX": 75.36,
+        "endY": 77.48
+      },
+      {
+        "id": "mtglzq86-e41hxt",
+        "type": "aimHere",
+        "parentTankId": "white-rock-fortress-blue-unit-11",
+        "startX": 88.26,
+        "startY": 40.69,
+        "endX": 71.99,
+        "endY": 73.4
+      },
+      {
+        "id": "mtgm00ba-swxz3f",
+        "type": "aimHere",
+        "parentTankId": "mtglzvpp-vke0zj",
+        "startX": 72.25,
+        "startY": 73.84,
+        "endX": 43.62,
+        "endY": 73.93
+      },
+      {
+        "id": "mtgm0hgg-c6zzat",
+        "type": "route",
+        "points": [
+          {
+            "x": 55.59,
+            "y": 18.17
+          },
+          {
+            "x": 54.26,
+            "y": 19.85
+          },
+          {
+            "x": 52.48,
+            "y": 20.74
+          },
+          {
+            "x": 50.98,
+            "y": 21.71
+          },
+          {
+            "x": 48.14,
+            "y": 22.6
+          },
+          {
+            "x": 43.79,
+            "y": 27.12
+          }
+        ]
+      },
+      {
+        "id": "mtgm0ozc-2jqboa",
+        "type": "aimHere",
+        "parentTankId": "white-rock-fortress-blue-unit-03",
+        "startX": 38.06,
+        "startY": 13.68,
+        "endX": 17.64,
+        "endY": 47.16
+      },
+      {
+        "id": "mtgm15ny-pwi2b3",
+        "type": "route",
+        "points": [
+          {
+            "x": 27.57,
+            "y": 15.86
+          },
+          {
+            "x": 26.33,
+            "y": 17.28
+          },
+          {
+            "x": 24.47,
+            "y": 21.18
+          },
+          {
+            "x": 23.31,
+            "y": 21.27
+          },
+          {
+            "x": 21.01,
+            "y": 20.29
+          },
+          {
+            "x": 17.99,
+            "y": 21.27
+          }
+        ]
+      },
+      {
+        "id": "mtgm19r2-rjp7fx",
+        "type": "route",
+        "points": [
+          {
+            "x": 28.1,
+            "y": 15.06
+          },
+          {
+            "x": 37.77,
+            "y": 13.91
           }
         ],
         "dangerRoute": true
       },
       {
-        "id": "white-rock-fortress-blue-route-20",
+        "id": "mtgm1iz2-193gvt",
+        "type": "aimHere",
+        "parentTankId": "mtgm1dgt-boz9bw",
+        "startX": 28.01,
+        "startY": 15.24,
+        "endX": 24.29,
+        "endY": 39.09
+      },
+      {
+        "id": "mtgm1lx8-vpcg6j",
+        "type": "aimHere",
+        "parentTankId": "mtgm1dgt-boz9bw",
+        "startX": 28.01,
+        "startY": 15.24,
+        "endX": 33.16,
+        "endY": 40.07
+      },
+      {
+        "id": "mtgm1qlm-0tq35y",
+        "type": "aimHere",
+        "parentTankId": "mtgm1dgt-boz9bw",
+        "startX": 28.01,
+        "startY": 15.24,
+        "endX": 38.3,
+        "endY": 34.39
+      },
+      {
+        "id": "mtgm1wh4-uz00hv",
         "type": "route",
         "points": [
           {
-            "x": 16.98,
-            "y": 22.33
+            "x": 8.33,
+            "y": 34.39
           },
           {
-            "x": 15.32,
-            "y": 24.56
-          },
-          {
-            "x": 13.73,
-            "y": 26.77
-          },
-          {
-            "x": 12.06,
-            "y": 29.02
-          },
-          {
-            "x": 10.39,
-            "y": 31.3
-          },
-          {
-            "x": 9.58,
-            "y": 32.4
+            "x": 17.37,
+            "y": 21.62
           }
         ],
         "dangerRoute": true
+      },
+      {
+        "id": "mtgm1zuq-h019y4",
+        "type": "route",
+        "points": [
+          {
+            "x": 7.89,
+            "y": 35.19
+          },
+          {
+            "x": 12.59,
+            "y": 42.81
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "mtgm25he-9u5zdt",
+        "type": "route",
+        "points": [
+          {
+            "x": 68.09,
+            "y": 56.11
+          },
+          {
+            "x": 69.86,
+            "y": 51.24
+          }
+        ]
+      },
+      {
+        "id": "mtgm2qvz-ms14gt",
+        "type": "aimHere",
+        "parentTankId": "white-rock-fortress-blue-unit-20",
+        "startX": 62.99,
+        "startY": 90.69,
+        "endX": 53.02,
+        "endY": 84.66
+      },
+      {
+        "id": "mtgm39hu-1y01e5",
+        "type": "route",
+        "points": [
+          {
+            "x": 73.05,
+            "y": 37.14
+          },
+          {
+            "x": 72.88,
+            "y": 35.28
+          },
+          {
+            "x": 75.45,
+            "y": 32.53
+          }
+        ]
+      },
+      {
+        "id": "mtgm3gs0-izbboo",
+        "type": "route",
+        "points": [
+          {
+            "x": 75.45,
+            "y": 32.53
+          },
+          {
+            "x": 75.09,
+            "y": 28.01
+          }
+        ]
       }
     ],
     "Abandoned Factory::domination-1|Red": [],
@@ -41235,6 +40970,6 @@
     "Middle East::domination-1|Red": [],
     "Middle East::domination-1|Blue": []
   },
-  "updatedAt": "2026-08-31T01:47:58.767Z",
-  "exportedAt": "2026-08-31T01:48:10.517Z"
+  "updatedAt": "2026-08-31T02:27:47.093Z",
+  "exportedAt": "2026-08-31T02:31:37.867Z"
 }

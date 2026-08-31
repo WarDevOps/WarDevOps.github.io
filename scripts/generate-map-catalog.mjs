@@ -193,7 +193,7 @@ async function discoverMap(folderName, metadata, mapUpdated) {
     throw new Error(`Invalid map slug for ${folderName}: ${slug}`);
   }
   if (!/^\d{4}-\d{2}-\d{2}$/.test(updated)) {
-    throw new Error(`Missing or invalid mapUpdated date in Maptatic.json for ${name}`);
+    throw new Error(`Missing or invalid mapUpdated date in Maptactic.json for ${name}`);
   }
   if (!Object.hasOwn(MODE_ORDER, defaultMode)) {
     throw new Error(`Invalid default mode for ${folderName}: ${defaultMode}`);
@@ -266,7 +266,7 @@ async function buildCatalog() {
   }
   battleRating(metadata.defaultBr, "map metadata default");
   if (mapLayout.version !== 2 || !mapLayout.mapUpdated || typeof mapLayout.mapUpdated !== "object" || Array.isArray(mapLayout.mapUpdated)) {
-    throw new Error("Maptatic.json must contain a mapUpdated object");
+    throw new Error("Maptactic.json must contain a mapUpdated object");
   }
   const entries = await directoryEntries(IMG_ROOT);
   const maps = [];
@@ -391,7 +391,7 @@ async function generate() {
     console.warn(`Metadata without a usable shared or Red/Blue map image: ${unusedMetadata.join(", ")}`);
   }
   if (unusedMapUpdates.length) {
-    console.warn(`Maptatic.json dates without a usable map: ${unusedMapUpdates.join(", ")}`);
+    console.warn(`Maptactic.json dates without a usable map: ${unusedMapUpdates.join(", ")}`);
   }
 }
 
@@ -399,7 +399,7 @@ await generate();
 
 if (WATCH_MODE) {
   let timer = null;
-  console.log("Watching img/, map metadata, and Maptatic.json. Press Ctrl+C to stop.");
+  console.log("Watching img/, map metadata, and Maptactic.json. Press Ctrl+C to stop.");
   const scheduleGenerate = () => {
     clearTimeout(timer);
     timer = setTimeout(() => generate().catch(error => console.error(error)), 300);

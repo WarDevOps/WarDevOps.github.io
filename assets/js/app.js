@@ -64,7 +64,7 @@ import { initDiscordMemberCount } from './discord-stats.js';
     const hiddenMarkerTypes = new Set();
     const MARKER_STORAGE_KEY = "maptactic-marker-layout-v2";
     const DEFAULT_MARKER_LAYOUT_URL = new URL("../data/maptactic.json", import.meta.url);
-    const DEFAULT_MARKER_LAYOUT_FILENAME = "Maptatic.json";
+    const DEFAULT_MARKER_LAYOUT_FILENAME = "Maptactic.json";
     const MAX_IMPORTED_MARKERS = 5000;
     const MAX_IMPORTED_ANNOTATIONS = 5000;
     const MAX_IMPORTED_ROUTE_POINTS = 25000;
