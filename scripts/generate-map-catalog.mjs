@@ -45,6 +45,17 @@ function encodeUrlPath(value) {
   return toPosix(value).split("/").map(encodeURIComponent).join("/");
 }
 
+function battleRating(value, context) {
+  const source = typeof value === "number" ? { min: value } : value;
+  const min = Number(source?.min);
+  const max = source?.max == null ? null : Number(source.max);
+  const validValue = rating => Number.isFinite(rating) && rating >= 1 && Math.abs(rating * 10 - Math.round(rating * 10)) < 1e-9;
+  if (!validValue(min) || (max !== null && (!validValue(max) || max < min))) {
+    throw new Error(`Missing or invalid BR for ${context}`);
+  }
+  return max === null ? { min } : { min, max };
+}
+
 function safeImageFolder(relativeFolder) {
   const absoluteFolder = path.resolve(IMG_ROOT, relativeFolder);
   const rootPrefix = `${path.resolve(IMG_ROOT)}${path.sep}`;
@@ -135,11 +146,11 @@ async function configuredVariation(definition) {
       }
     }
   }
-  return { mode, number, folder, ...imageConfig };
+  return { mode, number, folder, br: definition.br, ...imageConfig };
 }
 
 function compactVariation(variation, rootFolder) {
-  const result = { mode: variation.mode, number: variation.number };
+  const result = { mode: variation.mode, number: variation.number, br: variation.br };
   if (variation.folder !== rootFolder) result.folder = variation.folder;
   if (variation.sharedImage) {
     result.sharedImage = variation.sharedImage;
@@ -160,6 +171,8 @@ async function discoverMap(folderName, metadata, mapUpdated) {
   const slug = mapMetadata.slug || mapSlug(name);
   const updated = String(mapUpdated?.[name] || "");
   const defaultMode = String(mapMetadata.defaultMode || "domination").toLowerCase();
+  const mapBr = battleRating(mapMetadata.br ?? metadata.defaultBr, folderName);
+  const variationBrs = mapMetadata.variationBrs ?? {};
   if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(slug)) {
     throw new Error(`Invalid map slug for ${folderName}: ${slug}`);
   }
@@ -168,6 +181,9 @@ async function discoverMap(folderName, metadata, mapUpdated) {
   }
   if (!Object.hasOwn(MODE_ORDER, defaultMode)) {
     throw new Error(`Invalid default mode for ${folderName}: ${defaultMode}`);
+  }
+  if (!variationBrs || typeof variationBrs !== "object" || Array.isArray(variationBrs)) {
+    throw new Error(`Invalid variation BR metadata for ${folderName}`);
   }
 
   const variations = [{ mode: defaultMode, number: 1, folder: folderName, ...rootImages }];
@@ -193,6 +209,11 @@ async function discoverMap(folderName, metadata, mapUpdated) {
     const id = `${variation.mode}-${variation.number}`;
     if (seenIds.has(id)) throw new Error(`Duplicate variation ${id} for ${name}`);
     seenIds.add(id);
+    variation.br = battleRating(variation.br ?? variationBrs[id] ?? mapBr, `${name} ${id}`);
+  }
+  const unusedVariationBrs = Object.keys(variationBrs).filter(id => !seenIds.has(id));
+  if (unusedVariationBrs.length) {
+    throw new Error(`BR metadata references unknown variations for ${name}: ${unusedVariationBrs.join(", ")}`);
   }
 
   return {
@@ -200,6 +221,7 @@ async function discoverMap(folderName, metadata, mapUpdated) {
     aliases,
     slug,
     updated,
+    br: mapBr,
     folder: folderName,
     variations: variations.map(variation => compactVariation(variation, folderName))
   };
@@ -210,6 +232,7 @@ async function buildCatalog() {
   if (metadata.version !== 1 || !metadata.maps || typeof metadata.maps !== "object") {
     throw new Error("Unsupported map metadata format");
   }
+  battleRating(metadata.defaultBr, "map metadata default");
   if (mapLayout.version !== 2 || !mapLayout.mapUpdated || typeof mapLayout.mapUpdated !== "object" || Array.isArray(mapLayout.mapUpdated)) {
     throw new Error("Maptatic.json must contain a mapUpdated object");
   }

@@ -8,6 +8,7 @@ import { initDiscordMemberCount } from './discord-stats.js';
     const $ = (selector) => document.querySelector(selector);
     const mapList = $("#map-list");
     const mapVariationSelect = $("#map-variation");
+    const mapBattleRating = $("#map-battle-rating");
     const search = $("#map-search");
     const clearSearch = $("#clear-search");
     const mapImage = $("#map-image");
@@ -189,6 +190,10 @@ import { initDiscordMemberCount } from './discord-stats.js';
     function mapVariationLabel(variation) {
       return `${t(variation.mode)} #${variation.number}`;
     }
+    function mapBattleRatingLabel(map) {
+      const min = Number(map.br.min).toFixed(1);
+      return map.br.max == null ? `BR ${min}+` : `BR ${min} ~ ${Number(map.br.max).toFixed(1)}`;
+    }
     function findBaseMap(map) {
       return maps.find(candidate => candidate.name === map?.name) || map;
     }
@@ -256,6 +261,7 @@ import { initDiscordMemberCount } from './discord-stats.js';
     function updateSelectedMapDetails() {
       if (!state.selected) return;
       $("#selected-map-name").textContent = mapLabel(state.selected);
+      mapBattleRating.textContent = mapBattleRatingLabel(state.selected);
       mapImage.alt = `${mapLabel(state.selected)} ${mapVariationLabel(state.selected)} ${state.team}`;
       const mapUpdated = markerLayout.mapUpdated?.[state.selected.name] || state.selected.updated;
       mapLastUpdated.dateTime = mapUpdated;

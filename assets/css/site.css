@@ -155,6 +155,7 @@
     .map-meta-row { display: flex; margin-top: 13px; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
     .map-variation-control { display: inline-flex; align-items: center; gap: 8px; }
     .map-variation-control label { color: var(--muted); font-size: .7rem; font-weight: 800; letter-spacing: .055em; text-transform: uppercase; }
+    .viewer-top .map-battle-rating { margin: 0; padding: 6px 9px; border: 1px solid rgba(214, 219, 157, .34); border-radius: 999px; color: var(--accent); font-size: .72rem; font-weight: 850; letter-spacing: .035em; line-height: 1; white-space: nowrap; }
     .viewer-top .map-last-updated { margin: 0 0 0 auto; color: var(--muted); font-size: .7rem; font-weight: 750; letter-spacing: .035em; text-align: right; white-space: nowrap; }
     #map-variation { min-width: 150px; padding: 7px 28px 7px 10px; border: 1px solid var(--line); border-radius: 8px; outline: none; background: #111719; color: var(--ink); font: inherit; font-size: .77rem; font-weight: 750; cursor: pointer; }
     #map-variation:hover, #map-variation:focus-visible { border-color: #56675f; }

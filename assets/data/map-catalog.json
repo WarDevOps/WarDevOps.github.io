@@ -6,11 +6,17 @@
       "aliases": "38선",
       "slug": "38th-parallel",
       "updated": "2026-08-25",
+      "br": {
+        "min": 4.7
+      },
       "folder": "38th Parallel",
       "variations": [
         {
           "mode": "domination",
           "number": 1,
+          "br": {
+            "min": 4.7
+          },
           "sharedImage": "38th Parallel.png"
         }
       ]
@@ -20,11 +26,17 @@
       "aliases": "버려진 공장",
       "slug": "abandoned-factory",
       "updated": "2026-08-30",
+      "br": {
+        "min": 1
+      },
       "folder": "Abandoned Factory",
       "variations": [
         {
           "mode": "domination",
           "number": 1,
+          "br": {
+            "min": 1
+          },
           "sharedImage": "Abandoned Factory.png"
         }
       ]
@@ -34,11 +46,17 @@
       "aliases": "버려진 소도시",
       "slug": "abandoned-town",
       "updated": "2026-08-25",
+      "br": {
+        "min": 3.7
+      },
       "folder": "Abandoned Town",
       "variations": [
         {
           "mode": "domination",
           "number": 1,
+          "br": {
+            "min": 3.7
+          },
           "sharedImage": "Abandoned Town.png"
         }
       ]
@@ -48,11 +66,17 @@
       "aliases": "라인 강 진격",
       "slug": "advance-to-the-rhine",
       "updated": "2026-08-25",
+      "br": {
+        "min": 1
+      },
       "folder": "Advance to the Rhine",
       "variations": [
         {
           "mode": "domination",
           "number": 1,
+          "br": {
+            "min": 1
+          },
           "sharedImage": "Advance to the Rhine.png"
         }
       ]
@@ -62,11 +86,17 @@
       "aliases": "알래스카",
       "slug": "alaska",
       "updated": "2026-08-25",
+      "br": {
+        "min": 3.7
+      },
       "folder": "Alaska",
       "variations": [
         {
           "mode": "domination",
           "number": 1,
+          "br": {
+            "min": 3.7
+          },
           "sharedImage": "Alaska.png"
         }
       ]
@@ -76,11 +106,17 @@
       "aliases": "아메리칸 데저트",
       "slug": "american-desert",
       "updated": "2026-08-25",
+      "br": {
+        "min": 5
+      },
       "folder": "American Desert",
       "variations": [
         {
           "mode": "domination",
           "number": 1,
+          "br": {
+            "min": 5
+          },
           "sharedImage": "American Desert.png"
         }
       ]
@@ -90,11 +126,17 @@
       "aliases": "아랄 해",
       "slug": "aral-sea",
       "updated": "2026-08-25",
+      "br": {
+        "min": 6.7
+      },
       "folder": "Aral Sea",
       "variations": [
         {
           "mode": "domination",
           "number": 1,
+          "br": {
+            "min": 6.7
+          },
           "sharedImage": "Aral Sea.png"
         }
       ]
@@ -104,11 +146,17 @@
       "aliases": "북극의 부두",
       "slug": "arctic-pier",
       "updated": "2026-08-25",
+      "br": {
+        "min": 4.7
+      },
       "folder": "Arctic Pier",
       "variations": [
         {
           "mode": "domination",
           "number": 1,
+          "br": {
+            "min": 4.7
+          },
           "sharedImage": "Arctic Pier.png"
         }
       ]
@@ -118,11 +166,17 @@
       "aliases": "북극",
       "slug": "arctic-polar-base",
       "updated": "2026-08-25",
+      "br": {
+        "min": 6.7
+      },
       "folder": "Arctic Polar Base",
       "variations": [
         {
           "mode": "domination",
           "number": 1,
+          "br": {
+            "min": 6.7
+          },
           "sharedImage": "Arctic Polar Base.png"
         }
       ]
@@ -132,22 +186,34 @@
       "aliases": "아르덴",
       "slug": "ardennes",
       "updated": "2026-08-25",
+      "br": {
+        "min": 3.7
+      },
       "folder": "Ardennes",
       "variations": [
         {
           "mode": "domination",
           "number": 1,
+          "br": {
+            "min": 3.7
+          },
           "sharedImage": "Ardennes.png"
         },
         {
           "mode": "domination",
           "number": 2,
+          "br": {
+            "min": 3.7
+          },
           "folder": "Ardennes/Domination #2",
           "sharedImage": "Ardennes.png"
         },
         {
           "mode": "conquest",
           "number": 1,
+          "br": {
+            "min": 3.7
+          },
           "folder": "Ardennes/Conquest #1",
           "sharedImage": "Ardennes.png"
         }
@@ -158,11 +224,19 @@
       "aliases": "애쉬 리버",
       "slug": "ash-river",
       "updated": "2026-08-25",
+      "br": {
+        "min": 1,
+        "max": 7.7
+      },
       "folder": "Ash River",
       "variations": [
         {
           "mode": "domination",
           "number": 1,
+          "br": {
+            "min": 1,
+            "max": 7.7
+          },
           "sharedImage": "Ash River.png"
         }
       ]
@@ -172,11 +246,17 @@
       "aliases": "아티카",
       "slug": "attica",
       "updated": "2026-08-16",
+      "br": {
+        "min": 1
+      },
       "folder": "Attica",
       "variations": [
         {
           "mode": "domination",
           "number": 1,
+          "br": {
+            "min": 1
+          },
           "sharedImage": "Attica.png"
         }
       ]
@@ -186,22 +266,34 @@
       "aliases": "휘르트겐 숲 전투",
       "slug": "battle-of-hurtgen-forest",
       "updated": "2026-08-18",
+      "br": {
+        "min": 4.7
+      },
       "folder": "Battle of Hürtgen Forest",
       "variations": [
         {
           "mode": "domination",
           "number": 1,
+          "br": {
+            "min": 4.7
+          },
           "sharedImage": "Battle of Hürtgen Forest.png"
         },
         {
           "mode": "domination",
           "number": 2,
+          "br": {
+            "min": 4.7
+          },
           "folder": "Battle of Hürtgen Forest/Domination #2",
           "sharedImage": "Battle of Hürtgen Forest.png"
         },
         {
           "mode": "conquest",
           "number": 3,
+          "br": {
+            "min": 4.7
+          },
           "folder": "Battle of Hürtgen Forest/Conquest #3",
           "sharedImage": "Battle of Hürtgen Forest.png"
         }
@@ -212,11 +304,19 @@
       "aliases": "베를린",
       "slug": "berlin",
       "updated": "2026-08-25",
+      "br": {
+        "min": 3.7,
+        "max": 6.7
+      },
       "folder": "Berlin",
       "variations": [
         {
           "mode": "domination",
           "number": 1,
+          "br": {
+            "min": 3.7,
+            "max": 6.7
+          },
           "sharedImage": "Berlin.png"
         }
       ]
@@ -226,11 +326,17 @@
       "aliases": "브레슬라우",
       "slug": "breslau",
       "updated": "2026-08-25",
+      "br": {
+        "min": 6.7
+      },
       "folder": "Breslau",
       "variations": [
         {
           "mode": "domination",
           "number": 1,
+          "br": {
+            "min": 6.7
+          },
           "sharedImage": "Breslau.png"
         }
       ]
@@ -240,11 +346,17 @@
       "aliases": "캄파니아",
       "slug": "campania",
       "updated": "2026-08-17",
+      "br": {
+        "min": 3.7
+      },
       "folder": "Campania",
       "variations": [
         {
           "mode": "domination",
-          "number": 1
+          "number": 1,
+          "br": {
+            "min": 3.7
+          }
         }
       ]
     },
@@ -253,11 +365,17 @@
       "aliases": "카고 포트",
       "slug": "cargo-port",
       "updated": "2026-08-16",
+      "br": {
+        "min": 4.7
+      },
       "folder": "Cargo Port",
       "variations": [
         {
           "mode": "domination",
           "number": 1,
+          "br": {
+            "min": 4.7
+          },
           "sharedImage": "Cargo Port.png"
         }
       ]
@@ -267,11 +385,37 @@
       "aliases": "카르파티아 산맥",
       "slug": "carpathians",
       "updated": "2026-08-16",
+      "br": {
+        "min": 2.3
+      },
       "folder": "Carpathians",
       "variations": [
         {
           "mode": "domination",
-          "number": 1
+          "number": 1,
+          "br": {
+            "min": 2.3
+          }
+        }
+      ]
+    },
+    {
+      "name": "Eastern Europe",
+      "aliases": "동유럽",
+      "slug": "eastern-europe",
+      "updated": "2026-08-31",
+      "br": {
+        "min": 1
+      },
+      "folder": "Eastern Europe",
+      "variations": [
+        {
+          "mode": "domination",
+          "number": 1,
+          "br": {
+            "min": 1
+          },
+          "sharedImage": "Eastern Europe.png"
         }
       ]
     },
@@ -280,11 +424,17 @@
       "aliases": "유럽 지방",
       "slug": "european-province",
       "updated": "2026-08-16",
+      "br": {
+        "min": 6.7
+      },
       "folder": "European Province",
       "variations": [
         {
           "mode": "domination",
           "number": 1,
+          "br": {
+            "min": 6.7
+          },
           "sharedImage": "European Province.png"
         }
       ]
@@ -294,11 +444,17 @@
       "aliases": "노르망디의 들판",
       "slug": "fields-of-normandy",
       "updated": "2026-08-18",
+      "br": {
+        "min": 2.3
+      },
       "folder": "Fields of Normandy",
       "variations": [
         {
           "mode": "domination",
           "number": 1,
+          "br": {
+            "min": 2.3
+          },
           "sharedImage": "Fields of Normandy.png"
         }
       ]
@@ -308,11 +464,17 @@
       "aliases": "폴란드의 들판",
       "slug": "fields-of-poland",
       "updated": "2026-08-17",
+      "br": {
+        "min": 4.7
+      },
       "folder": "Fields of Poland",
       "variations": [
         {
           "mode": "domination",
-          "number": 1
+          "number": 1,
+          "br": {
+            "min": 4.7
+          }
         }
       ]
     },
@@ -321,11 +483,17 @@
       "aliases": "핀란드",
       "slug": "finland",
       "updated": "2026-08-16",
+      "br": {
+        "min": 2.3
+      },
       "folder": "Finland",
       "variations": [
         {
           "mode": "domination",
           "number": 1,
+          "br": {
+            "min": 2.3
+          },
           "sharedImage": "Finland.png"
         }
       ]
@@ -335,11 +503,17 @@
       "aliases": "파이어 아크",
       "slug": "fire-arc",
       "updated": "2026-08-16",
+      "br": {
+        "min": 3.7
+      },
       "folder": "Fire Arc",
       "variations": [
         {
           "mode": "domination",
           "number": 1,
+          "br": {
+            "min": 3.7
+          },
           "sharedImage": "Fire Arc.png"
         }
       ]
@@ -349,11 +523,17 @@
       "aliases": "플랑드르",
       "slug": "flanders",
       "updated": "2026-08-30",
+      "br": {
+        "min": 1
+      },
       "folder": "Flanders",
       "variations": [
         {
           "mode": "domination",
           "number": 1,
+          "br": {
+            "min": 1
+          },
           "sharedImage": "Flanders.png"
         }
       ]
@@ -363,11 +543,19 @@
       "aliases": "얼어붙은 산길",
       "slug": "frozen-pass",
       "updated": "2026-08-25",
+      "br": {
+        "min": 1,
+        "max": 7.7
+      },
       "folder": "Frozen Pass",
       "variations": [
         {
           "mode": "domination",
           "number": 1,
+          "br": {
+            "min": 1,
+            "max": 7.7
+          },
           "sharedImage": "Frozen Pass.png"
         }
       ]
@@ -377,11 +565,17 @@
       "aliases": "풀다",
       "slug": "fulda",
       "updated": "2026-08-18",
+      "br": {
+        "min": 6.7
+      },
       "folder": "Fulda",
       "variations": [
         {
           "mode": "domination",
           "number": 1,
+          "br": {
+            "min": 6.7
+          },
           "sharedImage": "Fulda.png"
         }
       ]
@@ -391,11 +585,17 @@
       "aliases": "금광 지대",
       "slug": "golden-quarry",
       "updated": "2026-08-17",
+      "br": {
+        "min": 2.3
+      },
       "folder": "Golden Quarry",
       "variations": [
         {
           "mode": "domination",
           "number": 1,
+          "br": {
+            "min": 2.3
+          },
           "sharedImage": "Golden Quarry.png"
         }
       ]
@@ -405,11 +605,17 @@
       "aliases": "이베리아 성",
       "slug": "iberian-castle",
       "updated": "2026-08-16",
+      "br": {
+        "min": 1
+      },
       "folder": "Iberian Castle",
       "variations": [
         {
           "mode": "domination",
           "number": 1,
+          "br": {
+            "min": 1
+          },
           "sharedImage": "iberian castle.png"
         }
       ]
@@ -419,11 +625,17 @@
       "aliases": "일본",
       "slug": "japan",
       "updated": "2026-08-16",
+      "br": {
+        "min": 1
+      },
       "folder": "Japan",
       "variations": [
         {
           "mode": "domination",
           "number": 1,
+          "br": {
+            "min": 1
+          },
           "sharedImage": "Japan.png"
         }
       ]
@@ -433,11 +645,19 @@
       "aliases": "정글",
       "slug": "jungle",
       "updated": "2026-08-25",
+      "br": {
+        "min": 3.7,
+        "max": 7.7
+      },
       "folder": "Jungle",
       "variations": [
         {
           "mode": "domination",
           "number": 1,
+          "br": {
+            "min": 3.7,
+            "max": 7.7
+          },
           "sharedImage": "Jungle.png"
         }
       ]
@@ -447,11 +667,19 @@
       "aliases": "카렐리야",
       "slug": "karelia",
       "updated": "2026-08-30",
+      "br": {
+        "min": 1,
+        "max": 7.7
+      },
       "folder": "Karelia",
       "variations": [
         {
           "mode": "domination",
           "number": 1,
+          "br": {
+            "min": 1,
+            "max": 7.7
+          },
           "sharedImage": "Karelia.png"
         }
       ]
@@ -461,11 +689,19 @@
       "aliases": "쿠반",
       "slug": "kuban",
       "updated": "2026-08-18",
+      "br": {
+        "min": 1,
+        "max": 7.7
+      },
       "folder": "Kuban",
       "variations": [
         {
           "mode": "domination",
-          "number": 1
+          "number": 1,
+          "br": {
+            "min": 1,
+            "max": 7.7
+          }
         }
       ]
     },
@@ -474,16 +710,25 @@
       "aliases": "마지노선",
       "slug": "maginot-line",
       "updated": "2026-08-16",
+      "br": {
+        "min": 5
+      },
       "folder": "Maginot Line",
       "variations": [
         {
           "mode": "domination",
           "number": 1,
+          "br": {
+            "min": 5
+          },
           "sharedImage": "Maginot Line.png"
         },
         {
           "mode": "domination",
           "number": 2,
+          "br": {
+            "min": 5
+          },
           "folder": "Maginot Line/Domination #2",
           "sharedImage": "Maginot Line.png"
         }
@@ -494,11 +739,17 @@
       "aliases": "중동",
       "slug": "middle-east",
       "updated": "2026-08-18",
+      "br": {
+        "min": 5
+      },
       "folder": "Middle East",
       "variations": [
         {
           "mode": "domination",
-          "number": 1
+          "number": 1,
+          "br": {
+            "min": 5
+          }
         }
       ]
     },
@@ -507,11 +758,17 @@
       "aliases": "모즈도크",
       "slug": "mozdok",
       "updated": "2026-08-17",
+      "br": {
+        "min": 3.7
+      },
       "folder": "Mozdok",
       "variations": [
         {
           "mode": "domination",
-          "number": 1
+          "number": 1,
+          "br": {
+            "min": 3.7
+          }
         }
       ]
     },
@@ -520,11 +777,17 @@
       "aliases": "노르망디",
       "slug": "normandy",
       "updated": "2026-08-18",
+      "br": {
+        "min": 3.7
+      },
       "folder": "Normandy",
       "variations": [
         {
           "mode": "domination",
           "number": 1,
+          "br": {
+            "min": 3.7
+          },
           "sharedImage": "Normandy.png"
         }
       ]
@@ -534,16 +797,25 @@
       "aliases": "북부 네덜란드",
       "slug": "north-holland",
       "updated": "2026-08-30",
+      "br": {
+        "min": 1
+      },
       "folder": "North Holland",
       "variations": [
         {
           "mode": "domination",
           "number": 1,
+          "br": {
+            "min": 1
+          },
           "sharedImage": "North Holland.png"
         },
         {
           "mode": "domination",
           "number": 2,
+          "br": {
+            "min": 1
+          },
           "folder": "North Holland/Domination #2",
           "sharedImage": "North Holland.png"
         }
@@ -554,11 +826,17 @@
       "aliases": "폴란드",
       "slug": "poland",
       "updated": "2026-08-17",
+      "br": {
+        "min": 1
+      },
       "folder": "Poland",
       "variations": [
         {
           "mode": "domination",
-          "number": 1
+          "number": 1,
+          "br": {
+            "min": 1
+          }
         }
       ]
     },
@@ -567,11 +845,17 @@
       "aliases": "노보로시스크 항구",
       "slug": "port-novorossiysk",
       "updated": "2026-08-16",
+      "br": {
+        "min": 2.3
+      },
       "folder": "Port Novorossiysk",
       "variations": [
         {
           "mode": "conquest",
           "number": 1,
+          "br": {
+            "min": 2.3
+          },
           "sharedImage": "Port Novorossiysk.png"
         }
       ]
@@ -581,11 +865,17 @@
       "aliases": "프라데시",
       "slug": "pradesh",
       "updated": "2026-08-16",
+      "br": {
+        "min": 7.7
+      },
       "folder": "Pradesh",
       "variations": [
         {
           "mode": "domination",
-          "number": 1
+          "number": 1,
+          "br": {
+            "min": 7.7
+          }
         }
       ]
     },
@@ -594,11 +884,17 @@
       "aliases": "붉은 사막",
       "slug": "red-desert",
       "updated": "2026-08-25",
+      "br": {
+        "min": 9.7
+      },
       "folder": "Red Desert",
       "variations": [
         {
           "mode": "domination",
           "number": 1,
+          "br": {
+            "min": 9.7
+          },
           "sharedImage": "Red Desert.png"
         }
       ]
@@ -608,11 +904,17 @@
       "aliases": "시나이의 모래사장",
       "slug": "sands-of-sinai",
       "updated": "2026-08-17",
+      "br": {
+        "min": 5
+      },
       "folder": "Sands of Sinai",
       "variations": [
         {
           "mode": "domination",
           "number": 1,
+          "br": {
+            "min": 5
+          },
           "sharedImage": "Sands of Sinai.png"
         }
       ]
@@ -622,15 +924,24 @@
       "aliases": "엘 알라메인",
       "slug": "second-battle-of-el-alamein",
       "updated": "2026-08-17",
+      "br": {
+        "min": 5
+      },
       "folder": "Second Battle of El Alamein",
       "variations": [
         {
           "mode": "domination",
-          "number": 1
+          "number": 1,
+          "br": {
+            "min": 5
+          }
         },
         {
           "mode": "domination",
           "number": 2,
+          "br": {
+            "min": 5
+          },
           "folder": "Second Battle of El Alamein/Domination #2",
           "teamImages": {
             "Red": "Red Small.png",
@@ -644,11 +955,17 @@
       "aliases": "세베르스크-13",
       "slug": "seversk-13",
       "updated": "2026-08-16",
+      "br": {
+        "min": 1
+      },
       "folder": "Seversk-13",
       "variations": [
         {
           "mode": "domination",
           "number": 1,
+          "br": {
+            "min": 1
+          },
           "sharedImage": "Seversk-13.png"
         }
       ]
@@ -658,11 +975,17 @@
       "aliases": "시나이",
       "slug": "sinai",
       "updated": "2026-08-16",
+      "br": {
+        "min": 1
+      },
       "folder": "Sinai",
       "variations": [
         {
           "mode": "domination",
           "number": 1,
+          "br": {
+            "min": 1
+          },
           "sharedImage": "Sinai.png"
         }
       ]
@@ -672,11 +995,17 @@
       "aliases": "우주공항",
       "slug": "spaceport",
       "updated": "2026-08-25",
+      "br": {
+        "min": 6.7
+      },
       "folder": "Spaceport",
       "variations": [
         {
           "mode": "domination",
           "number": 1,
+          "br": {
+            "min": 6.7
+          },
           "sharedImage": "Spaceport.png"
         }
       ]
@@ -686,11 +1015,19 @@
       "aliases": "스탈린그라드",
       "slug": "stalingrad",
       "updated": "2026-08-25",
+      "br": {
+        "min": 2.3,
+        "max": 7.7
+      },
       "folder": "Stalingrad",
       "variations": [
         {
           "mode": "domination",
           "number": 1,
+          "br": {
+            "min": 2.3,
+            "max": 7.7
+          },
           "sharedImage": "Stalingrad.png"
         }
       ]
@@ -700,11 +1037,17 @@
       "aliases": "선 시티",
       "slug": "sun-city",
       "updated": "2026-08-25",
+      "br": {
+        "min": 5
+      },
       "folder": "Sun City",
       "variations": [
         {
           "mode": "domination",
           "number": 1,
+          "br": {
+            "min": 5
+          },
           "sharedImage": "Sun City.png"
         }
       ]
@@ -714,11 +1057,17 @@
       "aliases": "볼로콜람스크 포위",
       "slug": "surroundings-of-volokolamsk",
       "updated": "2026-08-16",
+      "br": {
+        "min": 9.7
+      },
       "folder": "Surroundings of Volokolamsk",
       "variations": [
         {
           "mode": "domination",
           "number": 1,
+          "br": {
+            "min": 9.7
+          },
           "sharedImage": "Surroundings of Volokolamsk.png"
         }
       ]
@@ -728,11 +1077,17 @@
       "aliases": "스웨덴",
       "slug": "sweden",
       "updated": "2026-08-16",
+      "br": {
+        "min": 2.3
+      },
       "folder": "Sweden",
       "variations": [
         {
           "mode": "domination",
           "number": 1,
+          "br": {
+            "min": 2.3
+          },
           "sharedImage": "Sweden.png"
         }
       ]
@@ -742,11 +1097,17 @@
       "aliases": "2271호 실험시설",
       "slug": "test-site-2271",
       "updated": "2026-08-16",
+      "br": {
+        "min": 2.3
+      },
       "folder": "Test Site-2271",
       "variations": [
         {
           "mode": "domination",
           "number": 1,
+          "br": {
+            "min": 2.3
+          },
           "sharedImage": "Test Site-2271.png"
         }
       ]
@@ -756,16 +1117,25 @@
       "aliases": "튀니지",
       "slug": "tunisia",
       "updated": "2026-08-30",
+      "br": {
+        "min": 4.7
+      },
       "folder": "Tunisia",
       "variations": [
         {
           "mode": "domination",
           "number": 1,
+          "br": {
+            "min": 4.7
+          },
           "sharedImage": "Tunisia.png"
         },
         {
           "mode": "domination",
           "number": 2,
+          "br": {
+            "min": 4.7
+          },
           "folder": "Tunisia/Domination #2",
           "sharedImage": "Tunisia.png"
         }
@@ -776,18 +1146,49 @@
       "aliases": "베트남",
       "slug": "vietnam",
       "updated": "2026-08-16",
+      "br": {
+        "min": 5
+      },
       "folder": "Vietnam",
       "variations": [
         {
           "mode": "domination",
           "number": 1,
+          "br": {
+            "min": 5
+          },
           "sharedImage": "Vietnam.png"
         },
         {
           "mode": "domination",
           "number": 2,
+          "br": {
+            "min": 5
+          },
           "folder": "Vietnam/Domination #2",
           "sharedImage": "Vietnam.png"
+        }
+      ]
+    },
+    {
+      "name": "Volokolamsk",
+      "aliases": "볼로콜람스크",
+      "slug": "volokolamsk",
+      "updated": "2026-08-31",
+      "br": {
+        "min": 3.7,
+        "max": 6.7
+      },
+      "folder": "Volokolamsk",
+      "variations": [
+        {
+          "mode": "domination",
+          "number": 1,
+          "br": {
+            "min": 3.7,
+            "max": 6.7
+          },
+          "sharedImage": "Volokolamsk.png"
         }
       ]
     },
@@ -796,11 +1197,19 @@
       "aliases": "백암요새",
       "slug": "white-rock-fortress",
       "updated": "2026-08-16",
+      "br": {
+        "min": 1,
+        "max": 8.7
+      },
       "folder": "White Rock Fortress",
       "variations": [
         {
           "mode": "domination",
           "number": 1,
+          "br": {
+            "min": 1,
+            "max": 8.7
+          },
           "sharedImage": "White Rock Fortress.png"
         }
       ]

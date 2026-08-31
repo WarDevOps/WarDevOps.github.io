@@ -5,13 +5,14 @@ if (mapCatalogPayload.version !== 1 || !Array.isArray(mapCatalogPayload.maps)) {
   throw new Error("Unsupported map catalog format");
 }
 
-function createMap({ name, aliases, slug, updated, folder = name, teamImages, sharedImage, variations }) {
+function createMap({ name, aliases, slug, updated, br, folder = name, teamImages, sharedImage, variations }) {
   const configuredVariations = variations?.length ? variations : [{ mode: "domination", number: 1 }];
   return {
     name,
     aliases,
     slug,
     updated,
+    br,
     folder,
     variations: configuredVariations.map(variation => {
       const id = variation.id || `${variation.mode}-${variation.number}`;
@@ -19,6 +20,7 @@ function createMap({ name, aliases, slug, updated, folder = name, teamImages, sh
         id,
         mode: variation.mode,
         number: variation.number,
+        br: variation.br ?? br,
         folder: variation.folder || folder,
         teamImages: variation.teamImages || teamImages,
         sharedImage: variation.sharedImage ?? sharedImage
