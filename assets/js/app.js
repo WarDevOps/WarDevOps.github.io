@@ -89,9 +89,9 @@ import { initDiscordMemberCount } from './discord-stats.js';
     const AIM_ARROW_BASE_STROKE = 1;
     const AIM_ARROW_HEAD_BASE_LENGTH = 6;
     const AIM_ARROW_HEAD_BASE_HEIGHT = 6;
-    const ROUTE_BASE_STROKE = 1;
-    const ROUTE_BASE_DASH_LENGTH = 10;
-    const ROUTE_BASE_DASH_GAP = 10;
+    const ROUTE_BASE_STROKE = 3;
+    const ROUTE_BASE_DASH_LENGTH = 7;
+    const ROUTE_BASE_DASH_GAP = 7;
     // Every map supports these optional transparent area overlays. Short names are canonical;
     // long names remain as fallbacks for existing map assets. A missing file is ignored.
     const MAP_AREA_OVERLAYS = Object.freeze([
@@ -988,7 +988,7 @@ import { initDiscordMemberCount } from './discord-stats.js';
         y: (Number(point.y) / 100) * height
       }));
       if (renderedPoints.some(point => !Number.isFinite(point.x) || !Number.isFinite(point.y))) return;
-      const mapScale = Math.min(width, height) / MAP_DRAWING_REFERENCE_SIZE;
+      const routeScale = Math.min(1, Math.min(width, height) / MAP_DRAWING_REFERENCE_SIZE);
       const drawing = document.createElementNS("http://www.w3.org/2000/svg", "svg");
       drawing.classList.add("map-annotation", "route-line");
       if (annotation.dangerRoute) drawing.classList.add("is-danger-route");
@@ -1002,8 +1002,8 @@ import { initDiscordMemberCount } from './discord-stats.js';
       drawing.setAttribute("aria-label", t(annotation.type));
       const route = document.createElementNS("http://www.w3.org/2000/svg", "polyline");
       route.setAttribute("points", renderedPoints.map(point => `${point.x},${point.y}`).join(" "));
-      route.setAttribute("stroke-width", String(ROUTE_BASE_STROKE * mapScale));
-      route.setAttribute("stroke-dasharray", `${ROUTE_BASE_DASH_LENGTH * mapScale} ${ROUTE_BASE_DASH_GAP * mapScale}`);
+      route.setAttribute("stroke-width", String(ROUTE_BASE_STROKE * routeScale));
+      route.setAttribute("stroke-dasharray", `${ROUTE_BASE_DASH_LENGTH * routeScale} ${ROUTE_BASE_DASH_GAP * routeScale}`);
       drawing.append(route);
       layer.append(drawing);
     }
