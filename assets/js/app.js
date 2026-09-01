@@ -84,18 +84,24 @@ import { initDiscordMemberCount } from './discord-stats.js';
     const AIM_ARROW_HEAD_BASE_LENGTH = 6;
     const AIM_ARROW_HEAD_BASE_HEIGHT = 6;
     const ROUTE_BASE_STROKE = 1;
-    // Every map supports these optional transparent area overlays. A missing file is ignored.
+    // Every map supports these optional transparent area overlays. Short names are canonical;
+    // long names remain as fallbacks for existing map assets. A missing file is ignored.
     const MAP_AREA_OVERLAYS = Object.freeze([
-      { type: "coreArea", file: "CoreArea.png" },
-      { type: "coreArea", file: "CoreAreaBlue.png", team: "Blue" },
-      { type: "coreArea", file: "CoreAreaRed.png", team: "Red" },
-      { type: "dangerArea", file: "DangerArea.png" },
-      { type: "dangerArea", file: "DangerAreaBlue.png", team: "Blue" },
-      { type: "dangerArea", file: "DangerAreaRed.png", team: "Red" },
-      { type: "notRecommended", file: "NotRecommended.png" },
-      { type: "antiAirArea", file: "AntiAirArea.png" },
-      { type: "spawnArea", file: "SpawnAreaBlue.png", team: "Blue" },
-      { type: "spawnArea", file: "SpawnAreaRed.png", team: "Red" }
+      { type: "coreArea", files: ["c.png", "CoreArea.png"] },
+      { type: "coreArea", files: ["cb.png", "CoreAreaBlue.png"], team: "Blue" },
+      { type: "coreArea", files: ["cr.png", "CoreAreaRed.png"], team: "Red" },
+      { type: "dangerArea", files: ["d.png", "DangerArea.png"] },
+      { type: "dangerArea", files: ["db.png", "DangerAreaBlue.png"], team: "Blue" },
+      { type: "dangerArea", files: ["dr.png", "DangerAreaRed.png"], team: "Red" },
+      { type: "notRecommended", files: ["n.png", "NotRecommended.png"] },
+      { type: "notRecommended", files: ["nb.png", "NotRecommendedBlue.png"], team: "Blue" },
+      { type: "notRecommended", files: ["nr.png", "NotRecommendedRed.png"], team: "Red" },
+      { type: "antiAirArea", files: ["a.png", "AntiAir.png", "AntiAirArea.png"] },
+      { type: "antiAirArea", files: ["ab.png", "AntiAirBlue.png"], team: "Blue" },
+      { type: "antiAirArea", files: ["ar.png", "AntiAirRed.png"], team: "Red" },
+      { type: "spawnArea", files: ["s.png", "SpawnArea.png"] },
+      { type: "spawnArea", files: ["sb.png", "SpawnAreaBlue.png"], team: "Blue" },
+      { type: "spawnArea", files: ["sr.png", "SpawnAreaRed.png"], team: "Red" }
     ]);
     const unavailableMapOverlayFiles = new Set();
     // Larger values render above smaller values. Equal-priority markers keep their placement order.
@@ -983,17 +989,26 @@ import { initDiscordMemberCount } from './discord-stats.js';
       if (!state.selected || image.hidden || !layer.clientWidth || !layer.clientHeight) return;
       currentMapOverlays().forEach(overlayConfig => {
         if (hiddenMarkerTypes.has(markerTypeIdentity(overlayConfig.type))) return;
-        const overlayIdentity = mapOverlayIdentity(state.selected, overlayConfig.file);
-        if (unavailableMapOverlayFiles.has(overlayIdentity)) return;
+        const overlayMap = state.selected;
+        let fileIndex = overlayConfig.files.findIndex(file => !unavailableMapOverlayFiles.has(mapOverlayIdentity(overlayMap, file)));
+        if (fileIndex < 0) return;
         const overlay = document.createElement("img");
         overlay.className = "map-area-overlay";
         overlay.classList.toggle("is-dimmed", Boolean(state.focusedTankMarkerId));
-        overlay.src = mapOverlayPath(state.selected, overlayConfig.file);
         overlay.alt = "";
+        const loadOverlayFile = () => {
+          overlay.src = mapOverlayPath(overlayMap, overlayConfig.files[fileIndex]);
+        };
         overlay.addEventListener("error", () => {
-          unavailableMapOverlayFiles.add(overlayIdentity);
-          overlay.remove();
-        }, { once: true });
+          unavailableMapOverlayFiles.add(mapOverlayIdentity(overlayMap, overlayConfig.files[fileIndex]));
+          fileIndex = overlayConfig.files.findIndex((file, index) => index > fileIndex && !unavailableMapOverlayFiles.has(mapOverlayIdentity(overlayMap, file)));
+          if (fileIndex < 0) {
+            overlay.remove();
+            return;
+          }
+          loadOverlayFile();
+        });
+        loadOverlayFile();
         layer.append(overlay);
       });
     }
@@ -1090,6 +1105,7 @@ import { initDiscordMemberCount } from './discord-stats.js';
       modalMarkerEditorNote.textContent = editorNote;
       markerEditorNote.hidden = !state.editMode;
       modalMarkerEditorNote.hidden = !state.editMode;
+      copyLink.hidden = state.editMode;
       editorActions.forEach(action => { action.hidden = !state.editMode; });
       allLegendItems().forEach(item => {
         const placementEnabled = isLegendPlacementEnabled(item.dataset.markerType);

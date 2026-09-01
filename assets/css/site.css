@@ -195,7 +195,7 @@
     .marker-tool.primary, .marker-tool[aria-pressed="true"] { border-color: var(--accent); background: var(--accent); color: #171b1a; }
     .marker-status { min-height: 1.2em; color: var(--muted); font-size: .74rem; }
     .marker-editor-note { width: 100%; margin: 1px 0 0; color: var(--muted); font-size: .74rem; line-height: 1.45; }
-    [data-editor-action][hidden], .marker-editor-note[hidden], .modal-marker-editor-note[hidden] { display: none; }
+    [data-editor-action][hidden], .copy-link[hidden], .marker-editor-note[hidden], .modal-marker-editor-note[hidden] { display: none; }
     .map-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(208px, 245px); gap: 16px; align-items: start; padding: 0 clamp(12px, 3vw, 28px) 20px; }
     .map-primary-column { display: grid; min-width: 0; gap: 14px; }
     .map-stage { position: relative; min-height: 470px; display: grid; overflow: hidden; place-items: center; border: 1px solid var(--line); border-radius: 12px; background: #0d1111; }
