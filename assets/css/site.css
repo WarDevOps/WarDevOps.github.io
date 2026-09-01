@@ -214,7 +214,7 @@
     .aim-arrow-shaft { position: absolute; top: 6px; left: 0; height: 4px; background: #fff; }
     .aim-arrow-head { position: absolute; top: 0; display: block; width: 0; height: 0; border-style: solid; border-right-width: 0; border-color: transparent; border-left-color: #fff; pointer-events: none; }
     .route-line { inset: 0; width: 100%; height: 100%; overflow: visible; --route-color: #fff; pointer-events: none; }
-    .route-line polyline { fill: none; stroke: var(--route-color); stroke-dasharray: 10 10; pointer-events: stroke; }
+    .route-line polyline { fill: none; stroke: var(--route-color); pointer-events: stroke; }
     .route-line.is-preview polyline { pointer-events: none; }
     .route-line.is-danger-route { --route-color: #E60012; }
     .aim-arrow.is-special-dark-annotation .aim-arrow-shaft { background: #000; }
