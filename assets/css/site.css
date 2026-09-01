@@ -94,9 +94,9 @@
     .hero { padding: clamp(48px, 5vw, 56px) 0 38px; }
     .home-hero { display: grid; grid-template-columns: minmax(0, 1fr) minmax(220px, 280px); gap: clamp(36px, 7vw, 100px); align-items: end; }
     .eyebrow { margin: 0 0 12px; color: var(--accent); font-size: .78rem; font-weight: 800; letter-spacing: .14em; }
-    h1 { max-width: 900px; margin: 0; font-size: clamp(3rem, 9vw, 7rem); line-height: .8; letter-spacing: -.07em; }
-    .hero-title { font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-kerning: normal; font-synthesis: none; font-weight: 850; }
-    h1 em { color: transparent; font-style: normal; -webkit-text-stroke: 1px var(--accent); }
+    .hero-title { max-width: 900px; margin: 0; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: clamp(3rem, 9vw, 7rem); font-kerning: normal; font-synthesis: none; font-weight: 850; line-height: .8; letter-spacing: -.07em; }
+    .hero-title em { color: transparent; font-style: normal; -webkit-text-stroke: 1px var(--accent); }
+    .seo-title { max-width: 900px; margin: 20px 0 0; font-size: clamp(1.35rem, 3vw, 2rem); line-height: 1.15; letter-spacing: -.035em; }
     .hero-copy { max-width: 620px; margin: 20px 0 0; color: var(--muted); font-size: clamp(1rem, 2vw, 1.12rem); line-height: 1.75; }
     .recent-updates { width: 100%; padding-bottom: 3px; }
     .recent-updates h2 { margin: 0 0 8px; color: var(--accent); font-size: .68rem; font-weight: 850; letter-spacing: .14em; text-transform: uppercase; }

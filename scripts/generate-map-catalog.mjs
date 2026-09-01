@@ -324,7 +324,8 @@ function renderTacticalSummary(map) {
 }
 
 function renderMapRoutePage(rootPage, map) {
-  const title = `${escapeHtml(map.name)} Tactical Map | WarDevOps MapTactic`;
+  const title = `War Thunder ${escapeHtml(map.name)} Map Guide | WarDevOps`;
+  const heading = `${escapeHtml(map.name)} War Thunder Map Guide`;
   const description = escapeHtml(map.tacticalSummary?.en?.join(" ") || `Explore the ${map.name} tactical map, team positions, routes, markers, and key combat areas for War Thunder Ground Battles.`);
   const canonical = `https://wardevops.github.io/maps/${map.slug}/`;
   const preview = mapPreviewUrl(map);
@@ -342,6 +343,7 @@ function renderMapRoutePage(rootPage, map) {
   page = replacePageValue(page, /<meta name="twitter:description" content="[^"]*">/, `<meta name="twitter:description" content="${description}">`, "X description");
   page = replacePageValue(page, /<meta name="twitter:image" content="[^"]*">/, `<meta name="twitter:image" content="${preview}">`, "X image");
   page = replacePageValue(page, /<title>[^<]*<\/title>/, `<title>${title}</title>`, "document title");
+  page = replacePageValue(page, /<h1 class="seo-title" id="page-title">[^<]*<\/h1>/, `<h1 class="seo-title" id="page-title">${heading}</h1>`, "page heading");
   page = replacePageValue(page, /<details class="map-tactical-summary"[\s\S]*?<\/details>/, renderTacticalSummary(map), "tactical summary");
   return page;
 }
@@ -367,7 +369,14 @@ async function writeSiteArtifacts(payload) {
     await fs.mkdir(routeFolder, { recursive: true });
     await fs.writeFile(path.join(routeFolder, "index.html"), renderMapRoutePage(rootPage, map), "utf8");
   }
-  await fs.writeFile(SITEMAP_PATH, renderSitemap(payload.maps), "utf8");
+  const sitemap = renderSitemap(payload.maps);
+  let currentSitemap = "";
+  try {
+    currentSitemap = await fs.readFile(SITEMAP_PATH, "utf8");
+  } catch (error) {
+    if (error?.code !== "ENOENT") throw error;
+  }
+  if (currentSitemap !== sitemap) await fs.writeFile(SITEMAP_PATH, sitemap, "utf8");
   console.log(`Generated ${payload.maps.length} map routes and sitemap.xml.`);
 }
 

@@ -67,7 +67,7 @@ export { defaultMarkerLayout };
 
 export const translations = {
       en: {
-        pageTitle: "WarDevOps | War Thunder Map Tactic",
+        pageTitle: "War Thunder Map Guide & Tactics | WarDevOps",
         metaDescription: "Explore key engagement areas and movement routes for every War Thunder Ground Battles map with WarDevOps MapTactic.",
         brandName: "WarDevOps",
         languageSwitch: "Select Language",
@@ -195,7 +195,7 @@ export const translations = {
         modalLegendHint: "Click an icon to hide or restore that marker type."
       },
       ko: {
-        pageTitle: "WarDevOps | War Thunder Map Tactic",
+        pageTitle: "War Thunder Map Guide & Tactics | WarDevOps",
         metaDescription: "워썬더 지상전 모든 지도의 중요 교전 지역과 이동 경로를 WarDevOps MapTactic에서 살펴보세요.",
         brandName: "WarDevOps",
         languageSwitch: "언어 선택",

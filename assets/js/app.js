@@ -1,7 +1,7 @@
     import { MARKER_LAYOUT_VERSION, loadMarkerLayout, saveMarkerLayout as saveMarkerLayoutToStorage } from './marker-storage.js?v=recent-updates-20260901';
 import { initDiscordMemberCount } from './discord-stats.js';
     import { commentImages } from './comment-images.js?v=comment-images-20260817';
-    import { defaultMarkerLayout, maps, translations } from './data.js?v=recent-updates-20260901';
+    import { defaultMarkerLayout, maps, translations } from './data.js?v=seo-headings-20260901';
 
 
     const DEFAULT_ANNOTATION_OPACITY = 50;
@@ -9,6 +9,7 @@ import { initDiscordMemberCount } from './discord-stats.js';
     const state = { selected: null, team: "Red", query: "", language: "en", theme: "dark", editMode: false, focusedTankMarkerId: null, contextMarkerId: null, contextAnnotationId: null, commentMarkerId: null, drawing: null, annotationOpacity: loadAnnotationOpacity() };
     const $ = (selector) => document.querySelector(selector);
     const mapList = $("#map-list");
+    const pageTitleHeading = $("#page-title");
     const mapVariationSelect = $("#map-variation");
     const mapBattleRating = $("#map-battle-rating");
     const copyLink = $("#copy-link");
@@ -85,6 +86,7 @@ import { initDiscordMemberCount } from './discord-stats.js';
     const ANNOTATION_TYPES = new Set(["aimHere", "route"]);
     const MAP_DRAWING_REFERENCE_SIZE = 600;
     const MAP_MARKER_REFERENCE_SIZE = 1440;
+    const MAP_ROUTE_REFERENCE_SIZE = 1440;
     const MAP_MARKER_BASE_SIZE = 32;
     const AIM_ARROW_BASE_STROKE = 1;
     const AIM_ARROW_HEAD_BASE_LENGTH = 6;
@@ -350,11 +352,12 @@ import { initDiscordMemberCount } from './discord-stats.js';
     }
     function updateMapDocumentMetadata() {
       if (!state.selected) return;
-      const pageTitle = `${state.selected.name} War Thunder Map Guide | WarDevOps`;
+      const pageTitle = `War Thunder ${state.selected.name} Map Guide | WarDevOps`;
       const pageDescription = mapDocumentDescription(state.selected);
       const canonicalUrl = `https://wardevops.github.io/maps/${state.selected.slug}/`;
       const previewUrl = `https://wardevops.github.io${mapPath(state.selected, state.team)}`;
       document.title = pageTitle;
+      pageTitleHeading.textContent = `${state.selected.name} War Thunder Map Guide`;
       document.querySelector('meta[name="description"]').setAttribute("content", pageDescription);
       document.querySelector('link[rel="canonical"]').setAttribute("href", canonicalUrl);
       document.querySelector('meta[property="og:title"]').setAttribute("content", pageTitle);
@@ -367,13 +370,14 @@ import { initDiscordMemberCount } from './discord-stats.js';
     }
     function updateLibraryDocumentMetadata() {
       document.title = t("pageTitle");
+      pageTitleHeading.textContent = "War Thunder Map Guides & Tactics";
       document.querySelector('meta[name="description"]').setAttribute("content", t("metaDescription"));
       document.querySelector('link[rel="canonical"]').setAttribute("href", "https://wardevops.github.io/");
-      document.querySelector('meta[property="og:title"]').setAttribute("content", "WarDevOps | War Thunder Map Tactic");
+      document.querySelector('meta[property="og:title"]').setAttribute("content", "War Thunder Map Guide & Tactics | WarDevOps");
       document.querySelector('meta[property="og:description"]').setAttribute("content", t("metaDescription"));
       document.querySelector('meta[property="og:url"]').setAttribute("content", "https://wardevops.github.io/");
       document.querySelector('meta[property="og:image"]').setAttribute("content", "https://wardevops.github.io/img/38th%20Parallel/38th%20Parallel.png");
-      document.querySelector('meta[name="twitter:title"]').setAttribute("content", "WarDevOps | War Thunder Map Tactic");
+      document.querySelector('meta[name="twitter:title"]').setAttribute("content", "War Thunder Map Guide & Tactics | WarDevOps");
       document.querySelector('meta[name="twitter:description"]').setAttribute("content", t("metaDescription"));
       document.querySelector('meta[name="twitter:image"]').setAttribute("content", "https://wardevops.github.io/img/38th%20Parallel/38th%20Parallel.png");
     }
@@ -988,7 +992,7 @@ import { initDiscordMemberCount } from './discord-stats.js';
         y: (Number(point.y) / 100) * height
       }));
       if (renderedPoints.some(point => !Number.isFinite(point.x) || !Number.isFinite(point.y))) return;
-      const routeScale = Math.min(1, Math.min(width, height) / MAP_DRAWING_REFERENCE_SIZE);
+      const routeScale = Math.min(width, height) / MAP_ROUTE_REFERENCE_SIZE;
       const drawing = document.createElementNS("http://www.w3.org/2000/svg", "svg");
       drawing.classList.add("map-annotation", "route-line");
       if (annotation.dangerRoute) drawing.classList.add("is-danger-route");
