@@ -49,7 +49,7 @@
   </script>
   <title>WarDevOps | War Thunder Map Tactic</title>
 
-  <link rel="stylesheet" href="/assets/css/site.css?v=collapsible-summary-20260831">
+  <link rel="stylesheet" href="/assets/css/site.css?v=route-aim-opacity-20260901">
 </head>
 <body>
   <header class="site-header">
@@ -81,12 +81,7 @@
         </div>
         <aside class="recent-updates" aria-labelledby="recent-updates-title">
           <h2 id="recent-updates-title" data-i18n="recentlyUpdated">Recently Updated</h2>
-          <ol>
-            <li><a href="/maps/eastern-europe/" data-recent-map="Eastern Europe"><span class="recent-update-name">Eastern Europe</span><time datetime="2026-08-31">Aug 31</time></a></li>
-            <li><a href="/maps/flanders/" data-recent-map="Flanders"><span class="recent-update-name">Flanders</span><time datetime="2026-08-30">Aug 30</time></a></li>
-            <li><a href="/maps/karelia/" data-recent-map="Karelia"><span class="recent-update-name">Karelia</span><time datetime="2026-08-30">Aug 30</time></a></li>
-            <li><a href="/maps/abandoned-factory/" data-recent-map="Abandoned Factory"><span class="recent-update-name">Abandoned Factory</span><time datetime="2026-08-30">Aug 30</time></a></li>
-          </ol>
+          <ol id="recent-update-list"></ol>
         </aside>
       </section>
 
@@ -207,6 +202,15 @@
               <details class="legend-group" data-legend-group>
                 <summary data-i18n="legendTactical">Tactical</summary>
                 <ul class="legend-list">
+                  <li class="annotation-opacity-slot" id="annotation-opacity-main-slot">
+                    <div class="annotation-opacity-control" id="annotation-opacity-control">
+                      <div class="annotation-opacity-heading">
+                        <label for="annotation-opacity-slider" data-i18n="routeAimOpacity">Route / Aim Opacity</label>
+                        <output id="annotation-opacity-value" for="annotation-opacity-slider">50%</output>
+                      </div>
+                      <input class="annotation-opacity-slider" id="annotation-opacity-slider" type="range" min="0" max="100" step="1" value="50">
+                    </div>
+                  </li>
                   <li class="legend-item"><span class="legend-icon"><img src="/Legend/Line%20battle.png" alt=""></span><span data-i18n="battleLine">Front Line</span></li>
                   <li class="legend-item"><span class="legend-icon"><img src="/Legend/High-risk%20spot.png" alt=""></span><span data-i18n="highRiskSpot">High-risk Spot</span></li>
                   <li class="legend-item"><span class="legend-icon"><img src="/Legend/Sniper.png" alt=""></span><span data-i18n="sniper">Sniper</span></li>
@@ -330,7 +334,7 @@
 
   <input id="marker-layout-import-file" type="file" accept="application/json,.json" hidden>
 
-  <script type="module" src="/assets/js/app.js?v=edit-copy-visibility-20260831"></script>
+  <script type="module" src="/assets/js/app.js?v=recent-updates-20260901"></script>
   <script type="module" src="/assets/js/consent-controls.js?v=20260828"></script>
 </body>
 </html>

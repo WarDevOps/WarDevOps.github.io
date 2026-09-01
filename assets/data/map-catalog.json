@@ -25,7 +25,7 @@
       "name": "Abandoned Factory",
       "aliases": "버려진 공장",
       "slug": "abandoned-factory",
-      "updated": "2026-08-31",
+      "updated": "2026-09-01",
       "br": {
         "min": 1
       },
@@ -45,7 +45,7 @@
       "name": "Abandoned Town",
       "aliases": "버려진 소도시",
       "slug": "abandoned-town",
-      "updated": "2026-08-31",
+      "updated": "2026-09-01",
       "br": {
         "min": 3.7
       },
@@ -65,7 +65,7 @@
       "name": "Advance to the Rhine",
       "aliases": "라인 강 진격",
       "slug": "advance-to-the-rhine",
-      "updated": "2026-08-25",
+      "updated": "2026-09-01",
       "br": {
         "min": 1
       },
@@ -85,7 +85,7 @@
       "name": "Alaska",
       "aliases": "알래스카",
       "slug": "alaska",
-      "updated": "2026-08-31",
+      "updated": "2026-09-01",
       "br": {
         "min": 3.7
       },
@@ -105,7 +105,7 @@
       "name": "American Desert",
       "aliases": "아메리칸 데저트",
       "slug": "american-desert",
-      "updated": "2026-08-25",
+      "updated": "2026-09-01",
       "br": {
         "min": 5
       },
@@ -125,7 +125,7 @@
       "name": "Aral Sea",
       "aliases": "아랄 해",
       "slug": "aral-sea",
-      "updated": "2026-08-25",
+      "updated": "2026-08-31",
       "br": {
         "min": 6.7
       },
@@ -165,7 +165,7 @@
       "name": "Arctic Polar Base",
       "aliases": "북극",
       "slug": "arctic-polar-base",
-      "updated": "2026-08-25",
+      "updated": "2026-09-01",
       "br": {
         "min": 6.7
       },
@@ -185,7 +185,7 @@
       "name": "Ardennes",
       "aliases": "아르덴",
       "slug": "ardennes",
-      "updated": "2026-08-31",
+      "updated": "2026-09-01",
       "br": {
         "min": 3.7
       },
@@ -778,7 +778,7 @@
       "name": "Mozdok",
       "aliases": "모즈도크",
       "slug": "mozdok",
-      "updated": "2026-08-17",
+      "updated": "2026-08-31",
       "br": {
         "min": 3.7
       },
@@ -946,7 +946,7 @@
       "name": "Second Battle of El Alamein",
       "aliases": "엘 알라메인",
       "slug": "second-battle-of-el-alamein",
-      "updated": "2026-08-17",
+      "updated": "2026-09-01",
       "br": {
         "min": 5
       },
@@ -1097,7 +1097,7 @@
       "name": "Sweden",
       "aliases": "스웨덴",
       "slug": "sweden",
-      "updated": "2026-08-16",
+      "updated": "2026-09-01",
       "br": {
         "min": 2.3
       },

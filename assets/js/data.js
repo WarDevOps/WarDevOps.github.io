@@ -1,17 +1,49 @@
-const mapCatalogResponse = await fetch(new URL("../data/map-catalog.json", import.meta.url), { cache: "no-store" });
+const [mapCatalogResponse, defaultMarkerLayout] = await Promise.all([
+  fetch(new URL("../data/map-catalog.json", import.meta.url), { cache: "no-store" }),
+  fetch(new URL("../data/maptactic.json", import.meta.url), { cache: "no-store" })
+    .then(response => {
+      if (!response.ok) throw new Error(`Default marker layout request failed: ${response.status}`);
+      return response.json();
+    })
+    .catch(() => null)
+]);
 if (!mapCatalogResponse.ok) throw new Error(`Map catalog request failed: ${mapCatalogResponse.status}`);
 const mapCatalogPayload = await mapCatalogResponse.json();
 if (mapCatalogPayload.version !== 1 || !Array.isArray(mapCatalogPayload.maps)) {
   throw new Error("Unsupported map catalog format");
 }
 
-function createMap({ name, aliases, slug, updated, br, tacticalSummary, folder = name, teamImages, sharedImage, variations }) {
+const defaultMapUpdated = defaultMarkerLayout?.version === 2
+  && defaultMarkerLayout.mapUpdated
+  && typeof defaultMarkerLayout.mapUpdated === "object"
+  && !Array.isArray(defaultMarkerLayout.mapUpdated)
+    ? defaultMarkerLayout.mapUpdated
+    : {};
+
+const defaultMapUpdatedAt = defaultMarkerLayout?.version === 2
+  && defaultMarkerLayout.mapUpdatedAt
+  && typeof defaultMarkerLayout.mapUpdatedAt === "object"
+  && !Array.isArray(defaultMarkerLayout.mapUpdatedAt)
+    ? defaultMarkerLayout.mapUpdatedAt
+    : {};
+
+const MAP_UPDATED_AT_PATTERN = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d{1,3})?Z$/;
+
+function validMapUpdatedAt(value) {
+  return typeof value === "string" && MAP_UPDATED_AT_PATTERN.test(value) && !Number.isNaN(Date.parse(value));
+}
+
+function createMap({ name, aliases, slug, updated, updatedAt, br, tacticalSummary, folder = name, teamImages, sharedImage, variations }) {
   const configuredVariations = variations?.length ? variations : [{ mode: "domination", number: 1 }];
+  const sourceUpdated = defaultMapUpdated[name];
+  const sourceUpdatedAt = defaultMapUpdatedAt[name];
+  const resolvedUpdatedAt = validMapUpdatedAt(sourceUpdatedAt) ? sourceUpdatedAt : validMapUpdatedAt(updatedAt) ? updatedAt : null;
   return {
     name,
     aliases,
     slug,
-    updated,
+    updated: typeof sourceUpdated === "string" && /^\d{4}-\d{2}-\d{2}$/.test(sourceUpdated) ? sourceUpdated : updated,
+    ...(resolvedUpdatedAt ? { updatedAt: resolvedUpdatedAt } : {}),
     br,
     tacticalSummary,
     folder,
@@ -31,6 +63,7 @@ function createMap({ name, aliases, slug, updated, br, tacticalSummary, folder =
 }
 
 export const maps = mapCatalogPayload.maps.map(createMap);
+export { defaultMarkerLayout };
 
 export const translations = {
       en: {
@@ -79,6 +112,7 @@ export const translations = {
         spawnKill: "Spawn Kill Spot",
         route: "Route",
         aimHere: "Aim Here",
+        routeAimOpacity: "Route / Aim Opacity",
         coreArea: "Core Area",
         dangerArea: "Danger Area",
         antiAirArea: "Anti-air Area",
@@ -206,6 +240,7 @@ export const translations = {
         spawnKill: "스폰 킬",
         route: "이동 경로",
         aimHere: "조준 지점",
+        routeAimOpacity: "이동 경로 / 조준선 불투명도",
         coreArea: "핵심 지역",
         dangerArea: "위험 지역",
         antiAirArea: "대공 배치 추천",

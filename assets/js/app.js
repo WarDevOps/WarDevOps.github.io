@@ -1,10 +1,12 @@
-    import { MARKER_LAYOUT_VERSION, loadMarkerLayout, saveMarkerLayout as saveMarkerLayoutToStorage } from './marker-storage.js';
+    import { MARKER_LAYOUT_VERSION, loadMarkerLayout, saveMarkerLayout as saveMarkerLayoutToStorage } from './marker-storage.js?v=recent-updates-20260901';
 import { initDiscordMemberCount } from './discord-stats.js';
     import { commentImages } from './comment-images.js?v=comment-images-20260817';
-    import { maps, translations } from './data.js?v=share-links-20260831';
+    import { defaultMarkerLayout, maps, translations } from './data.js?v=recent-updates-20260901';
 
 
-    const state = { selected: null, team: "Red", query: "", language: "en", theme: "dark", editMode: false, focusedTankMarkerId: null, contextMarkerId: null, contextAnnotationId: null, commentMarkerId: null, drawing: null };
+    const DEFAULT_ANNOTATION_OPACITY = 50;
+    const ANNOTATION_OPACITY_STORAGE_KEY = "maptactic-route-aim-opacity-v1";
+    const state = { selected: null, team: "Red", query: "", language: "en", theme: "dark", editMode: false, focusedTankMarkerId: null, contextMarkerId: null, contextAnnotationId: null, commentMarkerId: null, drawing: null, annotationOpacity: loadAnnotationOpacity() };
     const $ = (selector) => document.querySelector(selector);
     const mapList = $("#map-list");
     const mapVariationSelect = $("#map-variation");
@@ -35,6 +37,10 @@ import { initDiscordMemberCount } from './discord-stats.js';
     const modalMarkerEditorNote = $("#modal-marker-editor-note");
     const modalMarkerContextMenu = $("#modal-marker-context-menu");
     const modalAnnotationContextMenu = $("#modal-annotation-context-menu");
+    const annotationOpacityMainSlot = $("#annotation-opacity-main-slot");
+    const annotationOpacityControl = $("#annotation-opacity-control");
+    const annotationOpacitySlider = $("#annotation-opacity-slider");
+    const annotationOpacityValue = $("#annotation-opacity-value");
     const languageButtons = document.querySelectorAll(".language-button");
     const themeToggle = $("#theme-toggle");
     const workspace = $(".workspace");
@@ -62,12 +68,12 @@ import { initDiscordMemberCount } from './discord-stats.js';
     const hiddenAnnotations = new Set();
     const hiddenMarkerTypes = new Set();
     const MARKER_STORAGE_KEY = "maptactic-marker-layout-v2";
-    const DEFAULT_MARKER_LAYOUT_URL = new URL("../data/maptactic.json", import.meta.url);
     const DEFAULT_MARKER_LAYOUT_FILENAME = "Maptactic.json";
     const MAX_IMPORTED_MARKERS = 5000;
     const MAX_IMPORTED_ANNOTATIONS = 5000;
     const MAX_IMPORTED_ROUTE_POINTS = 25000;
     const MAX_MARKER_COMMENT_BYTES = 120;
+    const MAP_UPDATED_AT_PATTERN = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d{1,3})?Z$/;
     const COMMENT_TEXT_ENCODER = new TextEncoder();
     const COMMENT_IMAGES_BY_ID = new Map();
     commentImages.forEach(image => {
@@ -133,16 +139,23 @@ import { initDiscordMemberCount } from './discord-stats.js';
       "antiAirRed"
     ]);
     const ROLE_MARKER_TYPES = new Set(["battleLine", "highRiskSpot", "sniper", "spawnKill"]);
-    const SPECIAL_MARKER_MAP_NAMES = new Set(["Surroundings of Volokolamsk", "Arctic Polar Base", "Arctic Pier"]);
+    const SPECIAL_MARKER_MAP_NAMES = new Set([
+      "Surroundings of Volokolamsk",
+      "Arctic Polar Base",
+      "Arctic Pier",
+      "Volokolamsk",
+      "Frozen Pass",
+      "Stalingrad"
+    ]);
     const SPECIAL_TANK_ICON_PATHS = Object.freeze({
-      lightTank: { Red: "/Legend/lt w r.png", Blue: "/Legend/lt w b.png" },
-      lightTankRed: { Red: "/Legend/lt w r.png", Blue: "/Legend/lt w b.png" },
-      mainBattleTank: { Red: "/Legend/mbt w r.png", Blue: "/Legend/mbt w b.png" },
-      mainBattleTankRed: { Red: "/Legend/mbt w r.png", Blue: "/Legend/mbt w b.png" },
-      tankDestroyer: { Red: "/Legend/td w r.png", Blue: "/Legend/td w b.png" },
-      tankDestroyerRed: { Red: "/Legend/td w r.png", Blue: "/Legend/td w b.png" },
-      antiAir: { Red: "/Legend/aa w r.png", Blue: "/Legend/aa w b.png" },
-      antiAirRed: { Red: "/Legend/aa w r.png", Blue: "/Legend/aa w b.png" }
+      lightTank: "/Legend/lt w b.png",
+      lightTankRed: "/Legend/lt w r.png",
+      mainBattleTank: "/Legend/mbt w b.png",
+      mainBattleTankRed: "/Legend/mbt w r.png",
+      tankDestroyer: "/Legend/td w b.png",
+      tankDestroyerRed: "/Legend/td w r.png",
+      antiAir: "/Legend/aa w b.png",
+      antiAirRed: "/Legend/aa w r.png"
     });
     // Role markers are attached from a tank marker's context menu, never placed directly.
     const PLACEMENT_DISABLED_MARKER_TYPES = new Set([
@@ -196,27 +209,88 @@ import { initDiscordMemberCount } from './discord-stats.js';
       const storedDate = storedMapUpdated?.[map.name] || (legacyName ? storedMapUpdated?.[legacyName] : null);
       return [map.name, typeof storedDate === "string" && /^\d{4}-\d{2}-\d{2}$/.test(storedDate) ? storedDate : map.updated];
     }));
+    const storedMapUpdatedAt = markerLayout.mapUpdatedAt;
+    markerLayout.mapUpdatedAt = Object.fromEntries(maps.flatMap(map => {
+      const legacyName = [...LEGACY_MAP_NAMES.entries()].find(([, correctedName]) => correctedName === map.name)?.[0];
+      const storedTimestamp = storedMapUpdatedAt?.[map.name] || (legacyName ? storedMapUpdatedAt?.[legacyName] : null);
+      return validMapUpdatedAt(storedTimestamp) ? [[map.name, storedTimestamp]] : [];
+    }));
     const validMarkerLayoutKeys = new Set(maps.flatMap(map => map.variations.flatMap(variation => ["Red", "Blue"].map(team => `${map.name}::${variation.id}|${team}`))));
 
     function t(key) {
       return translations[state.language][key];
     }
+    function validMapUpdatedAt(value) {
+      return typeof value === "string" && MAP_UPDATED_AT_PATTERN.test(value) && !Number.isNaN(Date.parse(value));
+    }
+    function loadAnnotationOpacity() {
+      try {
+        const savedValue = localStorage.getItem(ANNOTATION_OPACITY_STORAGE_KEY);
+        if (savedValue === null) return DEFAULT_ANNOTATION_OPACITY;
+        const value = Number(savedValue);
+        return Number.isFinite(value) ? Math.min(100, Math.max(0, Math.round(value))) : DEFAULT_ANNOTATION_OPACITY;
+      } catch (error) {
+        return DEFAULT_ANNOTATION_OPACITY;
+      }
+    }
+    function mountAnnotationOpacityControl(slot) {
+      if (slot && annotationOpacityControl.parentElement !== slot) slot.prepend(annotationOpacityControl);
+    }
+    function updateAnnotationOpacity() {
+      const value = state.annotationOpacity;
+      annotationOpacitySlider.value = String(value);
+      annotationOpacitySlider.setAttribute("aria-valuetext", `${value}%`);
+      annotationOpacityValue.value = `${value}%`;
+      document.documentElement.style.setProperty("--annotation-opacity", String(value / 100));
+      document.documentElement.style.setProperty("--annotation-dimmed-opacity", String((value / 100) * .2));
+      document.documentElement.classList.toggle("annotation-opacity-zero", value === 0);
+    }
+    function setAnnotationOpacity(value, { persist = true } = {}) {
+      const nextValue = Math.min(100, Math.max(0, Math.round(Number(value))));
+      if (!Number.isFinite(nextValue)) return;
+      state.annotationOpacity = nextValue;
+      updateAnnotationOpacity();
+      if (!persist) return;
+      try {
+        localStorage.setItem(ANNOTATION_OPACITY_STORAGE_KEY, String(nextValue));
+      } catch (error) {
+        // The live setting still works when browser storage is unavailable.
+      }
+    }
     function mapLabel(map) {
       return state.language === "ko" ? map.aliases : map.name;
     }
     function renderRecentUpdates() {
-      document.querySelectorAll("[data-recent-map]").forEach(link => {
-        const map = maps.find(candidate => candidate.name === link.dataset.recentMap);
-        if (!map) return;
-        link.querySelector(".recent-update-name").textContent = mapLabel(map);
-        const time = link.querySelector("time");
-        time.dateTime = map.updated;
-        time.textContent = new Intl.DateTimeFormat(state.language === "ko" ? "ko-KR" : "en-US", {
-          month: "short",
-          day: "numeric",
-          timeZone: "UTC"
-        }).format(new Date(`${map.updated}T00:00:00Z`));
+      const list = $("#recent-update-list");
+      if (!list) return;
+      const recentMaps = maps
+        .map((map, catalogIndex) => ({ map, catalogIndex }))
+        .sort((left, right) => {
+          const leftTimestamp = validMapUpdatedAt(left.map.updatedAt) ? Math.floor(Date.parse(left.map.updatedAt) / 1000) : Date.parse(`${left.map.updated}T00:00:00Z`) / 1000;
+          const rightTimestamp = validMapUpdatedAt(right.map.updatedAt) ? Math.floor(Date.parse(right.map.updatedAt) / 1000) : Date.parse(`${right.map.updated}T00:00:00Z`) / 1000;
+          return (rightTimestamp - leftTimestamp) || (left.catalogIndex - right.catalogIndex);
+        })
+        .slice(0, 5);
+      const dateFormatter = new Intl.DateTimeFormat(state.language === "ko" ? "ko-KR" : "en-US", {
+        year: "numeric",
+        month: "short",
+        day: "numeric",
+        timeZone: "UTC"
       });
+      list.replaceChildren(...recentMaps.map(({ map }) => {
+        const item = document.createElement("li");
+        const link = document.createElement("a");
+        link.href = `/maps/${map.slug}/`;
+        const name = document.createElement("span");
+        name.className = "recent-update-name";
+        name.textContent = mapLabel(map);
+        const time = document.createElement("time");
+        time.dateTime = map.updated;
+        time.textContent = dateFormatter.format(new Date(`${map.updated}T00:00:00Z`));
+        link.append(name, time);
+        item.append(link);
+        return item;
+      }));
     }
     function mapVariationLabel(variation) {
       return `${t(variation.mode)} #${variation.number}`;
@@ -315,7 +389,7 @@ import { initDiscordMemberCount } from './discord-stats.js';
       }));
       mapBattleRating.textContent = mapBattleRatingLabel(state.selected);
       mapImage.alt = `${mapLabel(state.selected)} ${mapVariationLabel(state.selected)} ${state.team}`;
-      const mapUpdated = markerLayout.mapUpdated?.[state.selected.name] || state.selected.updated;
+      const mapUpdated = state.selected.updated;
       mapLastUpdated.dateTime = mapUpdated;
       mapLastUpdated.textContent = mapUpdated;
       if (/^\/maps\/[^/]+\/?$/.test(window.location.pathname)) updateMapDocumentMetadata();
@@ -365,14 +439,16 @@ import { initDiscordMemberCount } from './discord-stats.js';
       markerStatus.textContent = message;
       modalMarkerStatus.textContent = message;
     }
-    function localIsoDate() {
-      const now = new Date();
-      return new Date(now.getTime() - (now.getTimezoneOffset() * 60000)).toISOString().slice(0, 10);
+    function localIsoDate(date = new Date()) {
+      return new Date(date.getTime() - (date.getTimezoneOffset() * 60000)).toISOString().slice(0, 10);
     }
     function touchCurrentMapUpdated() {
       if (!state.selected) return;
+      const now = new Date();
       if (!markerLayout.mapUpdated || typeof markerLayout.mapUpdated !== "object" || Array.isArray(markerLayout.mapUpdated)) markerLayout.mapUpdated = {};
-      markerLayout.mapUpdated[state.selected.name] = localIsoDate();
+      if (!markerLayout.mapUpdatedAt || typeof markerLayout.mapUpdatedAt !== "object" || Array.isArray(markerLayout.mapUpdatedAt)) markerLayout.mapUpdatedAt = {};
+      markerLayout.mapUpdated[state.selected.name] = localIsoDate(now);
+      markerLayout.mapUpdatedAt[state.selected.name] = now.toISOString().replace(/\.\d{3}Z$/, "Z");
       updateSelectedMapDetails();
     }
     function persistMarkerLayout(statusKey = "savedLocally", { touchMap = false } = {}) {
@@ -426,8 +502,12 @@ import { initDiscordMemberCount } from './discord-stats.js';
     }
     function markerIconPath(marker, fallbackPath) {
       return usesSpecialMarkerStyle() && isTankMarker(marker)
-        ? SPECIAL_TANK_ICON_PATHS[marker.type]?.[state.team] || fallbackPath
+        ? SPECIAL_TANK_ICON_PATHS[marker.type] || fallbackPath
         : fallbackPath;
+    }
+    function usesSpecialDarkAnnotationStyle(annotation) {
+      return usesSpecialMarkerStyle()
+        && (annotation.type === "aimHere" || (annotation.type === "route" && !annotation.dangerRoute));
     }
     function commentByteLength(value) {
       return COMMENT_TEXT_ENCODER.encode(value).length;
@@ -541,6 +621,12 @@ import { initDiscordMemberCount } from './discord-stats.js';
         group.append(sourceGroup.querySelector("summary").cloneNode(true));
         const list = document.createElement("ul");
         list.className = "legend-list";
+        if (sourceGroup.querySelector("summary")?.dataset.i18n === "legendTactical") {
+          const opacitySlot = document.createElement("li");
+          opacitySlot.className = "annotation-opacity-slot";
+          opacitySlot.dataset.annotationOpacityModalSlot = "";
+          list.append(opacitySlot);
+        }
         sourceGroup.querySelectorAll(".legend-item").forEach(source => {
           const item = source.cloneNode(true);
           item.classList.add("modal-legend-item");
@@ -554,6 +640,7 @@ import { initDiscordMemberCount } from './discord-stats.js';
         group.append(list);
         modalLegendList.append(group);
       });
+      mountAnnotationOpacityControl(modalLegendList.querySelector("[data-annotation-opacity-modal-slot]"));
       updateLegendVisibility();
     }
     function updateLegendVisibility() {
@@ -903,6 +990,7 @@ import { initDiscordMemberCount } from './discord-stats.js';
       const drawing = document.createElementNS("http://www.w3.org/2000/svg", "svg");
       drawing.classList.add("map-annotation", "route-line");
       if (annotation.dangerRoute) drawing.classList.add("is-danger-route");
+      drawing.classList.toggle("is-special-dark-annotation", usesSpecialDarkAnnotationStyle(annotation));
       if (isPreview) drawing.classList.add("is-preview");
       drawing.classList.toggle("is-dimmed", !isPreview && Boolean(state.focusedTankMarkerId));
       drawing.dataset.annotationId = annotation.id || "preview";
@@ -935,6 +1023,7 @@ import { initDiscordMemberCount } from './discord-stats.js';
       const drawing = document.createElement("button");
       drawing.type = "button";
       drawing.className = `map-annotation ${annotation.type === "aimHere" ? "aim-arrow" : "route-line"}${annotation.type === "route" && annotation.dangerRoute ? " is-danger-route" : ""}${isPreview ? " is-preview" : ""}`;
+      drawing.classList.toggle("is-special-dark-annotation", usesSpecialDarkAnnotationStyle(annotation));
       drawing.classList.toggle("is-dimmed", !isPreview && Boolean(state.focusedTankMarkerId) && annotation.parentTankId !== state.focusedTankMarkerId);
       drawing.dataset.annotationId = annotation.id || "preview";
       drawing.style.left = `${fromX}px`;
@@ -1128,6 +1217,7 @@ import { initDiscordMemberCount } from './discord-stats.js';
       const exportData = {
         version: markerLayout.version,
         mapUpdated: markerLayout.mapUpdated || {},
+        mapUpdatedAt: markerLayout.mapUpdatedAt || {},
         markers: markerLayout.markers,
         annotations: markerLayout.annotations,
         ...(markerLayout.updatedAt ? { updatedAt: markerLayout.updatedAt } : {}),
@@ -1160,18 +1250,23 @@ import { initDiscordMemberCount } from './discord-stats.js';
       setMarkerStatus("exportedJson");
     }
     function validateImportedMarkerLayout(data) {
-      if (!data || typeof data !== "object" || Array.isArray(data) || data.version !== MARKER_LAYOUT_VERSION || !data.markers || typeof data.markers !== "object" || Array.isArray(data.markers) || (data.mapUpdated !== undefined && (!data.mapUpdated || typeof data.mapUpdated !== "object" || Array.isArray(data.mapUpdated))) || (data.annotations !== undefined && (!data.annotations || typeof data.annotations !== "object" || Array.isArray(data.annotations)))) {
+      if (!data || typeof data !== "object" || Array.isArray(data) || data.version !== MARKER_LAYOUT_VERSION || !data.markers || typeof data.markers !== "object" || Array.isArray(data.markers) || (data.mapUpdated !== undefined && (!data.mapUpdated || typeof data.mapUpdated !== "object" || Array.isArray(data.mapUpdated))) || (data.mapUpdatedAt !== undefined && (!data.mapUpdatedAt || typeof data.mapUpdatedAt !== "object" || Array.isArray(data.mapUpdatedAt))) || (data.annotations !== undefined && (!data.annotations || typeof data.annotations !== "object" || Array.isArray(data.annotations)))) {
         throw new Error("Invalid marker layout.");
       }
       const layout = {
         version: MARKER_LAYOUT_VERSION,
         mapUpdated: Object.fromEntries(maps.map(map => [map.name, map.updated])),
+        mapUpdatedAt: {},
         markers: {},
         annotations: {}
       };
       Object.entries(data.mapUpdated || {}).forEach(([mapName, updated]) => {
         if (!validMapNames.has(mapName) || typeof updated !== "string" || !/^\d{4}-\d{2}-\d{2}$/.test(updated)) throw new Error("Invalid map update date.");
         layout.mapUpdated[mapName] = updated;
+      });
+      Object.entries(data.mapUpdatedAt || {}).forEach(([mapName, updatedAt]) => {
+        if (!validMapNames.has(mapName) || !validMapUpdatedAt(updatedAt)) throw new Error("Invalid map update timestamp.");
+        layout.mapUpdatedAt[mapName] = updatedAt;
       });
       let markerCount = 0;
       Object.entries(data.markers).forEach(([key, markers]) => {
@@ -1238,6 +1333,7 @@ import { initDiscordMemberCount } from './discord-stats.js';
     function applyMarkerLayout(importedLayout) {
       markerLayout.version = importedLayout.version;
       markerLayout.mapUpdated = importedLayout.mapUpdated;
+      markerLayout.mapUpdatedAt = importedLayout.mapUpdatedAt;
       markerLayout.markers = importedLayout.markers;
       markerLayout.annotations = importedLayout.annotations;
       delete markerLayout.updatedAt;
@@ -1251,9 +1347,8 @@ import { initDiscordMemberCount } from './discord-stats.js';
       renderMarkers();
     }
     async function importDefaultMarkerLayout() {
-      const response = await fetch(DEFAULT_MARKER_LAYOUT_URL, { cache: "no-store" });
-      if (!response.ok) throw new Error("Default marker layout could not be loaded.");
-      applyMarkerLayout(validateImportedMarkerLayout(await response.json()));
+      if (!defaultMarkerLayout) throw new Error("Default marker layout could not be loaded.");
+      applyMarkerLayout(validateImportedMarkerLayout(defaultMarkerLayout));
     }
     async function importMarkerLayoutFile(file) {
       if (!file || file.size > 2 * 1024 * 1024) {
@@ -1434,7 +1529,7 @@ import { initDiscordMemberCount } from './discord-stats.js';
         event.stopPropagation();
         hideMarkerContextMenu();
         hideAnnotationContextMenu();
-        state.focusedTankMarkerId = marker.id;
+        state.focusedTankMarkerId = state.focusedTankMarkerId === marker.id ? null : marker.id;
         renderMarkers();
       });
       layer.addEventListener("dragstart", event => {
@@ -1623,6 +1718,7 @@ import { initDiscordMemberCount } from './discord-stats.js';
     modalResetHiddenMarkers.addEventListener("click", resetHiddenMarkersForCurrentMap);
     resetAllMarkers.addEventListener("click", resetAllPlacedMarkers);
     modalResetAllMarkers.addEventListener("click", resetAllPlacedMarkers);
+    annotationOpacitySlider.addEventListener("input", () => setAnnotationOpacity(annotationOpacitySlider.value));
     legendItems.forEach(bindLegendItem);
     bindMarkerLayer(markerLayer, mapStage, markerContextMenu);
     bindMarkerLayer(modalMarkerLayer, modalMapStage, modalMarkerContextMenu);
@@ -1683,6 +1779,7 @@ import { initDiscordMemberCount } from './discord-stats.js';
     $(".close-modal").addEventListener("click", () => dialog.close());
     dialog.addEventListener("click", event => { if (event.target === dialog) dialog.close(); });
     dialog.addEventListener("close", () => {
+      mountAnnotationOpacityControl(annotationOpacityMainSlot);
       cancelDrawing();
       state.focusedTankMarkerId = null;
       hideMarkerContextMenu();
@@ -1692,6 +1789,7 @@ import { initDiscordMemberCount } from './discord-stats.js';
       modalMarkerLayer.replaceChildren();
       renderMarkers();
     });
+    setAnnotationOpacity(state.annotationOpacity, { persist: false });
     setLanguage("en");
     if (!markerLayout.updatedAt) {
       try {

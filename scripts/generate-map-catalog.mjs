@@ -16,6 +16,7 @@ const MAP_ROUTE_ROOT = path.join(REPO_ROOT, "maps");
 const SITEMAP_PATH = path.join(REPO_ROOT, "sitemap.xml");
 const VARIATION_FOLDER_PATTERN = /^(domination|conquest|battle)\s*#(\d+)$/i;
 const MODE_ORDER = Object.freeze({ domination: 0, conquest: 1, battle: 2 });
+const MAP_UPDATED_AT_PATTERN = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d{1,3})?Z$/;
 const CHECK_ONLY = process.argv.includes("--check");
 const WATCH_MODE = process.argv.includes("--watch");
 
@@ -178,13 +179,14 @@ function compactVariation(variation, rootFolder) {
   return result;
 }
 
-async function discoverMap(folderName, metadata, mapUpdated) {
+async function discoverMap(folderName, metadata, mapUpdated, mapUpdatedAt) {
   const mapMetadata = metadata.maps?.[folderName] || {};
   if (mapMetadata.disabled) return null;
   const name = mapMetadata.en || folderName;
   const aliases = mapMetadata.ko || name;
   const slug = mapMetadata.slug || mapSlug(name);
   const updated = String(mapUpdated?.[name] || "");
+  const updatedAt = mapUpdatedAt?.[name];
   const defaultMode = String(mapMetadata.defaultMode || "domination").toLowerCase();
   const mapBr = battleRating(mapMetadata.br ?? metadata.defaultBr, folderName);
   const mapTacticalSummary = tacticalSummary(mapMetadata.tacticalSummary, folderName);
@@ -194,6 +196,9 @@ async function discoverMap(folderName, metadata, mapUpdated) {
   }
   if (!/^\d{4}-\d{2}-\d{2}$/.test(updated)) {
     throw new Error(`Missing or invalid mapUpdated date in Maptactic.json for ${name}`);
+  }
+  if (updatedAt !== undefined && (typeof updatedAt !== "string" || !MAP_UPDATED_AT_PATTERN.test(updatedAt) || Number.isNaN(Date.parse(updatedAt)))) {
+    throw new Error(`Invalid mapUpdatedAt timestamp in Maptactic.json for ${name}`);
   }
   if (!Object.hasOwn(MODE_ORDER, defaultMode)) {
     throw new Error(`Invalid default mode for ${folderName}: ${defaultMode}`);
@@ -252,6 +257,7 @@ async function discoverMap(folderName, metadata, mapUpdated) {
     aliases,
     slug,
     updated,
+    ...(updatedAt ? { updatedAt } : {}),
     br: mapBr,
     ...(mapTacticalSummary ? { tacticalSummary: mapTacticalSummary } : {}),
     folder: folderName,
@@ -268,10 +274,14 @@ async function buildCatalog() {
   if (mapLayout.version !== 2 || !mapLayout.mapUpdated || typeof mapLayout.mapUpdated !== "object" || Array.isArray(mapLayout.mapUpdated)) {
     throw new Error("Maptactic.json must contain a mapUpdated object");
   }
+  if (mapLayout.mapUpdatedAt !== undefined && (!mapLayout.mapUpdatedAt || typeof mapLayout.mapUpdatedAt !== "object" || Array.isArray(mapLayout.mapUpdatedAt))) {
+    throw new Error("Maptactic.json mapUpdatedAt must be an object");
+  }
+  const mapUpdatedAt = mapLayout.mapUpdatedAt || {};
   const entries = await directoryEntries(IMG_ROOT);
   const maps = [];
   for (const entry of entries.filter(item => item.isDirectory())) {
-    const map = await discoverMap(entry.name, metadata, mapLayout.mapUpdated);
+    const map = await discoverMap(entry.name, metadata, mapLayout.mapUpdated, mapUpdatedAt);
     if (map) maps.push(map);
   }
 
@@ -284,11 +294,13 @@ async function buildCatalog() {
   const unusedMetadata = Object.keys(metadata.maps).filter(folder => !registeredFolders.has(folder) && !metadata.maps[folder].disabled);
   const catalogMapNames = new Set(maps.map(map => map.name));
   const unusedMapUpdates = Object.keys(mapLayout.mapUpdated).filter(name => !catalogMapNames.has(name));
+  const unusedMapUpdateTimestamps = Object.keys(mapUpdatedAt).filter(name => !catalogMapNames.has(name));
   return {
     payload: { version: 1, maps },
     unknownTranslations,
     unusedMetadata,
-    unusedMapUpdates
+    unusedMapUpdates,
+    unusedMapUpdateTimestamps
   };
 }
 
@@ -317,6 +329,8 @@ function renderMapRoutePage(rootPage, map) {
   const canonical = `https://wardevops.github.io/maps/${map.slug}/`;
   const preview = mapPreviewUrl(map);
   let page = rootPage;
+  page = page.replace('class="hero home-hero"', 'class="hero"');
+  page = page.replace(/\n\s*<aside class="recent-updates"[\s\S]*?<\/aside>/, "");
   page = replacePageValue(page, /<meta name="description" content="[^"]*">/, `<meta name="description" content="${description}">`, "description");
   page = replacePageValue(page, /<link rel="canonical" href="[^"]*">/, `<link rel="canonical" href="${canonical}">`, "canonical URL");
   page = replacePageValue(page, /<meta property="og:title" content="[^"]*">/, `<meta property="og:title" content="${title}">`, "Open Graph title");
@@ -358,7 +372,7 @@ async function writeSiteArtifacts(payload) {
 }
 
 async function generate() {
-  const { payload, unknownTranslations, unusedMetadata, unusedMapUpdates } = await buildCatalog();
+  const { payload, unknownTranslations, unusedMetadata, unusedMapUpdates, unusedMapUpdateTimestamps } = await buildCatalog();
   const serialized = `${JSON.stringify(payload, null, 2)}\n`;
   let current = "";
   try {
@@ -392,6 +406,9 @@ async function generate() {
   }
   if (unusedMapUpdates.length) {
     console.warn(`Maptactic.json dates without a usable map: ${unusedMapUpdates.join(", ")}`);
+  }
+  if (unusedMapUpdateTimestamps.length) {
+    console.warn(`Maptactic.json timestamps without a usable map: ${unusedMapUpdateTimestamps.join(", ")}`);
   }
 }
 
