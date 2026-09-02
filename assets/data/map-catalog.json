@@ -25,7 +25,8 @@
       "name": "Abandoned Factory",
       "aliases": "버려진 공장",
       "slug": "abandoned-factory",
-      "updated": "2026-09-01",
+      "updated": "2026-09-02",
+      "updatedAt": "2026-09-01T15:13:42Z",
       "br": {
         "min": 1
       },
@@ -66,6 +67,7 @@
       "aliases": "라인 강 진격",
       "slug": "advance-to-the-rhine",
       "updated": "2026-09-01",
+      "updatedAt": "2026-09-01T11:58:22Z",
       "br": {
         "min": 1
       },
@@ -105,7 +107,8 @@
       "name": "American Desert",
       "aliases": "아메리칸 데저트",
       "slug": "american-desert",
-      "updated": "2026-09-01",
+      "updated": "2026-09-02",
+      "updatedAt": "2026-09-01T15:14:29Z",
       "br": {
         "min": 5
       },
@@ -125,7 +128,8 @@
       "name": "Aral Sea",
       "aliases": "아랄 해",
       "slug": "aral-sea",
-      "updated": "2026-08-31",
+      "updated": "2026-09-02",
+      "updatedAt": "2026-09-01T16:42:20Z",
       "br": {
         "min": 6.7
       },
@@ -145,7 +149,8 @@
       "name": "Arctic Pier",
       "aliases": "북극의 부두",
       "slug": "arctic-pier",
-      "updated": "2026-08-25",
+      "updated": "2026-09-02",
+      "updatedAt": "2026-09-01T16:38:48Z",
       "br": {
         "min": 4.7
       },
@@ -223,7 +228,8 @@
       "name": "Ash River",
       "aliases": "애쉬 리버",
       "slug": "ash-river",
-      "updated": "2026-08-25",
+      "updated": "2026-09-02",
+      "updatedAt": "2026-09-01T16:50:15Z",
       "br": {
         "min": 1,
         "max": 7.7
@@ -245,7 +251,8 @@
       "name": "Attica",
       "aliases": "아티카",
       "slug": "attica",
-      "updated": "2026-08-31",
+      "updated": "2026-09-02",
+      "updatedAt": "2026-09-01T16:44:47Z",
       "br": {
         "min": 1
       },
@@ -265,7 +272,8 @@
       "name": "Battle of Hürtgen Forest",
       "aliases": "휘르트겐 숲 전투",
       "slug": "battle-of-hurtgen-forest",
-      "updated": "2026-08-18",
+      "updated": "2026-09-02",
+      "updatedAt": "2026-09-01T16:59:04Z",
       "br": {
         "min": 4.7
       },
@@ -604,7 +612,8 @@
       "name": "Golden Quarry",
       "aliases": "금광 지대",
       "slug": "golden-quarry",
-      "updated": "2026-08-17",
+      "updated": "2026-09-02",
+      "updatedAt": "2026-09-02T05:40:00Z",
       "br": {
         "min": 2.3
       },
@@ -815,9 +824,10 @@
     },
     {
       "name": "North Holland",
-      "aliases": "북부 네덜란드",
+      "aliases": "노르드 홀란트",
       "slug": "north-holland",
-      "updated": "2026-08-30",
+      "updated": "2026-09-02",
+      "updatedAt": "2026-09-02T03:25:27Z",
       "br": {
         "min": 1
       },
@@ -1217,7 +1227,8 @@
       "name": "White Rock Fortress",
       "aliases": "백암요새",
       "slug": "white-rock-fortress",
-      "updated": "2026-08-31",
+      "updated": "2026-09-02",
+      "updatedAt": "2026-09-02T04:58:42Z",
       "br": {
         "min": 1,
         "max": 8.7
