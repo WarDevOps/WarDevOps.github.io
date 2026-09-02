@@ -1,7 +1,8 @@
-    import { MARKER_LAYOUT_VERSION, loadMarkerLayout, saveMarkerLayout as saveMarkerLayoutToStorage } from './marker-storage.js?v=tactical-summary-editor-20260902';
+    import { MARKER_LAYOUT_VERSION, backupMarkerLayout, loadMarkerLayout, saveMarkerLayout as saveMarkerLayoutToStorage } from './marker-storage.js?v=map-sync-20260903';
 import { initDiscordMemberCount } from './discord-stats.js';
     import { commentImages } from './comment-images.js?v=comment-images-d6c742b47074';
-    import { defaultMarkerLayout, maps, translations } from './data.js?v=tactical-summary-editor-20260902';
+    import { defaultMarkerLayout, maps, translations } from './data.js?v=mobile-comment-sheet-map-sync-20260903';
+    import { acceptUpstreamMap, isMapSyncState, markLayoutAsLocalEdits, markMapEdited, mergeMapLayouts, sourceRevision } from './marker-merge.js?v=map-sync-20260903';
 
 
     const DEFAULT_ANNOTATION_OPACITY = 50;
@@ -15,11 +16,17 @@ import { initDiscordMemberCount } from './discord-stats.js';
     markerCommentPopover.hidden = true;
     document.body.append(markerCommentPopover);
     let markerCommentPopoverAnchor = null;
-    const markerCommentImagePreview = document.createElement("img");
+    const markerCommentImagePreview = document.createElement("div");
     markerCommentImagePreview.className = "map-marker-comment-image-preview";
-    markerCommentImagePreview.alt = "";
     markerCommentImagePreview.setAttribute("aria-hidden", "true");
     markerCommentImagePreview.hidden = true;
+    const markerCommentImagePreviewImage = document.createElement("img");
+    markerCommentImagePreviewImage.alt = "";
+    const markerCommentImagePreviewClose = document.createElement("button");
+    markerCommentImagePreviewClose.type = "button";
+    markerCommentImagePreviewClose.className = "map-marker-comment-image-preview-close";
+    markerCommentImagePreviewClose.textContent = "×";
+    markerCommentImagePreview.append(markerCommentImagePreviewImage, markerCommentImagePreviewClose);
     document.body.append(markerCommentImagePreview);
     let markerCommentImagePreviewSource = null;
     const mapList = $("#map-list");
@@ -56,6 +63,8 @@ import { initDiscordMemberCount } from './discord-stats.js';
     const modalResetHiddenMarkers = $("#modal-reset-hidden-markers");
     const modalResetAllMarkers = $("#modal-reset-all-markers");
     const modalMarkerStatus = $("#modal-marker-status");
+    const modalMapSyncAlert = $("#modal-map-sync-alert");
+    const modalUseLatestMap = $("#modal-use-latest-map");
     const modalMarkerEditorNote = $("#modal-marker-editor-note");
     const modalMarkerContextMenu = $("#modal-marker-context-menu");
     const modalAnnotationContextMenu = $("#modal-annotation-context-menu");
@@ -80,6 +89,8 @@ import { initDiscordMemberCount } from './discord-stats.js';
     const resetHiddenMarkers = $("#reset-hidden-markers");
     const resetAllMarkers = $("#reset-all-markers");
     const markerStatus = $("#marker-status");
+    const mapSyncAlert = $("#map-sync-alert");
+    const useLatestMap = $("#use-latest-map");
     const markerEditorNote = $("#marker-editor-note");
     const mapLastUpdated = $("#map-last-updated");
     const editorActions = [...document.querySelectorAll("[data-editor-action]")];
@@ -90,6 +101,7 @@ import { initDiscordMemberCount } from './discord-stats.js';
     const hiddenAnnotations = new Set();
     const hiddenMarkerTypes = new Set();
     const MARKER_STORAGE_KEY = "maptactic-marker-layout-v2";
+    const MARKER_STORAGE_BACKUP_KEY = "maptactic-marker-layout-v2-backup-before-map-sync-v1";
     const DEFAULT_MARKER_LAYOUT_FILENAME = "Maptactic.json";
     const MAX_IMPORTED_MARKERS = 5000;
     const MAX_IMPORTED_ANNOTATIONS = 5000;
@@ -98,6 +110,8 @@ import { initDiscordMemberCount } from './discord-stats.js';
     const MAX_COMMENT_POPOVER_WIDTH = 720;
     const MAX_COMMENT_POPOVER_HEIGHT_RATIO = 0.8;
     const MIN_PINNED_COMMENT_IMAGE_HEIGHT = 240;
+    const MOBILE_COMMENT_LAYOUT_QUERY = window.matchMedia("(max-width: 760px), (hover: none), (pointer: coarse)");
+    const MOBILE_DEVICE_QUERY = window.matchMedia("(max-width: 760px), (any-pointer: coarse)");
     const MAX_TACTICAL_SUMMARY_SENTENCE_LENGTH = 240;
     const MAP_UPDATED_AT_PATTERN = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d{1,3})?Z$/;
     const COMMENT_TEXT_ENCODER = new TextEncoder();
@@ -209,8 +223,16 @@ import { initDiscordMemberCount } from './discord-stats.js';
       item.tabIndex = 0;
       markerTypes.set(label.dataset.i18n, { icon: icon.getAttribute("src") });
     });
-    const validMapNames = new Set(maps.map(map => map.name));
-    const markerLayout = loadMarkerLayout(MARKER_STORAGE_KEY);
+    const mapNames = maps.map(map => map.name);
+    const validMapNames = new Set(mapNames);
+    let markerLayout = loadMarkerLayout(MARKER_STORAGE_KEY);
+    const hadStoredMarkerLayout = Boolean(markerLayout.updatedAt);
+    const hadMapSyncState = isMapSyncState(markerLayout.sync);
+    const previousSourceRevision = hadMapSyncState ? markerLayout.sync.sourceRevision : null;
+    const previousMapSyncState = hadMapSyncState ? JSON.stringify(markerLayout.sync) : null;
+    let upstreamMarkerLayout = null;
+    let upstreamMarkerLayoutRevision = null;
+    let startupAppliedDefaultUpdates = false;
     const defaultTacticalSummaries = defaultMarkerLayout?.tacticalSummaries;
     if (!markerLayout.tacticalSummaries || typeof markerLayout.tacticalSummaries !== "object" || Array.isArray(markerLayout.tacticalSummaries)) {
       markerLayout.tacticalSummaries = defaultTacticalSummaries && typeof defaultTacticalSummaries === "object" && !Array.isArray(defaultTacticalSummaries)
@@ -494,6 +516,7 @@ import { initDiscordMemberCount } from './discord-stats.js';
       mapLastUpdated.textContent = mapUpdated;
       if (/^\/maps\/[^/]+\/?$/.test(window.location.pathname)) updateMapDocumentMetadata();
       renderMapVariationSelect();
+      updateMapSyncControls();
     }
     function setLanguage(language) {
       state.language = language;
@@ -539,6 +562,11 @@ import { initDiscordMemberCount } from './discord-stats.js';
       markerStatus.textContent = message;
       modalMarkerStatus.textContent = message;
     }
+    function updateMapSyncControls() {
+      const hasConflict = Boolean(state.selected && markerLayout.sync?.conflicts?.includes(state.selected.name));
+      mapSyncAlert.hidden = !hasConflict;
+      modalMapSyncAlert.hidden = !hasConflict;
+    }
     function localIsoDate(date = new Date()) {
       return new Date(date.getTime() - (date.getTimezoneOffset() * 60000)).toISOString().slice(0, 10);
     }
@@ -553,8 +581,14 @@ import { initDiscordMemberCount } from './discord-stats.js';
     }
     function persistMarkerLayout(statusKey = "savedLocally", { touchMap = false } = {}) {
       try {
-        if (touchMap) touchCurrentMapUpdated();
+        if (touchMap) {
+          touchCurrentMapUpdated();
+          if (state.selected && upstreamMarkerLayout) {
+            markMapEdited(markerLayout, upstreamMarkerLayout, mapNames, state.selected.name, upstreamMarkerLayoutRevision);
+          }
+        }
         saveMarkerLayoutToStorage(MARKER_STORAGE_KEY, markerLayout);
+        updateMapSyncControls();
         setMarkerStatus(statusKey);
         return true;
       } catch (error) {
@@ -637,31 +671,44 @@ import { initDiscordMemberCount } from './discord-stats.js';
     function markerHasComment(marker) {
       return Boolean(markerComment(marker) || markerCommentImage(marker));
     }
-    function hideMarkerCommentImagePreview() {
+    function usesMobileDeviceLayout() {
+      return MOBILE_DEVICE_QUERY.matches;
+    }
+    function usesMobileCommentLayout() {
+      return MOBILE_COMMENT_LAYOUT_QUERY.matches;
+    }
+    function hideMarkerCommentImagePreview({ restoreFocus = false } = {}) {
+      const sourceImage = markerCommentImagePreviewSource;
       markerCommentImagePreview.hidden = true;
       markerCommentImagePreview.classList.remove("is-touch-open");
       markerCommentImagePreview.style.removeProperty("left");
       markerCommentImagePreview.style.removeProperty("top");
-      markerCommentImagePreview.style.removeProperty("max-width");
-      markerCommentImagePreview.style.removeProperty("max-height");
-      markerCommentImagePreview.style.removeProperty("visibility");
-      markerCommentImagePreview.removeAttribute("src");
+      markerCommentImagePreview.style.removeProperty("width");
+      markerCommentImagePreview.style.removeProperty("height");
+      markerCommentImagePreview.setAttribute("aria-hidden", "true");
+      markerCommentImagePreview.removeAttribute("role");
+      markerCommentImagePreview.removeAttribute("aria-modal");
+      markerCommentImagePreview.removeAttribute("aria-label");
+      markerCommentImagePreviewImage.style.removeProperty("max-width");
+      markerCommentImagePreviewImage.style.removeProperty("max-height");
+      markerCommentImagePreviewImage.removeAttribute("src");
+      markerCommentImagePreviewImage.alt = "";
       markerCommentImagePreviewSource = null;
+      if (restoreFocus) sourceImage?.focus({ preventScroll: true });
     }
     function positionMarkerCommentImagePreview() {
       if (markerCommentImagePreview.hidden || !markerCommentImagePreviewSource?.isConnected) return;
-      const viewportMargin = 8;
       const visualViewport = window.visualViewport;
       const viewportLeft = visualViewport?.offsetLeft || 0;
       const viewportTop = visualViewport?.offsetTop || 0;
       const viewportWidth = visualViewport?.width || window.innerWidth;
       const viewportHeight = visualViewport?.height || window.innerHeight;
-      markerCommentImagePreview.style.maxWidth = `${Math.max(0, viewportWidth - viewportMargin * 2)}px`;
-      markerCommentImagePreview.style.maxHeight = `${Math.max(0, viewportHeight - viewportMargin * 2)}px`;
-      const previewRect = markerCommentImagePreview.getBoundingClientRect();
-      markerCommentImagePreview.style.left = `${viewportLeft + Math.max(viewportMargin, (viewportWidth - previewRect.width) / 2)}px`;
-      markerCommentImagePreview.style.top = `${viewportTop + Math.max(viewportMargin, (viewportHeight - previewRect.height) / 2)}px`;
-      markerCommentImagePreview.style.visibility = "visible";
+      markerCommentImagePreview.style.left = `${viewportLeft}px`;
+      markerCommentImagePreview.style.top = `${viewportTop}px`;
+      markerCommentImagePreview.style.width = `${viewportWidth}px`;
+      markerCommentImagePreview.style.height = `${viewportHeight}px`;
+      markerCommentImagePreviewImage.style.maxWidth = `${Math.max(0, viewportWidth - 16)}px`;
+      markerCommentImagePreviewImage.style.maxHeight = `${Math.max(0, viewportHeight - 16)}px`;
     }
     function showMarkerCommentImagePreview(sourceImage, { interactive = false } = {}) {
       if (!markerCommentPopover.classList.contains("is-pinned") || !sourceImage?.isConnected) return;
@@ -669,17 +716,39 @@ import { initDiscordMemberCount } from './discord-stats.js';
       if (markerCommentImagePreview.parentElement !== previewHost) previewHost.append(markerCommentImagePreview);
       markerCommentImagePreviewSource = sourceImage;
       markerCommentImagePreview.classList.toggle("is-touch-open", interactive);
-      markerCommentImagePreview.style.visibility = "hidden";
-      markerCommentImagePreview.src = sourceImage.currentSrc || sourceImage.src;
+      markerCommentImagePreview.setAttribute("aria-hidden", String(!interactive));
+      if (interactive) {
+        markerCommentImagePreview.setAttribute("role", "dialog");
+        markerCommentImagePreview.setAttribute("aria-modal", "true");
+        markerCommentImagePreview.setAttribute("aria-label", t("commentImagePreview"));
+      } else {
+        markerCommentImagePreview.removeAttribute("role");
+        markerCommentImagePreview.removeAttribute("aria-modal");
+        markerCommentImagePreview.removeAttribute("aria-label");
+      }
+      markerCommentImagePreviewImage.src = sourceImage.currentSrc || sourceImage.src;
+      markerCommentImagePreviewImage.alt = sourceImage.alt;
+      markerCommentImagePreviewClose.setAttribute("aria-label", t("closeCommentImage"));
       markerCommentImagePreview.hidden = false;
-      if (markerCommentImagePreview.complete) positionMarkerCommentImagePreview();
+      positionMarkerCommentImagePreview();
+      if (interactive) window.requestAnimationFrame(() => markerCommentImagePreviewClose.focus({ preventScroll: true }));
     }
-    markerCommentImagePreview.addEventListener("load", positionMarkerCommentImagePreview);
+    markerCommentImagePreviewImage.addEventListener("load", positionMarkerCommentImagePreview);
     markerCommentImagePreview.addEventListener("click", event => {
       if (!markerCommentImagePreview.classList.contains("is-touch-open")) return;
+      if (event.target !== markerCommentImagePreview) return;
+      event.stopPropagation();
+      hideMarkerCommentImagePreview({ restoreFocus: true });
+    });
+    markerCommentImagePreviewClose.addEventListener("click", event => {
       event.preventDefault();
       event.stopPropagation();
-      hideMarkerCommentImagePreview();
+      hideMarkerCommentImagePreview({ restoreFocus: true });
+    });
+    markerCommentImagePreview.addEventListener("keydown", event => {
+      if (!markerCommentImagePreview.classList.contains("is-touch-open") || event.key !== "Tab") return;
+      event.preventDefault();
+      markerCommentImagePreviewClose.focus({ preventScroll: true });
     });
     function hideMarkerCommentPopover(anchor = null, { force = false } = {}) {
       if (anchor && markerCommentPopoverAnchor !== anchor) return;
@@ -688,12 +757,27 @@ import { initDiscordMemberCount } from './discord-stats.js';
       markerCommentPopover.hidden = true;
       markerCommentPopover.style.removeProperty("left");
       markerCommentPopover.style.removeProperty("top");
+      markerCommentPopover.style.removeProperty("width");
       markerCommentPopover.style.removeProperty("max-width");
       markerCommentPopover.style.removeProperty("max-height");
       markerCommentPopover.style.removeProperty("visibility");
       markerCommentPopover.replaceChildren();
-      markerCommentPopover.classList.remove("has-image", "is-pinned");
+      markerCommentPopover.classList.remove("has-image", "is-pinned", "is-mobile-sheet");
+      markerCommentPopover.setAttribute("role", "tooltip");
+      markerCommentPopover.removeAttribute("aria-modal");
+      markerCommentPopover.removeAttribute("aria-labelledby");
       markerCommentPopoverAnchor = null;
+    }
+    function closeFocusedTankComment({ restoreFocus = false } = {}) {
+      const markerId = state.focusedTankMarkerId;
+      if (!markerId) return;
+      state.focusedTankMarkerId = null;
+      renderMarkers();
+      if (!restoreFocus) return;
+      window.requestAnimationFrame(() => {
+        const activeMarkerLayer = dialog.open ? modalMarkerLayer : markerLayer;
+        activeMarkerLayer.querySelector(`.map-marker[data-marker-id="${CSS.escape(markerId)}"]`)?.focus({ preventScroll: true });
+      });
     }
     function positionMarkerCommentPopover(anchor) {
       if (markerCommentPopover.hidden || markerCommentPopoverAnchor !== anchor || !anchor.isConnected) return;
@@ -706,6 +790,18 @@ import { initDiscordMemberCount } from './discord-stats.js';
       const viewportHeight = visualViewport?.height || window.innerHeight;
       const viewportRight = viewportLeft + viewportWidth;
       const viewportBottom = viewportTop + viewportHeight;
+      if (markerCommentPopover.classList.contains("is-mobile-sheet")) {
+        const sheetWidth = Math.max(0, Math.min(MAX_COMMENT_POPOVER_WIDTH, viewportWidth - viewportMargin * 2));
+        const sheetHeight = Math.max(0, Math.min(viewportHeight * MAX_COMMENT_POPOVER_HEIGHT_RATIO, viewportHeight - viewportMargin * 2));
+        markerCommentPopover.style.width = `${sheetWidth}px`;
+        markerCommentPopover.style.maxWidth = `${sheetWidth}px`;
+        markerCommentPopover.style.maxHeight = `${sheetHeight}px`;
+        const popoverRect = markerCommentPopover.getBoundingClientRect();
+        markerCommentPopover.style.left = `${viewportLeft + Math.max(viewportMargin, (viewportWidth - popoverRect.width) / 2)}px`;
+        markerCommentPopover.style.top = `${Math.max(viewportTop + viewportMargin, viewportBottom - popoverRect.height - viewportMargin)}px`;
+        markerCommentPopover.style.visibility = "visible";
+        return;
+      }
       const anchorRect = anchor.getBoundingClientRect();
       const availableAbove = Math.max(0, anchorRect.top - gap - viewportTop - viewportMargin);
       const availableBelow = Math.max(0, viewportBottom - viewportMargin - anchorRect.bottom - gap);
@@ -765,24 +861,63 @@ import { initDiscordMemberCount } from './discord-stats.js';
       const content = document.createDocumentFragment();
       hideMarkerCommentImagePreview();
       markerCommentPopoverAnchor = anchor;
+      const mobileSheet = pinned && usesMobileCommentLayout();
       markerCommentPopover.classList.toggle("has-image", Boolean(commentImage));
       markerCommentPopover.classList.toggle("is-pinned", pinned);
+      markerCommentPopover.classList.toggle("is-mobile-sheet", mobileSheet);
+      markerCommentPopover.setAttribute("role", mobileSheet ? "dialog" : "tooltip");
+      if (mobileSheet) {
+        const header = document.createElement("div");
+        header.className = "map-marker-comment-header";
+        const title = document.createElement("strong");
+        title.className = "map-marker-comment-title";
+        title.id = "map-marker-comment-title";
+        title.textContent = `${t(marker.type)} · ${t("commentTitle")}`;
+        const closeButton = document.createElement("button");
+        closeButton.type = "button";
+        closeButton.className = "map-marker-comment-close";
+        closeButton.setAttribute("aria-label", t("closeComment"));
+        closeButton.textContent = "×";
+        closeButton.addEventListener("click", event => {
+          event.preventDefault();
+          event.stopPropagation();
+          closeFocusedTankComment({ restoreFocus: true });
+        });
+        header.append(title, closeButton);
+        content.append(header);
+        markerCommentPopover.setAttribute("aria-modal", "false");
+        markerCommentPopover.setAttribute("aria-labelledby", title.id);
+      } else {
+        markerCommentPopover.removeAttribute("aria-modal");
+        markerCommentPopover.removeAttribute("aria-labelledby");
+      }
       if (commentImage) {
         const image = document.createElement("img");
         image.className = "map-marker-comment-image";
         image.src = commentImage.path;
         image.alt = commentImage.label;
+        if (mobileSheet) {
+          image.tabIndex = 0;
+          image.setAttribute("role", "button");
+          image.setAttribute("aria-label", t("enlargeCommentImage"));
+        }
         image.addEventListener("load", () => positionMarkerCommentPopover(anchor), { once: true });
         image.addEventListener("pointerenter", event => {
-          if (event.pointerType === "mouse") showMarkerCommentImagePreview(image);
+          if (!mobileSheet && event.pointerType === "mouse") showMarkerCommentImagePreview(image);
         });
         image.addEventListener("pointerleave", event => {
-          if (event.pointerType === "mouse") hideMarkerCommentImagePreview();
+          if (!mobileSheet && event.pointerType === "mouse") hideMarkerCommentImagePreview();
         });
         image.addEventListener("click", event => {
-          if (!markerCommentPopover.classList.contains("is-pinned") || window.matchMedia("(hover: hover)").matches) return;
+          if (!mobileSheet) return;
           event.preventDefault();
           event.stopPropagation();
+          if (markerCommentImagePreview.hidden) showMarkerCommentImagePreview(image, { interactive: true });
+          else hideMarkerCommentImagePreview();
+        });
+        image.addEventListener("keydown", event => {
+          if (!mobileSheet || (event.key !== "Enter" && event.key !== " ")) return;
+          event.preventDefault();
           if (markerCommentImagePreview.hidden) showMarkerCommentImagePreview(image, { interactive: true });
           else hideMarkerCommentImagePreview();
         });
@@ -1473,10 +1608,19 @@ import { initDiscordMemberCount } from './discord-stats.js';
         button.append(icon);
         if (markerHasComment(marker) && !state.editMode) {
           button.classList.add("has-comment");
-          button.setAttribute("aria-describedby", markerCommentPopover.id);
-          button.addEventListener("mouseenter", () => showMarkerCommentPopover(button, marker, { pinned: state.focusedTankMarkerId === marker.id }));
+          if (usesMobileCommentLayout()) {
+            button.setAttribute("aria-controls", markerCommentPopover.id);
+            button.setAttribute("aria-expanded", String(state.focusedTankMarkerId === marker.id));
+          } else {
+            button.setAttribute("aria-describedby", markerCommentPopover.id);
+          }
+          button.addEventListener("mouseenter", () => {
+            if (!usesMobileCommentLayout()) showMarkerCommentPopover(button, marker, { pinned: state.focusedTankMarkerId === marker.id });
+          });
           button.addEventListener("mouseleave", () => hideMarkerCommentPopover(button));
-          button.addEventListener("focus", () => showMarkerCommentPopover(button, marker, { pinned: state.focusedTankMarkerId === marker.id }));
+          button.addEventListener("focus", () => {
+            if (!usesMobileCommentLayout()) showMarkerCommentPopover(button, marker, { pinned: state.focusedTankMarkerId === marker.id });
+          });
           button.addEventListener("blur", () => hideMarkerCommentPopover(button));
         }
         layer.append(button);
@@ -1531,6 +1675,7 @@ import { initDiscordMemberCount } from './discord-stats.js';
       });
     }
     function setEditorMode(enabled) {
+      if (enabled && usesMobileDeviceLayout()) return;
       if (!enabled) {
         cancelDrawing();
         closeTacticalSummaryEditor();
@@ -1542,6 +1687,12 @@ import { initDiscordMemberCount } from './discord-stats.js';
       updateSelectedMapDetails();
       renderMarkers();
       setMarkerStatus();
+    }
+    function syncMobileEditingAvailability() {
+      const mobile = usesMobileDeviceLayout();
+      toggleEditor.hidden = mobile;
+      modalToggleEditor.hidden = mobile;
+      if (mobile && state.editMode) setEditorMode(false);
     }
     async function exportMarkerLayoutData() {
       const exportData = {
@@ -1675,12 +1826,14 @@ import { initDiscordMemberCount } from './discord-stats.js';
       return layout;
     }
     function applyMarkerLayout(importedLayout) {
-      markerLayout.version = importedLayout.version;
-      markerLayout.mapUpdated = importedLayout.mapUpdated;
-      markerLayout.mapUpdatedAt = importedLayout.mapUpdatedAt;
-      markerLayout.tacticalSummaries = importedLayout.tacticalSummaries;
-      markerLayout.markers = importedLayout.markers;
-      markerLayout.annotations = importedLayout.annotations;
+      const replacement = structuredClone(importedLayout);
+      markerLayout.version = replacement.version;
+      markerLayout.mapUpdated = replacement.mapUpdated;
+      markerLayout.mapUpdatedAt = replacement.mapUpdatedAt;
+      markerLayout.tacticalSummaries = replacement.tacticalSummaries;
+      markerLayout.markers = replacement.markers;
+      markerLayout.annotations = replacement.annotations;
+      delete markerLayout.sync;
       delete markerLayout.updatedAt;
       hiddenMarkers.clear();
       hiddenAnnotations.clear();
@@ -1692,8 +1845,9 @@ import { initDiscordMemberCount } from './discord-stats.js';
       renderMarkers();
     }
     async function importDefaultMarkerLayout() {
-      if (!defaultMarkerLayout) throw new Error("Default marker layout could not be loaded.");
-      applyMarkerLayout(validateImportedMarkerLayout(defaultMarkerLayout));
+      if (!upstreamMarkerLayout) throw new Error("Default marker layout could not be loaded.");
+      applyMarkerLayout(upstreamMarkerLayout);
+      markLayoutAsLocalEdits(markerLayout, upstreamMarkerLayout, mapNames, upstreamMarkerLayoutRevision);
     }
     async function importMarkerLayoutFile(file) {
       if (!file || file.size > 2 * 1024 * 1024) {
@@ -1702,6 +1856,9 @@ import { initDiscordMemberCount } from './discord-stats.js';
       }
       try {
         applyMarkerLayout(validateImportedMarkerLayout(JSON.parse(await file.text())));
+        if (upstreamMarkerLayout) {
+          markLayoutAsLocalEdits(markerLayout, upstreamMarkerLayout, mapNames, upstreamMarkerLayoutRevision);
+        }
         persistMarkerLayout("importedJson");
       } catch (error) {
         setMarkerStatus("invalidJson");
@@ -1852,6 +2009,21 @@ import { initDiscordMemberCount } from './discord-stats.js';
       updateLegendVisibility();
       renderMarkers();
       setMarkerStatus("hiddenReset");
+    }
+    function useLatestDefaultForCurrentMap() {
+      if (!state.selected || !upstreamMarkerLayout || !window.confirm(t("confirmUseLatestMap"))) return;
+      const mapName = state.selected.name;
+      acceptUpstreamMap(markerLayout, upstreamMarkerLayout, mapNames, mapName, upstreamMarkerLayoutRevision);
+      const mapPrefix = `${mapName}::`;
+      for (const hiddenItems of [hiddenMarkers, hiddenAnnotations, hiddenMarkerTypes]) {
+        [...hiddenItems].filter(id => id.startsWith(mapPrefix)).forEach(id => hiddenItems.delete(id));
+      }
+      hideMarkerContextMenu();
+      hideAnnotationContextMenu();
+      updateLegendVisibility();
+      updateSelectedMapDetails();
+      renderMarkers();
+      persistMarkerLayout("latestMapApplied");
     }
     async function resetAllPlacedMarkers() {
       if (!window.confirm(t("confirmResetAll"))) return;
@@ -2074,6 +2246,8 @@ import { initDiscordMemberCount } from './discord-stats.js';
     modalResetHiddenMarkers.addEventListener("click", resetHiddenMarkersForCurrentMap);
     resetAllMarkers.addEventListener("click", resetAllPlacedMarkers);
     modalResetAllMarkers.addEventListener("click", resetAllPlacedMarkers);
+    useLatestMap.addEventListener("click", useLatestDefaultForCurrentMap);
+    modalUseLatestMap.addEventListener("click", useLatestDefaultForCurrentMap);
     annotationOpacitySlider.addEventListener("input", () => setAnnotationOpacity(annotationOpacitySlider.value));
     legendItems.forEach(bindLegendItem);
     bindMarkerLayer(markerLayer, mapStage, markerContextMenu);
@@ -2092,16 +2266,19 @@ import { initDiscordMemberCount } from './discord-stats.js';
     bindAnnotationContextMenu(modalAnnotationContextMenu);
     document.addEventListener("click", event => {
       const clickedComment = markerCommentPopover.contains(event.target) || markerCommentImagePreview.contains(event.target);
-      if (!state.editMode && state.focusedTankMarkerId && !clickedComment) {
-        state.focusedTankMarkerId = null;
-        renderMarkers();
+      const clickedMapBackground = event.target.closest?.(".map-stage, .modal-map-stage") && !event.target.closest?.(".map-marker");
+      const shouldCloseFocusedComment = usesMobileCommentLayout() ? clickedMapBackground : !clickedComment;
+      if (!state.editMode && state.focusedTankMarkerId && !clickedComment && shouldCloseFocusedComment) {
+        closeFocusedTankComment();
       }
       if (!markerContextMenu.contains(event.target) && !modalMarkerContextMenu.contains(event.target)) hideMarkerContextMenu();
       if (!annotationContextMenu.contains(event.target) && !modalAnnotationContextMenu.contains(event.target)) hideAnnotationContextMenu();
     });
     document.addEventListener("keydown", event => {
       if (event.key === "Escape") {
-        hideMarkerCommentImagePreview();
+        const previewWasOpen = !markerCommentImagePreview.hidden;
+        hideMarkerCommentImagePreview({ restoreFocus: previewWasOpen });
+        if (!previewWasOpen && usesMobileCommentLayout()) closeFocusedTankComment({ restoreFocus: true });
         cancelDrawing();
         hideMarkerContextMenu();
         hideAnnotationContextMenu();
@@ -2137,6 +2314,11 @@ import { initDiscordMemberCount } from './discord-stats.js';
       renderMarkers();
       fitVisibleMarkerContextMenus();
     });
+    MOBILE_COMMENT_LAYOUT_QUERY.addEventListener("change", renderMarkers);
+    MOBILE_DEVICE_QUERY.addEventListener("change", () => {
+      syncMobileEditingAvailability();
+      renderMarkers();
+    });
     window.visualViewport?.addEventListener("resize", () => {
       fitVisibleMarkerContextMenus();
       if (markerCommentPopoverAnchor) positionMarkerCommentPopover(markerCommentPopoverAnchor);
@@ -2150,6 +2332,10 @@ import { initDiscordMemberCount } from './discord-stats.js';
     window.addEventListener("popstate", restoreFromUrl);
     mapImage.addEventListener("click", () => {
       if (!state.selected || mapImage.hidden) return;
+      if (usesMobileCommentLayout() && state.focusedTankMarkerId) {
+        closeFocusedTankComment();
+        return;
+      }
       openMapModal();
     });
     $(".close-modal").addEventListener("click", () => dialog.close());
@@ -2166,14 +2352,38 @@ import { initDiscordMemberCount } from './discord-stats.js';
       renderMarkers();
     });
     setAnnotationOpacity(state.annotationOpacity, { persist: false });
-    setLanguage("en");
-    if (!markerLayout.updatedAt) {
-      try {
-        await importDefaultMarkerLayout();
-        saveMarkerLayoutToStorage(MARKER_STORAGE_KEY, markerLayout);
-      } catch (error) {
-        setMarkerStatus("defaultLayoutLoadError");
+    let startupStatusKey = null;
+    try {
+      if (!defaultMarkerLayout) throw new Error("Default marker layout could not be loaded.");
+      upstreamMarkerLayout = validateImportedMarkerLayout(defaultMarkerLayout);
+      upstreamMarkerLayoutRevision = sourceRevision(defaultMarkerLayout);
+      if (hadStoredMarkerLayout && !hadMapSyncState) backupMarkerLayout(MARKER_STORAGE_KEY, MARKER_STORAGE_BACKUP_KEY);
+      const syncResult = mergeMapLayouts(markerLayout, upstreamMarkerLayout, mapNames, {
+        hadStoredLayout: hadStoredMarkerLayout,
+        sourceRevision: upstreamMarkerLayoutRevision
+      });
+      markerLayout = syncResult.layout;
+      startupAppliedDefaultUpdates = hadStoredMarkerLayout && syncResult.updatedMaps.length > 0;
+      const needsSyncSave = !hadStoredMarkerLayout
+        || !hadMapSyncState
+        || previousSourceRevision !== upstreamMarkerLayoutRevision
+        || previousMapSyncState !== JSON.stringify(markerLayout.sync)
+        || startupAppliedDefaultUpdates;
+      if (needsSyncSave) {
+        try {
+          saveMarkerLayoutToStorage(MARKER_STORAGE_KEY, markerLayout);
+        } catch (error) {
+          console.error("Synchronized marker layout could not be saved.", error);
+          startupStatusKey = "storageError";
+        }
       }
+      if (startupAppliedDefaultUpdates && !startupStatusKey) startupStatusKey = "defaultLayoutUpdated";
+    } catch (error) {
+      console.error("Default marker layout synchronization failed.", error);
+      startupStatusKey = "defaultLayoutLoadError";
     }
+    setLanguage("en");
+    syncMobileEditingAvailability();
     restoreFromUrl();
+    if (startupStatusKey) setMarkerStatus(startupStatusKey);
     initDiscordMemberCount();

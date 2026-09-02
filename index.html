@@ -49,7 +49,7 @@
   </script>
   <title>War Thunder Map Guide &amp; Tactics | WarDevOps</title>
 
-  <link rel="stylesheet" href="/assets/css/site.css?v=comment-popover-pinning-20260902">
+  <link rel="stylesheet" href="/assets/css/site.css?v=mobile-comment-sheet-map-layout-map-sync-20260903">
 </head>
 <body>
   <header class="site-header">
@@ -126,6 +126,10 @@
           <button class="marker-tool" id="export-marker-layout" type="button" data-editor-action data-i18n="exportJson" hidden>Export JSON</button>
           <button class="marker-tool" id="import-marker-layout" type="button" data-editor-action data-i18n="importJson" hidden>Import JSON</button>
           <span class="marker-status" id="marker-status" role="status" aria-live="polite"></span>
+          <div class="map-sync-alert" id="map-sync-alert" role="status" hidden>
+            <span data-i18n="mapSyncConflict">This map has both local and newer default changes.</span>
+            <button class="marker-tool" id="use-latest-map" type="button" data-i18n="useLatestMap">Use Latest Map</button>
+          </div>
           <p class="marker-editor-note" id="marker-editor-note" hidden>Drag icons from the legend onto the map.</p>
         </div>
         <div class="map-layout">
@@ -296,6 +300,10 @@
       <button class="marker-tool" id="modal-export-marker-layout" type="button" data-editor-action data-i18n="exportJson" hidden>Export JSON</button>
       <button class="marker-tool" id="modal-import-marker-layout" type="button" data-editor-action data-i18n="importJson" hidden>Import JSON</button>
       <span class="modal-marker-status" id="modal-marker-status" role="status" aria-live="polite"></span>
+      <div class="map-sync-alert" id="modal-map-sync-alert" role="status" hidden>
+        <span data-i18n="mapSyncConflict">This map has both local and newer default changes.</span>
+        <button class="marker-tool" id="modal-use-latest-map" type="button" data-i18n="useLatestMap">Use Latest Map</button>
+      </div>
       <p class="modal-marker-editor-note" id="modal-marker-editor-note" hidden>Drag icons from the legend onto the map.</p>
     </div>
     <div class="modal-workspace">
@@ -352,7 +360,7 @@
 
   <input id="marker-layout-import-file" type="file" accept="application/json,.json" hidden>
 
-  <script type="module" src="/assets/js/app.js?v=comment-images-d6c742b47074"></script>
+  <script type="module" src="/assets/js/app.js?v=mobile-comment-sheet-map-layout-map-sync-20260903"></script>
   <script type="module" src="/assets/js/consent-controls.js?v=20260828"></script>
 </body>
 </html>

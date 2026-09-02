@@ -2,7 +2,7 @@
   "version": 2,
   "mapUpdated": {
     "38th Parallel": "2026-09-02",
-    "Abandoned Factory": "2026-09-02",
+    "Abandoned Factory": "2026-09-03",
     "Abandoned Town": "2026-09-02",
     "Advance to the Rhine": "2026-09-02",
     "Alaska": "2026-09-01",
@@ -60,7 +60,7 @@
   },
   "mapUpdatedAt": {
     "38th Parallel": "2026-09-02T13:23:44Z",
-    "Abandoned Factory": "2026-09-02T13:31:13Z",
+    "Abandoned Factory": "2026-09-02T15:34:45Z",
     "Abandoned Town": "2026-09-02T13:44:50Z",
     "Advance to the Rhine": "2026-09-02T10:33:47Z",
     "American Desert": "2026-09-01T15:14:29Z",
@@ -11874,6 +11874,19 @@
         "type": "smokeshell",
         "x": 18.7,
         "y": 17.72
+      },
+      {
+        "id": "mtk9bir4-wwxcr0",
+        "type": "mainBattleTank",
+        "x": 49.91,
+        "y": 86.61
+      },
+      {
+        "id": "mtk9bmhs-vvc9jj",
+        "type": "spawnKill",
+        "x": 49.91,
+        "y": 86.61,
+        "parentTankId": "mtk9bir4-wwxcr0"
       }
     ],
     "Jungle::domination-1|Red": [],
@@ -39466,6 +39479,15 @@
           }
         ],
         "dangerRoute": true
+      },
+      {
+        "id": "mtk9bkah-6wtox3",
+        "type": "aimHere",
+        "parentTankId": "mtk9bir4-wwxcr0",
+        "startX": 49.91,
+        "startY": 86.61,
+        "endX": 62.32,
+        "endY": 86.35
       }
     ],
     "Jungle::domination-1|Red": [],
@@ -46827,6 +46849,6 @@
       }
     ]
   },
-  "updatedAt": "2026-09-02T13:44:50.225Z",
-  "exportedAt": "2026-09-02T13:44:58.209Z"
+  "updatedAt": "2026-09-02T15:35:27.212Z",
+  "exportedAt": "2026-09-02T15:35:27.616Z"
 }

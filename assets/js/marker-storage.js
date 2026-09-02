@@ -24,3 +24,14 @@ export function saveMarkerLayout(storageKey, layout) {
   layout.updatedAt = new Date().toISOString();
   localStorage.setItem(storageKey, JSON.stringify(layout));
 }
+
+export function backupMarkerLayout(storageKey, backupKey) {
+  try {
+    const saved = localStorage.getItem(storageKey);
+    if (!saved || localStorage.getItem(backupKey)) return false;
+    localStorage.setItem(backupKey, saved);
+    return true;
+  } catch (error) {
+    return false;
+  }
+}
