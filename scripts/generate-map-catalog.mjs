@@ -66,13 +66,13 @@ function tacticalSummary(value, context) {
   for (const language of ["en", "ko"]) {
     const sentences = value[language];
     if (sentences == null) continue;
-    if (!Array.isArray(sentences) || sentences.length < 2 || sentences.length > 4 || sentences.some(sentence => typeof sentence !== "string" || !sentence.trim() || sentence.trim().length > 240)) {
-      throw new Error(`Tactical summary for ${context} (${language}) must contain 2 to 4 non-empty sentences`);
+    if (!Array.isArray(sentences) || sentences.some(sentence => typeof sentence !== "string")) {
+      throw new Error(`Tactical summary for ${context} (${language}) must be an array of strings`);
     }
-    result[language] = sentences.map(sentence => sentence.trim());
+    const normalizedSentences = sentences.map(sentence => sentence.trim()).filter(Boolean);
+    if (normalizedSentences.length) result[language] = normalizedSentences;
   }
   if (!Object.keys(result).length) return null;
-  if (!result.en) throw new Error(`English tactical summary is required for ${context}`);
   return result;
 }
 

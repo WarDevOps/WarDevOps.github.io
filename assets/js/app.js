@@ -1,7 +1,7 @@
     import { MARKER_LAYOUT_VERSION, backupMarkerLayout, loadMarkerLayout, saveMarkerLayout as saveMarkerLayoutToStorage } from './marker-storage.js?v=map-sync-20260903';
 import { initDiscordMemberCount } from './discord-stats.js';
     import { commentImages } from './comment-images.js?v=comment-images-d6c742b47074';
-    import { defaultMarkerLayout, maps, translations } from './data.js?v=mobile-comment-sheet-map-sync-20260903';
+    import { defaultMarkerLayout, maps, translations } from './data.js?v=mobile-comment-sheet-map-sync-summary-freeform-20260903';
     import { acceptUpstreamMap, isMapSyncState, markLayoutAsLocalEdits, markMapEdited, mergeMapLayouts, sourceRevision } from './marker-merge.js?v=map-sync-20260903';
 
 
@@ -112,7 +112,6 @@ import { initDiscordMemberCount } from './discord-stats.js';
     const MIN_PINNED_COMMENT_IMAGE_HEIGHT = 240;
     const MOBILE_COMMENT_LAYOUT_QUERY = window.matchMedia("(max-width: 760px), (hover: none), (pointer: coarse)");
     const MOBILE_DEVICE_QUERY = window.matchMedia("(max-width: 760px), (any-pointer: coarse)");
-    const MAX_TACTICAL_SUMMARY_SENTENCE_LENGTH = 240;
     const MAP_UPDATED_AT_PATTERN = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d{1,3})?Z$/;
     const COMMENT_TEXT_ENCODER = new TextEncoder();
     const COMMENT_IMAGES_BY_ID = new Map();
@@ -373,10 +372,10 @@ import { initDiscordMemberCount } from './discord-stats.js';
     function tacticalSummaryFromEditor() {
       const en = tacticalSummaryInputSentences(mapTacticalSummaryEnglish);
       const ko = tacticalSummaryInputSentences(mapTacticalSummaryKorean);
-      if (!en.length && !ko.length) return {};
-      const validSentences = sentences => sentences.length >= 2 && sentences.length <= 4 && sentences.every(sentence => sentence.length <= MAX_TACTICAL_SUMMARY_SENTENCE_LENGTH);
-      if (!validSentences(en) || (ko.length && !validSentences(ko))) throw new Error("Invalid tactical summary");
-      return { en, ...(ko.length ? { ko } : {}) };
+      return {
+        ...(en.length ? { en } : {}),
+        ...(ko.length ? { ko } : {})
+      };
     }
     function closeTacticalSummaryEditor() {
       mapTacticalSummaryEditor.hidden = true;
@@ -396,14 +395,7 @@ import { initDiscordMemberCount } from './discord-stats.js';
     }
     function saveTacticalSummary() {
       if (!state.selected || !state.editMode) return;
-      let summary;
-      try {
-        summary = tacticalSummaryFromEditor();
-      } catch (error) {
-        mapTacticalSummaryEditorStatus.textContent = t("tacticalSummaryInvalid");
-        mapTacticalSummaryEnglish.focus();
-        return;
-      }
+      const summary = tacticalSummaryFromEditor();
       markerLayout.tacticalSummaries[state.selected.name] = summary;
       if (!persistMarkerLayout("tacticalSummarySaved", { touchMap: true })) {
         mapTacticalSummaryEditorStatus.textContent = t("storageError");
@@ -1757,10 +1749,10 @@ import { initDiscordMemberCount } from './discord-stats.js';
         for (const language of ["en", "ko"]) {
           const sentences = summary[language];
           if (sentences === undefined) continue;
-          if (!Array.isArray(sentences) || sentences.length < 2 || sentences.length > 4 || sentences.some(sentence => typeof sentence !== "string" || !sentence.trim() || sentence.trim().length > MAX_TACTICAL_SUMMARY_SENTENCE_LENGTH)) throw new Error("Invalid tactical summary.");
-          normalized[language] = sentences.map(sentence => sentence.trim());
+          if (!Array.isArray(sentences) || sentences.some(sentence => typeof sentence !== "string")) throw new Error("Invalid tactical summary.");
+          const normalizedSentences = sentences.map(sentence => sentence.trim()).filter(Boolean);
+          if (normalizedSentences.length) normalized[language] = normalizedSentences;
         }
-        if (Object.keys(normalized).length && !normalized.en) throw new Error("Invalid tactical summary.");
         layout.tacticalSummaries[mapName] = normalized;
       });
       let markerCount = 0;

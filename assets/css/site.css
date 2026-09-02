@@ -182,7 +182,6 @@
     .map-tactical-summary-editor label { color: var(--accent); font-size: .68rem; font-weight: 800; letter-spacing: .045em; }
     .map-tactical-summary-editor textarea { box-sizing: border-box; width: 100%; min-height: 82px; resize: vertical; padding: 9px 10px; border: 1px solid var(--line); border-radius: 7px; outline: none; background: var(--surface); color: var(--ink); font: inherit; font-size: .78rem; line-height: 1.5; }
     .map-tactical-summary-editor textarea:focus { border-color: var(--accent); box-shadow: 0 0 0 2px rgba(214, 219, 157, .11); }
-    .map-tactical-summary .map-tactical-summary-help { color: var(--muted); font-size: .68rem; }
     .map-tactical-summary .map-tactical-summary-editor-status { min-height: 1.2em; color: var(--red); font-size: .7rem; }
     .map-tactical-summary-editor-actions { display: flex; flex-wrap: wrap; gap: 7px; }
     .map-meta-row { display: flex; margin-top: 13px; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
