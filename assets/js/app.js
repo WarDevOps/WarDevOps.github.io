@@ -1,6 +1,6 @@
     import { MARKER_LAYOUT_VERSION, loadMarkerLayout, saveMarkerLayout as saveMarkerLayoutToStorage } from './marker-storage.js?v=tactical-summary-editor-20260902';
 import { initDiscordMemberCount } from './discord-stats.js';
-    import { commentImages } from './comment-images.js?v=comment-images-5995bacb5f5d';
+    import { commentImages } from './comment-images.js?v=comment-images-3d4ad4b74143';
     import { defaultMarkerLayout, maps, translations } from './data.js?v=tactical-summary-editor-20260902';
 
 
@@ -15,6 +15,13 @@ import { initDiscordMemberCount } from './discord-stats.js';
     markerCommentPopover.hidden = true;
     document.body.append(markerCommentPopover);
     let markerCommentPopoverAnchor = null;
+    const markerCommentImagePreview = document.createElement("img");
+    markerCommentImagePreview.className = "map-marker-comment-image-preview";
+    markerCommentImagePreview.alt = "";
+    markerCommentImagePreview.setAttribute("aria-hidden", "true");
+    markerCommentImagePreview.hidden = true;
+    document.body.append(markerCommentImagePreview);
+    let markerCommentImagePreviewSource = null;
     const mapList = $("#map-list");
     const pageTitleHeading = $("#page-title");
     const mapVariationSelect = $("#map-variation");
@@ -88,6 +95,9 @@ import { initDiscordMemberCount } from './discord-stats.js';
     const MAX_IMPORTED_ANNOTATIONS = 5000;
     const MAX_IMPORTED_ROUTE_POINTS = 25000;
     const MAX_MARKER_COMMENT_BYTES = 120;
+    const MAX_COMMENT_POPOVER_WIDTH = 720;
+    const MAX_COMMENT_POPOVER_HEIGHT_RATIO = 0.8;
+    const MIN_PINNED_COMMENT_IMAGE_HEIGHT = 240;
     const MAX_TACTICAL_SUMMARY_SENTENCE_LENGTH = 240;
     const MAP_UPDATED_AT_PATTERN = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d{1,3})?Z$/;
     const COMMENT_TEXT_ENCODER = new TextEncoder();
@@ -627,8 +637,54 @@ import { initDiscordMemberCount } from './discord-stats.js';
     function markerHasComment(marker) {
       return Boolean(markerComment(marker) || markerCommentImage(marker));
     }
-    function hideMarkerCommentPopover(anchor = null) {
+    function hideMarkerCommentImagePreview() {
+      markerCommentImagePreview.hidden = true;
+      markerCommentImagePreview.classList.remove("is-touch-open");
+      markerCommentImagePreview.style.removeProperty("left");
+      markerCommentImagePreview.style.removeProperty("top");
+      markerCommentImagePreview.style.removeProperty("max-width");
+      markerCommentImagePreview.style.removeProperty("max-height");
+      markerCommentImagePreview.style.removeProperty("visibility");
+      markerCommentImagePreview.removeAttribute("src");
+      markerCommentImagePreviewSource = null;
+    }
+    function positionMarkerCommentImagePreview() {
+      if (markerCommentImagePreview.hidden || !markerCommentImagePreviewSource?.isConnected) return;
+      const viewportMargin = 8;
+      const visualViewport = window.visualViewport;
+      const viewportLeft = visualViewport?.offsetLeft || 0;
+      const viewportTop = visualViewport?.offsetTop || 0;
+      const viewportWidth = visualViewport?.width || window.innerWidth;
+      const viewportHeight = visualViewport?.height || window.innerHeight;
+      markerCommentImagePreview.style.maxWidth = `${Math.max(0, viewportWidth - viewportMargin * 2)}px`;
+      markerCommentImagePreview.style.maxHeight = `${Math.max(0, viewportHeight - viewportMargin * 2)}px`;
+      const previewRect = markerCommentImagePreview.getBoundingClientRect();
+      markerCommentImagePreview.style.left = `${viewportLeft + Math.max(viewportMargin, (viewportWidth - previewRect.width) / 2)}px`;
+      markerCommentImagePreview.style.top = `${viewportTop + Math.max(viewportMargin, (viewportHeight - previewRect.height) / 2)}px`;
+      markerCommentImagePreview.style.visibility = "visible";
+    }
+    function showMarkerCommentImagePreview(sourceImage, { interactive = false } = {}) {
+      if (!markerCommentPopover.classList.contains("is-pinned") || !sourceImage?.isConnected) return;
+      const previewHost = dialog.open ? dialog : document.body;
+      if (markerCommentImagePreview.parentElement !== previewHost) previewHost.append(markerCommentImagePreview);
+      markerCommentImagePreviewSource = sourceImage;
+      markerCommentImagePreview.classList.toggle("is-touch-open", interactive);
+      markerCommentImagePreview.style.visibility = "hidden";
+      markerCommentImagePreview.src = sourceImage.currentSrc || sourceImage.src;
+      markerCommentImagePreview.hidden = false;
+      if (markerCommentImagePreview.complete) positionMarkerCommentImagePreview();
+    }
+    markerCommentImagePreview.addEventListener("load", positionMarkerCommentImagePreview);
+    markerCommentImagePreview.addEventListener("click", event => {
+      if (!markerCommentImagePreview.classList.contains("is-touch-open")) return;
+      event.preventDefault();
+      event.stopPropagation();
+      hideMarkerCommentImagePreview();
+    });
+    function hideMarkerCommentPopover(anchor = null, { force = false } = {}) {
       if (anchor && markerCommentPopoverAnchor !== anchor) return;
+      if (!force && markerCommentPopover.classList.contains("is-pinned")) return;
+      hideMarkerCommentImagePreview();
       markerCommentPopover.hidden = true;
       markerCommentPopover.style.removeProperty("left");
       markerCommentPopover.style.removeProperty("top");
@@ -636,7 +692,7 @@ import { initDiscordMemberCount } from './discord-stats.js';
       markerCommentPopover.style.removeProperty("max-height");
       markerCommentPopover.style.removeProperty("visibility");
       markerCommentPopover.replaceChildren();
-      markerCommentPopover.classList.remove("has-image");
+      markerCommentPopover.classList.remove("has-image", "is-pinned");
       markerCommentPopoverAnchor = null;
     }
     function positionMarkerCommentPopover(anchor) {
@@ -650,20 +706,38 @@ import { initDiscordMemberCount } from './discord-stats.js';
       const viewportHeight = visualViewport?.height || window.innerHeight;
       const viewportRight = viewportLeft + viewportWidth;
       const viewportBottom = viewportTop + viewportHeight;
-      markerCommentPopover.style.maxWidth = `${Math.max(0, Math.min(420, viewportWidth - viewportMargin * 2))}px`;
-      markerCommentPopover.style.maxHeight = `${Math.max(0, viewportHeight - viewportMargin * 2)}px`;
+      const anchorRect = anchor.getBoundingClientRect();
+      const availableAbove = Math.max(0, anchorRect.top - gap - viewportTop - viewportMargin);
+      const availableBelow = Math.max(0, viewportBottom - viewportMargin - anchorRect.bottom - gap);
+      const maximumPopoverWidth = Math.max(0, Math.min(MAX_COMMENT_POPOVER_WIDTH, viewportWidth - viewportMargin * 2));
+      const maximumPopoverHeight = Math.max(
+        0,
+        Math.min(viewportHeight * MAX_COMMENT_POPOVER_HEIGHT_RATIO, Math.max(availableAbove, availableBelow))
+      );
+      markerCommentPopover.style.maxWidth = `${maximumPopoverWidth}px`;
+      markerCommentPopover.style.maxHeight = `${maximumPopoverHeight}px`;
       const commentImage = markerCommentPopover.querySelector(".map-marker-comment-image");
-      if (commentImage?.complete) {
-        commentImage.style.removeProperty("max-height");
+      if (commentImage?.complete && commentImage.naturalWidth && commentImage.naturalHeight) {
         const imageHeight = commentImage.getBoundingClientRect().height;
         const nonImageHeight = Math.max(0, markerCommentPopover.scrollHeight - imageHeight);
-        const availableImageHeight = Math.max(48, viewportHeight - viewportMargin * 2 - nonImageHeight);
-        commentImage.style.maxHeight = `${Math.min(420, availableImageHeight)}px`;
+        const popoverStyle = getComputedStyle(markerCommentPopover);
+        const contentWidth = Math.max(0, markerCommentPopover.clientWidth - Number.parseFloat(popoverStyle.paddingLeft) - Number.parseFloat(popoverStyle.paddingRight));
+        const imageRatio = commentImage.naturalWidth / commentImage.naturalHeight;
+        const availableImageHeight = Math.max(0, maximumPopoverHeight - nonImageHeight);
+        const minimumImageHeight = markerCommentPopover.classList.contains("is-pinned")
+          ? Math.min(MIN_PINNED_COMMENT_IMAGE_HEIGHT, commentImage.naturalHeight)
+          : 0;
+        const targetImageHeight = Math.min(
+          commentImage.naturalHeight,
+          Math.max(minimumImageHeight, Math.min(contentWidth / imageRatio, availableImageHeight))
+        );
+        const targetImageWidth = targetImageHeight * imageRatio;
+        commentImage.style.width = `${targetImageWidth}px`;
+        commentImage.style.maxWidth = "none";
+        commentImage.style.maxHeight = "none";
+        commentImage.style.justifySelf = targetImageWidth > contentWidth ? "start" : "center";
       }
-      const anchorRect = anchor.getBoundingClientRect();
       const popoverRect = markerCommentPopover.getBoundingClientRect();
-      const availableAbove = anchorRect.top - gap - viewportTop - viewportMargin;
-      const availableBelow = viewportBottom - viewportMargin - anchorRect.bottom - gap;
       const placeAbove = availableAbove >= popoverRect.height || availableAbove >= availableBelow;
       const preferredTop = placeAbove ? anchorRect.top - popoverRect.height - gap : anchorRect.bottom + gap;
       const left = Math.min(
@@ -678,7 +752,7 @@ import { initDiscordMemberCount } from './discord-stats.js';
       markerCommentPopover.style.top = `${top}px`;
       markerCommentPopover.style.visibility = "visible";
     }
-    function showMarkerCommentPopover(anchor, marker) {
+    function showMarkerCommentPopover(anchor, marker, { pinned = false } = {}) {
       const comment = markerComment(marker);
       const commentImage = markerCommentImage(marker);
       if (!comment && !commentImage) {
@@ -688,14 +762,29 @@ import { initDiscordMemberCount } from './discord-stats.js';
       const popoverHost = dialog.open ? dialog : document.body;
       if (markerCommentPopover.parentElement !== popoverHost) popoverHost.append(markerCommentPopover);
       const content = document.createDocumentFragment();
+      hideMarkerCommentImagePreview();
       markerCommentPopoverAnchor = anchor;
       markerCommentPopover.classList.toggle("has-image", Boolean(commentImage));
+      markerCommentPopover.classList.toggle("is-pinned", pinned);
       if (commentImage) {
         const image = document.createElement("img");
         image.className = "map-marker-comment-image";
         image.src = commentImage.path;
         image.alt = commentImage.label;
         image.addEventListener("load", () => positionMarkerCommentPopover(anchor), { once: true });
+        image.addEventListener("pointerenter", event => {
+          if (event.pointerType === "mouse") showMarkerCommentImagePreview(image);
+        });
+        image.addEventListener("pointerleave", event => {
+          if (event.pointerType === "mouse") hideMarkerCommentImagePreview();
+        });
+        image.addEventListener("click", event => {
+          if (!markerCommentPopover.classList.contains("is-pinned") || window.matchMedia("(hover: hover)").matches) return;
+          event.preventDefault();
+          event.stopPropagation();
+          if (markerCommentImagePreview.hidden) showMarkerCommentImagePreview(image, { interactive: true });
+          else hideMarkerCommentImagePreview();
+        });
         content.append(image);
       }
       if (comment) {
@@ -1384,16 +1473,16 @@ import { initDiscordMemberCount } from './discord-stats.js';
         if (markerHasComment(marker) && !state.editMode) {
           button.classList.add("has-comment");
           button.setAttribute("aria-describedby", markerCommentPopover.id);
-          button.addEventListener("mouseenter", () => showMarkerCommentPopover(button, marker));
+          button.addEventListener("mouseenter", () => showMarkerCommentPopover(button, marker, { pinned: state.focusedTankMarkerId === marker.id }));
           button.addEventListener("mouseleave", () => hideMarkerCommentPopover(button));
-          button.addEventListener("focus", () => showMarkerCommentPopover(button, marker));
+          button.addEventListener("focus", () => showMarkerCommentPopover(button, marker, { pinned: state.focusedTankMarkerId === marker.id }));
           button.addEventListener("blur", () => hideMarkerCommentPopover(button));
         }
         layer.append(button);
       });
     }
     function renderMarkers() {
-      hideMarkerCommentPopover();
+      hideMarkerCommentPopover(null, { force: true });
       const focusedTankMarker = currentMarkers().find(marker => marker.id === state.focusedTankMarkerId);
       if (state.focusedTankMarkerId && (!isTankMarker(focusedTankMarker) || isMarkerHidden(focusedTankMarker))) state.focusedTankMarkerId = null;
       syncMarkerLayer(mapOverlayLayer, mapImage, mapStage);
@@ -1402,13 +1491,20 @@ import { initDiscordMemberCount } from './discord-stats.js';
       renderAnnotationLayer(annotationLayer, mapImage);
       syncMarkerLayer(markerLayer, mapImage, mapStage);
       renderMarkerLayer(markerLayer, mapImage);
-      if (!dialog.open) return;
-      syncMarkerLayer(modalMapOverlayLayer, modalImage, modalMapStage);
-      renderMapOverlayLayer(modalMapOverlayLayer, modalImage);
-      syncMarkerLayer(modalAnnotationLayer, modalImage, modalMapStage);
-      renderAnnotationLayer(modalAnnotationLayer, modalImage);
-      syncMarkerLayer(modalMarkerLayer, modalImage, modalMapStage);
-      renderMarkerLayer(modalMarkerLayer, modalImage);
+      if (dialog.open) {
+        syncMarkerLayer(modalMapOverlayLayer, modalImage, modalMapStage);
+        renderMapOverlayLayer(modalMapOverlayLayer, modalImage);
+        syncMarkerLayer(modalAnnotationLayer, modalImage, modalMapStage);
+        renderAnnotationLayer(modalAnnotationLayer, modalImage);
+        syncMarkerLayer(modalMarkerLayer, modalImage, modalMapStage);
+        renderMarkerLayer(modalMarkerLayer, modalImage);
+      }
+      const activeFocusedTank = !state.editMode && currentMarkers().find(marker => marker.id === state.focusedTankMarkerId);
+      if (!markerHasComment(activeFocusedTank)) return;
+      const activeMarkerLayer = dialog.open ? modalMarkerLayer : markerLayer;
+      const focusedMarkerButton = [...activeMarkerLayer.querySelectorAll(".map-marker")]
+        .find(button => button.dataset.markerId === activeFocusedTank.id);
+      if (focusedMarkerButton) showMarkerCommentPopover(focusedMarkerButton, activeFocusedTank, { pinned: true });
     }
     function updateMarkerEditor() {
       mapViewer.classList.toggle("is-editing", state.editMode);
@@ -1994,7 +2090,8 @@ import { initDiscordMemberCount } from './discord-stats.js';
     bindAnnotationContextMenu(annotationContextMenu);
     bindAnnotationContextMenu(modalAnnotationContextMenu);
     document.addEventListener("click", event => {
-      if (!state.editMode && state.focusedTankMarkerId) {
+      const clickedComment = markerCommentPopover.contains(event.target) || markerCommentImagePreview.contains(event.target);
+      if (!state.editMode && state.focusedTankMarkerId && !clickedComment) {
         state.focusedTankMarkerId = null;
         renderMarkers();
       }
@@ -2003,6 +2100,7 @@ import { initDiscordMemberCount } from './discord-stats.js';
     });
     document.addEventListener("keydown", event => {
       if (event.key === "Escape") {
+        hideMarkerCommentImagePreview();
         cancelDrawing();
         hideMarkerContextMenu();
         hideAnnotationContextMenu();
@@ -2010,6 +2108,7 @@ import { initDiscordMemberCount } from './discord-stats.js';
     });
     document.addEventListener("scroll", () => {
       if (markerCommentPopoverAnchor) positionMarkerCommentPopover(markerCommentPopoverAnchor);
+      if (!markerCommentImagePreview.hidden) positionMarkerCommentImagePreview();
       fitVisibleMarkerContextMenus();
     }, true);
     mapImage.addEventListener("load", () => {
@@ -2040,10 +2139,12 @@ import { initDiscordMemberCount } from './discord-stats.js';
     window.visualViewport?.addEventListener("resize", () => {
       fitVisibleMarkerContextMenus();
       if (markerCommentPopoverAnchor) positionMarkerCommentPopover(markerCommentPopoverAnchor);
+      if (!markerCommentImagePreview.hidden) positionMarkerCommentImagePreview();
     });
     window.visualViewport?.addEventListener("scroll", () => {
       fitVisibleMarkerContextMenus();
       if (markerCommentPopoverAnchor) positionMarkerCommentPopover(markerCommentPopoverAnchor);
+      if (!markerCommentImagePreview.hidden) positionMarkerCommentImagePreview();
     });
     window.addEventListener("popstate", restoreFromUrl);
     mapImage.addEventListener("click", () => {

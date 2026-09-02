@@ -66,8 +66,8 @@
       "name": "Advance to the Rhine",
       "aliases": "라인 강 진격",
       "slug": "advance-to-the-rhine",
-      "updated": "2026-09-01",
-      "updatedAt": "2026-09-01T11:58:22Z",
+      "updated": "2026-09-02",
+      "updatedAt": "2026-09-02T10:33:47Z",
       "br": {
         "min": 1
       },
@@ -150,7 +150,7 @@
       "aliases": "북극의 부두",
       "slug": "arctic-pier",
       "updated": "2026-09-02",
-      "updatedAt": "2026-09-01T16:38:48Z",
+      "updatedAt": "2026-09-02T07:51:20Z",
       "br": {
         "min": 4.7
       },
@@ -170,7 +170,8 @@
       "name": "Arctic Polar Base",
       "aliases": "북극",
       "slug": "arctic-polar-base",
-      "updated": "2026-09-01",
+      "updated": "2026-09-02",
+      "updatedAt": "2026-09-02T10:31:54Z",
       "br": {
         "min": 6.7
       },
@@ -613,7 +614,7 @@
       "aliases": "금광 지대",
       "slug": "golden-quarry",
       "updated": "2026-09-02",
-      "updatedAt": "2026-09-02T05:40:00Z",
+      "updatedAt": "2026-09-02T10:46:07Z",
       "br": {
         "min": 2.3
       },

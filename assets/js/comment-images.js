@@ -67,6 +67,11 @@ export const commentImages = Object.freeze([
     "label": "Arctic Pier/scr_ (20).png"
   },
   {
+    "id": "Arctic Pier/scr_ (21).png",
+    "path": "img/Arctic Pier/scr_ (21).png",
+    "label": "Arctic Pier/scr_ (21).png"
+  },
+  {
     "id": "Arctic Pier/scr_ (3).png",
     "path": "img/Arctic Pier/scr_ (3).png",
     "label": "Arctic Pier/scr_ (3).png"

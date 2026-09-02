@@ -241,11 +241,16 @@
     .map-marker img { display: block; width: auto; height: auto; max-width: none; max-height: none; object-fit: initial; pointer-events: none; }
     .map-marker img.is-special-role-marker { filter: brightness(0); opacity: .5; }
     .map-marker.has-comment { cursor: help; }
-    .map-marker-comment-popover { box-sizing: border-box; position: fixed; z-index: 1200; display: grid; width: max-content; max-width: min(420px, calc(100vw - 16px)); max-height: calc(100dvh - 16px); overflow: auto; gap: 8px; padding: 10px; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); box-shadow: 0 16px 38px rgba(0,0,0,.48); color: var(--ink); font-size: .78rem; font-weight: 500; line-height: 1.5; text-align: left; white-space: pre-wrap; pointer-events: none; }
+    .map-marker-comment-popover { box-sizing: border-box; position: fixed; z-index: 1200; display: grid; width: max-content; max-width: min(720px, calc(100vw - 16px)); max-height: 80dvh; overflow: auto; overscroll-behavior: contain; gap: 8px; padding: 10px; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); box-shadow: 0 16px 38px rgba(0,0,0,.48); color: var(--ink); font-size: .78rem; font-weight: 500; line-height: 1.5; text-align: left; white-space: pre-wrap; pointer-events: none; }
     .map-marker-comment-popover[hidden] { display: none; }
-    .map-marker-comment-popover.has-image { width: min(420px, calc(100vw - 16px)); }
+    .map-marker-comment-popover.has-image { width: min(720px, calc(100vw - 16px)); }
+    .map-marker-comment-popover.is-pinned { pointer-events: auto; }
     .map-marker-comment-image { box-sizing: border-box; display: block; justify-self: center; width: auto; max-width: 100%; height: auto; max-height: min(60dvh, 420px); border: 1px solid var(--line); border-radius: 7px; background: var(--bg); object-fit: contain; }
-    .map-marker-comment-text { min-width: 0; max-width: 400px; }
+    .map-marker-comment-popover.is-pinned .map-marker-comment-image { cursor: zoom-in; }
+    .map-marker-comment-image-preview { box-sizing: border-box; position: fixed; z-index: 1300; display: block; width: auto; height: auto; max-width: calc(100vw - 16px); max-height: calc(100dvh - 16px); border: 1px solid var(--line); border-radius: 10px; background: var(--bg); box-shadow: 0 20px 56px rgba(0,0,0,.65); object-fit: contain; pointer-events: none; }
+    .map-marker-comment-image-preview[hidden] { display: none; }
+    .map-marker-comment-image-preview.is-touch-open { cursor: zoom-out; pointer-events: auto; }
+    .map-marker-comment-text { min-width: 0; max-width: 700px; }
     .map-viewer.is-editing .map-stage { border-color: var(--accent); box-shadow: inset 0 0 0 1px rgba(214,219,157,.3); }
     .map-stage.is-drawing, .modal-map-stage.is-drawing { cursor: crosshair; }
     .map-viewer.is-editing .map-marker { cursor: grab; }
