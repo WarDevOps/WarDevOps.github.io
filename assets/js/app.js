@@ -1,6 +1,6 @@
     import { MARKER_LAYOUT_VERSION, loadMarkerLayout, saveMarkerLayout as saveMarkerLayoutToStorage } from './marker-storage.js?v=tactical-summary-editor-20260902';
 import { initDiscordMemberCount } from './discord-stats.js';
-    import { commentImages } from './comment-images.js?v=comment-images-7e58fa5b323d';
+    import { commentImages } from './comment-images.js?v=comment-images-254ccfbba4cf';
     import { defaultMarkerLayout, maps, translations } from './data.js?v=tactical-summary-editor-20260902';
 
 
@@ -753,6 +753,7 @@ import { initDiscordMemberCount } from './discord-stats.js';
       markerCommentPopover.style.visibility = "visible";
     }
     function showMarkerCommentPopover(anchor, marker, { pinned = false } = {}) {
+      if (state.focusedTankMarkerId && state.focusedTankMarkerId !== marker?.id) return;
       const comment = markerComment(marker);
       const commentImage = markerCommentImage(marker);
       if (!comment && !commentImage) {
