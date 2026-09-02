@@ -16,7 +16,7 @@ async function findCommentImages(directory) {
     if (entry.isDirectory()) return findCommentImages(fullPath);
     if (!entry.isFile() || !entry.name.startsWith("scr_") || !entry.name.endsWith(".png")) return [];
     const path = relative(repoRoot, fullPath).split(sep).join("/");
-    return [{ id: path.slice("img/".length), path, label: path.slice("img/".length) }];
+    return [{ id: path.slice("img/".length), path, label: entry.name }];
   }));
   return images.flat();
 }

@@ -3,7 +3,7 @@
   "mapUpdated": {
     "38th Parallel": "2026-08-31",
     "Abandoned Factory": "2026-09-02",
-    "Abandoned Town": "2026-09-01",
+    "Abandoned Town": "2026-09-02",
     "Advance to the Rhine": "2026-09-02",
     "Alaska": "2026-09-01",
     "American Desert": "2026-09-02",
@@ -59,18 +59,19 @@
     "White Rock Fortress": "2026-09-02"
   },
   "mapUpdatedAt": {
-    "Abandoned Factory": "2026-09-01T15:13:42Z",
+    "Abandoned Factory": "2026-09-02T11:51:12Z",
     "Advance to the Rhine": "2026-09-02T10:33:47Z",
     "American Desert": "2026-09-01T15:14:29Z",
     "Aral Sea": "2026-09-01T16:42:20Z",
-    "Arctic Pier": "2026-09-02T11:04:04Z",
-    "Arctic Polar Base": "2026-09-02T11:23:50Z",
+    "Arctic Pier": "2026-09-02T07:51:20Z",
+    "Arctic Polar Base": "2026-09-02T10:31:54Z",
     "Ash River": "2026-09-01T16:50:15Z",
     "Attica": "2026-09-01T16:44:47Z",
     "Battle of Hürtgen Forest": "2026-09-01T16:59:04Z",
-    "Golden Quarry": "2026-09-02T10:47:21Z",
+    "Golden Quarry": "2026-09-02T10:46:07Z",
     "North Holland": "2026-09-02T03:25:27Z",
-    "White Rock Fortress": "2026-09-02T04:58:42Z"
+    "White Rock Fortress": "2026-09-02T04:58:42Z",
+    "Abandoned Town": "2026-09-02T12:00:13Z"
   },
   "tacticalSummaries": {
     "Eastern Europe": {
@@ -1140,14 +1141,14 @@
       {
         "id": "mt8dos6s-hezrxr",
         "type": "mainBattleTank",
-        "x": 44.06,
-        "y": 93.53
+        "x": 44.79,
+        "y": 91.41
       },
       {
         "id": "mt8dotn0-ejw1kd",
         "type": "sniper",
-        "x": 44.06,
-        "y": 93.53,
+        "x": 44.79,
+        "y": 91.41,
         "parentTankId": "mt8dos6s-hezrxr"
       },
       {
@@ -3996,19 +3997,6 @@
         "x": 58.07,
         "y": 11.52,
         "parentTankId": "mtjygzia-vx0vls"
-      },
-      {
-        "id": "mtk0camg-qkj5cd",
-        "type": "tankDestroyer",
-        "x": 37.41,
-        "y": 13.64
-      },
-      {
-        "id": "mtk0d1er-8gpy09",
-        "type": "sniper",
-        "x": 37.41,
-        "y": 13.64,
-        "parentTankId": "mtk0camg-qkj5cd"
       }
     ],
     "Attica::domination-1|Blue": [
@@ -11879,19 +11867,6 @@
         "parentTankId": "mtgs8i8b-0b5zvr"
       },
       {
-        "id": "mtidtk36-o15vbk",
-        "type": "tankDestroyer",
-        "x": 28.37,
-        "y": 34.75
-      },
-      {
-        "id": "mtidtuf3-54454y",
-        "type": "sniper",
-        "x": 28.37,
-        "y": 34.75,
-        "parentTankId": "mtidtk36-o15vbk"
-      },
-      {
         "id": "mtie0n7a-zylo4r",
         "type": "smokeshell",
         "x": 18.7,
@@ -15293,15 +15268,7 @@
         "y": 56.37,
         "parentTankId": "mtjnkkqe-ynptcc"
       }
-    ],
-    "Red Desert::domination-1|Red": [],
-    "Poland::domination-1|Red": [],
-    "Kuban::domination-1|Red": [],
-    "Karelia::domination-1|Red": [],
-    "Frozen Pass::domination-1|Red": [],
-    "Flanders::domination-1|Red": [],
-    "Fields of Poland::domination-1|Red": [],
-    "Breslau::domination-1|Red": []
+    ]
   },
   "annotations": {
     "Campania::domination-1|Red": [
@@ -17399,15 +17366,6 @@
         "endY": 46.98
       },
       {
-        "id": "mt8bi4tv-lz1gym",
-        "type": "aimHere",
-        "parentTankId": "mt8be5xa-ubg1l7",
-        "startX": 55.05,
-        "startY": 83.07,
-        "endX": 33.42,
-        "endY": 60.72
-      },
-      {
         "id": "mt8bl0bl-nnt9fm",
         "type": "aimHere",
         "parentTankId": "mt8beb0o-td9awi",
@@ -17661,15 +17619,6 @@
         "endY": 7.17
       },
       {
-        "id": "mt8dox77-vw9c7s",
-        "type": "aimHere",
-        "parentTankId": "mt8dos6s-hezrxr",
-        "startX": 44.06,
-        "startY": 93.53,
-        "endX": 41.84,
-        "endY": 45.12
-      },
-      {
         "id": "mtgocbrh-rh55o0",
         "type": "aimHere",
         "parentTankId": "mt8dmu5h-04y1a5",
@@ -17815,6 +17764,24 @@
           }
         ],
         "dangerRoute": true
+      },
+      {
+        "id": "mtk1ijgy-dms34f",
+        "type": "aimHere",
+        "parentTankId": "mt8be5xa-ubg1l7",
+        "startX": 55.05,
+        "startY": 83.07,
+        "endX": 29.29,
+        "endY": 57.55
+      },
+      {
+        "id": "mtk1nt7k-o5b5px",
+        "type": "aimHere",
+        "parentTankId": "mt8dos6s-hezrxr",
+        "startX": 44.79,
+        "startY": 91.41,
+        "endX": 43.88,
+        "endY": 62.49
       }
     ],
     "Advance to the Rhine::domination-1|Red": [
@@ -23374,8 +23341,7 @@
             "x": 23.49,
             "y": 55.05
           }
-        ],
-        "dangerRoute": false
+        ]
       },
       {
         "id": "mtitwzl5-vi41w0",
@@ -23494,8 +23460,7 @@
             "x": 12.41,
             "y": 34.57
           }
-        ],
-        "dangerRoute": false
+        ]
       },
       {
         "id": "mtiu8cvv-fjpvnf",
@@ -23805,15 +23770,6 @@
         "startY": 11.52,
         "endX": 77.49,
         "endY": 34.39
-      },
-      {
-        "id": "mtk0d06p-7jzd2q",
-        "type": "aimHere",
-        "parentTankId": "mtk0camg-qkj5cd",
-        "startX": 37.41,
-        "startY": 13.64,
-        "endX": 72.7,
-        "endY": 48.93
       }
     ],
     "Attica::domination-1|Blue": [
@@ -39457,15 +39413,6 @@
         "dangerRoute": true
       },
       {
-        "id": "mtidtnl9-8ztyyw",
-        "type": "aimHere",
-        "parentTankId": "mtidtk36-o15vbk",
-        "startX": 28.37,
-        "startY": 34.75,
-        "endX": 26.77,
-        "endY": 57.71
-      },
-      {
         "id": "mtidvbsv-s950v6",
         "type": "route",
         "points": [
@@ -46842,16 +46789,8 @@
           }
         ]
       }
-    ],
-    "Red Desert::domination-1|Red": [],
-    "Poland::domination-1|Red": [],
-    "Kuban::domination-1|Red": [],
-    "Karelia::domination-1|Red": [],
-    "Frozen Pass::domination-1|Red": [],
-    "Flanders::domination-1|Red": [],
-    "Fields of Poland::domination-1|Red": [],
-    "Breslau::domination-1|Red": []
+    ]
   },
-  "updatedAt": "2026-09-02T11:39:11.954Z",
-  "exportedAt": "2026-09-02T11:39:12.431Z"
+  "updatedAt": "2026-09-02T12:00:15.616Z",
+  "exportedAt": "2026-09-02T12:00:16.461Z"
 }

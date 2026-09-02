@@ -4,176 +4,176 @@ export const commentImages = Object.freeze([
   {
     "id": "Arctic Pier/scr_ (1).png",
     "path": "img/Arctic Pier/scr_ (1).png",
-    "label": "Arctic Pier/scr_ (1).png"
+    "label": "scr_ (1).png"
   },
   {
     "id": "Arctic Pier/scr_ (10).png",
     "path": "img/Arctic Pier/scr_ (10).png",
-    "label": "Arctic Pier/scr_ (10).png"
+    "label": "scr_ (10).png"
   },
   {
     "id": "Arctic Pier/scr_ (11).png",
     "path": "img/Arctic Pier/scr_ (11).png",
-    "label": "Arctic Pier/scr_ (11).png"
+    "label": "scr_ (11).png"
   },
   {
     "id": "Arctic Pier/scr_ (12).png",
     "path": "img/Arctic Pier/scr_ (12).png",
-    "label": "Arctic Pier/scr_ (12).png"
+    "label": "scr_ (12).png"
   },
   {
     "id": "Arctic Pier/scr_ (13).png",
     "path": "img/Arctic Pier/scr_ (13).png",
-    "label": "Arctic Pier/scr_ (13).png"
+    "label": "scr_ (13).png"
   },
   {
     "id": "Arctic Pier/scr_ (14).png",
     "path": "img/Arctic Pier/scr_ (14).png",
-    "label": "Arctic Pier/scr_ (14).png"
+    "label": "scr_ (14).png"
   },
   {
     "id": "Arctic Pier/scr_ (15).png",
     "path": "img/Arctic Pier/scr_ (15).png",
-    "label": "Arctic Pier/scr_ (15).png"
+    "label": "scr_ (15).png"
   },
   {
     "id": "Arctic Pier/scr_ (16).png",
     "path": "img/Arctic Pier/scr_ (16).png",
-    "label": "Arctic Pier/scr_ (16).png"
+    "label": "scr_ (16).png"
   },
   {
     "id": "Arctic Pier/scr_ (17).png",
     "path": "img/Arctic Pier/scr_ (17).png",
-    "label": "Arctic Pier/scr_ (17).png"
+    "label": "scr_ (17).png"
   },
   {
     "id": "Arctic Pier/scr_ (18).png",
     "path": "img/Arctic Pier/scr_ (18).png",
-    "label": "Arctic Pier/scr_ (18).png"
+    "label": "scr_ (18).png"
   },
   {
     "id": "Arctic Pier/scr_ (19).png",
     "path": "img/Arctic Pier/scr_ (19).png",
-    "label": "Arctic Pier/scr_ (19).png"
+    "label": "scr_ (19).png"
   },
   {
     "id": "Arctic Pier/scr_ (2).png",
     "path": "img/Arctic Pier/scr_ (2).png",
-    "label": "Arctic Pier/scr_ (2).png"
+    "label": "scr_ (2).png"
   },
   {
     "id": "Arctic Pier/scr_ (20).png",
     "path": "img/Arctic Pier/scr_ (20).png",
-    "label": "Arctic Pier/scr_ (20).png"
+    "label": "scr_ (20).png"
   },
   {
     "id": "Arctic Pier/scr_ (21).png",
     "path": "img/Arctic Pier/scr_ (21).png",
-    "label": "Arctic Pier/scr_ (21).png"
+    "label": "scr_ (21).png"
   },
   {
     "id": "Arctic Pier/scr_ (3).png",
     "path": "img/Arctic Pier/scr_ (3).png",
-    "label": "Arctic Pier/scr_ (3).png"
+    "label": "scr_ (3).png"
   },
   {
     "id": "Arctic Pier/scr_ (4).png",
     "path": "img/Arctic Pier/scr_ (4).png",
-    "label": "Arctic Pier/scr_ (4).png"
+    "label": "scr_ (4).png"
   },
   {
     "id": "Arctic Pier/scr_ (5).png",
     "path": "img/Arctic Pier/scr_ (5).png",
-    "label": "Arctic Pier/scr_ (5).png"
+    "label": "scr_ (5).png"
   },
   {
     "id": "Arctic Pier/scr_ (6).png",
     "path": "img/Arctic Pier/scr_ (6).png",
-    "label": "Arctic Pier/scr_ (6).png"
+    "label": "scr_ (6).png"
   },
   {
     "id": "Arctic Pier/scr_ (7).png",
     "path": "img/Arctic Pier/scr_ (7).png",
-    "label": "Arctic Pier/scr_ (7).png"
+    "label": "scr_ (7).png"
   },
   {
     "id": "Arctic Pier/scr_ (8).png",
     "path": "img/Arctic Pier/scr_ (8).png",
-    "label": "Arctic Pier/scr_ (8).png"
+    "label": "scr_ (8).png"
   },
   {
     "id": "Arctic Pier/scr_ (9).png",
     "path": "img/Arctic Pier/scr_ (9).png",
-    "label": "Arctic Pier/scr_ (9).png"
+    "label": "scr_ (9).png"
   },
   {
     "id": "Golden Quarry/scr_1.png",
     "path": "img/Golden Quarry/scr_1.png",
-    "label": "Golden Quarry/scr_1.png"
+    "label": "scr_1.png"
   },
   {
     "id": "Golden Quarry/scr_10.png",
     "path": "img/Golden Quarry/scr_10.png",
-    "label": "Golden Quarry/scr_10.png"
+    "label": "scr_10.png"
   },
   {
     "id": "Golden Quarry/scr_11.png",
     "path": "img/Golden Quarry/scr_11.png",
-    "label": "Golden Quarry/scr_11.png"
+    "label": "scr_11.png"
   },
   {
     "id": "Golden Quarry/scr_12.png",
     "path": "img/Golden Quarry/scr_12.png",
-    "label": "Golden Quarry/scr_12.png"
+    "label": "scr_12.png"
   },
   {
     "id": "Golden Quarry/scr_13.png",
     "path": "img/Golden Quarry/scr_13.png",
-    "label": "Golden Quarry/scr_13.png"
+    "label": "scr_13.png"
   },
   {
     "id": "Golden Quarry/scr_14.png",
     "path": "img/Golden Quarry/scr_14.png",
-    "label": "Golden Quarry/scr_14.png"
+    "label": "scr_14.png"
   },
   {
     "id": "Golden Quarry/scr_2.png",
     "path": "img/Golden Quarry/scr_2.png",
-    "label": "Golden Quarry/scr_2.png"
+    "label": "scr_2.png"
   },
   {
     "id": "Golden Quarry/scr_3.png",
     "path": "img/Golden Quarry/scr_3.png",
-    "label": "Golden Quarry/scr_3.png"
+    "label": "scr_3.png"
   },
   {
     "id": "Golden Quarry/scr_4.png",
     "path": "img/Golden Quarry/scr_4.png",
-    "label": "Golden Quarry/scr_4.png"
+    "label": "scr_4.png"
   },
   {
     "id": "Golden Quarry/scr_5.png",
     "path": "img/Golden Quarry/scr_5.png",
-    "label": "Golden Quarry/scr_5.png"
+    "label": "scr_5.png"
   },
   {
     "id": "Golden Quarry/scr_6.png",
     "path": "img/Golden Quarry/scr_6.png",
-    "label": "Golden Quarry/scr_6.png"
+    "label": "scr_6.png"
   },
   {
     "id": "Golden Quarry/scr_7.png",
     "path": "img/Golden Quarry/scr_7.png",
-    "label": "Golden Quarry/scr_7.png"
+    "label": "scr_7.png"
   },
   {
     "id": "Golden Quarry/scr_8.png",
     "path": "img/Golden Quarry/scr_8.png",
-    "label": "Golden Quarry/scr_8.png"
+    "label": "scr_8.png"
   },
   {
     "id": "Golden Quarry/scr_9.png",
     "path": "img/Golden Quarry/scr_9.png",
-    "label": "Golden Quarry/scr_9.png"
+    "label": "scr_9.png"
   }
 ]);

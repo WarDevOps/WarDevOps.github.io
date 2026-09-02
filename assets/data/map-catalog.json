@@ -26,7 +26,7 @@
       "aliases": "버려진 공장",
       "slug": "abandoned-factory",
       "updated": "2026-09-02",
-      "updatedAt": "2026-09-01T15:13:42Z",
+      "updatedAt": "2026-09-02T11:51:12Z",
       "br": {
         "min": 1
       },
@@ -46,7 +46,8 @@
       "name": "Abandoned Town",
       "aliases": "버려진 소도시",
       "slug": "abandoned-town",
-      "updated": "2026-09-01",
+      "updated": "2026-09-02",
+      "updatedAt": "2026-09-02T12:00:13Z",
       "br": {
         "min": 3.7
       },
