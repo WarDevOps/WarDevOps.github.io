@@ -66,12 +66,11 @@ function tacticalSummary(value, context) {
   for (const language of ["en", "ko"]) {
     const sentences = value[language];
     if (sentences == null) continue;
-    if (!Array.isArray(sentences) || sentences.length < 2 || sentences.length > 4 || sentences.some(sentence => typeof sentence !== "string" || !sentence.trim() || sentence.trim().length > 240)) {
+    if (!Array.isArray(sentences) || sentences.length < 2 || sentences.length > 4 || sentences.some(sentence => typeof sentence !== "string" || !sentence.trim())) {
       throw new Error(`Tactical summary for ${context} (${language}) must contain 2 to 4 non-empty sentences`);
     }
     result[language] = sentences.map(sentence => sentence.trim());
   }
-  if (!Object.keys(result).length) return null;
   if (!result.en) throw new Error(`English tactical summary is required for ${context}`);
   return result;
 }
@@ -180,7 +179,7 @@ function compactVariation(variation, rootFolder) {
   return result;
 }
 
-async function discoverMap(folderName, metadata, mapUpdated, mapUpdatedAt, tacticalSummaries) {
+async function discoverMap(folderName, metadata, mapUpdated, mapUpdatedAt) {
   const mapMetadata = metadata.maps?.[folderName] || {};
   if (mapMetadata.disabled) return null;
   const name = mapMetadata.en || folderName;
@@ -190,7 +189,7 @@ async function discoverMap(folderName, metadata, mapUpdated, mapUpdatedAt, tacti
   const updatedAt = mapUpdatedAt?.[name];
   const defaultMode = String(mapMetadata.defaultMode || "domination").toLowerCase();
   const mapBr = battleRating(mapMetadata.br ?? metadata.defaultBr, folderName);
-  const mapTacticalSummary = tacticalSummary(tacticalSummaries?.[name], name);
+  const mapTacticalSummary = tacticalSummary(mapMetadata.tacticalSummary, folderName);
   const variationBrs = mapMetadata.variationBrs ?? {};
   if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(slug)) {
     throw new Error(`Invalid map slug for ${folderName}: ${slug}`);
@@ -278,15 +277,11 @@ async function buildCatalog() {
   if (mapLayout.mapUpdatedAt !== undefined && (!mapLayout.mapUpdatedAt || typeof mapLayout.mapUpdatedAt !== "object" || Array.isArray(mapLayout.mapUpdatedAt))) {
     throw new Error("Maptactic.json mapUpdatedAt must be an object");
   }
-  if (mapLayout.tacticalSummaries !== undefined && (!mapLayout.tacticalSummaries || typeof mapLayout.tacticalSummaries !== "object" || Array.isArray(mapLayout.tacticalSummaries))) {
-    throw new Error("Maptactic.json tacticalSummaries must be an object");
-  }
   const mapUpdatedAt = mapLayout.mapUpdatedAt || {};
-  const tacticalSummaries = mapLayout.tacticalSummaries || {};
   const entries = await directoryEntries(IMG_ROOT);
   const maps = [];
   for (const entry of entries.filter(item => item.isDirectory())) {
-    const map = await discoverMap(entry.name, metadata, mapLayout.mapUpdated, mapUpdatedAt, tacticalSummaries);
+    const map = await discoverMap(entry.name, metadata, mapLayout.mapUpdated, mapUpdatedAt);
     if (map) maps.push(map);
   }
 
@@ -300,14 +295,12 @@ async function buildCatalog() {
   const catalogMapNames = new Set(maps.map(map => map.name));
   const unusedMapUpdates = Object.keys(mapLayout.mapUpdated).filter(name => !catalogMapNames.has(name));
   const unusedMapUpdateTimestamps = Object.keys(mapUpdatedAt).filter(name => !catalogMapNames.has(name));
-  const unusedTacticalSummaries = Object.keys(tacticalSummaries).filter(name => !catalogMapNames.has(name));
   return {
     payload: { version: 1, maps },
     unknownTranslations,
     unusedMetadata,
     unusedMapUpdates,
-    unusedMapUpdateTimestamps,
-    unusedTacticalSummaries
+    unusedMapUpdateTimestamps
   };
 }
 

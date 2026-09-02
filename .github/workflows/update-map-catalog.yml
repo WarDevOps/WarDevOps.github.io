@@ -29,11 +29,11 @@ jobs:
         with:
           node-version: 24
 
-      - name: Generate comment image manifest
-        run: node generate-comment-image-manifest.mjs
-
       - name: Generate map catalog
         run: node scripts/generate-map-catalog.mjs
+
+      - name: Generate comment image manifest
+        run: node generate-comment-image-manifest.mjs
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5

@@ -20,7 +20,20 @@
     "Campania": { "ko": "캄파니아", "br": { "min": 3.7 } },
     "Cargo Port": { "ko": "카고 포트" },
     "Carpathians": { "ko": "카르파티아 산맥", "br": { "min": 2.3 } },
-    "Eastern Europe": { "ko": "동유럽", "br": { "min": 1.0 } },
+    "Eastern Europe": {
+      "ko": "동유럽",
+      "br": { "min": 1.0 },
+      "tacticalSummary": {
+        "en": [
+          "Long-range engagements dominate the north-south corridors.",
+          "Fast vehicles can contest the eastern flank early, while the central urban area favors close-range fighting."
+        ],
+        "ko": [
+          "남북으로 이어지는 주요 통로에서는 장거리 교전이 중심이 됩니다.",
+          "기동력이 뛰어난 차량은 초반에 동쪽 측면을 선점할 수 있으며, 중앙 시가지는 근거리 전투에 유리합니다."
+        ]
+      }
+    },
     "European Province": { "ko": "유럽 지방", "br": { "min": 6.7 } },
     "Fields of Normandy": { "ko": "노르망디의 들판", "br": { "min": 2.3 } },
     "Fields of Poland": { "ko": "폴란드의 들판" },
@@ -39,7 +52,7 @@
     "Middle East": { "ko": "중동", "br": { "min": 5.0 } },
     "Mozdok": { "ko": "모즈도크", "br": { "min": 3.7 } },
     "Normandy": { "ko": "노르망디", "br": { "min": 3.7 } },
-    "North Holland": { "ko": "노르드 홀란트", "br": { "min": 1.0 } },
+    "North Holland": { "ko": "북부 네덜란드", "br": { "min": 1.0 } },
     "Poland": { "ko": "폴란드", "br": { "min": 1.0 } },
     "Port Novorossiysk": { "ko": "노보로시스크 항구", "defaultMode": "conquest", "br": { "min": 2.3 } },
     "Pradesh": { "ko": "프라데시", "br": { "min": 7.7 } },
