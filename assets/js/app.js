@@ -1,6 +1,6 @@
     import { MARKER_LAYOUT_VERSION, loadMarkerLayout, saveMarkerLayout as saveMarkerLayoutToStorage } from './marker-storage.js?v=tactical-summary-editor-20260902';
 import { initDiscordMemberCount } from './discord-stats.js';
-    import { commentImages } from './comment-images.js?v=comment-images-254ccfbba4cf';
+    import { commentImages } from './comment-images.js?v=comment-images-d6c742b47074';
     import { defaultMarkerLayout, maps, translations } from './data.js?v=tactical-summary-editor-20260902';
 
 

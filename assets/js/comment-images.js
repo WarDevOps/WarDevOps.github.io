@@ -52,11 +52,6 @@ export const commentImages = Object.freeze([
     "label": "scr_ (2).png"
   },
   {
-    "id": "38th Parallel/scr_ (3).png",
-    "path": "img/38th Parallel/scr_ (3).png",
-    "label": "scr_ (3).png"
-  },
-  {
     "id": "38th Parallel/scr_ (4).png",
     "path": "img/38th Parallel/scr_ (4).png",
     "label": "scr_ (4).png"
@@ -72,19 +67,9 @@ export const commentImages = Object.freeze([
     "label": "scr_ (6).png"
   },
   {
-    "id": "38th Parallel/scr_ (7).png",
-    "path": "img/38th Parallel/scr_ (7).png",
-    "label": "scr_ (7).png"
-  },
-  {
     "id": "38th Parallel/scr_ (8).png",
     "path": "img/38th Parallel/scr_ (8).png",
     "label": "scr_ (8).png"
-  },
-  {
-    "id": "38th Parallel/scr_ (9).png",
-    "path": "img/38th Parallel/scr_ (9).png",
-    "label": "scr_ (9).png"
   },
   {
     "id": "Abandoned Factory/scr_ (1).png",
