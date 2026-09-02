@@ -2,6 +2,361 @@
 // Only img/**/scr_*.png files appear in this allowlist.
 export const commentImages = Object.freeze([
   {
+    "id": "38th Parallel/scr_ (1).png",
+    "path": "img/38th Parallel/scr_ (1).png",
+    "label": "scr_ (1).png"
+  },
+  {
+    "id": "38th Parallel/scr_ (10).png",
+    "path": "img/38th Parallel/scr_ (10).png",
+    "label": "scr_ (10).png"
+  },
+  {
+    "id": "38th Parallel/scr_ (11).png",
+    "path": "img/38th Parallel/scr_ (11).png",
+    "label": "scr_ (11).png"
+  },
+  {
+    "id": "38th Parallel/scr_ (12).png",
+    "path": "img/38th Parallel/scr_ (12).png",
+    "label": "scr_ (12).png"
+  },
+  {
+    "id": "38th Parallel/scr_ (13).png",
+    "path": "img/38th Parallel/scr_ (13).png",
+    "label": "scr_ (13).png"
+  },
+  {
+    "id": "38th Parallel/scr_ (14).png",
+    "path": "img/38th Parallel/scr_ (14).png",
+    "label": "scr_ (14).png"
+  },
+  {
+    "id": "38th Parallel/scr_ (15).png",
+    "path": "img/38th Parallel/scr_ (15).png",
+    "label": "scr_ (15).png"
+  },
+  {
+    "id": "38th Parallel/scr_ (16).png",
+    "path": "img/38th Parallel/scr_ (16).png",
+    "label": "scr_ (16).png"
+  },
+  {
+    "id": "38th Parallel/scr_ (17).png",
+    "path": "img/38th Parallel/scr_ (17).png",
+    "label": "scr_ (17).png"
+  },
+  {
+    "id": "38th Parallel/scr_ (2).png",
+    "path": "img/38th Parallel/scr_ (2).png",
+    "label": "scr_ (2).png"
+  },
+  {
+    "id": "38th Parallel/scr_ (3).png",
+    "path": "img/38th Parallel/scr_ (3).png",
+    "label": "scr_ (3).png"
+  },
+  {
+    "id": "38th Parallel/scr_ (4).png",
+    "path": "img/38th Parallel/scr_ (4).png",
+    "label": "scr_ (4).png"
+  },
+  {
+    "id": "38th Parallel/scr_ (5).png",
+    "path": "img/38th Parallel/scr_ (5).png",
+    "label": "scr_ (5).png"
+  },
+  {
+    "id": "38th Parallel/scr_ (6).png",
+    "path": "img/38th Parallel/scr_ (6).png",
+    "label": "scr_ (6).png"
+  },
+  {
+    "id": "38th Parallel/scr_ (7).png",
+    "path": "img/38th Parallel/scr_ (7).png",
+    "label": "scr_ (7).png"
+  },
+  {
+    "id": "38th Parallel/scr_ (8).png",
+    "path": "img/38th Parallel/scr_ (8).png",
+    "label": "scr_ (8).png"
+  },
+  {
+    "id": "38th Parallel/scr_ (9).png",
+    "path": "img/38th Parallel/scr_ (9).png",
+    "label": "scr_ (9).png"
+  },
+  {
+    "id": "Abandoned Factory/scr_ (1).png",
+    "path": "img/Abandoned Factory/scr_ (1).png",
+    "label": "scr_ (1).png"
+  },
+  {
+    "id": "Abandoned Factory/scr_ (10).png",
+    "path": "img/Abandoned Factory/scr_ (10).png",
+    "label": "scr_ (10).png"
+  },
+  {
+    "id": "Abandoned Factory/scr_ (11).png",
+    "path": "img/Abandoned Factory/scr_ (11).png",
+    "label": "scr_ (11).png"
+  },
+  {
+    "id": "Abandoned Factory/scr_ (12).png",
+    "path": "img/Abandoned Factory/scr_ (12).png",
+    "label": "scr_ (12).png"
+  },
+  {
+    "id": "Abandoned Factory/scr_ (13).png",
+    "path": "img/Abandoned Factory/scr_ (13).png",
+    "label": "scr_ (13).png"
+  },
+  {
+    "id": "Abandoned Factory/scr_ (14).png",
+    "path": "img/Abandoned Factory/scr_ (14).png",
+    "label": "scr_ (14).png"
+  },
+  {
+    "id": "Abandoned Factory/scr_ (15).png",
+    "path": "img/Abandoned Factory/scr_ (15).png",
+    "label": "scr_ (15).png"
+  },
+  {
+    "id": "Abandoned Factory/scr_ (16).png",
+    "path": "img/Abandoned Factory/scr_ (16).png",
+    "label": "scr_ (16).png"
+  },
+  {
+    "id": "Abandoned Factory/scr_ (17).png",
+    "path": "img/Abandoned Factory/scr_ (17).png",
+    "label": "scr_ (17).png"
+  },
+  {
+    "id": "Abandoned Factory/scr_ (18).png",
+    "path": "img/Abandoned Factory/scr_ (18).png",
+    "label": "scr_ (18).png"
+  },
+  {
+    "id": "Abandoned Factory/scr_ (19).png",
+    "path": "img/Abandoned Factory/scr_ (19).png",
+    "label": "scr_ (19).png"
+  },
+  {
+    "id": "Abandoned Factory/scr_ (2).png",
+    "path": "img/Abandoned Factory/scr_ (2).png",
+    "label": "scr_ (2).png"
+  },
+  {
+    "id": "Abandoned Factory/scr_ (20).png",
+    "path": "img/Abandoned Factory/scr_ (20).png",
+    "label": "scr_ (20).png"
+  },
+  {
+    "id": "Abandoned Factory/scr_ (21).png",
+    "path": "img/Abandoned Factory/scr_ (21).png",
+    "label": "scr_ (21).png"
+  },
+  {
+    "id": "Abandoned Factory/scr_ (22).png",
+    "path": "img/Abandoned Factory/scr_ (22).png",
+    "label": "scr_ (22).png"
+  },
+  {
+    "id": "Abandoned Factory/scr_ (23).png",
+    "path": "img/Abandoned Factory/scr_ (23).png",
+    "label": "scr_ (23).png"
+  },
+  {
+    "id": "Abandoned Factory/scr_ (24).png",
+    "path": "img/Abandoned Factory/scr_ (24).png",
+    "label": "scr_ (24).png"
+  },
+  {
+    "id": "Abandoned Factory/scr_ (25).png",
+    "path": "img/Abandoned Factory/scr_ (25).png",
+    "label": "scr_ (25).png"
+  },
+  {
+    "id": "Abandoned Factory/scr_ (26).png",
+    "path": "img/Abandoned Factory/scr_ (26).png",
+    "label": "scr_ (26).png"
+  },
+  {
+    "id": "Abandoned Factory/scr_ (27).png",
+    "path": "img/Abandoned Factory/scr_ (27).png",
+    "label": "scr_ (27).png"
+  },
+  {
+    "id": "Abandoned Factory/scr_ (3).png",
+    "path": "img/Abandoned Factory/scr_ (3).png",
+    "label": "scr_ (3).png"
+  },
+  {
+    "id": "Abandoned Factory/scr_ (4).png",
+    "path": "img/Abandoned Factory/scr_ (4).png",
+    "label": "scr_ (4).png"
+  },
+  {
+    "id": "Abandoned Factory/scr_ (5).png",
+    "path": "img/Abandoned Factory/scr_ (5).png",
+    "label": "scr_ (5).png"
+  },
+  {
+    "id": "Abandoned Factory/scr_ (6).png",
+    "path": "img/Abandoned Factory/scr_ (6).png",
+    "label": "scr_ (6).png"
+  },
+  {
+    "id": "Abandoned Factory/scr_ (7).png",
+    "path": "img/Abandoned Factory/scr_ (7).png",
+    "label": "scr_ (7).png"
+  },
+  {
+    "id": "Abandoned Factory/scr_ (8).png",
+    "path": "img/Abandoned Factory/scr_ (8).png",
+    "label": "scr_ (8).png"
+  },
+  {
+    "id": "Abandoned Factory/scr_ (9).png",
+    "path": "img/Abandoned Factory/scr_ (9).png",
+    "label": "scr_ (9).png"
+  },
+  {
+    "id": "Abandoned Town/scr_ (1).png",
+    "path": "img/Abandoned Town/scr_ (1).png",
+    "label": "scr_ (1).png"
+  },
+  {
+    "id": "Abandoned Town/scr_ (10).png",
+    "path": "img/Abandoned Town/scr_ (10).png",
+    "label": "scr_ (10).png"
+  },
+  {
+    "id": "Abandoned Town/scr_ (11).png",
+    "path": "img/Abandoned Town/scr_ (11).png",
+    "label": "scr_ (11).png"
+  },
+  {
+    "id": "Abandoned Town/scr_ (12).png",
+    "path": "img/Abandoned Town/scr_ (12).png",
+    "label": "scr_ (12).png"
+  },
+  {
+    "id": "Abandoned Town/scr_ (13).png",
+    "path": "img/Abandoned Town/scr_ (13).png",
+    "label": "scr_ (13).png"
+  },
+  {
+    "id": "Abandoned Town/scr_ (14).png",
+    "path": "img/Abandoned Town/scr_ (14).png",
+    "label": "scr_ (14).png"
+  },
+  {
+    "id": "Abandoned Town/scr_ (15).png",
+    "path": "img/Abandoned Town/scr_ (15).png",
+    "label": "scr_ (15).png"
+  },
+  {
+    "id": "Abandoned Town/scr_ (16).png",
+    "path": "img/Abandoned Town/scr_ (16).png",
+    "label": "scr_ (16).png"
+  },
+  {
+    "id": "Abandoned Town/scr_ (17).png",
+    "path": "img/Abandoned Town/scr_ (17).png",
+    "label": "scr_ (17).png"
+  },
+  {
+    "id": "Abandoned Town/scr_ (18).png",
+    "path": "img/Abandoned Town/scr_ (18).png",
+    "label": "scr_ (18).png"
+  },
+  {
+    "id": "Abandoned Town/scr_ (19).png",
+    "path": "img/Abandoned Town/scr_ (19).png",
+    "label": "scr_ (19).png"
+  },
+  {
+    "id": "Abandoned Town/scr_ (2).png",
+    "path": "img/Abandoned Town/scr_ (2).png",
+    "label": "scr_ (2).png"
+  },
+  {
+    "id": "Abandoned Town/scr_ (20).png",
+    "path": "img/Abandoned Town/scr_ (20).png",
+    "label": "scr_ (20).png"
+  },
+  {
+    "id": "Abandoned Town/scr_ (21).png",
+    "path": "img/Abandoned Town/scr_ (21).png",
+    "label": "scr_ (21).png"
+  },
+  {
+    "id": "Abandoned Town/scr_ (22).png",
+    "path": "img/Abandoned Town/scr_ (22).png",
+    "label": "scr_ (22).png"
+  },
+  {
+    "id": "Abandoned Town/scr_ (23).png",
+    "path": "img/Abandoned Town/scr_ (23).png",
+    "label": "scr_ (23).png"
+  },
+  {
+    "id": "Abandoned Town/scr_ (24).png",
+    "path": "img/Abandoned Town/scr_ (24).png",
+    "label": "scr_ (24).png"
+  },
+  {
+    "id": "Abandoned Town/scr_ (25).png",
+    "path": "img/Abandoned Town/scr_ (25).png",
+    "label": "scr_ (25).png"
+  },
+  {
+    "id": "Abandoned Town/scr_ (26).png",
+    "path": "img/Abandoned Town/scr_ (26).png",
+    "label": "scr_ (26).png"
+  },
+  {
+    "id": "Abandoned Town/scr_ (27).png",
+    "path": "img/Abandoned Town/scr_ (27).png",
+    "label": "scr_ (27).png"
+  },
+  {
+    "id": "Abandoned Town/scr_ (3).png",
+    "path": "img/Abandoned Town/scr_ (3).png",
+    "label": "scr_ (3).png"
+  },
+  {
+    "id": "Abandoned Town/scr_ (4).png",
+    "path": "img/Abandoned Town/scr_ (4).png",
+    "label": "scr_ (4).png"
+  },
+  {
+    "id": "Abandoned Town/scr_ (5).png",
+    "path": "img/Abandoned Town/scr_ (5).png",
+    "label": "scr_ (5).png"
+  },
+  {
+    "id": "Abandoned Town/scr_ (6).png",
+    "path": "img/Abandoned Town/scr_ (6).png",
+    "label": "scr_ (6).png"
+  },
+  {
+    "id": "Abandoned Town/scr_ (7).png",
+    "path": "img/Abandoned Town/scr_ (7).png",
+    "label": "scr_ (7).png"
+  },
+  {
+    "id": "Abandoned Town/scr_ (8).png",
+    "path": "img/Abandoned Town/scr_ (8).png",
+    "label": "scr_ (8).png"
+  },
+  {
+    "id": "Abandoned Town/scr_ (9).png",
+    "path": "img/Abandoned Town/scr_ (9).png",
+    "label": "scr_ (9).png"
+  },
+  {
     "id": "Arctic Pier/scr_ (1).png",
     "path": "img/Arctic Pier/scr_ (1).png",
     "label": "scr_ (1).png"
