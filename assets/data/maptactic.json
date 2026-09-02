@@ -63,12 +63,12 @@
     "Advance to the Rhine": "2026-09-02T10:33:47Z",
     "American Desert": "2026-09-01T15:14:29Z",
     "Aral Sea": "2026-09-01T16:42:20Z",
-    "Arctic Pier": "2026-09-02T07:51:20Z",
-    "Arctic Polar Base": "2026-09-02T10:31:54Z",
+    "Arctic Pier": "2026-09-02T11:04:04Z",
+    "Arctic Polar Base": "2026-09-02T11:23:50Z",
     "Ash River": "2026-09-01T16:50:15Z",
     "Attica": "2026-09-01T16:44:47Z",
     "Battle of Hürtgen Forest": "2026-09-01T16:59:04Z",
-    "Golden Quarry": "2026-09-02T10:46:07Z",
+    "Golden Quarry": "2026-09-02T10:47:21Z",
     "North Holland": "2026-09-02T03:25:27Z",
     "White Rock Fortress": "2026-09-02T04:58:42Z"
   },
@@ -3822,7 +3822,8 @@
         "id": "mtitox2k-5xutta",
         "type": "tankDestroyer",
         "x": 27.34,
-        "y": 42.83
+        "y": 42.83,
+        "commentImage": "Arctic Pier/scr_ (8).png"
       },
       {
         "id": "mtitp6on-iju773",
@@ -3835,7 +3836,8 @@
         "id": "mtitqg1r-0id9u6",
         "type": "mainBattleTank",
         "x": 23.56,
-        "y": 55.07
+        "y": 55.07,
+        "commentImage": "Arctic Pier/scr_ (9).png"
       },
       {
         "id": "mtitqhdx-hm9h8s",
@@ -3861,7 +3863,8 @@
         "id": "mtiu1yhn-jmoile",
         "type": "mainBattleTank",
         "x": 18.08,
-        "y": 66.84
+        "y": 66.84,
+        "commentImage": "Arctic Pier/scr_ (4).png"
       },
       {
         "id": "mtiu24r5-3y9y3p",
@@ -3874,7 +3877,8 @@
         "id": "mtiu6hcv-v33iim",
         "type": "mainBattleTank",
         "x": 13.54,
-        "y": 77.6
+        "y": 77.6,
+        "commentImage": "Arctic Pier/scr_ (6).png"
       },
       {
         "id": "mtiu6ib5-61j11p",
@@ -3940,7 +3944,8 @@
         "id": "mtjq4mnt-8cc0i7",
         "type": "tankDestroyer",
         "x": 18.75,
-        "y": 36.97
+        "y": 36.97,
+        "commentImage": "Arctic Pier/scr_ (10).png"
       },
       {
         "id": "mtjq4o7i-6gao4t",
@@ -3953,7 +3958,8 @@
         "id": "mtjq9f5g-dnwk7y",
         "type": "mainBattleTank",
         "x": 8.33,
-        "y": 51.95
+        "y": 51.95,
+        "commentImage": "Arctic Pier/scr_ (11).png"
       },
       {
         "id": "mtjq9hih-ejrzis",
@@ -3966,7 +3972,8 @@
         "id": "mtjqcvfo-xotokf",
         "type": "mainBattleTank",
         "x": 5.46,
-        "y": 73.82
+        "y": 73.82,
+        "commentImage": "Arctic Pier/scr_ (12).png"
       },
       {
         "id": "mtjqd431-r8bwqa",
@@ -3989,6 +3996,19 @@
         "x": 58.07,
         "y": 11.52,
         "parentTankId": "mtjygzia-vx0vls"
+      },
+      {
+        "id": "mtk0camg-qkj5cd",
+        "type": "tankDestroyer",
+        "x": 37.41,
+        "y": 13.64
+      },
+      {
+        "id": "mtk0d1er-8gpy09",
+        "type": "sniper",
+        "x": 37.41,
+        "y": 13.64,
+        "parentTankId": "mtk0camg-qkj5cd"
       }
     ],
     "Attica::domination-1|Blue": [
@@ -11430,13 +11450,15 @@
         "id": "mtitbo25-vyf7qp",
         "type": "mainBattleTankRed",
         "x": 64.72,
-        "y": 58.85
+        "y": 58.85,
+        "commentImage": "Arctic Pier/scr_ (2).png"
       },
       {
         "id": "mtitbvpk-fos63y",
         "type": "mainBattleTankRed",
         "x": 86.33,
-        "y": 24.99
+        "y": 24.99,
+        "commentImage": "Arctic Pier/scr_ (1).png"
       },
       {
         "id": "mtitc64l-otyvqe",
@@ -11456,19 +11478,22 @@
         "id": "mtitcwpt-od6i2f",
         "type": "mainBattleTankRed",
         "x": 85.94,
-        "y": 44.65
+        "y": 44.65,
+        "commentImage": "Arctic Pier/scr_ (20).png"
       },
       {
         "id": "mtitf5g4-660vxa",
         "type": "mainBattleTankRed",
         "x": 43.62,
-        "y": 47.16
+        "y": 47.16,
+        "commentImage": "Arctic Pier/scr_ (17).png"
       },
       {
         "id": "mtitfukn-in4hgu",
         "type": "tankDestroyerRed",
         "x": 62.32,
-        "y": 61.17
+        "y": 61.17,
+        "commentImage": "Arctic Pier/scr_ (3).png"
       },
       {
         "id": "mtitfwbt-f52409",
@@ -11481,7 +11506,8 @@
         "id": "mtitu7uj-q59p6g",
         "type": "tankDestroyerRed",
         "x": 4.96,
-        "y": 75.88
+        "y": 75.88,
+        "commentImage": "Arctic Pier/scr_ (12).png"
       },
       {
         "id": "mtituaet-vrgr68",
@@ -11494,7 +11520,8 @@
         "id": "mtiu8vo9-taa6p0",
         "type": "mainBattleTankRed",
         "x": 22.65,
-        "y": 53.25
+        "y": 53.25,
+        "commentImage": "Arctic Pier/scr_ (7).png"
       },
       {
         "id": "mtiu90vc-ic41fb",
@@ -11507,13 +11534,15 @@
         "id": "mtiu9438-nkyhb2",
         "type": "mainBattleTankRed",
         "x": 29.25,
-        "y": 62.5
+        "y": 62.5,
+        "commentImage": "Arctic Pier/scr_ (5).png"
       },
       {
         "id": "mtiu9g4o-4q00j6",
         "type": "mainBattleTankRed",
         "x": 7.68,
-        "y": 66.92
+        "y": 66.92,
+        "commentImage": "Arctic Pier/scr_ (14).png"
       },
       {
         "id": "mtiu9hcw-qh93c6",
@@ -11547,7 +11576,8 @@
         "id": "mtivj93l-yug7up",
         "type": "mainBattleTankRed",
         "x": 68.44,
-        "y": 48.84
+        "y": 48.84,
+        "commentImage": "Arctic Pier/scr_ (18).png"
       },
       {
         "id": "mtivjcvl-s7nuvw",
@@ -11566,7 +11596,8 @@
         "id": "mtjr7hs5-iru3p3",
         "type": "mainBattleTankRed",
         "x": 5.98,
-        "y": 39.18
+        "y": 39.18,
+        "commentImage": "Arctic Pier/scr_ (16).png"
       },
       {
         "id": "mtjr7j9p-dpv3a1",
@@ -11579,7 +11610,8 @@
         "id": "mtjr9tsx-t3983h",
         "type": "mainBattleTankRed",
         "x": 15.75,
-        "y": 33.97
+        "y": 33.97,
+        "commentImage": "Arctic Pier/scr_ (15).png"
       },
       {
         "id": "mtjr9vbl-tj8kdm",
@@ -14427,7 +14459,8 @@
         "id": "mtjkylk9-1tm265",
         "type": "mainBattleTank",
         "x": 74.74,
-        "y": 63.41
+        "y": 63.41,
+        "commentImage": "Golden Quarry/scr_10.png"
       },
       {
         "id": "mtjkyn66-iqoqhm",
@@ -14467,7 +14500,8 @@
         "id": "mtjnoyz5-4vd0j0",
         "type": "mainBattleTank",
         "x": 51.82,
-        "y": 37.36
+        "y": 37.36,
+        "commentImage": "Golden Quarry/scr_14.png"
       },
       {
         "id": "mtjnp00h-o08r6v",
@@ -15259,7 +15293,15 @@
         "y": 56.37,
         "parentTankId": "mtjnkkqe-ynptcc"
       }
-    ]
+    ],
+    "Red Desert::domination-1|Red": [],
+    "Poland::domination-1|Red": [],
+    "Kuban::domination-1|Red": [],
+    "Karelia::domination-1|Red": [],
+    "Frozen Pass::domination-1|Red": [],
+    "Flanders::domination-1|Red": [],
+    "Fields of Poland::domination-1|Red": [],
+    "Breslau::domination-1|Red": []
   },
   "annotations": {
     "Campania::domination-1|Red": [
@@ -23763,6 +23805,15 @@
         "startY": 11.52,
         "endX": 77.49,
         "endY": 34.39
+      },
+      {
+        "id": "mtk0d06p-7jzd2q",
+        "type": "aimHere",
+        "parentTankId": "mtk0camg-qkj5cd",
+        "startX": 37.41,
+        "startY": 13.64,
+        "endX": 72.7,
+        "endY": 48.93
       }
     ],
     "Attica::domination-1|Blue": [
@@ -46791,8 +46842,16 @@
           }
         ]
       }
-    ]
+    ],
+    "Red Desert::domination-1|Red": [],
+    "Poland::domination-1|Red": [],
+    "Kuban::domination-1|Red": [],
+    "Karelia::domination-1|Red": [],
+    "Frozen Pass::domination-1|Red": [],
+    "Flanders::domination-1|Red": [],
+    "Fields of Poland::domination-1|Red": [],
+    "Breslau::domination-1|Red": []
   },
-  "updatedAt": "2026-09-02T10:46:10.886Z",
-  "exportedAt": "2026-09-02T10:46:11.410Z"
+  "updatedAt": "2026-09-02T11:39:11.954Z",
+  "exportedAt": "2026-09-02T11:39:12.431Z"
 }
