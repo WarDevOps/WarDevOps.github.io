@@ -66,11 +66,12 @@ function tacticalSummary(value, context) {
   for (const language of ["en", "ko"]) {
     const sentences = value[language];
     if (sentences == null) continue;
-    if (!Array.isArray(sentences) || sentences.length < 2 || sentences.length > 4 || sentences.some(sentence => typeof sentence !== "string" || !sentence.trim())) {
+    if (!Array.isArray(sentences) || sentences.length < 2 || sentences.length > 4 || sentences.some(sentence => typeof sentence !== "string" || !sentence.trim() || sentence.trim().length > 240)) {
       throw new Error(`Tactical summary for ${context} (${language}) must contain 2 to 4 non-empty sentences`);
     }
     result[language] = sentences.map(sentence => sentence.trim());
   }
+  if (!Object.keys(result).length) return null;
   if (!result.en) throw new Error(`English tactical summary is required for ${context}`);
   return result;
 }
@@ -179,7 +180,7 @@ function compactVariation(variation, rootFolder) {
   return result;
 }
 
-async function discoverMap(folderName, metadata, mapUpdated, mapUpdatedAt) {
+async function discoverMap(folderName, metadata, mapUpdated, mapUpdatedAt, tacticalSummaries) {
   const mapMetadata = metadata.maps?.[folderName] || {};
   if (mapMetadata.disabled) return null;
   const name = mapMetadata.en || folderName;
@@ -189,7 +190,7 @@ async function discoverMap(folderName, metadata, mapUpdated, mapUpdatedAt) {
   const updatedAt = mapUpdatedAt?.[name];
   const defaultMode = String(mapMetadata.defaultMode || "domination").toLowerCase();
   const mapBr = battleRating(mapMetadata.br ?? metadata.defaultBr, folderName);
-  const mapTacticalSummary = tacticalSummary(mapMetadata.tacticalSummary, folderName);
+  const mapTacticalSummary = tacticalSummary(tacticalSummaries?.[name], name);
   const variationBrs = mapMetadata.variationBrs ?? {};
   if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(slug)) {
     throw new Error(`Invalid map slug for ${folderName}: ${slug}`);
@@ -277,11 +278,15 @@ async function buildCatalog() {
   if (mapLayout.mapUpdatedAt !== undefined && (!mapLayout.mapUpdatedAt || typeof mapLayout.mapUpdatedAt !== "object" || Array.isArray(mapLayout.mapUpdatedAt))) {
     throw new Error("Maptactic.json mapUpdatedAt must be an object");
   }
+  if (mapLayout.tacticalSummaries !== undefined && (!mapLayout.tacticalSummaries || typeof mapLayout.tacticalSummaries !== "object" || Array.isArray(mapLayout.tacticalSummaries))) {
+    throw new Error("Maptactic.json tacticalSummaries must be an object");
+  }
   const mapUpdatedAt = mapLayout.mapUpdatedAt || {};
+  const tacticalSummaries = mapLayout.tacticalSummaries || {};
   const entries = await directoryEntries(IMG_ROOT);
   const maps = [];
   for (const entry of entries.filter(item => item.isDirectory())) {
-    const map = await discoverMap(entry.name, metadata, mapLayout.mapUpdated, mapUpdatedAt);
+    const map = await discoverMap(entry.name, metadata, mapLayout.mapUpdated, mapUpdatedAt, tacticalSummaries);
     if (map) maps.push(map);
   }
 
@@ -295,12 +300,14 @@ async function buildCatalog() {
   const catalogMapNames = new Set(maps.map(map => map.name));
   const unusedMapUpdates = Object.keys(mapLayout.mapUpdated).filter(name => !catalogMapNames.has(name));
   const unusedMapUpdateTimestamps = Object.keys(mapUpdatedAt).filter(name => !catalogMapNames.has(name));
+  const unusedTacticalSummaries = Object.keys(tacticalSummaries).filter(name => !catalogMapNames.has(name));
   return {
     payload: { version: 1, maps },
     unknownTranslations,
     unusedMetadata,
     unusedMapUpdates,
-    unusedMapUpdateTimestamps
+    unusedMapUpdateTimestamps,
+    unusedTacticalSummaries
   };
 }
 
@@ -316,11 +323,10 @@ function mapPreviewUrl(map) {
   return `https://wardevops.github.io/img/${encodeUrlPath(folder)}/${encodeURIComponent(image)}`;
 }
 
-function renderTacticalSummary(map) {
+function renderTacticalSummaryCopy(map) {
   const sentences = map.tacticalSummary?.en || [];
-  const hidden = sentences.length ? "" : " hidden";
   const paragraphs = sentences.map(sentence => `\n                <p>${escapeHtml(sentence)}</p>`).join("");
-  return `<details class="map-tactical-summary" id="map-tactical-summary" aria-labelledby="map-tactical-summary-title"${hidden}>\n              <summary id="map-tactical-summary-title">\n                <span data-i18n="tacticalSummary">Tactical Summary</span>\n                <span class="map-tactical-summary-toggle" aria-hidden="true"></span>\n              </summary>\n              <blockquote id="map-tactical-summary-copy">${paragraphs}\n              </blockquote>\n            </details>`;
+  return `<blockquote id="map-tactical-summary-copy">${paragraphs}\n                </blockquote>`;
 }
 
 function renderMapRoutePage(rootPage, map) {
@@ -344,7 +350,7 @@ function renderMapRoutePage(rootPage, map) {
   page = replacePageValue(page, /<meta name="twitter:image" content="[^"]*">/, `<meta name="twitter:image" content="${preview}">`, "X image");
   page = replacePageValue(page, /<title>[^<]*<\/title>/, `<title>${title}</title>`, "document title");
   page = replacePageValue(page, /<h1 class="seo-title" id="page-title">[^<]*<\/h1>/, `<h1 class="seo-title" id="page-title">${heading}</h1>`, "page heading");
-  page = replacePageValue(page, /<details class="map-tactical-summary"[\s\S]*?<\/details>/, renderTacticalSummary(map), "tactical summary");
+  page = replacePageValue(page, /<blockquote id="map-tactical-summary-copy">[\s\S]*?<\/blockquote>/, renderTacticalSummaryCopy(map), "tactical summary copy");
   return page;
 }
 
@@ -381,7 +387,7 @@ async function writeSiteArtifacts(payload) {
 }
 
 async function generate() {
-  const { payload, unknownTranslations, unusedMetadata, unusedMapUpdates, unusedMapUpdateTimestamps } = await buildCatalog();
+  const { payload, unknownTranslations, unusedMetadata, unusedMapUpdates, unusedMapUpdateTimestamps, unusedTacticalSummaries } = await buildCatalog();
   const serialized = `${JSON.stringify(payload, null, 2)}\n`;
   let current = "";
   try {
@@ -418,6 +424,9 @@ async function generate() {
   }
   if (unusedMapUpdateTimestamps.length) {
     console.warn(`Maptactic.json timestamps without a usable map: ${unusedMapUpdateTimestamps.join(", ")}`);
+  }
+  if (unusedTacticalSummaries.length) {
+    console.warn(`Maptactic.json tactical summaries without a usable map: ${unusedTacticalSummaries.join(", ")}`);
   }
 }
 

@@ -1,13 +1,20 @@
-    import { MARKER_LAYOUT_VERSION, loadMarkerLayout, saveMarkerLayout as saveMarkerLayoutToStorage } from './marker-storage.js?v=recent-updates-20260901';
+    import { MARKER_LAYOUT_VERSION, loadMarkerLayout, saveMarkerLayout as saveMarkerLayoutToStorage } from './marker-storage.js?v=tactical-summary-editor-20260902';
 import { initDiscordMemberCount } from './discord-stats.js';
-    import { commentImages } from './comment-images.js?v=comment-images-fcc91837fb81';
-    import { defaultMarkerLayout, maps, translations } from './data.js?v=seo-headings-20260901';
+    import { commentImages } from './comment-images.js?v=comment-images-5995bacb5f5d';
+    import { defaultMarkerLayout, maps, translations } from './data.js?v=tactical-summary-editor-20260902';
 
 
     const DEFAULT_ANNOTATION_OPACITY = 50;
     const ANNOTATION_OPACITY_STORAGE_KEY = "maptactic-route-aim-opacity-v1";
     const state = { selected: null, team: "Red", query: "", language: "en", theme: "dark", editMode: false, focusedTankMarkerId: null, contextMarkerId: null, contextAnnotationId: null, commentMarkerId: null, drawing: null, annotationOpacity: loadAnnotationOpacity() };
     const $ = (selector) => document.querySelector(selector);
+    const markerCommentPopover = document.createElement("div");
+    markerCommentPopover.className = "map-marker-comment-popover";
+    markerCommentPopover.id = "map-marker-comment-popover";
+    markerCommentPopover.setAttribute("role", "tooltip");
+    markerCommentPopover.hidden = true;
+    document.body.append(markerCommentPopover);
+    let markerCommentPopoverAnchor = null;
     const mapList = $("#map-list");
     const pageTitleHeading = $("#page-title");
     const mapVariationSelect = $("#map-variation");
@@ -16,6 +23,13 @@ import { initDiscordMemberCount } from './discord-stats.js';
     const copyLinkLabel = copyLink.querySelector("[data-copy-link-label]");
     const mapTacticalSummary = $("#map-tactical-summary");
     const mapTacticalSummaryCopy = $("#map-tactical-summary-copy");
+    const mapTacticalSummaryView = $("#map-tactical-summary-view");
+    const editMapTacticalSummary = $("#edit-map-tactical-summary");
+    const mapTacticalSummaryEditor = $("#map-tactical-summary-editor");
+    const mapTacticalSummaryEnglish = $("#map-tactical-summary-en");
+    const mapTacticalSummaryKorean = $("#map-tactical-summary-ko");
+    const mapTacticalSummaryEditorStatus = $("#map-tactical-summary-editor-status");
+    const cancelMapTacticalSummary = $("#cancel-map-tactical-summary");
     const search = $("#map-search");
     const clearSearch = $("#clear-search");
     const mapImage = $("#map-image");
@@ -74,6 +88,7 @@ import { initDiscordMemberCount } from './discord-stats.js';
     const MAX_IMPORTED_ANNOTATIONS = 5000;
     const MAX_IMPORTED_ROUTE_POINTS = 25000;
     const MAX_MARKER_COMMENT_BYTES = 120;
+    const MAX_TACTICAL_SUMMARY_SENTENCE_LENGTH = 240;
     const MAP_UPDATED_AT_PATTERN = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d{1,3})?Z$/;
     const COMMENT_TEXT_ENCODER = new TextEncoder();
     const COMMENT_IMAGES_BY_ID = new Map();
@@ -186,6 +201,12 @@ import { initDiscordMemberCount } from './discord-stats.js';
     });
     const validMapNames = new Set(maps.map(map => map.name));
     const markerLayout = loadMarkerLayout(MARKER_STORAGE_KEY);
+    const defaultTacticalSummaries = defaultMarkerLayout?.tacticalSummaries;
+    if (!markerLayout.tacticalSummaries || typeof markerLayout.tacticalSummaries !== "object" || Array.isArray(markerLayout.tacticalSummaries)) {
+      markerLayout.tacticalSummaries = defaultTacticalSummaries && typeof defaultTacticalSummaries === "object" && !Array.isArray(defaultTacticalSummaries)
+        ? structuredClone(defaultTacticalSummaries)
+        : {};
+    }
     const LEGACY_MAP_NAMES = new Map([
       ["38 Parallel", "38th Parallel"],
       ["Aredennes", "Ardennes"],
@@ -303,11 +324,62 @@ import { initDiscordMemberCount } from './discord-stats.js';
       const min = Number(map.br.min).toFixed(1);
       return map.br.max == null ? `BR ${min}+` : `BR ${min} ~ ${Number(map.br.max).toFixed(1)}`;
     }
+    function currentMapTacticalSummary(map) {
+      if (!map) return null;
+      if (Object.hasOwn(markerLayout.tacticalSummaries, map.name)) return markerLayout.tacticalSummaries[map.name];
+      return map.tacticalSummary;
+    }
     function mapTacticalSummarySentences(map, language = state.language) {
-      const summaries = map?.tacticalSummary;
+      const summaries = currentMapTacticalSummary(map);
       if (!summaries || typeof summaries !== "object") return [];
       const sentences = summaries[language] || summaries.en;
       return Array.isArray(sentences) ? sentences : [];
+    }
+    function tacticalSummaryInputSentences(input) {
+      return input.value.split(/\r?\n/).map(sentence => sentence.trim()).filter(Boolean);
+    }
+    function tacticalSummaryFromEditor() {
+      const en = tacticalSummaryInputSentences(mapTacticalSummaryEnglish);
+      const ko = tacticalSummaryInputSentences(mapTacticalSummaryKorean);
+      if (!en.length && !ko.length) return {};
+      const validSentences = sentences => sentences.length >= 2 && sentences.length <= 4 && sentences.every(sentence => sentence.length <= MAX_TACTICAL_SUMMARY_SENTENCE_LENGTH);
+      if (!validSentences(en) || (ko.length && !validSentences(ko))) throw new Error("Invalid tactical summary");
+      return { en, ...(ko.length ? { ko } : {}) };
+    }
+    function closeTacticalSummaryEditor() {
+      mapTacticalSummaryEditor.hidden = true;
+      mapTacticalSummaryView.hidden = false;
+      mapTacticalSummaryEditorStatus.textContent = "";
+    }
+    function openTacticalSummaryEditor() {
+      if (!state.selected || !state.editMode) return;
+      const summary = currentMapTacticalSummary(state.selected) || {};
+      mapTacticalSummaryEnglish.value = Array.isArray(summary.en) ? summary.en.join("\n") : "";
+      mapTacticalSummaryKorean.value = Array.isArray(summary.ko) ? summary.ko.join("\n") : "";
+      mapTacticalSummaryEditorStatus.textContent = "";
+      mapTacticalSummaryView.hidden = true;
+      mapTacticalSummaryEditor.hidden = false;
+      mapTacticalSummary.open = true;
+      mapTacticalSummaryEnglish.focus();
+    }
+    function saveTacticalSummary() {
+      if (!state.selected || !state.editMode) return;
+      let summary;
+      try {
+        summary = tacticalSummaryFromEditor();
+      } catch (error) {
+        mapTacticalSummaryEditorStatus.textContent = t("tacticalSummaryInvalid");
+        mapTacticalSummaryEnglish.focus();
+        return;
+      }
+      markerLayout.tacticalSummaries[state.selected.name] = summary;
+      if (!persistMarkerLayout("tacticalSummarySaved", { touchMap: true })) {
+        mapTacticalSummaryEditorStatus.textContent = t("storageError");
+        return;
+      }
+      closeTacticalSummaryEditor();
+      updateSelectedMapDetails();
+      mapTacticalSummary.open = true;
     }
     function mapDocumentDescription(map) {
       const summary = mapTacticalSummarySentences(map).join(" ");
@@ -385,14 +457,26 @@ import { initDiscordMemberCount } from './discord-stats.js';
       if (!state.selected) return;
       $("#selected-map-name").textContent = mapLabel(state.selected);
       const summarySentences = mapTacticalSummarySentences(state.selected);
-      if (mapTacticalSummary.dataset.mapName !== state.selected.name) mapTacticalSummary.open = false;
+      const selectedMapChanged = mapTacticalSummary.dataset.mapName !== state.selected.name;
+      if (selectedMapChanged) {
+        mapTacticalSummary.open = false;
+        closeTacticalSummaryEditor();
+      }
       mapTacticalSummary.dataset.mapName = state.selected.name;
-      mapTacticalSummary.hidden = summarySentences.length === 0;
-      mapTacticalSummaryCopy.replaceChildren(...summarySentences.map(sentence => {
+      mapTacticalSummary.hidden = summarySentences.length === 0 && !state.editMode;
+      editMapTacticalSummary.hidden = !state.editMode;
+      const summaryParagraphs = summarySentences.map(sentence => {
         const paragraph = document.createElement("p");
         paragraph.textContent = sentence;
         return paragraph;
-      }));
+      });
+      if (!summaryParagraphs.length) {
+        const emptySummary = document.createElement("p");
+        emptySummary.className = "map-tactical-summary-empty";
+        emptySummary.textContent = t("tacticalSummaryEmpty");
+        summaryParagraphs.push(emptySummary);
+      }
+      mapTacticalSummaryCopy.replaceChildren(...summaryParagraphs);
       mapBattleRating.textContent = mapBattleRatingLabel(state.selected);
       mapImage.alt = `${mapLabel(state.selected)} ${mapVariationLabel(state.selected)} ${state.team}`;
       const mapUpdated = state.selected.updated;
@@ -542,6 +626,93 @@ import { initDiscordMemberCount } from './discord-stats.js';
     }
     function markerHasComment(marker) {
       return Boolean(markerComment(marker) || markerCommentImage(marker));
+    }
+    function hideMarkerCommentPopover(anchor = null) {
+      if (anchor && markerCommentPopoverAnchor !== anchor) return;
+      markerCommentPopover.hidden = true;
+      markerCommentPopover.style.removeProperty("left");
+      markerCommentPopover.style.removeProperty("top");
+      markerCommentPopover.style.removeProperty("max-width");
+      markerCommentPopover.style.removeProperty("max-height");
+      markerCommentPopover.style.removeProperty("visibility");
+      markerCommentPopover.replaceChildren();
+      markerCommentPopover.classList.remove("has-image");
+      markerCommentPopoverAnchor = null;
+    }
+    function positionMarkerCommentPopover(anchor) {
+      if (markerCommentPopover.hidden || markerCommentPopoverAnchor !== anchor || !anchor.isConnected) return;
+      const gap = 10;
+      const viewportMargin = 8;
+      const visualViewport = window.visualViewport;
+      const viewportLeft = visualViewport?.offsetLeft || 0;
+      const viewportTop = visualViewport?.offsetTop || 0;
+      const viewportWidth = visualViewport?.width || window.innerWidth;
+      const viewportHeight = visualViewport?.height || window.innerHeight;
+      const viewportRight = viewportLeft + viewportWidth;
+      const viewportBottom = viewportTop + viewportHeight;
+      markerCommentPopover.style.maxWidth = `${Math.max(0, Math.min(420, viewportWidth - viewportMargin * 2))}px`;
+      markerCommentPopover.style.maxHeight = `${Math.max(0, viewportHeight - viewportMargin * 2)}px`;
+      const commentImage = markerCommentPopover.querySelector(".map-marker-comment-image");
+      if (commentImage?.complete) {
+        commentImage.style.removeProperty("max-height");
+        const imageHeight = commentImage.getBoundingClientRect().height;
+        const nonImageHeight = Math.max(0, markerCommentPopover.scrollHeight - imageHeight);
+        const availableImageHeight = Math.max(48, viewportHeight - viewportMargin * 2 - nonImageHeight);
+        commentImage.style.maxHeight = `${Math.min(420, availableImageHeight)}px`;
+      }
+      const anchorRect = anchor.getBoundingClientRect();
+      const popoverRect = markerCommentPopover.getBoundingClientRect();
+      const availableAbove = anchorRect.top - gap - viewportTop - viewportMargin;
+      const availableBelow = viewportBottom - viewportMargin - anchorRect.bottom - gap;
+      const placeAbove = availableAbove >= popoverRect.height || availableAbove >= availableBelow;
+      const preferredTop = placeAbove ? anchorRect.top - popoverRect.height - gap : anchorRect.bottom + gap;
+      const left = Math.min(
+        Math.max(viewportLeft + viewportMargin, anchorRect.left + (anchorRect.width - popoverRect.width) / 2),
+        Math.max(viewportLeft + viewportMargin, viewportRight - popoverRect.width - viewportMargin)
+      );
+      const top = Math.min(
+        Math.max(viewportTop + viewportMargin, preferredTop),
+        Math.max(viewportTop + viewportMargin, viewportBottom - popoverRect.height - viewportMargin)
+      );
+      markerCommentPopover.style.left = `${left}px`;
+      markerCommentPopover.style.top = `${top}px`;
+      markerCommentPopover.style.visibility = "visible";
+    }
+    function showMarkerCommentPopover(anchor, marker) {
+      const comment = markerComment(marker);
+      const commentImage = markerCommentImage(marker);
+      if (!comment && !commentImage) {
+        hideMarkerCommentPopover();
+        return;
+      }
+      const popoverHost = dialog.open ? dialog : document.body;
+      if (markerCommentPopover.parentElement !== popoverHost) popoverHost.append(markerCommentPopover);
+      const content = document.createDocumentFragment();
+      markerCommentPopoverAnchor = anchor;
+      markerCommentPopover.classList.toggle("has-image", Boolean(commentImage));
+      if (commentImage) {
+        const image = document.createElement("img");
+        image.className = "map-marker-comment-image";
+        image.src = commentImage.path;
+        image.alt = commentImage.label;
+        image.addEventListener("load", () => positionMarkerCommentPopover(anchor), { once: true });
+        content.append(image);
+      }
+      if (comment) {
+        const text = document.createElement("span");
+        text.className = "map-marker-comment-text";
+        text.textContent = comment;
+        content.append(text);
+      }
+      markerCommentPopover.replaceChildren(content);
+      markerCommentPopover.style.visibility = "hidden";
+      markerCommentPopover.hidden = false;
+      positionMarkerCommentPopover(anchor);
+    }
+    function currentCommentImages() {
+      if (!state.selected) return COMMENT_IMAGES;
+      const mapDirectory = `${findBaseMap(state.selected).folder}/`;
+      return COMMENT_IMAGES.filter(image => image.id.startsWith(mapDirectory));
     }
     function linkedTankMarker(marker) {
       if (isTankMarker(marker)) return marker;
@@ -732,7 +903,8 @@ import { initDiscordMemberCount } from './discord-stats.js';
     }
     function renderCommentImageOptions(contextMenu, selectedImageId = "") {
       const picker = contextMenu.querySelector("[data-marker-comment-image-picker]");
-      const resolvedImageId = COMMENT_IMAGES_BY_ID.has(selectedImageId) ? selectedImageId : "";
+      const availableImages = currentCommentImages();
+      const resolvedImageId = availableImages.some(image => image.id === selectedImageId) ? selectedImageId : "";
       const options = document.createDocumentFragment();
       const noImageOption = document.createElement("button");
       noImageOption.type = "button";
@@ -743,7 +915,7 @@ import { initDiscordMemberCount } from './discord-stats.js';
       noImageOption.classList.toggle("selected", !resolvedImageId);
       noImageOption.textContent = t("noCommentImage");
       options.append(noImageOption);
-      COMMENT_IMAGES.forEach(image => {
+      availableImages.forEach(image => {
         const option = document.createElement("button");
         const thumbnail = document.createElement("img");
         const label = document.createElement("span");
@@ -767,12 +939,46 @@ import { initDiscordMemberCount } from './discord-stats.js';
     }
     function selectCommentImage(contextMenu, imageId) {
       const picker = contextMenu.querySelector("[data-marker-comment-image-picker]");
-      const resolvedImageId = COMMENT_IMAGES_BY_ID.has(imageId) ? imageId : "";
+      const resolvedImageId = currentCommentImages().some(image => image.id === imageId) ? imageId : "";
       picker.dataset.selectedImageId = resolvedImageId;
       contextMenu.querySelectorAll("[data-marker-comment-image-option]").forEach(option => {
         const isSelected = option.dataset.markerCommentImageOption === resolvedImageId;
         option.classList.toggle("selected", isSelected);
         option.setAttribute("aria-checked", String(isSelected));
+      });
+    }
+    function fitMarkerContextMenu(contextMenu) {
+      const stage = contextMenu === modalMarkerContextMenu ? modalMapStage : mapStage;
+      const stageRect = stage.getBoundingClientRect();
+      const visualViewport = window.visualViewport;
+      const viewportLeft = visualViewport?.offsetLeft || 0;
+      const viewportTop = visualViewport?.offsetTop || 0;
+      const viewportRight = viewportLeft + (visualViewport?.width || window.innerWidth);
+      const viewportBottom = viewportTop + (visualViewport?.height || window.innerHeight);
+      const visibleLeft = Math.max(stageRect.left + 6, viewportLeft + 8);
+      const visibleRight = Math.min(stageRect.right - 6, viewportRight - 8);
+      const visibleTop = Math.max(stageRect.top + 6, viewportTop + 8);
+      const visibleBottom = Math.min(stageRect.bottom - 6, viewportBottom - 8);
+      const availableWidth = Math.max(0, visibleRight - visibleLeft);
+      const availableHeight = Math.max(0, visibleBottom - visibleTop);
+      contextMenu.style.minWidth = `${Math.min(172, availableWidth)}px`;
+      contextMenu.style.maxWidth = `${availableWidth}px`;
+      contextMenu.style.maxHeight = `${availableHeight}px`;
+      const menuRect = contextMenu.getBoundingClientRect();
+      const fittedLeft = Math.min(
+        Math.max(menuRect.left, visibleLeft),
+        Math.max(visibleLeft, visibleRight - menuRect.width)
+      );
+      const fittedTop = Math.min(
+        Math.max(menuRect.top, visibleTop),
+        Math.max(visibleTop, visibleBottom - menuRect.height)
+      );
+      contextMenu.style.left = `${fittedLeft - stageRect.left}px`;
+      contextMenu.style.top = `${fittedTop - stageRect.top}px`;
+    }
+    function fitVisibleMarkerContextMenus() {
+      [markerContextMenu, modalMarkerContextMenu].forEach(contextMenu => {
+        if (!contextMenu.hidden) fitMarkerContextMenu(contextMenu);
       });
     }
     function updateCommentByteCounter(input) {
@@ -792,7 +998,8 @@ import { initDiscordMemberCount } from './discord-stats.js';
       input.value = markerComment(marker);
       renderCommentImageOptions(contextMenu, marker.commentImage);
       updateCommentByteCounter(input);
-      input.focus();
+      input.focus({ preventScroll: true });
+      fitMarkerContextMenu(contextMenu);
     }
     function saveMarkerComment(marker, comment, imageId) {
       if (!isTankMarker(marker)) return;
@@ -924,6 +1131,7 @@ import { initDiscordMemberCount } from './discord-stats.js';
       const top = Math.min(Math.max(6, event.clientY - stageRect.top), stageRect.height - contextMenu.offsetHeight - 6);
       contextMenu.style.left = `${left}px`;
       contextMenu.style.top = `${top}px`;
+      fitMarkerContextMenu(contextMenu);
     }
     function showAnnotationContextMenu(event, annotationButton, contextMenu = annotationContextMenu, stage = mapStage) {
       const stageRect = stage.getBoundingClientRect();
@@ -1173,33 +1381,19 @@ import { initDiscordMemberCount } from './discord-stats.js';
         icon.style.width = `${markerSize}px`;
         icon.style.height = `${markerSize}px`;
         button.append(icon);
-        const comment = markerComment(marker);
-        const commentImage = markerCommentImage(marker);
         if (markerHasComment(marker) && !state.editMode) {
-          const tooltip = document.createElement("span");
-          tooltip.className = "map-marker-comment";
-          if (commentImage) {
-            const image = document.createElement("img");
-            image.className = "map-marker-comment-image";
-            image.src = commentImage.path;
-            image.alt = commentImage.label;
-            tooltip.append(image);
-          }
-          if (comment) {
-            const text = document.createElement("span");
-            text.className = "map-marker-comment-text";
-            text.textContent = comment;
-            tooltip.append(text);
-          }
           button.classList.add("has-comment");
-          button.dataset.commentPlacement = y > 50 ? "above" : "below";
-          button.dataset.commentAlign = x < 25 ? "start" : x > 75 ? "end" : "center";
-          button.append(tooltip);
+          button.setAttribute("aria-describedby", markerCommentPopover.id);
+          button.addEventListener("mouseenter", () => showMarkerCommentPopover(button, marker));
+          button.addEventListener("mouseleave", () => hideMarkerCommentPopover(button));
+          button.addEventListener("focus", () => showMarkerCommentPopover(button, marker));
+          button.addEventListener("blur", () => hideMarkerCommentPopover(button));
         }
         layer.append(button);
       });
     }
     function renderMarkers() {
+      hideMarkerCommentPopover();
       const focusedTankMarker = currentMarkers().find(marker => marker.id === state.focusedTankMarkerId);
       if (state.focusedTankMarkerId && (!isTankMarker(focusedTankMarker) || isMarkerHidden(focusedTankMarker))) state.focusedTankMarkerId = null;
       syncMarkerLayer(mapOverlayLayer, mapImage, mapStage);
@@ -1240,11 +1434,15 @@ import { initDiscordMemberCount } from './discord-stats.js';
       });
     }
     function setEditorMode(enabled) {
-      if (!enabled) cancelDrawing();
+      if (!enabled) {
+        cancelDrawing();
+        closeTacticalSummaryEditor();
+      }
       state.editMode = enabled;
       state.focusedTankMarkerId = null;
       hideMarkerContextMenu();
       updateMarkerEditor();
+      updateSelectedMapDetails();
       renderMarkers();
       setMarkerStatus();
     }
@@ -1253,6 +1451,7 @@ import { initDiscordMemberCount } from './discord-stats.js';
         version: markerLayout.version,
         mapUpdated: markerLayout.mapUpdated || {},
         mapUpdatedAt: markerLayout.mapUpdatedAt || {},
+        tacticalSummaries: markerLayout.tacticalSummaries || {},
         markers: markerLayout.markers,
         annotations: markerLayout.annotations,
         ...(markerLayout.updatedAt ? { updatedAt: markerLayout.updatedAt } : {}),
@@ -1285,13 +1484,14 @@ import { initDiscordMemberCount } from './discord-stats.js';
       setMarkerStatus("exportedJson");
     }
     function validateImportedMarkerLayout(data) {
-      if (!data || typeof data !== "object" || Array.isArray(data) || data.version !== MARKER_LAYOUT_VERSION || !data.markers || typeof data.markers !== "object" || Array.isArray(data.markers) || (data.mapUpdated !== undefined && (!data.mapUpdated || typeof data.mapUpdated !== "object" || Array.isArray(data.mapUpdated))) || (data.mapUpdatedAt !== undefined && (!data.mapUpdatedAt || typeof data.mapUpdatedAt !== "object" || Array.isArray(data.mapUpdatedAt))) || (data.annotations !== undefined && (!data.annotations || typeof data.annotations !== "object" || Array.isArray(data.annotations)))) {
+      if (!data || typeof data !== "object" || Array.isArray(data) || data.version !== MARKER_LAYOUT_VERSION || !data.markers || typeof data.markers !== "object" || Array.isArray(data.markers) || (data.mapUpdated !== undefined && (!data.mapUpdated || typeof data.mapUpdated !== "object" || Array.isArray(data.mapUpdated))) || (data.mapUpdatedAt !== undefined && (!data.mapUpdatedAt || typeof data.mapUpdatedAt !== "object" || Array.isArray(data.mapUpdatedAt))) || (data.tacticalSummaries !== undefined && (!data.tacticalSummaries || typeof data.tacticalSummaries !== "object" || Array.isArray(data.tacticalSummaries))) || (data.annotations !== undefined && (!data.annotations || typeof data.annotations !== "object" || Array.isArray(data.annotations)))) {
         throw new Error("Invalid marker layout.");
       }
       const layout = {
         version: MARKER_LAYOUT_VERSION,
         mapUpdated: Object.fromEntries(maps.map(map => [map.name, map.updated])),
         mapUpdatedAt: {},
+        tacticalSummaries: {},
         markers: {},
         annotations: {}
       };
@@ -1302,6 +1502,18 @@ import { initDiscordMemberCount } from './discord-stats.js';
       Object.entries(data.mapUpdatedAt || {}).forEach(([mapName, updatedAt]) => {
         if (!validMapNames.has(mapName) || !validMapUpdatedAt(updatedAt)) throw new Error("Invalid map update timestamp.");
         layout.mapUpdatedAt[mapName] = updatedAt;
+      });
+      Object.entries(data.tacticalSummaries || {}).forEach(([mapName, summary]) => {
+        if (!validMapNames.has(mapName) || !summary || typeof summary !== "object" || Array.isArray(summary)) throw new Error("Invalid tactical summary.");
+        const normalized = {};
+        for (const language of ["en", "ko"]) {
+          const sentences = summary[language];
+          if (sentences === undefined) continue;
+          if (!Array.isArray(sentences) || sentences.length < 2 || sentences.length > 4 || sentences.some(sentence => typeof sentence !== "string" || !sentence.trim() || sentence.trim().length > MAX_TACTICAL_SUMMARY_SENTENCE_LENGTH)) throw new Error("Invalid tactical summary.");
+          normalized[language] = sentences.map(sentence => sentence.trim());
+        }
+        if (Object.keys(normalized).length && !normalized.en) throw new Error("Invalid tactical summary.");
+        layout.tacticalSummaries[mapName] = normalized;
       });
       let markerCount = 0;
       Object.entries(data.markers).forEach(([key, markers]) => {
@@ -1369,6 +1581,7 @@ import { initDiscordMemberCount } from './discord-stats.js';
       markerLayout.version = importedLayout.version;
       markerLayout.mapUpdated = importedLayout.mapUpdated;
       markerLayout.mapUpdatedAt = importedLayout.mapUpdatedAt;
+      markerLayout.tacticalSummaries = importedLayout.tacticalSummaries;
       markerLayout.markers = importedLayout.markers;
       markerLayout.annotations = importedLayout.annotations;
       delete markerLayout.updatedAt;
@@ -1689,10 +1902,10 @@ import { initDiscordMemberCount } from './discord-stats.js';
     }
     function bindAnnotationLayer(layer, stage, contextMenu) {
       layer.addEventListener("contextmenu", event => {
+        if (!state.editMode) return;
         const annotationButton = event.target.closest(".map-annotation:not(.is-preview)");
         if (!annotationButton) return;
         event.preventDefault();
-        if (!state.editMode) return;
         showAnnotationContextMenu(event, annotationButton, contextMenu, stage);
       });
     }
@@ -1747,6 +1960,12 @@ import { initDiscordMemberCount } from './discord-stats.js';
     themeToggle.addEventListener("click", () => setTheme(state.theme === "dark" ? "light" : "dark"));
     toggleEditor.addEventListener("click", () => setEditorMode(!state.editMode));
     modalToggleEditor.addEventListener("click", () => setEditorMode(!state.editMode));
+    editMapTacticalSummary.addEventListener("click", openTacticalSummaryEditor);
+    cancelMapTacticalSummary.addEventListener("click", closeTacticalSummaryEditor);
+    mapTacticalSummaryEditor.addEventListener("submit", event => {
+      event.preventDefault();
+      saveTacticalSummary();
+    });
     saveMarkerLayout.addEventListener("click", () => persistMarkerLayout());
     modalSaveMarkerLayout.addEventListener("click", () => persistMarkerLayout());
     exportMarkerLayout.addEventListener("click", exportMarkerLayoutData);
@@ -1789,6 +2008,10 @@ import { initDiscordMemberCount } from './discord-stats.js';
         hideAnnotationContextMenu();
       }
     });
+    document.addEventListener("scroll", () => {
+      if (markerCommentPopoverAnchor) positionMarkerCommentPopover(markerCommentPopoverAnchor);
+      fitVisibleMarkerContextMenus();
+    }, true);
     mapImage.addEventListener("load", () => {
       mapImage.hidden = false;
       mapStage.classList.add("loaded");
@@ -1810,7 +2033,18 @@ import { initDiscordMemberCount } from './discord-stats.js';
       modalAnnotationLayer.replaceChildren();
       modalMarkerLayer.replaceChildren();
     });
-    window.addEventListener("resize", renderMarkers);
+    window.addEventListener("resize", () => {
+      renderMarkers();
+      fitVisibleMarkerContextMenus();
+    });
+    window.visualViewport?.addEventListener("resize", () => {
+      fitVisibleMarkerContextMenus();
+      if (markerCommentPopoverAnchor) positionMarkerCommentPopover(markerCommentPopoverAnchor);
+    });
+    window.visualViewport?.addEventListener("scroll", () => {
+      fitVisibleMarkerContextMenus();
+      if (markerCommentPopoverAnchor) positionMarkerCommentPopover(markerCommentPopoverAnchor);
+    });
     window.addEventListener("popstate", restoreFromUrl);
     mapImage.addEventListener("click", () => {
       if (!state.selected || mapImage.hidden) return;

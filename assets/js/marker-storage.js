@@ -1,7 +1,7 @@
 export const MARKER_LAYOUT_VERSION = 2;
 
 export function createEmptyMarkerLayout() {
-  return { version: MARKER_LAYOUT_VERSION, mapUpdated: {}, mapUpdatedAt: {}, markers: {}, annotations: {} };
+  return { version: MARKER_LAYOUT_VERSION, mapUpdated: {}, mapUpdatedAt: {}, tacticalSummaries: {}, markers: {}, annotations: {} };
 }
 
 export function loadMarkerLayout(storageKey) {
@@ -10,6 +10,7 @@ export function loadMarkerLayout(storageKey) {
     if (saved?.version === MARKER_LAYOUT_VERSION && saved.markers && typeof saved.markers === "object") {
       if (!saved.mapUpdated || typeof saved.mapUpdated !== "object" || Array.isArray(saved.mapUpdated)) saved.mapUpdated = {};
       if (!saved.mapUpdatedAt || typeof saved.mapUpdatedAt !== "object" || Array.isArray(saved.mapUpdatedAt)) saved.mapUpdatedAt = {};
+      if (saved.tacticalSummaries !== undefined && (!saved.tacticalSummaries || typeof saved.tacticalSummaries !== "object" || Array.isArray(saved.tacticalSummaries))) delete saved.tacticalSummaries;
       if (!saved.annotations || typeof saved.annotations !== "object" || Array.isArray(saved.annotations)) saved.annotations = {};
       return saved;
     }
