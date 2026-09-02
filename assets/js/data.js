@@ -27,6 +27,13 @@ const defaultMapUpdatedAt = defaultMarkerLayout?.version === 2
     ? defaultMarkerLayout.mapUpdatedAt
     : {};
 
+const defaultTacticalSummaries = defaultMarkerLayout?.version === 2
+  && defaultMarkerLayout.tacticalSummaries
+  && typeof defaultMarkerLayout.tacticalSummaries === "object"
+  && !Array.isArray(defaultMarkerLayout.tacticalSummaries)
+    ? defaultMarkerLayout.tacticalSummaries
+    : {};
+
 const MAP_UPDATED_AT_PATTERN = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d{1,3})?Z$/;
 
 function validMapUpdatedAt(value) {
@@ -37,6 +44,7 @@ function createMap({ name, aliases, slug, updated, updatedAt, br, tacticalSummar
   const configuredVariations = variations?.length ? variations : [{ mode: "domination", number: 1 }];
   const sourceUpdated = defaultMapUpdated[name];
   const sourceUpdatedAt = defaultMapUpdatedAt[name];
+  const sourceTacticalSummary = Object.hasOwn(defaultTacticalSummaries, name) ? defaultTacticalSummaries[name] : tacticalSummary;
   const resolvedUpdatedAt = validMapUpdatedAt(sourceUpdatedAt) ? sourceUpdatedAt : validMapUpdatedAt(updatedAt) ? updatedAt : null;
   return {
     name,
@@ -45,7 +53,7 @@ function createMap({ name, aliases, slug, updated, updatedAt, br, tacticalSummar
     updated: typeof sourceUpdated === "string" && /^\d{4}-\d{2}-\d{2}$/.test(sourceUpdated) ? sourceUpdated : updated,
     ...(resolvedUpdatedAt ? { updatedAt: resolvedUpdatedAt } : {}),
     br,
-    tacticalSummary,
+    tacticalSummary: sourceTacticalSummary,
     folder,
     variations: configuredVariations.map(variation => {
       const id = variation.id || `${variation.mode}-${variation.number}`;
@@ -86,6 +94,16 @@ export const translations = {
         selectMap: "Select a Map",
         selectMapPrompt: "Choose a map to view its tactical layout.",
         tacticalSummary: "Tactical Summary",
+        editTacticalSummary: "Edit tactical summary",
+        tacticalSummaryEnglish: "English summary",
+        tacticalSummaryKorean: "Korean summary",
+        tacticalSummaryEnglishPlaceholder: "Enter one sentence per line",
+        tacticalSummaryKoreanPlaceholder: "문장마다 줄을 바꿔 입력하세요",
+        tacticalSummaryEditorHelp: "Enter 2–4 sentences, one per line. Korean is optional.",
+        tacticalSummaryEmpty: "No tactical summary has been added yet.",
+        saveTacticalSummary: "Save Summary",
+        tacticalSummarySaved: "Tactical summary saved in this browser.",
+        tacticalSummaryInvalid: "Enter 2–4 English sentences, one per line. Korean must also contain 2–4 lines when provided.",
         mapVariation: "Map Variation",
         copyLink: "COPY LINK",
         copyLinkAria: "Copy a link to the current map, team, and mode",
@@ -214,6 +232,16 @@ export const translations = {
         selectMap: "맵 선택",
         selectMapPrompt: "전술 지도를 보려면 맵을 선택하세요.",
         tacticalSummary: "전술 요약",
+        editTacticalSummary: "전술 요약 수정",
+        tacticalSummaryEnglish: "영문 요약",
+        tacticalSummaryKorean: "국문 요약",
+        tacticalSummaryEnglishPlaceholder: "문장마다 줄을 바꿔 입력하세요",
+        tacticalSummaryKoreanPlaceholder: "문장마다 줄을 바꿔 입력하세요",
+        tacticalSummaryEditorHelp: "문장마다 줄을 바꿔 2~4문장을 입력하세요. 국문은 선택 사항입니다.",
+        tacticalSummaryEmpty: "아직 전술 요약이 없습니다.",
+        saveTacticalSummary: "요약 저장",
+        tacticalSummarySaved: "전술 요약을 이 브라우저에 저장했습니다.",
+        tacticalSummaryInvalid: "영문을 줄마다 2~4문장 입력하세요. 국문도 입력한다면 2~4줄이어야 합니다.",
         mapVariation: "맵 바리에이션",
         copyLink: "링크 복사",
         copyLinkAria: "현재 맵, 팀, 모드 링크 복사",
