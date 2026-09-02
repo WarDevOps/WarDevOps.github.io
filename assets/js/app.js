@@ -1,6 +1,6 @@
     import { MARKER_LAYOUT_VERSION, loadMarkerLayout, saveMarkerLayout as saveMarkerLayoutToStorage } from './marker-storage.js?v=recent-updates-20260901';
 import { initDiscordMemberCount } from './discord-stats.js';
-    import { commentImages } from './comment-images.js?v=comment-images-20260817';
+    import { commentImages } from './comment-images.js?v=comment-images-fcc91837fb81';
     import { defaultMarkerLayout, maps, translations } from './data.js?v=seo-headings-20260901';
 
 
@@ -413,7 +413,7 @@ import { initDiscordMemberCount } from './discord-stats.js';
       renderRecentUpdates();
       window.dispatchEvent(new CustomEvent("maptactic:languagechange", { detail: { language } }));
       document.querySelectorAll(".marker-context-menu").forEach(contextMenu => {
-        renderCommentImageOptions(contextMenu, contextMenu.querySelector("[data-marker-comment-image-select]").value);
+        renderCommentImageOptions(contextMenu, contextMenu.querySelector("[data-marker-comment-image-picker]").dataset.selectedImageId);
       });
       setTheme(state.theme);
       updateSelectedMapDetails();
@@ -731,21 +731,49 @@ import { initDiscordMemberCount } from './discord-stats.js';
       updateCommentByteCounter(input);
     }
     function renderCommentImageOptions(contextMenu, selectedImageId = "") {
-      const select = contextMenu.querySelector("[data-marker-comment-image-select]");
-      const placeholder = document.createElement("option");
-      placeholder.value = "";
-      placeholder.textContent = t("noCommentImage");
+      const picker = contextMenu.querySelector("[data-marker-comment-image-picker]");
+      const resolvedImageId = COMMENT_IMAGES_BY_ID.has(selectedImageId) ? selectedImageId : "";
       const options = document.createDocumentFragment();
-      options.append(placeholder);
+      const noImageOption = document.createElement("button");
+      noImageOption.type = "button";
+      noImageOption.className = "marker-comment-image-option no-image";
+      noImageOption.dataset.markerCommentImageOption = "";
+      noImageOption.setAttribute("role", "radio");
+      noImageOption.setAttribute("aria-checked", String(!resolvedImageId));
+      noImageOption.classList.toggle("selected", !resolvedImageId);
+      noImageOption.textContent = t("noCommentImage");
+      options.append(noImageOption);
       COMMENT_IMAGES.forEach(image => {
-        const option = document.createElement("option");
-        option.value = image.id;
-        option.textContent = image.label;
+        const option = document.createElement("button");
+        const thumbnail = document.createElement("img");
+        const label = document.createElement("span");
+        const isSelected = image.id === resolvedImageId;
+        option.type = "button";
+        option.className = "marker-comment-image-option";
+        option.dataset.markerCommentImageOption = image.id;
+        option.setAttribute("role", "radio");
+        option.setAttribute("aria-checked", String(isSelected));
+        option.classList.toggle("selected", isSelected);
+        option.title = image.label;
+        thumbnail.src = image.path;
+        thumbnail.alt = "";
+        thumbnail.loading = "lazy";
+        label.textContent = image.label;
+        option.append(thumbnail, label);
         options.append(option);
       });
-      select.replaceChildren(options);
-      select.value = COMMENT_IMAGES_BY_ID.has(selectedImageId) ? selectedImageId : "";
-      select.disabled = COMMENT_IMAGES.length === 0;
+      picker.replaceChildren(options);
+      picker.dataset.selectedImageId = resolvedImageId;
+    }
+    function selectCommentImage(contextMenu, imageId) {
+      const picker = contextMenu.querySelector("[data-marker-comment-image-picker]");
+      const resolvedImageId = COMMENT_IMAGES_BY_ID.has(imageId) ? imageId : "";
+      picker.dataset.selectedImageId = resolvedImageId;
+      contextMenu.querySelectorAll("[data-marker-comment-image-option]").forEach(option => {
+        const isSelected = option.dataset.markerCommentImageOption === resolvedImageId;
+        option.classList.toggle("selected", isSelected);
+        option.setAttribute("aria-checked", String(isSelected));
+      });
     }
     function updateCommentByteCounter(input) {
       const limitedValue = limitCommentToByteLength(input.value);
@@ -1617,8 +1645,13 @@ import { initDiscordMemberCount } from './discord-stats.js';
         const drawingTool = event.target.closest("[data-marker-tool]")?.dataset.markerTool;
         const action = event.target.closest("[data-marker-action]")?.dataset.markerAction;
         const commentAction = event.target.closest("[data-marker-comment-action]")?.dataset.markerCommentAction;
+        const commentImageOption = event.target.closest("[data-marker-comment-image-option]");
         if (!state.contextMarkerId) return;
         const marker = currentMarkers().find(item => item.id === state.contextMarkerId);
+        if (commentImageOption && marker?.id === state.commentMarkerId) {
+          selectCommentImage(contextMenu, commentImageOption.dataset.markerCommentImageOption);
+          return;
+        }
         if (roleType && marker) {
           const tankMarker = linkedTankMarker(marker);
           if (tankMarker) applyRoleMarker(tankMarker, roleType);
@@ -1639,7 +1672,7 @@ import { initDiscordMemberCount } from './discord-stats.js';
           saveMarkerComment(
             marker,
             contextMenu.querySelector("[data-marker-comment-input]").value,
-            contextMenu.querySelector("[data-marker-comment-image-select]").value
+            contextMenu.querySelector("[data-marker-comment-image-picker]").dataset.selectedImageId
           );
           hideMarkerContextMenu();
           return;

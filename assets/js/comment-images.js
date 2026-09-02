@@ -17,6 +17,11 @@ export const commentImages = Object.freeze([
     "label": "Golden Quarry/scr_11.png"
   },
   {
+    "id": "Golden Quarry/scr_12.png",
+    "path": "img/Golden Quarry/scr_12.png",
+    "label": "Golden Quarry/scr_12.png"
+  },
+  {
     "id": "Golden Quarry/scr_2.png",
     "path": "img/Golden Quarry/scr_2.png",
     "label": "Golden Quarry/scr_2.png"
