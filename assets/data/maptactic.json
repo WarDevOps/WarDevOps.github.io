@@ -59,8 +59,9 @@
     "White Rock Fortress": "2026-09-02"
   },
   "mapUpdatedAt": {
+    "38th Parallel": "2026-09-02T13:23:44Z",
     "Abandoned Factory": "2026-09-02T13:31:13Z",
-    "Abandoned Town": "2026-09-02T12:42:31Z",
+    "Abandoned Town": "2026-09-02T13:44:50Z",
     "Advance to the Rhine": "2026-09-02T10:33:47Z",
     "American Desert": "2026-09-01T15:14:29Z",
     "Aral Sea": "2026-09-01T16:42:20Z",
@@ -71,8 +72,7 @@
     "Battle of Hürtgen Forest": "2026-09-01T16:59:04Z",
     "Golden Quarry": "2026-09-02T10:46:07Z",
     "North Holland": "2026-09-02T03:25:27Z",
-    "White Rock Fortress": "2026-09-02T04:58:42Z",
-    "38th Parallel": "2026-09-02T13:23:44Z"
+    "White Rock Fortress": "2026-09-02T04:58:42Z"
   },
   "tacticalSummaries": {
     "Eastern Europe": {
@@ -962,31 +962,36 @@
         "id": "mt8bdrf1-wrmyww",
         "type": "mainBattleTank",
         "x": 33.95,
-        "y": 82.18
+        "y": 82.18,
+        "commentImage": "Abandoned Town/scr_ (5).png"
       },
       {
         "id": "mt8be5xa-ubg1l7",
         "type": "mainBattleTank",
         "x": 55.05,
-        "y": 83.07
+        "y": 83.07,
+        "commentImage": "Abandoned Town/scr_ (3).png"
       },
       {
         "id": "mt8be8to-mu2dfz",
         "type": "mainBattleTank",
         "x": 66.67,
-        "y": 35.41
+        "y": 35.41,
+        "commentImage": "Abandoned Town/scr_ (16).png"
       },
       {
         "id": "mt8beb0o-td9awi",
         "type": "mainBattleTank",
         "x": 57.54,
-        "y": 45.12
+        "y": 45.12,
+        "commentImage": "Abandoned Town/scr_ (17).png"
       },
       {
         "id": "mt8bf536-iigidz",
         "type": "mainBattleTank",
         "x": 62.37,
-        "y": 24.47
+        "y": 24.47,
+        "commentImage": "Abandoned Town/scr_ (15).png"
       },
       {
         "id": "mt8bfz07-aymmo2",
@@ -1027,7 +1032,8 @@
         "id": "mt8bmx6g-l8yzvf",
         "type": "mainBattleTank",
         "x": 40.78,
-        "y": 53.1
+        "y": 53.1,
+        "commentImage": "Abandoned Town/scr_ (7).png"
       },
       {
         "id": "mt8bn63v-g8iiio",
@@ -1040,7 +1046,8 @@
         "id": "mt8dhktx-vr5jff",
         "type": "mainBattleTank",
         "x": 52.22,
-        "y": 41.93
+        "y": 41.93,
+        "commentImage": "Abandoned Town/scr_ (18).png"
       },
       {
         "id": "mt8dhmak-z7gv6h",
@@ -1053,7 +1060,8 @@
         "id": "mt8djoch-f8ucwr",
         "type": "mainBattleTank",
         "x": 55.32,
-        "y": 62.23
+        "y": 62.23,
+        "commentImage": "Abandoned Town/scr_ (20).png"
       },
       {
         "id": "mt8djq18-uv5acg",
@@ -1066,7 +1074,8 @@
         "id": "mt8dmhks-7exoq8",
         "type": "mainBattleTank",
         "x": 26.42,
-        "y": 42.02
+        "y": 42.02,
+        "commentImage": "Abandoned Town/scr_ (8).png"
       },
       {
         "id": "mt8dmkag-vpvkvt",
@@ -1079,7 +1088,8 @@
         "id": "mt8dmu5h-04y1a5",
         "type": "mainBattleTank",
         "x": 29.29,
-        "y": 68.75
+        "y": 68.75,
+        "commentImage": "Abandoned Town/scr_ (6).png"
       },
       {
         "id": "mt8dmvu0-9xwgek",
@@ -1092,7 +1102,8 @@
         "id": "mt8dn97c-kwlwjv",
         "type": "mainBattleTank",
         "x": 32.29,
-        "y": 26.03
+        "y": 26.03,
+        "commentImage": "Abandoned Town/scr_ (11).png"
       },
       {
         "id": "mt8dnunf-sxlql0",
@@ -1105,7 +1116,8 @@
         "id": "mt8do0zg-4b63nn",
         "type": "mainBattleTank",
         "x": 34.11,
-        "y": 14.96
+        "y": 14.96,
+        "commentImage": "Abandoned Town/scr_ (12).png"
       },
       {
         "id": "mt8do5tw-svms4e",
@@ -1118,7 +1130,8 @@
         "id": "mt8dos6s-hezrxr",
         "type": "mainBattleTank",
         "x": 44.79,
-        "y": 91.41
+        "y": 91.41,
+        "commentImage": "Abandoned Town/scr_ (4).png"
       },
       {
         "id": "mt8dotn0-ejw1kd",
@@ -1131,7 +1144,8 @@
         "id": "mtgocpxh-t68nfs",
         "type": "mainBattleTank",
         "x": 26.43,
-        "y": 49.73
+        "y": 49.73,
+        "commentImage": "Abandoned Town/scr_ (9).png"
       },
       {
         "id": "mtgocr6h-imbmfv",
@@ -5107,7 +5121,8 @@
         "id": "mt8blqvk-uwzzmk",
         "type": "mainBattleTankRed",
         "x": 44.86,
-        "y": 31.82
+        "y": 31.82,
+        "commentImage": "Abandoned Town/scr_ (25).png"
       },
       {
         "id": "mt8blwwt-3706it",
@@ -5120,7 +5135,8 @@
         "id": "mt8bm5uq-ig9cu3",
         "type": "mainBattleTankRed",
         "x": 54.26,
-        "y": 20.47
+        "y": 20.47,
+        "commentImage": "Abandoned Town/scr_ (24).png"
       },
       {
         "id": "mt8bmbfo-8gmvmo",
@@ -5139,7 +5155,8 @@
         "id": "mt8bmod8-0hd6yi",
         "type": "mainBattleTankRed",
         "x": 30.05,
-        "y": 43.26
+        "y": 43.26,
+        "commentImage": "Abandoned Town/scr_ (26).png"
       },
       {
         "id": "mt8bncuo-sdjqle",
@@ -5177,7 +5194,8 @@
         "id": "mt8cpcm4-m4ph3o",
         "type": "mainBattleTankRed",
         "x": 35.99,
-        "y": 51.24
+        "y": 51.24,
+        "commentImage": "Abandoned Town/scr_ (27).png"
       },
       {
         "id": "mt8cpf4j-v6o6f9",
@@ -5203,7 +5221,8 @@
         "id": "mt8dprpu-trj6rr",
         "type": "mainBattleTankRed",
         "x": 75.53,
-        "y": 49.21
+        "y": 49.21,
+        "commentImage": "Abandoned Town/scr_ (23).png"
       },
       {
         "id": "mt8dpy6r-b3kmmb",
@@ -5216,7 +5235,8 @@
         "id": "mt8dq0ci-8xxf99",
         "type": "mainBattleTankRed",
         "x": 49.11,
-        "y": 84.31
+        "y": 84.31,
+        "commentImage": "Abandoned Town/scr_ (2).png"
       },
       {
         "id": "mt8dq3qp-oddm2q",
@@ -5229,7 +5249,8 @@
         "id": "mt8dqg2s-ur37cm",
         "type": "mainBattleTankRed",
         "x": 71.63,
-        "y": 58.95
+        "y": 58.95,
+        "commentImage": "Abandoned Town/scr_ (19).png"
       },
       {
         "id": "mt8dqj9o-9e3ibb",
@@ -5254,7 +5275,8 @@
         "id": "mtk2n8bt-jll27i",
         "type": "mainBattleTankRed",
         "x": 50,
-        "y": 58.85
+        "y": 58.85,
+        "commentImage": "Abandoned Town/scr_ (22).png"
       },
       {
         "id": "mtk2nbln-5r0v7q",
@@ -5267,7 +5289,8 @@
         "id": "mtk35za0-066iyg",
         "type": "mainBattleTankRed",
         "x": 30.47,
-        "y": 79.95
+        "y": 79.95,
+        "commentImage": "Abandoned Town/scr_ (1).png"
       },
       {
         "id": "mtk368uk-v4ijdo",
@@ -17620,41 +17643,6 @@
         "dangerRoute": true
       },
       {
-        "id": "mth5zqed-3ozwkp",
-        "type": "route",
-        "points": [
-          {
-            "x": 40.23,
-            "y": 53.9
-          },
-          {
-            "x": 36.98,
-            "y": 55.07
-          },
-          {
-            "x": 33.33,
-            "y": 52.86
-          },
-          {
-            "x": 31.77,
-            "y": 54.16
-          },
-          {
-            "x": 30.21,
-            "y": 53.12
-          },
-          {
-            "x": 27.99,
-            "y": 52.21
-          },
-          {
-            "x": 23.43,
-            "y": 47.52
-          }
-        ],
-        "dangerRoute": true
-      },
-      {
         "id": "mtidy8wp-drh9t2",
         "type": "route",
         "points": [
@@ -17717,6 +17705,79 @@
         "startY": 24.47,
         "endX": 46.35,
         "endY": 27.33
+      },
+      {
+        "id": "mtk579zp-xzbh1b",
+        "type": "route",
+        "points": [
+          {
+            "x": 26.15,
+            "y": 50.17
+          },
+          {
+            "x": 28.28,
+            "y": 50.97
+          },
+          {
+            "x": 29.25,
+            "y": 50.79
+          },
+          {
+            "x": 30.14,
+            "y": 51.59
+          },
+          {
+            "x": 31.83,
+            "y": 50.62
+          },
+          {
+            "x": 33.78,
+            "y": 53.01
+          },
+          {
+            "x": 37.06,
+            "y": 54.78
+          },
+          {
+            "x": 39.01,
+            "y": 54.87
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "mtk5853o-tg0l9i",
+        "type": "route",
+        "points": [
+          {
+            "x": 34.93,
+            "y": 28.27
+          },
+          {
+            "x": 32.98,
+            "y": 26.59
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "mtk58ebx-rb9li2",
+        "type": "route",
+        "points": [
+          {
+            "x": 34.31,
+            "y": 15.59
+          },
+          {
+            "x": 37.14,
+            "y": 17.1
+          },
+          {
+            "x": 40.6,
+            "y": 19.67
+          }
+        ],
+        "dangerRoute": true
       }
     ],
     "Advance to the Rhine::domination-1|Red": [
@@ -26868,15 +26929,6 @@
         "endY": 68.35
       },
       {
-        "id": "mt8dqwdm-mvkceg",
-        "type": "aimHere",
-        "parentTankId": "mt8dq0ci-8xxf99",
-        "startX": 49.11,
-        "startY": 84.31,
-        "endX": 66.67,
-        "endY": 79.52
-      },
-      {
         "id": "mth6dia7-hvwu33",
         "type": "route",
         "points": [
@@ -26978,6 +27030,38 @@
         "startY": 79.95,
         "endX": 35.94,
         "endY": 73.56
+      },
+      {
+        "id": "mtk51b5i-yhf4f3",
+        "type": "route",
+        "points": [
+          {
+            "x": 27.13,
+            "y": 69.59
+          },
+          {
+            "x": 27.75,
+            "y": 73.31
+          },
+          {
+            "x": 29.34,
+            "y": 77.13
+          },
+          {
+            "x": 30.41,
+            "y": 80.49
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "mtk54xns-g7ezpn",
+        "type": "aimHere",
+        "parentTankId": "mt8dq0ci-8xxf99",
+        "startX": 49.11,
+        "startY": 84.31,
+        "endX": 67.64,
+        "endY": 76.33
       }
     ],
     "Japan::domination-1|Blue": [
@@ -46743,6 +46827,6 @@
       }
     ]
   },
-  "updatedAt": "2026-09-02T13:31:22.445Z",
-  "exportedAt": "2026-09-02T13:31:22.899Z"
+  "updatedAt": "2026-09-02T13:44:50.225Z",
+  "exportedAt": "2026-09-02T13:44:58.209Z"
 }
