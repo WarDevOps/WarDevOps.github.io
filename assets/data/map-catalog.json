@@ -5,10 +5,18 @@
       "name": "38th Parallel",
       "aliases": "38선",
       "slug": "38th-parallel",
-      "updated": "2026-09-02",
-      "updatedAt": "2026-09-02T13:23:44Z",
+      "updated": "2026-09-03",
+      "updatedAt": "2026-09-03T00:03:47Z",
       "br": {
         "min": 4.7
+      },
+      "tacticalSummary": {
+        "en": [
+          "The key areas of 38th Parallel can be divided into the mountainous terrain between points A and B and the stream between points B and C.",
+          "If your team loses control of the mountain, holding point A becomes extremely difficult, and launching an effective offensive toward point B is also heavily restricted. On the other hand, losing control of the stream can allow the enemy to break through the flanking routes leading toward point C.",
+          "Most of the major flanking routes on this map pass through the stream. If no one is defending this area, enemy vehicles can use it to move around the map and launch surprise attacks against your team's flanks.",
+          "However, the stream itself is located on low ground, which makes it very difficult to defend. Therefore, when defending, it is generally better to hold the mountainous terrain, while on the offensive, breaking through the stream is an effective way to open up flanking routes."
+        ]
       },
       "folder": "38th Parallel",
       "variations": [
@@ -27,9 +35,16 @@
       "aliases": "버려진 공장",
       "slug": "abandoned-factory",
       "updated": "2026-09-03",
-      "updatedAt": "2026-09-02T15:34:45Z",
+      "updatedAt": "2026-09-03T00:03:59Z",
       "br": {
         "min": 1
+      },
+      "tacticalSummary": {
+        "en": [
+          "On Abandoned Factory, point A is effectively the only major high ground on the map. All approaches to the capture point consist of gentle slopes separated from the main urban area, which is why much of the main frontline fighting tends to take place here.",
+          "Point A also provides a commanding view over most of the area around point B. As a result, losing the fight for A can place the entire B frontline under significant pressure.",
+          "If your team loses point A, it is usually better not to force a defensive line around B. Instead, consider falling back slightly to draw the enemy forward and counterattack, or shift the offensive toward point C."
+        ]
       },
       "folder": "Abandoned Factory",
       "variations": [
@@ -47,10 +62,18 @@
       "name": "Abandoned Town",
       "aliases": "버려진 소도시",
       "slug": "abandoned-town",
-      "updated": "2026-09-02",
-      "updatedAt": "2026-09-02T13:44:50Z",
+      "updated": "2026-09-03",
+      "updatedAt": "2026-09-03T00:04:09Z",
       "br": {
         "min": 3.7
+      },
+      "tacticalSummary": {
+        "en": [
+          "The most important area on Abandoned Town is the central urban district between points A and B. If your team loses control of this area, the enemy can quickly advance toward your spawn area, often resulting in heavy spawn pressure.",
+          "Point A is located in the middle of a wide and exposed road, making it difficult to capture while enemy vehicles are still present nearby. When attacking A, it is therefore important to eliminate or suppress the opposing force in the area before attempting to capture the point.",
+          "The route toward point B contains several long corridors that provide strong sniping angles. However, as long as you avoid driving directly through the middle of the main roads, breaking through this area is relatively manageable.",
+          "Point C is located inside an isolated basin. Once you enter the area, it can be difficult to return quickly to the rest of the battlefield. Because of this, vehicles fighting around C often have relatively little influence on the overall match, so priorit"
+        ]
       },
       "folder": "Abandoned Town",
       "variations": [
@@ -68,10 +91,18 @@
       "name": "Advance to the Rhine",
       "aliases": "라인 강 진격",
       "slug": "advance-to-the-rhine",
-      "updated": "2026-09-02",
-      "updatedAt": "2026-09-02T10:33:47Z",
+      "updated": "2026-09-03",
+      "updatedAt": "2026-09-03T00:04:17Z",
       "br": {
         "min": 1
+      },
+      "tacticalSummary": {
+        "en": [
+          "The western frontline near point A on Advance to the Rhine is almost always crowded with tanks, which frequently creates a prolonged stalemate. This makes the area particularly suitable for slower vehicles that are better suited to holding a frontline than making long flanking maneuvers.",
+          "In most matches, points B and C are initially divided between the two teams. Between these capture points are three long, straight avenues.",
+          "In many cases, at least one of these three routes will be lightly defended or completely open. Identifying and breaking through that route can allow you to reach the enemy's flank or rear and, in some situations, continue directly toward their spawn area.",
+          "The central urban area is particularly complex, with many walls that can be penetrated by tank rounds. This creates firing angles from almost every direction. Rather than advancing too aggressively, it is often more effective to reduce your engine noise, listen for approaching vehicles, and ambush enemies as th"
+        ]
       },
       "folder": "Advance to the Rhine",
       "variations": [
@@ -89,9 +120,18 @@
       "name": "Alaska",
       "aliases": "알래스카",
       "slug": "alaska",
-      "updated": "2026-09-01",
+      "updated": "2026-09-03",
+      "updatedAt": "2026-09-03T00:04:27Z",
       "br": {
         "min": 3.7
+      },
+      "tacticalSummary": {
+        "en": [
+          "Point A on Alaska is asymmetrical and provides a slight advantage to the northern team. Vehicles approaching from the north can stay close to the bridge structure and capture the point without exposing themselves as heavily to enemy lines of fire.",
+          "Point B, on the other hand, slightly favors the southern team because they can more easily establish control over the central hill and the surrounding urban area.",
+          "Point C is located inside a basin that is difficult to reach and capture quickly. Engagement distances are relatively long, and both teams can make effective use of hull-down positions, which often results in a prolonged stalemate.",
+          "For vehicles with good mobility, rather than committing to a direct fight around point C, I recommend following the river east of C and using it as a flanking route to break through toward the enemy's side or rear."
+        ]
       },
       "folder": "Alaska",
       "variations": [
@@ -109,10 +149,22 @@
       "name": "American Desert",
       "aliases": "아메리칸 데저트",
       "slug": "american-desert",
-      "updated": "2026-09-02",
-      "updatedAt": "2026-09-01T15:14:29Z",
+      "updated": "2026-09-03",
+      "updatedAt": "2026-09-03T01:47:16Z",
       "br": {
         "min": 5
+      },
+      "tacticalSummary": {
+        "en": [
+          "All three capture points on American Desert are surrounded by urban terrain, which makes them difficult to defend even after they have been successfully captured. As a result, control of the objectives frequently changes hands throughout the match.",
+          "The southern team has a particular weakness: most routes from its spawn area toward the central city cross exposed ground. If the central urban area is breached, reinforcing vehicles from the southern spawn can easily be intercepted before reaching the frontline.",
+          "The northern spawn, on the other hand, is protected by numerous rocks and terrain features. Attempting to apply direct spawn pressure against the northern team therefore requires considerably more risk."
+        ],
+        "ko": [
+          "아메리칸 데저트는 A, B, C 세 거점이 모두 시가지로 둘러싸여 있어, 어느 거점을 점령하더라도 안정적으로 방어하기 어렵습니다. 이 때문에 한쪽 팀이 거점을 확보한 뒤에도 다시 빼앗기는 상황이 자주 발생합니다.",
+          "다만 남쪽 팀은 스폰 지역에서 중앙 시가지로 진입하는 대부분의 경로가 개활지에 노출되어 있습니다. 따라서 중앙 시가지가 돌파당하면 후속 병력이 전선에 합류하기 전에 차단될 가능성이 높습니다.",
+          "반면 북쪽 팀의 스폰 지역은 여러 바위와 지형지물로 보호받고 있어 직접적인 스폰 압박을 시도하려면 상당한 위험을 감수해야 합니다."
+        ]
       },
       "folder": "American Desert",
       "variations": [
@@ -130,10 +182,22 @@
       "name": "Aral Sea",
       "aliases": "아랄 해",
       "slug": "aral-sea",
-      "updated": "2026-09-02",
-      "updatedAt": "2026-09-01T16:42:20Z",
+      "updated": "2026-09-03",
+      "updatedAt": "2026-09-03T01:47:29Z",
       "br": {
         "min": 6.7
+      },
+      "tacticalSummary": {
+        "en": [
+          "On Aral Sea, points A and B are the primary objectives, while committing significant forces to point C is generally not recommended. The terrain around C combines wide open ground with a basin, making a safe breakthrough difficult.",
+          "Vehicles with strong gun depression are particularly effective around point A, where they can use hull-down positions to control the surrounding area.",
+          "More mobile vehicles are better suited to pushing through the urban area around point B or using the railway line as a flanking route to reach the enemy's side or rear."
+        ],
+        "ko": [
+          "아랄해에서는 A와 B 거점이 주력 전장이며, C 거점은 우선적으로 진입하는 것을 추천하지 않습니다. C 거점 주변은 넓은 개활지와 분지가 결합된 형태로, 안전하게 돌파하기가 쉽지 않습니다.",
+          "부각이 좋은 전차는 주로 A 거점 주변에서 헐다운 포지션을 활용해 전선을 유지하는 것이 효과적입니다.",
+          "반대로 기동성이 좋은 전차는 B 거점의 시가지를 돌파하거나 철도 라인을 따라 우회하여 적의 측면과 후방을 공략하는 방식이 좋습니다."
+        ]
       },
       "folder": "Aral Sea",
       "variations": [
@@ -151,10 +215,22 @@
       "name": "Arctic Pier",
       "aliases": "북극의 부두",
       "slug": "arctic-pier",
-      "updated": "2026-09-02",
-      "updatedAt": "2026-09-02T07:51:20Z",
+      "updated": "2026-09-03",
+      "updatedAt": "2026-09-03T01:59:37Z",
       "br": {
         "min": 4.7
+      },
+      "tacticalSummary": {
+        "en": [
+          "The central hill is the most important position on Arctic Pier. Controlling this area makes it much easier to secure point C while also providing firing opportunities across a large portion of the map.",
+          "Points A and B are often divided between the northern and southern teams early in the match, which makes control of the central hill even more important.",
+          "A low-ground route also runs along the eastern coastline. This path allows vehicles to flank while avoiding much of the direct fire from the central battlefield and can be used to pressure the central hill from the side or reach enemy rear positions."
+        ],
+        "ko": [
+          "북극의 부두에서 가장 중요한 지역은 중앙 언덕입니다. 이 지역을 통제하면 C 거점을 확보하기 쉬워질 뿐만 아니라 맵 대부분을 사정거리 안에 둘 수 있습니다.",
+          "A와 B 거점은 각각 북쪽 팀과 남쪽 팀이 비교적 쉽게 확보하는 경우가 많기 때문에 중앙 언덕의 중요성은 더욱 커집니다.",
+          "또한 맵 동쪽 해안선을 따라 이어지는 저지대를 이용하면 중앙 전선의 사격을 비교적 피하면서 우회할 수 있습니다. 이 경로를 활용하면 중앙 언덕을 측면에서 견제하거나 적의 후방으로 진입할 수 있습니다."
+        ]
       },
       "folder": "Arctic Pier",
       "variations": [
@@ -172,10 +248,22 @@
       "name": "Arctic Polar Base",
       "aliases": "북극",
       "slug": "arctic-polar-base",
-      "updated": "2026-09-02",
-      "updatedAt": "2026-09-02T10:31:54Z",
+      "updated": "2026-09-03",
+      "updatedAt": "2026-09-03T01:47:54Z",
       "br": {
         "min": 6.7
+      },
+      "tacticalSummary": {
+        "en": [
+          "The most important area on Arctic Polar Base is the valley between points B and C. The team that controls this valley usually gains effective control over point C as well.",
+          "The approach to point B crosses relatively open ground, but the surrounding area is enclosed by tall buildings and structures. Because of this, fast vehicles can make an aggressive early push and attempt to capture the point before the enemy establishes firing positions.",
+          "A similar strategy can also be effective around point A, where early positioning by highly mobile vehicles can provide a significant advantage."
+        ],
+        "ko": [
+          "북극에서 가장 중요한 지역은 B와 C 거점 사이의 골짜기입니다. 이 지역을 장악한 팀이 사실상 C 거점의 통제권까지 확보하게 됩니다.",
+          "B 거점으로 향하는 길은 상당 부분 개활지이지만, 주변이 높은 건물과 구조물로 둘러싸여 있습니다. 따라서 초반에 기동성이 좋은 전차가 빠르게 진입하여 거점을 선점하는 공격적인 운영이 충분히 유효합니다.",
+          "A 거점 역시 비슷한 성격을 가지고 있어, 빠른 전차를 이용한 초반 선점이 큰 이점을 가져올 수 있습니다."
+        ]
       },
       "folder": "Arctic Polar Base",
       "variations": [
@@ -193,9 +281,31 @@
       "name": "Ardennes",
       "aliases": "아르덴",
       "slug": "ardennes",
-      "updated": "2026-09-01",
+      "updated": "2026-09-03",
+      "updatedAt": "2026-09-03T01:48:08Z",
       "br": {
         "min": 3.7
+      },
+      "tacticalSummary": {
+        "en": [
+          "Domination #1",
+          "In Ardennes Domination #1, points A and C are usually secured early by the southern and northern teams respectively. Surprisingly, the central point B is not the most strategically valuable position on the map.",
+          "The southeastern urban area is far more important. While the central city often settles into a prolonged stalemate, the outcome of the match is frequently decided by whichever team gains control of the southeastern city and successfully completes a flanking maneuver.",
+          "Once this area is breached, it provides strong and relatively safe positions from which the enemy spawn can be pressured.",
+          "The northwestern flank consists almost entirely of exposed terrain. It can occasionally be used as an unexpected high-risk maneuver, but it is generally not recommended.",
+          "Domination #2",
+          "Ardennes Domination #2 is essentially a larger version of Domination #1, but the tactical situation changes considerably.",
+          "The most important position is point C, located on the highest ground of"
+        ],
+        "ko": [
+          "아르덴 도미네이션 #1에서는 A와 C 거점을 각각 남쪽 팀과 북쪽 팀이 비교적 쉽게 확보하는 형태로 전투가 시작됩니다. 의외로 중앙에 위치한 B 거점 자체의 전략적 가치는 그리 높지 않습니다.",
+          "이 맵에서 가장 중요한 지역은 남동쪽 시가지입니다. 중앙 시가지에서 교착 상태가 이어지는 동안 어느 팀이 남동쪽 시가지를 장악하고 우회 공격에 성공하는지가 승부를 결정하는 경우가 많습니다.",
+          "남동쪽 시가지가 돌파당하면 상대 스폰 지역을 안정적으로 압박할 수 있는 위치가 확보되기 때문입니다.",
+          "북서쪽 우회로는 대부분이 완전히 노출된 개활지로 이루어져 있습니다. 간혹 예상 밖의 기습 경로로 사용할 수는 있지만 위험 부담이 매우 크기 때문에 일반적으로 추천하지 않습니다.",
+          "아르덴 도미네이션 #2는 도미네이션 #1을 확장한 대형 전장이지만, 실제 전투 양상은 상당히 달라집니다.",
+          "가장 중요한 지역은 맵에서 가장 높은 지형에 위치한 C 거점입니다. 이 고지대를 장악하면 맵 대부분을 사정거리 안에 둘 수 있으며, 양 팀의 스폰 지역까지 직접적인 압박이 가능해집니다.",
+          "전장이 넓어진 만큼 전선의 밀도가 낮아지기 때문에 북서쪽 시가지 역시 도미네이션 #1에 비해 훨씬 빠르게 돌파할 수 있습니다. 이 지역을 이용하면 적의 측면과 후방으로 깊숙이 진입하여 스폰 지역을 기습할 수 있습니다."
+        ]
       },
       "folder": "Ardennes",
       "variations": [
@@ -254,10 +364,26 @@
       "name": "Attica",
       "aliases": "아티카",
       "slug": "attica",
-      "updated": "2026-09-02",
-      "updatedAt": "2026-09-01T16:44:47Z",
+      "updated": "2026-09-03",
+      "updatedAt": "2026-09-03T02:06:24Z",
       "br": {
         "min": 1
+      },
+      "tacticalSummary": {
+        "en": [
+          "The most important position on Attica is the high ground between the left-side spawn and point B.",
+          "From your team's side of this high ground, it is possible to fire on most of the major approaches toward point C. The surrounding terrain is also highly exposed, making the position relatively easy to defend.",
+          "If you manage to capture the enemy's side of the high ground, both enemy spawn areas can be pressured. The right-side spawn in particular can be almost completely isolated from the rest of the battlefield.",
+          "Point A can be captured, but the combination of exposed terrain and a low basin makes a direct breakthrough extremely difficult.",
+          "Point C is easier to approach, but vehicles attempting to push the objective are vulnerable to fire from the surrounding high ground. Using smoke shells during a push toward C is strongly recommended."
+        ],
+        "ko": [
+          "아티카에서 가장 중요한 지역은 왼쪽 스폰에서 B 거점으로 이어지는 고지대입니다.",
+          "아군 측 고지대를 확보하면 C 거점으로 진입하는 주요 경로 대부분을 저격할 수 있으며, 주변이 넓은 개활지이기 때문에 방어하기도 매우 쉽습니다.",
+          "반대로 상대 팀의 고지대까지 장악하는 데 성공하면 상대의 양쪽 스폰 지역을 모두 압박할 수 있습니다. 특히 오른쪽 스폰은 사실상 전장에서 완전히 고립시킬 수 있습니다.",
+          "A 거점은 점령 자체는 가능하지만 넓은 개활지와 저지대 분지가 결합된 형태로 되어 있어 정면 돌파에 매우 불리합니다.",
+          "C 거점은 돌파 자체는 가능하지만 고지대에서 지속적인 저격을 받을 수 있습니다. 따라서 C 거점으로 진입할 때는 연막탄을 적극적으로 사용하는 것을 강력히 추천합니다."
+        ]
       },
       "folder": "Attica",
       "variations": [
@@ -275,10 +401,32 @@
       "name": "Battle of Hürtgen Forest",
       "aliases": "휘르트겐 숲 전투",
       "slug": "battle-of-hurtgen-forest",
-      "updated": "2026-09-02",
-      "updatedAt": "2026-09-01T16:59:04Z",
+      "updated": "2026-09-03",
+      "updatedAt": "2026-09-03T01:48:50Z",
       "br": {
         "min": 4.7
+      },
+      "tacticalSummary": {
+        "en": [
+          "Domination #1",
+          "The central urban area is the most important part of Battle of Hürtgen Forest Domination #1. At the beginning of the match, points A and B are commonly divided between the two teams.",
+          "The mountain in the north is the major strategic variable. Controlling this high ground can provide direct opportunities to pressure the enemy spawn.",
+          "The western team has a slight terrain advantage when climbing the mountain because the surrounding hills and ridgelines provide better opportunities for concealment and cover.",
+          "However, losing the mountain does not necessarily decide the match. The urban area around point C is largely protected from direct fire from the mountain, which means a team can abandon the northern fight and concentrate its offensive through the southern city instead.",
+          "Vehicles with strong gun depression can also make effective use of the hill at the far southern edge of the map, which provides excellent control over the approaches to point C."
+        ],
+        "ko": [
+          "도미네이션 #1",
+          "휘르트겐 숲 도미네이션 #1에서는 중앙 시가지가 가장 중요한 지역입니다. 전투 초반에는 A와 B 거점을 양 팀이 하나씩 나누어 확보하는 형태가 자주 나타납니다.",
+          "북쪽 산악 지대가 주요 변수이며, 이 지역을 장악하면 적 스폰 지역까지 직접적인 압박이 가능해집니다.",
+          "서쪽 팀은 산을 오를 때 구릉과 능선을 엄폐물로 활용하기 쉬워 상대적으로 유리한 지형을 가지고 있습니다.",
+          "다만 산악 지대를 빼앗겼다고 해서 반드시 패배하는 것은 아닙니다. C 거점 주변 시가지는 산에서 직접적인 사선이 나오지 않기 때문에 산악 지대를 포기하고 남쪽 시가지에 공세를 집중하는 방식으로 역전을 노릴 수 있습니다.",
+          "부각이 좋은 전차를 운용한다면 맵 최남단의 언덕을 확보하는 것도 좋은 선택입니다. 이 위치에서는 C 거점 일대를 효과적으로 통제할 수 있습니다.",
+          "도미네이션 #2",
+          "휘르트겐 숲 도미네이션 #2에서는 북쪽 산악 지대의 중요성이 더욱 커집니다.",
+          "이 지역을 장악하면 적 스폰 지역을 압박할 수 있을 뿐만 아니라 A 거점을 확보한 뒤 B 거점까지 동시에 통제할 수 있습니다.",
+          "B 거점은 북쪽 방향에서 들어오는 사격을 막아줄 엄폐물이 매우 부족합니다. 따라서 산악 지대를 확보했다면 반드시 유지해야 하며, 반대로 빼앗겼다면 지상전만으로 탈환하기 어렵더라도 공중 지원 등을 활용해 적을 제거하는 것이 중요합니다."
+        ]
       },
       "folder": "Battle of Hürtgen Forest",
       "variations": [
@@ -336,9 +484,22 @@
       "name": "Breslau",
       "aliases": "브레슬라우",
       "slug": "breslau",
-      "updated": "2026-08-25",
+      "updated": "2026-09-03",
+      "updatedAt": "2026-09-03T01:49:10Z",
       "br": {
         "min": 6.7
+      },
+      "tacticalSummary": {
+        "en": [
+          "Breslau consists of point A in open terrain, point B surrounded by multiple river crossings and bridges, and point C inside a large urban area that is relatively isolated from the rest of the battlefield.",
+          "Points A and B are close enough that vehicles fighting around the two objectives can support each other effectively. Once both points are secured, a defensive line can be established because the enemy is forced either to cross the river directly or use one of the bridges.",
+          "Point C offers a much more aggressive style of play. A rapid breakthrough through the urban area can allow vehicles to reach the enemy rear and apply pressure directly toward the spawn area."
+        ],
+        "ko": [
+          "브레슬라우는 넓은 개활지에 위치한 A 거점, 여러 개의 도하로와 교량 주변으로 구성된 B 거점, 그리고 다른 전선과 상당히 분리된 대형 시가지의 C 거점으로 이루어져 있습니다.",
+          "A와 B 거점은 서로 가까워 두 지역의 아군이 상호 지원하기 쉽습니다. 두 거점을 확보한 뒤 방어선을 구축하면 적은 반드시 강을 도하하거나 교량을 이용해야 하기 때문에 방어적인 운영에 매우 유리합니다.",
+          "반대로 C 거점은 보다 적극적인 공세가 가능한 지역입니다. 시가지를 빠르게 돌파하면 적 후방으로 진입하여 스폰 지역까지 압박할 수 있습니다."
+        ]
       },
       "folder": "Breslau",
       "variations": [
@@ -356,9 +517,24 @@
       "name": "Campania",
       "aliases": "캄파니아",
       "slug": "campania",
-      "updated": "2026-08-17",
+      "updated": "2026-09-03",
+      "updatedAt": "2026-09-03T01:49:21Z",
       "br": {
         "min": 3.7
+      },
+      "tacticalSummary": {
+        "en": [
+          "Campania consists of point A, where large close-range battles frequently occur; point B, where capturing the objective too early can sometimes place the capturing team at a disadvantage; and point C, where losing control can quickly lead to heavy spawn pressure.",
+          "Point C is especially important because it is located on high ground. Controlling this position allows vehicles to threaten both the northern and southern spawn areas, making it the most strategically valuable objective on the map.",
+          "The terrain north of point A consists of rolling hills and long firing lanes, so the area frequently develops into a prolonged sniping stalemate.",
+          "As an alternative, vehicles can use the urban area between A and B for a shorter flanking maneuver. Successfully breaking through this route can provide direct access toward the northern spawn area."
+        ],
+        "ko": [
+          "캄파니아는 대규모 난전이 자주 발생하는 A 거점, 먼저 진입한 쪽이 오히려 불리해질 수 있는 B 거점, 그리고 빼앗길 경우 즉시 스폰 압박으로 이어질 가능성이 높은 C 거점으로 구성되어 있습니다.",
+          "특히 C 거점은 고지대에 위치해 있어 이 지역을 장악하면 북쪽과 남쪽 스폰 지역을 모두 견제할 수 있습니다. 따라서 세 거점 가운데 가장 전략적 가치가 높은 지역입니다.",
+          "A 거점 북쪽은 구릉지와 길게 뻗은 사격 통로가 결합되어 있어 장거리 교전이 반복되며 교착 상태가 발생하기 쉽습니다.",
+          "차선책으로 A와 B 사이의 시가지를 이용한 짧은 우회 공격이 가능합니다. 이 지역을 돌파하면 북쪽 스폰 지역을 압박할 수 있는 위치로 연결됩니다."
+        ]
       },
       "folder": "Campania",
       "variations": [
@@ -375,9 +551,24 @@
       "name": "Cargo Port",
       "aliases": "카고 포트",
       "slug": "cargo-port",
-      "updated": "2026-08-16",
+      "updated": "2026-09-03",
+      "updatedAt": "2026-09-03T01:49:31Z",
       "br": {
         "min": 4.7
+      },
+      "tacticalSummary": {
+        "en": [
+          "The triangular area in the center of Cargo Port is the most important tactical position on the map.",
+          "The team that controls this area can exert strong control over point C and can also flank and eliminate enemies fighting around point B.",
+          "Point A is so isolated that it can almost be considered a separate battle. Capturing it early requires crossing the highway, which is a significant gamble because vehicles are exposed to long-range fire.",
+          "Smoke shells are extremely useful for blocking firing lines across the highway, and attempting this early crossing with a slow vehicle is generally not practical."
+        ],
+        "ko": [
+          "카고 포트에서 가장 중요한 지역은 지도 중앙의 삼각형 형태의 지대입니다.",
+          "이 지역을 장악한 팀은 C 거점을 통제하기 쉬워지며, 동시에 B 거점 주변의 적을 측면에서 포위하고 제거할 수 있습니다.",
+          "A 거점은 나머지 전장과 상당히 분리되어 있다고 봐도 무방합니다. 초반에 A 거점을 선점하려면 고속도로를 횡단해야 하므로 상당한 위험을 감수해야 합니다.",
+          "고속도로에서 들어오는 장거리 사격을 차단하기 위해 연막탄을 사용하는 것이 매우 중요하며, 기동성이 낮은 전차로는 초반 돌파를 시도하기 어렵습니다."
+        ]
       },
       "folder": "Cargo Port",
       "variations": [
@@ -395,9 +586,22 @@
       "name": "Carpathians",
       "aliases": "카르파티아 산맥",
       "slug": "carpathians",
-      "updated": "2026-08-16",
+      "updated": "2026-09-04",
+      "updatedAt": "2026-09-04T03:02:19Z",
       "br": {
         "min": 2.3
+      },
+      "tacticalSummary": {
+        "en": [
+          "The mountain surrounding point A is the most important position on Carpathians.",
+          "The team that controls this high ground can influence all three capture points—A, B, and C—and can potentially apply direct pressure toward the enemy spawn as well.",
+          "Once your team has secured the mountain, avoid leaving the position unnecessarily. If the enemy captures it, retaking the high ground should become one of your highest priorities."
+        ],
+        "ko": [
+          "카르파티아 산맥에서 가장 중요한 지역은 A 거점이 위치한 산악 지대입니다.",
+          "이 산을 장악한 팀은 A뿐만 아니라 B와 C 거점까지 폭넓게 통제할 수 있으며, 상황에 따라 적 스폰 지역까지 직접 압박할 수 있습니다.",
+          "따라서 산을 확보했다면 불필요하게 내려오기보다는 고지대를 유지하는 것이 좋습니다. 반대로 산악 지대를 빼앗겼다면 다른 지역보다 우선적으로 탈환하는 것을 추천합니다."
+        ]
       },
       "folder": "Carpathians",
       "variations": [
@@ -415,18 +619,25 @@
       "name": "Eastern Europe",
       "aliases": "동유럽",
       "slug": "eastern-europe",
-      "updated": "2026-08-31",
+      "updated": "2026-09-03",
+      "updatedAt": "2026-09-03T01:49:56Z",
       "br": {
         "min": 1
       },
       "tacticalSummary": {
         "en": [
-          "Long-range engagements dominate the north-south corridors.",
-          "Fast vehicles can contest the eastern flank early, while the central urban area favors close-range fighting."
+          "Point B is the most important objective on Eastern Europe, while points A and C are commonly divided between the two teams at the beginning of the match.",
+          "There are two major flanking routes: the northern urban area and the southern open fields. In most situations, the northern route provides the safer approach.",
+          "From point B, vehicles can fire into the flanks of enemies fighting around both A and C. Because of this, an early northern flank that helps establish control around B is often an effective opening strategy.",
+          "Once your team gains the advantage, the northern hill becomes an especially powerful position. From there, vehicles can pressure the enemy spawn while also maintaining firing opportunities toward the southern urban area.",
+          "The southern fields are easier to defend than to attack, making them less suitable for an early breakthrough. They are generally more useful later in the match when attempting to apply pressure toward the enemy spawn."
         ],
         "ko": [
-          "남북으로 이어지는 주요 통로에서는 장거리 교전이 중심이 됩니다.",
-          "기동력이 뛰어난 차량은 초반에 동쪽 측면을 선점할 수 있으며, 중앙 시가지는 근거리 전투에 유리합니다."
+          "동유럽에서는 B 거점이 가장 중요한 지역이며, 전투 초반에는 A와 C 거점을 양 팀이 하나씩 나누어 확보하는 경우가 많습니다.",
+          "주요 우회로는 북쪽 시가지와 남쪽 벌판으로 나뉘는데, 일반적으로 북쪽 시가지를 이용하는 편이 보다 안전합니다.",
+          "B 거점에서는 A와 C 거점으로 향하는 적의 측면을 사격할 수 있기 때문에 초반부터 북쪽을 통해 우회하여 B 주변의 주도권을 확보하는 전략이 효과적입니다.",
+          "아군이 전투에서 우위를 확보했다면 북쪽 언덕은 더욱 강력한 위치가 됩니다. 이곳에서는 적 스폰 지역을 압박하면서 동시에 남쪽 시가지까지 견제할 수 있습니다.",
+          "반대로 남쪽 벌판은 방어하기는 쉽지만 공격 측에서 돌파하기는 어렵습니다. 따라서 초반 돌파로 사용하기보다는 전투 후반에 적 스폰 지역을 압박하기 위한 경로로 활용하는 편이 좋습니다."
         ]
       },
       "folder": "Eastern Europe",

@@ -3,7 +3,7 @@
 import { watch } from "node:fs";
 import { promises as fs } from "node:fs";
 import path from "node:path";
-import { fileURLToPath } from "node:url";
+import { fileURLToPath, pathToFileURL } from "node:url";
 
 const SCRIPT_DIR = path.dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = path.resolve(SCRIPT_DIR, "..");
@@ -313,7 +313,7 @@ async function buildCatalog() {
 
 function replacePageValue(source, pattern, replacement, label) {
   if (!pattern.test(source)) throw new Error(`Map route template is missing ${label}`);
-  return source.replace(pattern, replacement);
+  return source.replace(pattern, () => replacement);
 }
 
 function mapPreviewUrl(map) {
@@ -323,16 +323,21 @@ function mapPreviewUrl(map) {
   return `https://wardevops.github.io/img/${encodeUrlPath(folder)}/${encodeURIComponent(image)}`;
 }
 
-function renderTacticalSummaryCopy(map) {
-  const sentences = map.tacticalSummary?.en || [];
-  const paragraphs = sentences.map(sentence => `\n                <p>${escapeHtml(sentence)}</p>`).join("");
-  return `<blockquote id="map-tactical-summary-copy">${paragraphs}\n                </blockquote>`;
+function initialTacticalSummary(map) {
+  const language = ["en", "ko"].find(language => map.tacticalSummary?.[language]?.length);
+  return { language: language || "en", sentences: map.tacticalSummary?.[language] || [] };
 }
 
-function renderMapRoutePage(rootPage, map) {
+function renderTacticalSummaryCopy({ language, sentences }) {
+  const paragraphs = sentences.map(sentence => `\n                <p>${escapeHtml(sentence)}</p>`).join("");
+  return `<blockquote id="map-tactical-summary-copy" lang="${language}">${paragraphs}\n                </blockquote>`;
+}
+
+export function renderMapRoutePage(rootPage, map) {
+  const summary = initialTacticalSummary(map);
   const title = `War Thunder ${escapeHtml(map.name)} Map Guide | WarDevOps`;
   const heading = `${escapeHtml(map.name)} War Thunder Map Guide`;
-  const description = escapeHtml(map.tacticalSummary?.en?.join(" ") || `Explore the ${map.name} tactical map, team positions, routes, markers, and key combat areas for War Thunder Ground Battles.`);
+  const description = escapeHtml(summary.sentences.join(" ") || `Explore the ${map.name} tactical map, team positions, routes, markers, and key combat areas for War Thunder Ground Battles.`);
   const canonical = `https://wardevops.github.io/maps/${map.slug}/`;
   const preview = mapPreviewUrl(map);
   let page = rootPage;
@@ -350,7 +355,10 @@ function renderMapRoutePage(rootPage, map) {
   page = replacePageValue(page, /<meta name="twitter:image" content="[^"]*">/, `<meta name="twitter:image" content="${preview}">`, "X image");
   page = replacePageValue(page, /<title>[^<]*<\/title>/, `<title>${title}</title>`, "document title");
   page = replacePageValue(page, /<h1 class="seo-title" id="page-title">[^<]*<\/h1>/, `<h1 class="seo-title" id="page-title">${heading}</h1>`, "page heading");
-  page = replacePageValue(page, /<blockquote id="map-tactical-summary-copy">[\s\S]*?<\/blockquote>/, renderTacticalSummaryCopy(map), "tactical summary copy");
+  // Native details keeps the body in the initial HTML while starting collapsed.
+  // Only maps without a summary hide the entire section until editing is enabled.
+  page = replacePageValue(page, /<details\b[^>]*\bid="map-tactical-summary"[^>]*>/, `<details class="map-tactical-summary" id="map-tactical-summary" aria-labelledby="map-tactical-summary-title" data-map-name="${escapeHtml(map.name)}"${summary.sentences.length ? "" : " hidden"}>`, "tactical summary section");
+  page = replacePageValue(page, /<blockquote id="map-tactical-summary-copy"[^>]*>[\s\S]*?<\/blockquote>/, renderTacticalSummaryCopy(summary), "tactical summary copy");
   return page;
 }
 
@@ -430,9 +438,10 @@ async function generate() {
   }
 }
 
-await generate();
+const isMain = process.argv[1] && import.meta.url === pathToFileURL(path.resolve(process.argv[1])).href;
+if (isMain) await generate();
 
-if (WATCH_MODE) {
+if (isMain && WATCH_MODE) {
   let timer = null;
   console.log("Watching img/, map metadata, and Maptactic.json. Press Ctrl+C to stop.");
   const scheduleGenerate = () => {

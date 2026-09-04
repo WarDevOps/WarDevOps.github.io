@@ -35,6 +35,9 @@ jobs:
       - name: Generate map catalog
         run: node scripts/generate-map-catalog.mjs
 
+      - name: Verify initial tactical summary HTML
+        run: node --test scripts/test-map-summary-html.mjs
+
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
 

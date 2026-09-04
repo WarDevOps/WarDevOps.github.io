@@ -20,9 +20,9 @@
     "Cargo Port": "2026-09-03",
     "Carpathians": "2026-09-04",
     "Eastern Europe": "2026-09-03",
-    "European Province": "2026-08-16",
-    "Fields of Normandy": "2026-08-18",
-    "Fields of Poland": "2026-08-17",
+    "European Province": "2026-09-04",
+    "Fields of Normandy": "2026-09-04",
+    "Fields of Poland": "2026-09-04",
     "Finland": "2026-08-16",
     "Fire Arc": "2026-08-31",
     "Flanders": "2026-08-30",
@@ -37,9 +37,9 @@
     "Maginot Line": "2026-08-16",
     "Middle East": "2026-08-18",
     "Mozdok": "2026-08-31",
-    "Normandy": "2026-08-18",
+    "Normandy": "2026-09-04",
     "North Holland": "2026-09-02",
-    "Poland": "2026-08-17",
+    "Poland": "2026-09-04",
     "Port Novorossiysk": "2026-08-16",
     "Pradesh": "2026-08-31",
     "Red Desert": "2026-08-25",
@@ -79,7 +79,12 @@
     "Eastern Europe": "2026-09-03T01:49:56Z",
     "Golden Quarry": "2026-09-02T10:46:07Z",
     "North Holland": "2026-09-02T03:25:27Z",
-    "White Rock Fortress": "2026-09-02T04:58:42Z"
+    "White Rock Fortress": "2026-09-02T04:58:42Z",
+    "European Province": "2026-09-04T05:43:30Z",
+    "Poland": "2026-09-04T05:44:36Z",
+    "Normandy": "2026-09-04T05:44:50Z",
+    "Fields of Normandy": "2026-09-04T05:43:38Z",
+    "Fields of Poland": "2026-09-04T05:43:58Z"
   },
   "tacticalSummaries": {
     "Eastern Europe": {
@@ -294,6 +299,61 @@
         "카르파티아 산맥에서 가장 중요한 지역은 A 거점이 위치한 산악 지대입니다.",
         "이 산을 장악한 팀은 A뿐만 아니라 B와 C 거점까지 폭넓게 통제할 수 있으며, 상황에 따라 적 스폰 지역까지 직접 압박할 수 있습니다.",
         "따라서 산을 확보했다면 불필요하게 내려오기보다는 고지대를 유지하는 것이 좋습니다. 반대로 산악 지대를 빼앗겼다면 다른 지역보다 우선적으로 탈환하는 것을 추천합니다."
+      ]
+    },
+    "Poland": {
+      "en": [
+        "All three capture points on Poland are located within urban areas, and none of them are positioned especially close to either team's spawn. As a result, large and chaotic engagements often develop across several parts of the map from the beginning of the match.",
+        "For vehicles with good gun depression and mobility, the southern high ground is an excellent flanking route. It provides a relatively safe approach while offering significant tactical advantages once a strong position has been established.",
+        "A flank through the northern fields can potentially lead directly toward the enemy spawn, but most of the route crosses exposed terrain. Vehicles attempting this maneuver are frequently spotted before completing the flank, making it a high-risk option with limited consistency.",
+        "The lake between points B and C freezes over on the winter version of the map. When this happens, vehicles can attempt a risky crossing directly over the ice and approach the enemy from an unexpected direction."
+      ],
+      "ko": [
+        "폴란드는 모든 거점이 시가지에 위치해 있으며, 특정 거점이 어느 한 팀의 스폰 지역에 특별히 가깝지도 않습니다. 이 때문에 전투 초반부터 여러 지역에서 대규모 난전이 발생하는 경우가 많습니다.",
+        "부각과 기동성이 좋은 전차라면 남쪽 고지대를 이용하는 것을 추천합니다. 비교적 안정적으로 접근할 수 있으면서도 성공적으로 위치를 잡았을 때 얻을 수 있는 이점이 큰 우회로입니다.",
+        "북쪽 벌판을 통한 우회는 성공할 경우 곧바로 적 스폰 지역을 압박할 수 있지만, 대부분의 경로가 개활지에 노출되어 있어 이동 중 발각될 가능성이 높습니다. 따라서 위험에 비해 기대할 수 있는 성과가 크지 않아 일반적으로 추천하지 않습니다.",
+        "B와 C 거점 사이에 위치한 호수는 겨울 버전에서 얼어붙습니다. 이 경우 얼어붙은 호수를 직접 횡단하여 적의 예상 밖 방향으로 진입하는 위험한 우회 전술을 시도할 수 있습니다."
+      ]
+    },
+    "Normandy": {},
+    "European Province": {
+      "en": [
+        "European Province is an expanded version of Eastern Europe. Because of the larger battlefield, engagement distances are longer and the frontline is less densely populated. As a result, the central urban area around point B is considerably easier to break through than on Eastern Europe.",
+        "Point A is located in the middle of a large open plain. Once captured and properly defended, the position can be relatively easy to hold. However, attacking across the same open ground is extremely difficult because there is very little cover available to advancing vehicles.",
+        "Point C is surrounded by forest, which generally favors the attacking side by providing concealment during the approach. Rather than pushing directly onto the capture point, it is usually better to use the forest to flank the enemy, collapse their defensive line, and then secure C afterward."
+      ],
+      "ko": [
+        "유럽 지방은 동유럽을 확장한 형태의 맵으로, 전장이 넓어진 만큼 교전 거리가 길어지고 전선의 밀도도 낮아졌습니다. 이 때문에 B 거점 주변의 중앙 시가지는 동유럽에 비해 비교적 쉽게 돌파할 수 있습니다.",
+        "A 거점은 넓은 평야 한가운데에 위치해 있어 일단 점령하고 방어선을 구축하면 유지하기 어렵지 않습니다. 반면 공격하는 입장에서는 엄폐물이 거의 없는 평야를 가로질러야 하기 때문에 정면 공세가 매우 불리합니다.",
+        "C 거점은 주변이 숲으로 둘러싸여 있어 방어 측보다 공격 측이 은폐된 상태로 접근하기 쉽습니다. 따라서 C 거점으로 바로 진입하기보다는 먼저 숲을 이용해 측면으로 우회하여 적의 전선을 무너뜨린 뒤 점령을 시도하는 것을 추천합니다."
+      ]
+    },
+    "Fields of Normandy": {
+      "en": [
+        "노르망디의 들판에서는 B 거점이 가장 중요한 지역입니다. 주요 전선의 우회로 대부분이 B 거점 주변에 집중되어 있으며, 이곳에서 우회에 성공하면 적의 양쪽 스폰 지역을 직접 압박할 수 있습니다.",
+        "A 거점 주변은 구릉지로 이루어져 있어 양측이 지형을 활용한 헐다운 교전을 벌이는 경우가 많고, 장시간 교착 상태가 발생하기 쉽습니다.",
+        "C 거점은 반대로 거의 완전한 평야에 위치해 있어 엄폐물이 부족하며, 정면으로 돌파하기가 매우 어렵습니다.",
+        "결국 A와 C 전선이 교착 상태에 빠져 있는 동안 B 거점 주변에서 먼저 우회에 성공하여 상대 전선을 무너뜨리는 쪽이 경기의 주도권을 가져가는 경우가 많습니다."
+      ],
+      "ko": [
+        "노르망디의 들판에서는 B 거점이 가장 중요한 지역입니다. 주요 전선의 우회로 대부분이 B 거점 주변에 집중되어 있으며, 이곳에서 우회에 성공하면 적의 양쪽 스폰 지역을 직접 압박할 수 있습니다.",
+        "A 거점 주변은 구릉지로 이루어져 있어 양측이 지형을 활용한 헐다운 교전을 벌이는 경우가 많고, 장시간 교착 상태가 발생하기 쉽습니다.",
+        "C 거점은 반대로 거의 완전한 평야에 위치해 있어 엄폐물이 부족하며, 정면으로 돌파하기가 매우 어렵습니다.",
+        "결국 A와 C 전선이 교착 상태에 빠져 있는 동안 B 거점 주변에서 먼저 우회에 성공하여 상대 전선을 무너뜨리는 쪽이 경기의 주도권을 가져가는 경우가 많습니다."
+      ]
+    },
+    "Fields of Poland": {
+      "en": [
+        "Fields of Poland is an expanded version of Poland. The northern half of the battlefield consists of open plains covered with dense vegetation, while the southern half combines rolling terrain with large forested areas.",
+        "Point A is surrounded by forest, but the objective itself is separated by wide areas of open ground. This makes it difficult for attacking vehicles to approach safely and leaves them vulnerable to long-range fire during a direct breakthrough.",
+        "Point C offers much stronger flanking opportunities. A long forest runs across the far southern edge of the map, allowing vehicles to move along the flank while remaining concealed from much of the enemy team.",
+        "When attacking C, it is therefore generally better to use the southern forest as a concealed flanking route and approach the enemy from the side or rear rather than crossing the open ground directly."
+      ],
+      "ko": [
+        "폴란드의 들판은 폴란드를 확장한 형태의 대형 맵입니다. 북쪽은 빽빽한 초목이 펼쳐진 평야로 이루어져 있으며, 남쪽은 구릉지와 숲이 혼합된 형태입니다.",
+        "A 거점 주변은 숲 사이에 넓은 평야가 형성되어 있어 공격 측이 엄폐된 상태로 접근하기 어렵습니다. 따라서 정면 돌파를 시도하면 장거리 사격에 노출되기 쉬워 공격하기 까다로운 지역입니다.",
+        "반면 C 거점 주변에서는 맵 최남단의 숲이 동서 방향으로 길게 이어져 있습니다. 이 숲을 이용하면 적에게 발각될 가능성을 줄인 상태로 측면을 따라 이동할 수 있어 효과적인 우회 공격이 가능합니다.",
+        "따라서 C 거점을 공격할 때는 개활지를 직접 횡단하기보다는 남쪽 숲을 이용하여 은폐된 상태로 우회한 뒤 적의 측면이나 후방을 공격하는 것을 추천합니다."
       ]
     }
   },
@@ -6775,19 +6835,6 @@
         "parentTankId": "european-province-red-unit-05"
       },
       {
-        "id": "european-province-red-unit-06",
-        "type": "mainBattleTankRed",
-        "x": 49.38,
-        "y": 53.12
-      },
-      {
-        "id": "european-province-red-role-06",
-        "type": "battleLine",
-        "x": 49.38,
-        "y": 53.12,
-        "parentTankId": "european-province-red-unit-06"
-      },
-      {
         "id": "european-province-red-unit-07",
         "type": "antiAirRed",
         "x": 3.61,
@@ -6968,19 +7015,6 @@
         "x": 46.67,
         "y": 40.9,
         "parentTankId": "european-province-blue-unit-07"
-      },
-      {
-        "id": "european-province-blue-unit-08",
-        "type": "mainBattleTank",
-        "x": 67.15,
-        "y": 47.01
-      },
-      {
-        "id": "european-province-blue-role-06",
-        "type": "battleLine",
-        "x": 67.15,
-        "y": 47.01,
-        "parentTankId": "european-province-blue-unit-08"
       },
       {
         "id": "european-province-blue-unit-09",
@@ -15518,7 +15552,11 @@
         "x": 32.89,
         "y": 17.37
       }
-    ]
+    ],
+    "Berlin::domination-1|Red": [],
+    "Breslau::domination-1|Red": [],
+    "Fields of Poland::domination-1|Red": [],
+    "Flanders::domination-1|Red": []
   },
   "annotations": {
     "38th Parallel::domination-1|Red": [
@@ -31420,28 +31458,6 @@
           {
             "x": 13.45,
             "y": 5.85
-          }
-        ]
-      },
-      {
-        "id": "european-province-blue-route-09",
-        "type": "route",
-        "points": [
-          {
-            "x": 55.66,
-            "y": 52.61
-          },
-          {
-            "x": 58.1,
-            "y": 53.23
-          },
-          {
-            "x": 54.67,
-            "y": 57.12
-          },
-          {
-            "x": 53.78,
-            "y": 58.19
           }
         ]
       },
@@ -48023,8 +48039,12 @@
           }
         ]
       }
-    ]
+    ],
+    "Berlin::domination-1|Red": [],
+    "Breslau::domination-1|Red": [],
+    "Fields of Poland::domination-1|Red": [],
+    "Flanders::domination-1|Red": []
   },
-  "updatedAt": "2026-09-04T03:02:28.855Z",
-  "exportedAt": "2026-09-04T03:02:31.843Z"
+  "updatedAt": "2026-09-04T05:44:50.278Z",
+  "exportedAt": "2026-09-04T11:37:43.552Z"
 }

@@ -360,11 +360,13 @@ import { initDiscordMemberCount } from './discord-stats.js';
       if (Object.hasOwn(markerLayout.tacticalSummaries, map.name)) return markerLayout.tacticalSummaries[map.name];
       return map.tacticalSummary;
     }
-    function mapTacticalSummarySentences(map, language = state.language) {
+    function mapTacticalSummaryLanguage(map, language = state.language) {
       const summaries = currentMapTacticalSummary(map);
-      if (!summaries || typeof summaries !== "object") return [];
-      const sentences = summaries[language] || summaries.en;
-      return Array.isArray(sentences) ? sentences : [];
+      return [language, "en", "ko"].find(candidate => Array.isArray(summaries?.[candidate]) && summaries[candidate].length);
+    }
+    function mapTacticalSummarySentences(map, language = state.language) {
+      const summaryLanguage = mapTacticalSummaryLanguage(map, language);
+      return currentMapTacticalSummary(map)?.[summaryLanguage] || [];
     }
     function tacticalSummaryInputSentences(input) {
       return input.value.split(/\r?\n/).map(sentence => sentence.trim()).filter(Boolean);
@@ -489,18 +491,28 @@ import { initDiscordMemberCount } from './discord-stats.js';
       mapTacticalSummary.dataset.mapName = state.selected.name;
       mapTacticalSummary.hidden = summarySentences.length === 0 && !state.editMode;
       editMapTacticalSummary.hidden = !state.editMode;
-      const summaryParagraphs = summarySentences.map(sentence => {
-        const paragraph = document.createElement("p");
-        paragraph.textContent = sentence;
-        return paragraph;
-      });
-      if (!summaryParagraphs.length) {
-        const emptySummary = document.createElement("p");
-        emptySummary.className = "map-tactical-summary-empty";
-        emptySummary.textContent = t("tacticalSummaryEmpty");
-        summaryParagraphs.push(emptySummary);
+      mapTacticalSummaryCopy.lang = mapTacticalSummaryLanguage(state.selected) || state.language;
+      // Reuse the pre-rendered body; rebuild only for changed content or language.
+      const summaryUnchanged = summarySentences.length > 0
+        && mapTacticalSummaryCopy.children.length === summarySentences.length
+        && summarySentences.every((sentence, index) => {
+          const paragraph = mapTacticalSummaryCopy.children[index];
+          return paragraph.tagName === "P" && !paragraph.className && paragraph.textContent === sentence;
+        });
+      if (!summaryUnchanged) {
+        const summaryParagraphs = summarySentences.map(sentence => {
+          const paragraph = document.createElement("p");
+          paragraph.textContent = sentence;
+          return paragraph;
+        });
+        if (!summaryParagraphs.length) {
+          const emptySummary = document.createElement("p");
+          emptySummary.className = "map-tactical-summary-empty";
+          emptySummary.textContent = t("tacticalSummaryEmpty");
+          summaryParagraphs.push(emptySummary);
+        }
+        mapTacticalSummaryCopy.replaceChildren(...summaryParagraphs);
       }
-      mapTacticalSummaryCopy.replaceChildren(...summaryParagraphs);
       mapBattleRating.textContent = mapBattleRatingLabel(state.selected);
       mapImage.alt = `${mapLabel(state.selected)} ${mapVariationLabel(state.selected)} ${state.team}`;
       const mapUpdated = state.selected.updated;
