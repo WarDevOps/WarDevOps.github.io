@@ -18,7 +18,7 @@
     "Breslau": "2026-09-03",
     "Campania": "2026-09-03",
     "Cargo Port": "2026-09-03",
-    "Carpathians": "2026-09-03",
+    "Carpathians": "2026-09-04",
     "Eastern Europe": "2026-09-03",
     "European Province": "2026-08-16",
     "Fields of Normandy": "2026-08-18",
@@ -68,18 +68,18 @@
     "Aral Sea": "2026-09-03T01:47:29Z",
     "Arctic Pier": "2026-09-03T01:59:37Z",
     "Arctic Polar Base": "2026-09-03T01:47:54Z",
-    "Ash River": "2026-09-01T16:50:15Z",
-    "Attica": "2026-09-03T01:48:21Z",
-    "Battle of Hürtgen Forest": "2026-09-03T01:48:50Z",
-    "Golden Quarry": "2026-09-02T10:46:07Z",
-    "North Holland": "2026-09-02T03:25:27Z",
-    "White Rock Fortress": "2026-09-02T04:58:42Z",
     "Ardennes": "2026-09-03T01:48:08Z",
+    "Ash River": "2026-09-01T16:50:15Z",
+    "Attica": "2026-09-03T02:06:24Z",
+    "Battle of Hürtgen Forest": "2026-09-03T01:48:50Z",
     "Breslau": "2026-09-03T01:49:10Z",
     "Campania": "2026-09-03T01:49:21Z",
     "Cargo Port": "2026-09-03T01:49:31Z",
-    "Carpathians": "2026-09-03T01:49:39Z",
-    "Eastern Europe": "2026-09-03T01:49:56Z"
+    "Carpathians": "2026-09-04T03:02:19Z",
+    "Eastern Europe": "2026-09-03T01:49:56Z",
+    "Golden Quarry": "2026-09-02T10:46:07Z",
+    "North Holland": "2026-09-02T03:25:27Z",
+    "White Rock Fortress": "2026-09-02T04:58:42Z"
   },
   "tacticalSummaries": {
     "Eastern Europe": {
@@ -4625,7 +4625,8 @@
         "id": "attica-blue-unit-10",
         "type": "mainBattleTank",
         "x": 74.58,
-        "y": 40.07
+        "y": 40.07,
+        "comment": "Smoke shell recommended"
       },
       {
         "id": "attica-blue-role-08",
@@ -4651,7 +4652,8 @@
         "id": "attica-blue-unit-13",
         "type": "mainBattleTank",
         "x": 78.47,
-        "y": 42.22
+        "y": 42.22,
+        "comment": "Smoke shell recommended"
       },
       {
         "id": "attica-blue-role-11",
@@ -4677,7 +4679,8 @@
         "id": "attica-blue-unit-15",
         "type": "mainBattleTank",
         "x": 75,
-        "y": 45.65
+        "y": 45.65,
+        "comment": "Smoke shell recommended"
       },
       {
         "id": "attica-blue-role-13",
@@ -4690,7 +4693,8 @@
         "id": "attica-blue-unit-17",
         "type": "mainBattleTank",
         "x": 86.11,
-        "y": 48.4
+        "y": 48.4,
+        "comment": "Smoke shell recommended"
       },
       {
         "id": "attica-blue-role-15",
@@ -4899,7 +4903,8 @@
         "id": "attica-red-unit-07",
         "type": "mainBattleTankRed",
         "x": 86.11,
-        "y": 50.76
+        "y": 50.76,
+        "comment": "Smoke shell recommended"
       },
       {
         "id": "attica-red-role-07",
@@ -4912,7 +4917,8 @@
         "id": "attica-red-unit-08",
         "type": "mainBattleTankRed",
         "x": 69.1,
-        "y": 50.97
+        "y": 50.97,
+        "comment": "Smoke shell recommended"
       },
       {
         "id": "attica-red-role-08",
@@ -4925,7 +4931,8 @@
         "id": "attica-red-unit-10",
         "type": "mainBattleTankRed",
         "x": 78.96,
-        "y": 56.25
+        "y": 56.25,
+        "comment": "Smoke shell recommended"
       },
       {
         "id": "attica-red-role-10",
@@ -5073,7 +5080,8 @@
         "id": "mtgknijx-h7sm4v",
         "type": "mainBattleTankRed",
         "x": 75.09,
-        "y": 47.78
+        "y": 47.78,
+        "comment": "Smoke shell recommended"
       },
       {
         "id": "mtgknjwu-gwtqtn",
@@ -6097,7 +6105,7 @@
       },
       {
         "id": "carpathians-blue-role-01",
-        "type": "spawnKill",
+        "type": "sniper",
         "x": 50.49,
         "y": 7.71,
         "parentTankId": "carpathians-blue-unit-02"
@@ -6128,19 +6136,6 @@
         "parentTankId": "carpathians-blue-unit-05"
       },
       {
-        "id": "carpathians-blue-unit-06",
-        "type": "mainBattleTank",
-        "x": 43.96,
-        "y": 33.47
-      },
-      {
-        "id": "carpathians-blue-role-03",
-        "type": "battleLine",
-        "x": 43.96,
-        "y": 33.47,
-        "parentTankId": "carpathians-blue-unit-06"
-      },
-      {
         "id": "carpathians-blue-unit-07",
         "type": "mainBattleTank",
         "x": 55.69,
@@ -6148,7 +6143,7 @@
       },
       {
         "id": "carpathians-blue-role-04",
-        "type": "highRiskSpot",
+        "type": "sniper",
         "x": 55.69,
         "y": 37.01,
         "parentTankId": "carpathians-blue-unit-07"
@@ -6212,7 +6207,7 @@
       },
       {
         "id": "carpathians-blue-role-08",
-        "type": "sniper",
+        "type": "spawnKill",
         "x": 38.12,
         "y": 50,
         "parentTankId": "carpathians-blue-unit-13"
@@ -6229,19 +6224,6 @@
         "x": 43.47,
         "y": 50.42,
         "parentTankId": "carpathians-blue-unit-14"
-      },
-      {
-        "id": "carpathians-blue-unit-15",
-        "type": "mainBattleTank",
-        "x": 34.65,
-        "y": 51.53
-      },
-      {
-        "id": "carpathians-blue-role-10",
-        "type": "highRiskSpot",
-        "x": 34.65,
-        "y": 51.53,
-        "parentTankId": "carpathians-blue-unit-15"
       },
       {
         "id": "carpathians-blue-unit-16",
@@ -6290,7 +6272,7 @@
       },
       {
         "id": "carpathians-blue-role-14",
-        "type": "highRiskSpot",
+        "type": "sniper",
         "x": 79.17,
         "y": 67.57,
         "parentTankId": "carpathians-blue-unit-19"
@@ -6355,7 +6337,7 @@
       },
       {
         "id": "carpathians-blue-role-19",
-        "type": "highRiskSpot",
+        "type": "sniper",
         "x": 84.65,
         "y": 80.42,
         "parentTankId": "carpathians-blue-unit-24"
@@ -6474,7 +6456,7 @@
       },
       {
         "id": "carpathians-red-role-06",
-        "type": "highRiskSpot",
+        "type": "battleLine",
         "x": 45.9,
         "y": 38.61,
         "parentTankId": "carpathians-red-unit-06"
@@ -6491,19 +6473,6 @@
         "x": 55.14,
         "y": 42.92,
         "parentTankId": "carpathians-red-unit-07"
-      },
-      {
-        "id": "carpathians-red-unit-08",
-        "type": "mainBattleTankRed",
-        "x": 38.19,
-        "y": 43.33
-      },
-      {
-        "id": "carpathians-red-role-08",
-        "type": "battleLine",
-        "x": 38.19,
-        "y": 43.33,
-        "parentTankId": "carpathians-red-unit-08"
       },
       {
         "id": "carpathians-red-unit-09",
@@ -6729,6 +6698,12 @@
         "type": "antiAirRed",
         "x": 38.4,
         "y": 94.79
+      },
+      {
+        "id": "mtmd9we6-5fqlb7",
+        "type": "smokeshell",
+        "x": 73.85,
+        "y": 82.89
       }
     ],
     "Eastern Europe::domination-1|Red": [],
@@ -29301,60 +29276,6 @@
     ],
     "Carpathians::domination-1|Blue": [
       {
-        "id": "carpathians-blue-aim-01",
-        "type": "aimHere",
-        "parentTankId": "carpathians-blue-unit-23",
-        "startX": 71.88,
-        "startY": 80.35,
-        "endX": 69.66,
-        "endY": 73.19
-      },
-      {
-        "id": "carpathians-blue-aim-02",
-        "type": "aimHere",
-        "parentTankId": "carpathians-blue-unit-15",
-        "startX": 34.65,
-        "startY": 51.53,
-        "endX": 25.34,
-        "endY": 66.79
-      },
-      {
-        "id": "carpathians-blue-aim-03",
-        "type": "aimHere",
-        "parentTankId": "carpathians-blue-unit-16",
-        "startX": 52.92,
-        "startY": 53.33,
-        "endX": 49.2,
-        "endY": 49.89
-      },
-      {
-        "id": "carpathians-blue-aim-04",
-        "type": "aimHere",
-        "parentTankId": "carpathians-blue-unit-24",
-        "startX": 84.65,
-        "startY": 80.42,
-        "endX": 79.07,
-        "endY": 74.74
-      },
-      {
-        "id": "carpathians-blue-aim-05",
-        "type": "aimHere",
-        "parentTankId": "carpathians-blue-unit-18",
-        "startX": 32.64,
-        "startY": 67.43,
-        "endX": 35.3,
-        "endY": 72.53
-      },
-      {
-        "id": "carpathians-blue-aim-06",
-        "type": "aimHere",
-        "parentTankId": "carpathians-blue-unit-23",
-        "startX": 71.88,
-        "startY": 80.35,
-        "endX": 61.74,
-        "endY": 67.43
-      },
-      {
         "id": "carpathians-blue-aim-07",
         "type": "aimHere",
         "parentTankId": "carpathians-blue-unit-05",
@@ -29362,15 +29283,6 @@
         "startY": 32.08,
         "endX": 24.75,
         "endY": 42.17
-      },
-      {
-        "id": "carpathians-blue-aim-08",
-        "type": "aimHere",
-        "parentTankId": "carpathians-blue-unit-02",
-        "startX": 50.49,
-        "startY": 7.71,
-        "endX": 35.2,
-        "endY": 40.27
       },
       {
         "id": "carpathians-blue-aim-09",
@@ -29382,61 +29294,595 @@
         "endY": 76.99
       },
       {
-        "id": "carpathians-blue-aim-10",
+        "id": "mtmcr13l-g1antj",
         "type": "aimHere",
-        "parentTankId": "carpathians-blue-unit-17",
-        "startX": 5.56,
-        "startY": 63.68,
-        "endX": 11.6,
-        "endY": 70.42
+        "parentTankId": "carpathians-blue-unit-22",
+        "startX": 65.56,
+        "startY": 76.67,
+        "endX": 33.51,
+        "endY": 57.09
       },
       {
-        "id": "carpathians-blue-aim-11",
+        "id": "mtmcy2d6-qh5alp",
         "type": "aimHere",
-        "parentTankId": "carpathians-blue-unit-18",
-        "startX": 32.64,
-        "startY": 67.43,
-        "endX": 35.41,
-        "endY": 60.43
+        "parentTankId": "carpathians-blue-unit-09",
+        "startX": 46.11,
+        "startY": 39.44,
+        "endX": 40.96,
+        "endY": 47.42
       },
       {
-        "id": "carpathians-blue-aim-12",
+        "id": "mtmcy6a8-farrsz",
         "type": "aimHere",
-        "parentTankId": "carpathians-blue-unit-18",
-        "startX": 32.64,
-        "startY": 67.43,
-        "endX": 29.15,
-        "endY": 68.46
+        "parentTankId": "carpathians-blue-unit-08",
+        "startX": 42.64,
+        "startY": 38.47,
+        "endX": 38.65,
+        "endY": 38.91
       },
       {
-        "id": "carpathians-blue-aim-13",
+        "id": "mtmcyjpw-etq8iy",
         "type": "aimHere",
-        "parentTankId": "carpathians-blue-unit-16",
-        "startX": 52.92,
-        "startY": 53.33,
-        "endX": 49.61,
-        "endY": 49.52
+        "parentTankId": "carpathians-blue-unit-07",
+        "startX": 55.69,
+        "startY": 37.01,
+        "endX": 72.96,
+        "endY": 77.04
       },
       {
-        "id": "carpathians-blue-aim-14",
+        "id": "mtmcyrii-gbmzkg",
+        "type": "aimHere",
+        "parentTankId": "carpathians-blue-unit-23",
+        "startX": 71.88,
+        "startY": 80.35,
+        "endX": 68.89,
+        "endY": 86.17
+      },
+      {
+        "id": "mtmcz4n4-7icyeu",
         "type": "aimHere",
         "parentTankId": "carpathians-blue-unit-19",
         "startX": 79.17,
         "startY": 67.57,
-        "endX": 75.16,
-        "endY": 65.14
+        "endX": 48.85,
+        "endY": 48.04
+      },
+      {
+        "id": "mtmczei0-r2ogwe",
+        "type": "aimHere",
+        "parentTankId": "carpathians-blue-unit-16",
+        "startX": 52.92,
+        "startY": 53.33,
+        "endX": 47.07,
+        "endY": 82.18
+      },
+      {
+        "id": "mtmczm6k-gf638m",
+        "type": "aimHere",
+        "parentTankId": "carpathians-blue-unit-18",
+        "startX": 32.64,
+        "startY": 67.43,
+        "endX": 42.29,
+        "endY": 85.28
+      },
+      {
+        "id": "mtmczrkd-21s023",
+        "type": "aimHere",
+        "parentTankId": "carpathians-blue-unit-13",
+        "startX": 38.12,
+        "startY": 50,
+        "endX": 45.3,
+        "endY": 84.4
+      },
+      {
+        "id": "mtmczvkp-5h2vys",
+        "type": "aimHere",
+        "parentTankId": "carpathians-blue-unit-17",
+        "startX": 5.56,
+        "startY": 63.68,
+        "endX": 21.19,
+        "endY": 81.56
+      },
+      {
+        "id": "mtmd07vm-8eqll4",
+        "type": "aimHere",
+        "parentTankId": "carpathians-blue-unit-14",
+        "startX": 43.47,
+        "startY": 50.42,
+        "endX": 21.81,
+        "endY": 77.48
+      },
+      {
+        "id": "mtmd0xgc-a8sdz9",
+        "type": "aimHere",
+        "parentTankId": "carpathians-blue-unit-13",
+        "startX": 38.12,
+        "startY": 50,
+        "endX": 19.94,
+        "endY": 71.98
+      },
+      {
+        "id": "mtmd14qq-cmbsph",
+        "type": "aimHere",
+        "parentTankId": "carpathians-blue-unit-02",
+        "startX": 50.49,
+        "startY": 7.71,
+        "endX": 38.65,
+        "endY": 39.71
+      },
+      {
+        "id": "mtmd1jkq-qxuj4o",
+        "type": "aimHere",
+        "parentTankId": "carpathians-blue-unit-25",
+        "startX": 50.97,
+        "startY": 83.47,
+        "endX": 45.3,
+        "endY": 85.37
+      },
+      {
+        "id": "mtmd1qvk-htim63",
+        "type": "aimHere",
+        "parentTankId": "carpathians-blue-unit-26",
+        "startX": 60.97,
+        "startY": 85.97,
+        "endX": 57.45,
+        "endY": 86.7
+      },
+      {
+        "id": "mtmd21ac-gu8cer",
+        "type": "aimHere",
+        "parentTankId": "carpathians-blue-unit-12",
+        "startX": 47.29,
+        "startY": 47.22,
+        "endX": 71.72,
+        "endY": 78.99
+      },
+      {
+        "id": "mtmd2xr2-iuikej",
+        "type": "route",
+        "points": [
+          {
+            "x": 50.89,
+            "y": 8.15
+          },
+          {
+            "x": 54.88,
+            "y": 8.59
+          },
+          {
+            "x": 60.11,
+            "y": 12.58
+          },
+          {
+            "x": 58.07,
+            "y": 19.23
+          },
+          {
+            "x": 58.51,
+            "y": 20.47
+          },
+          {
+            "x": 64.81,
+            "y": 21.36
+          },
+          {
+            "x": 68.89,
+            "y": 21.45
+          },
+          {
+            "x": 71.81,
+            "y": 16.75
+          }
+        ]
+      },
+      {
+        "id": "mtmd33zu-mnrf95",
+        "type": "route",
+        "points": [
+          {
+            "x": 47.7,
+            "y": 36.7
+          },
+          {
+            "x": 51.15,
+            "y": 34.83
+          },
+          {
+            "x": 53.99,
+            "y": 29.6
+          },
+          {
+            "x": 57.18,
+            "y": 21
+          },
+          {
+            "x": 58.33,
+            "y": 20.56
+          }
+        ]
+      },
+      {
+        "id": "mtmd396g-44k6ie",
+        "type": "route",
+        "points": [
+          {
+            "x": 36.61,
+            "y": 31.2
+          },
+          {
+            "x": 41.4,
+            "y": 28.01
+          },
+          {
+            "x": 50.8,
+            "y": 23.4
+          },
+          {
+            "x": 56.92,
+            "y": 21.09
+          }
+        ]
+      },
+      {
+        "id": "mtmd3h2q-n722vd",
+        "type": "route",
+        "points": [
+          {
+            "x": 82.45,
+            "y": 38.56
+          },
+          {
+            "x": 80.32,
+            "y": 40.6
+          },
+          {
+            "x": 77.75,
+            "y": 40.86
+          },
+          {
+            "x": 74.91,
+            "y": 40.86
+          },
+          {
+            "x": 73.58,
+            "y": 40.95
+          }
+        ]
+      },
+      {
+        "id": "mtmd3m5g-8zmc0x",
+        "type": "route",
+        "points": [
+          {
+            "x": 73.85,
+            "y": 41.04
+          },
+          {
+            "x": 65.34,
+            "y": 42.81
+          },
+          {
+            "x": 58.6,
+            "y": 45.92
+          },
+          {
+            "x": 56.92,
+            "y": 47.87
+          },
+          {
+            "x": 53.37,
+            "y": 50.97
+          },
+          {
+            "x": 52.57,
+            "y": 53.28
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "mtmd3y8k-vydlo1",
+        "type": "route",
+        "points": [
+          {
+            "x": 80.68,
+            "y": 57.8
+          },
+          {
+            "x": 83.07,
+            "y": 65.42
+          },
+          {
+            "x": 84.14,
+            "y": 68.88
+          },
+          {
+            "x": 86,
+            "y": 71.01
+          },
+          {
+            "x": 91.23,
+            "y": 72.87
+          },
+          {
+            "x": 92.11,
+            "y": 75.97
+          },
+          {
+            "x": 90.7,
+            "y": 78.19
+          },
+          {
+            "x": 87.42,
+            "y": 80.58
+          },
+          {
+            "x": 84.76,
+            "y": 80.49
+          }
+        ]
+      },
+      {
+        "id": "mtmd45o2-ivu5ar",
+        "type": "aimHere",
+        "parentTankId": "carpathians-blue-unit-24",
+        "startX": 84.65,
+        "startY": 80.42,
+        "endX": 47.61,
+        "endY": 46.27
+      },
+      {
+        "id": "mtmd4gee-0i0llh",
+        "type": "route",
+        "points": [
+          {
+            "x": 91.67,
+            "y": 77.83
+          },
+          {
+            "x": 91.41,
+            "y": 82.36
+          },
+          {
+            "x": 90.96,
+            "y": 86.79
+          },
+          {
+            "x": 87.24,
+            "y": 90.07
+          },
+          {
+            "x": 83.34,
+            "y": 91.13
+          },
+          {
+            "x": 80.15,
+            "y": 90.69
+          }
+        ]
+      },
+      {
+        "id": "mtmd4qby-nmp8fm",
+        "type": "route",
+        "points": [
+          {
+            "x": 72.17,
+            "y": 80.14
+          },
+          {
+            "x": 71.28,
+            "y": 78.1
+          },
+          {
+            "x": 67.91,
+            "y": 77.57
+          },
+          {
+            "x": 65.61,
+            "y": 76.86
+          }
+        ]
+      },
+      {
+        "id": "mtmd4wdb-yjn88i",
+        "type": "route",
+        "points": [
+          {
+            "x": 34.13,
+            "y": 51.77
+          },
+          {
+            "x": 32,
+            "y": 54.25
+          },
+          {
+            "x": 30.94,
+            "y": 57.62
+          },
+          {
+            "x": 32.8,
+            "y": 61.34
+          },
+          {
+            "x": 32.71,
+            "y": 67.37
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "mtmd5da0-mnm13a",
+        "type": "route",
+        "points": [
+          {
+            "x": 84.14,
+            "y": 70.3
+          },
+          {
+            "x": 84.31,
+            "y": 72.96
+          },
+          {
+            "x": 81.74,
+            "y": 75.88
+          },
+          {
+            "x": 77.93,
+            "y": 76.86
+          },
+          {
+            "x": 74.12,
+            "y": 78.46
+          },
+          {
+            "x": 72.08,
+            "y": 80.49
+          },
+          {
+            "x": 71.9,
+            "y": 82.71
+          },
+          {
+            "x": 68.62,
+            "y": 84.84
+          },
+          {
+            "x": 65.34,
+            "y": 86.52
+          },
+          {
+            "x": 62.59,
+            "y": 87.23
+          },
+          {
+            "x": 61.17,
+            "y": 86.43
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "mtmd5puw-lqoiv0",
+        "type": "route",
+        "points": [
+          {
+            "x": 74.74,
+            "y": 88.03
+          },
+          {
+            "x": 77.13,
+            "y": 88.65
+          },
+          {
+            "x": 78.82,
+            "y": 89.8
+          },
+          {
+            "x": 80.23,
+            "y": 90.69
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "mtmd6ebm-wjycvh",
+        "type": "route",
+        "points": [
+          {
+            "x": 59.58,
+            "y": 29.87
+          },
+          {
+            "x": 66.67,
+            "y": 24.11
+          },
+          {
+            "x": 68.44,
+            "y": 22.24
+          }
+        ]
+      },
+      {
+        "id": "mtmd6pp8-6ghnri",
+        "type": "route",
+        "points": [
+          {
+            "x": 33.78,
+            "y": 32.71
+          },
+          {
+            "x": 19.06,
+            "y": 46.98
+          },
+          {
+            "x": 8.15,
+            "y": 60.72
+          },
+          {
+            "x": 5.85,
+            "y": 63.12
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "mtmd78co-b8g855",
+        "type": "route",
+        "points": [
+          {
+            "x": 42.55,
+            "y": 39
+          },
+          {
+            "x": 47.43,
+            "y": 36.87
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "mtmd7gbc-01ymz5",
+        "type": "route",
+        "points": [
+          {
+            "x": 58.96,
+            "y": 30.76
+          },
+          {
+            "x": 56.03,
+            "y": 35.9
+          }
+        ]
+      },
+      {
+        "id": "mtmd7t2t-yfcfi7",
+        "type": "aimHere",
+        "parentTankId": "carpathians-blue-unit-20",
+        "startX": 84.1,
+        "startY": 72.5,
+        "endX": 72.52,
+        "endY": 80.32
+      },
+      {
+        "id": "mtmd7y6o-hwx3qo",
+        "type": "aimHere",
+        "parentTankId": "carpathians-blue-unit-21",
+        "startX": 91.94,
+        "startY": 73.68,
+        "endX": 88.66,
+        "endY": 83.86
+      },
+      {
+        "id": "mtmdaytb-ed15xh",
+        "type": "aimHere",
+        "parentTankId": "carpathians-blue-unit-14",
+        "startX": 43.47,
+        "startY": 50.42,
+        "endX": 47.87,
+        "endY": 81.65
       }
     ],
     "Carpathians::domination-1|Red": [
-      {
-        "id": "carpathians-red-aim-01",
-        "type": "aimHere",
-        "parentTankId": "carpathians-red-unit-18",
-        "startX": 78.47,
-        "startY": 66.25,
-        "endX": 85.44,
-        "endY": 72.48
-      },
       {
         "id": "carpathians-red-aim-02",
         "type": "aimHere",
@@ -29445,33 +29891,6 @@
         "startY": 78.89,
         "endX": 83.6,
         "endY": 73.39
-      },
-      {
-        "id": "carpathians-red-aim-03",
-        "type": "aimHere",
-        "parentTankId": "carpathians-red-unit-06",
-        "startX": 45.9,
-        "startY": 38.61,
-        "endX": 53.28,
-        "endY": 21.58
-      },
-      {
-        "id": "carpathians-red-aim-04",
-        "type": "aimHere",
-        "parentTankId": "carpathians-red-unit-15",
-        "startX": 5.9,
-        "startY": 58.54,
-        "endX": 32.22,
-        "endY": 40.2
-      },
-      {
-        "id": "carpathians-red-aim-05",
-        "type": "aimHere",
-        "parentTankId": "carpathians-red-unit-13",
-        "startX": 48.26,
-        "startY": 49.72,
-        "endX": 59.81,
-        "endY": 55.71
       },
       {
         "id": "carpathians-red-aim-06",
@@ -29483,15 +29902,6 @@
         "endY": 36.7
       },
       {
-        "id": "carpathians-red-aim-07",
-        "type": "aimHere",
-        "parentTankId": "carpathians-red-unit-15",
-        "startX": 5.9,
-        "startY": 58.54,
-        "endX": 30.13,
-        "endY": 47.39
-      },
-      {
         "id": "carpathians-red-aim-08",
         "type": "aimHere",
         "parentTankId": "carpathians-red-unit-19",
@@ -29499,15 +29909,6 @@
         "startY": 69.17,
         "endX": 79.5,
         "endY": 54.26
-      },
-      {
-        "id": "carpathians-red-aim-09",
-        "type": "aimHere",
-        "parentTankId": "carpathians-red-unit-05",
-        "startX": 40.62,
-        "startY": 38.33,
-        "endX": 35.22,
-        "endY": 42.52
       },
       {
         "id": "carpathians-red-aim-10",
@@ -29519,40 +29920,537 @@
         "endY": 30.21
       },
       {
-        "id": "carpathians-red-aim-11",
+        "id": "mtmcg2bm-iqxahe",
+        "type": "aimHere",
+        "parentTankId": "carpathians-red-unit-13",
+        "startX": 48.26,
+        "startY": 49.72,
+        "endX": 57.63,
+        "endY": 59.3
+      },
+      {
+        "id": "mtmcghle-kkztyj",
         "type": "aimHere",
         "parentTankId": "carpathians-red-unit-23",
         "startX": 70.62,
         "startY": 77.57,
-        "endX": 68.84,
-        "endY": 72.54
+        "endX": 55.41,
+        "endY": 38.03
       },
       {
-        "id": "carpathians-red-aim-12",
+        "id": "mtmcgrd2-k66z2c",
         "type": "aimHere",
-        "parentTankId": "carpathians-red-unit-14",
-        "startX": 39.86,
-        "startY": 53.19,
-        "endX": 54.14,
-        "endY": 58.36
+        "parentTankId": "carpathians-red-unit-12",
+        "startX": 77.5,
+        "startY": 48.47,
+        "endX": 79.7,
+        "endY": 39.62
       },
       {
-        "id": "carpathians-red-aim-13",
+        "id": "mtmcgv4o-47w908",
         "type": "aimHere",
-        "parentTankId": "carpathians-red-unit-05",
-        "startX": 40.62,
-        "startY": 38.33,
-        "endX": 34.98,
-        "endY": 36.96
+        "parentTankId": "carpathians-red-unit-02",
+        "startX": 39.38,
+        "startY": 29.17,
+        "endX": 57.89,
+        "endY": 19.67
       },
       {
-        "id": "carpathians-red-aim-14",
+        "id": "mtmcgy16-gg0471",
         "type": "aimHere",
         "parentTankId": "carpathians-red-unit-01",
         "startX": 51.6,
         "startY": 9.65,
-        "endX": 57.7,
-        "endY": 10.09
+        "endX": 47.25,
+        "endY": 32.88
+      },
+      {
+        "id": "mtmch1uv-8lukl9",
+        "type": "aimHere",
+        "parentTankId": "carpathians-red-unit-01",
+        "startX": 51.6,
+        "startY": 9.65,
+        "endX": 60.37,
+        "endY": 11.07
+      },
+      {
+        "id": "mtmch8aq-1cxcep",
+        "type": "aimHere",
+        "parentTankId": "carpathians-red-unit-04",
+        "startX": 30.69,
+        "startY": 35.62,
+        "endX": 39.45,
+        "endY": 38.03
+      },
+      {
+        "id": "mtmchfc2-5in1hr",
+        "type": "aimHere",
+        "parentTankId": "carpathians-red-unit-09",
+        "startX": 34.03,
+        "startY": 46.6,
+        "endX": 40.43,
+        "endY": 37.32
+      },
+      {
+        "id": "mtmchmye-lij5u3",
+        "type": "aimHere",
+        "parentTankId": "carpathians-red-unit-03",
+        "startX": 42.43,
+        "startY": 34.1,
+        "endX": 57.63,
+        "endY": 20.74
+      },
+      {
+        "id": "mtmci07v-09r1me",
+        "type": "aimHere",
+        "parentTankId": "carpathians-red-unit-14",
+        "startX": 39.86,
+        "startY": 53.19,
+        "endX": 76.86,
+        "endY": 66.04
+      },
+      {
+        "id": "mtmci6m9-zrykr2",
+        "type": "aimHere",
+        "parentTankId": "carpathians-red-unit-16",
+        "startX": 59.58,
+        "startY": 61.39,
+        "endX": 53.28,
+        "endY": 47.87
+      },
+      {
+        "id": "mtmcicqj-548e3h",
+        "type": "aimHere",
+        "parentTankId": "carpathians-red-unit-17",
+        "startX": 14.44,
+        "startY": 65.56,
+        "endX": 39.18,
+        "endY": 39
+      },
+      {
+        "id": "mtmciizn-mtqi2k",
+        "type": "aimHere",
+        "parentTankId": "carpathians-red-unit-15",
+        "startX": 5.9,
+        "startY": 58.54,
+        "endX": 29.87,
+        "endY": 36.52
+      },
+      {
+        "id": "mtmcimul-gq6eoe",
+        "type": "aimHere",
+        "parentTankId": "carpathians-red-unit-15",
+        "startX": 5.9,
+        "startY": 58.54,
+        "endX": 39.18,
+        "endY": 38.47
+      },
+      {
+        "id": "mtmciw4a-8mjoek",
+        "type": "aimHere",
+        "parentTankId": "carpathians-red-unit-07",
+        "startX": 55.14,
+        "startY": 42.92,
+        "endX": 77.31,
+        "endY": 42.55
+      },
+      {
+        "id": "mtmcj65n-zvhqsh",
+        "type": "aimHere",
+        "parentTankId": "carpathians-red-unit-10",
+        "startX": 39.86,
+        "startY": 47.29,
+        "endX": 44.15,
+        "endY": 40.69
+      },
+      {
+        "id": "mtmcj8tn-egpii0",
+        "type": "aimHere",
+        "parentTankId": "carpathians-red-unit-10",
+        "startX": 39.86,
+        "startY": 47.29,
+        "endX": 48.23,
+        "endY": 43.97
+      },
+      {
+        "id": "mtmcjm9j-ibmu7a",
+        "type": "aimHere",
+        "parentTankId": "carpathians-red-unit-05",
+        "startX": 40.62,
+        "startY": 38.33,
+        "endX": 43.97,
+        "endY": 39.71
+      },
+      {
+        "id": "mtmck11z-xjrs5e",
+        "type": "aimHere",
+        "parentTankId": "carpathians-red-unit-22",
+        "startX": 91.88,
+        "startY": 74.86,
+        "endX": 84.49,
+        "endY": 69.86
+      },
+      {
+        "id": "mtmck4z5-b9clmz",
+        "type": "aimHere",
+        "parentTankId": "carpathians-red-unit-25",
+        "startX": 78.33,
+        "startY": 86.67,
+        "endX": 89.99,
+        "endY": 77.83
+      },
+      {
+        "id": "mtmckkfe-xfcdhw",
+        "type": "route",
+        "points": [
+          {
+            "x": 21.81,
+            "y": 81.74
+          },
+          {
+            "x": 19.68,
+            "y": 73.4
+          },
+          {
+            "x": 20.21,
+            "y": 68.88
+          },
+          {
+            "x": 29.08,
+            "y": 60.01
+          },
+          {
+            "x": 30.94,
+            "y": 55.14
+          }
+        ]
+      },
+      {
+        "id": "mtmckp0d-zsig8i",
+        "type": "route",
+        "points": [
+          {
+            "x": 30.85,
+            "y": 54.61
+          },
+          {
+            "x": 34.4,
+            "y": 46.63
+          }
+        ]
+      },
+      {
+        "id": "mtmcmr85-du1qtu",
+        "type": "route",
+        "points": [
+          {
+            "x": 40.07,
+            "y": 86.97
+          },
+          {
+            "x": 34.22,
+            "y": 92.73
+          },
+          {
+            "x": 42.46,
+            "y": 98.05
+          },
+          {
+            "x": 57.09,
+            "y": 95.74
+          },
+          {
+            "x": 71.01,
+            "y": 92.38
+          },
+          {
+            "x": 75.8,
+            "y": 89.63
+          },
+          {
+            "x": 78.28,
+            "y": 87.32
+          }
+        ]
+      },
+      {
+        "id": "mtmcmvol-8cykm7",
+        "type": "route",
+        "points": [
+          {
+            "x": 69.86,
+            "y": 83.86
+          },
+          {
+            "x": 76.86,
+            "y": 86.79
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "mtmcn1x5-wx8i1g",
+        "type": "route",
+        "points": [
+          {
+            "x": 44.68,
+            "y": 84.31
+          },
+          {
+            "x": 49.11,
+            "y": 82.53
+          },
+          {
+            "x": 52.57,
+            "y": 83.51
+          },
+          {
+            "x": 57.45,
+            "y": 86.43
+          },
+          {
+            "x": 62.86,
+            "y": 87.06
+          },
+          {
+            "x": 67.82,
+            "y": 85.9
+          },
+          {
+            "x": 69.77,
+            "y": 83.95
+          }
+        ]
+      },
+      {
+        "id": "mtmcn6qp-ipuu61",
+        "type": "route",
+        "points": [
+          {
+            "x": 79.35,
+            "y": 87.59
+          },
+          {
+            "x": 84.22,
+            "y": 86.61
+          },
+          {
+            "x": 90.96,
+            "y": 83.33
+          },
+          {
+            "x": 93.62,
+            "y": 79.79
+          },
+          {
+            "x": 93.89,
+            "y": 76.42
+          },
+          {
+            "x": 92.65,
+            "y": 75.09
+          }
+        ]
+      },
+      {
+        "id": "mtmcn9tz-vbgps2",
+        "type": "route",
+        "points": [
+          {
+            "x": 91.49,
+            "y": 74.2
+          },
+          {
+            "x": 88.83,
+            "y": 71.19
+          },
+          {
+            "x": 87.33,
+            "y": 69.41
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "mtmcnio3-89y6me",
+        "type": "route",
+        "points": [
+          {
+            "x": 70.57,
+            "y": 83.33
+          },
+          {
+            "x": 72.34,
+            "y": 82.62
+          },
+          {
+            "x": 73.14,
+            "y": 80.85
+          },
+          {
+            "x": 71.63,
+            "y": 78.99
+          }
+        ]
+      },
+      {
+        "id": "mtmcno7f-5h0wez",
+        "type": "route",
+        "points": [
+          {
+            "x": 35.28,
+            "y": 46.01
+          },
+          {
+            "x": 39.8,
+            "y": 38.2
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "mtmco36x-5sst01",
+        "type": "route",
+        "points": [
+          {
+            "x": 26.15,
+            "y": 34.92
+          },
+          {
+            "x": 29.7,
+            "y": 24.11
+          },
+          {
+            "x": 34.49,
+            "y": 16.75
+          },
+          {
+            "x": 40.96,
+            "y": 11.52
+          },
+          {
+            "x": 46.63,
+            "y": 9.74
+          },
+          {
+            "x": 51.95,
+            "y": 9.74
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "mtmcosd1-t8gzm7",
+        "type": "route",
+        "points": [
+          {
+            "x": 40.87,
+            "y": 81.12
+          },
+          {
+            "x": 44.33,
+            "y": 78.37
+          },
+          {
+            "x": 51.42,
+            "y": 67.46
+          },
+          {
+            "x": 55.68,
+            "y": 64.45
+          },
+          {
+            "x": 59.75,
+            "y": 61.7
+          }
+        ]
+      },
+      {
+        "id": "mtmcp1pp-be4smf",
+        "type": "route",
+        "points": [
+          {
+            "x": 39.36,
+            "y": 53.45
+          },
+          {
+            "x": 35.11,
+            "y": 55.67
+          },
+          {
+            "x": 29.96,
+            "y": 59.22
+          }
+        ]
+      },
+      {
+        "id": "mtmcpg4t-6g4vac",
+        "type": "route",
+        "points": [
+          {
+            "x": 26.06,
+            "y": 35.28
+          },
+          {
+            "x": 24.11,
+            "y": 44.14
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "mtmcpjst-j7aq56",
+        "type": "route",
+        "points": [
+          {
+            "x": 20.03,
+            "y": 68.08
+          },
+          {
+            "x": 21.63,
+            "y": 54.52
+          },
+          {
+            "x": 24.02,
+            "y": 44.68
+          }
+        ]
+      },
+      {
+        "id": "mtmd92hd-xy4s2s",
+        "type": "aimHere",
+        "parentTankId": "carpathians-red-unit-13",
+        "startX": 48.26,
+        "startY": 49.72,
+        "endX": 51.86,
+        "endY": 44.68
+      },
+      {
+        "id": "mtmd9hwo-clyq39",
+        "type": "aimHere",
+        "parentTankId": "carpathians-red-unit-11",
+        "startX": 47.5,
+        "startY": 47.29,
+        "endX": 85.47,
+        "endY": 78.28
+      },
+      {
+        "id": "mtmdbm1r-9nd3wy",
+        "type": "aimHere",
+        "parentTankId": "carpathians-red-unit-06",
+        "startX": 45.9,
+        "startY": 38.61,
+        "endX": 58.6,
+        "endY": 20.12
+      },
+      {
+        "id": "mtmdbssb-itzysl",
+        "type": "aimHere",
+        "parentTankId": "carpathians-red-unit-06",
+        "startX": 45.9,
+        "startY": 38.61,
+        "endX": 67.82,
+        "endY": 23.57
       }
     ],
     "Eastern Europe::domination-1|Red": [],
@@ -47127,6 +48025,6 @@
       }
     ]
   },
-  "updatedAt": "2026-09-03T01:59:37.391Z",
-  "exportedAt": "2026-09-03T01:59:40.534Z"
+  "updatedAt": "2026-09-04T03:02:28.855Z",
+  "exportedAt": "2026-09-04T03:02:31.843Z"
 }
