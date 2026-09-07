@@ -30,6 +30,11 @@ import { initDiscordMemberCount } from './discord-stats.js';
     document.body.append(markerCommentImagePreview);
     let markerCommentImagePreviewSource = null;
     const mapList = $("#map-list");
+    const mapIndex = $(".map-index");
+    const mapIndexPlaceholder = document.createElement("div");
+    mapIndexPlaceholder.className = "map-index";
+    mapIndexPlaceholder.style.visibility = "hidden";
+    mapIndexPlaceholder.setAttribute("aria-hidden", "true");
     const pageTitleHeading = $("#page-title");
     const mapVariationSelect = $("#map-variation");
     const mapBattleRating = $("#map-battle-rating");
@@ -2194,8 +2199,13 @@ import { initDiscordMemberCount } from './discord-stats.js';
       });
     }
     function openMapModal() {
+      if (dialog.open) return;
       buildModalLegend();
+      const listScrollTop = mapList.scrollTop;
+      mapIndex.replaceWith(mapIndexPlaceholder);
+      dialog.querySelector(".modal-workspace").prepend(mapIndex);
       dialog.showModal();
+      mapList.scrollTop = listScrollTop;
       setModalMapSource();
       window.requestAnimationFrame(renderMarkers);
     }
@@ -2345,6 +2355,10 @@ import { initDiscordMemberCount } from './discord-stats.js';
     $(".close-modal").addEventListener("click", () => dialog.close());
     dialog.addEventListener("click", event => { if (event.target === dialog) dialog.close(); });
     dialog.addEventListener("close", () => {
+      const listScrollTop = mapList.scrollTop;
+      mapIndexPlaceholder.replaceWith(mapIndex);
+      mapList.scrollTop = listScrollTop;
+      syncMapIndexHeight();
       mountAnnotationOpacityControl(annotationOpacityMainSlot);
       cancelDrawing();
       state.focusedTankMarkerId = null;
