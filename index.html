@@ -49,7 +49,7 @@
   </script>
   <title>War Thunder Map Guide &amp; Tactics | WarDevOps</title>
 
-  <link rel="stylesheet" href="/assets/css/site.css?v=mobile-comment-sheet-map-layout-map-sync-summary-freeform-20260903">
+  <link rel="stylesheet" href="/assets/css/site.css?v=guide-reading-20260907">
 </head>
 <body>
   <header class="site-header">
@@ -116,24 +116,44 @@
             <button class="team-button blue" type="button" data-team="Blue" aria-pressed="false">BLUE</button>
           </div>
         </div>
-        <div class="marker-tools" aria-label="Marker editor" data-i18n-aria="markerTools">
-          <button class="marker-tool primary" id="toggle-editor" type="button" aria-pressed="false" data-i18n="editMarkers">Edit Map</button>
+        <div class="viewer-actions">
           <button class="copy-link" id="copy-link" type="button" aria-label="Copy a link to the current map, team, and mode" data-i18n-aria="copyLinkAria">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.1.1l2-2a5 5 0 0 0-7.1-7.1l-1.1 1.1"></path><path d="M14 11a5 5 0 0 0-7.1-.1l-2 2A5 5 0 0 0 12 20l1.1-1.1"></path></svg>
             <span data-copy-link-label data-i18n="copyLink">COPY LINK</span>
           </button>
-          <button class="marker-tool" id="save-marker-layout" type="button" data-editor-action data-i18n="saveLocally" hidden>Save Locally</button>
-          <button class="marker-tool" id="export-marker-layout" type="button" data-editor-action data-i18n="exportJson" hidden>Export JSON</button>
-          <button class="marker-tool" id="import-marker-layout" type="button" data-editor-action data-i18n="importJson" hidden>Import JSON</button>
-          <span class="marker-status" id="marker-status" role="status" aria-live="polite"></span>
+        </div>
+        <div class="viewer-sync-status">
           <div class="map-sync-alert" id="map-sync-alert" role="status" hidden>
             <span data-i18n="mapSyncConflict">This map has both local and newer default changes.</span>
             <button class="marker-tool" id="use-latest-map" type="button" data-i18n="useLatestMap">Use Latest Map</button>
           </div>
-          <p class="marker-editor-note" id="marker-editor-note" hidden>Drag icons from the legend onto the map.</p>
         </div>
         <div class="map-layout">
           <div class="map-primary-column">
+            <details class="map-tactical-summary" id="map-tactical-summary" aria-labelledby="map-tactical-summary-title" open hidden>
+              <summary id="map-tactical-summary-title">
+                <span data-i18n="tacticalSummary">Tactical Summary</span>
+                <span class="map-tactical-summary-toggle" aria-hidden="true"></span>
+              </summary>
+              <div class="map-tactical-summary-view" id="map-tactical-summary-view">
+                <blockquote id="map-tactical-summary-copy"></blockquote>
+                <button class="summary-read-more" id="summary-read-more" type="button" aria-expanded="false" aria-controls="map-tactical-summary-copy" hidden>Read more</button>
+                <button class="map-tactical-summary-edit" id="edit-map-tactical-summary" type="button" aria-label="Edit tactical summary" data-i18n-aria="editTacticalSummary" hidden>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 20h9"></path><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"></path></svg>
+                </button>
+              </div>
+              <form class="map-tactical-summary-editor" id="map-tactical-summary-editor" hidden novalidate>
+                <label for="map-tactical-summary-en" data-i18n="tacticalSummaryEnglish">English summary</label>
+                <textarea id="map-tactical-summary-en" rows="4" spellcheck="true" data-i18n-placeholder="tacticalSummaryEnglishPlaceholder" placeholder="Write an English tactical summary"></textarea>
+                <label for="map-tactical-summary-ko" data-i18n="tacticalSummaryKorean">Korean summary</label>
+                <textarea id="map-tactical-summary-ko" rows="4" spellcheck="true" data-i18n-placeholder="tacticalSummaryKoreanPlaceholder" placeholder="Write a Korean tactical summary"></textarea>
+                <p class="map-tactical-summary-editor-status" id="map-tactical-summary-editor-status" role="status" aria-live="polite"></p>
+                <div class="map-tactical-summary-editor-actions">
+                  <button class="marker-tool primary" id="save-map-tactical-summary" type="submit" data-i18n="saveTacticalSummary">Save Summary</button>
+                  <button class="marker-tool" id="cancel-map-tactical-summary" type="button" data-i18n="cancel">Cancel</button>
+                </div>
+              </form>
+            </details>
             <div class="map-stage" id="map-stage">
           <span class="image-loading" id="image-status">Now Loading…</span>
           <img id="map-image" alt="" hidden>
@@ -176,35 +196,11 @@
             <button class="marker-context-action delete" type="button" data-annotation-action="delete" role="menuitem" data-i18n="deleteDrawing">Delete Drawing</button>
           </div>
             </div>
-            <details class="map-tactical-summary" id="map-tactical-summary" aria-labelledby="map-tactical-summary-title" hidden>
-              <summary id="map-tactical-summary-title">
-                <span data-i18n="tacticalSummary">Tactical Summary</span>
-                <span class="map-tactical-summary-toggle" aria-hidden="true"></span>
-              </summary>
-              <div class="map-tactical-summary-view" id="map-tactical-summary-view">
-                <blockquote id="map-tactical-summary-copy"></blockquote>
-                <button class="map-tactical-summary-edit" id="edit-map-tactical-summary" type="button" aria-label="Edit tactical summary" data-i18n-aria="editTacticalSummary" hidden>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 20h9"></path><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"></path></svg>
-                </button>
-              </div>
-              <form class="map-tactical-summary-editor" id="map-tactical-summary-editor" hidden novalidate>
-                <label for="map-tactical-summary-en" data-i18n="tacticalSummaryEnglish">English summary</label>
-                <textarea id="map-tactical-summary-en" rows="4" spellcheck="true" data-i18n-placeholder="tacticalSummaryEnglishPlaceholder" placeholder="Write an English tactical summary"></textarea>
-                <label for="map-tactical-summary-ko" data-i18n="tacticalSummaryKorean">Korean summary</label>
-                <textarea id="map-tactical-summary-ko" rows="4" spellcheck="true" data-i18n-placeholder="tacticalSummaryKoreanPlaceholder" placeholder="Write a Korean tactical summary"></textarea>
-                <p class="map-tactical-summary-editor-status" id="map-tactical-summary-editor-status" role="status" aria-live="polite"></p>
-                <div class="map-tactical-summary-editor-actions">
-                  <button class="marker-tool primary" id="save-map-tactical-summary" type="submit" data-i18n="saveTacticalSummary">Save Summary</button>
-                  <button class="marker-tool" id="cancel-map-tactical-summary" type="button" data-i18n="cancel">Cancel</button>
-                </div>
-              </form>
-            </details>
           </div>
           <aside class="legend-panel" aria-label="Map legend" data-i18n-aria="mapLegend">
             <h3 class="legend-heading" data-i18n="mapLegend">Map Legend</h3>
             <div class="legend-actions">
               <button class="marker-tool" id="reset-hidden-markers" type="button" data-i18n="resetHidden">Reset Hidden</button>
-              <button class="marker-tool danger" id="reset-all-markers" type="button" data-i18n="resetAllMarkers">Reset All Markers</button>
             </div>
             <div class="legend-groups">
               <details class="legend-group" data-legend-group>
@@ -254,6 +250,18 @@
             </div>
           </aside>
         </div>
+        <details class="editor-disclosure" id="editor-disclosure">
+          <summary data-i18n="editorTools">Map editing tools</summary>
+        <div class="marker-tools" aria-label="Marker editor" data-i18n-aria="markerTools">
+          <button class="marker-tool" id="toggle-editor" type="button" aria-pressed="false" data-i18n="editMarkers">Edit Map</button>
+          <button class="marker-tool" id="save-marker-layout" type="button" data-editor-action data-i18n="saveLocally" hidden>Save Locally</button>
+          <button class="marker-tool" id="export-marker-layout" type="button" data-editor-action data-i18n="exportJson" hidden>Export JSON</button>
+          <button class="marker-tool" id="import-marker-layout" type="button" data-editor-action data-i18n="importJson" hidden>Import JSON</button>
+          <button class="marker-tool danger" id="reset-all-markers" type="button" data-editor-action data-i18n="resetAllMarkers" hidden>Reset All Markers</button>
+          <span class="marker-status" id="marker-status" role="status" aria-live="polite"></span>
+          <p class="marker-editor-note" id="marker-editor-note" hidden>Drag icons from the legend onto the map.</p>
+        </div>
+        </details>
         <div class="team-legend" aria-label="Team legend" data-i18n-aria="teamLegend"><span><i class="red-dot"></i>RED</span><span><i class="blue-dot"></i>BLUE</span></div>
       </article>
       </section>
@@ -294,7 +302,7 @@
       </div>
     </div>
     <div class="modal-marker-tools" aria-label="Marker editor" data-i18n-aria="markerTools">
-      <button class="marker-tool primary" id="modal-toggle-editor" type="button" aria-pressed="false" data-i18n="editMarkers">Edit Map</button>
+      <button class="marker-tool" id="modal-toggle-editor" type="button" aria-pressed="false" data-i18n="editMarkers">Edit Map</button>
       <button class="marker-tool" id="modal-save-marker-layout" type="button" data-editor-action data-i18n="saveLocally" hidden>Save Locally</button>
       <button class="marker-tool" id="modal-export-marker-layout" type="button" data-editor-action data-i18n="exportJson" hidden>Export JSON</button>
       <button class="marker-tool" id="modal-import-marker-layout" type="button" data-editor-action data-i18n="importJson" hidden>Import JSON</button>
@@ -351,7 +359,7 @@
         <div class="modal-legend-list" id="modal-legend-list"></div>
         <div class="modal-legend-actions">
           <button class="marker-tool" id="modal-reset-hidden-markers" type="button" data-i18n="resetHidden">Reset Hidden</button>
-          <button class="marker-tool danger" id="modal-reset-all-markers" type="button" data-i18n="resetAllMarkers">Reset All Markers</button>
+          <button class="marker-tool danger" id="modal-reset-all-markers" type="button" data-editor-action hidden data-i18n="resetAllMarkers">Reset All Markers</button>
         </div>
       </aside>
     </div>
@@ -359,7 +367,7 @@
 
   <input id="marker-layout-import-file" type="file" accept="application/json,.json" hidden>
 
-  <script type="module" src="/assets/js/app.js?v=static-tactical-summary-20260904"></script>
+  <script type="module" src="/assets/js/app.js?v=guide-reading-20260907"></script>
   <script type="module" src="/assets/js/consent-controls.js?v=20260828"></script>
 </body>
 </html>

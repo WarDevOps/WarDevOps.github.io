@@ -15,10 +15,11 @@ function summarySection(page) {
   return { openingTag: section[1], markup: section[2], copy: copy[1] };
 }
 
-test("summary text is in the initial HTML with a visible, collapsed native disclosure", () => {
+test("summary text is in the initial HTML with a visible, expanded native disclosure", () => {
   const page = renderMapRoutePage(rootPage, { ...baseMap, tacticalSummary: { en: ["Hold B."] } });
   const section = summarySection(page);
-  assert.doesNotMatch(section.openingTag, /\s(?:hidden|open)(?:\s|=|>)/);
+  assert.doesNotMatch(section.openingTag, /\shidden(?:\s|=|>)/);
+  assert.match(section.openingTag, /\sopen(?:\s|=|>)/);
   assert.match(section.openingTag, /data-map-name="[^"]+"/);
   assert.match(section.copy, /<p>Hold B\.<\/p>/);
   assert.match(section.markup, /<blockquote[^>]*lang="en"/);
@@ -29,7 +30,8 @@ test("summary text is in the initial HTML with a visible, collapsed native discl
 test("Korean-only summaries are present before JavaScript runs", () => {
   const page = renderMapRoutePage(rootPage, { ...baseMap, tacticalSummary: { en: [], ko: ["B를 지키세요."] } });
   const section = summarySection(page);
-  assert.doesNotMatch(section.openingTag, /\s(?:hidden|open)(?:\s|=|>)/);
+  assert.doesNotMatch(section.openingTag, /\shidden(?:\s|=|>)/);
+  assert.match(section.openingTag, /\sopen(?:\s|=|>)/);
   assert.match(section.markup, /<blockquote[^>]*lang="ko"/);
   assert.match(section.copy, /<p>B를 지키세요\.<\/p>/);
   assert.match(page, /<meta name="description" content="B를 지키세요\.">/);
@@ -86,6 +88,6 @@ test("every generated map page contains its current initial summary HTML", async
     const sentences = map.tacticalSummary?.en?.length ? map.tacticalSummary.en : map.tacticalSummary?.ko || [];
     assert.equal((section.copy.match(/<p>/g) || []).length, sentences.length, map.slug);
     assert.equal(/\shidden>/.test(section.openingTag), sentences.length === 0, map.slug);
-    assert.doesNotMatch(section.openingTag, /\sopen(?:\s|=|>)/, map.slug);
+    assert.equal(/\sopen(?:\s|=|>)/.test(section.openingTag), sentences.length > 0, map.slug);
   }
 });

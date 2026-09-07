@@ -341,7 +341,7 @@ export function renderMapRoutePage(rootPage, map) {
   const canonical = `https://wardevops.github.io/maps/${map.slug}/`;
   const preview = mapPreviewUrl(map);
   let page = rootPage;
-  page = page.replace('class="hero home-hero"', 'class="hero"');
+  page = page.replace('class="hero home-hero"', 'class="hero map-detail-hero"');
   page = page.replace(/\n\s*<aside class="recent-updates"[\s\S]*?<\/aside>/, "");
   page = replacePageValue(page, /<meta name="description" content="[^"]*">/, `<meta name="description" content="${description}">`, "description");
   page = replacePageValue(page, /<link rel="canonical" href="[^"]*">/, `<link rel="canonical" href="${canonical}">`, "canonical URL");
@@ -355,9 +355,9 @@ export function renderMapRoutePage(rootPage, map) {
   page = replacePageValue(page, /<meta name="twitter:image" content="[^"]*">/, `<meta name="twitter:image" content="${preview}">`, "X image");
   page = replacePageValue(page, /<title>[^<]*<\/title>/, `<title>${title}</title>`, "document title");
   page = replacePageValue(page, /<h1 class="seo-title" id="page-title">[^<]*<\/h1>/, `<h1 class="seo-title" id="page-title">${heading}</h1>`, "page heading");
-  // Native details keeps the body in the initial HTML while starting collapsed.
+  // Native details keeps the body in the initial HTML while starting expanded.
   // Only maps without a summary hide the entire section until editing is enabled.
-  page = replacePageValue(page, /<details\b[^>]*\bid="map-tactical-summary"[^>]*>/, `<details class="map-tactical-summary" id="map-tactical-summary" aria-labelledby="map-tactical-summary-title" data-map-name="${escapeHtml(map.name)}"${summary.sentences.length ? "" : " hidden"}>`, "tactical summary section");
+  page = replacePageValue(page, /<details\b[^>]*\bid="map-tactical-summary"[^>]*>/, `<details class="map-tactical-summary" id="map-tactical-summary" aria-labelledby="map-tactical-summary-title" data-map-name="${escapeHtml(map.name)}"${summary.sentences.length ? " open" : " hidden"}>`, "tactical summary section");
   page = replacePageValue(page, /<blockquote id="map-tactical-summary-copy"[^>]*>[\s\S]*?<\/blockquote>/, renderTacticalSummaryCopy(summary), "tactical summary copy");
   return page;
 }

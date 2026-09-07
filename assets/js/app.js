@@ -1,7 +1,7 @@
     import { MARKER_LAYOUT_VERSION, backupMarkerLayout, loadMarkerLayout, saveMarkerLayout as saveMarkerLayoutToStorage } from './marker-storage.js?v=map-sync-20260903';
 import { initDiscordMemberCount } from './discord-stats.js';
     import { commentImages } from './comment-images.js?v=comment-images-d6c742b47074';
-    import { defaultMarkerLayout, maps, translations } from './data.js?v=mobile-comment-sheet-map-sync-summary-freeform-20260903';
+    import { defaultMarkerLayout, maps, translations } from './data.js?v=guide-reading-20260907';
     import { acceptUpstreamMap, isMapSyncState, markLayoutAsLocalEdits, markMapEdited, mergeMapLayouts, sourceRevision } from './marker-merge.js?v=map-sync-20260903';
 
 
@@ -454,6 +454,7 @@ import { initDiscordMemberCount } from './discord-stats.js';
       themeToggle.setAttribute("aria-label", t(isLight ? "switchToDarkTheme" : "switchToLightTheme"));
     }
     function updateMapDocumentMetadata() {
+      $(".hero").classList.add("map-detail-hero");
       if (!state.selected) return;
       const pageTitle = `War Thunder ${state.selected.name} Map Guide | WarDevOps`;
       const pageDescription = mapDocumentDescription(state.selected);
@@ -472,6 +473,7 @@ import { initDiscordMemberCount } from './discord-stats.js';
       document.querySelector('meta[name="twitter:image"]').setAttribute("content", previewUrl);
     }
     function updateLibraryDocumentMetadata() {
+      $(".hero").classList.remove("map-detail-hero");
       document.title = t("pageTitle");
       pageTitleHeading.textContent = "War Thunder Map Guides & Tactics";
       document.querySelector('meta[name="description"]').setAttribute("content", t("metaDescription"));
@@ -484,13 +486,24 @@ import { initDiscordMemberCount } from './discord-stats.js';
       document.querySelector('meta[name="twitter:description"]').setAttribute("content", t("metaDescription"));
       document.querySelector('meta[name="twitter:image"]').setAttribute("content", "https://wardevops.github.io/img/38th%20Parallel/38th%20Parallel.png");
     }
+    function updateSummaryPreview() {
+      const button = $("#summary-read-more");
+      const expanded = button.getAttribute("aria-expanded") === "true";
+      mapTacticalSummaryCopy.classList.toggle("is-condensed", !expanded && !state.editMode);
+      button.textContent = t(expanded ? "readLessSummary" : "readMoreSummary");
+      requestAnimationFrame(() => {
+        button.hidden = state.editMode || mapTacticalSummary.hidden
+          || (!expanded && mapTacticalSummaryCopy.scrollHeight <= mapTacticalSummaryCopy.clientHeight + 1);
+      });
+    }
     function updateSelectedMapDetails() {
       if (!state.selected) return;
       $("#selected-map-name").textContent = mapLabel(state.selected);
       const summarySentences = mapTacticalSummarySentences(state.selected);
       const selectedMapChanged = mapTacticalSummary.dataset.mapName !== state.selected.name;
       if (selectedMapChanged) {
-        mapTacticalSummary.open = false;
+        mapTacticalSummary.open = true;
+        $("#summary-read-more").setAttribute("aria-expanded", "false");
         closeTacticalSummaryEditor();
       }
       mapTacticalSummary.dataset.mapName = state.selected.name;
@@ -518,6 +531,7 @@ import { initDiscordMemberCount } from './discord-stats.js';
         }
         mapTacticalSummaryCopy.replaceChildren(...summaryParagraphs);
       }
+      updateSummaryPreview();
       mapBattleRating.textContent = mapBattleRatingLabel(state.selected);
       mapImage.alt = `${mapLabel(state.selected)} ${mapVariationLabel(state.selected)} ${state.team}`;
       const mapUpdated = state.selected.updated;
@@ -1662,6 +1676,7 @@ import { initDiscordMemberCount } from './discord-stats.js';
     }
     function updateMarkerEditor() {
       mapViewer.classList.toggle("is-editing", state.editMode);
+      if (state.editMode) $("#editor-disclosure").open = true;
       dialog.classList.toggle("is-editing", state.editMode);
       toggleEditor.setAttribute("aria-pressed", String(state.editMode));
       modalToggleEditor.setAttribute("aria-pressed", String(state.editMode));
@@ -1699,6 +1714,7 @@ import { initDiscordMemberCount } from './discord-stats.js';
     }
     function syncMobileEditingAvailability() {
       const mobile = usesMobileDeviceLayout();
+      $("#editor-disclosure").hidden = mobile;
       toggleEditor.hidden = mobile;
       modalToggleEditor.hidden = mobile;
       if (mobile && state.editMode) setEditorMode(false);
@@ -2241,6 +2257,15 @@ import { initDiscordMemberCount } from './discord-stats.js';
     document.querySelectorAll(".team-button").forEach(button => button.addEventListener("click", () => setTeam(button.dataset.team)));
     languageButtons.forEach(button => button.addEventListener("click", () => setLanguage(button.dataset.language)));
     themeToggle.addEventListener("click", () => setTheme(state.theme === "dark" ? "light" : "dark"));
+    $("#summary-read-more").addEventListener("click", () => {
+      const button = $("#summary-read-more");
+      button.setAttribute("aria-expanded", String(button.getAttribute("aria-expanded") !== "true"));
+      updateSummaryPreview();
+    });
+    new ResizeObserver(updateSummaryPreview).observe(mapTacticalSummaryCopy);
+    $("#editor-disclosure").addEventListener("toggle", () => {
+      if (!$("#editor-disclosure").open && state.editMode) setEditorMode(false);
+    });
     toggleEditor.addEventListener("click", () => setEditorMode(!state.editMode));
     modalToggleEditor.addEventListener("click", () => setEditorMode(!state.editMode));
     editMapTacticalSummary.addEventListener("click", openTacticalSummaryEditor);
