@@ -57,6 +57,7 @@ import { initDiscordMemberCount } from './discord-stats.js';
     const dialog = $("#image-modal");
     const modalImage = $("#modal-image");
     const modalMapStage = $("#modal-map-stage");
+    const modalMapCloseLayer = $("#modal-map-close-layer");
     const modalMapOverlayLayer = $("#modal-map-overlay-layer");
     const modalAnnotationLayer = $("#modal-annotation-layer");
     const modalMarkerLayer = $("#modal-marker-layer");
@@ -1660,6 +1661,7 @@ import { initDiscordMemberCount } from './discord-stats.js';
       syncMarkerLayer(markerLayer, mapImage, mapStage);
       renderMarkerLayer(markerLayer, mapImage);
       if (dialog.open) {
+        syncMarkerLayer(modalMapCloseLayer, modalImage, modalMapStage);
         syncMarkerLayer(modalMapOverlayLayer, modalImage, modalMapStage);
         renderMapOverlayLayer(modalMapOverlayLayer, modalImage);
         syncMarkerLayer(modalAnnotationLayer, modalImage, modalMapStage);
@@ -1971,6 +1973,7 @@ import { initDiscordMemberCount } from './discord-stats.js';
     function setModalMapSource() {
       if (!state.selected) return;
       modalImage.hidden = true;
+      modalMapCloseLayer.hidden = true;
       modalMapOverlayLayer.replaceChildren();
       modalAnnotationLayer.replaceChildren();
       modalMarkerLayer.replaceChildren();
@@ -2097,6 +2100,7 @@ import { initDiscordMemberCount } from './discord-stats.js';
         updateDrawingPreview(markerPosition(event, drawingLayer));
       });
       stage.addEventListener("click", event => {
+        if (event.target.closest?.(".modal-map-close")) return;
         if (!state.drawing) return;
         const position = markerPosition(event, drawingLayer);
         if (!completeDrawing(position)) return;
@@ -2342,9 +2346,11 @@ import { initDiscordMemberCount } from './discord-stats.js';
     });
     modalImage.addEventListener("load", () => {
       modalImage.hidden = false;
+      modalMapCloseLayer.hidden = false;
       renderMarkers();
     });
     modalImage.addEventListener("error", () => {
+      modalMapCloseLayer.hidden = true;
       modalMapOverlayLayer.replaceChildren();
       modalAnnotationLayer.replaceChildren();
       modalMarkerLayer.replaceChildren();
@@ -2378,6 +2384,10 @@ import { initDiscordMemberCount } from './discord-stats.js';
       openMapModal();
     });
     $(".close-modal").addEventListener("click", () => dialog.close());
+    $(".modal-map-close").addEventListener("click", event => {
+      event.stopPropagation();
+      dialog.close();
+    });
     dialog.addEventListener("click", event => { if (event.target === dialog) dialog.close(); });
     dialog.addEventListener("close", () => {
       const listScrollTop = mapList.scrollTop;
