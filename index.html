@@ -130,30 +130,6 @@
         </div>
         <div class="map-layout">
           <div class="map-primary-column">
-            <details class="map-tactical-summary" id="map-tactical-summary" aria-labelledby="map-tactical-summary-title" open hidden>
-              <summary id="map-tactical-summary-title">
-                <span data-i18n="tacticalSummary">Tactical Summary</span>
-                <span class="map-tactical-summary-toggle" aria-hidden="true"></span>
-              </summary>
-              <div class="map-tactical-summary-view" id="map-tactical-summary-view">
-                <blockquote id="map-tactical-summary-copy"></blockquote>
-                <button class="summary-read-more" id="summary-read-more" type="button" aria-expanded="false" aria-controls="map-tactical-summary-copy" hidden>Read more</button>
-                <button class="map-tactical-summary-edit" id="edit-map-tactical-summary" type="button" aria-label="Edit tactical summary" data-i18n-aria="editTacticalSummary" hidden>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 20h9"></path><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"></path></svg>
-                </button>
-              </div>
-              <form class="map-tactical-summary-editor" id="map-tactical-summary-editor" hidden novalidate>
-                <label for="map-tactical-summary-en" data-i18n="tacticalSummaryEnglish">English summary</label>
-                <textarea id="map-tactical-summary-en" rows="4" spellcheck="true" data-i18n-placeholder="tacticalSummaryEnglishPlaceholder" placeholder="Write an English tactical summary"></textarea>
-                <label for="map-tactical-summary-ko" data-i18n="tacticalSummaryKorean">Korean summary</label>
-                <textarea id="map-tactical-summary-ko" rows="4" spellcheck="true" data-i18n-placeholder="tacticalSummaryKoreanPlaceholder" placeholder="Write a Korean tactical summary"></textarea>
-                <p class="map-tactical-summary-editor-status" id="map-tactical-summary-editor-status" role="status" aria-live="polite"></p>
-                <div class="map-tactical-summary-editor-actions">
-                  <button class="marker-tool primary" id="save-map-tactical-summary" type="submit" data-i18n="saveTacticalSummary">Save Summary</button>
-                  <button class="marker-tool" id="cancel-map-tactical-summary" type="button" data-i18n="cancel">Cancel</button>
-                </div>
-              </form>
-            </details>
             <div class="map-stage" id="map-stage">
           <span class="image-loading" id="image-status">Now Loading…</span>
           <img id="map-image" alt="" hidden>
@@ -188,6 +164,30 @@
                 <button class="marker-context-action" type="button" data-marker-comment-action="cancel" data-i18n="cancel">Cancel</button>
               </div>
             </div>
+            <details class="map-tactical-summary" id="map-tactical-summary" aria-labelledby="map-tactical-summary-title" open hidden>
+              <summary id="map-tactical-summary-title">
+                <span data-i18n="tacticalSummary">Tactical Summary</span>
+                <span class="map-tactical-summary-toggle" aria-hidden="true"></span>
+              </summary>
+              <div class="map-tactical-summary-view" id="map-tactical-summary-view">
+                <blockquote id="map-tactical-summary-copy"></blockquote>
+                <button class="summary-read-more" id="summary-read-more" type="button" aria-expanded="false" aria-controls="map-tactical-summary-copy" hidden>Read more</button>
+                <button class="map-tactical-summary-edit" id="edit-map-tactical-summary" type="button" aria-label="Edit tactical summary" data-i18n-aria="editTacticalSummary" hidden>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 20h9"></path><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"></path></svg>
+                </button>
+              </div>
+              <form class="map-tactical-summary-editor" id="map-tactical-summary-editor" hidden novalidate>
+                <label for="map-tactical-summary-en" data-i18n="tacticalSummaryEnglish">English summary</label>
+                <textarea id="map-tactical-summary-en" rows="4" spellcheck="true" data-i18n-placeholder="tacticalSummaryEnglishPlaceholder" placeholder="Write an English tactical summary"></textarea>
+                <label for="map-tactical-summary-ko" data-i18n="tacticalSummaryKorean">Korean summary</label>
+                <textarea id="map-tactical-summary-ko" rows="4" spellcheck="true" data-i18n-placeholder="tacticalSummaryKoreanPlaceholder" placeholder="Write a Korean tactical summary"></textarea>
+                <p class="map-tactical-summary-editor-status" id="map-tactical-summary-editor-status" role="status" aria-live="polite"></p>
+                <div class="map-tactical-summary-editor-actions">
+                  <button class="marker-tool primary" id="save-map-tactical-summary" type="submit" data-i18n="saveTacticalSummary">Save Summary</button>
+                  <button class="marker-tool" id="cancel-map-tactical-summary" type="button" data-i18n="cancel">Cancel</button>
+                </div>
+              </form>
+            </details>
           </div>
           <div class="annotation-context-menu" id="annotation-context-menu" role="menu" aria-label="Drawing actions" data-i18n-aria="drawingActions" hidden>
             <button class="marker-context-action danger-route" type="button" data-annotation-action="dangerRoute" role="menuitemcheckbox" aria-checked="false" data-i18n="dangerRoute" hidden>Danger Route</button>
