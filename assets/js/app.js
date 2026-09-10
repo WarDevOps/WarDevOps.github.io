@@ -37,6 +37,7 @@ import { initDiscordMemberCount } from './discord-stats.js';
     mapIndexPlaceholder.setAttribute("aria-hidden", "true");
     const pageTitleHeading = $("#page-title");
     const mapVariationSelect = $("#map-variation");
+    const modalMapVariationSelect = $("#modal-map-variation");
     const mapBattleRating = $("#map-battle-rating");
     const copyLink = $("#copy-link");
     const copyLinkLabel = copyLink.querySelector("[data-copy-link-label]");
@@ -436,19 +437,23 @@ import { initDiscordMemberCount } from './discord-stats.js';
     function renderMapVariationSelect() {
       if (!state.selected) {
         mapVariationSelect.replaceChildren();
+        modalMapVariationSelect.replaceChildren();
         mapVariationSelect.disabled = true;
+        modalMapVariationSelect.disabled = true;
         return;
       }
-      const options = document.createDocumentFragment();
-      state.selected.variations.forEach(variation => {
-        const option = document.createElement("option");
-        option.value = variation.id;
-        option.textContent = mapVariationLabel(variation);
-        options.append(option);
+      [mapVariationSelect, modalMapVariationSelect].forEach(select => {
+        const options = document.createDocumentFragment();
+        state.selected.variations.forEach(variation => {
+          const option = document.createElement("option");
+          option.value = variation.id;
+          option.textContent = mapVariationLabel(variation);
+          options.append(option);
+        });
+        select.replaceChildren(options);
+        select.value = state.selected.variationId;
+        select.disabled = false;
       });
-      mapVariationSelect.replaceChildren(options);
-      mapVariationSelect.value = state.selected.variationId;
-      mapVariationSelect.disabled = false;
     }
     function setTheme(theme) {
       state.theme = theme;
@@ -2283,6 +2288,9 @@ import { initDiscordMemberCount } from './discord-stats.js';
     clearSearch.addEventListener("click", () => { search.value = ""; search.dispatchEvent(new Event("input")); search.focus(); });
     mapVariationSelect.addEventListener("change", () => {
       if (state.selected) selectMap(state.selected, state.team, mapVariationSelect.value);
+    });
+    modalMapVariationSelect.addEventListener("change", () => {
+      if (state.selected) selectMap(state.selected, state.team, modalMapVariationSelect.value);
     });
     copyLink.addEventListener("click", copyCurrentMapLink);
     document.querySelectorAll(".team-button").forEach(button => button.addEventListener("click", () => setTeam(button.dataset.team)));

@@ -294,6 +294,10 @@
     <div class="modal-toolbar">
       <span id="modal-title"></span>
       <div class="modal-toolbar-actions">
+        <div class="modal-variation-control">
+          <label for="modal-map-variation" data-i18n="mapVariation">Map Variation</label>
+          <select id="modal-map-variation" aria-label="Map Variation" data-i18n-aria="mapVariation"></select>
+        </div>
         <div class="team-switch modal-team-switch" aria-label="Team selection" data-i18n-aria="teamSelection">
           <button class="team-button red" type="button" data-team="Red" aria-pressed="true">RED</button>
           <button class="team-button blue" type="button" data-team="Blue" aria-pressed="false">BLUE</button>
@@ -370,7 +374,7 @@
 
   <input id="marker-layout-import-file" type="file" accept="application/json,.json" hidden>
 
-  <script type="module" src="/assets/js/app.js?v=summary-visible-20260910"></script>
+  <script type="module" src="/assets/js/app.js?v=modal-variation-20260910"></script>
   <script type="module" src="/assets/js/consent-controls.js?v=20260828"></script>
 </body>
 </html>
