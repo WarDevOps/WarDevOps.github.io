@@ -192,6 +192,18 @@ export function markLayoutAsLocalEdits(layout, upstreamLayout, mapNames, revisio
 }
 
 export function markMapEdited(layout, upstreamLayout, mapNames, mapName, revision = sourceRevision(upstreamLayout)) {
+  const currentSync = layout.sync;
+  if (isMapSyncState(currentSync) && currentSync.sourceRevision === revision
+      && typeof currentSync.baseFingerprints[mapName] === "string") {
+    // A placement changes one map. Keep the established upstream baseline and
+    // avoid serializing every other map on each drop.
+    const dirtyMaps = new Set(currentSync.dirtyMaps);
+    if (mapContentFingerprint(layout, mapName) === currentSync.baseFingerprints[mapName]) dirtyMaps.delete(mapName);
+    else dirtyMaps.add(mapName);
+    currentSync.dirtyMaps = mapNames.filter(name => dirtyMaps.has(name));
+    currentSync.conflicts = currentSync.conflicts.filter(name => dirtyMaps.has(name));
+    return currentSync;
+  }
   const priorConflicts = new Set(isMapSyncState(layout.sync) ? layout.sync.conflicts : []);
   const sync = createSyncState(layout, upstreamLayout, mapNames, revision, [...priorConflicts]);
   layout.sync = sync;

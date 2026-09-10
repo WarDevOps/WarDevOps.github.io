@@ -122,4 +122,40 @@ const noRevision = clone(newerServer);
 delete noRevision.updatedAt;
 assert.match(sourceRevision(noRevision), /^fingerprint:/);
 
+// Repeated placements must inspect only the edited map and reuse its baseline.
+const isolatedEdit = clone(firstVisit.layout);
+const unchangedBaseline = isolatedEdit.sync.baseFingerprints;
+Object.defineProperty(isolatedEdit.markers, "Beta::domination-1|Red", {
+  enumerable: true,
+  get() { throw new Error("A single-map edit must not read another map's markers"); }
+});
+isolatedEdit.markers["Alpha::domination-1|Red"][0].x = 42;
+markMapEdited(isolatedEdit, originalServer, mapNames, "Alpha", sourceRevision(originalServer));
+assert.equal(isolatedEdit.sync.baseFingerprints, unchangedBaseline);
+assert.deepEqual(isolatedEdit.sync.dirtyMaps, ["Alpha"]);
+isolatedEdit.markers["Alpha::domination-1|Red"][0].x = 1;
+markMapEdited(isolatedEdit, originalServer, mapNames, "Alpha", sourceRevision(originalServer));
+assert.deepEqual(isolatedEdit.sync.dirtyMaps, []);
+
+const editingConflict = mergeMapLayouts(localOnly, alphaServerUpdate, mapNames).layout;
+editingConflict.markers["Beta::domination-1|Red"][0].x = 45;
+markMapEdited(editingConflict, alphaServerUpdate, mapNames, "Beta");
+assert.deepEqual(editingConflict.sync.dirtyMaps, ["Alpha", "Beta"]);
+assert.deepEqual(editingConflict.sync.conflicts, ["Alpha"]);
+editingConflict.markers["Alpha::domination-1|Red"] = clone(alphaServerUpdate.markers["Alpha::domination-1|Red"]);
+editingConflict.mapUpdated.Alpha = alphaServerUpdate.mapUpdated.Alpha;
+editingConflict.mapUpdatedAt.Alpha = alphaServerUpdate.mapUpdatedAt.Alpha;
+markMapEdited(editingConflict, alphaServerUpdate, mapNames, "Alpha");
+assert.deepEqual(editingConflict.sync.dirtyMaps, ["Beta"]);
+assert.deepEqual(editingConflict.sync.conflicts, []);
+
+// Legacy state and a different upstream revision still rebuild a complete state.
+const untrackedEdit = clone(originalServer);
+untrackedEdit.markers["Alpha::domination-1|Red"][0].x = 30;
+markMapEdited(untrackedEdit, originalServer, mapNames, "Alpha");
+assert.deepEqual(untrackedEdit.sync.dirtyMaps, ["Alpha"]);
+markMapEdited(untrackedEdit, betaServerUpdate, mapNames, "Alpha");
+assert.equal(untrackedEdit.sync.sourceRevision, sourceRevision(betaServerUpdate));
+assert.deepEqual(untrackedEdit.sync.dirtyMaps, ["Alpha", "Beta"]);
+
 console.log("marker merge tests passed");

@@ -164,6 +164,14 @@
                 <button class="marker-context-action" type="button" data-marker-comment-action="cancel" data-i18n="cancel">Cancel</button>
               </div>
             </div>
+          </div>
+          <div class="annotation-context-menu" id="annotation-context-menu" role="menu" aria-label="Drawing actions" data-i18n-aria="drawingActions" hidden>
+            <button class="marker-context-action danger-route" type="button" data-annotation-action="dangerRoute" role="menuitemcheckbox" aria-checked="false" data-i18n="dangerRoute" hidden>Danger Route</button>
+            <div class="annotation-context-divider" data-danger-route-divider hidden></div>
+            <button class="marker-context-action" type="button" data-annotation-action="hide" role="menuitem" data-i18n="hideDrawing">Hide Drawing</button>
+            <button class="marker-context-action delete" type="button" data-annotation-action="delete" role="menuitem" data-i18n="deleteDrawing">Delete Drawing</button>
+          </div>
+            </div>
             <details class="map-tactical-summary" id="map-tactical-summary" aria-labelledby="map-tactical-summary-title" open hidden>
               <summary id="map-tactical-summary-title">
                 <span data-i18n="tacticalSummary">Tactical Summary</span>
@@ -188,14 +196,6 @@
                 </div>
               </form>
             </details>
-          </div>
-          <div class="annotation-context-menu" id="annotation-context-menu" role="menu" aria-label="Drawing actions" data-i18n-aria="drawingActions" hidden>
-            <button class="marker-context-action danger-route" type="button" data-annotation-action="dangerRoute" role="menuitemcheckbox" aria-checked="false" data-i18n="dangerRoute" hidden>Danger Route</button>
-            <div class="annotation-context-divider" data-danger-route-divider hidden></div>
-            <button class="marker-context-action" type="button" data-annotation-action="hide" role="menuitem" data-i18n="hideDrawing">Hide Drawing</button>
-            <button class="marker-context-action delete" type="button" data-annotation-action="delete" role="menuitem" data-i18n="deleteDrawing">Delete Drawing</button>
-          </div>
-            </div>
           </div>
           <aside class="legend-panel" aria-label="Map legend" data-i18n-aria="mapLegend">
             <h3 class="legend-heading" data-i18n="mapLegend">Map Legend</h3>
@@ -317,7 +317,7 @@
       <div class="modal-map-stage" id="modal-map-stage">
         <img id="modal-image" alt="">
         <div class="modal-map-close-layer" id="modal-map-close-layer" hidden>
-          <button class="modal-map-close" type="button" aria-label="Close enlarged view" data-i18n-aria="closeEnlargedView">✕</button>
+          <button class="modal-map-close" type="button" aria-label="Close enlarged view" data-i18n-aria="closeEnlargedView"></button>
         </div>
         <div class="map-overlay-layer" id="modal-map-overlay-layer" aria-label="Map area overlays" data-i18n-aria="mapAreaOverlays"></div>
         <div class="annotation-layer" id="modal-annotation-layer" aria-label="Map drawings" data-i18n-aria="mapDrawings"></div>
@@ -370,7 +370,7 @@
 
   <input id="marker-layout-import-file" type="file" accept="application/json,.json" hidden>
 
-  <script type="module" src="/assets/js/app.js?v=guide-reading-20260907"></script>
+  <script type="module" src="/assets/js/app.js?v=summary-visible-20260910"></script>
   <script type="module" src="/assets/js/consent-controls.js?v=20260828"></script>
 </body>
 </html>

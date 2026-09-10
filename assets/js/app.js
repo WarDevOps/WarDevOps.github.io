@@ -2,7 +2,7 @@
 import { initDiscordMemberCount } from './discord-stats.js';
     import { commentImages } from './comment-images.js?v=comment-images-d6c742b47074';
     import { defaultMarkerLayout, maps, translations } from './data.js?v=guide-reading-20260907';
-    import { acceptUpstreamMap, isMapSyncState, markLayoutAsLocalEdits, markMapEdited, mergeMapLayouts, sourceRevision } from './marker-merge.js?v=map-sync-20260903';
+    import { acceptUpstreamMap, isMapSyncState, markLayoutAsLocalEdits, markMapEdited, mergeMapLayouts, sourceRevision } from './marker-merge.js?v=marker-drop-20260910';
 
 
     const DEFAULT_ANNOTATION_OPACITY = 50;
@@ -363,7 +363,13 @@ import { initDiscordMemberCount } from './discord-stats.js';
     }
     function currentMapTacticalSummary(map) {
       if (!map) return null;
-      if (Object.hasOwn(markerLayout.tacticalSummaries, map.name)) return markerLayout.tacticalSummaries[map.name];
+      if (Object.hasOwn(markerLayout.tacticalSummaries, map.name)) {
+        const savedSummary = markerLayout.tacticalSummaries[map.name];
+        const hasSavedCopy = ["en", "ko"].some(language =>
+          Array.isArray(savedSummary?.[language]) && savedSummary[language].length
+        );
+        if (hasSavedCopy) return savedSummary;
+      }
       return map.tacticalSummary;
     }
     function mapTacticalSummaryLanguage(map, language = state.language) {
@@ -1676,6 +1682,27 @@ import { initDiscordMemberCount } from './discord-stats.js';
         .find(button => button.dataset.markerId === activeFocusedTank.id);
       if (focusedMarkerButton) showMarkerCommentPopover(focusedMarkerButton, activeFocusedTank, { pinned: true });
     }
+    function renderMarkerPlacement(movedMarker) {
+      const surfaces = [{ layer: markerLayer, image: mapImage, drawings: annotationLayer }];
+      if (dialog.open) surfaces.push({ layer: modalMarkerLayer, image: modalImage, drawings: modalAnnotationLayer });
+      const movedMarkers = new Map(linkedMarkers(movedMarker).map(marker => [marker.id, marker]));
+      surfaces.forEach(({ layer, image, drawings }) => {
+        if (image.hidden) return;
+        if (movedMarker) {
+          // Keep the native drag source attached until the browser ends the drag.
+          // Only the tank and its attached role markers need new coordinates.
+          layer.querySelectorAll(".map-marker").forEach(button => {
+            const marker = movedMarkers.get(button.dataset.markerId);
+            if (!marker) return;
+            button.style.left = `${marker.x}%`;
+            button.style.top = `${marker.y}%`;
+          });
+          if (linkedAimAnnotations(movedMarker).length) renderAnnotationLayer(drawings, image);
+        } else {
+          renderMarkerLayer(layer, image);
+        }
+      });
+    }
     function updateMarkerEditor() {
       mapViewer.classList.toggle("is-editing", state.editMode);
       if (state.editMode) $("#editor-disclosure").open = true;
@@ -2147,7 +2174,7 @@ import { initDiscordMemberCount } from './discord-stats.js';
           return;
         }
         persistMarkerLayout("savedLocally", { touchMap: true });
-        renderMarkers();
+        renderMarkerPlacement(existingMarker);
       });
     }
     function bindMarkerContextMenu(contextMenu) {
