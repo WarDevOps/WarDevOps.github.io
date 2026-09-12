@@ -201,6 +201,7 @@
             <h3 class="legend-heading" data-i18n="mapLegend">Map Legend</h3>
             <div class="legend-actions">
               <button class="marker-tool" id="reset-hidden-markers" type="button" data-i18n="resetHidden">Reset Hidden</button>
+              <button class="marker-tool" id="toggle-editor" type="button" aria-pressed="false" data-i18n="editMarkers">Edit Map</button>
             </div>
             <div class="legend-groups">
               <details class="legend-group" data-legend-group>
@@ -254,7 +255,6 @@
         <details class="editor-disclosure" id="editor-disclosure">
           <summary data-i18n="editorTools">Map editing tools</summary>
         <div class="marker-tools" aria-label="Marker editor" data-i18n-aria="markerTools">
-          <button class="marker-tool" id="toggle-editor" type="button" aria-pressed="false" data-i18n="editMarkers">Edit Map</button>
           <button class="marker-tool" id="save-marker-layout" type="button" data-editor-action data-i18n="saveLocally" hidden>Save Locally</button>
           <button class="marker-tool" id="export-marker-layout" type="button" data-editor-action data-i18n="exportJson" hidden>Export JSON</button>
           <button class="marker-tool" id="import-marker-layout" type="button" data-editor-action data-i18n="importJson" hidden>Import JSON</button>
@@ -307,7 +307,6 @@
       </div>
     </div>
     <div class="modal-marker-tools" aria-label="Marker editor" data-i18n-aria="markerTools">
-      <button class="marker-tool" id="modal-toggle-editor" type="button" aria-pressed="false" data-i18n="editMarkers">Edit Map</button>
       <button class="marker-tool" id="modal-save-marker-layout" type="button" data-editor-action data-i18n="saveLocally" hidden>Save Locally</button>
       <button class="marker-tool" id="modal-export-marker-layout" type="button" data-editor-action data-i18n="exportJson" hidden>Export JSON</button>
       <button class="marker-tool" id="modal-import-marker-layout" type="button" data-editor-action data-i18n="importJson" hidden>Import JSON</button>
@@ -367,6 +366,7 @@
         <div class="modal-legend-list" id="modal-legend-list"></div>
         <div class="modal-legend-actions">
           <button class="marker-tool" id="modal-reset-hidden-markers" type="button" data-i18n="resetHidden">Reset Hidden</button>
+          <button class="marker-tool" id="modal-toggle-editor" type="button" aria-pressed="false" data-i18n="editMarkers">Edit Map</button>
           <button class="marker-tool danger" id="modal-reset-all-markers" type="button" data-editor-action hidden data-i18n="resetAllMarkers">Reset All Markers</button>
         </div>
       </aside>
