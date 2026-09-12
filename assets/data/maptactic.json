@@ -8,7 +8,7 @@
     "Alaska": "2026-09-11",
     "American Desert": "2026-09-12",
     "Aral Sea": "2026-09-10",
-    "Arctic Pier": "2026-09-11",
+    "Arctic Pier": "2026-09-12",
     "Arctic Polar Base": "2026-09-12",
     "Ardennes": "2026-09-11",
     "Ash River": "2026-09-02",
@@ -65,9 +65,9 @@
     "Abandoned Town": "2026-09-03T00:04:09Z",
     "Advance to the Rhine": "2026-09-12T00:52:46Z",
     "Alaska": "2026-09-10T23:08:06Z",
-    "American Desert": "2026-09-12T04:37:24Z",
+    "American Desert": "2026-09-12T05:01:52Z",
     "Aral Sea": "2026-09-10T12:50:30Z",
-    "Arctic Pier": "2026-09-11T02:16:45Z",
+    "Arctic Pier": "2026-09-12T05:05:00Z",
     "Arctic Polar Base": "2026-09-12T01:01:54Z",
     "Ardennes": "2026-09-10T23:24:07Z",
     "Ash River": "2026-09-01T16:50:15Z",
@@ -2879,7 +2879,10 @@
         "id": "mtxlz9ks-ffpiva",
         "type": "mainBattleTankRed",
         "x": 58.08,
-        "y": 40.1
+        "y": 40.1,
+        "commentImages": [
+          "American Desert/scr_ (23).png"
+        ]
       },
       {
         "id": "mtxlzcff-3c8z3p",
@@ -2992,7 +2995,10 @@
         "id": "mtxrknas-1bjs0a",
         "type": "mainBattleTankRed",
         "x": 59.64,
-        "y": 50.25
+        "y": 50.25,
+        "commentImages": [
+          "American Desert/scr_ (14).png"
+        ]
       },
       {
         "id": "mtxrkofy-qit6pz",
@@ -3519,7 +3525,10 @@
         "id": "mtitd0sj-st6ye8",
         "type": "mainBattleTank",
         "x": 57.89,
-        "y": 53.45
+        "y": 53.45,
+        "commentImages": [
+          "Arctic Pier/scr_ (22).png"
+        ]
       },
       {
         "id": "mtitd3pv-doxcti",
@@ -3570,7 +3579,10 @@
         "id": "mtitww4x-j4yl2r",
         "type": "mainBattleTank",
         "x": 51.69,
-        "y": 53.19
+        "y": 53.19,
+        "commentImages": [
+          "Arctic Pier/scr_ (15).png"
+        ]
       },
       {
         "id": "mtitx0pr-bqn1tz",
@@ -3660,14 +3672,14 @@
       {
         "id": "mtiw4lax-66dbx6",
         "type": "mainBattleTank",
-        "x": 70.57,
-        "y": 74.29
+        "x": 71.23,
+        "y": 78.64
       },
       {
         "id": "mtiw4mw9-fz3gm5",
         "type": "spawnKill",
-        "x": 70.57,
-        "y": 74.29,
+        "x": 71.23,
+        "y": 78.64,
         "parentTankId": "mtiw4lax-66dbx6"
       },
       {
@@ -24473,24 +24485,6 @@
         ]
       },
       {
-        "id": "mtitwzl5-vi41w0",
-        "type": "aimHere",
-        "parentTankId": "mtitww4x-j4yl2r",
-        "startX": 51.69,
-        "startY": 53.19,
-        "endX": 14.89,
-        "endY": 67.46
-      },
-      {
-        "id": "mtitx4h5-txxn50",
-        "type": "aimHere",
-        "parentTankId": "mtitd0sj-st6ye8",
-        "startX": 57.89,
-        "startY": 53.45,
-        "endX": 34.13,
-        "endY": 86.88
-      },
-      {
         "id": "mtiu3q7l-l7a0mj",
         "type": "route",
         "points": [
@@ -24773,8 +24767,8 @@
         "id": "mtiw4o9d-r0qx9w",
         "type": "aimHere",
         "parentTankId": "mtiw4lax-66dbx6",
-        "startX": 70.57,
-        "startY": 74.29,
+        "startX": 71.23,
+        "startY": 78.64,
         "endX": 59.13,
         "endY": 85.55
       },
@@ -24915,6 +24909,24 @@
           }
         ],
         "dangerRoute": true
+      },
+      {
+        "id": "mtxx6658-qnixi7",
+        "type": "aimHere",
+        "parentTankId": "mtitd0sj-st6ye8",
+        "startX": 57.89,
+        "startY": 53.45,
+        "endX": 18.35,
+        "endY": 76.95
+      },
+      {
+        "id": "mtxx7cr8-ixfoq9",
+        "type": "aimHere",
+        "parentTankId": "mtitww4x-j4yl2r",
+        "startX": 51.69,
+        "startY": 53.19,
+        "endX": 12.32,
+        "endY": 57.27
       }
     ],
     "Arctic Pier::domination-1|Red": [
@@ -55342,6 +55354,6 @@
       }
     ]
   },
-  "updatedAt": "2026-09-12T04:37:24.885Z",
-  "exportedAt": "2026-09-12T04:41:26.435Z"
+  "updatedAt": "2026-09-12T05:05:00.200Z",
+  "exportedAt": "2026-09-12T05:05:01.806Z"
 }
