@@ -10,3 +10,4 @@
 # Map detail pages are generated from index.html and map metadata during deployment.
 /maps/
 *.py
+*.psd

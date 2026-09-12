@@ -4,7 +4,7 @@
     "38th Parallel": "2026-09-03",
     "Abandoned Factory": "2026-09-11",
     "Abandoned Town": "2026-09-03",
-    "Advance to the Rhine": "2026-09-11",
+    "Advance to the Rhine": "2026-09-12",
     "Alaska": "2026-09-11",
     "American Desert": "2026-09-12",
     "Aral Sea": "2026-09-10",
@@ -28,7 +28,7 @@
     "Flanders": "2026-08-30",
     "Frozen Pass": "2026-08-25",
     "Fulda": "2026-08-18",
-    "Golden Quarry": "2026-09-02",
+    "Golden Quarry": "2026-09-12",
     "Iberian Castle": "2026-08-16",
     "Japan": "2026-08-16",
     "Jungle": "2026-09-10",
@@ -54,7 +54,7 @@
     "Sweden": "2026-09-01",
     "Test Site-2271": "2026-08-16",
     "Tunisia": "2026-08-30",
-    "Vietnam": "2026-08-16",
+    "Vietnam": "2026-09-12",
     "Volokolamsk": "2026-08-31",
     "White Rock Fortress": "2026-09-02"
   },
@@ -62,9 +62,9 @@
     "38th Parallel": "2026-09-03T00:03:47Z",
     "Abandoned Factory": "2026-09-10T23:01:10Z",
     "Abandoned Town": "2026-09-03T00:04:09Z",
-    "Advance to the Rhine": "2026-09-10T23:07:52Z",
+    "Advance to the Rhine": "2026-09-12T00:52:46Z",
     "Alaska": "2026-09-10T23:08:06Z",
-    "American Desert": "2026-09-11T23:51:39Z",
+    "American Desert": "2026-09-12T00:54:34Z",
     "Aral Sea": "2026-09-10T12:50:30Z",
     "Arctic Pier": "2026-09-11T02:16:45Z",
     "Arctic Polar Base": "2026-09-03T01:47:54Z",
@@ -81,13 +81,14 @@
     "European Province": "2026-09-04T05:43:30Z",
     "Fields of Normandy": "2026-09-04T05:43:38Z",
     "Fields of Poland": "2026-09-04T05:43:58Z",
-    "Golden Quarry": "2026-09-02T10:46:07Z",
+    "Golden Quarry": "2026-09-12T00:18:22Z",
     "Jungle": "2026-09-10T12:20:47Z",
     "Mozdok": "2026-09-07T14:15:23Z",
     "Normandy": "2026-09-04T05:44:50Z",
     "North Holland": "2026-09-08T11:00:33Z",
     "Poland": "2026-09-04T05:44:36Z",
     "Port Novorossiysk": "2026-09-08T23:53:12Z",
+    "Vietnam": "2026-09-12T00:24:23Z",
     "White Rock Fortress": "2026-09-02T04:58:42Z"
   },
   "tacticalSummaries": {
@@ -1891,8 +1892,8 @@
       {
         "id": "mtigw1oq-vnwfmz",
         "type": "smokeshell",
-        "x": 77.93,
-        "y": 79.16
+        "x": 76.33,
+        "y": 81.65
       },
       {
         "id": "mtim5h7v-4usqfp",
@@ -2139,6 +2140,19 @@
         "type": "antiAir",
         "x": 31.38,
         "y": 16.13
+      },
+      {
+        "id": "mtxo7up4-bb0zz5",
+        "type": "mainBattleTank",
+        "x": 47.43,
+        "y": 35.54
+      },
+      {
+        "id": "mtxo7vmi-qx1921",
+        "type": "sniper",
+        "x": 47.43,
+        "y": 35.54,
+        "parentTankId": "mtxo7up4-bb0zz5"
       }
     ],
     "Alaska::domination-1|Red": [
@@ -2760,6 +2774,12 @@
         "x": 58.21,
         "y": 39.05,
         "parentTankId": "mtxlz9ks-ffpiva"
+      },
+      {
+        "id": "mtxo514r-a8imao",
+        "type": "artilleryStrike",
+        "x": 45.92,
+        "y": 47.34
       }
     ],
     "American Desert::domination-1|Blue": [
@@ -2807,19 +2827,6 @@
         "x": 20.83,
         "y": 64.89,
         "parentTankId": "mtiekzna-s3t8fb"
-      },
-      {
-        "id": "mtien9d6-5rfpcg",
-        "type": "lightTank",
-        "x": 14.89,
-        "y": 52.39
-      },
-      {
-        "id": "mtienber-tywy1v",
-        "type": "battleLine",
-        "x": 14.89,
-        "y": 52.39,
-        "parentTankId": "mtien9d6-5rfpcg"
       },
       {
         "id": "mtiewrxq-9dxyvl",
@@ -2919,19 +2926,6 @@
         "parentTankId": "mtiexoze-757po0"
       },
       {
-        "id": "mtif3t3u-mfieth",
-        "type": "mainBattleTank",
-        "x": 62.59,
-        "y": 63.74
-      },
-      {
-        "id": "mtif3wtr-lm6cwk",
-        "type": "spawnKill",
-        "x": 62.59,
-        "y": 63.74,
-        "parentTankId": "mtif3t3u-mfieth"
-      },
-      {
         "id": "mtift5he-sloqt0",
         "type": "mainBattleTank",
         "x": 75.18,
@@ -2955,6 +2949,12 @@
         "type": "antiAir",
         "x": 27.84,
         "y": 23.49
+      },
+      {
+        "id": "mtxo4erb-0h6qhc",
+        "type": "artilleryStrike",
+        "x": 58.96,
+        "y": 52.39
       }
     ],
     "Aral Sea::domination-1|Red": [
@@ -6142,8 +6142,8 @@
         "type": "mainBattleTankRed",
         "x": 43.84,
         "y": 59.32,
-        "commentImage": "Breslau/scr_ (3).png",
-        "comment": "Wall on the right can be penetrated"
+        "comment": "Wall on the right can be penetrated",
+        "commentImage": "Breslau/scr_ (3).png"
       },
       {
         "id": "mtw6jhq9-lqhbrm",
@@ -9294,7 +9294,8 @@
         "id": "mtjkylk9-1tm265",
         "type": "mainBattleTank",
         "x": 74.74,
-        "y": 63.41
+        "y": 63.41,
+        "commentImage": "Golden Quarry/scr_10.png"
       },
       {
         "id": "mtjkyn66-iqoqhm",
@@ -9334,7 +9335,8 @@
         "id": "mtjnoyz5-4vd0j0",
         "type": "mainBattleTank",
         "x": 51.82,
-        "y": 37.36
+        "y": 37.36,
+        "commentImage": "Golden Quarry/scr_14.png"
       },
       {
         "id": "mtjnp00h-o08r6v",
@@ -15907,6 +15909,27 @@
         "x": 70.49,
         "y": 98.4,
         "parentTankId": "vietnam-red-unit-17"
+      },
+      {
+        "id": "mtxn2hwu-fbsbmf",
+        "type": "spawnKill",
+        "x": 9.38,
+        "y": 25.76,
+        "parentTankId": "vietnam-red-unit-05"
+      },
+      {
+        "id": "mtxn2iuu-qzijg8",
+        "type": "spawnKill",
+        "x": 3.33,
+        "y": 31.11,
+        "parentTankId": "vietnam-red-unit-08"
+      },
+      {
+        "id": "mtxn2kzi-0p66hk",
+        "type": "spawnKill",
+        "x": 27.64,
+        "y": 75.69,
+        "parentTankId": "vietnam-red-unit-14"
       }
     ],
     "Vietnam::domination-1|Blue": [
@@ -15976,7 +15999,7 @@
       },
       {
         "id": "vietnam-blue-role-05",
-        "type": "highRiskSpot",
+        "type": "sniper",
         "x": 29.79,
         "y": 23.33,
         "parentTankId": "vietnam-blue-unit-06"
@@ -16127,6 +16150,47 @@
         "x": 37.92,
         "y": 89.44,
         "parentTankId": "vietnam-blue-unit-20"
+      },
+      {
+        "id": "mtxn2942-bqojws",
+        "type": "spawnKill",
+        "x": 74.93,
+        "y": 15.21,
+        "parentTankId": "vietnam-blue-unit-04"
+      },
+      {
+        "id": "mtxn2aoi-4bm9iy",
+        "type": "spawnKill",
+        "x": 77.5,
+        "y": 46.67,
+        "parentTankId": "vietnam-blue-unit-08"
+      },
+      {
+        "id": "mtxn2bp2-6hwz5t",
+        "type": "spawnKill",
+        "x": 84.65,
+        "y": 56.94,
+        "parentTankId": "vietnam-blue-unit-10"
+      },
+      {
+        "id": "mtxn2cqi-edm14x",
+        "type": "spawnKill",
+        "x": 75.07,
+        "y": 66.6,
+        "parentTankId": "vietnam-blue-unit-14"
+      },
+      {
+        "id": "mtxn69xb-4x8rg3",
+        "type": "mainBattleTank",
+        "x": 48.76,
+        "y": 35.54
+      },
+      {
+        "id": "mtxn6eoe-z00f7g",
+        "type": "battleLine",
+        "x": 48.76,
+        "y": 35.54,
+        "parentTankId": "mtxn69xb-4x8rg3"
       }
     ],
     "Vietnam::domination-2|Red": [
@@ -16398,6 +16462,53 @@
         "x": 48.19,
         "y": 91.88,
         "parentTankId": "vietnam-domination-2-red-unit-25"
+      },
+      {
+        "id": "mtxn3s8k-muhrp8",
+        "type": "mainBattleTankRed",
+        "x": 54.52,
+        "y": 56.91
+      },
+      {
+        "id": "mtxn3v1m-rijdxr",
+        "type": "highRiskSpot",
+        "x": 54.52,
+        "y": 56.91,
+        "parentTankId": "mtxn3s8k-muhrp8"
+      },
+      {
+        "id": "mtxn4luv-c7bn5o",
+        "type": "mainBattleTankRed",
+        "x": 57,
+        "y": 49.11
+      },
+      {
+        "id": "mtxn4n3u-mt5e7j",
+        "type": "highRiskSpot",
+        "x": 57,
+        "y": 49.11,
+        "parentTankId": "mtxn4luv-c7bn5o"
+      },
+      {
+        "id": "mtxn50wq-j8gzuc",
+        "type": "spawnKill",
+        "x": 85.62,
+        "y": 66.74,
+        "parentTankId": "vietnam-domination-2-red-unit-14"
+      },
+      {
+        "id": "mtxn51vn-totafc",
+        "type": "spawnKill",
+        "x": 79.03,
+        "y": 74.1,
+        "parentTankId": "vietnam-domination-2-red-unit-18"
+      },
+      {
+        "id": "mtxn53ci-h354jx",
+        "type": "spawnKill",
+        "x": 82.5,
+        "y": 86.25,
+        "parentTankId": "vietnam-domination-2-red-unit-23"
       }
     ],
     "Vietnam::domination-2|Blue": [
@@ -16695,6 +16806,20 @@
         "type": "mainBattleTank",
         "x": 73.96,
         "y": 98.75
+      },
+      {
+        "id": "mtxn3coa-g192rw",
+        "type": "sniper",
+        "x": 73.96,
+        "y": 98.75,
+        "parentTankId": "vietnam-domination-2-blue-unit-27"
+      },
+      {
+        "id": "mtxn3h3y-yhj77m",
+        "type": "spawnKill",
+        "x": 14.51,
+        "y": 15.07,
+        "parentTankId": "vietnam-domination-2-blue-unit-04"
       }
     ],
     "Volokolamsk::domination-1|Red": [],
@@ -21287,6 +21412,15 @@
         "startY": 82.27,
         "endX": 53.19,
         "endY": 98.32
+      },
+      {
+        "id": "mtxo80xq-vda6ts",
+        "type": "aimHere",
+        "parentTankId": "mtxo7up4-bb0zz5",
+        "startX": 47.43,
+        "startY": 35.54,
+        "endX": 43.88,
+        "endY": 58.51
       }
     ],
     "Alaska::domination-1|Red": [
@@ -22903,24 +23037,6 @@
         ]
       },
       {
-        "id": "mtif47ot-y0uftk",
-        "type": "aimHere",
-        "parentTankId": "mtif3t3u-mfieth",
-        "startX": 62.59,
-        "startY": 63.74,
-        "endX": 83.34,
-        "endY": 65.95
-      },
-      {
-        "id": "mtif4hnj-gb95j5",
-        "type": "aimHere",
-        "parentTankId": "mtif3t3u-mfieth",
-        "startX": 62.59,
-        "startY": 63.74,
-        "endX": 64.01,
-        "endY": 77.21
-      },
-      {
         "id": "mtif4s2l-o3ptxd",
         "type": "aimHere",
         "parentTankId": "mtiexci4-lz6e70",
@@ -22998,29 +23114,6 @@
         "endY": 37.58
       },
       {
-        "id": "mtiftshr-0w9spa",
-        "type": "route",
-        "points": [
-          {
-            "x": 62.5,
-            "y": 63.83
-          },
-          {
-            "x": 62.15,
-            "y": 58.77
-          },
-          {
-            "x": 61.53,
-            "y": 54.78
-          },
-          {
-            "x": 62.41,
-            "y": 51.68
-          }
-        ],
-        "dangerRoute": true
-      },
-      {
         "id": "mtifu3eh-aur2qg",
         "type": "route",
         "points": [
@@ -23094,6 +23187,24 @@
         "startY": 43.79,
         "endX": 58.08,
         "endY": 39.18
+      },
+      {
+        "id": "mtxo5yce-gyoz6s",
+        "type": "aimHere",
+        "parentTankId": "mtiedut0-j2dilp",
+        "startX": 46.72,
+        "startY": 46.45,
+        "endX": 47.87,
+        "endY": 59.75
+      },
+      {
+        "id": "mtxo9o2y-5nk5e7",
+        "type": "aimHere",
+        "parentTankId": "mtiexvf8-ricksd",
+        "startX": 62.77,
+        "startY": 52.21,
+        "endX": 84.22,
+        "endY": 61.08
       }
     ],
     "Aral Sea::domination-1|Red": [
@@ -51395,24 +51506,6 @@
         ]
       },
       {
-        "id": "vietnam-blue-route-04",
-        "type": "route",
-        "points": [
-          {
-            "x": 10.99,
-            "y": 95.19
-          },
-          {
-            "x": 11.16,
-            "y": 94.67
-          },
-          {
-            "x": 8.31,
-            "y": 89.18
-          }
-        ]
-      },
-      {
         "id": "vietnam-blue-route-05",
         "type": "route",
         "points": [
@@ -51543,24 +51636,6 @@
         ]
       },
       {
-        "id": "vietnam-blue-route-08",
-        "type": "route",
-        "points": [
-          {
-            "x": 18.16,
-            "y": 86.39
-          },
-          {
-            "x": 19.3,
-            "y": 89.4
-          },
-          {
-            "x": 18.98,
-            "y": 92.55
-          }
-        ]
-      },
-      {
         "id": "vietnam-blue-route-09",
         "type": "route",
         "points": [
@@ -51631,28 +51706,6 @@
           {
             "x": 36.53,
             "y": 10.35
-          }
-        ]
-      },
-      {
-        "id": "vietnam-blue-route-12",
-        "type": "route",
-        "points": [
-          {
-            "x": 8.84,
-            "y": 98
-          },
-          {
-            "x": 8.75,
-            "y": 97.39
-          },
-          {
-            "x": 6.77,
-            "y": 94.79
-          },
-          {
-            "x": 7.53,
-            "y": 91.94
           }
         ]
       },
@@ -51870,6 +51923,51 @@
           }
         ],
         "dangerRoute": true
+      },
+      {
+        "id": "mtxn6dhp-2avhrf",
+        "type": "aimHere",
+        "parentTankId": "mtxn69xb-4x8rg3",
+        "startX": 48.76,
+        "startY": 35.54,
+        "endX": 75.36,
+        "endY": 37.23
+      },
+      {
+        "id": "mtxn6oxm-sls5xs",
+        "type": "aimHere",
+        "parentTankId": "vietnam-blue-unit-10",
+        "startX": 84.65,
+        "startY": 56.94,
+        "endX": 86.97,
+        "endY": 62.59
+      },
+      {
+        "id": "mtxn6rcx-w1j22o",
+        "type": "aimHere",
+        "parentTankId": "vietnam-blue-unit-14",
+        "startX": 75.07,
+        "startY": 66.6,
+        "endX": 85.55,
+        "endY": 64.27
+      },
+      {
+        "id": "mtxn6umq-gqxvds",
+        "type": "aimHere",
+        "parentTankId": "vietnam-blue-unit-04",
+        "startX": 74.93,
+        "startY": 15.21,
+        "endX": 83.16,
+        "endY": 38.03
+      },
+      {
+        "id": "mtxn7ixq-70jdkq",
+        "type": "aimHere",
+        "parentTankId": "vietnam-blue-unit-08",
+        "startX": 77.5,
+        "startY": 46.67,
+        "endX": 83.78,
+        "endY": 39.53
       }
     ],
     "Vietnam::domination-2|Red": [
@@ -52402,24 +52500,6 @@
         ]
       },
       {
-        "id": "vietnam-domination-2-red-route-11",
-        "type": "route",
-        "points": [
-          {
-            "x": 17.95,
-            "y": 86.39
-          },
-          {
-            "x": 19.1,
-            "y": 89.4
-          },
-          {
-            "x": 18.77,
-            "y": 92.55
-          }
-        ]
-      },
-      {
         "id": "vietnam-domination-2-red-route-12",
         "type": "route",
         "points": [
@@ -52446,28 +52526,6 @@
           {
             "x": 48.48,
             "y": 90
-          }
-        ]
-      },
-      {
-        "id": "vietnam-domination-2-red-route-13",
-        "type": "route",
-        "points": [
-          {
-            "x": 8.63,
-            "y": 98
-          },
-          {
-            "x": 8.54,
-            "y": 97.39
-          },
-          {
-            "x": 6.56,
-            "y": 94.79
-          },
-          {
-            "x": 7.33,
-            "y": 91.94
           }
         ]
       },
@@ -52678,6 +52736,51 @@
           }
         ],
         "dangerRoute": true
+      },
+      {
+        "id": "mtxn4xu6-ljeugt",
+        "type": "aimHere",
+        "parentTankId": "mtxn4luv-c7bn5o",
+        "startX": 57,
+        "startY": 49.11,
+        "endX": 78.11,
+        "endY": 50.35
+      },
+      {
+        "id": "mtxn5a3e-3gi6lg",
+        "type": "aimHere",
+        "parentTankId": "vietnam-domination-2-red-unit-23",
+        "startX": 82.5,
+        "startY": 86.25,
+        "endX": 94.33,
+        "endY": 75.26
+      },
+      {
+        "id": "mtxn5bza-poxqpk",
+        "type": "aimHere",
+        "parentTankId": "vietnam-domination-2-red-unit-18",
+        "startX": 79.03,
+        "startY": 74.1,
+        "endX": 93,
+        "endY": 74.29
+      },
+      {
+        "id": "mtxn5dq6-klrlwf",
+        "type": "aimHere",
+        "parentTankId": "vietnam-domination-2-red-unit-14",
+        "startX": 85.62,
+        "startY": 66.74,
+        "endX": 93.36,
+        "endY": 73.84
+      },
+      {
+        "id": "mtxn5g16-cdder6",
+        "type": "aimHere",
+        "parentTankId": "vietnam-domination-2-red-unit-22",
+        "startX": 82.15,
+        "startY": 84.44,
+        "endX": 80.15,
+        "endY": 72.43
       }
     ],
     "Vietnam::domination-2|Blue": [
@@ -53136,24 +53239,6 @@
         ]
       },
       {
-        "id": "vietnam-domination-2-blue-route-10",
-        "type": "route",
-        "points": [
-          {
-            "x": 17.95,
-            "y": 86.39
-          },
-          {
-            "x": 19.1,
-            "y": 89.4
-          },
-          {
-            "x": 18.77,
-            "y": 92.55
-          }
-        ]
-      },
-      {
         "id": "vietnam-domination-2-blue-route-11",
         "type": "route",
         "points": [
@@ -53228,28 +53313,6 @@
           {
             "x": 78.97,
             "y": 71.99
-          }
-        ]
-      },
-      {
-        "id": "vietnam-domination-2-blue-route-14",
-        "type": "route",
-        "points": [
-          {
-            "x": 8.63,
-            "y": 98
-          },
-          {
-            "x": 8.54,
-            "y": 97.39
-          },
-          {
-            "x": 6.56,
-            "y": 94.79
-          },
-          {
-            "x": 7.33,
-            "y": 91.94
           }
         ]
       },
@@ -53376,6 +53439,15 @@
           }
         ],
         "dangerRoute": true
+      },
+      {
+        "id": "mtxn3iz6-h02o0g",
+        "type": "aimHere",
+        "parentTankId": "vietnam-domination-2-blue-unit-04",
+        "startX": 14.51,
+        "startY": 15.07,
+        "endX": 9.48,
+        "endY": 25.44
       }
     ],
     "Volokolamsk::domination-1|Red": [],
@@ -54619,6 +54691,6 @@
       }
     ]
   },
-  "updatedAt": "2026-09-11T23:51:39.368Z",
-  "exportedAt": "2026-09-12T00:16:37.899Z"
+  "updatedAt": "2026-09-12T00:54:34.274Z",
+  "exportedAt": "2026-09-12T00:56:58.310Z"
 }
