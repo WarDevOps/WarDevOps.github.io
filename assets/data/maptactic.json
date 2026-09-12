@@ -9,7 +9,7 @@
     "American Desert": "2026-09-12",
     "Aral Sea": "2026-09-10",
     "Arctic Pier": "2026-09-11",
-    "Arctic Polar Base": "2026-09-03",
+    "Arctic Polar Base": "2026-09-12",
     "Ardennes": "2026-09-11",
     "Ash River": "2026-09-02",
     "Attica": "2026-09-03",
@@ -64,10 +64,10 @@
     "Abandoned Town": "2026-09-03T00:04:09Z",
     "Advance to the Rhine": "2026-09-12T00:52:46Z",
     "Alaska": "2026-09-10T23:08:06Z",
-    "American Desert": "2026-09-12T00:54:34Z",
+    "American Desert": "2026-09-12T02:41:46Z",
     "Aral Sea": "2026-09-10T12:50:30Z",
     "Arctic Pier": "2026-09-11T02:16:45Z",
-    "Arctic Polar Base": "2026-09-03T01:47:54Z",
+    "Arctic Polar Base": "2026-09-12T01:01:54Z",
     "Ardennes": "2026-09-10T23:24:07Z",
     "Ash River": "2026-09-01T16:50:15Z",
     "Attica": "2026-09-03T02:06:24Z",
@@ -2639,19 +2639,6 @@
         "comment": "Only the first spawn works."
       },
       {
-        "id": "mtiemjou-ly87nk",
-        "type": "mainBattleTankRed",
-        "x": 73.5,
-        "y": 41.22
-      },
-      {
-        "id": "mtiemltz-3zskgj",
-        "type": "battleLine",
-        "x": 73.5,
-        "y": 41.22,
-        "parentTankId": "mtiemjou-ly87nk"
-      },
-      {
         "id": "mtiemnap-fvezd4",
         "type": "sniper",
         "x": 77.49,
@@ -2712,19 +2699,6 @@
         "parentTankId": "mtieusf6-enymwv"
       },
       {
-        "id": "mtiev4y6-0qhade",
-        "type": "mainBattleTankRed",
-        "x": 40.69,
-        "y": 44.85
-      },
-      {
-        "id": "mtiev7sz-jnet1m",
-        "type": "highRiskSpot",
-        "x": 40.69,
-        "y": 44.85,
-        "parentTankId": "mtiev4y6-0qhade"
-      },
-      {
         "id": "mtif8yiu-367cvp",
         "type": "mainBattleTankRed",
         "x": 24.38,
@@ -2736,19 +2710,6 @@
         "x": 24.38,
         "y": 47.42,
         "parentTankId": "mtif8yiu-367cvp"
-      },
-      {
-        "id": "mtif9n0u-86a3iu",
-        "type": "mainBattleTankRed",
-        "x": 50.09,
-        "y": 45.21
-      },
-      {
-        "id": "mtif9p57-s1yhhd",
-        "type": "spawnKill",
-        "x": 50.09,
-        "y": 45.21,
-        "parentTankId": "mtif9n0u-86a3iu"
       },
       {
         "id": "mtvio8vj-qoofb6",
@@ -2765,14 +2726,14 @@
       {
         "id": "mtxlz9ks-ffpiva",
         "type": "mainBattleTankRed",
-        "x": 58.21,
-        "y": 39.05
+        "x": 58.08,
+        "y": 40.1
       },
       {
         "id": "mtxlzcff-3c8z3p",
         "type": "highRiskSpot",
-        "x": 58.21,
-        "y": 39.05,
+        "x": 58.08,
+        "y": 40.1,
         "parentTankId": "mtxlz9ks-ffpiva"
       },
       {
@@ -2780,6 +2741,96 @@
         "type": "artilleryStrike",
         "x": 45.92,
         "y": 47.34
+      },
+      {
+        "id": "mtxozmvw-xf5syz",
+        "type": "mainBattleTankRed",
+        "x": 33.85,
+        "y": 31.37
+      },
+      {
+        "id": "mtxozolw-zt7ry6",
+        "type": "spawnKill",
+        "x": 33.85,
+        "y": 31.37,
+        "parentTankId": "mtxozmvw-xf5syz"
+      },
+      {
+        "id": "mtxpz1ot-i2htrq",
+        "type": "mainBattleTankRed",
+        "x": 77.22,
+        "y": 34.76
+      },
+      {
+        "id": "mtxpze7z-xq6hg4",
+        "type": "battleLine",
+        "x": 77.22,
+        "y": 34.76,
+        "parentTankId": "mtxpz1ot-i2htrq"
+      },
+      {
+        "id": "mtxr48mm-3yew5s",
+        "type": "tankDestroyerRed",
+        "x": 45.83,
+        "y": 97.53
+      },
+      {
+        "id": "mtxr4av9-szgbwg",
+        "type": "sniper",
+        "x": 45.83,
+        "y": 97.53,
+        "parentTankId": "mtxr48mm-3yew5s"
+      },
+      {
+        "id": "mtxran3l-see219",
+        "type": "smokeshell",
+        "x": 26.95,
+        "y": 82.94
+      },
+      {
+        "id": "mtxraqgm-ldt1xl",
+        "type": "smokeshell",
+        "x": 31.25,
+        "y": 83.07
+      },
+      {
+        "id": "mtxrbhxh-wx90dy",
+        "type": "mainBattleTankRed",
+        "x": 23.04,
+        "y": 82.16
+      },
+      {
+        "id": "mtxrbm0w-i87rsa",
+        "type": "highRiskSpot",
+        "x": 23.04,
+        "y": 82.16,
+        "parentTankId": "mtxrbhxh-wx90dy"
+      },
+      {
+        "id": "mtxrfanu-vhdm2q",
+        "type": "mainBattleTankRed",
+        "x": 38.67,
+        "y": 50.38
+      },
+      {
+        "id": "mtxrg37r-8feva6",
+        "type": "highRiskSpot",
+        "x": 38.67,
+        "y": 50.38,
+        "parentTankId": "mtxrfanu-vhdm2q"
+      },
+      {
+        "id": "mtxrknas-1bjs0a",
+        "type": "mainBattleTankRed",
+        "x": 59.64,
+        "y": 50.25
+      },
+      {
+        "id": "mtxrkofy-qit6pz",
+        "type": "battleLine",
+        "x": 59.64,
+        "y": 50.25,
+        "parentTankId": "mtxrknas-1bjs0a"
       }
     ],
     "American Desert::domination-1|Blue": [
@@ -2812,8 +2863,8 @@
       {
         "id": "mtieh9bo-annn8f",
         "type": "smokeshell",
-        "x": 27.13,
-        "y": 52.57
+        "x": 24.35,
+        "y": 51.43
       },
       {
         "id": "mtiekzna-s3t8fb",
@@ -2831,14 +2882,14 @@
       {
         "id": "mtiewrxq-9dxyvl",
         "type": "tankDestroyer",
-        "x": 41.22,
-        "y": 35.01
+        "x": 33.33,
+        "y": 32.93
       },
       {
         "id": "mtiewszv-l5j2a7",
         "type": "sniper",
-        "x": 41.22,
-        "y": 35.01,
+        "x": 33.33,
+        "y": 32.93,
         "parentTankId": "mtiewrxq-9dxyvl"
       },
       {
@@ -2849,7 +2900,7 @@
       },
       {
         "id": "mtiexdz1-suvb3g",
-        "type": "spawnKill",
+        "type": "sniper",
         "x": 45.83,
         "y": 94.15,
         "parentTankId": "mtiexci4-lz6e70"
@@ -2857,8 +2908,8 @@
       {
         "id": "mtiexoze-757po0",
         "type": "mainBattleTank",
-        "x": 95.48,
-        "y": 62.41
+        "x": 94.41,
+        "y": 65.75
       },
       {
         "id": "mtiexvf8-ricksd",
@@ -2908,34 +2959,34 @@
       {
         "id": "mtif2naa-lmdcx8",
         "type": "tankDestroyer",
-        "x": 26.68,
-        "y": 44.32
+        "x": 25.26,
+        "y": 40.1
       },
       {
         "id": "mtif2ogn-lzodhd",
         "type": "sniper",
-        "x": 26.68,
-        "y": 44.32,
+        "x": 25.26,
+        "y": 40.1,
         "parentTankId": "mtif2naa-lmdcx8"
       },
       {
         "id": "mtif3ngn-zb4nwl",
         "type": "spawnKill",
-        "x": 95.48,
-        "y": 62.41,
+        "x": 94.41,
+        "y": 65.75,
         "parentTankId": "mtiexoze-757po0"
       },
       {
         "id": "mtift5he-sloqt0",
         "type": "mainBattleTank",
-        "x": 75.18,
-        "y": 33.42
+        "x": 76.57,
+        "y": 33.58
       },
       {
         "id": "mtiftd1v-3wtsdl",
         "type": "highRiskSpot",
-        "x": 75.18,
-        "y": 33.42,
+        "x": 76.57,
+        "y": 33.58,
         "parentTankId": "mtift5he-sloqt0"
       },
       {
@@ -2955,6 +3006,51 @@
         "type": "artilleryStrike",
         "x": 58.96,
         "y": 52.39
+      },
+      {
+        "id": "mtxqg6wx-kscdwb",
+        "type": "mainBattleTank",
+        "x": 53.78,
+        "y": 93.62
+      },
+      {
+        "id": "mtxqg9d0-df9rrt",
+        "type": "spawnKill",
+        "x": 53.78,
+        "y": 93.62,
+        "parentTankId": "mtxqg6wx-kscdwb"
+      },
+      {
+        "id": "mtxqrv55-2bg18y",
+        "type": "mainBattleTank",
+        "x": 52.08,
+        "y": 86.46
+      },
+      {
+        "id": "mtxqryoj-s37mpq",
+        "type": "highRiskSpot",
+        "x": 52.08,
+        "y": 86.46,
+        "parentTankId": "mtxqrv55-2bg18y"
+      },
+      {
+        "id": "mtxqywiv-wjszqp",
+        "type": "smokeshell",
+        "x": 25.39,
+        "y": 57.03
+      },
+      {
+        "id": "mtxrrejc-r9unpi",
+        "type": "tankDestroyer",
+        "x": 60.42,
+        "y": 13.92
+      },
+      {
+        "id": "mtxrrg2y-crqb2g",
+        "type": "sniper",
+        "x": 60.42,
+        "y": 13.92,
+        "parentTankId": "mtxrrejc-r9unpi"
       }
     ],
     "Aral Sea::domination-1|Red": [
@@ -3572,26 +3668,7 @@
         "parentTankId": "mtjygzia-vx0vls"
       }
     ],
-    "Arctic Polar Base::domination-1|Red": [
-      {
-        "id": "mtig06ro-cqi12i",
-        "type": "mainBattleTank",
-        "x": 75.09,
-        "y": 62.05
-      },
-      {
-        "id": "mtig09ft-4jthgp",
-        "type": "mainBattleTank",
-        "x": 49.2,
-        "y": 67.46
-      },
-      {
-        "id": "mtig0bro-y2tigw",
-        "type": "mainBattleTank",
-        "x": 51.33,
-        "y": 47.78
-      }
-    ],
+    "Arctic Polar Base::domination-1|Red": [],
     "Ardennes::domination-1|Red": [
       {
         "id": "aredennes-red-unit-01",
@@ -22432,15 +22509,6 @@
         "endY": 39.89
       },
       {
-        "id": "mtiemz71-tedvz7",
-        "type": "aimHere",
-        "parentTankId": "mtiems6e-p0zo6n",
-        "startX": 38.74,
-        "startY": 96.99,
-        "endX": 28.9,
-        "endY": 49.55
-      },
-      {
         "id": "mtieo2pf-heimbi",
         "type": "aimHere",
         "parentTankId": "mtiengwy-tmkm2c",
@@ -22448,15 +22516,6 @@
         "startY": 42.9,
         "endX": 75.8,
         "endY": 25.61
-      },
-      {
-        "id": "mtieoea5-9irkle",
-        "type": "aimHere",
-        "parentTankId": "mtiemjou-ly87nk",
-        "startX": 73.5,
-        "startY": 41.22,
-        "endX": 74.74,
-        "endY": 27.03
       },
       {
         "id": "mtieoxfl-4n7ofb",
@@ -22551,15 +22610,6 @@
         "endY": 11.43
       },
       {
-        "id": "mtievulf-oug6tr",
-        "type": "aimHere",
-        "parentTankId": "mtiev4y6-0qhade",
-        "startX": 40.69,
-        "startY": 44.85,
-        "endX": 21.98,
-        "endY": 34.66
-      },
-      {
         "id": "mtif6xg1-23nrwk",
         "type": "route",
         "points": [
@@ -22623,15 +22673,6 @@
         "startY": 47.42,
         "endX": 21.72,
         "endY": 24.99
-      },
-      {
-        "id": "mtif9xev-htubbp",
-        "type": "aimHere",
-        "parentTankId": "mtif9n0u-86a3iu",
-        "startX": 50.09,
-        "startY": 45.21,
-        "endX": 43.71,
-        "endY": 27.21
       },
       {
         "id": "mtifnbz3-3xfhh2",
@@ -22705,8 +22746,8 @@
         "id": "mtxlzjj7-jod7b3",
         "type": "aimHere",
         "parentTankId": "mtxlz9ks-ffpiva",
-        "startX": 58.21,
-        "startY": 39.05,
+        "startX": 58.08,
+        "startY": 40.1,
         "endX": 72.4,
         "endY": 16.26
       },
@@ -22738,22 +22779,224 @@
         "dangerRoute": true
       },
       {
-        "id": "mtxm0vu3-woez8v",
+        "id": "mtxozu5r-p5qnql",
+        "type": "aimHere",
+        "parentTankId": "mtxozmvw-xf5syz",
+        "startX": 33.85,
+        "startY": 31.37,
+        "endX": 31.25,
+        "endY": 20.82
+      },
+      {
+        "id": "mtxozwpk-02v7lh",
+        "type": "aimHere",
+        "parentTankId": "mtxozmvw-xf5syz",
+        "startX": 33.85,
+        "startY": 31.37,
+        "endX": 23.83,
+        "endY": 26.03
+      },
+      {
+        "id": "mtxp5lti-2pft6x",
         "type": "route",
         "points": [
           {
-            "x": 78.26,
-            "y": 48.17
+            "x": 39.84,
+            "y": 44.91
           },
           {
-            "x": 73.18,
-            "y": 45.3
+            "x": 39.32,
+            "y": 42.57
           },
           {
-            "x": 73.57,
-            "y": 42.05
+            "x": 38.93,
+            "y": 39.31
+          },
+          {
+            "x": 35.29,
+            "y": 36.97
+          },
+          {
+            "x": 33.98,
+            "y": 32.15
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "mtxpz5xv-1nyt9l",
+        "type": "route",
+        "points": [
+          {
+            "x": 71.1,
+            "y": 50.12
+          },
+          {
+            "x": 73.96,
+            "y": 39.84
           }
         ]
+      },
+      {
+        "id": "mtxpz946-xgip78",
+        "type": "route",
+        "points": [
+          {
+            "x": 73.96,
+            "y": 39.97
+          },
+          {
+            "x": 76.96,
+            "y": 37.75
+          },
+          {
+            "x": 77.09,
+            "y": 35.8
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "mtxq0mza-hj2nae",
+        "type": "aimHere",
+        "parentTankId": "mtxpz1ot-i2htrq",
+        "startX": 77.22,
+        "startY": 34.76,
+        "endX": 82.17,
+        "endY": 18.61
+      },
+      {
+        "id": "mtxr4hx5-mbqz11",
+        "type": "aimHere",
+        "parentTankId": "mtxr48mm-3yew5s",
+        "startX": 45.83,
+        "startY": 97.53,
+        "endX": 21.48,
+        "endY": 67.18
+      },
+      {
+        "id": "mtxr63yx-14mxom",
+        "type": "aimHere",
+        "parentTankId": "mtiems6e-p0zo6n",
+        "startX": 38.74,
+        "startY": 96.99,
+        "endX": 30.6,
+        "endY": 59.11
+      },
+      {
+        "id": "mtxr87vp-fzixoh",
+        "type": "route",
+        "points": [
+          {
+            "x": 49.87,
+            "y": 90.23
+          },
+          {
+            "x": 41.93,
+            "y": 87.76
+          }
+        ]
+      },
+      {
+        "id": "mtxr8eet-v3h0ql",
+        "type": "route",
+        "points": [
+          {
+            "x": 40.89,
+            "y": 87.63
+          },
+          {
+            "x": 34.11,
+            "y": 85.54
+          },
+          {
+            "x": 26.82,
+            "y": 85.94
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "mtxrajo8-spov1y",
+        "type": "route",
+        "points": [
+          {
+            "x": 26.95,
+            "y": 85.81
+          },
+          {
+            "x": 23.17,
+            "y": 83.85
+          },
+          {
+            "x": 23.3,
+            "y": 82.16
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "mtxrbkd4-szmtva",
+        "type": "aimHere",
+        "parentTankId": "mtxrbhxh-wx90dy",
+        "startX": 23.04,
+        "startY": 82.16,
+        "endX": 24.22,
+        "endY": 46.48
+      },
+      {
+        "id": "mtxrg85c-gtd44w",
+        "type": "aimHere",
+        "parentTankId": "mtxrfanu-vhdm2q",
+        "startX": 38.67,
+        "startY": 50.38,
+        "endX": 23.83,
+        "endY": 40.23
+      },
+      {
+        "id": "mtxrgkbn-cpzjnx",
+        "type": "route",
+        "points": [
+          {
+            "x": 48.31,
+            "y": 59.76
+          },
+          {
+            "x": 43.49,
+            "y": 56.89
+          },
+          {
+            "x": 43.62,
+            "y": 54.03
+          },
+          {
+            "x": 43.1,
+            "y": 52.21
+          },
+          {
+            "x": 39.32,
+            "y": 51.03
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "mtxrkw2z-7o4qof",
+        "type": "aimHere",
+        "parentTankId": "mtxrknas-1bjs0a",
+        "startX": 59.64,
+        "startY": 50.25,
+        "endX": 43.88,
+        "endY": 49.86
+      },
+      {
+        "id": "mtxrlqen-pt4zzh",
+        "type": "aimHere",
+        "parentTankId": "mtxlz9ks-ffpiva",
+        "startX": 58.08,
+        "startY": 40.1,
+        "endX": 37.89,
+        "endY": 39.57
       }
     ],
     "American Desert::domination-1|Blue": [
@@ -22776,21 +23019,6 @@
         "endY": 47.25
       },
       {
-        "id": "mtiel5fh-1wkyaa",
-        "type": "route",
-        "points": [
-          {
-            "x": 24.73,
-            "y": 52.65
-          },
-          {
-            "x": 21.36,
-            "y": 63.91
-          }
-        ],
-        "dangerRoute": true
-      },
-      {
         "id": "mtieldcx-rc2jhh",
         "type": "aimHere",
         "parentTankId": "mtiekzna-s3t8fb",
@@ -22803,8 +23031,8 @@
         "id": "mtiewxev-sgiiyk",
         "type": "aimHere",
         "parentTankId": "mtiewrxq-9dxyvl",
-        "startX": 41.22,
-        "startY": 35.01,
+        "startX": 33.33,
+        "startY": 32.93,
         "endX": 70.75,
         "endY": 47.07
       },
@@ -22882,20 +23110,6 @@
           {
             "x": 58.07,
             "y": 44.14
-          }
-        ]
-      },
-      {
-        "id": "mtif0eor-n6fc92",
-        "type": "route",
-        "points": [
-          {
-            "x": 24.55,
-            "y": 51.95
-          },
-          {
-            "x": 24.2,
-            "y": 46.98
           }
         ]
       },
@@ -22988,55 +23202,6 @@
         "endY": 57.97
       },
       {
-        "id": "mtif2shz-ezxyu7",
-        "type": "aimHere",
-        "parentTankId": "mtif2naa-lmdcx8",
-        "startX": 26.68,
-        "startY": 44.32,
-        "endX": 37.23,
-        "endY": 87.59
-      },
-      {
-        "id": "mtif2zcx-5xs6zc",
-        "type": "route",
-        "points": [
-          {
-            "x": 25.8,
-            "y": 43.26
-          },
-          {
-            "x": 25.53,
-            "y": 40.6
-          },
-          {
-            "x": 27.66,
-            "y": 36.25
-          },
-          {
-            "x": 29.34,
-            "y": 30.58
-          }
-        ]
-      },
-      {
-        "id": "mtif34bv-77k5dh",
-        "type": "route",
-        "points": [
-          {
-            "x": 23.76,
-            "y": 46.54
-          },
-          {
-            "x": 24.02,
-            "y": 43.43
-          },
-          {
-            "x": 25.26,
-            "y": 40.86
-          }
-        ]
-      },
-      {
         "id": "mtif4s2l-o3ptxd",
         "type": "aimHere",
         "parentTankId": "mtiexci4-lz6e70",
@@ -23046,20 +23211,11 @@
         "endY": 87.06
       },
       {
-        "id": "mtif56tj-yw4oe7",
-        "type": "aimHere",
-        "parentTankId": "mtiexoze-757po0",
-        "startX": 95.48,
-        "startY": 62.41,
-        "endX": 88.92,
-        "endY": 72.6
-      },
-      {
         "id": "mtif7w3v-xfh5sk",
         "type": "aimHere",
         "parentTankId": "mtiewrxq-9dxyvl",
-        "startX": 41.22,
-        "startY": 35.01,
+        "startX": 33.33,
+        "startY": 32.93,
         "endX": 71.28,
         "endY": 39.8
       },
@@ -23108,8 +23264,8 @@
         "id": "mtiftafz-d00mcg",
         "type": "aimHere",
         "parentTankId": "mtift5he-sloqt0",
-        "startX": 75.18,
-        "startY": 33.42,
+        "startX": 76.57,
+        "startY": 33.58,
         "endX": 84.93,
         "endY": 37.58
       },
@@ -23137,7 +23293,8 @@
             "x": 45.12,
             "y": 94.59
           }
-        ]
+        ],
+        "dangerRoute": true
       },
       {
         "id": "mtifuj4h-nku7vj",
@@ -23205,6 +23362,169 @@
         "startY": 52.21,
         "endX": 84.22,
         "endY": 61.08
+      },
+      {
+        "id": "mtxp37ga-cadktt",
+        "type": "aimHere",
+        "parentTankId": "mtif2naa-lmdcx8",
+        "startX": 25.26,
+        "startY": 40.1,
+        "endX": 36.46,
+        "endY": 84.5
+      },
+      {
+        "id": "mtxp3bur-dswxbj",
+        "type": "route",
+        "points": [
+          {
+            "x": 29.29,
+            "y": 30.98
+          },
+          {
+            "x": 28.12,
+            "y": 35.93
+          },
+          {
+            "x": 25.78,
+            "y": 39.57
+          }
+        ]
+      },
+      {
+        "id": "mtxpj9o5-68k9lg",
+        "type": "aimHere",
+        "parentTankId": "mtif0yyw-dkjvuc",
+        "startX": 75.71,
+        "startY": 27.21,
+        "endX": 93.5,
+        "endY": 53.51
+      },
+      {
+        "id": "mtxpjnbp-3elm9p",
+        "type": "aimHere",
+        "parentTankId": "mtift5he-sloqt0",
+        "startX": 76.57,
+        "startY": 33.58,
+        "endX": 96.1,
+        "endY": 58.85
+      },
+      {
+        "id": "mtxpnvow-5gn5ar",
+        "type": "aimHere",
+        "parentTankId": "mtiexoze-757po0",
+        "startX": 94.41,
+        "startY": 65.75,
+        "endX": 83.47,
+        "endY": 72.52
+      },
+      {
+        "id": "mtxq0w5u-wgh7fp",
+        "type": "aimHere",
+        "parentTankId": "mtif0up4-rgvajt",
+        "startX": 82.81,
+        "startY": 19.41,
+        "endX": 76.18,
+        "endY": 39.31
+      },
+      {
+        "id": "mtxqjbdc-xwxhki",
+        "type": "route",
+        "points": [
+          {
+            "x": 43.1,
+            "y": 97.53
+          },
+          {
+            "x": 47.66,
+            "y": 99.22
+          },
+          {
+            "x": 51.69,
+            "y": 99.22
+          },
+          {
+            "x": 53.65,
+            "y": 96.61
+          },
+          {
+            "x": 53.91,
+            "y": 94.01
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "mtxqjk5s-w2xyxe",
+        "type": "aimHere",
+        "parentTankId": "mtxqg6wx-kscdwb",
+        "startX": 53.78,
+        "startY": 93.62,
+        "endX": 65.11,
+        "endY": 83.98
+      },
+      {
+        "id": "mtxqsakb-ksx0si",
+        "type": "aimHere",
+        "parentTankId": "mtxqrv55-2bg18y",
+        "startX": 52.08,
+        "startY": 86.46,
+        "endX": 62.63,
+        "endY": 94.14
+      },
+      {
+        "id": "mtxqz6ni-ayzc0b",
+        "type": "route",
+        "points": [
+          {
+            "x": 25.39,
+            "y": 40.23
+          },
+          {
+            "x": 20.31,
+            "y": 46.22
+          },
+          {
+            "x": 19.27,
+            "y": 48.56
+          }
+        ]
+      },
+      {
+        "id": "mtxqzaw6-rhm402",
+        "type": "route",
+        "points": [
+          {
+            "x": 19.27,
+            "y": 48.95
+          },
+          {
+            "x": 20.83,
+            "y": 58.2
+          },
+          {
+            "x": 20.83,
+            "y": 63.67
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "mtxr2g4p-q5jmzq",
+        "type": "aimHere",
+        "parentTankId": "mtiekzna-s3t8fb",
+        "startX": 20.83,
+        "startY": 64.89,
+        "endX": 45.96,
+        "endY": 95.31
+      },
+      {
+        "id": "mtxrrqqa-9j9pdc",
+        "type": "aimHere",
+        "parentTankId": "mtxrrejc-r9unpi",
+        "startX": 60.42,
+        "startY": 13.92,
+        "endX": 95.84,
+        "endY": 42.18
       }
     ],
     "Aral Sea::domination-1|Red": [
@@ -54691,6 +55011,6 @@
       }
     ]
   },
-  "updatedAt": "2026-09-12T00:54:34.274Z",
-  "exportedAt": "2026-09-12T00:56:58.310Z"
+  "updatedAt": "2026-09-12T02:41:46.625Z",
+  "exportedAt": "2026-09-12T02:46:29.735Z"
 }
