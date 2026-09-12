@@ -1,7 +1,7 @@
     import { MARKER_LAYOUT_VERSION, backupMarkerLayout, loadMarkerLayout, saveMarkerLayout as saveMarkerLayoutToStorage } from './marker-storage.js?v=map-sync-20260903';
 import { initDiscordMemberCount } from './discord-stats.js';
-    import { commentImages } from './comment-images.js?v=comment-images-d6c742b47074';
-    import { defaultMarkerLayout, maps, translations } from './data.js?v=artillery-strike-20260912';
+    import { commentImages } from './comment-images.js?v=comment-images-4b1873a850be';
+    import { defaultMarkerLayout, maps, translations } from './data.js?v=comment-carousel-20260912';
     import { acceptUpstreamMap, isMapSyncState, markLayoutAsLocalEdits, markMapEdited, mergeMapLayouts, sourceRevision } from './marker-merge.js?v=marker-drop-20260910';
 
 
@@ -22,13 +22,17 @@ import { initDiscordMemberCount } from './discord-stats.js';
     markerCommentImagePreview.hidden = true;
     const markerCommentImagePreviewImage = document.createElement("img");
     markerCommentImagePreviewImage.alt = "";
+    const markerCommentImagePreviewCarousel = document.createElement("div");
+    markerCommentImagePreviewCarousel.className = "map-marker-comment-carousel map-marker-comment-preview-carousel";
+    markerCommentImagePreviewCarousel.append(markerCommentImagePreviewImage);
     const markerCommentImagePreviewClose = document.createElement("button");
     markerCommentImagePreviewClose.type = "button";
     markerCommentImagePreviewClose.className = "map-marker-comment-image-preview-close";
     markerCommentImagePreviewClose.textContent = "×";
-    markerCommentImagePreview.append(markerCommentImagePreviewImage, markerCommentImagePreviewClose);
+    markerCommentImagePreview.append(markerCommentImagePreviewCarousel, markerCommentImagePreviewClose);
     document.body.append(markerCommentImagePreview);
     let markerCommentImagePreviewSource = null;
+    let markerCommentImagePreviewSourceCarousel = null;
     const mapList = $("#map-list");
     const mapIndex = $(".map-index");
     const mapIndexPlaceholder = document.createElement("div");
@@ -117,6 +121,9 @@ import { initDiscordMemberCount } from './discord-stats.js';
     const MAX_COMMENT_POPOVER_WIDTH = 720;
     const MAX_COMMENT_POPOVER_HEIGHT_RATIO = 0.8;
     const MIN_PINNED_COMMENT_IMAGE_HEIGHT = 240;
+    const MAX_COMMENT_IMAGES = 10;
+    const COMMENT_IMAGE_INDICATOR_ACTIVE_MS = 1000;
+    const COMMENT_IMAGE_SWIPE_MIN_DISTANCE = 40;
     const MOBILE_COMMENT_LAYOUT_QUERY = window.matchMedia("(max-width: 760px), (hover: none), (pointer: coarse)");
     const MOBILE_DEVICE_QUERY = window.matchMedia("(max-width: 760px), (any-pointer: coarse)");
     const MAP_UPDATED_AT_PATTERN = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d{1,3})?Z$/;
@@ -566,7 +573,8 @@ import { initDiscordMemberCount } from './discord-stats.js';
       renderRecentUpdates();
       window.dispatchEvent(new CustomEvent("maptactic:languagechange", { detail: { language } }));
       document.querySelectorAll(".marker-context-menu").forEach(contextMenu => {
-        renderCommentImageOptions(contextMenu, contextMenu.querySelector("[data-marker-comment-image-picker]").dataset.selectedImageId);
+        const picker = contextMenu.querySelector("[data-marker-comment-image-picker]");
+        renderCommentImageOptions(contextMenu, selectedCommentImageIds(picker));
       });
       setTheme(state.theme);
       updateSelectedMapDetails();
@@ -699,19 +707,126 @@ import { initDiscordMemberCount } from './discord-stats.js';
     function markerComment(marker) {
       return isTankMarker(marker) && typeof marker.comment === "string" ? normalizeMarkerComment(marker.comment) : "";
     }
-    function markerCommentImage(marker) {
-      return isTankMarker(marker) && typeof marker.commentImage === "string" && COMMENT_IMAGES_BY_ID.has(marker.commentImage)
-        ? COMMENT_IMAGES_BY_ID.get(marker.commentImage)
-        : null;
+    function markerCommentImageIds(marker) {
+      if (!isTankMarker(marker)) return [];
+      const candidateIds = Array.isArray(marker.commentImages)
+        ? marker.commentImages
+        : (typeof marker.commentImage === "string" ? [marker.commentImage] : []);
+      return [...new Set(candidateIds)]
+        .filter(imageId => typeof imageId === "string" && COMMENT_IMAGES_BY_ID.has(imageId))
+        .slice(0, MAX_COMMENT_IMAGES);
+    }
+    function markerCommentImages(marker) {
+      return markerCommentImageIds(marker).map(imageId => COMMENT_IMAGES_BY_ID.get(imageId));
     }
     function markerHasComment(marker) {
-      return Boolean(markerComment(marker) || markerCommentImage(marker));
+      return Boolean(markerComment(marker) || markerCommentImageIds(marker).length);
     }
     function usesMobileDeviceLayout() {
       return MOBILE_DEVICE_QUERY.matches;
     }
     function usesMobileCommentLayout() {
       return MOBILE_COMMENT_LAYOUT_QUERY.matches;
+    }
+    function normalizedCarouselIndex(index, imageCount) {
+      return imageCount ? ((index % imageCount) + imageCount) % imageCount : 0;
+    }
+    function activateCommentCarouselIndicators(carousel) {
+      if (!carousel) return;
+      carousel.classList.add("is-indicator-active");
+      window.clearTimeout(carousel._commentIndicatorTimer);
+      carousel._commentIndicatorTimer = window.setTimeout(() => {
+        carousel.classList.remove("is-indicator-active");
+      }, COMMENT_IMAGE_INDICATOR_ACTIVE_MS);
+    }
+    function renderCommentCarouselIndicators(carousel) {
+      carousel.querySelector(".map-marker-comment-indicator-hit-area")?.remove();
+      const images = carousel._commentImages || [];
+      if (images.length < 2) return;
+      const hitArea = document.createElement("div");
+      const indicators = document.createElement("div");
+      hitArea.className = "map-marker-comment-indicator-hit-area";
+      indicators.className = "map-marker-comment-indicators";
+      indicators.setAttribute("role", "group");
+      indicators.setAttribute("aria-label", t("commentImageNavigation"));
+      images.forEach((image, index) => {
+        const indicator = document.createElement("button");
+        const isCurrent = index === carousel._commentImageIndex;
+        const clickable = !usesMobileCommentLayout();
+        indicator.type = "button";
+        indicator.className = "map-marker-comment-indicator";
+        indicator.dataset.commentImageIndex = String(index);
+        indicator.setAttribute("aria-label", `${index + 1} / ${images.length}`);
+        indicator.setAttribute("aria-pressed", String(isCurrent));
+        indicator.tabIndex = clickable ? 0 : -1;
+        if (!clickable) indicator.setAttribute("aria-hidden", "true");
+        indicator.title = image.label;
+        indicator.addEventListener("click", event => {
+          event.preventDefault();
+          event.stopPropagation();
+          if (!clickable) return;
+          setCommentCarouselIndex(carousel, index);
+        });
+        indicators.append(indicator);
+      });
+      hitArea.append(indicators);
+      carousel.append(hitArea);
+    }
+    function setCommentCarouselIndex(carousel, index, { animate = true, notify = true } = {}) {
+      const images = carousel?._commentImages || [];
+      if (!images.length) return;
+      const nextIndex = normalizedCarouselIndex(index, images.length);
+      const image = carousel.querySelector("img");
+      const changed = nextIndex !== carousel._commentImageIndex;
+      carousel._commentImageIndex = nextIndex;
+      image.draggable = false;
+      image.src = images[nextIndex].path;
+      image.alt = images[nextIndex].label;
+      if (changed && animate) {
+        image.classList.remove("is-changing");
+        void image.offsetWidth;
+        image.classList.add("is-changing");
+      }
+      carousel.querySelectorAll(".map-marker-comment-indicator").forEach((indicator, indicatorIndex) => {
+        indicator.setAttribute("aria-pressed", String(indicatorIndex === nextIndex));
+      });
+      if (notify && changed) carousel._commentImageChange?.(nextIndex);
+    }
+    function configureCommentCarousel(carousel, images, initialIndex = 0, onChange = null) {
+      carousel._commentImages = images;
+      carousel._commentImageIndex = normalizedCarouselIndex(initialIndex, images.length);
+      carousel._commentImageChange = onChange;
+      renderCommentCarouselIndicators(carousel);
+      setCommentCarouselIndex(carousel, carousel._commentImageIndex, { animate: false, notify: false });
+    }
+    function bindExpandedCommentImageSwipe(carousel) {
+      let swipe = null;
+      carousel.addEventListener("pointerdown", event => {
+        if (!usesMobileCommentLayout() || markerCommentImagePreview.hidden) return;
+        swipe = { pointerId: event.pointerId, startX: event.clientX, startY: event.clientY };
+        activateCommentCarouselIndicators(carousel);
+        carousel.setPointerCapture?.(event.pointerId);
+      });
+      carousel.addEventListener("pointermove", event => {
+        if (!swipe || swipe.pointerId !== event.pointerId) return;
+        const deltaX = event.clientX - swipe.startX;
+        const deltaY = event.clientY - swipe.startY;
+        if (Math.abs(deltaX) > Math.abs(deltaY)) event.preventDefault();
+        activateCommentCarouselIndicators(carousel);
+      });
+      const finishSwipe = event => {
+        if (!swipe || swipe.pointerId !== event.pointerId) return;
+        const deltaX = event.clientX - swipe.startX;
+        const deltaY = event.clientY - swipe.startY;
+        const requiredDistance = Math.max(COMMENT_IMAGE_SWIPE_MIN_DISTANCE, carousel.clientWidth * .1);
+        if (Math.abs(deltaX) >= requiredDistance && Math.abs(deltaX) > Math.abs(deltaY)) {
+          setCommentCarouselIndex(carousel, carousel._commentImageIndex + (deltaX < 0 ? 1 : -1));
+        }
+        activateCommentCarouselIndicators(carousel);
+        swipe = null;
+      };
+      carousel.addEventListener("pointerup", finishSwipe);
+      carousel.addEventListener("pointercancel", finishSwipe);
     }
     function hideMarkerCommentImagePreview({ restoreFocus = false } = {}) {
       const sourceImage = markerCommentImagePreviewSource;
@@ -730,6 +845,11 @@ import { initDiscordMemberCount } from './discord-stats.js';
       markerCommentImagePreviewImage.removeAttribute("src");
       markerCommentImagePreviewImage.alt = "";
       markerCommentImagePreviewSource = null;
+      markerCommentImagePreviewSourceCarousel = null;
+      markerCommentImagePreviewCarousel._commentImages = [];
+      markerCommentImagePreviewCarousel._commentImageIndex = 0;
+      markerCommentImagePreviewCarousel._commentImageChange = null;
+      markerCommentImagePreviewCarousel.querySelector(".map-marker-comment-indicator-hit-area")?.remove();
       if (restoreFocus) sourceImage?.focus({ preventScroll: true });
     }
     function positionMarkerCommentImagePreview() {
@@ -746,11 +866,13 @@ import { initDiscordMemberCount } from './discord-stats.js';
       markerCommentImagePreviewImage.style.maxWidth = `${Math.max(0, viewportWidth - 16)}px`;
       markerCommentImagePreviewImage.style.maxHeight = `${Math.max(0, viewportHeight - 16)}px`;
     }
-    function showMarkerCommentImagePreview(sourceImage, { interactive = false } = {}) {
+    function showMarkerCommentImagePreview(sourceCarousel, { interactive = false } = {}) {
+      const sourceImage = sourceCarousel?.querySelector("img");
       if (!markerCommentPopover.classList.contains("is-pinned") || !sourceImage?.isConnected) return;
       const previewHost = dialog.open ? dialog : document.body;
       if (markerCommentImagePreview.parentElement !== previewHost) previewHost.append(markerCommentImagePreview);
       markerCommentImagePreviewSource = sourceImage;
+      markerCommentImagePreviewSourceCarousel = sourceCarousel;
       markerCommentImagePreview.classList.toggle("is-touch-open", interactive);
       markerCommentImagePreview.setAttribute("aria-hidden", String(!interactive));
       if (interactive) {
@@ -762,11 +884,16 @@ import { initDiscordMemberCount } from './discord-stats.js';
         markerCommentImagePreview.removeAttribute("aria-modal");
         markerCommentImagePreview.removeAttribute("aria-label");
       }
-      markerCommentImagePreviewImage.src = sourceImage.currentSrc || sourceImage.src;
-      markerCommentImagePreviewImage.alt = sourceImage.alt;
+      configureCommentCarousel(
+        markerCommentImagePreviewCarousel,
+        sourceCarousel._commentImages || [],
+        sourceCarousel._commentImageIndex,
+        index => setCommentCarouselIndex(sourceCarousel, index, { notify: false })
+      );
       markerCommentImagePreviewClose.setAttribute("aria-label", t("closeCommentImage"));
       markerCommentImagePreview.hidden = false;
       positionMarkerCommentImagePreview();
+      if (usesMobileCommentLayout()) activateCommentCarouselIndicators(markerCommentImagePreviewCarousel);
       if (interactive) window.requestAnimationFrame(() => markerCommentImagePreviewClose.focus({ preventScroll: true }));
     }
     markerCommentImagePreviewImage.addEventListener("load", positionMarkerCommentImagePreview);
@@ -782,10 +909,11 @@ import { initDiscordMemberCount } from './discord-stats.js';
       hideMarkerCommentImagePreview({ restoreFocus: true });
     });
     markerCommentImagePreview.addEventListener("keydown", event => {
-      if (!markerCommentImagePreview.classList.contains("is-touch-open") || event.key !== "Tab") return;
+      if (!usesMobileCommentLayout() || !markerCommentImagePreview.classList.contains("is-touch-open") || event.key !== "Tab") return;
       event.preventDefault();
       markerCommentImagePreviewClose.focus({ preventScroll: true });
     });
+    bindExpandedCommentImageSwipe(markerCommentImagePreviewCarousel);
     function hideMarkerCommentPopover(anchor = null, { force = false } = {}) {
       if (anchor && markerCommentPopoverAnchor !== anchor) return;
       if (!force && markerCommentPopover.classList.contains("is-pinned")) return;
@@ -887,8 +1015,8 @@ import { initDiscordMemberCount } from './discord-stats.js';
     function showMarkerCommentPopover(anchor, marker, { pinned = false } = {}) {
       if (state.focusedTankMarkerId && state.focusedTankMarkerId !== marker?.id) return;
       const comment = markerComment(marker);
-      const commentImage = markerCommentImage(marker);
-      if (!comment && !commentImage) {
+      const commentImages = markerCommentImages(marker);
+      if (!comment && !commentImages.length) {
         hideMarkerCommentPopover();
         return;
       }
@@ -898,7 +1026,7 @@ import { initDiscordMemberCount } from './discord-stats.js';
       hideMarkerCommentImagePreview();
       markerCommentPopoverAnchor = anchor;
       const mobileSheet = pinned && usesMobileCommentLayout();
-      markerCommentPopover.classList.toggle("has-image", Boolean(commentImage));
+      markerCommentPopover.classList.toggle("has-image", Boolean(commentImages.length));
       markerCommentPopover.classList.toggle("is-pinned", pinned);
       markerCommentPopover.classList.toggle("is-mobile-sheet", mobileSheet);
       markerCommentPopover.setAttribute("role", mobileSheet ? "dialog" : "tooltip");
@@ -927,37 +1055,46 @@ import { initDiscordMemberCount } from './discord-stats.js';
         markerCommentPopover.removeAttribute("aria-modal");
         markerCommentPopover.removeAttribute("aria-labelledby");
       }
-      if (commentImage) {
+      if (commentImages.length) {
+        const carousel = document.createElement("div");
         const image = document.createElement("img");
+        carousel.className = "map-marker-comment-carousel";
         image.className = "map-marker-comment-image";
-        image.src = commentImage.path;
-        image.alt = commentImage.label;
+        carousel.append(image);
         if (mobileSheet) {
           image.tabIndex = 0;
           image.setAttribute("role", "button");
           image.setAttribute("aria-label", t("enlargeCommentImage"));
         }
-        image.addEventListener("load", () => positionMarkerCommentPopover(anchor), { once: true });
+        configureCommentCarousel(carousel, commentImages, 0, index => {
+          if (!markerCommentImagePreview.hidden && markerCommentImagePreviewSourceCarousel === carousel) {
+            setCommentCarouselIndex(markerCommentImagePreviewCarousel, index, { notify: false });
+          }
+          positionMarkerCommentPopover(anchor);
+        });
+        image.addEventListener("load", () => positionMarkerCommentPopover(anchor));
+        image.addEventListener("pointerdown", event => {
+          if (event.pointerType !== "mouse") activateCommentCarouselIndicators(carousel);
+        });
         image.addEventListener("pointerenter", event => {
-          if (!mobileSheet && event.pointerType === "mouse") showMarkerCommentImagePreview(image);
+          if (!mobileSheet && event.pointerType === "mouse") showMarkerCommentImagePreview(carousel);
         });
         image.addEventListener("pointerleave", event => {
-          if (!mobileSheet && event.pointerType === "mouse") hideMarkerCommentImagePreview();
+          if (!mobileSheet && event.pointerType === "mouse" && !markerCommentImagePreview.classList.contains("is-touch-open")) hideMarkerCommentImagePreview();
         });
         image.addEventListener("click", event => {
-          if (!mobileSheet) return;
           event.preventDefault();
           event.stopPropagation();
-          if (markerCommentImagePreview.hidden) showMarkerCommentImagePreview(image, { interactive: true });
+          if (markerCommentImagePreview.hidden || !markerCommentImagePreview.classList.contains("is-touch-open")) showMarkerCommentImagePreview(carousel, { interactive: true });
           else hideMarkerCommentImagePreview();
         });
         image.addEventListener("keydown", event => {
           if (!mobileSheet || (event.key !== "Enter" && event.key !== " ")) return;
           event.preventDefault();
-          if (markerCommentImagePreview.hidden) showMarkerCommentImagePreview(image, { interactive: true });
+          if (markerCommentImagePreview.hidden) showMarkerCommentImagePreview(carousel, { interactive: true });
           else hideMarkerCommentImagePreview();
         });
-        content.append(image);
+        content.append(carousel);
       }
       if (comment) {
         const text = document.createElement("span");
@@ -1162,50 +1299,109 @@ import { initDiscordMemberCount } from './discord-stats.js';
       renderCommentImageOptions(contextMenu);
       updateCommentByteCounter(input);
     }
-    function renderCommentImageOptions(contextMenu, selectedImageId = "") {
+    function selectedCommentImageIds(picker) {
+      try {
+        const selected = JSON.parse(picker?.dataset.selectedImageIds || "[]");
+        return Array.isArray(selected) ? selected : [];
+      } catch (error) {
+        return [];
+      }
+    }
+    function renderCommentImageOptions(contextMenu, selectedImageIds = []) {
       const picker = contextMenu.querySelector("[data-marker-comment-image-picker]");
       const availableImages = currentCommentImages();
-      const resolvedImageId = availableImages.some(image => image.id === selectedImageId) ? selectedImageId : "";
+      const availableImageIds = new Set(availableImages.map(image => image.id));
+      const resolvedImageIds = [...new Set(selectedImageIds)]
+        .filter(imageId => availableImageIds.has(imageId))
+        .slice(0, MAX_COMMENT_IMAGES);
+      const resolvedImageIdSet = new Set(resolvedImageIds);
+      const orderedImages = [
+        ...resolvedImageIds.map(imageId => COMMENT_IMAGES_BY_ID.get(imageId)),
+        ...availableImages.filter(image => !resolvedImageIdSet.has(image.id))
+      ];
       const options = document.createDocumentFragment();
       const noImageOption = document.createElement("button");
       noImageOption.type = "button";
       noImageOption.className = "marker-comment-image-option no-image";
       noImageOption.dataset.markerCommentImageOption = "";
-      noImageOption.setAttribute("role", "radio");
-      noImageOption.setAttribute("aria-checked", String(!resolvedImageId));
-      noImageOption.classList.toggle("selected", !resolvedImageId);
+      noImageOption.setAttribute("aria-pressed", String(!resolvedImageIds.length));
+      noImageOption.classList.toggle("selected", !resolvedImageIds.length);
       noImageOption.textContent = t("noCommentImage");
       options.append(noImageOption);
-      availableImages.forEach(image => {
+      orderedImages.forEach(image => {
         const option = document.createElement("button");
         const thumbnail = document.createElement("img");
         const label = document.createElement("span");
-        const isSelected = image.id === resolvedImageId;
+        const isSelected = resolvedImageIdSet.has(image.id);
+        const selectionIndex = resolvedImageIds.indexOf(image.id);
         option.type = "button";
         option.className = "marker-comment-image-option";
         option.dataset.markerCommentImageOption = image.id;
-        option.setAttribute("role", "radio");
-        option.setAttribute("aria-checked", String(isSelected));
+        option.setAttribute("aria-pressed", String(isSelected));
         option.classList.toggle("selected", isSelected);
-        option.title = image.label;
+        option.draggable = isSelected;
+        option.title = !isSelected && resolvedImageIds.length >= MAX_COMMENT_IMAGES ? t("commentImageLimitReached") : image.label;
+        option.disabled = !isSelected && resolvedImageIds.length >= MAX_COMMENT_IMAGES;
         thumbnail.src = image.path;
         thumbnail.alt = "";
         thumbnail.loading = "lazy";
-        label.textContent = image.label;
+        label.textContent = isSelected ? `${selectionIndex + 1}. ${image.label}` : image.label;
         option.append(thumbnail, label);
         options.append(option);
       });
       picker.replaceChildren(options);
-      picker.dataset.selectedImageId = resolvedImageId;
+      picker.dataset.selectedImageIds = JSON.stringify(resolvedImageIds);
     }
     function selectCommentImage(contextMenu, imageId) {
       const picker = contextMenu.querySelector("[data-marker-comment-image-picker]");
-      const resolvedImageId = currentCommentImages().some(image => image.id === imageId) ? imageId : "";
-      picker.dataset.selectedImageId = resolvedImageId;
-      contextMenu.querySelectorAll("[data-marker-comment-image-option]").forEach(option => {
-        const isSelected = option.dataset.markerCommentImageOption === resolvedImageId;
-        option.classList.toggle("selected", isSelected);
-        option.setAttribute("aria-checked", String(isSelected));
+      const selectedImageIds = selectedCommentImageIds(picker);
+      if (!imageId) {
+        renderCommentImageOptions(contextMenu);
+      } else if (selectedImageIds.includes(imageId)) {
+        renderCommentImageOptions(contextMenu, selectedImageIds.filter(selectedId => selectedId !== imageId));
+      } else if (selectedImageIds.length < MAX_COMMENT_IMAGES && currentCommentImages().some(image => image.id === imageId)) {
+        renderCommentImageOptions(contextMenu, [...selectedImageIds, imageId]);
+      }
+      fitMarkerContextMenu(contextMenu);
+    }
+    function reorderSelectedCommentImages(contextMenu, sourceImageId, targetImageId) {
+      const picker = contextMenu.querySelector("[data-marker-comment-image-picker]");
+      const selectedImageIds = selectedCommentImageIds(picker);
+      const sourceIndex = selectedImageIds.indexOf(sourceImageId);
+      const targetIndex = selectedImageIds.indexOf(targetImageId);
+      if (sourceIndex < 0 || targetIndex < 0 || sourceIndex === targetIndex) return;
+      selectedImageIds.splice(targetIndex, 0, selectedImageIds.splice(sourceIndex, 1)[0]);
+      renderCommentImageOptions(contextMenu, selectedImageIds);
+      fitMarkerContextMenu(contextMenu);
+    }
+    function bindCommentImagePicker(picker) {
+      let draggedImageId = "";
+      picker.addEventListener("dragstart", event => {
+        const option = event.target.closest(".marker-comment-image-option.selected[data-marker-comment-image-option]");
+        if (!option?.dataset.markerCommentImageOption || !event.dataTransfer) {
+          event.preventDefault();
+          return;
+        }
+        draggedImageId = option.dataset.markerCommentImageOption;
+        option.classList.add("is-dragging");
+        event.dataTransfer.effectAllowed = "move";
+        event.dataTransfer.setData("application/x-maptactic-comment-image", draggedImageId);
+      });
+      picker.addEventListener("dragover", event => {
+        const option = event.target.closest(".marker-comment-image-option.selected[data-marker-comment-image-option]");
+        if (!draggedImageId || !option?.dataset.markerCommentImageOption) return;
+        event.preventDefault();
+        event.dataTransfer.dropEffect = "move";
+      });
+      picker.addEventListener("drop", event => {
+        const option = event.target.closest(".marker-comment-image-option.selected[data-marker-comment-image-option]");
+        if (!draggedImageId || !option?.dataset.markerCommentImageOption) return;
+        event.preventDefault();
+        reorderSelectedCommentImages(picker.closest(".marker-context-menu"), draggedImageId, option.dataset.markerCommentImageOption);
+      });
+      picker.addEventListener("dragend", () => {
+        picker.querySelector(".is-dragging")?.classList.remove("is-dragging");
+        draggedImageId = "";
       });
     }
     function fitMarkerContextMenu(contextMenu) {
@@ -1257,20 +1453,23 @@ import { initDiscordMemberCount } from './discord-stats.js';
       actionList.hidden = true;
       editor.hidden = false;
       input.value = markerComment(marker);
-      renderCommentImageOptions(contextMenu, marker.commentImage);
+      renderCommentImageOptions(contextMenu, markerCommentImageIds(marker));
       updateCommentByteCounter(input);
       input.focus({ preventScroll: true });
       fitMarkerContextMenu(contextMenu);
     }
-    function saveMarkerComment(marker, comment, imageId) {
+    function saveMarkerComment(marker, comment, imageIds) {
       if (!isTankMarker(marker)) return;
       const value = normalizeMarkerComment(comment);
-      const image = COMMENT_IMAGES_BY_ID.get(imageId);
+      const resolvedImageIds = [...new Set(imageIds)]
+        .filter(imageId => COMMENT_IMAGES_BY_ID.has(imageId))
+        .slice(0, MAX_COMMENT_IMAGES);
       if (value) marker.comment = value;
       else delete marker.comment;
-      if (image) marker.commentImage = image.id;
-      else delete marker.commentImage;
-      persistMarkerLayout(value || image ? "commentSaved" : "commentRemoved", { touchMap: true });
+      if (resolvedImageIds.length) marker.commentImages = resolvedImageIds;
+      else delete marker.commentImages;
+      delete marker.commentImage;
+      persistMarkerLayout(value || resolvedImageIds.length ? "commentSaved" : "commentRemoved", { touchMap: true });
       renderMarkers();
     }
     function hideMarkerContextMenu() {
@@ -1754,13 +1953,45 @@ import { initDiscordMemberCount } from './discord-stats.js';
       modalToggleEditor.hidden = mobile;
       if (mobile && state.editMode) setEditorMode(false);
     }
+    function migrateLayoutCommentImages(layout) {
+      let migrated = false;
+      Object.values(layout?.markers || {}).forEach(markers => {
+        if (!Array.isArray(markers)) return;
+        markers.forEach(marker => {
+          if (!marker || typeof marker !== "object" || Array.isArray(marker)) return;
+          const imageIds = markerCommentImageIds(marker);
+          const currentImageIds = Array.isArray(marker.commentImages) ? marker.commentImages : [];
+          const needsMigration = Object.prototype.hasOwnProperty.call(marker, "commentImage")
+            || (imageIds.length ? JSON.stringify(currentImageIds) !== JSON.stringify(imageIds) : Object.prototype.hasOwnProperty.call(marker, "commentImages"));
+          if (!needsMigration) return;
+          if (imageIds.length) marker.commentImages = imageIds;
+          else delete marker.commentImages;
+          delete marker.commentImage;
+          migrated = true;
+        });
+      });
+      return migrated;
+    }
+    function canonicalExportMarkers() {
+      return Object.fromEntries(Object.entries(markerLayout.markers || {}).map(([key, markers]) => [
+        key,
+        markers.map(marker => {
+          const exportedMarker = structuredClone(marker);
+          const imageIds = markerCommentImageIds(marker);
+          if (imageIds.length) exportedMarker.commentImages = imageIds;
+          else delete exportedMarker.commentImages;
+          delete exportedMarker.commentImage;
+          return exportedMarker;
+        })
+      ]));
+    }
     async function exportMarkerLayoutData() {
       const exportData = {
         version: markerLayout.version,
         mapUpdated: markerLayout.mapUpdated || {},
         mapUpdatedAt: markerLayout.mapUpdatedAt || {},
         tacticalSummaries: markerLayout.tacticalSummaries || {},
-        markers: markerLayout.markers,
+        markers: canonicalExportMarkers(),
         annotations: markerLayout.annotations,
         ...(markerLayout.updatedAt ? { updatedAt: markerLayout.updatedAt } : {}),
         exportedAt: new Date().toISOString()
@@ -1791,7 +2022,7 @@ import { initDiscordMemberCount } from './discord-stats.js';
       window.setTimeout(() => URL.revokeObjectURL(url), 0);
       setMarkerStatus("exportedJson");
     }
-    function validateImportedMarkerLayout(data) {
+    function validateImportedMarkerLayout(data, { migrateLegacyCommentImages = true } = {}) {
       if (!data || typeof data !== "object" || Array.isArray(data) || data.version !== MARKER_LAYOUT_VERSION || !data.markers || typeof data.markers !== "object" || Array.isArray(data.markers) || (data.mapUpdated !== undefined && (!data.mapUpdated || typeof data.mapUpdated !== "object" || Array.isArray(data.mapUpdated))) || (data.mapUpdatedAt !== undefined && (!data.mapUpdatedAt || typeof data.mapUpdatedAt !== "object" || Array.isArray(data.mapUpdatedAt))) || (data.tacticalSummaries !== undefined && (!data.tacticalSummaries || typeof data.tacticalSummaries !== "object" || Array.isArray(data.tacticalSummaries))) || (data.annotations !== undefined && (!data.annotations || typeof data.annotations !== "object" || Array.isArray(data.annotations)))) {
         throw new Error("Invalid marker layout.");
       }
@@ -1831,7 +2062,13 @@ import { initDiscordMemberCount } from './discord-stats.js';
           const hasParentTankId = Object.prototype.hasOwnProperty.call(marker || {}, "parentTankId");
           const hasComment = Object.prototype.hasOwnProperty.call(marker || {}, "comment");
           const hasCommentImage = Object.prototype.hasOwnProperty.call(marker || {}, "commentImage");
-          if (!marker || typeof marker !== "object" || Array.isArray(marker) || typeof marker.id !== "string" || !marker.id || ids.has(marker.id) || !markerTypes.has(marker.type) || !Number.isFinite(marker.x) || !Number.isFinite(marker.y) || marker.x < 0 || marker.x > 100 || marker.y < 0 || marker.y > 100 || (hasParentTankId && (!isRoleMarker(marker) || typeof marker.parentTankId !== "string" || !marker.parentTankId)) || (hasComment && (!isTankMarker(marker) || typeof marker.comment !== "string" || commentByteLength(marker.comment) > MAX_MARKER_COMMENT_BYTES)) || (hasCommentImage && (!isTankMarker(marker) || typeof marker.commentImage !== "string" || !COMMENT_IMAGES_BY_ID.has(marker.commentImage)))) {
+          const hasCommentImages = Object.prototype.hasOwnProperty.call(marker || {}, "commentImages");
+          const validCommentImages = !hasCommentImages || (isTankMarker(marker)
+            && Array.isArray(marker.commentImages)
+            && marker.commentImages.length <= MAX_COMMENT_IMAGES
+            && marker.commentImages.every(imageId => typeof imageId === "string" && COMMENT_IMAGES_BY_ID.has(imageId))
+            && new Set(marker.commentImages).size === marker.commentImages.length);
+          if (!marker || typeof marker !== "object" || Array.isArray(marker) || typeof marker.id !== "string" || !marker.id || ids.has(marker.id) || !markerTypes.has(marker.type) || !Number.isFinite(marker.x) || !Number.isFinite(marker.y) || marker.x < 0 || marker.x > 100 || marker.y < 0 || marker.y > 100 || (hasParentTankId && (!isRoleMarker(marker) || typeof marker.parentTankId !== "string" || !marker.parentTankId)) || (hasComment && (!isTankMarker(marker) || typeof marker.comment !== "string" || commentByteLength(marker.comment) > MAX_MARKER_COMMENT_BYTES)) || (hasCommentImage && (!isTankMarker(marker) || typeof marker.commentImage !== "string" || !COMMENT_IMAGES_BY_ID.has(marker.commentImage))) || !validCommentImages || (hasCommentImage && hasCommentImages)) {
             throw new Error("Invalid marker.");
           }
           markerCount += 1;
@@ -1840,7 +2077,11 @@ import { initDiscordMemberCount } from './discord-stats.js';
           const importedMarker = { id: marker.id, type: marker.type, x: marker.x, y: marker.y };
           if (hasParentTankId) importedMarker.parentTankId = marker.parentTankId;
           if (hasComment && marker.comment.trim()) importedMarker.comment = normalizeMarkerComment(marker.comment);
-          if (hasCommentImage) importedMarker.commentImage = marker.commentImage;
+          if (hasCommentImages && marker.commentImages.length) importedMarker.commentImages = [...marker.commentImages];
+          if (hasCommentImage) {
+            if (migrateLegacyCommentImages) importedMarker.commentImages = [marker.commentImage];
+            else importedMarker.commentImage = marker.commentImage;
+          }
           return importedMarker;
         });
         const attachedTankIds = new Set();
@@ -2216,7 +2457,7 @@ import { initDiscordMemberCount } from './discord-stats.js';
           saveMarkerComment(
             marker,
             contextMenu.querySelector("[data-marker-comment-input]").value,
-            contextMenu.querySelector("[data-marker-comment-image-picker]").dataset.selectedImageId
+            selectedCommentImageIds(contextMenu.querySelector("[data-marker-comment-image-picker]"))
           );
           hideMarkerContextMenu();
           return;
@@ -2339,6 +2580,7 @@ import { initDiscordMemberCount } from './discord-stats.js';
       input.addEventListener("input", () => updateCommentByteCounter(input));
       updateCommentByteCounter(input);
     });
+    document.querySelectorAll("[data-marker-comment-image-picker]").forEach(bindCommentImagePicker);
     bindMarkerContextMenu(markerContextMenu);
     bindMarkerContextMenu(modalMarkerContextMenu);
     bindAnnotationContextMenu(annotationContextMenu);
@@ -2444,7 +2686,7 @@ import { initDiscordMemberCount } from './discord-stats.js';
     let startupStatusKey = null;
     try {
       if (!defaultMarkerLayout) throw new Error("Default marker layout could not be loaded.");
-      upstreamMarkerLayout = validateImportedMarkerLayout(defaultMarkerLayout);
+      upstreamMarkerLayout = validateImportedMarkerLayout(defaultMarkerLayout, { migrateLegacyCommentImages: false });
       upstreamMarkerLayoutRevision = sourceRevision(defaultMarkerLayout);
       if (hadStoredMarkerLayout && !hadMapSyncState) backupMarkerLayout(MARKER_STORAGE_KEY, MARKER_STORAGE_BACKUP_KEY);
       const syncResult = mergeMapLayouts(markerLayout, upstreamMarkerLayout, mapNames, {
@@ -2452,12 +2694,20 @@ import { initDiscordMemberCount } from './discord-stats.js';
         sourceRevision: upstreamMarkerLayoutRevision
       });
       markerLayout = syncResult.layout;
+      const migratedCommentImages = migrateLayoutCommentImages(markerLayout);
+      const migratedUpstreamCommentImages = migrateLayoutCommentImages(upstreamMarkerLayout);
+      if (migratedCommentImages || migratedUpstreamCommentImages) {
+        const priorConflicts = new Set(syncResult.conflicts);
+        markLayoutAsLocalEdits(markerLayout, upstreamMarkerLayout, mapNames, upstreamMarkerLayoutRevision);
+        markerLayout.sync.conflicts = markerLayout.sync.dirtyMaps.filter(mapName => priorConflicts.has(mapName));
+      }
       startupAppliedDefaultUpdates = hadStoredMarkerLayout && syncResult.updatedMaps.length > 0;
       const needsSyncSave = !hadStoredMarkerLayout
         || !hadMapSyncState
         || previousSourceRevision !== upstreamMarkerLayoutRevision
         || previousMapSyncState !== JSON.stringify(markerLayout.sync)
-        || startupAppliedDefaultUpdates;
+        || startupAppliedDefaultUpdates
+        || migratedCommentImages;
       if (needsSyncSave) {
         try {
           saveMarkerLayoutToStorage(MARKER_STORAGE_KEY, markerLayout);

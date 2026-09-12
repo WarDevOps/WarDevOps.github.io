@@ -172,16 +172,6 @@ export const commentImages = Object.freeze([
     "label": "scr_ (27).png"
   },
   {
-    "id": "Abandoned Factory/scr_ (3).png",
-    "path": "img/Abandoned Factory/scr_ (3).png",
-    "label": "scr_ (3).png"
-  },
-  {
-    "id": "Abandoned Factory/scr_ (4).png",
-    "path": "img/Abandoned Factory/scr_ (4).png",
-    "label": "scr_ (4).png"
-  },
-  {
     "id": "Abandoned Factory/scr_ (5).png",
     "path": "img/Abandoned Factory/scr_ (5).png",
     "label": "scr_ (5).png"
@@ -212,11 +202,6 @@ export const commentImages = Object.freeze([
     "label": "scr_ (1).png"
   },
   {
-    "id": "Abandoned Town/scr_ (10).png",
-    "path": "img/Abandoned Town/scr_ (10).png",
-    "label": "scr_ (10).png"
-  },
-  {
     "id": "Abandoned Town/scr_ (11).png",
     "path": "img/Abandoned Town/scr_ (11).png",
     "label": "scr_ (11).png"
@@ -225,16 +210,6 @@ export const commentImages = Object.freeze([
     "id": "Abandoned Town/scr_ (12).png",
     "path": "img/Abandoned Town/scr_ (12).png",
     "label": "scr_ (12).png"
-  },
-  {
-    "id": "Abandoned Town/scr_ (13).png",
-    "path": "img/Abandoned Town/scr_ (13).png",
-    "label": "scr_ (13).png"
-  },
-  {
-    "id": "Abandoned Town/scr_ (14).png",
-    "path": "img/Abandoned Town/scr_ (14).png",
-    "label": "scr_ (14).png"
   },
   {
     "id": "Abandoned Town/scr_ (15).png",
@@ -342,6 +317,181 @@ export const commentImages = Object.freeze([
     "label": "scr_ (9).png"
   },
   {
+    "id": "American Desert/scr_ (1).png",
+    "path": "img/American Desert/scr_ (1).png",
+    "label": "scr_ (1).png"
+  },
+  {
+    "id": "American Desert/scr_ (10).png",
+    "path": "img/American Desert/scr_ (10).png",
+    "label": "scr_ (10).png"
+  },
+  {
+    "id": "American Desert/scr_ (11).png",
+    "path": "img/American Desert/scr_ (11).png",
+    "label": "scr_ (11).png"
+  },
+  {
+    "id": "American Desert/scr_ (12).png",
+    "path": "img/American Desert/scr_ (12).png",
+    "label": "scr_ (12).png"
+  },
+  {
+    "id": "American Desert/scr_ (13).png",
+    "path": "img/American Desert/scr_ (13).png",
+    "label": "scr_ (13).png"
+  },
+  {
+    "id": "American Desert/scr_ (14).png",
+    "path": "img/American Desert/scr_ (14).png",
+    "label": "scr_ (14).png"
+  },
+  {
+    "id": "American Desert/scr_ (15).png",
+    "path": "img/American Desert/scr_ (15).png",
+    "label": "scr_ (15).png"
+  },
+  {
+    "id": "American Desert/scr_ (16).png",
+    "path": "img/American Desert/scr_ (16).png",
+    "label": "scr_ (16).png"
+  },
+  {
+    "id": "American Desert/scr_ (17).png",
+    "path": "img/American Desert/scr_ (17).png",
+    "label": "scr_ (17).png"
+  },
+  {
+    "id": "American Desert/scr_ (18).png",
+    "path": "img/American Desert/scr_ (18).png",
+    "label": "scr_ (18).png"
+  },
+  {
+    "id": "American Desert/scr_ (19).png",
+    "path": "img/American Desert/scr_ (19).png",
+    "label": "scr_ (19).png"
+  },
+  {
+    "id": "American Desert/scr_ (2).png",
+    "path": "img/American Desert/scr_ (2).png",
+    "label": "scr_ (2).png"
+  },
+  {
+    "id": "American Desert/scr_ (20).png",
+    "path": "img/American Desert/scr_ (20).png",
+    "label": "scr_ (20).png"
+  },
+  {
+    "id": "American Desert/scr_ (21).png",
+    "path": "img/American Desert/scr_ (21).png",
+    "label": "scr_ (21).png"
+  },
+  {
+    "id": "American Desert/scr_ (22).png",
+    "path": "img/American Desert/scr_ (22).png",
+    "label": "scr_ (22).png"
+  },
+  {
+    "id": "American Desert/scr_ (23).png",
+    "path": "img/American Desert/scr_ (23).png",
+    "label": "scr_ (23).png"
+  },
+  {
+    "id": "American Desert/scr_ (24).png",
+    "path": "img/American Desert/scr_ (24).png",
+    "label": "scr_ (24).png"
+  },
+  {
+    "id": "American Desert/scr_ (25).png",
+    "path": "img/American Desert/scr_ (25).png",
+    "label": "scr_ (25).png"
+  },
+  {
+    "id": "American Desert/scr_ (26).png",
+    "path": "img/American Desert/scr_ (26).png",
+    "label": "scr_ (26).png"
+  },
+  {
+    "id": "American Desert/scr_ (27).png",
+    "path": "img/American Desert/scr_ (27).png",
+    "label": "scr_ (27).png"
+  },
+  {
+    "id": "American Desert/scr_ (28).png",
+    "path": "img/American Desert/scr_ (28).png",
+    "label": "scr_ (28).png"
+  },
+  {
+    "id": "American Desert/scr_ (29).png",
+    "path": "img/American Desert/scr_ (29).png",
+    "label": "scr_ (29).png"
+  },
+  {
+    "id": "American Desert/scr_ (3).png",
+    "path": "img/American Desert/scr_ (3).png",
+    "label": "scr_ (3).png"
+  },
+  {
+    "id": "American Desert/scr_ (30).png",
+    "path": "img/American Desert/scr_ (30).png",
+    "label": "scr_ (30).png"
+  },
+  {
+    "id": "American Desert/scr_ (31).png",
+    "path": "img/American Desert/scr_ (31).png",
+    "label": "scr_ (31).png"
+  },
+  {
+    "id": "American Desert/scr_ (32).png",
+    "path": "img/American Desert/scr_ (32).png",
+    "label": "scr_ (32).png"
+  },
+  {
+    "id": "American Desert/scr_ (33).png",
+    "path": "img/American Desert/scr_ (33).png",
+    "label": "scr_ (33).png"
+  },
+  {
+    "id": "American Desert/scr_ (34).png",
+    "path": "img/American Desert/scr_ (34).png",
+    "label": "scr_ (34).png"
+  },
+  {
+    "id": "American Desert/scr_ (35).png",
+    "path": "img/American Desert/scr_ (35).png",
+    "label": "scr_ (35).png"
+  },
+  {
+    "id": "American Desert/scr_ (4).png",
+    "path": "img/American Desert/scr_ (4).png",
+    "label": "scr_ (4).png"
+  },
+  {
+    "id": "American Desert/scr_ (5).png",
+    "path": "img/American Desert/scr_ (5).png",
+    "label": "scr_ (5).png"
+  },
+  {
+    "id": "American Desert/scr_ (6).png",
+    "path": "img/American Desert/scr_ (6).png",
+    "label": "scr_ (6).png"
+  },
+  {
+    "id": "American Desert/scr_ (7).png",
+    "path": "img/American Desert/scr_ (7).png",
+    "label": "scr_ (7).png"
+  },
+  {
+    "id": "American Desert/scr_ (8).png",
+    "path": "img/American Desert/scr_ (8).png",
+    "label": "scr_ (8).png"
+  },
+  {
+    "id": "American Desert/scr_ (9).png",
+    "path": "img/American Desert/scr_ (9).png",
+    "label": "scr_ (9).png"
+  },
+  {
     "id": "Arctic Pier/scr_ (1).png",
     "path": "img/Arctic Pier/scr_ (1).png",
     "label": "scr_ (1).png"
@@ -370,11 +520,6 @@ export const commentImages = Object.freeze([
     "id": "Arctic Pier/scr_ (14).png",
     "path": "img/Arctic Pier/scr_ (14).png",
     "label": "scr_ (14).png"
-  },
-  {
-    "id": "Arctic Pier/scr_ (15).png",
-    "path": "img/Arctic Pier/scr_ (15).png",
-    "label": "scr_ (15).png"
   },
   {
     "id": "Arctic Pier/scr_ (16).png",
@@ -444,6 +589,126 @@ export const commentImages = Object.freeze([
   {
     "id": "Arctic Pier/scr_ (9).png",
     "path": "img/Arctic Pier/scr_ (9).png",
+    "label": "scr_ (9).png"
+  },
+  {
+    "id": "Breslau/scr_ (1).png",
+    "path": "img/Breslau/scr_ (1).png",
+    "label": "scr_ (1).png"
+  },
+  {
+    "id": "Breslau/scr_ (10).png",
+    "path": "img/Breslau/scr_ (10).png",
+    "label": "scr_ (10).png"
+  },
+  {
+    "id": "Breslau/scr_ (11).png",
+    "path": "img/Breslau/scr_ (11).png",
+    "label": "scr_ (11).png"
+  },
+  {
+    "id": "Breslau/scr_ (12).png",
+    "path": "img/Breslau/scr_ (12).png",
+    "label": "scr_ (12).png"
+  },
+  {
+    "id": "Breslau/scr_ (13).png",
+    "path": "img/Breslau/scr_ (13).png",
+    "label": "scr_ (13).png"
+  },
+  {
+    "id": "Breslau/scr_ (14).png",
+    "path": "img/Breslau/scr_ (14).png",
+    "label": "scr_ (14).png"
+  },
+  {
+    "id": "Breslau/scr_ (15).png",
+    "path": "img/Breslau/scr_ (15).png",
+    "label": "scr_ (15).png"
+  },
+  {
+    "id": "Breslau/scr_ (16).png",
+    "path": "img/Breslau/scr_ (16).png",
+    "label": "scr_ (16).png"
+  },
+  {
+    "id": "Breslau/scr_ (17).png",
+    "path": "img/Breslau/scr_ (17).png",
+    "label": "scr_ (17).png"
+  },
+  {
+    "id": "Breslau/scr_ (18).png",
+    "path": "img/Breslau/scr_ (18).png",
+    "label": "scr_ (18).png"
+  },
+  {
+    "id": "Breslau/scr_ (19).png",
+    "path": "img/Breslau/scr_ (19).png",
+    "label": "scr_ (19).png"
+  },
+  {
+    "id": "Breslau/scr_ (2).png",
+    "path": "img/Breslau/scr_ (2).png",
+    "label": "scr_ (2).png"
+  },
+  {
+    "id": "Breslau/scr_ (20).png",
+    "path": "img/Breslau/scr_ (20).png",
+    "label": "scr_ (20).png"
+  },
+  {
+    "id": "Breslau/scr_ (21).png",
+    "path": "img/Breslau/scr_ (21).png",
+    "label": "scr_ (21).png"
+  },
+  {
+    "id": "Breslau/scr_ (22).png",
+    "path": "img/Breslau/scr_ (22).png",
+    "label": "scr_ (22).png"
+  },
+  {
+    "id": "Breslau/scr_ (23).png",
+    "path": "img/Breslau/scr_ (23).png",
+    "label": "scr_ (23).png"
+  },
+  {
+    "id": "Breslau/scr_ (24).png",
+    "path": "img/Breslau/scr_ (24).png",
+    "label": "scr_ (24).png"
+  },
+  {
+    "id": "Breslau/scr_ (3).png",
+    "path": "img/Breslau/scr_ (3).png",
+    "label": "scr_ (3).png"
+  },
+  {
+    "id": "Breslau/scr_ (4).png",
+    "path": "img/Breslau/scr_ (4).png",
+    "label": "scr_ (4).png"
+  },
+  {
+    "id": "Breslau/scr_ (5).png",
+    "path": "img/Breslau/scr_ (5).png",
+    "label": "scr_ (5).png"
+  },
+  {
+    "id": "Breslau/scr_ (6).png",
+    "path": "img/Breslau/scr_ (6).png",
+    "label": "scr_ (6).png"
+  },
+  {
+    "id": "Breslau/scr_ (7).png",
+    "path": "img/Breslau/scr_ (7).png",
+    "label": "scr_ (7).png"
+  },
+  {
+    "id": "Breslau/scr_ (8).png",
+    "path": "img/Breslau/scr_ (8).png",
+    "label": "scr_ (8).png"
+  },
+  {
+    "id": "Breslau/scr_ (9).png",
+    "path": "img/Breslau/scr_ (9).png",
     "label": "scr_ (9).png"
   },
   {
