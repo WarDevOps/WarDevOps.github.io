@@ -1,6 +1,6 @@
     import { MARKER_LAYOUT_VERSION, backupMarkerLayout, loadMarkerLayout, saveMarkerLayout as saveMarkerLayoutToStorage } from './marker-storage.js?v=map-sync-20260903';
 import { initDiscordMemberCount } from './discord-stats.js';
-    import { commentImages } from './comment-images.js?v=comment-images-4b1873a850be';
+    import { commentImages } from './comment-images.js?v=comment-images-8cb93ffefe76';
     import { defaultMarkerLayout, maps, translations } from './data.js?v=comment-carousel-20260912';
     import { acceptUpstreamMap, isMapSyncState, markLayoutAsLocalEdits, markMapEdited, mergeMapLayouts, sourceRevision } from './marker-merge.js?v=marker-drop-20260910';
 
@@ -1345,6 +1345,7 @@ import { initDiscordMemberCount } from './discord-stats.js';
         thumbnail.src = image.path;
         thumbnail.alt = "";
         thumbnail.loading = "lazy";
+        thumbnail.draggable = false;
         label.textContent = isSelected ? `${selectionIndex + 1}. ${image.label}` : image.label;
         option.append(thumbnail, label);
         options.append(option);
@@ -1376,6 +1377,15 @@ import { initDiscordMemberCount } from './discord-stats.js';
     }
     function bindCommentImagePicker(picker) {
       let draggedImageId = "";
+      picker.addEventListener("click", event => {
+        const option = event.target.closest("[data-marker-comment-image-option]");
+        if (!option || option.disabled) return;
+        const contextMenu = picker.closest(".marker-context-menu");
+        if (!contextMenu) return;
+        event.preventDefault();
+        event.stopPropagation();
+        selectCommentImage(contextMenu, option.dataset.markerCommentImageOption);
+      });
       picker.addEventListener("dragstart", event => {
         const option = event.target.closest(".marker-comment-image-option.selected[data-marker-comment-image-option]");
         if (!option?.dataset.markerCommentImageOption || !event.dataTransfer) {
@@ -2430,13 +2440,8 @@ import { initDiscordMemberCount } from './discord-stats.js';
         const drawingTool = event.target.closest("[data-marker-tool]")?.dataset.markerTool;
         const action = event.target.closest("[data-marker-action]")?.dataset.markerAction;
         const commentAction = event.target.closest("[data-marker-comment-action]")?.dataset.markerCommentAction;
-        const commentImageOption = event.target.closest("[data-marker-comment-image-option]");
         if (!state.contextMarkerId) return;
         const marker = currentMarkers().find(item => item.id === state.contextMarkerId);
-        if (commentImageOption && marker?.id === state.commentMarkerId) {
-          selectCommentImage(contextMenu, commentImageOption.dataset.markerCommentImageOption);
-          return;
-        }
         if (roleType && marker) {
           const tankMarker = linkedTankMarker(marker);
           if (tankMarker) applyRoleMarker(tankMarker, roleType);
