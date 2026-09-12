@@ -1,7 +1,7 @@
     import { MARKER_LAYOUT_VERSION, backupMarkerLayout, loadMarkerLayout, saveMarkerLayout as saveMarkerLayoutToStorage } from './marker-storage.js?v=map-sync-20260903';
 import { initDiscordMemberCount } from './discord-stats.js';
     import { commentImages } from './comment-images.js?v=comment-images-d6c742b47074';
-    import { defaultMarkerLayout, maps, translations } from './data.js?v=guide-reading-20260907';
+    import { defaultMarkerLayout, maps, translations } from './data.js?v=artillery-strike-20260912';
     import { acceptUpstreamMap, isMapSyncState, markLayoutAsLocalEdits, markMapEdited, mergeMapLayouts, sourceRevision } from './marker-merge.js?v=marker-drop-20260910';
 
 
@@ -162,6 +162,7 @@ import { initDiscordMemberCount } from './discord-stats.js';
     // Larger values render above smaller values. Equal-priority markers keep their placement order.
     const MARKER_RENDER_Z_INDEX = Object.freeze({
       smokeshell: 400,
+      artilleryStrike: 400,
       lightTank: 300,
       lightTankRed: 300,
       mainBattleTank: 300,

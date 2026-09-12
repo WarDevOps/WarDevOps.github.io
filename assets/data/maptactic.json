@@ -6,7 +6,7 @@
     "Abandoned Town": "2026-09-03",
     "Advance to the Rhine": "2026-09-11",
     "Alaska": "2026-09-11",
-    "American Desert": "2026-09-10",
+    "American Desert": "2026-09-12",
     "Aral Sea": "2026-09-10",
     "Arctic Pier": "2026-09-11",
     "Arctic Polar Base": "2026-09-03",
@@ -64,16 +64,16 @@
     "Abandoned Town": "2026-09-03T00:04:09Z",
     "Advance to the Rhine": "2026-09-10T23:07:52Z",
     "Alaska": "2026-09-10T23:08:06Z",
-    "American Desert": "2026-09-10T12:42:11Z",
+    "American Desert": "2026-09-11T23:51:39Z",
     "Aral Sea": "2026-09-10T12:50:30Z",
-    "Arctic Pier": "2026-09-10T23:10:53Z",
+    "Arctic Pier": "2026-09-11T02:16:45Z",
     "Arctic Polar Base": "2026-09-03T01:47:54Z",
     "Ardennes": "2026-09-10T23:24:07Z",
     "Ash River": "2026-09-01T16:50:15Z",
     "Attica": "2026-09-03T02:06:24Z",
     "Battle of Hürtgen Forest": "2026-09-10T23:47:33Z",
     "Berlin": "2026-09-10T23:37:22Z",
-    "Breslau": "2026-09-11T01:03:00Z",
+    "Breslau": "2026-09-11T09:46:34Z",
     "Campania": "2026-09-03T01:49:21Z",
     "Cargo Port": "2026-09-03T01:49:31Z",
     "Carpathians": "2026-09-04T03:02:19Z",
@@ -2685,19 +2685,6 @@
         "parentTankId": "mtierbzo-czikjv"
       },
       {
-        "id": "mtieueom-0ybwmf",
-        "type": "mainBattleTankRed",
-        "x": 52.84,
-        "y": 33.5
-      },
-      {
-        "id": "mtieup5b-hixdp5",
-        "type": "highRiskSpot",
-        "x": 52.84,
-        "y": 33.5,
-        "parentTankId": "mtieueom-0ybwmf"
-      },
-      {
         "id": "mtieusf6-enymwv",
         "type": "mainBattleTankRed",
         "x": 62.06,
@@ -2760,6 +2747,19 @@
         "type": "antiAirRed",
         "x": 89.1,
         "y": 66.57
+      },
+      {
+        "id": "mtxlz9ks-ffpiva",
+        "type": "mainBattleTankRed",
+        "x": 58.21,
+        "y": 39.05
+      },
+      {
+        "id": "mtxlzcff-3c8z3p",
+        "type": "highRiskSpot",
+        "x": 58.21,
+        "y": 39.05,
+        "parentTankId": "mtxlz9ks-ffpiva"
       }
     ],
     "American Desert::domination-1|Blue": [
@@ -3555,20 +3555,6 @@
         "x": 5.98,
         "y": 39.18,
         "parentTankId": "mtjr7hs5-iru3p3"
-      },
-      {
-        "id": "mtjr9tsx-t3983h",
-        "type": "mainBattleTankRed",
-        "x": 15.75,
-        "y": 33.97,
-        "commentImage": "Arctic Pier/scr_ (15).png"
-      },
-      {
-        "id": "mtjr9vbl-tj8kdm",
-        "type": "spawnKill",
-        "x": 15.75,
-        "y": 33.97,
-        "parentTankId": "mtjr9tsx-t3983h"
       }
     ],
     "Arctic Polar Base::domination-1|Blue": [
@@ -5746,6 +5732,7 @@
       }
     ],
     "Battle of Hürtgen Forest::conquest-3|Red": [],
+    "Battle of Hürtgen Forest::conquest-3|Blue": [],
     "Berlin::domination-1|Blue": [
       {
         "id": "mtw5o0tn-dihkos",
@@ -5966,13 +5953,15 @@
         "id": "mtw6h6wi-7ajbxk",
         "type": "mainBattleTank",
         "x": 45.8,
-        "y": 55.03
+        "y": 55.03,
+        "commentImage": "Breslau/scr_ (6).png"
       },
       {
         "id": "mtw6hdk6-pwg62x",
         "type": "mainBattleTank",
         "x": 30.13,
-        "y": 55.87
+        "y": 55.87,
+        "commentImage": "Breslau/scr_ (13).png"
       },
       {
         "id": "mtw6ht6t-ygqn1s",
@@ -5992,7 +5981,8 @@
         "id": "mtw6la62-qhdzmj",
         "type": "lightTank",
         "x": 86.2,
-        "y": 6.89
+        "y": 6.89,
+        "commentImage": "Breslau/scr_ (24).png"
       },
       {
         "id": "mtw6lb89-y39whd",
@@ -6018,11 +6008,12 @@
         "id": "mtw6me86-wul42t",
         "type": "mainBattleTank",
         "x": 65.21,
-        "y": 28.91
+        "y": 28.91,
+        "commentImage": "Breslau/scr_ (21).png"
       },
       {
         "id": "mtw6mfr5-cdd6l9",
-        "type": "battleLine",
+        "type": "highRiskSpot",
         "x": 65.21,
         "y": 28.91,
         "parentTankId": "mtw6me86-wul42t"
@@ -6044,7 +6035,8 @@
         "id": "mtw6nneb-cnax8r",
         "type": "mainBattleTank",
         "x": 58.21,
-        "y": 80.78
+        "y": 80.78,
+        "commentImage": "Breslau/scr_ (8).png"
       },
       {
         "id": "mtw6pzhm-yjlo84",
@@ -6057,7 +6049,8 @@
         "id": "mtw6qf0z-ssazqi",
         "type": "tankDestroyer",
         "x": 10.72,
-        "y": 57.09
+        "y": 57.09,
+        "commentImage": "Breslau/scr_ (4).png"
       },
       {
         "id": "mtw6qjkm-tgsi2m",
@@ -6070,7 +6063,8 @@
         "id": "mtw6quzn-mjz62r",
         "type": "lightTank",
         "x": 24.72,
-        "y": 74.86
+        "y": 74.86,
+        "commentImage": "Breslau/scr_ (12).png"
       },
       {
         "id": "mtw6qx1i-dshad8",
@@ -6083,7 +6077,8 @@
         "id": "mtw7e47v-560rhd",
         "type": "mainBattleTank",
         "x": 50.28,
-        "y": 57.72
+        "y": 57.72,
+        "commentImage": "Breslau/scr_ (5).png"
       },
       {
         "id": "mtw7e615-5tvo19",
@@ -6109,11 +6104,12 @@
         "id": "mtw8nfdi-6zb7jg",
         "type": "mainBattleTank",
         "x": 66.54,
-        "y": 24.86
+        "y": 24.86,
+        "commentImage": "Breslau/scr_ (20).png"
       },
       {
         "id": "mtw8ngsr-u6od57",
-        "type": "battleLine",
+        "type": "highRiskSpot",
         "x": 66.54,
         "y": 24.86,
         "parentTankId": "mtw8nfdi-6zb7jg"
@@ -6122,7 +6118,8 @@
         "id": "mtw8qe4r-55043r",
         "type": "tankDestroyer",
         "x": 60.16,
-        "y": 15.48
+        "y": 15.48,
+        "commentImage": "Breslau/scr_ (2).png"
       },
       {
         "id": "mtw8qidr-s13s66",
@@ -6137,13 +6134,16 @@
         "id": "mtw6gtie-n10pew",
         "type": "mainBattleTankRed",
         "x": 41.51,
-        "y": 62.68
+        "y": 62.68,
+        "commentImage": "Breslau/scr_ (15).png"
       },
       {
         "id": "mtw6gxc2-wjyrtw",
         "type": "mainBattleTankRed",
         "x": 43.84,
-        "y": 59.32
+        "y": 59.32,
+        "commentImage": "Breslau/scr_ (3).png",
+        "comment": "Wall on the right can be penetrated"
       },
       {
         "id": "mtw6jhq9-lqhbrm",
@@ -6163,7 +6163,8 @@
         "id": "mtw6jxji-wopymh",
         "type": "mainBattleTankRed",
         "x": 53.55,
-        "y": 57.18
+        "y": 57.18,
+        "commentImage": "Breslau/scr_ (7).png"
       },
       {
         "id": "mtw6k8ll-q2qd0a",
@@ -6176,7 +6177,8 @@
         "id": "mtw6kj57-ywnj1r",
         "type": "tankDestroyerRed",
         "x": 35.35,
-        "y": 80.04
+        "y": 80.04,
+        "commentImage": "Breslau/scr_ (10).png"
       },
       {
         "id": "mtw6kke9-vikdwn",
@@ -6189,7 +6191,8 @@
         "id": "mtw6kxoe-14j6sv",
         "type": "lightTankRed",
         "x": 16.85,
-        "y": 71.91
+        "y": 71.91,
+        "commentImage": "Breslau/scr_ (11).png"
       },
       {
         "id": "mtw6l31h-holy7k",
@@ -6202,7 +6205,8 @@
         "id": "mtw6mvui-36mqi1",
         "type": "mainBattleTankRed",
         "x": 61.38,
-        "y": 16.78
+        "y": 16.78,
+        "commentImage": "Breslau/scr_ (22).png"
       },
       {
         "id": "mtw6mx89-ake47i",
@@ -6215,7 +6219,8 @@
         "id": "mtw6omkv-7pc1jg",
         "type": "mainBattleTankRed",
         "x": 20.8,
-        "y": 43.46
+        "y": 43.46,
+        "commentImage": "Breslau/scr_ (17).png"
       },
       {
         "id": "mtw6oo9q-qh6mx1",
@@ -6228,7 +6233,8 @@
         "id": "mtw6p7wf-d78tqr",
         "type": "mainBattleTankRed",
         "x": 5.69,
-        "y": 52.23
+        "y": 52.23,
+        "commentImage": "Breslau/scr_ (18).png"
       },
       {
         "id": "mtw6pa1i-4yg80t",
@@ -6241,7 +6247,8 @@
         "id": "mtw6thj4-ojqfus",
         "type": "mainBattleTankRed",
         "x": 58.3,
-        "y": 42.53
+        "y": 42.53,
+        "commentImage": "Breslau/scr_ (19).png"
       },
       {
         "id": "mtw6tiu6-jjbbrq",
@@ -6254,7 +6261,8 @@
         "id": "mtw6yt2j-mnyldb",
         "type": "mainBattleTankRed",
         "x": 35.11,
-        "y": 51.12
+        "y": 51.12,
+        "commentImage": "Breslau/scr_ (16).png"
       },
       {
         "id": "mtw6yxls-ckz46q",
@@ -6293,7 +6301,8 @@
         "id": "mtw8wg2t-7r2dqv",
         "type": "lightTankRed",
         "x": 87.77,
-        "y": 7.67
+        "y": 7.67,
+        "commentImage": "Breslau/scr_ (23).png"
       },
       {
         "id": "mtw8wohn-10h2gv",
@@ -6306,7 +6315,8 @@
         "id": "mtw925uu-qgo4pw",
         "type": "mainBattleTankRed",
         "x": 27.08,
-        "y": 11.45
+        "y": 11.45,
+        "commentImage": "Breslau/scr_ (1).png"
       },
       {
         "id": "mtw927m8-zc91wq",
@@ -10569,7 +10579,9 @@
       }
     ],
     "Karelia::domination-1|Blue": [],
+    "Karelia::domination-1|Red": [],
     "Kuban::domination-1|Blue": [],
+    "Kuban::domination-1|Red": [],
     "Maginot Line::domination-1|Red": [
       {
         "id": "maginot-line-red-unit-01",
@@ -17230,10 +17242,7 @@
         "x": 32.89,
         "y": 17.37
       }
-    ],
-    "Kuban::domination-1|Red": [],
-    "Karelia::domination-1|Red": [],
-    "Battle of Hürtgen Forest::conquest-3|Blue": []
+    ]
   },
   "annotations": {
     "38th Parallel::domination-1|Red": [
@@ -22316,24 +22325,6 @@
         "endY": 27.03
       },
       {
-        "id": "mtieolb9-7emufk",
-        "type": "route",
-        "points": [
-          {
-            "x": 75.98,
-            "y": 51.86
-          },
-          {
-            "x": 70.84,
-            "y": 49.91
-          },
-          {
-            "x": 73.5,
-            "y": 41.93
-          }
-        ]
-      },
-      {
         "id": "mtieoxfl-4n7ofb",
         "type": "route",
         "points": [
@@ -22417,15 +22408,6 @@
         "dangerRoute": true
       },
       {
-        "id": "mtieulkf-7srfkr",
-        "type": "aimHere",
-        "parentTankId": "mtieueom-0ybwmf",
-        "startX": 52.84,
-        "startY": 33.5,
-        "endX": 31.91,
-        "endY": 42.55
-      },
-      {
         "id": "mtieuwp7-4oqc3z",
         "type": "aimHere",
         "parentTankId": "mtieusf6-enymwv",
@@ -22495,29 +22477,6 @@
           {
             "x": 40.78,
             "y": 44.94
-          }
-        ],
-        "dangerRoute": true
-      },
-      {
-        "id": "mtif7q7h-5966z4",
-        "type": "route",
-        "points": [
-          {
-            "x": 69.86,
-            "y": 40.33
-          },
-          {
-            "x": 58.87,
-            "y": 35.9
-          },
-          {
-            "x": 54.08,
-            "y": 33.86
-          },
-          {
-            "x": 52.39,
-            "y": 33.68
           }
         ],
         "dangerRoute": true
@@ -22605,6 +22564,60 @@
           {
             "x": 61.17,
             "y": 49.37
+          }
+        ]
+      },
+      {
+        "id": "mtxlzjj7-jod7b3",
+        "type": "aimHere",
+        "parentTankId": "mtxlz9ks-ffpiva",
+        "startX": 58.21,
+        "startY": 39.05,
+        "endX": 72.4,
+        "endY": 16.26
+      },
+      {
+        "id": "mtxm0mai-v1fn4q",
+        "type": "route",
+        "points": [
+          {
+            "x": 70.32,
+            "y": 43.61
+          },
+          {
+            "x": 65.37,
+            "y": 42.05
+          },
+          {
+            "x": 61.46,
+            "y": 40.36
+          },
+          {
+            "x": 60.42,
+            "y": 39.18
+          },
+          {
+            "x": 58.47,
+            "y": 39.05
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "mtxm0vu3-woez8v",
+        "type": "route",
+        "points": [
+          {
+            "x": 78.26,
+            "y": 48.17
+          },
+          {
+            "x": 73.18,
+            "y": 45.3
+          },
+          {
+            "x": 73.57,
+            "y": 42.05
           }
         ]
       }
@@ -23072,6 +23085,15 @@
         "startY": 27.21,
         "endX": 96.46,
         "endY": 42.9
+      },
+      {
+        "id": "mtxm1f1j-vl09q9",
+        "type": "aimHere",
+        "parentTankId": "mtieeq46-hw4ggd",
+        "startX": 59.13,
+        "startY": 43.79,
+        "endX": 58.08,
+        "endY": 39.18
       }
     ],
     "Aral Sea::domination-1|Red": [
@@ -24464,15 +24486,6 @@
         "startY": 39.18,
         "endX": 24.48,
         "endY": 20.82
-      },
-      {
-        "id": "mtjr9z3p-j5ja10",
-        "type": "aimHere",
-        "parentTankId": "mtjr9tsx-t3983h",
-        "startX": 15.75,
-        "startY": 33.97,
-        "endX": 29.95,
-        "endY": 26.94
       },
       {
         "id": "mtjrauqv-n1zw9g",
@@ -30051,6 +30064,7 @@
       }
     ],
     "Battle of Hürtgen Forest::conquest-3|Red": [],
+    "Battle of Hürtgen Forest::conquest-3|Blue": [],
     "Berlin::domination-1|Blue": [
       {
         "id": "mtw5ogoe-qbdagv",
@@ -30697,8 +30711,7 @@
             "x": 6.43,
             "y": 69.12
           }
-        ],
-        "dangerRoute": false
+        ]
       },
       {
         "id": "mtw6u441-enwvm6",
@@ -30779,7 +30792,8 @@
             "x": 65.02,
             "y": 29.66
           }
-        ]
+        ],
+        "dangerRoute": true
       },
       {
         "id": "mtw7d3pv-x9emo2",
@@ -30974,7 +30988,8 @@
             "x": 66.54,
             "y": 24.86
           }
-        ]
+        ],
+        "dangerRoute": true
       },
       {
         "id": "mtw8q95g-c683cx",
@@ -41321,7 +41336,9 @@
       }
     ],
     "Karelia::domination-1|Blue": [],
+    "Karelia::domination-1|Red": [],
     "Kuban::domination-1|Blue": [],
+    "Kuban::domination-1|Red": [],
     "Maginot Line::domination-1|Red": [
       {
         "id": "maginot-line-red-aim-01",
@@ -54600,11 +54617,8 @@
           }
         ]
       }
-    ],
-    "Kuban::domination-1|Red": [],
-    "Karelia::domination-1|Red": [],
-    "Battle of Hürtgen Forest::conquest-3|Blue": []
+    ]
   },
-  "updatedAt": "2026-09-11T01:03:00.171Z",
-  "exportedAt": "2026-09-11T01:03:04.898Z"
+  "updatedAt": "2026-09-11T23:51:39.368Z",
+  "exportedAt": "2026-09-12T00:16:37.899Z"
 }
