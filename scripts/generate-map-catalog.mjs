@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 import { watch } from "node:fs";
+import { normalizeTacticalSummary, resolveTacticalSummary } from "../assets/js/tactical-summary.js";
 import { promises as fs } from "node:fs";
 import path from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
@@ -62,16 +63,7 @@ function tacticalSummary(value, context) {
   if (!value || typeof value !== "object" || Array.isArray(value)) {
     throw new Error(`Invalid tactical summary for ${context}`);
   }
-  const result = {};
-  for (const language of ["en", "ko"]) {
-    const sentences = value[language];
-    if (sentences == null) continue;
-    if (!Array.isArray(sentences) || sentences.some(sentence => typeof sentence !== "string")) {
-      throw new Error(`Tactical summary for ${context} (${language}) must be an array of strings`);
-    }
-    const normalizedSentences = sentences.map(sentence => sentence.trim()).filter(Boolean);
-    if (normalizedSentences.length) result[language] = normalizedSentences;
-  }
+  const result = normalizeTacticalSummary(value);
   if (!Object.keys(result).length) return null;
   return result;
 }
@@ -104,6 +96,68 @@ async function directoryEntries(folderPath) {
     if (error?.code === "ENOENT") return [];
     throw error;
   }
+}
+
+export function appendObjectEntries(source, property, entries) {
+  if (!entries.length) return source;
+  const start = source.indexOf(`"${property}": {`);
+  if (start < 0) throw new Error(`Missing ${property} object in source JSON`);
+  const close = source.indexOf("\n  }", start);
+  if (close < 0) throw new Error(`Cannot locate end of ${property} object`);
+  const existing = source.slice(start, close).trimEnd();
+  const additions = entries.map(([key, value]) => `    ${JSON.stringify(key)}: ${JSON.stringify(value)}`).join(",\n");
+  return `${source.slice(0, close).trimEnd()}${existing.endsWith("{") ? "" : ","}\n${additions}${source.slice(close)}`;
+}
+
+async function syncNewMapSources() {
+  const [metadataSource, layoutSource] = await Promise.all([
+    fs.readFile(METADATA_PATH, "utf8"), fs.readFile(MAP_LAYOUT_PATH, "utf8")
+  ]);
+  const metadata = JSON.parse(metadataSource);
+  const layout = JSON.parse(layoutSource);
+  const newMetadata = [];
+  const newDates = [];
+  const newTimestamps = [];
+  for (const entry of await directoryEntries(IMG_ROOT)) {
+    if (!entry.isDirectory() || metadata.maps?.[entry.name]?.disabled) continue;
+    const folder = entry.name;
+    const mapConfig = metadata.maps?.[folder] || {};
+    const rootEntries = await directoryEntries(path.join(IMG_ROOT, folder));
+    let imageFolder = folder;
+    let images = await discoverMapImages(folder, { requireExact: true, failOnPartial: true });
+    if (!images) {
+      const defaultMode = String(mapConfig.defaultMode || "domination").toLowerCase();
+      const primary = rootEntries.find(item => item.isDirectory()
+        && item.name.toLowerCase() === `${defaultMode} #1`);
+      if (primary) {
+        imageFolder = toPosix(path.join(folder, primary.name));
+        images = await discoverMapImages(imageFolder, { failOnPartial: true });
+      }
+    }
+    if (!images) continue;
+    const name = mapConfig.en || folder;
+    const isNewMap = !Object.hasOwn(metadata.maps, folder) || !layout.mapUpdated?.[name];
+    if (!Object.hasOwn(metadata.maps, folder)) newMetadata.push([folder, {}]);
+    if (!isNewMap) continue;
+    const imageName = images.sharedImage || images.teamImages.Red;
+    const imageTime = (await fs.stat(path.join(IMG_ROOT, imageFolder, imageName))).mtime;
+    const timestamp = imageTime.toISOString().replace(/\.\d{3}Z$/, "Z");
+    if (!layout.mapUpdated?.[name]) {
+      const seoulDate = new Date(imageTime.getTime() + 9 * 60 * 60 * 1000).toISOString().slice(0, 10);
+      newDates.push([name, seoulDate]);
+    }
+    if (!layout.mapUpdatedAt?.[name]) newTimestamps.push([name, timestamp]);
+  }
+  if (!newMetadata.length && !newDates.length && !newTimestamps.length) return;
+  const names = [...new Set([...newMetadata, ...newDates, ...newTimestamps].map(([name]) => name))];
+  if (CHECK_ONLY) throw new Error(`New map source metadata is missing for: ${names.join(", ")}. Run without --check.`);
+  const nextMetadata = appendObjectEntries(metadataSource, "maps", newMetadata);
+  const nextLayout = appendObjectEntries(
+    appendObjectEntries(layoutSource, "mapUpdated", newDates), "mapUpdatedAt", newTimestamps
+  );
+  if (nextMetadata !== metadataSource) await fs.writeFile(METADATA_PATH, nextMetadata, "utf8");
+  if (nextLayout !== layoutSource) await fs.writeFile(MAP_LAYOUT_PATH, nextLayout, "utf8");
+  console.log(`Registered new map source data: ${names.join(", ")}. Add Korean names and BR overrides in map-metadata.json as needed.`);
 }
 
 function findTeamFile(fileNames, team, requireExact) {
@@ -249,6 +303,7 @@ async function discoverMap(folderName, metadata, mapUpdated, mapUpdatedAt, tacti
     variation.br = battleRating(variation.br ?? variationBrs[id] ?? mapBr, `${name} ${id}`);
   }
   const unusedVariationBrs = Object.keys(variationBrs).filter(id => !seenIds.has(id));
+  if (mapTacticalSummary) normalizeTacticalSummary(mapTacticalSummary, [...seenIds]);
   if (unusedVariationBrs.length) {
     throw new Error(`BR metadata references unknown variations for ${name}: ${unusedVariationBrs.join(", ")}`);
   }
@@ -324,8 +379,10 @@ function mapPreviewUrl(map) {
 }
 
 function initialTacticalSummary(map) {
-  const language = ["en", "ko"].find(language => map.tacticalSummary?.[language]?.length);
-  return { language: language || "en", sentences: map.tacticalSummary?.[language] || [] };
+  const first = map.variations[0];
+  const copy = resolveTacticalSummary(map.tacticalSummary, first.id || `${first.mode}-${first.number}`);
+  const language = ["en", "ko"].find(language => copy?.[language]?.length);
+  return { language: language || "en", sentences: copy?.[language] || [] };
 }
 
 function renderTacticalSummaryCopy({ language, sentences }) {
@@ -395,6 +452,7 @@ async function writeSiteArtifacts(payload) {
 }
 
 async function generate() {
+  await syncNewMapSources();
   const { payload, unknownTranslations, unusedMetadata, unusedMapUpdates, unusedMapUpdateTimestamps, unusedTacticalSummaries } = await buildCatalog();
   const serialized = `${JSON.stringify(payload, null, 2)}\n`;
   let current = "";

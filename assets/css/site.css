@@ -169,6 +169,8 @@
     .map-tactical-summary summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; border-radius: 2px; }
     .map-tactical-summary-toggle::before { content: "+"; display: block; font-size: 1rem; line-height: 1; }
     .map-tactical-summary[open] .map-tactical-summary-toggle::before { content: "−"; }
+    .map-tactical-summary-scope { color: var(--muted); font-size: .75rem; margin: 10px 0 0; }
+    .map-tactical-summary-scope:empty { display: none; }
     .map-tactical-summary-view { position: relative; margin-top: 11px; padding-top: 10px; border-top: 1px solid rgba(214, 219, 157, .16); }
     .map-tactical-summary-view[hidden], .map-tactical-summary-editor[hidden], .map-tactical-summary-edit[hidden] { display: none; }
     .map-tactical-summary blockquote { margin: 0; padding-right: 38px; }

@@ -37,6 +37,17 @@ test("Korean-only summaries are present before JavaScript runs", () => {
   assert.match(page, /<meta name="description" content="B를 지키세요\.">/);
 });
 
+test("initial route HTML uses the first variation instead of common or another variation", () => {
+  const first = baseMap.variations[0];
+  const id = first.id || `${first.mode}-${first.number}`;
+  const map = { ...baseMap, tacticalSummary: { en: ["Common"], variations: { [id]: { ko: ["선택된 설명"] } } } };
+  const page = renderMapRoutePage(rootPage, map);
+  assert.match(summarySection(page).copy, /선택된 설명/);
+  assert.doesNotMatch(summarySection(page).copy, /Common/);
+  map.tacticalSummary.variations[id] = {};
+  assert.match(summarySection(renderMapRoutePage(rootPage, map)).openingTag, /\shidden>/);
+});
+
 test("the English page uses English when both translations are available", () => {
   const page = renderMapRoutePage(rootPage, { ...baseMap, tacticalSummary: { en: ["Hold B."], ko: ["B를 지키세요."] } });
   const section = summarySection(page);

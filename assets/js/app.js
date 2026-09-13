@@ -1,7 +1,8 @@
     import { MARKER_LAYOUT_VERSION, backupMarkerLayout, loadMarkerLayout, saveMarkerLayout as saveMarkerLayoutToStorage } from './marker-storage.js?v=map-sync-20260903';
 import { initDiscordMemberCount } from './discord-stats.js';
     import { commentImages } from './comment-images.js?v=comment-images-8cb93ffefe76';
-    import { defaultMarkerLayout, maps, translations } from './data.js?v=bilingual-comments-20260914';
+    import { defaultMarkerLayout, maps, translations } from './data.js?v=variation-summary-20260914';
+    import { normalizeTacticalSummary, resolveTacticalSummary, withVariationSummary } from './tactical-summary.js';
     import { acceptUpstreamMap, isMapSyncState, markLayoutAsLocalEdits, markMapEdited, mergeMapLayouts, sourceRevision } from './marker-merge.js?v=marker-drop-20260910';
 
 
@@ -370,16 +371,15 @@ import { initDiscordMemberCount } from './discord-stats.js';
       const min = Number(map.br.min).toFixed(1);
       return map.br.max == null ? `BR ${min}+` : `BR ${min} ~ ${Number(map.br.max).toFixed(1)}`;
     }
-    function currentMapTacticalSummary(map) {
+    function currentMapTacticalSummaryEntry(map) {
       if (!map) return null;
       if (Object.hasOwn(markerLayout.tacticalSummaries, map.name)) {
-        const savedSummary = markerLayout.tacticalSummaries[map.name];
-        const hasSavedCopy = ["en", "ko"].some(language =>
-          Array.isArray(savedSummary?.[language]) && savedSummary[language].length
-        );
-        if (hasSavedCopy) return savedSummary;
+        return markerLayout.tacticalSummaries[map.name];
       }
       return map.tacticalSummary;
+    }
+    function currentMapTacticalSummary(map) {
+      return resolveTacticalSummary(currentMapTacticalSummaryEntry(map), map?.variationId);
     }
     function mapTacticalSummaryLanguage(map, language = state.language) {
       const summaries = currentMapTacticalSummary(map);
@@ -419,8 +419,13 @@ import { initDiscordMemberCount } from './discord-stats.js';
     function saveTacticalSummary() {
       if (!state.selected || !state.editMode) return;
       const summary = tacticalSummaryFromEditor();
-      markerLayout.tacticalSummaries[state.selected.name] = summary;
+      const previous = markerLayout.tacticalSummaries[state.selected.name];
+      markerLayout.tacticalSummaries[state.selected.name] = withVariationSummary(
+        currentMapTacticalSummaryEntry(state.selected), state.selected.variationId, summary
+      );
       if (!persistMarkerLayout("tacticalSummarySaved", { touchMap: true })) {
+        if (previous === undefined) delete markerLayout.tacticalSummaries[state.selected.name];
+        else markerLayout.tacticalSummaries[state.selected.name] = previous;
         mapTacticalSummaryEditorStatus.textContent = t("storageError");
         return;
       }
@@ -520,13 +525,18 @@ import { initDiscordMemberCount } from './discord-stats.js';
       if (!state.selected) return;
       $("#selected-map-name").textContent = mapLabel(state.selected);
       const summarySentences = mapTacticalSummarySentences(state.selected);
-      const selectedMapChanged = mapTacticalSummary.dataset.mapName !== state.selected.name;
+      const selectedMapChanged = mapTacticalSummary.dataset.mapName !== state.selected.name
+        || mapTacticalSummary.dataset.variationId !== state.selected.variationId;
       if (selectedMapChanged) {
         mapTacticalSummary.open = true;
         $("#summary-read-more").setAttribute("aria-expanded", "false");
         closeTacticalSummaryEditor();
       }
       mapTacticalSummary.dataset.mapName = state.selected.name;
+      mapTacticalSummary.dataset.variationId = state.selected.variationId;
+      const commonSummary = !Object.hasOwn(currentMapTacticalSummaryEntry(state.selected)?.variations || {}, state.selected.variationId)
+        && summarySentences.length > 0;
+      $("#map-tactical-summary-scope").textContent = `${mapVariationLabel(state.selected)}${commonSummary ? ` · ${t("commonTacticalSummary")}` : ""}`;
       mapTacticalSummary.hidden = summarySentences.length === 0 && !state.editMode;
       editMapTacticalSummary.hidden = !state.editMode;
       mapTacticalSummaryCopy.lang = mapTacticalSummaryLanguage(state.selected) || state.language;
@@ -2063,15 +2073,8 @@ import { initDiscordMemberCount } from './discord-stats.js';
       });
       Object.entries(data.tacticalSummaries || {}).forEach(([mapName, summary]) => {
         if (!validMapNames.has(mapName) || !summary || typeof summary !== "object" || Array.isArray(summary)) throw new Error("Invalid tactical summary.");
-        const normalized = {};
-        for (const language of ["en", "ko"]) {
-          const sentences = summary[language];
-          if (sentences === undefined) continue;
-          if (!Array.isArray(sentences) || sentences.some(sentence => typeof sentence !== "string")) throw new Error("Invalid tactical summary.");
-          const normalizedSentences = sentences.map(sentence => sentence.trim()).filter(Boolean);
-          if (normalizedSentences.length) normalized[language] = normalizedSentences;
-        }
-        layout.tacticalSummaries[mapName] = normalized;
+        layout.tacticalSummaries[mapName] = normalizeTacticalSummary(summary,
+          maps.find(map => map.name === mapName).variations.map(variation => variation.id));
       });
       let markerCount = 0;
       Object.entries(data.markers).forEach(([key, markers]) => {
