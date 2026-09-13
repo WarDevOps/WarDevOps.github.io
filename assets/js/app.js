@@ -1319,9 +1319,22 @@ import { initDiscordMemberCount } from './discord-stats.js';
         return [];
       }
     }
+    function selectableCommentImages() {
+      const currentKey = currentMarkerKey();
+      const ownMarker = currentMarkers().find(marker => marker.id === state.commentMarkerId);
+      const ownImageIds = new Set(ownMarker ? markerCommentImageIds(ownMarker) : []);
+      const assignedImageIds = new Set();
+      Object.entries(markerLayout.markers).forEach(([key, markers]) => {
+        markers.forEach(marker => {
+          if (key === currentKey && marker.id === state.commentMarkerId) return;
+          markerCommentImageIds(marker).forEach(id => assignedImageIds.add(id));
+        });
+      });
+      return currentCommentImages().filter(image => ownImageIds.has(image.id) || !assignedImageIds.has(image.id));
+    }
     function renderCommentImageOptions(contextMenu, selectedImageIds = []) {
       const picker = contextMenu.querySelector("[data-marker-comment-image-picker]");
-      const availableImages = currentCommentImages();
+      const availableImages = selectableCommentImages();
       const availableImageIds = new Set(availableImages.map(image => image.id));
       const resolvedImageIds = [...new Set(selectedImageIds)]
         .filter(imageId => availableImageIds.has(imageId))
@@ -1372,7 +1385,7 @@ import { initDiscordMemberCount } from './discord-stats.js';
         renderCommentImageOptions(contextMenu);
       } else if (selectedImageIds.includes(imageId)) {
         renderCommentImageOptions(contextMenu, selectedImageIds.filter(selectedId => selectedId !== imageId));
-      } else if (selectedImageIds.length < MAX_COMMENT_IMAGES && currentCommentImages().some(image => image.id === imageId)) {
+      } else if (selectedImageIds.length < MAX_COMMENT_IMAGES && selectableCommentImages().some(image => image.id === imageId)) {
         renderCommentImageOptions(contextMenu, [...selectedImageIds, imageId]);
       }
       fitMarkerContextMenu(contextMenu);

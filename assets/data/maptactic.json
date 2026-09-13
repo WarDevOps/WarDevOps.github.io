@@ -1,7 +1,7 @@
 {
   "version": 2,
   "mapUpdated": {
-    "38th Parallel": "2026-09-03",
+    "38th Parallel": "2026-09-14",
     "Abandoned Factory": "2026-09-14",
     "Abandoned Town": "2026-09-14",
     "Advance to the Rhine": "2026-09-14",
@@ -10,7 +10,7 @@
     "Aral Sea": "2026-09-10",
     "Arctic Pier": "2026-09-12",
     "Arctic Polar Base": "2026-09-12",
-    "Ardennes": "2026-09-11",
+    "Ardennes": "2026-09-14",
     "Ash River": "2026-09-02",
     "Attica": "2026-09-03",
     "Battle of Hürtgen Forest": "2026-09-11",
@@ -60,16 +60,16 @@
     "White Rock Fortress": "2026-09-02"
   },
   "mapUpdatedAt": {
-    "38th Parallel": "2026-09-03T00:03:47Z",
-    "Abandoned Factory": "2026-09-13T20:54:58Z",
+    "38th Parallel": "2026-09-13T22:45:42Z",
+    "Abandoned Factory": "2026-09-13T23:01:31Z",
     "Abandoned Town": "2026-09-13T20:16:37Z",
-    "Advance to the Rhine": "2026-09-13T21:37:55Z",
+    "Advance to the Rhine": "2026-09-13T23:10:51Z",
     "Alaska": "2026-09-13T22:29:17Z",
     "American Desert": "2026-09-12T05:23:48Z",
     "Aral Sea": "2026-09-10T12:50:30Z",
     "Arctic Pier": "2026-09-12T05:21:39Z",
     "Arctic Polar Base": "2026-09-12T01:01:54Z",
-    "Ardennes": "2026-09-10T23:24:07Z",
+    "Ardennes": "2026-09-13T22:51:40Z",
     "Ash River": "2026-09-01T16:50:15Z",
     "Attica": "2026-09-03T02:06:24Z",
     "Battle of Hürtgen Forest": "2026-09-10T23:47:33Z",
@@ -90,14 +90,14 @@
     "North Holland": "2026-09-08T11:00:33Z",
     "Poland": "2026-09-04T05:44:36Z",
     "Port Novorossiysk": "2026-09-08T23:53:12Z",
-    "Vietnam": "2026-09-12T00:24:23Z",
-    "White Rock Fortress": "2026-09-02T04:58:42Z",
-    "Test Site-2271": "2026-09-13T19:14:47Z",
-    "Tunisia": "2026-09-13T19:32:06Z",
     "Seversk-13": "2026-09-13T19:59:09Z",
     "Sinai": "2026-09-13T19:47:49Z",
     "Spaceport": "2026-09-13T19:57:57Z",
-    "Sun City": "2026-09-13T20:06:32Z"
+    "Sun City": "2026-09-13T20:06:32Z",
+    "Test Site-2271": "2026-09-13T19:14:47Z",
+    "Tunisia": "2026-09-13T19:32:06Z",
+    "Vietnam": "2026-09-12T00:24:23Z",
+    "White Rock Fortress": "2026-09-02T04:58:42Z"
   },
   "tacticalSummaries": {
     "Eastern Europe": {
@@ -212,7 +212,7 @@
         "The northwestern flank consists almost entirely of exposed terrain. It can occasionally be used as an unexpected high-risk maneuver, but it is generally not recommended.",
         "Domination #2",
         "Ardennes Domination #2 is essentially a larger version of Domination #1, but the tactical situation changes considerably.",
-        "The most important position is point C, located on the highest ground of"
+        "The most important position is point C, located on the highest ground of asd"
       ],
       "ko": [
         "아르덴 도미네이션 #1에서는 A와 C 거점을 각각 남쪽 팀과 북쪽 팀이 비교적 쉽게 확보하는 형태로 전투가 시작됩니다. 의외로 중앙에 위치한 B 거점 자체의 전략적 가치는 그리 높지 않습니다.",
@@ -886,7 +886,8 @@
         "x": 34.58,
         "y": 31.46,
         "commentImages": [
-          "Abandoned Factory/scr_ (23).png"
+          "Abandoned Factory/scr_ (23).png",
+          "Abandoned Factory/scr_ (4).png"
         ]
       },
       {
@@ -1065,7 +1066,7 @@
         "x": 13.54,
         "y": 17.83,
         "commentImages": [
-          "Abandoned Factory/scr_ (1).png"
+          "Abandoned Factory/scr_ (3).png"
         ]
       },
       {
@@ -1103,7 +1104,10 @@
         "id": "abandoned-factory-blue-unit-02",
         "type": "mainBattleTank",
         "x": 9.31,
-        "y": 40.56
+        "y": 40.56,
+        "commentImages": [
+          "Abandoned Factory/scr_ (1).png"
+        ]
       },
       {
         "id": "abandoned-factory-blue-role-02",
@@ -1786,12 +1790,6 @@
         "parentTankId": "mtig85f1-anpqul"
       },
       {
-        "id": "mtig8fkw-8ju06g",
-        "type": "tankDestroyerRed",
-        "x": 93.27,
-        "y": 90.25
-      },
-      {
         "id": "mtig8m3m-cl6jw9",
         "type": "mainBattleTankRed",
         "x": 94.33,
@@ -1801,13 +1799,20 @@
         "id": "mtig8x0m-wei2yh",
         "type": "mainBattleTankRed",
         "x": 95.22,
-        "y": 37.49
+        "y": 37.49,
+        "commentImages": [
+          "Advance to the Rhine/scr_ (28).png",
+          "Advance to the Rhine/scr_ (29).png"
+        ]
       },
       {
         "id": "mtig95uu-59pqz8",
         "type": "mainBattleTankRed",
         "x": 55.32,
-        "y": 54.52
+        "y": 54.52,
+        "commentImages": [
+          "Advance to the Rhine/scr_ (12).png"
+        ]
       },
       {
         "id": "mtig9t83-phpyrp",
@@ -1824,17 +1829,14 @@
         "parentTankId": "mtig8m3m-cl6jw9"
       },
       {
-        "id": "mtiga0tb-526b9a",
-        "type": "sniper",
-        "x": 93.27,
-        "y": 90.25,
-        "parentTankId": "mtig8fkw-8ju06g"
-      },
-      {
         "id": "mtigaz9w-rkxwj7",
         "type": "mainBattleTankRed",
         "x": 85.82,
-        "y": 50.53
+        "y": 50.53,
+        "commentImages": [
+          "Advance to the Rhine/scr_ (33).png",
+          "Advance to the Rhine/scr_ (34).png"
+        ]
       },
       {
         "id": "mtigb0rl-zib9c3",
@@ -1847,7 +1849,10 @@
         "id": "mtigc72e-2leb78",
         "type": "tankDestroyerRed",
         "x": 47.61,
-        "y": 65.16
+        "y": 65.16,
+        "commentImages": [
+          "Advance to the Rhine/scr_ (10).png"
+        ]
       },
       {
         "id": "mtigc851-zlpocg",
@@ -1867,7 +1872,10 @@
         "id": "mtigd28u-huv6jk",
         "type": "tankDestroyerRed",
         "x": 24.55,
-        "y": 63.74
+        "y": 63.74,
+        "commentImages": [
+          "Advance to the Rhine/scr_ (17).png"
+        ]
       },
       {
         "id": "mtigde0l-7upy1s",
@@ -1893,7 +1901,10 @@
         "id": "mtigf57u-npfqf3",
         "type": "mainBattleTankRed",
         "x": 45.21,
-        "y": 58.06
+        "y": 58.06,
+        "commentImages": [
+          "Advance to the Rhine/scr_ (11).png"
+        ]
       },
       {
         "id": "mtigf685-2s75yi",
@@ -1906,7 +1917,10 @@
         "id": "mtigfih6-gg7cxi",
         "type": "mainBattleTankRed",
         "x": 54.35,
-        "y": 30.22
+        "y": 30.22,
+        "commentImages": [
+          "Advance to the Rhine/scr_ (24).png"
+        ]
       },
       {
         "id": "mtigfjhr-nc2ab5",
@@ -1919,7 +1933,10 @@
         "id": "mtigfv5p-wo7bgo",
         "type": "mainBattleTankRed",
         "x": 81.83,
-        "y": 17.81
+        "y": 17.81,
+        "commentImages": [
+          "Advance to the Rhine/scr_ (25).png"
+        ]
       },
       {
         "id": "mtigfzjf-k2otj4",
@@ -1932,7 +1949,11 @@
         "id": "mtigl8ry-8chwny",
         "type": "mainBattleTankRed",
         "x": 58.69,
-        "y": 44.85
+        "y": 44.85,
+        "commentImages": [
+          "Advance to the Rhine/scr_ (21).png",
+          "Advance to the Rhine/scr_ (22).png"
+        ]
       },
       {
         "id": "mtiglbup-a6emyr",
@@ -1945,7 +1966,11 @@
         "id": "mtigm5ue-v6jk6w",
         "type": "mainBattleTankRed",
         "x": 86.07,
-        "y": 40.62
+        "y": 40.62,
+        "commentImages": [
+          "Advance to the Rhine/scr_ (30).png",
+          "Advance to the Rhine/scr_ (31).png"
+        ]
       },
       {
         "id": "mtigm7zt-s5ffjo",
@@ -1971,7 +1996,10 @@
         "id": "mtigp8j8-n0ng49",
         "type": "mainBattleTankRed",
         "x": 25.91,
-        "y": 21.86
+        "y": 21.86,
+        "commentImages": [
+          "Advance to the Rhine/scr_ (1).png"
+        ]
       },
       {
         "id": "mtigpajt-6gqthg",
@@ -1997,7 +2025,10 @@
         "id": "mtigv77m-tygjao",
         "type": "mainBattleTankRed",
         "x": 41.67,
-        "y": 39.31
+        "y": 39.31,
+        "commentImages": [
+          "Advance to the Rhine/scr_ (23).png"
+        ]
       },
       {
         "id": "mtigvcsb-ojd7u3",
@@ -2028,7 +2059,10 @@
         "id": "mu0b9qdu-fzmisk",
         "type": "mainBattleTankRed",
         "x": 22.39,
-        "y": 50.77
+        "y": 50.77,
+        "commentImages": [
+          "Advance to the Rhine/scr_ (18).png"
+        ]
       },
       {
         "id": "mu0ba7v9-s8ewml",
@@ -2049,7 +2083,10 @@
         "id": "mtiga5xo-snc5is",
         "type": "mainBattleTank",
         "x": 99.03,
-        "y": 41.4
+        "y": 41.4,
+        "commentImages": [
+          "Advance to the Rhine/scr_ (27).png"
+        ]
       },
       {
         "id": "mtiga74p-fzvg7f",
@@ -2068,7 +2105,10 @@
         "id": "mtiggw75-hgv11j",
         "type": "mainBattleTank",
         "x": 43.75,
-        "y": 66.4
+        "y": 66.4,
+        "commentImages": [
+          "Advance to the Rhine/scr_ (13).png"
+        ]
       },
       {
         "id": "mtigheef-il5f4p",
@@ -2081,7 +2121,10 @@
         "id": "mtighhis-17n5gr",
         "type": "mainBattleTank",
         "x": 23.49,
-        "y": 76.95
+        "y": 76.95,
+        "commentImages": [
+          "Advance to the Rhine/scr_ (7).png"
+        ]
       },
       {
         "id": "mtighjyt-fxlyje",
@@ -2120,7 +2163,10 @@
         "id": "mtigj9ob-mecyqz",
         "type": "tankDestroyer",
         "x": 94.77,
-        "y": 33.86
+        "y": 33.86,
+        "commentImages": [
+          "Advance to the Rhine/scr_ (26).png"
+        ]
       },
       {
         "id": "mtigjb3j-xr810d",
@@ -2133,7 +2179,11 @@
         "id": "mtigkcz6-nn4bhj",
         "type": "mainBattleTank",
         "x": 55.76,
-        "y": 48.75
+        "y": 48.75,
+        "commentImages": [
+          "Advance to the Rhine/scr_ (19).png",
+          "Advance to the Rhine/scr_ (20).png"
+        ]
       },
       {
         "id": "mtigkfl9-3i7s9w",
@@ -2146,7 +2196,10 @@
         "id": "mtigtllp-t6c3qm",
         "type": "tankDestroyer",
         "x": 80.08,
-        "y": 42.7
+        "y": 42.7,
+        "commentImages": [
+          "Advance to the Rhine/scr_ (32).png"
+        ]
       },
       {
         "id": "mtigu09d-n2br6k",
@@ -2165,7 +2218,10 @@
         "id": "mtigy6ci-hxhmf8",
         "type": "mainBattleTank",
         "x": 22.6,
-        "y": 46.36
+        "y": 46.36,
+        "commentImages": [
+          "Advance to the Rhine/scr_ (5).png"
+        ]
       },
       {
         "id": "mtigyag1-jkpnzq",
@@ -2178,13 +2234,19 @@
         "id": "mtigyrdc-5kav21",
         "type": "mainBattleTank",
         "x": 35.46,
-        "y": 46.27
+        "y": 46.27,
+        "commentImages": [
+          "Advance to the Rhine/scr_ (16).png"
+        ]
       },
       {
         "id": "mtih0py0-d5hon4",
         "type": "mainBattleTank",
         "x": 13.38,
-        "y": 66.22
+        "y": 66.22,
+        "commentImages": [
+          "Advance to the Rhine/scr_ (6).png"
+        ]
       },
       {
         "id": "mtih0raj-gg52qa",
@@ -2197,7 +2259,10 @@
         "id": "mtih157g-4tqipi",
         "type": "mainBattleTank",
         "x": 36.61,
-        "y": 88.21
+        "y": 88.21,
+        "commentImages": [
+          "Advance to the Rhine/scr_ (8).png"
+        ]
       },
       {
         "id": "mtih179r-1utvyq",
@@ -2217,7 +2282,10 @@
         "id": "mtih5a38-4exiaj",
         "type": "mainBattleTank",
         "x": 32.09,
-        "y": 56.64
+        "y": 56.64,
+        "commentImages": [
+          "Advance to the Rhine/scr_ (14).png"
+        ]
       },
       {
         "id": "mtih5b7z-0me6wq",
@@ -2230,7 +2298,10 @@
         "id": "mtih69hm-13g23o",
         "type": "mainBattleTank",
         "x": 82.89,
-        "y": 61.7
+        "y": 61.7,
+        "commentImages": [
+          "Advance to the Rhine/scr_ (35).png"
+        ]
       },
       {
         "id": "mtih6bfr-hicmyd",
@@ -2243,7 +2314,10 @@
         "id": "mtih7fus-naqwcj",
         "type": "mainBattleTank",
         "x": 55.21,
-        "y": 76.56
+        "y": 76.56,
+        "commentImages": [
+          "Advance to the Rhine/scr_ (9).png"
+        ]
       },
       {
         "id": "mtih7gs9-n838n9",
@@ -8202,6 +8276,7 @@
         "y": 82.89
       }
     ],
+    "Darwin Hill::domination-1|Blue": [],
     "Eastern Europe::domination-1|Red": [],
     "Eastern Europe::domination-1|Blue": [],
     "European Province::domination-1|Red": [
@@ -18642,8 +18717,7 @@
         "x": 32.89,
         "y": 17.37
       }
-    ],
-    "Darwin Hill::domination-1|Blue": []
+    ]
   },
   "annotations": {
     "38th Parallel::domination-1|Red": [
@@ -21652,15 +21726,6 @@
         "endY": 35.99
       },
       {
-        "id": "mtig8jmr-jow75m",
-        "type": "aimHere",
-        "parentTankId": "mtig8fkw-8ju06g",
-        "startX": 93.27,
-        "startY": 90.25,
-        "endX": 97.7,
-        "endY": 42.72
-      },
-      {
         "id": "mtig8q5r-j27h0d",
         "type": "aimHere",
         "parentTankId": "mtig8m3m-cl6jw9",
@@ -22045,28 +22110,6 @@
           }
         ],
         "dangerRoute": true
-      },
-      {
-        "id": "mtigqe6z-d8wlph",
-        "type": "route",
-        "points": [
-          {
-            "x": 81.56,
-            "y": 96.63
-          },
-          {
-            "x": 87.95,
-            "y": 96.45
-          },
-          {
-            "x": 91.23,
-            "y": 94.41
-          },
-          {
-            "x": 93.18,
-            "y": 90.6
-          }
-        ]
       },
       {
         "id": "mtigtdzb-0bjj4y",
@@ -36670,6 +36713,7 @@
         "endY": 23.57
       }
     ],
+    "Darwin Hill::domination-1|Blue": [],
     "Eastern Europe::domination-1|Red": [],
     "Eastern Europe::domination-1|Blue": [],
     "European Province::domination-1|Red": [
@@ -58771,9 +58815,8 @@
           }
         ]
       }
-    ],
-    "Darwin Hill::domination-1|Blue": []
+    ]
   },
-  "updatedAt": "2026-09-13T22:29:17.612Z",
-  "exportedAt": "2026-09-13T22:29:35.497Z"
+  "updatedAt": "2026-09-13T23:10:51.475Z",
+  "exportedAt": "2026-09-13T23:10:55.489Z"
 }
