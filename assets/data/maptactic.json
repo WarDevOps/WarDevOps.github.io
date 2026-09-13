@@ -13,7 +13,7 @@
     "Ardennes": "2026-09-14",
     "Ash River": "2026-09-02",
     "Attica": "2026-09-03",
-    "Battle of Hürtgen Forest": "2026-09-11",
+    "Battle of Hürtgen Forest": "2026-09-14",
     "Berlin": "2026-09-11",
     "Breslau": "2026-09-11",
     "Campania": "2026-09-03",
@@ -61,18 +61,18 @@
   },
   "mapUpdatedAt": {
     "38th Parallel": "2026-09-13T22:45:42Z",
-    "Abandoned Factory": "2026-09-13T23:01:31Z",
-    "Abandoned Town": "2026-09-13T20:16:37Z",
-    "Advance to the Rhine": "2026-09-13T23:13:46Z",
-    "Alaska": "2026-09-13T22:29:17Z",
+    "Abandoned Factory": "2026-09-13T23:29:02Z",
+    "Abandoned Town": "2026-09-13T23:18:46Z",
+    "Advance to the Rhine": "2026-09-13T23:19:34Z",
+    "Alaska": "2026-09-13T23:26:53Z",
     "American Desert": "2026-09-12T05:23:48Z",
     "Aral Sea": "2026-09-10T12:50:30Z",
     "Arctic Pier": "2026-09-12T05:21:39Z",
     "Arctic Polar Base": "2026-09-12T01:01:54Z",
-    "Ardennes": "2026-09-13T22:51:40Z",
+    "Ardennes": "2026-09-13T23:15:39Z",
     "Ash River": "2026-09-01T16:50:15Z",
     "Attica": "2026-09-03T02:06:24Z",
-    "Battle of Hürtgen Forest": "2026-09-10T23:47:33Z",
+    "Battle of Hürtgen Forest": "2026-09-13T23:17:23Z",
     "Berlin": "2026-09-10T23:37:22Z",
     "Breslau": "2026-09-11T09:46:34Z",
     "Campania": "2026-09-03T01:49:21Z",
@@ -222,7 +222,32 @@
         "아르덴 도미네이션 #2는 도미네이션 #1을 확장한 대형 전장이지만, 실제 전투 양상은 상당히 달라집니다.",
         "가장 중요한 지역은 맵에서 가장 높은 지형에 위치한 C 거점입니다. 이 고지대를 장악하면 맵 대부분을 사정거리 안에 둘 수 있으며, 양 팀의 스폰 지역까지 직접적인 압박이 가능해집니다.",
         "전장이 넓어진 만큼 전선의 밀도가 낮아지기 때문에 북서쪽 시가지 역시 도미네이션 #1에 비해 훨씬 빠르게 돌파할 수 있습니다. 이 지역을 이용하면 적의 측면과 후방으로 깊숙이 진입하여 스폰 지역을 기습할 수 있습니다."
-      ]
+      ],
+      "variations": {
+        "domination-1": {
+          "en": [
+            "In Ardennes Domination #1, points A and C are usually secured early by the southern and northern teams respectively. Surprisingly, the central point B is not the most strategically valuable position on the map.",
+            "The southeastern urban area is far more important. While the central city often settles into a prolonged stalemate, the outcome of the match is frequently decided by whichever team gains control of the southeastern city and successfully completes a flanking maneuver.",
+            "Once this area is breached, it provides strong and relatively safe positions from which the enemy spawn can be pressured.",
+            "The northwestern flank consists almost entirely of exposed terrain. It can occasionally be used as an unexpected high-risk maneuver, but it is generally not recommended."
+          ],
+          "ko": [
+            "아르덴 도미네이션 #1에서는 A와 C 거점을 각각 남쪽 팀과 북쪽 팀이 비교적 쉽게 확보하는 형태로 전투가 시작됩니다. 의외로 중앙에 위치한 B 거점 자체의 전략적 가치는 그리 높지 않습니다.",
+            "이 맵에서 가장 중요한 지역은 남동쪽 시가지입니다. 중앙 시가지에서 교착 상태가 이어지는 동안 어느 팀이 남동쪽 시가지를 장악하고 우회 공격에 성공하는지가 승부를 결정하는 경우가 많습니다.",
+            "남동쪽 시가지가 돌파당하면 상대 스폰 지역을 안정적으로 압박할 수 있는 위치가 확보되기 때문입니다.",
+            "북서쪽 우회로는 대부분이 완전히 노출된 개활지로 이루어져 있습니다. 간혹 예상 밖의 기습 경로로 사용할 수는 있지만 위험 부담이 매우 크기 때문에 일반적으로 추천하지 않습니다.",
+            "아르덴 도미네이션 #2는 도미네이션 #1을 확장한 대형 전장이지만, 실제 전투 양상은 상당히 달라집니다.",
+            "가장 중요한 지역은 맵에서 가장 높은 지형에 위치한 C 거점입니다. 이 고지대를 장악하면 맵 대부분을 사정거리 안에 둘 수 있으며, 양 팀의 스폰 지역까지 직접적인 압박이 가능해집니다.",
+            "전장이 넓어진 만큼 전선의 밀도가 낮아지기 때문에 북서쪽 시가지 역시 도미네이션 #1에 비해 훨씬 빠르게 돌파할 수 있습니다. 이 지역을 이용하면 적의 측면과 후방으로 깊숙이 진입하여 스폰 지역을 기습할 수 있습니다."
+          ]
+        },
+        "domination-2": {
+          "en": [
+            "Ardennes Domination #2 is essentially a larger version of Domination #1, but the tactical situation changes considerably.",
+            "The most important position is point C, located on the highest ground of"
+          ]
+        }
+      }
     },
     "Attica": {
       "en": [
@@ -260,7 +285,34 @@
         "휘르트겐 숲 도미네이션 #2에서는 북쪽 산악 지대의 중요성이 더욱 커집니다.",
         "이 지역을 장악하면 적 스폰 지역을 압박할 수 있을 뿐만 아니라 A 거점을 확보한 뒤 B 거점까지 동시에 통제할 수 있습니다.",
         "B 거점은 북쪽 방향에서 들어오는 사격을 막아줄 엄폐물이 매우 부족합니다. 따라서 산악 지대를 확보했다면 반드시 유지해야 하며, 반대로 빼앗겼다면 지상전만으로 탈환하기 어렵더라도 공중 지원 등을 활용해 적을 제거하는 것이 중요합니다."
-      ]
+      ],
+      "variations": {
+        "domination-1": {
+          "en": [
+            "Domination #1",
+            "The central urban area is the most important part of Battle of Hürtgen Forest Domination #1. At the beginning of the match, points A and B are commonly divided between the two teams.",
+            "The mountain in the north is the major strategic variable. Controlling this high ground can provide direct opportunities to pressure the enemy spawn.",
+            "The western team has a slight terrain advantage when climbing the mountain because the surrounding hills and ridgelines provide better opportunities for concealment and cover.",
+            "However, losing the mountain does not necessarily decide the match. The urban area around point C is largely protected from direct fire from the mountain, which means a team can abandon the northern fight and concentrate its offensive through the southern city instead.",
+            "Vehicles with strong gun depression can also make effective use of the hill at the far southern edge of the map, which provides excellent control over the approaches to point C."
+          ],
+          "ko": [
+            "도미네이션 #1",
+            "휘르트겐 숲 도미네이션 #1에서는 중앙 시가지가 가장 중요한 지역입니다. 전투 초반에는 A와 B 거점을 양 팀이 하나씩 나누어 확보하는 형태가 자주 나타납니다.",
+            "북쪽 산악 지대가 주요 변수이며, 이 지역을 장악하면 적 스폰 지역까지 직접적인 압박이 가능해집니다.",
+            "서쪽 팀은 산을 오를 때 구릉과 능선을 엄폐물로 활용하기 쉬워 상대적으로 유리한 지형을 가지고 있습니다.",
+            "다만 산악 지대를 빼앗겼다고 해서 반드시 패배하는 것은 아닙니다. C 거점 주변 시가지는 산에서 직접적인 사선이 나오지 않기 때문에 산악 지대를 포기하고 남쪽 시가지에 공세를 집중하는 방식으로 역전을 노릴 수 있습니다.",
+            "부각이 좋은 전차를 운용한다면 맵 최남단의 언덕을 확보하는 것도 좋은 선택입니다. 이 위치에서는 C 거점 일대를 효과적으로 통제할 수 있습니다."
+          ]
+        },
+        "domination-2": {
+          "ko": [
+            "휘르트겐 숲 도미네이션 #2에서는 북쪽 산악 지대의 중요성이 더욱 커집니다.",
+            "이 지역을 장악하면 적 스폰 지역을 압박할 수 있을 뿐만 아니라 A 거점을 확보한 뒤 B 거점까지 동시에 통제할 수 있습니다.",
+            "B 거점은 북쪽 방향에서 들어오는 사격을 막아줄 엄폐물이 매우 부족합니다. 따라서 산악 지대를 확보했다면 반드시 유지해야 하며, 반대로 빼앗겼다면 지상전만으로 탈환하기 어렵더라도 공중 지원 등을 활용해 적을 제거하는 것이 중요합니다."
+          ]
+        }
+      }
     },
     "Breslau": {
       "en": [
@@ -927,10 +979,11 @@
         "type": "mainBattleTankRed",
         "x": 73.67,
         "y": 53.45,
-        "comment": "Wall shot",
         "commentImages": [
           "Abandoned Factory/scr_ (18).png"
-        ]
+        ],
+        "commentEn": "Wall shot",
+        "commentKo": "월샷"
       },
       {
         "id": "abandoned-factory-red-role-04",
@@ -977,10 +1030,12 @@
         "type": "mainBattleTankRed",
         "x": 68.54,
         "y": 58.47,
-        "comment": "Wall shot",
         "commentImages": [
-          "Abandoned Factory/scr_ (19).png"
-        ]
+          "Abandoned Factory/scr_ (19).png",
+          "Abandoned Factory/scr_ (20).png"
+        ],
+        "commentEn": "Wall shot",
+        "commentKo": "월샷"
       },
       {
         "id": "abandoned-factory-red-role-07",
@@ -1748,7 +1803,8 @@
         "x": 50,
         "y": 58.85,
         "commentImages": [
-          "Abandoned Town/scr_ (22).png"
+          "Abandoned Town/scr_ (22).png",
+          "Abandoned Town/scr_ (21).png"
         ]
       },
       {
@@ -1891,7 +1947,10 @@
         "id": "mtigek2r-ykhypi",
         "type": "mainBattleTankRed",
         "x": 35.46,
-        "y": 50.08
+        "y": 50.08,
+        "commentImages": [
+          "Advance to the Rhine/scr_ (15).png"
+        ]
       },
       {
         "id": "mtigelzr-e6lb6e",
@@ -2385,7 +2444,10 @@
         "id": "msz8v0ga-jj8idi",
         "type": "mainBattleTankRed",
         "x": 33.67,
-        "y": 53.66
+        "y": 53.66,
+        "commentImages": [
+          "Alaska/scr_ (17).png"
+        ]
       },
       {
         "id": "msz8v9w3-6oohlb",
@@ -2411,7 +2473,10 @@
         "id": "msz8w7ly-0sg6kh",
         "type": "mainBattleTankRed",
         "x": 76.05,
-        "y": 54.03
+        "y": 54.03,
+        "commentImages": [
+          "Alaska/scr_ (1).png"
+        ]
       },
       {
         "id": "msz8w9id-90ws9q",
@@ -2424,7 +2489,11 @@
         "id": "msz8wees-rbiyef",
         "type": "lightTankRed",
         "x": 69.8,
-        "y": 23.95
+        "y": 23.95,
+        "commentImages": [
+          "Alaska/scr_ (22).png",
+          "Alaska/scr_ (23).png"
+        ]
       },
       {
         "id": "msz8wfwx-omp7y5",
@@ -2437,7 +2506,10 @@
         "id": "msz8yxb5-6o577b",
         "type": "mainBattleTankRed",
         "x": 46.46,
-        "y": 52.17
+        "y": 52.17,
+        "commentImages": [
+          "Alaska/scr_ (15).png"
+        ]
       },
       {
         "id": "msz8yymf-d2vf6v",
@@ -2450,7 +2522,10 @@
         "id": "msz8zar6-om2r6o",
         "type": "tankDestroyerRed",
         "x": 47.72,
-        "y": 62
+        "y": 62,
+        "commentImages": [
+          "Alaska/scr_ (16).png"
+        ]
       },
       {
         "id": "msz8zbx3-nvu4h2",
@@ -2463,13 +2538,19 @@
         "id": "msz8zn8o-8da9lh",
         "type": "mainBattleTankRed",
         "x": 27.16,
-        "y": 47.61
+        "y": 47.61,
+        "commentImages": [
+          "Alaska/scr_ (6).png"
+        ]
       },
       {
         "id": "msz8zp96-1ijzxy",
         "type": "lightTankRed",
         "x": 14.6,
-        "y": 49.2
+        "y": 49.2,
+        "commentImages": [
+          "Alaska/scr_ (30).png"
+        ]
       },
       {
         "id": "msz8zqen-t9hzy4",
@@ -2482,7 +2563,10 @@
         "id": "msz90vfm-4hmz9y",
         "type": "tankDestroyerRed",
         "x": 12.66,
-        "y": 70.67
+        "y": 70.67,
+        "commentImages": [
+          "Alaska/scr_ (28).png"
+        ]
       },
       {
         "id": "msz90xcr-54mbd2",
@@ -2520,7 +2604,10 @@
         "id": "mt4k1wvl-3iewh0",
         "type": "tankDestroyerRed",
         "x": 7.55,
-        "y": 73.43
+        "y": 73.43,
+        "commentImages": [
+          "Alaska/scr_ (29).png"
+        ]
       },
       {
         "id": "mt4k2hff-sh69vy",
@@ -2533,7 +2620,13 @@
         "id": "mt701975-v2fax8",
         "type": "mainBattleTankRed",
         "x": 23.85,
-        "y": 51.15
+        "y": 51.15,
+        "commentImages": [
+          "Alaska/scr_ (2).png",
+          "Alaska/scr_ (3).png",
+          "Alaska/scr_ (4).png",
+          "Alaska/scr_ (5).png"
+        ]
       },
       {
         "id": "mt701cja-90ri9q",
@@ -2546,7 +2639,10 @@
         "id": "mt8edvgt-11a9pr",
         "type": "mainBattleTankRed",
         "x": 43.1,
-        "y": 23.04
+        "y": 23.04,
+        "commentImages": [
+          "Alaska/scr_ (20).png"
+        ]
       },
       {
         "id": "mt8edxja-tgelsp",
@@ -2559,7 +2655,10 @@
         "id": "mt8ee3xx-3ii11n",
         "type": "mainBattleTankRed",
         "x": 33.6,
-        "y": 36.87
+        "y": 36.87,
+        "commentImages": [
+          "Alaska/scr_ (18).png"
+        ]
       },
       {
         "id": "mt8ee71s-6aux1c",
@@ -2572,7 +2671,10 @@
         "id": "mt8eem8z-p04lra",
         "type": "mainBattleTankRed",
         "x": 59.13,
-        "y": 21.98
+        "y": 21.98,
+        "commentImages": [
+          "Alaska/scr_ (21).png"
+        ]
       },
       {
         "id": "mt8eeuaq-3ywcrk",
@@ -2585,7 +2687,10 @@
         "id": "mt8ef471-hv9iv9",
         "type": "mainBattleTankRed",
         "x": 36.08,
-        "y": 23.4
+        "y": 23.4,
+        "commentImages": [
+          "Alaska/scr_ (19).png"
+        ]
       },
       {
         "id": "mt8ef5yk-nn3xmv",
@@ -2604,7 +2709,10 @@
         "id": "mtkbv2wc-a5zoo3",
         "type": "tankDestroyerRed",
         "x": 80.6,
-        "y": 93.23
+        "y": 93.23,
+        "commentImages": [
+          "Alaska/scr_ (27).png"
+        ]
       },
       {
         "id": "mtw51k4o-sdgwyy",
@@ -2638,7 +2746,11 @@
         "id": "msz8yjr0-h5nv2v",
         "type": "mainBattleTank",
         "x": 40.18,
-        "y": 46.35
+        "y": 46.35,
+        "commentImages": [
+          "Alaska/scr_ (12).png",
+          "Alaska/scr_ (13).png"
+        ]
       },
       {
         "id": "msz8yp95-7059mj",
@@ -2651,7 +2763,10 @@
         "id": "msz8zzcn-s5gxkx",
         "type": "mainBattleTank",
         "x": 12.31,
-        "y": 47.83
+        "y": 47.83,
+        "commentImages": [
+          "Alaska/scr_ (31).png"
+        ]
       },
       {
         "id": "msz900id-bjyjh3",
@@ -2664,7 +2779,10 @@
         "id": "msz90pg0-2ve2fj",
         "type": "tankDestroyer",
         "x": 10.94,
-        "y": 31.85
+        "y": 31.85,
+        "commentImages": [
+          "Alaska/scr_ (32).png"
+        ]
       },
       {
         "id": "msz90rz9-s5968r",
@@ -2690,13 +2808,20 @@
         "id": "msz92wrf-g3xei1",
         "type": "mainBattleTank",
         "x": 25.18,
-        "y": 44.41
+        "y": 44.41,
+        "commentImages": [
+          "Alaska/scr_ (9).png"
+        ]
       },
       {
         "id": "msz92zei-efzyvj",
         "type": "tankDestroyer",
         "x": 31.04,
-        "y": 44.07
+        "y": 44.07,
+        "commentImages": [
+          "Alaska/scr_ (7).png",
+          "Alaska/scr_ (8).png"
+        ]
       },
       {
         "id": "msz931ku-z2slrb",
@@ -2734,7 +2859,10 @@
         "id": "msz969dd-yc2xg0",
         "type": "mainBattleTank",
         "x": 41.32,
-        "y": 51.37
+        "y": 51.37,
+        "commentImages": [
+          "Alaska/scr_ (14).png"
+        ]
       },
       {
         "id": "msz96c8i-ro51hq",
@@ -2747,7 +2875,10 @@
         "id": "msz9mx98-box4s7",
         "type": "mainBattleTank",
         "x": 49.2,
-        "y": 61.77
+        "y": 61.77,
+        "commentImages": [
+          "Alaska/scr_ (36).png"
+        ]
       },
       {
         "id": "msz9n1tx-3zidp4",
@@ -2760,7 +2891,10 @@
         "id": "msz9n6ig-z0u7c3",
         "type": "mainBattleTank",
         "x": 39.61,
-        "y": 70.22
+        "y": 70.22,
+        "commentImages": [
+          "Alaska/scr_ (35).png"
+        ]
       },
       {
         "id": "msz9ntu7-45q18h",
@@ -2773,7 +2907,10 @@
         "id": "mt4jy06y-gjnl8v",
         "type": "tankDestroyer",
         "x": 11.58,
-        "y": 19
+        "y": 19,
+        "commentImages": [
+          "Alaska/scr_ (33).png"
+        ]
       },
       {
         "id": "mt4k2bif-xtsfrt",
@@ -2786,7 +2923,10 @@
         "id": "mt8eg7uh-rqbhd7",
         "type": "mainBattleTank",
         "x": 31.29,
-        "y": 72.87
+        "y": 72.87,
+        "commentImages": [
+          "Alaska/scr_ (34).png"
+        ]
       },
       {
         "id": "mt8eg9jq-molclx",
@@ -2799,7 +2939,11 @@
         "id": "mtkbdmjc-19eqxg",
         "type": "lightTank",
         "x": 70.71,
-        "y": 77.6
+        "y": 77.6,
+        "commentImages": [
+          "Alaska/scr_ (25).png",
+          "Alaska/scr_ (26).png"
+        ]
       },
       {
         "id": "mtkbdxlw-px9ouy",
@@ -2807,19 +2951,6 @@
         "x": 70.71,
         "y": 77.6,
         "parentTankId": "mtkbdmjc-19eqxg"
-      },
-      {
-        "id": "mtkbug2a-cbnz2g",
-        "type": "tankDestroyer",
-        "x": 76.7,
-        "y": 46.48
-      },
-      {
-        "id": "mtkbuoan-7j69s0",
-        "type": "sniper",
-        "x": 76.7,
-        "y": 46.48,
-        "parentTankId": "mtkbug2a-cbnz2g"
       },
       {
         "id": "mu0cp4nb-5zoltq",
@@ -2831,7 +2962,11 @@
         "id": "mu0cq62n-7vt9se",
         "type": "mainBattleTank",
         "x": 32.81,
-        "y": 51.43
+        "y": 51.43,
+        "commentImages": [
+          "Alaska/scr_ (10).png",
+          "Alaska/scr_ (11).png"
+        ]
       },
       {
         "id": "mu0cq73t-9g09ot",
@@ -2844,7 +2979,10 @@
         "id": "mu0dpqrr-orsrfb",
         "type": "lightTank",
         "x": 61.2,
-        "y": 78.51
+        "y": 78.51,
+        "commentImages": [
+          "Alaska/scr_ (37).png"
+        ]
       },
       {
         "id": "mu0dps8f-v0jf50",
@@ -2852,6 +2990,22 @@
         "x": 61.2,
         "y": 78.51,
         "parentTankId": "mu0dpqrr-orsrfb"
+      },
+      {
+        "id": "mu0fuadq-t28o8h",
+        "type": "mainBattleTank",
+        "x": 76.24,
+        "y": 46.54,
+        "commentImages": [
+          "Alaska/scr_ (24).png"
+        ]
+      },
+      {
+        "id": "mu0fubu1-qgjet8",
+        "type": "battleLine",
+        "x": 76.24,
+        "y": 46.54,
+        "parentTankId": "mu0fuadq-t28o8h"
       }
     ],
     "American Desert::domination-1|Red": [
@@ -23690,15 +23844,6 @@
         "endY": 63.47
       },
       {
-        "id": "mtkbujkf-2nfjbx",
-        "type": "aimHere",
-        "parentTankId": "mtkbug2a-cbnz2g",
-        "startX": 76.7,
-        "startY": 46.48,
-        "endX": 78.02,
-        "endY": 56.64
-      },
-      {
         "id": "mu0ckhch-hmprvj",
         "type": "aimHere",
         "parentTankId": "msz92zei-efzyvj",
@@ -23758,15 +23903,6 @@
         "endY": 58.07
       },
       {
-        "id": "mu0d6zxh-3ef4l0",
-        "type": "aimHere",
-        "parentTankId": "mtkbug2a-cbnz2g",
-        "startX": 76.7,
-        "startY": 46.48,
-        "endX": 79.69,
-        "endY": 93.88
-      },
-      {
         "id": "mu0dmx0f-vdppy9",
         "type": "aimHere",
         "parentTankId": "msz90pg0-2ve2fj",
@@ -23783,6 +23919,24 @@
         "startY": 78.51,
         "endX": 49.74,
         "endY": 83.2
+      },
+      {
+        "id": "mu0fudm5-vpp73q",
+        "type": "aimHere",
+        "parentTankId": "mu0fuadq-t28o8h",
+        "startX": 76.24,
+        "startY": 46.54,
+        "endX": 78.46,
+        "endY": 57
+      },
+      {
+        "id": "mu0fuft1-dj7814",
+        "type": "aimHere",
+        "parentTankId": "mu0fuadq-t28o8h",
+        "startX": 76.24,
+        "startY": 46.54,
+        "endX": 78.9,
+        "endY": 94.06
       }
     ],
     "American Desert::domination-1|Red": [
@@ -58854,6 +59008,6 @@
       }
     ]
   },
-  "updatedAt": "2026-09-13T23:13:46.007Z",
-  "exportedAt": "2026-09-13T23:13:49.357Z"
+  "updatedAt": "2026-09-13T23:29:02.163Z",
+  "exportedAt": "2026-09-13T23:29:27.199Z"
 }
