@@ -2,7 +2,7 @@
 import { initDiscordMemberCount } from './discord-stats.js';
     import { commentImages } from './comment-images.js?v=comment-images-8cb93ffefe76';
     import { defaultMarkerLayout, maps, translations } from './data.js?v=variation-summary-20260914';
-    import { normalizeTacticalSummary, resolveTacticalSummary, withVariationSummary } from './tactical-summary.js';
+    import { normalizeTacticalSummary, resolveTacticalSummary, withVariationSummary } from './tactical-summary.js?v=variation-switch-20260914';
     import { acceptUpstreamMap, isMapSyncState, markLayoutAsLocalEdits, markMapEdited, mergeMapLayouts, sourceRevision } from './marker-merge.js?v=marker-drop-20260910';
 
 

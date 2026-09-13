@@ -55,6 +55,15 @@ test("the English page uses English when both translations are available", () =>
   assert.doesNotMatch(section.copy, /B를 지키세요/);
 });
 
+test("initial HTML does not revive common copy when only another variation has been written", () => {
+  const page = renderMapRoutePage(rootPage, {
+    ...baseMap,
+    tacticalSummary: { en: ["Common"], variations: { "conquest-99": { en: ["Other variation"] } } }
+  });
+  assert.equal(summarySection(page).copy.trim(), "");
+  assert.match(summarySection(page).openingTag, /\shidden>/);
+});
+
 test("both summary editors have no character limit", () => {
   for (const language of ["en", "ko"]) {
     const input = rootPage.match(new RegExp(`<textarea\\b[^>]*\\bid="map-tactical-summary-${language}"[^>]*>`));

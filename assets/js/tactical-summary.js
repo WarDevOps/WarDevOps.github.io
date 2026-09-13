@@ -32,8 +32,9 @@ export function normalizeTacticalSummary(value, validVariationIds) {
 }
 
 export function resolveTacticalSummary(entry, variationId) {
-  // An explicitly empty variation hides its summary, rather than reviving legacy copy.
-  if (Object.hasOwn(entry?.variations || {}, variationId)) return entry.variations[variationId];
+  // Once variation-specific editing starts, never show common copy for an
+  // unwritten variation. Keep legacy copy in the stored entry for recovery.
+  if (Object.keys(entry?.variations || {}).length) return entry.variations[variationId] || {};
   return entry;
 }
 

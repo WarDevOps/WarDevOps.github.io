@@ -10,14 +10,24 @@ test("editing one variation preserves legacy copy and other variations across JS
   entry = normalizeTacticalSummary(JSON.parse(JSON.stringify(entry)), ["domination-1", "domination-2", "conquest-1"]);
   assert.deepEqual(resolveTacticalSummary(entry, "domination-1"), { en: ["First"], ko: ["첫째"] });
   assert.deepEqual(resolveTacticalSummary(entry, "domination-2"), { en: ["Second"] });
-  assert.equal(resolveTacticalSummary(entry, "conquest-1").ko[0], "공통");
+  assert.deepEqual(resolveTacticalSummary(entry, "conquest-1"), {});
+  assert.equal(entry.ko[0], "공통");
   assert.deepEqual(legacy, { en: ["Common"], ko: ["공통"] });
 });
 
 test("clearing a variation remains empty after import without restoring common text", () => {
   const entry = normalizeTacticalSummary(withVariationSummary({ en: ["Common"] }, "domination-1", {}));
   assert.deepEqual(resolveTacticalSummary(entry, "domination-1"), {});
-  assert.equal(resolveTacticalSummary(entry, "domination-2").en[0], "Common");
+  assert.deepEqual(resolveTacticalSummary(entry, "domination-2"), {});
+});
+
+test("saving the existing common copy then switching to an unwritten variation shows no stale copy", () => {
+  const legacy = { en: ["Original text"], ko: ["기존 설명"] };
+  assert.deepEqual(resolveTacticalSummary(legacy, "domination-1"), legacy);
+  const saved = withVariationSummary(legacy, "domination-1", legacy);
+  assert.deepEqual(resolveTacticalSummary(saved, "domination-2"), {});
+  assert.deepEqual(resolveTacticalSummary(saved, "domination-1"), legacy);
+  assert.deepEqual(resolveTacticalSummary(JSON.parse(JSON.stringify(saved)), "domination-2"), {});
 });
 
 test("invalid variation IDs and malformed translated copy are rejected", () => {
