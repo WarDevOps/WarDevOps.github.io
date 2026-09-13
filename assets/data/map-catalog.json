@@ -150,7 +150,7 @@
       "aliases": "아메리칸 데저트",
       "slug": "american-desert",
       "updated": "2026-09-12",
-      "updatedAt": "2026-09-12T03:48:12Z",
+      "updatedAt": "2026-09-12T05:23:48Z",
       "br": {
         "min": 5
       },
@@ -215,8 +215,8 @@
       "name": "Arctic Pier",
       "aliases": "북극의 부두",
       "slug": "arctic-pier",
-      "updated": "2026-09-11",
-      "updatedAt": "2026-09-11T02:16:45Z",
+      "updated": "2026-09-12",
+      "updatedAt": "2026-09-12T05:21:39Z",
       "br": {
         "min": 4.7
       },
@@ -1283,7 +1283,8 @@
       "name": "Seversk-13",
       "aliases": "세베르스크-13",
       "slug": "seversk-13",
-      "updated": "2026-08-16",
+      "updated": "2026-09-14",
+      "updatedAt": "2026-09-13T19:59:09Z",
       "br": {
         "min": 1
       },
@@ -1303,7 +1304,8 @@
       "name": "Sinai",
       "aliases": "시나이",
       "slug": "sinai",
-      "updated": "2026-08-16",
+      "updated": "2026-09-14",
+      "updatedAt": "2026-09-13T19:47:49Z",
       "br": {
         "min": 1
       },
@@ -1323,7 +1325,8 @@
       "name": "Spaceport",
       "aliases": "우주공항",
       "slug": "spaceport",
-      "updated": "2026-08-25",
+      "updated": "2026-09-14",
+      "updatedAt": "2026-09-13T19:57:57Z",
       "br": {
         "min": 6.7
       },
@@ -1365,7 +1368,8 @@
       "name": "Sun City",
       "aliases": "선 시티",
       "slug": "sun-city",
-      "updated": "2026-08-25",
+      "updated": "2026-09-14",
+      "updatedAt": "2026-09-13T20:06:32Z",
       "br": {
         "min": 5
       },
@@ -1425,7 +1429,8 @@
       "name": "Test Site-2271",
       "aliases": "2271호 실험시설",
       "slug": "test-site-2271",
-      "updated": "2026-08-16",
+      "updated": "2026-09-14",
+      "updatedAt": "2026-09-13T19:14:47Z",
       "br": {
         "min": 2.3
       },
@@ -1445,7 +1450,8 @@
       "name": "Tunisia",
       "aliases": "튀니지",
       "slug": "tunisia",
-      "updated": "2026-08-30",
+      "updated": "2026-09-14",
+      "updatedAt": "2026-09-13T19:32:06Z",
       "br": {
         "min": 4.7
       },
