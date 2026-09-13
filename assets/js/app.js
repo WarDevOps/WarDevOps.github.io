@@ -1,7 +1,7 @@
     import { MARKER_LAYOUT_VERSION, backupMarkerLayout, loadMarkerLayout, saveMarkerLayout as saveMarkerLayoutToStorage } from './marker-storage.js?v=map-sync-20260903';
 import { initDiscordMemberCount } from './discord-stats.js';
     import { commentImages } from './comment-images.js?v=comment-images-8cb93ffefe76';
-    import { defaultMarkerLayout, maps, translations } from './data.js?v=comment-carousel-20260912';
+    import { defaultMarkerLayout, maps, translations } from './data.js?v=bilingual-comments-20260914';
     import { acceptUpstreamMap, isMapSyncState, markLayoutAsLocalEdits, markMapEdited, mergeMapLayouts, sourceRevision } from './marker-merge.js?v=marker-drop-20260910';
 
 
@@ -705,7 +705,10 @@ import { initDiscordMemberCount } from './discord-stats.js';
       return limitCommentToByteLength(String(value ?? "").trim());
     }
     function markerComment(marker) {
-      return isTankMarker(marker) && typeof marker.comment === "string" ? normalizeMarkerComment(marker.comment) : "";
+      if (!isTankMarker(marker)) return "";
+      const preferred = marker[`comment${state.language === "ko" ? "Ko" : "En"}`];
+      const alternate = marker[`comment${state.language === "ko" ? "En" : "Ko"}`];
+      return normalizeMarkerComment(preferred) || normalizeMarkerComment(alternate) || normalizeMarkerComment(marker.comment);
     }
     function markerCommentImageIds(marker) {
       if (!isTankMarker(marker)) return [];
@@ -1292,12 +1295,11 @@ import { initDiscordMemberCount } from './discord-stats.js';
     function resetCommentEditor(contextMenu) {
       const actionList = contextMenu.querySelector("[data-marker-action-list]");
       const editor = contextMenu.querySelector("[data-marker-comment-editor]");
-      const input = contextMenu.querySelector("[data-marker-comment-input]");
+      const inputs = contextMenu.querySelectorAll("[data-marker-comment-input]");
       actionList.hidden = false;
       editor.hidden = true;
-      input.value = "";
+      inputs.forEach(input => { input.value = ""; updateCommentByteCounter(input); });
       renderCommentImageOptions(contextMenu);
-      updateCommentByteCounter(input);
     }
     function selectedCommentImageIds(picker) {
       try {
@@ -1451,35 +1453,42 @@ import { initDiscordMemberCount } from './discord-stats.js';
     function updateCommentByteCounter(input) {
       const limitedValue = limitCommentToByteLength(input.value);
       if (input.value !== limitedValue) input.value = limitedValue;
-      const counter = input.closest("[data-marker-comment-editor]").querySelector("[data-marker-comment-byte-counter]");
+      const counter = input.nextElementSibling;
       counter.textContent = `${commentByteLength(input.value)} / ${MAX_MARKER_COMMENT_BYTES} B`;
     }
     function showCommentEditor(contextMenu, marker) {
       if (!isTankMarker(marker)) return;
       const actionList = contextMenu.querySelector("[data-marker-action-list]");
       const editor = contextMenu.querySelector("[data-marker-comment-editor]");
-      const input = contextMenu.querySelector("[data-marker-comment-input]");
+      const inputEn = contextMenu.querySelector('[data-marker-comment-input="en"]');
+      const inputKo = contextMenu.querySelector('[data-marker-comment-input="ko"]');
       state.commentMarkerId = marker.id;
       actionList.hidden = true;
       editor.hidden = false;
-      input.value = markerComment(marker);
+      inputEn.value = marker.commentEn || marker.comment || "";
+      inputKo.value = marker.commentKo || "";
       renderCommentImageOptions(contextMenu, markerCommentImageIds(marker));
-      updateCommentByteCounter(input);
-      input.focus({ preventScroll: true });
+      updateCommentByteCounter(inputEn);
+      updateCommentByteCounter(inputKo);
+      (state.language === "ko" ? inputKo : inputEn).focus({ preventScroll: true });
       fitMarkerContextMenu(contextMenu);
     }
-    function saveMarkerComment(marker, comment, imageIds) {
+    function saveMarkerComment(marker, comments, imageIds) {
       if (!isTankMarker(marker)) return;
-      const value = normalizeMarkerComment(comment);
+      const en = normalizeMarkerComment(comments.en);
+      const ko = normalizeMarkerComment(comments.ko);
       const resolvedImageIds = [...new Set(imageIds)]
         .filter(imageId => COMMENT_IMAGES_BY_ID.has(imageId))
         .slice(0, MAX_COMMENT_IMAGES);
-      if (value) marker.comment = value;
-      else delete marker.comment;
+      if (en) marker.commentEn = en;
+      else delete marker.commentEn;
+      if (ko) marker.commentKo = ko;
+      else delete marker.commentKo;
+      delete marker.comment;
       if (resolvedImageIds.length) marker.commentImages = resolvedImageIds;
       else delete marker.commentImages;
       delete marker.commentImage;
-      persistMarkerLayout(value || resolvedImageIds.length ? "commentSaved" : "commentRemoved", { touchMap: true });
+      persistMarkerLayout(en || ko || resolvedImageIds.length ? "commentSaved" : "commentRemoved", { touchMap: true });
       renderMarkers();
     }
     function hideMarkerContextMenu() {
@@ -2071,6 +2080,8 @@ import { initDiscordMemberCount } from './discord-stats.js';
         layout.markers[key] = markers.map(marker => {
           const hasParentTankId = Object.prototype.hasOwnProperty.call(marker || {}, "parentTankId");
           const hasComment = Object.prototype.hasOwnProperty.call(marker || {}, "comment");
+          const hasCommentEn = Object.prototype.hasOwnProperty.call(marker || {}, "commentEn");
+          const hasCommentKo = Object.prototype.hasOwnProperty.call(marker || {}, "commentKo");
           const hasCommentImage = Object.prototype.hasOwnProperty.call(marker || {}, "commentImage");
           const hasCommentImages = Object.prototype.hasOwnProperty.call(marker || {}, "commentImages");
           const validCommentImages = !hasCommentImages || (isTankMarker(marker)
@@ -2078,7 +2089,7 @@ import { initDiscordMemberCount } from './discord-stats.js';
             && marker.commentImages.length <= MAX_COMMENT_IMAGES
             && marker.commentImages.every(imageId => typeof imageId === "string" && COMMENT_IMAGES_BY_ID.has(imageId))
             && new Set(marker.commentImages).size === marker.commentImages.length);
-          if (!marker || typeof marker !== "object" || Array.isArray(marker) || typeof marker.id !== "string" || !marker.id || ids.has(marker.id) || !markerTypes.has(marker.type) || !Number.isFinite(marker.x) || !Number.isFinite(marker.y) || marker.x < 0 || marker.x > 100 || marker.y < 0 || marker.y > 100 || (hasParentTankId && (!isRoleMarker(marker) || typeof marker.parentTankId !== "string" || !marker.parentTankId)) || (hasComment && (!isTankMarker(marker) || typeof marker.comment !== "string" || commentByteLength(marker.comment) > MAX_MARKER_COMMENT_BYTES)) || (hasCommentImage && (!isTankMarker(marker) || typeof marker.commentImage !== "string" || !COMMENT_IMAGES_BY_ID.has(marker.commentImage))) || !validCommentImages || (hasCommentImage && hasCommentImages)) {
+          if (!marker || typeof marker !== "object" || Array.isArray(marker) || typeof marker.id !== "string" || !marker.id || ids.has(marker.id) || !markerTypes.has(marker.type) || !Number.isFinite(marker.x) || !Number.isFinite(marker.y) || marker.x < 0 || marker.x > 100 || marker.y < 0 || marker.y > 100 || (hasParentTankId && (!isRoleMarker(marker) || typeof marker.parentTankId !== "string" || !marker.parentTankId)) || (hasComment && (!isTankMarker(marker) || typeof marker.comment !== "string" || commentByteLength(marker.comment) > MAX_MARKER_COMMENT_BYTES)) || (hasCommentEn && (!isTankMarker(marker) || typeof marker.commentEn !== "string" || commentByteLength(marker.commentEn) > MAX_MARKER_COMMENT_BYTES)) || (hasCommentKo && (!isTankMarker(marker) || typeof marker.commentKo !== "string" || commentByteLength(marker.commentKo) > MAX_MARKER_COMMENT_BYTES)) || (hasCommentImage && (!isTankMarker(marker) || typeof marker.commentImage !== "string" || !COMMENT_IMAGES_BY_ID.has(marker.commentImage))) || !validCommentImages || (hasCommentImage && hasCommentImages)) {
             throw new Error("Invalid marker.");
           }
           markerCount += 1;
@@ -2087,6 +2098,8 @@ import { initDiscordMemberCount } from './discord-stats.js';
           const importedMarker = { id: marker.id, type: marker.type, x: marker.x, y: marker.y };
           if (hasParentTankId) importedMarker.parentTankId = marker.parentTankId;
           if (hasComment && marker.comment.trim()) importedMarker.comment = normalizeMarkerComment(marker.comment);
+          if (hasCommentEn && marker.commentEn.trim()) importedMarker.commentEn = normalizeMarkerComment(marker.commentEn);
+          if (hasCommentKo && marker.commentKo.trim()) importedMarker.commentKo = normalizeMarkerComment(marker.commentKo);
           if (hasCommentImages && marker.commentImages.length) importedMarker.commentImages = [...marker.commentImages];
           if (hasCommentImage) {
             if (migrateLegacyCommentImages) importedMarker.commentImages = [marker.commentImage];
@@ -2461,7 +2474,7 @@ import { initDiscordMemberCount } from './discord-stats.js';
         if (commentAction === "save" && marker && marker.id === state.commentMarkerId) {
           saveMarkerComment(
             marker,
-            contextMenu.querySelector("[data-marker-comment-input]").value,
+            { en: contextMenu.querySelector('[data-marker-comment-input="en"]').value, ko: contextMenu.querySelector('[data-marker-comment-input="ko"]').value },
             selectedCommentImageIds(contextMenu.querySelector("[data-marker-comment-image-picker]"))
           );
           hideMarkerContextMenu();

@@ -153,12 +153,16 @@
             </div>
             <div class="marker-comment-editor" data-marker-comment-editor hidden>
               <p class="marker-context-role-title" data-i18n="commentTitle">Comment</p>
-              <textarea class="marker-comment-input" data-marker-comment-input rows="3" data-i18n-placeholder="commentPlaceholder" placeholder="Write a tactical note…"></textarea>
+              <label class="marker-comment-language-label" for="marker-comment-en" data-i18n="commentEnglish">English comment</label>
+              <textarea id="marker-comment-en" class="marker-comment-input" data-marker-comment-input="en" rows="3" data-i18n-placeholder="commentEnglishPlaceholder" placeholder="Write an English tactical note…"></textarea>
+              <p class="marker-comment-byte-counter" data-marker-comment-byte-counter>0 / 120 B</p>
+              <label class="marker-comment-language-label" for="marker-comment-ko" data-i18n="commentKorean">Korean comment</label>
+              <textarea id="marker-comment-ko" class="marker-comment-input" data-marker-comment-input="ko" rows="3" data-i18n-placeholder="commentKoreanPlaceholder" placeholder="한국어 전술 메모를 작성하세요…"></textarea>
+              <p class="marker-comment-byte-counter" data-marker-comment-byte-counter>0 / 120 B</p>
               <div class="marker-comment-image-field">
                 <label data-i18n="commentImage">Reference Images</label>
                 <div class="marker-comment-image-picker" data-marker-comment-image-picker role="group" aria-label="Reference Images" data-i18n-aria="commentImage"></div>
               </div>
-              <p class="marker-comment-byte-counter" data-marker-comment-byte-counter aria-live="polite">0 / 120 B</p>
               <div class="marker-comment-actions">
                 <button class="marker-context-action" type="button" data-marker-comment-action="save" data-i18n="saveComment">Save Comment</button>
                 <button class="marker-context-action" type="button" data-marker-comment-action="cancel" data-i18n="cancel">Cancel</button>
@@ -343,12 +347,16 @@
           </div>
           <div class="marker-comment-editor" data-marker-comment-editor hidden>
             <p class="marker-context-role-title" data-i18n="commentTitle">Comment</p>
-            <textarea class="marker-comment-input" data-marker-comment-input rows="3" data-i18n-placeholder="commentPlaceholder" placeholder="Write a tactical note…"></textarea>
+            <label class="marker-comment-language-label" for="modal-marker-comment-en" data-i18n="commentEnglish">English comment</label>
+            <textarea id="modal-marker-comment-en" class="marker-comment-input" data-marker-comment-input="en" rows="3" data-i18n-placeholder="commentEnglishPlaceholder" placeholder="Write an English tactical note…"></textarea>
+            <p class="marker-comment-byte-counter" data-marker-comment-byte-counter>0 / 120 B</p>
+            <label class="marker-comment-language-label" for="modal-marker-comment-ko" data-i18n="commentKorean">Korean comment</label>
+            <textarea id="modal-marker-comment-ko" class="marker-comment-input" data-marker-comment-input="ko" rows="3" data-i18n-placeholder="commentKoreanPlaceholder" placeholder="한국어 전술 메모를 작성하세요…"></textarea>
+            <p class="marker-comment-byte-counter" data-marker-comment-byte-counter>0 / 120 B</p>
             <div class="marker-comment-image-field">
               <label data-i18n="commentImage">Reference Images</label>
               <div class="marker-comment-image-picker" data-marker-comment-image-picker role="group" aria-label="Reference Images" data-i18n-aria="commentImage"></div>
             </div>
-            <p class="marker-comment-byte-counter" data-marker-comment-byte-counter aria-live="polite">0 / 120 B</p>
             <div class="marker-comment-actions">
               <button class="marker-context-action" type="button" data-marker-comment-action="save" data-i18n="saveComment">Save Comment</button>
               <button class="marker-context-action" type="button" data-marker-comment-action="cancel" data-i18n="cancel">Cancel</button>
@@ -375,7 +383,7 @@
 
   <input id="marker-layout-import-file" type="file" accept="application/json,.json" hidden>
 
-  <script type="module" src="/assets/js/app.js?v=comment-images-8cb93ffefe76"></script>
+  <script type="module" src="/assets/js/app.js?v=bilingual-comments-20260914"></script>
   <script type="module" src="/assets/js/consent-controls.js?v=20260828"></script>
 </body>
 </html>

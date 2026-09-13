@@ -322,6 +322,7 @@
     .marker-comment-editor[hidden] { display: none; }
     .marker-comment-input { box-sizing: border-box; width: 100%; min-height: 78px; resize: vertical; padding: 8px 9px; border: 1px solid var(--line); border-radius: 6px; background: var(--bg); color: var(--ink); font: inherit; font-size: .76rem; line-height: 1.45; }
     .marker-comment-input:focus { outline: 1px solid var(--accent); border-color: var(--accent); }
+    .marker-comment-language-label { color: var(--muted); font-size: .67rem; font-weight: 750; }
     .marker-comment-image-field { display: grid; gap: 4px; }
     .marker-comment-image-field label, .marker-comment-byte-counter { margin: 0; color: var(--muted); font-size: .67rem; font-weight: 750; letter-spacing: .035em; }
     .marker-comment-image-picker { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 5px; max-height: 236px; overflow-y: auto; padding: 2px; }
