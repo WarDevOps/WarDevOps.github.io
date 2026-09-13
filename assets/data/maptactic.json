@@ -63,7 +63,7 @@
     "38th Parallel": "2026-09-13T22:45:42Z",
     "Abandoned Factory": "2026-09-13T23:01:31Z",
     "Abandoned Town": "2026-09-13T20:16:37Z",
-    "Advance to the Rhine": "2026-09-13T23:10:51Z",
+    "Advance to the Rhine": "2026-09-13T23:13:46Z",
     "Alaska": "2026-09-13T22:29:17Z",
     "American Desert": "2026-09-12T05:23:48Z",
     "Aral Sea": "2026-09-10T12:50:30Z",
@@ -1780,7 +1780,10 @@
         "id": "mtig85f1-anpqul",
         "type": "mainBattleTankRed",
         "x": 82.81,
-        "y": 62.05
+        "y": 62.05,
+        "commentImages": [
+          "Advance to the Rhine/scr_ (36).png"
+        ]
       },
       {
         "id": "mtig87q3-1l4fis",
@@ -1983,7 +1986,10 @@
         "id": "mtigp0qf-w9dtuf",
         "type": "mainBattleTankRed",
         "x": 17.7,
-        "y": 41.4
+        "y": 41.4,
+        "commentImages": [
+          "Advance to the Rhine/scr_ (40).png"
+        ]
       },
       {
         "id": "mtigp29z-mgayvs",
@@ -2137,7 +2143,10 @@
         "id": "mtigigq2-ze95qr",
         "type": "mainBattleTank",
         "x": 91.41,
-        "y": 79.16
+        "y": 79.16,
+        "commentImages": [
+          "Advance to the Rhine/scr_ (37).png"
+        ]
       },
       {
         "id": "mtigihxx-6oijdc",
@@ -2150,7 +2159,10 @@
         "id": "mtigiszg-dgpe9d",
         "type": "mainBattleTank",
         "x": 79.7,
-        "y": 95.83
+        "y": 95.83,
+        "commentImages": [
+          "Advance to the Rhine/scr_ (39).png"
+        ]
       },
       {
         "id": "mtigixr7-1d1pz4",
@@ -2350,6 +2362,22 @@
         "x": 47.43,
         "y": 35.54,
         "parentTankId": "mtxo7up4-bb0zz5"
+      },
+      {
+        "id": "mu0fjg9w-jvt6zn",
+        "type": "mainBattleTank",
+        "x": 66.67,
+        "y": 95.66,
+        "commentImages": [
+          "Advance to the Rhine/scr_ (38).png"
+        ]
+      },
+      {
+        "id": "mu0fjk0p-q0hnsy",
+        "type": "spawnKill",
+        "x": 66.67,
+        "y": 95.66,
+        "parentTankId": "mu0fjg9w-jvt6zn"
       }
     ],
     "Alaska::domination-1|Red": [
@@ -22799,6 +22827,15 @@
             "y": 39.7
           }
         ]
+      },
+      {
+        "id": "mu0fjorl-9pus80",
+        "type": "aimHere",
+        "parentTankId": "mu0fjg9w-jvt6zn",
+        "startX": 66.67,
+        "startY": 95.66,
+        "endX": 44.06,
+        "endY": 95.92
       }
     ],
     "Alaska::domination-1|Red": [
@@ -58817,6 +58854,6 @@
       }
     ]
   },
-  "updatedAt": "2026-09-13T23:10:51.475Z",
-  "exportedAt": "2026-09-13T23:10:55.489Z"
+  "updatedAt": "2026-09-13T23:13:46.007Z",
+  "exportedAt": "2026-09-13T23:13:49.357Z"
 }

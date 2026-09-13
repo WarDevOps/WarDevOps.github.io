@@ -534,9 +534,7 @@ import { initDiscordMemberCount } from './discord-stats.js';
       }
       mapTacticalSummary.dataset.mapName = state.selected.name;
       mapTacticalSummary.dataset.variationId = state.selected.variationId;
-      const commonSummary = !Object.hasOwn(currentMapTacticalSummaryEntry(state.selected)?.variations || {}, state.selected.variationId)
-        && summarySentences.length > 0;
-      $("#map-tactical-summary-scope").textContent = `${mapVariationLabel(state.selected)}${commonSummary ? ` · ${t("commonTacticalSummary")}` : ""}`;
+      $("#map-tactical-summary-scope").textContent = mapVariationLabel(state.selected);
       mapTacticalSummary.hidden = summarySentences.length === 0 && !state.editMode;
       editMapTacticalSummary.hidden = !state.editMode;
       mapTacticalSummaryCopy.lang = mapTacticalSummaryLanguage(state.selected) || state.language;
