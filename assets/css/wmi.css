@@ -30,13 +30,34 @@
 .wmi-card-index { display: inline-block; margin-bottom: 40px; color: var(--accent); font-size: .72rem; font-weight: 900; letter-spacing: .12em; }
 .wmi-focus-card h3 { margin: 0; font-size: clamp(1.15rem, 1.8vw, 1.5rem); letter-spacing: -.035em; }
 .wmi-focus-card p { margin: 11px 0 0; color: var(--muted); font-size: .9rem; line-height: 1.6; }
+.wmi-rule-strip { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+.wmi-rule-strip span { padding: 11px 14px; border: 1px solid rgba(214,219,157,.3); border-radius: 8px; background: rgba(214,219,157,.07); color: var(--muted); font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", monospace; font-size: .81rem; line-height: 1.5; }
+.wmi-rule-strip strong { color: var(--accent); }
+.wmi-parameter-note { max-width: 900px; margin: 24px 0 0; padding-left: 16px; border-left: 2px solid var(--accent); color: var(--muted); font-size: .85rem; line-height: 1.65; }
+.wmi-method, .wmi-geometric { padding: clamp(38px, 6vw, 70px) 0; border-top: 1px solid var(--line); }
+.wmi-method-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin-top: 35px; }
+.wmi-method-card { min-width: 0; padding: clamp(20px, 3vw, 30px); border: 1px solid var(--line); border-radius: 13px; background: rgba(23,32,31,.78); }
+.wmi-method-card h3 { margin: 0; font-size: clamp(1.2rem, 2vw, 1.55rem); letter-spacing: -.035em; }
+.wmi-method-card p, .wmi-geometric-copy { max-width: 760px; margin: 12px 0 22px; color: var(--muted); font-size: .92rem; line-height: 1.7; }
+.wmi-source-link { display: inline-block; margin: -6px 0 16px; color: var(--accent); font-size: .76rem; font-weight: 750; text-decoration: underline; text-underline-offset: 3px; }
+.wmi-formula { max-width: 100%; margin-top: 10px; padding: 14px 16px; overflow-x: auto; border: 1px solid rgba(214,219,157,.22); border-radius: 8px; background: rgba(13,19,18,.65); color: var(--accent-strong); font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", monospace; font-size: clamp(.81rem, 1.4vw, 1rem); line-height: 1.65; white-space: nowrap; }
+.wmi-formula sub, .wmi-formula sup { font-size: .68em; }
+.wmi-formula-base { display: inline-block; margin-left: 20px; padding-left: 18px; border-left: 1px solid var(--line); }
+.wmi-geometric .wmi-geometric-copy { margin-top: 28px; }
+.wmi-example { display: flex; align-items: center; justify-content: space-between; gap: 24px; margin-top: 22px; padding: 21px 25px; border: 1px solid var(--line); border-radius: 10px; }
+.wmi-example p { margin: 0; color: var(--muted); font-size: .9rem; line-height: 1.5; }
+.wmi-example > div { display: flex; flex-wrap: wrap; gap: 24px; }
+.wmi-example span { display: flex; align-items: baseline; gap: 9px; color: var(--muted); font-size: .76rem; font-weight: 850; white-space: nowrap; }
+.wmi-example strong { color: var(--accent); font-size: 1.35rem; }
 .wmi-status { display: flex; align-items: center; justify-content: space-between; gap: 30px; padding: clamp(26px, 4vw, 42px); border: 1px solid rgba(214,219,157,.42); border-radius: 15px; background: rgba(214,219,157,.07); }
 .wmi-status h2 { margin: 0; font-size: clamp(1.35rem, 2.7vw, 2rem); letter-spacing: -.04em; }
 .wmi-status p:last-child { max-width: 610px; margin: 10px 0 0; color: var(--muted); font-size: .9rem; line-height: 1.6; }
 .wmi-status-mark { flex: 0 0 auto; padding: 9px 12px; border: 1px solid var(--accent); border-radius: 999px; color: var(--accent); font-size: .68rem; font-weight: 900; letter-spacing: .12em; white-space: nowrap; }
 body.light-theme .wmi-display { border-color: #9dab88; }
 body.light-theme .wmi-focus-card { background: rgba(255,255,255,.8); }
+body.light-theme .wmi-method-card { background: rgba(255,255,255,.8); }
+body.light-theme .wmi-formula { border-color: rgba(112,130,80,.3); background: rgba(255,255,255,.75); }
 body.light-theme .wmi-status { border-color: rgba(112,130,80,.45); background: rgba(112,130,80,.09); }
 @media (max-width: 900px) { .wmi-hero { grid-template-columns: 1fr; } .wmi-display { min-height: 330px; } .wmi-display-center { font-size: clamp(8rem, 24vw, 14rem); } }
-@media (max-width: 680px) { .wmi-hero { padding-top: 45px; } .wmi-intro { grid-template-columns: 1fr; } .wmi-focus-grid { grid-template-columns: 1fr; } .wmi-focus-card { min-height: 0; } .wmi-card-index { margin-bottom: 24px; } .wmi-status { align-items: flex-start; flex-direction: column; } }
+@media (max-width: 680px) { .wmi-hero { padding-top: 45px; } .wmi-intro { grid-template-columns: 1fr; } .wmi-focus-grid, .wmi-method-grid { grid-template-columns: 1fr; } .wmi-focus-card { min-height: 0; } .wmi-card-index { margin-bottom: 24px; } .wmi-example { align-items: flex-start; flex-direction: column; } .wmi-status { align-items: flex-start; flex-direction: column; } }
 @media (max-width: 430px) { .wmi-hero h1 { font-size: clamp(3.2rem, 15vw, 4.5rem); } .wmi-display { min-height: 280px; padding: 17px; } .wmi-display-center { font-size: 27vw; } .site-header { gap: 4px; } .brand-mark { flex-basis: 26px; width: 26px; height: 26px; } .primary-nav a { padding-inline: 3px; font-size: .58rem; } .primary-nav a:first-child::after { font-size: .58rem; } .language-button { padding-inline: 4px; } .theme-toggle { padding-inline: 5px; } }
