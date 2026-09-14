@@ -105,8 +105,17 @@ test("every generated map page contains its current initial summary HTML", async
     const page = await readFile(new URL(`../maps/${map.slug}/index.html`, import.meta.url), "utf8");
     assert.equal(page, renderMapRoutePage(rootPage, map), `Regenerate the stale route: ${map.slug}`);
     const section = summarySection(page);
-    const sentences = map.tacticalSummary?.en?.length ? map.tacticalSummary.en : map.tacticalSummary?.ko || [];
+    const firstVariation = map.variations[0];
+    const variationId = firstVariation.id || `${firstVariation.mode}-${firstVariation.number}`;
+    const summaries = map.tacticalSummary;
+    const copy = Object.keys(summaries?.variations || {}).length
+      ? summaries.variations[variationId]
+      : summaries;
+    const sentences = copy?.en?.length ? copy.en : copy?.ko || [];
     assert.equal((section.copy.match(/<p>/g) || []).length, sentences.length, map.slug);
+    assert.equal(section.copy.trim(), sentences.map(sentence => `<p>${sentence
+      .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")}</p>`).join("\n                "), map.slug);
     assert.equal(/\shidden>/.test(section.openingTag), sentences.length === 0, map.slug);
     assert.equal(/\sopen(?:\s|=|>)/.test(section.openingTag), sentences.length > 0, map.slug);
   }

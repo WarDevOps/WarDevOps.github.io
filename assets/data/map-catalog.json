@@ -5,8 +5,8 @@
       "name": "38th Parallel",
       "aliases": "38선",
       "slug": "38th-parallel",
-      "updated": "2026-09-03",
-      "updatedAt": "2026-09-03T00:03:47Z",
+      "updated": "2026-09-14",
+      "updatedAt": "2026-09-13T22:45:42Z",
       "br": {
         "min": 4.7
       },
@@ -35,7 +35,7 @@
       "aliases": "버려진 공장",
       "slug": "abandoned-factory",
       "updated": "2026-09-14",
-      "updatedAt": "2026-09-13T20:54:58Z",
+      "updatedAt": "2026-09-13T23:29:02Z",
       "br": {
         "min": 1
       },
@@ -63,7 +63,7 @@
       "aliases": "버려진 소도시",
       "slug": "abandoned-town",
       "updated": "2026-09-14",
-      "updatedAt": "2026-09-13T20:16:37Z",
+      "updatedAt": "2026-09-13T23:30:35Z",
       "br": {
         "min": 3.7
       },
@@ -92,7 +92,7 @@
       "aliases": "라인 강 진격",
       "slug": "advance-to-the-rhine",
       "updated": "2026-09-14",
-      "updatedAt": "2026-09-13T21:37:55Z",
+      "updatedAt": "2026-09-13T23:13:46Z",
       "br": {
         "min": 1
       },
@@ -121,7 +121,7 @@
       "aliases": "알래스카",
       "slug": "alaska",
       "updated": "2026-09-14",
-      "updatedAt": "2026-09-13T22:29:17Z",
+      "updatedAt": "2026-09-13T23:26:53Z",
       "br": {
         "min": 3.7
       },
@@ -149,8 +149,8 @@
       "name": "American Desert",
       "aliases": "아메리칸 데저트",
       "slug": "american-desert",
-      "updated": "2026-09-12",
-      "updatedAt": "2026-09-12T05:23:48Z",
+      "updated": "2026-09-14",
+      "updatedAt": "2026-09-13T23:41:53Z",
       "br": {
         "min": 5
       },
@@ -281,8 +281,8 @@
       "name": "Ardennes",
       "aliases": "아르덴",
       "slug": "ardennes",
-      "updated": "2026-09-11",
-      "updatedAt": "2026-09-10T23:24:07Z",
+      "updated": "2026-09-14",
+      "updatedAt": "2026-09-13T23:15:39Z",
       "br": {
         "min": 3.7
       },
@@ -295,7 +295,7 @@
           "The northwestern flank consists almost entirely of exposed terrain. It can occasionally be used as an unexpected high-risk maneuver, but it is generally not recommended.",
           "Domination #2",
           "Ardennes Domination #2 is essentially a larger version of Domination #1, but the tactical situation changes considerably.",
-          "The most important position is point C, located on the highest ground of"
+          "The most important position is point C, located on the highest ground of asd"
         ],
         "ko": [
           "아르덴 도미네이션 #1에서는 A와 C 거점을 각각 남쪽 팀과 북쪽 팀이 비교적 쉽게 확보하는 형태로 전투가 시작됩니다. 의외로 중앙에 위치한 B 거점 자체의 전략적 가치는 그리 높지 않습니다.",
@@ -305,7 +305,32 @@
           "아르덴 도미네이션 #2는 도미네이션 #1을 확장한 대형 전장이지만, 실제 전투 양상은 상당히 달라집니다.",
           "가장 중요한 지역은 맵에서 가장 높은 지형에 위치한 C 거점입니다. 이 고지대를 장악하면 맵 대부분을 사정거리 안에 둘 수 있으며, 양 팀의 스폰 지역까지 직접적인 압박이 가능해집니다.",
           "전장이 넓어진 만큼 전선의 밀도가 낮아지기 때문에 북서쪽 시가지 역시 도미네이션 #1에 비해 훨씬 빠르게 돌파할 수 있습니다. 이 지역을 이용하면 적의 측면과 후방으로 깊숙이 진입하여 스폰 지역을 기습할 수 있습니다."
-        ]
+        ],
+        "variations": {
+          "domination-1": {
+            "en": [
+              "In Ardennes Domination #1, points A and C are usually secured early by the southern and northern teams respectively. Surprisingly, the central point B is not the most strategically valuable position on the map.",
+              "The southeastern urban area is far more important. While the central city often settles into a prolonged stalemate, the outcome of the match is frequently decided by whichever team gains control of the southeastern city and successfully completes a flanking maneuver.",
+              "Once this area is breached, it provides strong and relatively safe positions from which the enemy spawn can be pressured.",
+              "The northwestern flank consists almost entirely of exposed terrain. It can occasionally be used as an unexpected high-risk maneuver, but it is generally not recommended."
+            ],
+            "ko": [
+              "아르덴 도미네이션 #1에서는 A와 C 거점을 각각 남쪽 팀과 북쪽 팀이 비교적 쉽게 확보하는 형태로 전투가 시작됩니다. 의외로 중앙에 위치한 B 거점 자체의 전략적 가치는 그리 높지 않습니다.",
+              "이 맵에서 가장 중요한 지역은 남동쪽 시가지입니다. 중앙 시가지에서 교착 상태가 이어지는 동안 어느 팀이 남동쪽 시가지를 장악하고 우회 공격에 성공하는지가 승부를 결정하는 경우가 많습니다.",
+              "남동쪽 시가지가 돌파당하면 상대 스폰 지역을 안정적으로 압박할 수 있는 위치가 확보되기 때문입니다.",
+              "북서쪽 우회로는 대부분이 완전히 노출된 개활지로 이루어져 있습니다. 간혹 예상 밖의 기습 경로로 사용할 수는 있지만 위험 부담이 매우 크기 때문에 일반적으로 추천하지 않습니다.",
+              "아르덴 도미네이션 #2는 도미네이션 #1을 확장한 대형 전장이지만, 실제 전투 양상은 상당히 달라집니다.",
+              "가장 중요한 지역은 맵에서 가장 높은 지형에 위치한 C 거점입니다. 이 고지대를 장악하면 맵 대부분을 사정거리 안에 둘 수 있으며, 양 팀의 스폰 지역까지 직접적인 압박이 가능해집니다.",
+              "전장이 넓어진 만큼 전선의 밀도가 낮아지기 때문에 북서쪽 시가지 역시 도미네이션 #1에 비해 훨씬 빠르게 돌파할 수 있습니다. 이 지역을 이용하면 적의 측면과 후방으로 깊숙이 진입하여 스폰 지역을 기습할 수 있습니다."
+            ]
+          },
+          "domination-2": {
+            "en": [
+              "Ardennes Domination #2 is essentially a larger version of Domination #1, but the tactical situation changes considerably.",
+              "The most important position is point C, located on the highest ground of"
+            ]
+          }
+        }
       },
       "folder": "Ardennes",
       "variations": [
@@ -401,8 +426,8 @@
       "name": "Battle of Hürtgen Forest",
       "aliases": "휘르트겐 숲 전투",
       "slug": "battle-of-hurtgen-forest",
-      "updated": "2026-09-11",
-      "updatedAt": "2026-09-10T23:47:33Z",
+      "updated": "2026-09-14",
+      "updatedAt": "2026-09-13T23:17:23Z",
       "br": {
         "min": 4.7
       },
@@ -426,7 +451,34 @@
           "휘르트겐 숲 도미네이션 #2에서는 북쪽 산악 지대의 중요성이 더욱 커집니다.",
           "이 지역을 장악하면 적 스폰 지역을 압박할 수 있을 뿐만 아니라 A 거점을 확보한 뒤 B 거점까지 동시에 통제할 수 있습니다.",
           "B 거점은 북쪽 방향에서 들어오는 사격을 막아줄 엄폐물이 매우 부족합니다. 따라서 산악 지대를 확보했다면 반드시 유지해야 하며, 반대로 빼앗겼다면 지상전만으로 탈환하기 어렵더라도 공중 지원 등을 활용해 적을 제거하는 것이 중요합니다."
-        ]
+        ],
+        "variations": {
+          "domination-1": {
+            "en": [
+              "Domination #1",
+              "The central urban area is the most important part of Battle of Hürtgen Forest Domination #1. At the beginning of the match, points A and B are commonly divided between the two teams.",
+              "The mountain in the north is the major strategic variable. Controlling this high ground can provide direct opportunities to pressure the enemy spawn.",
+              "The western team has a slight terrain advantage when climbing the mountain because the surrounding hills and ridgelines provide better opportunities for concealment and cover.",
+              "However, losing the mountain does not necessarily decide the match. The urban area around point C is largely protected from direct fire from the mountain, which means a team can abandon the northern fight and concentrate its offensive through the southern city instead.",
+              "Vehicles with strong gun depression can also make effective use of the hill at the far southern edge of the map, which provides excellent control over the approaches to point C."
+            ],
+            "ko": [
+              "도미네이션 #1",
+              "휘르트겐 숲 도미네이션 #1에서는 중앙 시가지가 가장 중요한 지역입니다. 전투 초반에는 A와 B 거점을 양 팀이 하나씩 나누어 확보하는 형태가 자주 나타납니다.",
+              "북쪽 산악 지대가 주요 변수이며, 이 지역을 장악하면 적 스폰 지역까지 직접적인 압박이 가능해집니다.",
+              "서쪽 팀은 산을 오를 때 구릉과 능선을 엄폐물로 활용하기 쉬워 상대적으로 유리한 지형을 가지고 있습니다.",
+              "다만 산악 지대를 빼앗겼다고 해서 반드시 패배하는 것은 아닙니다. C 거점 주변 시가지는 산에서 직접적인 사선이 나오지 않기 때문에 산악 지대를 포기하고 남쪽 시가지에 공세를 집중하는 방식으로 역전을 노릴 수 있습니다.",
+              "부각이 좋은 전차를 운용한다면 맵 최남단의 언덕을 확보하는 것도 좋은 선택입니다. 이 위치에서는 C 거점 일대를 효과적으로 통제할 수 있습니다."
+            ]
+          },
+          "domination-2": {
+            "ko": [
+              "휘르트겐 숲 도미네이션 #2에서는 북쪽 산악 지대의 중요성이 더욱 커집니다.",
+              "이 지역을 장악하면 적 스폰 지역을 압박할 수 있을 뿐만 아니라 A 거점을 확보한 뒤 B 거점까지 동시에 통제할 수 있습니다.",
+              "B 거점은 북쪽 방향에서 들어오는 사격을 막아줄 엄폐물이 매우 부족합니다. 따라서 산악 지대를 확보했다면 반드시 유지해야 하며, 반대로 빼앗겼다면 지상전만으로 탈환하기 어렵더라도 공중 지원 등을 활용해 적을 제거하는 것이 중요합니다."
+            ]
+          }
+        }
       },
       "folder": "Battle of Hürtgen Forest",
       "variations": [
