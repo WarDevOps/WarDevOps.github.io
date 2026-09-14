@@ -1,0 +1,42 @@
+.wmi-page { padding-bottom: clamp(64px, 8vw, 110px); }
+.wmi-hero { display: grid; grid-template-columns: minmax(0, 1.08fr) minmax(320px, .92fr); gap: clamp(24px, 5vw, 72px); align-items: stretch; padding: clamp(48px, 8vw, 100px) 0 clamp(65px, 9vw, 112px); }
+.wmi-hero-copy { align-self: center; }
+.wmi-hero .eyebrow { margin-bottom: 25px; }
+.wmi-hero h1 { margin: 0; font-size: clamp(3.8rem, 6.5vw, 7rem); font-weight: 900; line-height: .9; letter-spacing: -.075em; }
+.wmi-hero h1 span { display: block; margin-bottom: 12px; color: var(--muted); font-size: clamp(.75rem, 1.25vw, 1rem); font-weight: 850; letter-spacing: .27em; line-height: 1.4; }
+.wmi-hero h1 strong { display: block; font-weight: inherit; }
+.wmi-hero h1 em { color: var(--accent); font-style: normal; }
+.wmi-lead { max-width: 650px; margin: 30px 0 0; font-size: clamp(1.25rem, 2.7vw, 2rem); font-weight: 730; letter-spacing: -.035em; line-height: 1.25; }
+.wmi-description { max-width: 535px; margin: 14px 0 0; color: var(--muted); font-size: clamp(.91rem, 1.5vw, 1.05rem); line-height: 1.75; }
+.wmi-hero-link { display: inline-flex; align-items: center; gap: 22px; margin-top: 32px; padding: 13px 17px; border: 1px solid var(--accent); border-radius: 8px; background: var(--accent); color: #171b1a; font-size: .75rem; font-weight: 900; letter-spacing: .09em; text-decoration: none; transition: transform .2s, background .2s; }
+.wmi-hero-link:hover, .wmi-hero-link:focus-visible { transform: translateY(-2px); background: var(--accent-strong); }
+.wmi-hero-link span:last-child { font-size: 1.2rem; line-height: .8; }
+.wmi-display { position: relative; display: flex; min-height: 460px; padding: 24px; overflow: hidden; flex-direction: column; justify-content: space-between; border: 1px solid rgba(214, 219, 157, .33); border-radius: 18px; background: radial-gradient(circle at 75% 25%, rgba(214, 219, 157, .2), transparent 48%), linear-gradient(145deg, #25312b, #121b19 72%); box-shadow: var(--shadow); }
+.wmi-display::before { position: absolute; inset: 0; content: ""; background-image: linear-gradient(rgba(214,219,157,.12) 1px, transparent 1px), linear-gradient(90deg, rgba(214,219,157,.12) 1px, transparent 1px); background-size: 44px 44px; mask-image: linear-gradient(145deg, transparent 12%, black 100%); pointer-events: none; }
+.wmi-display::after { position: absolute; width: 340px; height: 340px; right: -95px; bottom: -135px; content: ""; border: 1px solid rgba(214,219,157,.38); border-radius: 50%; box-shadow: 0 0 0 45px rgba(214,219,157,.04), 0 0 0 90px rgba(214,219,157,.025); pointer-events: none; }
+.wmi-display-top, .wmi-display-bottom { position: relative; z-index: 1; display: flex; justify-content: space-between; gap: 12px; color: #c8d5bc; font-size: .65rem; font-weight: 800; letter-spacing: .16em; }
+.wmi-display-center { position: relative; z-index: 1; color: #edf2b8; font-size: clamp(7rem, 16vw, 15rem); font-weight: 950; line-height: 1; letter-spacing: -.12em; text-align: center; text-shadow: 0 20px 35px rgba(0,0,0,.25); transform: translateX(-.05em); }
+.wmi-display-cross { position: absolute; top: 8%; right: -1%; font-size: .19em; font-weight: 350; letter-spacing: 0; }
+.wmi-intro, .wmi-focus { border-top: 1px solid var(--line); }
+.wmi-intro { display: grid; grid-template-columns: minmax(220px, .72fr) minmax(0, 1.28fr); gap: clamp(28px, 6vw, 90px); padding: clamp(38px, 6vw, 70px) 0; }
+.wmi-kicker { margin: 0 0 16px; color: var(--accent); font-size: .7rem; font-weight: 900; letter-spacing: .17em; }
+.wmi-section-heading h2 { max-width: 580px; margin: 0; font-size: clamp(1.8rem, 3.5vw, 3.2rem); line-height: 1.08; letter-spacing: -.055em; }
+.wmi-intro-body { max-width: 700px; }
+.wmi-intro-body > p:first-child { margin: 0; font-size: clamp(1.05rem, 1.8vw, 1.35rem); line-height: 1.65; }
+.wmi-intro-note { margin: 24px 0 0; padding-left: 16px; border-left: 2px solid var(--accent); color: var(--muted); font-size: .89rem; line-height: 1.65; }
+.wmi-focus { padding: clamp(38px, 6vw, 70px) 0; }
+.wmi-focus-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin-top: 35px; }
+.wmi-focus-card { min-height: 230px; padding: clamp(20px, 3vw, 30px); border: 1px solid var(--line); border-radius: 13px; background: rgba(23,32,31,.78); }
+.wmi-card-index { display: inline-block; margin-bottom: 40px; color: var(--accent); font-size: .72rem; font-weight: 900; letter-spacing: .12em; }
+.wmi-focus-card h3 { margin: 0; font-size: clamp(1.15rem, 1.8vw, 1.5rem); letter-spacing: -.035em; }
+.wmi-focus-card p { margin: 11px 0 0; color: var(--muted); font-size: .9rem; line-height: 1.6; }
+.wmi-status { display: flex; align-items: center; justify-content: space-between; gap: 30px; padding: clamp(26px, 4vw, 42px); border: 1px solid rgba(214,219,157,.42); border-radius: 15px; background: rgba(214,219,157,.07); }
+.wmi-status h2 { margin: 0; font-size: clamp(1.35rem, 2.7vw, 2rem); letter-spacing: -.04em; }
+.wmi-status p:last-child { max-width: 610px; margin: 10px 0 0; color: var(--muted); font-size: .9rem; line-height: 1.6; }
+.wmi-status-mark { flex: 0 0 auto; padding: 9px 12px; border: 1px solid var(--accent); border-radius: 999px; color: var(--accent); font-size: .68rem; font-weight: 900; letter-spacing: .12em; white-space: nowrap; }
+body.light-theme .wmi-display { border-color: #9dab88; }
+body.light-theme .wmi-focus-card { background: rgba(255,255,255,.8); }
+body.light-theme .wmi-status { border-color: rgba(112,130,80,.45); background: rgba(112,130,80,.09); }
+@media (max-width: 900px) { .wmi-hero { grid-template-columns: 1fr; } .wmi-display { min-height: 330px; } .wmi-display-center { font-size: clamp(8rem, 24vw, 14rem); } }
+@media (max-width: 680px) { .wmi-hero { padding-top: 45px; } .wmi-intro { grid-template-columns: 1fr; } .wmi-focus-grid { grid-template-columns: 1fr; } .wmi-focus-card { min-height: 0; } .wmi-card-index { margin-bottom: 24px; } .wmi-status { align-items: flex-start; flex-direction: column; } }
+@media (max-width: 430px) { .wmi-hero h1 { font-size: clamp(3.2rem, 15vw, 4.5rem); } .wmi-display { min-height: 280px; padding: 17px; } .wmi-display-center { font-size: 27vw; } .site-header { gap: 4px; } .brand-mark { flex-basis: 26px; width: 26px; height: 26px; } .primary-nav a { padding-inline: 3px; font-size: .58rem; } .primary-nav a:first-child::after { font-size: .58rem; } .language-button { padding-inline: 4px; } .theme-toggle { padding-inline: 5px; } }
