@@ -13,6 +13,7 @@ function normalizedLayout(layout) {
   if (!normalized.tacticalSummaries || typeof normalized.tacticalSummaries !== "object" || Array.isArray(normalized.tacticalSummaries)) normalized.tacticalSummaries = {};
   if (!normalized.markers || typeof normalized.markers !== "object" || Array.isArray(normalized.markers)) normalized.markers = {};
   if (!normalized.annotations || typeof normalized.annotations !== "object" || Array.isArray(normalized.annotations)) normalized.annotations = {};
+  if (!normalized.vectorGroups || typeof normalized.vectorGroups !== "object" || Array.isArray(normalized.vectorGroups)) normalized.vectorGroups = {};
   return normalized;
 }
 
@@ -54,7 +55,8 @@ export function mapContentFingerprint(layout, mapName) {
     hasTacticalSummary,
     tacticalSummary: hasTacticalSummary ? layout.tacticalSummaries[mapName] : null,
     markers: mapEntries(layout?.markers, mapName),
-    annotations: mapEntries(layout?.annotations, mapName)
+    annotations: mapEntries(layout?.annotations, mapName),
+    ...(Object.values(mapEntries(layout?.vectorGroups, mapName)).some(groups => groups.length) ? { vectorGroups: mapEntries(layout?.vectorGroups, mapName) } : {})
   });
 }
 
@@ -68,7 +70,8 @@ export function sourceRevision(layout) {
     mapUpdatedAt: layout?.mapUpdatedAt || {},
     tacticalSummaries: layout?.tacticalSummaries || {},
     markers: layout?.markers || {},
-    annotations: layout?.annotations || {}
+    annotations: layout?.annotations || {},
+    ...(Object.values(layout?.vectorGroups || {}).some(groups => groups.length) ? { vectorGroups: layout.vectorGroups } : {})
   })}`;
 }
 
@@ -90,7 +93,7 @@ function copyMapProperty(target, source, section, mapName) {
 
 export function replaceMapLayout(target, source, mapName) {
   const prefix = `${mapName}::`;
-  for (const section of ["markers", "annotations"]) {
+  for (const section of ["markers", "annotations", "vectorGroups"]) {
     if (!target[section] || typeof target[section] !== "object" || Array.isArray(target[section])) target[section] = {};
     Object.keys(target[section]).filter(key => key.startsWith(prefix)).forEach(key => { delete target[section][key]; });
     Object.keys(source?.[section] || {})

@@ -172,6 +172,16 @@ export const commentImages = Object.freeze([
     "label": "scr_ (27).png"
   },
   {
+    "id": "Abandoned Factory/scr_ (3).png",
+    "path": "img/Abandoned Factory/scr_ (3).png",
+    "label": "scr_ (3).png"
+  },
+  {
+    "id": "Abandoned Factory/scr_ (4).png",
+    "path": "img/Abandoned Factory/scr_ (4).png",
+    "label": "scr_ (4).png"
+  },
+  {
     "id": "Abandoned Factory/scr_ (5).png",
     "path": "img/Abandoned Factory/scr_ (5).png",
     "label": "scr_ (5).png"
@@ -314,6 +324,376 @@ export const commentImages = Object.freeze([
   {
     "id": "Abandoned Town/scr_ (9).png",
     "path": "img/Abandoned Town/scr_ (9).png",
+    "label": "scr_ (9).png"
+  },
+  {
+    "id": "Advance to the Rhine/scr_ (1).png",
+    "path": "img/Advance to the Rhine/scr_ (1).png",
+    "label": "scr_ (1).png"
+  },
+  {
+    "id": "Advance to the Rhine/scr_ (10).png",
+    "path": "img/Advance to the Rhine/scr_ (10).png",
+    "label": "scr_ (10).png"
+  },
+  {
+    "id": "Advance to the Rhine/scr_ (11).png",
+    "path": "img/Advance to the Rhine/scr_ (11).png",
+    "label": "scr_ (11).png"
+  },
+  {
+    "id": "Advance to the Rhine/scr_ (12).png",
+    "path": "img/Advance to the Rhine/scr_ (12).png",
+    "label": "scr_ (12).png"
+  },
+  {
+    "id": "Advance to the Rhine/scr_ (13).png",
+    "path": "img/Advance to the Rhine/scr_ (13).png",
+    "label": "scr_ (13).png"
+  },
+  {
+    "id": "Advance to the Rhine/scr_ (14).png",
+    "path": "img/Advance to the Rhine/scr_ (14).png",
+    "label": "scr_ (14).png"
+  },
+  {
+    "id": "Advance to the Rhine/scr_ (15).png",
+    "path": "img/Advance to the Rhine/scr_ (15).png",
+    "label": "scr_ (15).png"
+  },
+  {
+    "id": "Advance to the Rhine/scr_ (16).png",
+    "path": "img/Advance to the Rhine/scr_ (16).png",
+    "label": "scr_ (16).png"
+  },
+  {
+    "id": "Advance to the Rhine/scr_ (17).png",
+    "path": "img/Advance to the Rhine/scr_ (17).png",
+    "label": "scr_ (17).png"
+  },
+  {
+    "id": "Advance to the Rhine/scr_ (18).png",
+    "path": "img/Advance to the Rhine/scr_ (18).png",
+    "label": "scr_ (18).png"
+  },
+  {
+    "id": "Advance to the Rhine/scr_ (19).png",
+    "path": "img/Advance to the Rhine/scr_ (19).png",
+    "label": "scr_ (19).png"
+  },
+  {
+    "id": "Advance to the Rhine/scr_ (20).png",
+    "path": "img/Advance to the Rhine/scr_ (20).png",
+    "label": "scr_ (20).png"
+  },
+  {
+    "id": "Advance to the Rhine/scr_ (21).png",
+    "path": "img/Advance to the Rhine/scr_ (21).png",
+    "label": "scr_ (21).png"
+  },
+  {
+    "id": "Advance to the Rhine/scr_ (22).png",
+    "path": "img/Advance to the Rhine/scr_ (22).png",
+    "label": "scr_ (22).png"
+  },
+  {
+    "id": "Advance to the Rhine/scr_ (23).png",
+    "path": "img/Advance to the Rhine/scr_ (23).png",
+    "label": "scr_ (23).png"
+  },
+  {
+    "id": "Advance to the Rhine/scr_ (24).png",
+    "path": "img/Advance to the Rhine/scr_ (24).png",
+    "label": "scr_ (24).png"
+  },
+  {
+    "id": "Advance to the Rhine/scr_ (25).png",
+    "path": "img/Advance to the Rhine/scr_ (25).png",
+    "label": "scr_ (25).png"
+  },
+  {
+    "id": "Advance to the Rhine/scr_ (26).png",
+    "path": "img/Advance to the Rhine/scr_ (26).png",
+    "label": "scr_ (26).png"
+  },
+  {
+    "id": "Advance to the Rhine/scr_ (27).png",
+    "path": "img/Advance to the Rhine/scr_ (27).png",
+    "label": "scr_ (27).png"
+  },
+  {
+    "id": "Advance to the Rhine/scr_ (28).png",
+    "path": "img/Advance to the Rhine/scr_ (28).png",
+    "label": "scr_ (28).png"
+  },
+  {
+    "id": "Advance to the Rhine/scr_ (29).png",
+    "path": "img/Advance to the Rhine/scr_ (29).png",
+    "label": "scr_ (29).png"
+  },
+  {
+    "id": "Advance to the Rhine/scr_ (30).png",
+    "path": "img/Advance to the Rhine/scr_ (30).png",
+    "label": "scr_ (30).png"
+  },
+  {
+    "id": "Advance to the Rhine/scr_ (31).png",
+    "path": "img/Advance to the Rhine/scr_ (31).png",
+    "label": "scr_ (31).png"
+  },
+  {
+    "id": "Advance to the Rhine/scr_ (32).png",
+    "path": "img/Advance to the Rhine/scr_ (32).png",
+    "label": "scr_ (32).png"
+  },
+  {
+    "id": "Advance to the Rhine/scr_ (33).png",
+    "path": "img/Advance to the Rhine/scr_ (33).png",
+    "label": "scr_ (33).png"
+  },
+  {
+    "id": "Advance to the Rhine/scr_ (34).png",
+    "path": "img/Advance to the Rhine/scr_ (34).png",
+    "label": "scr_ (34).png"
+  },
+  {
+    "id": "Advance to the Rhine/scr_ (35).png",
+    "path": "img/Advance to the Rhine/scr_ (35).png",
+    "label": "scr_ (35).png"
+  },
+  {
+    "id": "Advance to the Rhine/scr_ (36).png",
+    "path": "img/Advance to the Rhine/scr_ (36).png",
+    "label": "scr_ (36).png"
+  },
+  {
+    "id": "Advance to the Rhine/scr_ (37).png",
+    "path": "img/Advance to the Rhine/scr_ (37).png",
+    "label": "scr_ (37).png"
+  },
+  {
+    "id": "Advance to the Rhine/scr_ (38).png",
+    "path": "img/Advance to the Rhine/scr_ (38).png",
+    "label": "scr_ (38).png"
+  },
+  {
+    "id": "Advance to the Rhine/scr_ (39).png",
+    "path": "img/Advance to the Rhine/scr_ (39).png",
+    "label": "scr_ (39).png"
+  },
+  {
+    "id": "Advance to the Rhine/scr_ (40).png",
+    "path": "img/Advance to the Rhine/scr_ (40).png",
+    "label": "scr_ (40).png"
+  },
+  {
+    "id": "Advance to the Rhine/scr_ (5).png",
+    "path": "img/Advance to the Rhine/scr_ (5).png",
+    "label": "scr_ (5).png"
+  },
+  {
+    "id": "Advance to the Rhine/scr_ (6).png",
+    "path": "img/Advance to the Rhine/scr_ (6).png",
+    "label": "scr_ (6).png"
+  },
+  {
+    "id": "Advance to the Rhine/scr_ (7).png",
+    "path": "img/Advance to the Rhine/scr_ (7).png",
+    "label": "scr_ (7).png"
+  },
+  {
+    "id": "Advance to the Rhine/scr_ (8).png",
+    "path": "img/Advance to the Rhine/scr_ (8).png",
+    "label": "scr_ (8).png"
+  },
+  {
+    "id": "Advance to the Rhine/scr_ (9).png",
+    "path": "img/Advance to the Rhine/scr_ (9).png",
+    "label": "scr_ (9).png"
+  },
+  {
+    "id": "Alaska/scr_ (1).png",
+    "path": "img/Alaska/scr_ (1).png",
+    "label": "scr_ (1).png"
+  },
+  {
+    "id": "Alaska/scr_ (10).png",
+    "path": "img/Alaska/scr_ (10).png",
+    "label": "scr_ (10).png"
+  },
+  {
+    "id": "Alaska/scr_ (11).png",
+    "path": "img/Alaska/scr_ (11).png",
+    "label": "scr_ (11).png"
+  },
+  {
+    "id": "Alaska/scr_ (12).png",
+    "path": "img/Alaska/scr_ (12).png",
+    "label": "scr_ (12).png"
+  },
+  {
+    "id": "Alaska/scr_ (13).png",
+    "path": "img/Alaska/scr_ (13).png",
+    "label": "scr_ (13).png"
+  },
+  {
+    "id": "Alaska/scr_ (14).png",
+    "path": "img/Alaska/scr_ (14).png",
+    "label": "scr_ (14).png"
+  },
+  {
+    "id": "Alaska/scr_ (15).png",
+    "path": "img/Alaska/scr_ (15).png",
+    "label": "scr_ (15).png"
+  },
+  {
+    "id": "Alaska/scr_ (16).png",
+    "path": "img/Alaska/scr_ (16).png",
+    "label": "scr_ (16).png"
+  },
+  {
+    "id": "Alaska/scr_ (17).png",
+    "path": "img/Alaska/scr_ (17).png",
+    "label": "scr_ (17).png"
+  },
+  {
+    "id": "Alaska/scr_ (18).png",
+    "path": "img/Alaska/scr_ (18).png",
+    "label": "scr_ (18).png"
+  },
+  {
+    "id": "Alaska/scr_ (19).png",
+    "path": "img/Alaska/scr_ (19).png",
+    "label": "scr_ (19).png"
+  },
+  {
+    "id": "Alaska/scr_ (2).png",
+    "path": "img/Alaska/scr_ (2).png",
+    "label": "scr_ (2).png"
+  },
+  {
+    "id": "Alaska/scr_ (20).png",
+    "path": "img/Alaska/scr_ (20).png",
+    "label": "scr_ (20).png"
+  },
+  {
+    "id": "Alaska/scr_ (21).png",
+    "path": "img/Alaska/scr_ (21).png",
+    "label": "scr_ (21).png"
+  },
+  {
+    "id": "Alaska/scr_ (22).png",
+    "path": "img/Alaska/scr_ (22).png",
+    "label": "scr_ (22).png"
+  },
+  {
+    "id": "Alaska/scr_ (23).png",
+    "path": "img/Alaska/scr_ (23).png",
+    "label": "scr_ (23).png"
+  },
+  {
+    "id": "Alaska/scr_ (24).png",
+    "path": "img/Alaska/scr_ (24).png",
+    "label": "scr_ (24).png"
+  },
+  {
+    "id": "Alaska/scr_ (25).png",
+    "path": "img/Alaska/scr_ (25).png",
+    "label": "scr_ (25).png"
+  },
+  {
+    "id": "Alaska/scr_ (26).png",
+    "path": "img/Alaska/scr_ (26).png",
+    "label": "scr_ (26).png"
+  },
+  {
+    "id": "Alaska/scr_ (27).png",
+    "path": "img/Alaska/scr_ (27).png",
+    "label": "scr_ (27).png"
+  },
+  {
+    "id": "Alaska/scr_ (28).png",
+    "path": "img/Alaska/scr_ (28).png",
+    "label": "scr_ (28).png"
+  },
+  {
+    "id": "Alaska/scr_ (29).png",
+    "path": "img/Alaska/scr_ (29).png",
+    "label": "scr_ (29).png"
+  },
+  {
+    "id": "Alaska/scr_ (3).png",
+    "path": "img/Alaska/scr_ (3).png",
+    "label": "scr_ (3).png"
+  },
+  {
+    "id": "Alaska/scr_ (30).png",
+    "path": "img/Alaska/scr_ (30).png",
+    "label": "scr_ (30).png"
+  },
+  {
+    "id": "Alaska/scr_ (31).png",
+    "path": "img/Alaska/scr_ (31).png",
+    "label": "scr_ (31).png"
+  },
+  {
+    "id": "Alaska/scr_ (32).png",
+    "path": "img/Alaska/scr_ (32).png",
+    "label": "scr_ (32).png"
+  },
+  {
+    "id": "Alaska/scr_ (33).png",
+    "path": "img/Alaska/scr_ (33).png",
+    "label": "scr_ (33).png"
+  },
+  {
+    "id": "Alaska/scr_ (34).png",
+    "path": "img/Alaska/scr_ (34).png",
+    "label": "scr_ (34).png"
+  },
+  {
+    "id": "Alaska/scr_ (35).png",
+    "path": "img/Alaska/scr_ (35).png",
+    "label": "scr_ (35).png"
+  },
+  {
+    "id": "Alaska/scr_ (36).png",
+    "path": "img/Alaska/scr_ (36).png",
+    "label": "scr_ (36).png"
+  },
+  {
+    "id": "Alaska/scr_ (37).png",
+    "path": "img/Alaska/scr_ (37).png",
+    "label": "scr_ (37).png"
+  },
+  {
+    "id": "Alaska/scr_ (4).png",
+    "path": "img/Alaska/scr_ (4).png",
+    "label": "scr_ (4).png"
+  },
+  {
+    "id": "Alaska/scr_ (5).png",
+    "path": "img/Alaska/scr_ (5).png",
+    "label": "scr_ (5).png"
+  },
+  {
+    "id": "Alaska/scr_ (6).png",
+    "path": "img/Alaska/scr_ (6).png",
+    "label": "scr_ (6).png"
+  },
+  {
+    "id": "Alaska/scr_ (7).png",
+    "path": "img/Alaska/scr_ (7).png",
+    "label": "scr_ (7).png"
+  },
+  {
+    "id": "Alaska/scr_ (8).png",
+    "path": "img/Alaska/scr_ (8).png",
+    "label": "scr_ (8).png"
+  },
+  {
+    "id": "Alaska/scr_ (9).png",
+    "path": "img/Alaska/scr_ (9).png",
     "label": "scr_ (9).png"
   },
   {
@@ -462,6 +842,16 @@ export const commentImages = Object.freeze([
     "label": "scr_ (35).png"
   },
   {
+    "id": "American Desert/scr_ (36).png",
+    "path": "img/American Desert/scr_ (36).png",
+    "label": "scr_ (36).png"
+  },
+  {
+    "id": "American Desert/scr_ (37).png",
+    "path": "img/American Desert/scr_ (37).png",
+    "label": "scr_ (37).png"
+  },
+  {
     "id": "American Desert/scr_ (4).png",
     "path": "img/American Desert/scr_ (4).png",
     "label": "scr_ (4).png"
@@ -522,6 +912,11 @@ export const commentImages = Object.freeze([
     "label": "scr_ (14).png"
   },
   {
+    "id": "Arctic Pier/scr_ (15).png",
+    "path": "img/Arctic Pier/scr_ (15).png",
+    "label": "scr_ (15).png"
+  },
+  {
     "id": "Arctic Pier/scr_ (16).png",
     "path": "img/Arctic Pier/scr_ (16).png",
     "label": "scr_ (16).png"
@@ -555,6 +950,31 @@ export const commentImages = Object.freeze([
     "id": "Arctic Pier/scr_ (21).png",
     "path": "img/Arctic Pier/scr_ (21).png",
     "label": "scr_ (21).png"
+  },
+  {
+    "id": "Arctic Pier/scr_ (22).png",
+    "path": "img/Arctic Pier/scr_ (22).png",
+    "label": "scr_ (22).png"
+  },
+  {
+    "id": "Arctic Pier/scr_ (23).png",
+    "path": "img/Arctic Pier/scr_ (23).png",
+    "label": "scr_ (23).png"
+  },
+  {
+    "id": "Arctic Pier/scr_ (24).png",
+    "path": "img/Arctic Pier/scr_ (24).png",
+    "label": "scr_ (24).png"
+  },
+  {
+    "id": "Arctic Pier/scr_ (25).png",
+    "path": "img/Arctic Pier/scr_ (25).png",
+    "label": "scr_ (25).png"
+  },
+  {
+    "id": "Arctic Pier/scr_ (26).png",
+    "path": "img/Arctic Pier/scr_ (26).png",
+    "label": "scr_ (26).png"
   },
   {
     "id": "Arctic Pier/scr_ (3).png",

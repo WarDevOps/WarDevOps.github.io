@@ -1,9 +1,12 @@
-    import { MARKER_LAYOUT_VERSION, backupMarkerLayout, loadMarkerLayout, saveMarkerLayout as saveMarkerLayoutToStorage } from './marker-storage.js?v=map-sync-20260903';
+    import { MARKER_LAYOUT_VERSION, backupMarkerLayout, loadMarkerLayout, saveMarkerLayout as saveMarkerLayoutToStorage } from './marker-storage.js?v=replay-vectors-20260915';
 import { initDiscordMemberCount } from './discord-stats.js';
-    import { commentImages } from './comment-images.js?v=comment-images-8cb93ffefe76';
+import { createVectorEditor } from './vector-editor.js?v=replay-vectors-20260915';
+import { validateVectorGroups, pruneGroups } from './vector-model.js?v=replay-vectors-20260915';
+let vectorEditor = null;
+    import { commentImages } from './comment-images.js?v=comment-images-c25d702d2907';
     import { defaultMarkerLayout, maps, translations } from './data.js?v=delete-all-markers-20260915';
     import { normalizeTacticalSummary, resolveTacticalSummary, withVariationSummary } from './tactical-summary.js?v=variation-switch-20260914';
-    import { acceptUpstreamMap, isMapSyncState, markLayoutAsLocalEdits, markMapEdited, mergeMapLayouts, sourceRevision } from './marker-merge.js?v=marker-drop-20260910';
+    import { acceptUpstreamMap, isMapSyncState, markLayoutAsLocalEdits, markMapEdited, mergeMapLayouts, sourceRevision } from './marker-merge.js?v=replay-vectors-20260915';
 
 
     const DEFAULT_ANNOTATION_OPACITY = 50;
@@ -635,6 +638,8 @@ import { initDiscordMemberCount } from './discord-stats.js';
     }
     function persistMarkerLayout(statusKey = "savedLocally", { touchMap = false } = {}) {
       try {
+        Object.keys(markerLayout.vectorGroups || {}).forEach(key => pruneGroups(markerLayout, key));
+        vectorEditor?.onExternalCommit();
         if (touchMap) {
           touchCurrentMapUpdated();
           if (state.selected && upstreamMarkerLayout) {
@@ -1683,8 +1688,8 @@ import { initDiscordMemberCount } from './discord-stats.js';
         left += (imageRect.width - width) / 2;
       }
       Object.assign(layer.style, {
-        left: `${left - stageRect.left}px`,
-        top: `${top - stageRect.top}px`,
+        left: `${left - stageRect.left - stage.clientLeft}px`,
+        top: `${top - stageRect.top - stage.clientTop}px`,
         width: `${width}px`,
         height: `${height}px`
       });
@@ -1883,6 +1888,13 @@ import { initDiscordMemberCount } from './discord-stats.js';
         icon.style.width = `${markerSize}px`;
         icon.style.height = `${markerSize}px`;
         button.append(icon);
+        if (marker.label) {
+          const label = document.createElement("span");
+          label.className = "vector-marker-label";
+          label.textContent = marker.label;
+          button.append(label);
+          button.setAttribute("aria-label", `${markerLabel} — ${marker.label}`);
+        }
         if (markerHasComment(marker) && !state.editMode) {
           button.classList.add("has-comment");
           if (usesMobileCommentLayout()) {
@@ -1901,6 +1913,19 @@ import { initDiscordMemberCount } from './discord-stats.js';
           button.addEventListener("blur", () => hideMarkerCommentPopover(button));
         }
         layer.append(button);
+      });
+      // Nearby spawn points can share a label position; only offset the label,
+      // never the marker or replay geometry.
+      const labelBoxes = [];
+      layer.querySelectorAll(".vector-marker-label").forEach(label => {
+        let box = label.getBoundingClientRect();
+        let offset = 0;
+        while (offset < 100 && labelBoxes.some(other => box.left < other.right + 3 && box.right > other.left - 3 && box.top < other.bottom + 3 && box.bottom > other.top - 3)) {
+          offset += 18;
+          label.style.marginTop = `${offset}px`;
+          box = label.getBoundingClientRect();
+        }
+        labelBoxes.push(box);
       });
     }
     function renderMarkers() {
@@ -1923,6 +1948,7 @@ import { initDiscordMemberCount } from './discord-stats.js';
         renderMarkerLayer(modalMarkerLayer, modalImage);
       }
       const activeFocusedTank = !state.editMode && currentMarkers().find(marker => marker.id === state.focusedTankMarkerId);
+      vectorEditor?.refresh();
       if (!markerHasComment(activeFocusedTank)) return;
       const activeMarkerLayer = dialog.open ? modalMarkerLayer : markerLayer;
       const focusedMarkerButton = [...activeMarkerLayer.querySelectorAll(".map-marker")]
@@ -2035,6 +2061,7 @@ import { initDiscordMemberCount } from './discord-stats.js';
         tacticalSummaries: markerLayout.tacticalSummaries || {},
         markers: canonicalExportMarkers(),
         annotations: markerLayout.annotations,
+        vectorGroups: markerLayout.vectorGroups || {},
         ...(markerLayout.updatedAt ? { updatedAt: markerLayout.updatedAt } : {}),
         exportedAt: new Date().toISOString()
       };
@@ -2112,6 +2139,10 @@ import { initDiscordMemberCount } from './discord-stats.js';
           if (markerCount > MAX_IMPORTED_MARKERS) throw new Error("Too many markers.");
           ids.add(marker.id);
           const importedMarker = { id: marker.id, type: marker.type, x: marker.x, y: marker.y };
+          if (marker.label !== undefined) {
+            if (!isTankMarker(marker) || typeof marker.label !== "string" || marker.label.length > 80) throw new Error("Invalid marker label.");
+            importedMarker.label = marker.label;
+          }
           if (hasParentTankId) importedMarker.parentTankId = marker.parentTankId;
           if (hasComment && marker.comment.trim()) importedMarker.comment = normalizeMarkerComment(marker.comment);
           if (hasCommentEn && marker.commentEn.trim()) importedMarker.commentEn = normalizeMarkerComment(marker.commentEn);
@@ -2163,6 +2194,7 @@ import { initDiscordMemberCount } from './discord-stats.js';
           return importedRoute;
         });
       });
+      layout.vectorGroups = validateVectorGroups(data.vectorGroups, layout, validMarkerLayoutKeys);
       return layout;
     }
     function applyMarkerLayout(importedLayout) {
@@ -2173,6 +2205,7 @@ import { initDiscordMemberCount } from './discord-stats.js';
       markerLayout.tacticalSummaries = replacement.tacticalSummaries;
       markerLayout.markers = replacement.markers;
       markerLayout.annotations = replacement.annotations;
+      markerLayout.vectorGroups = replacement.vectorGroups || {};
       delete markerLayout.sync;
       delete markerLayout.updatedAt;
       hiddenMarkers.clear();
@@ -2190,7 +2223,7 @@ import { initDiscordMemberCount } from './discord-stats.js';
       markLayoutAsLocalEdits(markerLayout, upstreamMarkerLayout, mapNames, upstreamMarkerLayoutRevision);
     }
     async function importMarkerLayoutFile(file) {
-      if (!file || file.size > 2 * 1024 * 1024) {
+      if (!file || file.size > 16 * 1024 * 1024) {
         setMarkerStatus("invalidJson");
         return;
       }
@@ -2690,6 +2723,18 @@ import { initDiscordMemberCount } from './discord-stats.js';
       renderMarkers();
       fitVisibleMarkerContextMenus();
     });
+    // Editor toolbars change the modal's available height without resizing the
+    // window. Recompute the object-fit image rectangle after layout settles;
+    // otherwise markers keep the previous letterbox offset.
+    let mapGeometryFrame = 0;
+    const mapGeometryObserver = new ResizeObserver(() => {
+      if (mapGeometryFrame) return;
+      mapGeometryFrame = requestAnimationFrame(() => {
+        mapGeometryFrame = 0;
+        renderMarkers();
+      });
+    });
+    [mapStage, mapImage, modalMapStage, modalImage].forEach(element => mapGeometryObserver.observe(element));
     MOBILE_COMMENT_LAYOUT_QUERY.addEventListener("change", renderMarkers);
     MOBILE_DEVICE_QUERY.addEventListener("change", () => {
       syncMobileEditingAvailability();
@@ -2774,6 +2819,20 @@ import { initDiscordMemberCount } from './discord-stats.js';
       console.error("Default marker layout synchronization failed.", error);
       startupStatusKey = "defaultLayoutLoadError";
     }
+    vectorEditor = createVectorEditor({
+      layout: () => markerLayout,
+      key: currentMarkerKey,
+      editing: () => state.editMode,
+      drawing: () => Boolean(state.drawing),
+      language: () => state.language,
+      validate: validateImportedMarkerLayout,
+      cancelDrawing,
+      render: renderMarkers,
+      commit: () => persistMarkerLayout("savedLocally", { touchMap: true }),
+      visible: (kind, value) => kind === "m" ? !isMarkerHidden(value) : !hiddenAnnotations.has(annotationIdentity(value)) && !hiddenMarkerTypes.has(markerTypeIdentity(value.type)),
+      toolbars: [document.querySelector(".marker-tools"), document.querySelector(".modal-marker-tools")],
+      surfaces: [{ stage: mapStage, layer: markerLayer }, { stage: modalMapStage, layer: modalMarkerLayer }]
+    });
     setLanguage("en");
     syncMobileEditingAvailability();
     restoreFromUrl();

@@ -39,7 +39,7 @@
     "Middle East": "2026-09-15",
     "Mozdok": "2026-09-07",
     "Normandy": "2026-09-04",
-    "North Holland": "2026-09-08",
+    "North Holland": "2026-09-15",
     "Poland": "2026-09-15",
     "Port Novorossiysk": "2026-09-09",
     "Pradesh": "2026-08-31",
@@ -85,9 +85,10 @@
     "Fields of Poland": "2026-09-14T17:05:44Z",
     "Golden Quarry": "2026-09-12T00:18:22Z",
     "Jungle": "2026-09-10T12:20:47Z",
+    "Middle East": "2026-09-14T16:43:26Z",
     "Mozdok": "2026-09-07T14:15:23Z",
     "Normandy": "2026-09-04T05:44:50Z",
-    "North Holland": "2026-09-08T11:00:33Z",
+    "North Holland": "2026-09-14T23:28:36Z",
     "Poland": "2026-09-14T17:01:59Z",
     "Port Novorossiysk": "2026-09-08T23:53:12Z",
     "Seversk-13": "2026-09-13T19:59:09Z",
@@ -97,8 +98,7 @@
     "Test Site-2271": "2026-09-13T19:14:47Z",
     "Tunisia": "2026-09-13T19:32:06Z",
     "Vietnam": "2026-09-12T00:24:23Z",
-    "White Rock Fortress": "2026-09-02T04:58:42Z",
-    "Middle East": "2026-09-14T16:43:26Z"
+    "White Rock Fortress": "2026-09-02T04:58:42Z"
   },
   "tacticalSummaries": {
     "Eastern Europe": {
@@ -8493,6 +8493,7 @@
     "Darwin Hill::domination-1|Blue": [],
     "Eastern Europe::domination-1|Red": [],
     "Eastern Europe::domination-1|Blue": [],
+    "Eastern Europe::domination-2|Blue": [],
     "European Province::domination-1|Red": [
       {
         "id": "european-province-red-unit-01",
@@ -9234,6 +9235,73 @@
         "x": 58.25,
         "y": 67.46,
         "parentTankId": "mu1hu8y5-j0pr3n"
+      }
+    ],
+    "Fields of Poland::domination-1|Red": [
+      {
+        "id": "mu1hctg9-mjahs5",
+        "type": "mainBattleTankRed",
+        "x": 34.89,
+        "y": 52.99
+      },
+      {
+        "id": "mu1hcyub-jxjks6",
+        "type": "highRiskSpot",
+        "x": 34.89,
+        "y": 52.99,
+        "parentTankId": "mu1hctg9-mjahs5"
+      },
+      {
+        "id": "mu1hr8dn-z9bm0j",
+        "type": "mainBattleTankRed",
+        "x": 57,
+        "y": 68.61
+      },
+      {
+        "id": "mu1hroyj-tvj97p",
+        "type": "mainBattleTankRed",
+        "x": 6.38,
+        "y": 35.01
+      },
+      {
+        "id": "mu1hsjoz-g4h1yt",
+        "type": "tankDestroyerRed",
+        "x": 90.7,
+        "y": 91.58
+      },
+      {
+        "id": "mu1hskv4-f8ued6",
+        "type": "sniper",
+        "x": 90.7,
+        "y": 91.58,
+        "parentTankId": "mu1hsjoz-g4h1yt"
+      },
+      {
+        "id": "mu1ht0np-o7r26i",
+        "type": "spawnKill",
+        "x": 6.38,
+        "y": 35.01,
+        "parentTankId": "mu1hroyj-tvj97p"
+      },
+      {
+        "id": "mu1ht6d6-9uv3ax",
+        "type": "battleLine",
+        "x": 57,
+        "y": 68.61,
+        "parentTankId": "mu1hr8dn-z9bm0j"
+      },
+      {
+        "id": "mu1huoyh-o2u50l",
+        "type": "mainBattleTankRed",
+        "x": 50.98,
+        "y": 68.53
+      },
+      {
+        "id": "mu1huu41-ydxh00",
+        "type": "highRiskSpot",
+        "x": 50.98,
+        "y": 68.53,
+        "parentTankId": "mu1huoyh-o2u50l"
       }
     ],
     "Finland::domination-1|Red": [
@@ -12386,32 +12454,6 @@
         "parentTankId": "mtima05p-ew205o"
       },
       {
-        "id": "mtimabar-w72ka9",
-        "type": "mainBattleTankRed",
-        "x": 51.95,
-        "y": 37.58
-      },
-      {
-        "id": "mtimacan-jwp5ep",
-        "type": "highRiskSpot",
-        "x": 51.95,
-        "y": 37.58,
-        "parentTankId": "mtimabar-w72ka9"
-      },
-      {
-        "id": "mtimai4i-ugupgk",
-        "type": "mainBattleTankRed",
-        "x": 27.84,
-        "y": 52.48
-      },
-      {
-        "id": "mtimajy9-41tjdx",
-        "type": "highRiskSpot",
-        "x": 27.84,
-        "y": 52.48,
-        "parentTankId": "mtimai4i-ugupgk"
-      },
-      {
         "id": "mtimc9t2-4ujxjh",
         "type": "mainBattleTankRed",
         "x": 31.91,
@@ -12481,6 +12523,19 @@
         "x": 75.79,
         "y": 49.47,
         "parentTankId": "mtsk5yyb-ymcvw8"
+      },
+      {
+        "id": "mu1vhh7a-i7w4yx",
+        "type": "lightTankRed",
+        "x": 44.59,
+        "y": 28.18
+      },
+      {
+        "id": "mu1vhuen-8i5t66",
+        "type": "highRiskSpot",
+        "x": 44.59,
+        "y": 28.18,
+        "parentTankId": "mu1vhh7a-i7w4yx"
       }
     ],
     "North Holland::domination-1|Blue": [
@@ -19499,75 +19554,7 @@
         "x": 32.89,
         "y": 17.37
       }
-    ],
-    "Fields of Poland::domination-1|Red": [
-      {
-        "id": "mu1hctg9-mjahs5",
-        "type": "mainBattleTankRed",
-        "x": 34.89,
-        "y": 52.99
-      },
-      {
-        "id": "mu1hcyub-jxjks6",
-        "type": "highRiskSpot",
-        "x": 34.89,
-        "y": 52.99,
-        "parentTankId": "mu1hctg9-mjahs5"
-      },
-      {
-        "id": "mu1hr8dn-z9bm0j",
-        "type": "mainBattleTankRed",
-        "x": 57,
-        "y": 68.61
-      },
-      {
-        "id": "mu1hroyj-tvj97p",
-        "type": "mainBattleTankRed",
-        "x": 6.38,
-        "y": 35.01
-      },
-      {
-        "id": "mu1hsjoz-g4h1yt",
-        "type": "tankDestroyerRed",
-        "x": 90.7,
-        "y": 91.58
-      },
-      {
-        "id": "mu1hskv4-f8ued6",
-        "type": "sniper",
-        "x": 90.7,
-        "y": 91.58,
-        "parentTankId": "mu1hsjoz-g4h1yt"
-      },
-      {
-        "id": "mu1ht0np-o7r26i",
-        "type": "spawnKill",
-        "x": 6.38,
-        "y": 35.01,
-        "parentTankId": "mu1hroyj-tvj97p"
-      },
-      {
-        "id": "mu1ht6d6-9uv3ax",
-        "type": "battleLine",
-        "x": 57,
-        "y": 68.61,
-        "parentTankId": "mu1hr8dn-z9bm0j"
-      },
-      {
-        "id": "mu1huoyh-o2u50l",
-        "type": "mainBattleTankRed",
-        "x": 50.98,
-        "y": 68.53
-      },
-      {
-        "id": "mu1huu41-ydxh00",
-        "type": "highRiskSpot",
-        "x": 50.98,
-        "y": 68.53,
-        "parentTankId": "mu1huoyh-o2u50l"
-      }
-    ],
-    "Eastern Europe::domination-2|Blue": []
+    ]
   },
   "annotations": {
     "38th Parallel::domination-1|Red": [
@@ -37637,6 +37624,7 @@
     "Darwin Hill::domination-1|Blue": [],
     "Eastern Europe::domination-1|Red": [],
     "Eastern Europe::domination-1|Blue": [],
+    "Eastern Europe::domination-2|Blue": [],
     "European Province::domination-1|Red": [
       {
         "id": "european-province-red-aim-01",
@@ -39989,6 +39977,44 @@
         "startY": 67.46,
         "endX": 93.98,
         "endY": 75.26
+      }
+    ],
+    "Fields of Poland::domination-1|Red": [
+      {
+        "id": "mu1hqsjc-yquzsh",
+        "type": "aimHere",
+        "parentTankId": "mu1hctg9-mjahs5",
+        "startX": 34.89,
+        "startY": 52.99,
+        "endX": 10.99,
+        "endY": 74.2
+      },
+      {
+        "id": "mu1hsorz-m8fsl2",
+        "type": "aimHere",
+        "parentTankId": "mu1hsjoz-g4h1yt",
+        "startX": 90.7,
+        "startY": 91.58,
+        "endX": 50.89,
+        "endY": 69.15
+      },
+      {
+        "id": "mu1ht2b6-cdy830",
+        "type": "aimHere",
+        "parentTankId": "mu1hroyj-tvj97p",
+        "startX": 6.38,
+        "startY": 35.01,
+        "endX": 7.09,
+        "endY": 26.94
+      },
+      {
+        "id": "mu1husef-xh8uxy",
+        "type": "aimHere",
+        "parentTankId": "mu1huoyh-o2u50l",
+        "startX": 50.98,
+        "startY": 68.53,
+        "endX": 7.44,
+        "endY": 85.81
       }
     ],
     "Finland::domination-1|Red": [
@@ -45765,38 +45791,6 @@
         "endY": 46.8
       },
       {
-        "id": "mtimu2m1-7sg9zk",
-        "type": "aimHere",
-        "parentTankId": "mtimabar-w72ka9",
-        "startX": 51.95,
-        "startY": 37.58,
-        "endX": 60.46,
-        "endY": 24.37
-      },
-      {
-        "id": "mtimyrt3-e6sf3o",
-        "type": "route",
-        "points": [
-          {
-            "x": 51.95,
-            "y": 38.2
-          },
-          {
-            "x": 50.98,
-            "y": 43.79
-          },
-          {
-            "x": 52.66,
-            "y": 50.62
-          },
-          {
-            "x": 56.12,
-            "y": 53.1
-          }
-        ],
-        "dangerRoute": true
-      },
-      {
         "id": "mtimyzw2-2gu33w",
         "type": "route",
         "points": [
@@ -45924,24 +45918,6 @@
         ]
       },
       {
-        "id": "mtioeho7-uyozbp",
-        "type": "aimHere",
-        "parentTankId": "mtimai4i-ugupgk",
-        "startX": 27.84,
-        "startY": 52.48,
-        "endX": 30.67,
-        "endY": 49.55
-      },
-      {
-        "id": "mtioeobn-67j7j6",
-        "type": "aimHere",
-        "parentTankId": "mtimai4i-ugupgk",
-        "startX": 27.84,
-        "startY": 52.48,
-        "endX": 27.04,
-        "endY": 46.98
-      },
-      {
         "id": "mtiofcxf-sbur3b",
         "type": "route",
         "points": [
@@ -45963,15 +45939,6 @@
           }
         ],
         "dangerRoute": true
-      },
-      {
-        "id": "mtioh5oz-blf3mz",
-        "type": "aimHere",
-        "parentTankId": "mtimabar-w72ka9",
-        "startX": 51.95,
-        "startY": 37.58,
-        "endX": 50.18,
-        "endY": 20.03
       },
       {
         "id": "mtioiyjm-e6dvld",
@@ -46033,6 +46000,59 @@
         "startY": 49.47,
         "endX": 62.63,
         "endY": 27.07
+      },
+      {
+        "id": "mu1vi5nv-0z3em0",
+        "type": "route",
+        "points": [
+          {
+            "x": 45.74,
+            "y": 43.61
+          },
+          {
+            "x": 46.54,
+            "y": 40.69
+          },
+          {
+            "x": 46.37,
+            "y": 38.74
+          },
+          {
+            "x": 47.34,
+            "y": 35.99
+          },
+          {
+            "x": 47.96,
+            "y": 32.88
+          },
+          {
+            "x": 48.23,
+            "y": 30.67
+          },
+          {
+            "x": 44.68,
+            "y": 28.27
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "mu1viqo9-hut53j",
+        "type": "aimHere",
+        "parentTankId": "mu1vhh7a-i7w4yx",
+        "startX": 44.59,
+        "startY": 28.18,
+        "endX": 52.31,
+        "endY": 28.18
+      },
+      {
+        "id": "mu1vishd-wuu4qj",
+        "type": "aimHere",
+        "parentTankId": "mu1vhh7a-i7w4yx",
+        "startX": 44.59,
+        "startY": 28.18,
+        "endX": 46.81,
+        "endY": 14
       }
     ],
     "North Holland::domination-1|Blue": [
@@ -60340,47 +60360,8 @@
           }
         ]
       }
-    ],
-    "Fields of Poland::domination-1|Red": [
-      {
-        "id": "mu1hqsjc-yquzsh",
-        "type": "aimHere",
-        "parentTankId": "mu1hctg9-mjahs5",
-        "startX": 34.89,
-        "startY": 52.99,
-        "endX": 10.99,
-        "endY": 74.2
-      },
-      {
-        "id": "mu1hsorz-m8fsl2",
-        "type": "aimHere",
-        "parentTankId": "mu1hsjoz-g4h1yt",
-        "startX": 90.7,
-        "startY": 91.58,
-        "endX": 50.89,
-        "endY": 69.15
-      },
-      {
-        "id": "mu1ht2b6-cdy830",
-        "type": "aimHere",
-        "parentTankId": "mu1hroyj-tvj97p",
-        "startX": 6.38,
-        "startY": 35.01,
-        "endX": 7.09,
-        "endY": 26.94
-      },
-      {
-        "id": "mu1husef-xh8uxy",
-        "type": "aimHere",
-        "parentTankId": "mu1huoyh-o2u50l",
-        "startX": 50.98,
-        "startY": 68.53,
-        "endX": 7.44,
-        "endY": 85.81
-      }
-    ],
-    "Eastern Europe::domination-2|Blue": []
+    ]
   },
-  "updatedAt": "2026-09-14T17:05:44.846Z",
-  "exportedAt": "2026-09-14T17:12:27.148Z"
+  "updatedAt": "2026-09-14T23:28:36.398Z",
+  "exportedAt": "2026-09-14T23:34:39.270Z"
 }

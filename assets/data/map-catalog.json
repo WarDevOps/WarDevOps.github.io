@@ -149,8 +149,8 @@
       "name": "American Desert",
       "aliases": "아메리칸 데저트",
       "slug": "american-desert",
-      "updated": "2026-09-14",
-      "updatedAt": "2026-09-13T23:41:53Z",
+      "updated": "2026-09-15",
+      "updatedAt": "2026-09-14T15:49:37Z",
       "br": {
         "min": 5
       },
@@ -807,8 +807,8 @@
       "name": "Fields of Poland",
       "aliases": "폴란드의 들판",
       "slug": "fields-of-poland",
-      "updated": "2026-09-04",
-      "updatedAt": "2026-09-04T05:43:58Z",
+      "updated": "2026-09-15",
+      "updatedAt": "2026-09-14T17:05:44Z",
       "br": {
         "min": 4.7
       },
@@ -1099,7 +1099,8 @@
       "name": "Middle East",
       "aliases": "중동",
       "slug": "middle-east",
-      "updated": "2026-08-18",
+      "updated": "2026-09-15",
+      "updatedAt": "2026-09-14T16:43:26Z",
       "br": {
         "min": 5
       },
@@ -1160,8 +1161,8 @@
       "name": "North Holland",
       "aliases": "노르드 홀란트",
       "slug": "north-holland",
-      "updated": "2026-09-08",
-      "updatedAt": "2026-09-08T11:00:33Z",
+      "updated": "2026-09-15",
+      "updatedAt": "2026-09-14T23:28:36Z",
       "br": {
         "min": 1
       },
@@ -1190,8 +1191,8 @@
       "name": "Poland",
       "aliases": "폴란드",
       "slug": "poland",
-      "updated": "2026-09-04",
-      "updatedAt": "2026-09-04T05:44:36Z",
+      "updated": "2026-09-15",
+      "updatedAt": "2026-09-14T17:01:59Z",
       "br": {
         "min": 1
       },
@@ -1420,8 +1421,8 @@
       "name": "Sun City",
       "aliases": "선 시티",
       "slug": "sun-city",
-      "updated": "2026-09-14",
-      "updatedAt": "2026-09-13T20:06:32Z",
+      "updated": "2026-09-15",
+      "updatedAt": "2026-09-14T16:27:44Z",
       "br": {
         "min": 5
       },

@@ -10,4 +10,8 @@
 # Map detail pages are generated from index.html and map metadata during deployment.
 /maps/
 *.py
+!/scripts/export-replay-layout.py
 *.psd
+
+# Internal documentation stays on local machines.
+/[dD][oO][cC][sS]/
