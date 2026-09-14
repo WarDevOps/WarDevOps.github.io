@@ -1,7 +1,7 @@
     import { MARKER_LAYOUT_VERSION, backupMarkerLayout, loadMarkerLayout, saveMarkerLayout as saveMarkerLayoutToStorage } from './marker-storage.js?v=map-sync-20260903';
 import { initDiscordMemberCount } from './discord-stats.js';
     import { commentImages } from './comment-images.js?v=comment-images-8cb93ffefe76';
-    import { defaultMarkerLayout, maps, translations } from './data.js?v=variation-summary-20260914';
+    import { defaultMarkerLayout, maps, translations } from './data.js?v=delete-all-markers-20260915';
     import { normalizeTacticalSummary, resolveTacticalSummary, withVariationSummary } from './tactical-summary.js?v=variation-switch-20260914';
     import { acceptUpstreamMap, isMapSyncState, markLayoutAsLocalEdits, markMapEdited, mergeMapLayouts, sourceRevision } from './marker-merge.js?v=marker-drop-20260910';
 
@@ -74,6 +74,7 @@ import { initDiscordMemberCount } from './discord-stats.js';
     const modalImportMarkerLayout = $("#modal-import-marker-layout");
     const modalResetHiddenMarkers = $("#modal-reset-hidden-markers");
     const modalResetAllMarkers = $("#modal-reset-all-markers");
+    const modalDeleteAllMarkers = $("#modal-delete-all-markers");
     const modalMarkerStatus = $("#modal-marker-status");
     const modalMapSyncAlert = $("#modal-map-sync-alert");
     const modalUseLatestMap = $("#modal-use-latest-map");
@@ -100,6 +101,7 @@ import { initDiscordMemberCount } from './discord-stats.js';
     const markerLayoutImportFile = $("#marker-layout-import-file");
     const resetHiddenMarkers = $("#reset-hidden-markers");
     const resetAllMarkers = $("#reset-all-markers");
+    const deleteAllMarkers = $("#delete-all-markers");
     const markerStatus = $("#marker-status");
     const mapSyncAlert = $("#map-sync-alert");
     const useLatestMap = $("#use-latest-map");
@@ -2374,6 +2376,23 @@ import { initDiscordMemberCount } from './discord-stats.js';
         setMarkerStatus("defaultLayoutLoadError");
       }
     }
+    function deleteAllPlacedMarkers() {
+      if (!window.confirm(t("confirmDeleteAllMarkers"))) return;
+      for (const key of validMarkerLayoutKeys) {
+        markerLayout.markers[key] = [];
+        if (Array.isArray(markerLayout.annotations[key])) {
+          markerLayout.annotations[key] = markerLayout.annotations[key].filter(annotation => annotation.type !== "aimHere");
+        }
+      }
+      if (upstreamMarkerLayout) {
+        markLayoutAsLocalEdits(markerLayout, upstreamMarkerLayout, mapNames, upstreamMarkerLayoutRevision);
+      }
+      hiddenMarkers.clear();
+      hiddenAnnotations.clear();
+      hideMarkerContextMenu();
+      renderMarkers();
+      persistMarkerLayout("allMarkersDeleted");
+    }
     function bindMarkerLayer(layer, stage, contextMenu) {
       layer.addEventListener("click", event => {
         if (state.editMode) return;
@@ -2598,6 +2617,8 @@ import { initDiscordMemberCount } from './discord-stats.js';
     modalResetHiddenMarkers.addEventListener("click", resetHiddenMarkersForCurrentMap);
     resetAllMarkers.addEventListener("click", resetAllPlacedMarkers);
     modalResetAllMarkers.addEventListener("click", resetAllPlacedMarkers);
+    deleteAllMarkers.addEventListener("click", deleteAllPlacedMarkers);
+    modalDeleteAllMarkers.addEventListener("click", deleteAllPlacedMarkers);
     useLatestMap.addEventListener("click", useLatestDefaultForCurrentMap);
     modalUseLatestMap.addEventListener("click", useLatestDefaultForCurrentMap);
     annotationOpacitySlider.addEventListener("input", () => setAnnotationOpacity(annotationOpacitySlider.value));

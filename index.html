@@ -49,7 +49,7 @@
   </script>
   <title>War Thunder Map Guide &amp; Tactics | WarDevOps</title>
 
-  <link rel="stylesheet" href="/assets/css/site.css?v=variation-summary-20260914">
+  <link rel="stylesheet" href="/assets/css/site.css?v=delete-all-markers-20260915">
 </head>
 <body>
   <header class="site-header">
@@ -263,7 +263,10 @@
           <button class="marker-tool" id="save-marker-layout" type="button" data-editor-action data-i18n="saveLocally" hidden>Save Locally</button>
           <button class="marker-tool" id="export-marker-layout" type="button" data-editor-action data-i18n="exportJson" hidden>Export JSON</button>
           <button class="marker-tool" id="import-marker-layout" type="button" data-editor-action data-i18n="importJson" hidden>Import JSON</button>
-          <button class="marker-tool danger" id="reset-all-markers" type="button" data-editor-action data-i18n="resetAllMarkers" hidden>Reset All Markers</button>
+          <div class="marker-danger-actions" data-editor-action hidden>
+            <button class="marker-tool danger" id="reset-all-markers" type="button" data-i18n="resetAllMarkers">Reset All Markers</button>
+            <button class="marker-tool danger" id="delete-all-markers" type="button" data-i18n="deleteAllMarkers">Delete All Markers</button>
+          </div>
           <span class="marker-status" id="marker-status" role="status" aria-live="polite"></span>
           <p class="marker-editor-note" id="marker-editor-note" hidden>Drag icons from the legend onto the map.</p>
         </div>
@@ -377,6 +380,7 @@
         <div class="modal-legend-actions">
           <button class="marker-tool" id="modal-reset-hidden-markers" type="button" data-i18n="resetHidden">Reset Hidden</button>
           <button class="marker-tool danger" id="modal-reset-all-markers" type="button" data-editor-action hidden data-i18n="resetAllMarkers">Reset All Markers</button>
+          <button class="marker-tool danger" id="modal-delete-all-markers" type="button" data-editor-action hidden data-i18n="deleteAllMarkers">Delete All Markers</button>
         </div>
       </aside>
     </div>
@@ -384,7 +388,7 @@
 
   <input id="marker-layout-import-file" type="file" accept="application/json,.json" hidden>
 
-  <script type="module" src="/assets/js/app.js?v=summary-label-20260914"></script>
+  <script type="module" src="/assets/js/app.js?v=delete-all-markers-20260915"></script>
   <script type="module" src="/assets/js/consent-controls.js?v=20260828"></script>
 </body>
 </html>
