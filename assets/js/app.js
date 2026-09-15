@@ -1,7 +1,7 @@
     import { MARKER_LAYOUT_VERSION, backupMarkerLayout, loadMarkerLayout, saveMarkerLayout as saveMarkerLayoutToStorage } from './marker-storage.js?v=replay-vectors-20260915';
 import { initDiscordMemberCount } from './discord-stats.js';
-import { createVectorEditor } from './vector-editor.js?v=replay-import-add-20260915';
-import { validateVectorGroups, pruneGroups } from './vector-model.js?v=replay-vectors-20260915';
+import { createVectorEditor } from './vector-editor.js?v=compact-editor-20260915';
+import { validateVectorGroups, pruneGroups } from './vector-model.js?v=compact-editor-20260915';
 let vectorEditor = null;
     import { commentImages } from './comment-images.js?v=comment-images-c25d702d2907';
     import { defaultMarkerLayout, maps, translations } from './data.js?v=delete-all-markers-20260915';

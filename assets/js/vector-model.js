@@ -50,6 +50,12 @@ export function expandSelection(layout,key,selection) {
 export function snapshot(layout,key) {
   return structuredClone({markers:layout.markers?.[key]||[],annotations:layout.annotations?.[key]||[],groups:layout.vectorGroups?.[key]||[]});
 }
+export function deleteSelection(layout,key,selection) {
+  const removed=expandSelection(layout,key,selection);
+  layout.markers[key]=(layout.markers[key]||[]).filter(v=>!removed.has(ref('m',v.id)));
+  layout.annotations[key]=(layout.annotations[key]||[]).filter(v=>!removed.has(ref('a',v.id)));
+  pruneGroups(layout,key);
+}
 export function restore(layout,key,s) {
   layout.markers[key]=structuredClone(s.markers);layout.annotations[key]=structuredClone(s.annotations);
   (layout.vectorGroups??={})[key]=structuredClone(s.groups);

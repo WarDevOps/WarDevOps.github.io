@@ -1,8 +1,8 @@
-import {around,ref,entries,vertices,bounds,expandSelection,snapshot,restore,transform,makeGroup,appendLayout,fitsTransform} from './vector-model.js?v=replay-vectors-20260915';
+import {around,ref,entries,vertices,bounds,expandSelection,snapshot,restore,transform,deleteSelection,appendLayout,fitsTransform} from './vector-model.js?v=compact-editor-20260915';
 
 const words={
-  ko:{select:'영역 선택',add:'현재 지도에 JSON 추가',lock:'기존 객체 잠금',all:'전체 선택',group:'그룹 묶기',ungroup:'그룹 해제',undo:'되돌리기',redo:'다시 실행',rotate:'회전',flipX:'좌우 반전',flipY:'상하 반전',fit:'지도 안에 맞춤',clear:'선택 해제',hint:'빈 곳 드래그: 영역 선택 · 모서리: 비율 유지 크기 조절 · 위 손잡이: 회전 · Shift: 추가 선택',count:'개 객체 선택',invalid:'추가할 수 없는 JSON입니다. 지도·구역·팀과 파일 형식을 확인하세요.',added:'현재 지도에 추가했습니다. 선택 영역을 드래그해 위치를 맞추세요.',outside:'지도 밖 좌표 포함',degrees:'각도(°)',apply:'회전 적용',scale:'크기(%)',resize:'크기 적용',locked:'잠금 해제 시 기존 객체도 선택할 수 있습니다.'},
-  en:{select:'Select area',add:'Add JSON to current map',lock:'Lock existing objects',all:'Select all',group:'Group',ungroup:'Ungroup',undo:'Undo',redo:'Redo',rotate:'Rotate',flipX:'Flip horizontal',flipY:'Flip vertical',fit:'Fit to map',clear:'Clear selection',hint:'Drag empty space to select · Corners scale uniformly · Top handle rotates · Shift adds to selection',count:'objects selected',invalid:'Cannot add this JSON. Check the map, variation, team, and format.',added:'Added to the current map. Drag the selection to align it.',outside:'Includes off-map coordinates',degrees:'Angle (°)',apply:'Apply rotation',scale:'Size (%)',resize:'Apply size',locked:'Unlock to select existing objects.'}
+  ko:{lock:'기존 객체 잠금',undo:'되돌리기',redo:'다시 실행',delete:'선택 삭제',rotate:'선택 회전',resize:'선택 크기 조절',move:'선택 이동',invalid:'JSON을 추가할 수 없습니다. 지도와 파일 형식을 확인하세요.',added:'리플레이를 추가했습니다.'},
+  en:{lock:'Lock existing objects',undo:'Undo',redo:'Redo',delete:'Delete selected',rotate:'Rotate selection',resize:'Resize selection',move:'Move selection',invalid:'Cannot add this JSON. Check the map and file format.',added:'Replay added.'}
 };
 export function createVectorEditor(h) {
   let active=false,lock=true,key=null,selected=new Set(),editable=new Set(),known=new Set(),gesture=null,undo=[],redo=[],internal=false;
@@ -13,7 +13,7 @@ export function createVectorEditor(h) {
   const groups=()=>h.layout().vectorGroups?.[key]||[];
   const groupFor=r=>groups().find(g=>g.members.some(m=>ref(m.kind,m.id)===r));
   const allowed=r=>!lock||editable.has(r)||!!groupFor(r)?.source?.replayId;
-  function announce(text) { bars.forEach(b=>b.status.textContent=text); }
+  function announce(text) { bars.forEach(b=>{b.status.textContent=text;b.status.hidden=!text;}); }
   function save(before) {
     undo.push(before);if(undo.length>16)undo.shift();redo=[];
     internal=true;const persisted=h.commit();internal=false;refresh();
@@ -30,25 +30,11 @@ export function createVectorEditor(h) {
     internal=true;h.commit();internal=false;h.render();refresh();
   }
   function eligibleEntries() {return entries(h.layout(),key).filter(({kind,value})=>allowed(ref(kind,value.id))&&h.visible(kind,value));}
-  function setSelection(value) {selected=expandSelection(h.layout(),key,value);refresh();}
-  function act(action,bar) {
-    if(action==='select'){active=!active;h.cancelDrawing();selected.clear();refresh();return;}
-    if(action==='add'){file.value='';file.click();return;}
-    if(action==='undo'||action==='redo'){history(action==='undo');return;}
-    if(action==='all'){active=true;setSelection(new Set(eligibleEntries().map(({kind,value})=>ref(kind,value.id))));return;}
-    if(action==='clear'){selected.clear();refresh();return;}
-    const b=bounds(h.layout(),key,selected);if(!b)return;
-    if(action==='group'){mutate(()=>makeGroup(h.layout(),key,selected,id(),h.language()==='ko'?'선택 그룹':'Selection'));return;}
-    if(action==='ungroup'){mutate(()=>{h.layout().vectorGroups[key]=groups().filter(g=>!g.members.some(m=>selected.has(ref(m.kind,m.id))));});return;}
-    if(action==='fit'){
-      const factor=80/Math.max(b.maxX-b.minX,b.maxY-b.minY,1);
-      matrixAction([factor,0,0,factor,50-factor*b.cx,50-factor*b.cy]);return;
-    }
-    if(action==='flipX'||action==='flipY')matrixAction(around(b.cx,b.cy,1,0,action==='flipX'?-1:1,action==='flipY'?-1:1));
-    if(action==='rotate'){const angle=Number(bar.angle.value);if(Number.isFinite(angle))matrixAction(around(b.cx,b.cy,1,angle*Math.PI/180));}
-    if(action==='scale'){const scale=Number(bar.scale.value)/100;if(scale>=.001&&scale<=1000)matrixAction(around(b.cx,b.cy,scale));}
+  function removeSelected() {
+    if(!selected.size||gesture)return;
+    mutate(()=>deleteSelection(h.layout(),key,selected));
+    selected.clear();h.render();refresh();
   }
-  const file=document.createElement('input');file.id='vector-import-file';file.type='file';file.accept='.json,application/json';file.hidden=true;document.body.append(file);
   async function addFile(chosen) {
     const targetKey=h.key(),layout=h.layout();if(!chosen||!targetKey||!h.editing())return;
     try {
@@ -66,51 +52,41 @@ export function createVectorEditor(h) {
       const added=appendLayout(candidate,targetKey,imported,sourceKey,id);
       h.validate(candidate); // Enforce combined limits before changing any data.
       restore(layout,targetKey,snapshot(candidate,targetKey));
-      selected=added;editable=new Set([...editable,...added]);active=true;h.cancelDrawing();save(before);h.render();announce(msg().added);
+      selected.clear();editable=new Set([...editable,...added]);active=true;h.cancelDrawing();save(before);h.render();announce(msg().added);
     }catch(error){announce(msg().invalid);}
   }
-  file.addEventListener('change',()=>addFile(file.files[0]));
   for(const container of h.toolbars) {
     const panel=document.createElement('div');panel.className='vector-editor-tools';panel.hidden=true;
-    const buttons={};const controls=document.createElement('div');controls.className='vector-actions';
-    const bar={panel,buttons};
-    for(const action of ['add','all','group','ungroup','undo','redo','flipX','flipY','fit','clear']) {
+    const buttons={};
+    for(const action of ['undo','redo','delete']) {
       const button=document.createElement('button');button.type='button';button.className='marker-tool';button.dataset.vectorAction=action;
-      button.addEventListener('click',()=>act(action,bar));buttons[action]=button;controls.append(button);
+      button.addEventListener('click',()=>action==='delete'?removeSelected():history(action==='undo'));
+      buttons[action]=button;panel.append(button);
     }
-    const lockLabel=document.createElement('label');lockLabel.className='vector-lock';const checkbox=document.createElement('input');checkbox.type='checkbox';checkbox.checked=lock;
-    const lockText=document.createElement('span');lockLabel.append(checkbox,lockText);controls.append(lockLabel);
+    const lockLabel=document.createElement('label');lockLabel.className='vector-lock';
+    const checkbox=document.createElement('input');checkbox.type='checkbox';checkbox.checked=lock;
+    const lockText=document.createElement('span');lockLabel.append(checkbox,lockText);panel.append(lockLabel);
     checkbox.addEventListener('change',()=>{lock=checkbox.checked;selected.clear();refresh();});
-    const numeric=document.createElement('div');numeric.className='vector-actions';
-    for(const [type,defaultValue,action] of [['angle','0','rotate'],['scale','100','scale']]) {
-      const label=document.createElement('label'),text=document.createElement('span'),input=document.createElement('input');input.type='number';input.value=defaultValue;input.step=type==='angle'?'1':'5';
-      if(type==='scale'){input.min='.1';input.max='100000';}
-      label.append(text,input);const apply=document.createElement('button');apply.className='marker-tool';apply.type='button';apply.addEventListener('click',()=>act(action,bar));numeric.append(label,apply);
-      bar[type]=input;bar[`${type}Label`]=text;bar[`${type}Button`]=apply;
-    }
-    const hint=document.createElement('span');hint.className='vector-hint';
-    const status=document.createElement('span');status.className='vector-status';status.setAttribute('role','status');
-    panel.append(controls,numeric,hint,status);container.append(panel);
-    Object.assign(bar,{checkbox,lockText,hint,status,numeric});bars.push(bar);
+    const status=document.createElement('span');status.className='vector-status';status.setAttribute('role','status');status.hidden=true;
+    panel.append(status);container.append(panel);bars.push({panel,buttons,checkbox,lockText,status});
   }
   function position(event,surface) {const r=surface.layer.getBoundingClientRect();return {x:(event.clientX-r.left)/r.width*100,y:(event.clientY-r.top)/r.height*100};}
   for(const config of h.surfaces) {
     const overlay=document.createElement('div');overlay.className='vector-selection-layer';config.stage.append(overlay);
-    const surface={...config,overlay};surfaces.push(surface);
+    const surface={...config,overlay};surfaces.push(surface);config.stage.tabIndex=-1;
     config.stage.addEventListener('pointerdown',event=>{
       if(!active||!h.editing()||h.drawing()||event.button!==0||event.target.closest('button:not([data-vector-handle]):not(.map-marker),input,textarea,.marker-context-menu'))return;
       const r=config.layer.getBoundingClientRect();if(!r.width||!r.height)return;
       const p=position(event,surface),handle=event.target.closest('[data-vector-handle]')?.dataset.vectorHandle;
       const target=event.target.closest('[data-marker-id],[data-annotation-id]');
-      let hit=target?(target.dataset.markerId?ref('m',target.dataset.markerId):ref('a',target.dataset.annotationId)):null;
-      if(hit&&!allowed(hit))hit=null;
-      if(hit&&!selected.has(hit))setSelection(new Set([...(event.shiftKey?selected:[]),hit]));
+      // Leave native marker drag/drop in charge, even inside a selected group.
+      if(target){selected.clear();refresh();return;}
       const b=bounds(h.layout(),key,selected);
-      let mode=handle|| (hit?'move':'marquee');
+      const mode=handle||'marquee';
       if(mode!=='marquee'&&!b)return;
       gesture={mode,start:p,last:p,surface,bounds:b,base:snapshot(h.layout(),key),selection:new Set(selected),append:event.shiftKey,pointerId:event.pointerId,moved:false};
       if(mode==='marquee'&&!event.shiftKey)selected.clear();
-      event.preventDefault();event.stopImmediatePropagation();config.stage.setPointerCapture(event.pointerId);refresh();
+      event.preventDefault();event.stopImmediatePropagation();config.stage.setPointerCapture(event.pointerId);config.stage.focus({preventScroll:true});refresh();
     },true);
     config.stage.addEventListener('pointermove',event=>{
       if(!gesture||gesture.surface!==surface||gesture.pointerId!==event.pointerId)return;
@@ -126,7 +102,8 @@ export function createVectorEditor(h) {
       else if(g.mode==='marquee') {
         const box={minX:Math.min(g.start.x,g.last.x),maxX:Math.max(g.start.x,g.last.x),minY:Math.min(g.start.y,g.last.y),maxY:Math.max(g.start.y,g.last.y)};
         const hits=eligibleEntries().filter(({value})=>vertices(value).every(p=>p.x>=box.minX&&p.x<=box.maxX&&p.y>=box.minY&&p.y<=box.maxY)).map(({kind,value})=>ref(kind,value.id));
-        selected=expandSelection(h.layout(),key,new Set([...(g.append?g.selection:[]),...hits]));
+        const picked=new Set([...(g.append?g.selection:[]),...hits]);
+        selected=picked.size>=2?expandSelection(h.layout(),key,picked):new Set();
       }else if(g.moved&&g.transformed)save(g.base);
       else restore(h.layout(),key,g.base);
       if(config.stage.hasPointerCapture(event.pointerId))config.stage.releasePointerCapture(event.pointerId);
@@ -134,8 +111,8 @@ export function createVectorEditor(h) {
     }
     config.stage.addEventListener('pointerup',event=>finish(event),true);
     config.stage.addEventListener('pointercancel',event=>finish(event,true),true);
-    config.stage.addEventListener('click',event=>{if(active&&h.editing()&&!event.target.closest('.marker-context-menu,.modal-map-close')){event.preventDefault();event.stopImmediatePropagation();}},true);
-    config.stage.addEventListener('dragstart',event=>{if(active&&h.editing()){event.preventDefault();event.stopImmediatePropagation();}},true);
+    config.stage.addEventListener('click',event=>{if(active&&h.editing()&&!event.target.closest('.marker-context-menu,.modal-map-close,.map-marker')){event.preventDefault();event.stopImmediatePropagation();}},true);
+    config.stage.addEventListener('dragstart',event=>{if(active&&h.editing()&&!event.target.closest('.map-marker')){event.preventDefault();event.stopImmediatePropagation();}},true);
   }
   function preview() {
     if(!gesture)return;
@@ -167,12 +144,9 @@ export function createVectorEditor(h) {
     for(const bar of bars) {
       bar.panel.hidden=!h.editing()||!key;
       for(const [action,button] of Object.entries(bar.buttons)) {
-        button.textContent=w[action];button.disabled=!key||(['group','ungroup','flipX','flipY','fit','clear'].includes(action)&&!selected.size)||(action==='undo'&&!undo.length)||(action==='redo'&&!redo.length);
+        button.textContent=w[action];button.disabled=!key||!!gesture||(action==='delete'&&!selected.size)||(action==='undo'&&!undo.length)||(action==='redo'&&!redo.length);
       }
       bar.checkbox.checked=lock;bar.lockText.textContent=w.lock;
-      bar.angleLabel.textContent=w.degrees;bar.scaleLabel.textContent=w.scale;bar.angleButton.textContent=w.apply;bar.scaleButton.textContent=w.resize;
-      bar.angleButton.disabled=bar.scaleButton.disabled=!selected.size;bar.numeric.hidden=!active;bar.hint.hidden=!active;bar.hint.textContent=w.hint;
-      bar.status.textContent=active?`${selected.size} ${w.count}${b&&(b.minX<0||b.maxX>100||b.minY<0||b.maxY>100)?` · ${w.outside}`:''}`:'';
     }
     for(const surface of surfaces) {
       const {overlay,layer,stage}=surface;
@@ -184,10 +158,10 @@ export function createVectorEditor(h) {
       if(overlay.hidden||!r.width)continue;
       function rectangle(box,className) {const el=document.createElement('div');el.className=className;Object.assign(el.style,{left:`${box.minX}%`,top:`${box.minY}%`,width:`${box.maxX-box.minX}%`,height:`${box.maxY-box.minY}%`});overlay.append(el);return el;}
       if(gesture?.mode==='marquee'&&gesture.surface===surface){const a=gesture.start,c=gesture.last;rectangle({minX:Math.min(a.x,c.x),minY:Math.min(a.y,c.y),maxX:Math.max(a.x,c.x),maxY:Math.max(a.y,c.y)},'vector-marquee');}
-      else if(b) {
-        const box=rectangle(b,'vector-box');box.dataset.vectorHandle='move';
-        for(const name of ['nw','ne','sw','se','rotate']) {
-          const handle=document.createElement('button');handle.type='button';handle.dataset.vectorHandle=name;handle.className=`vector-handle vector-${name}`;handle.setAttribute('aria-label',name==='rotate'?w.rotate:`${w.resize} ${name}`);box.append(handle);
+      else if(b&&selected.size>=2) {
+        const box=rectangle(b,'vector-box');
+        for(const name of ['nw','ne','sw','se','rotate','move']) {
+          const handle=document.createElement('button');handle.type='button';handle.dataset.vectorHandle=name;handle.className=`vector-handle vector-${name}`;handle.setAttribute('aria-label',name==='rotate'?w.rotate:name==='move'?w.move:`${w.resize} ${name}`);box.append(handle);
         }
       }
     }
@@ -195,8 +169,10 @@ export function createVectorEditor(h) {
   }
   document.addEventListener('keydown',event=>{
     if(!h.editing()||!active||event.target.closest('input,textarea,select,[contenteditable="true"]'))return;
-    if((event.ctrlKey||event.metaKey)&&['z','y','a'].includes(event.key.toLowerCase())) {
-      event.preventDefault();event.stopImmediatePropagation();const k=event.key.toLowerCase();if(k==='a')act('all');else history(k==='z'&&!event.shiftKey);
+    if((event.ctrlKey||event.metaKey)&&['z','y'].includes(event.key.toLowerCase())) {
+      event.preventDefault();event.stopImmediatePropagation();const k=event.key.toLowerCase();history(k==='z'&&!event.shiftKey);
+    }else if(event.key==='Delete'&&selected.size&&!gesture) {
+      event.preventDefault();event.stopImmediatePropagation();removeSelected();
     }else if(event.key==='Escape') {
       if(gesture){restore(h.layout(),key,gesture.base);gesture=null;h.render();}else selected.clear();refresh();
     }else if(['ArrowLeft','ArrowRight','ArrowUp','ArrowDown'].includes(event.key)&&selected.size) {

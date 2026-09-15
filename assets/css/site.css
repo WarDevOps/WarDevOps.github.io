@@ -647,7 +647,7 @@
 .editor-disclosure > summary { padding: 14px 0; color: var(--muted); font-size: .8rem; cursor: pointer; }
 .editor-disclosure > summary:focus-visible, .summary-read-more:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 .editor-disclosure .marker-tools { padding: 0 0 14px; }
-.vector-editor-tools { flex-basis: 100%; display: grid; gap: 8px; padding-top: 8px; border-top: 1px solid var(--line); }
+.vector-editor-tools { display: contents; }
 .vector-editor-tools[hidden], .vector-editor-tools [hidden] { display: none !important; }
 .vector-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 7px; }
 .vector-actions label { display: inline-flex; align-items: center; gap: 6px; }
@@ -657,13 +657,15 @@
 .vector-selection-layer { position: absolute; z-index: 8; pointer-events: none; overflow: visible; }
 .vector-selection-layer[hidden] { display: none; }
 .vector-box, .vector-marquee { position: absolute; box-sizing: border-box; border: 1px solid var(--accent); }
-.vector-box { pointer-events: auto; cursor: move; }
+.vector-box { pointer-events: none; }
+.vector-move { left: 50%; top: 50%; width: 24px; height: 24px; cursor: move; }
+.vector-move::after { content: "✥"; }
 .vector-marquee { background: color-mix(in srgb, var(--accent) 12%, transparent); }
 .vector-handle { position: absolute; width: 13px; height: 13px; padding: 0; border: 1px solid var(--ink); background: var(--accent); border-radius: 2px; transform: translate(-50%, -50%); pointer-events: auto; }
-.vector-nw { left: 0; top: 0; cursor: nwse-resize; }
-.vector-ne { left: 100%; top: 0; cursor: nesw-resize; }
-.vector-sw { left: 0; top: 100%; cursor: nesw-resize; }
-.vector-se { left: 100%; top: 100%; cursor: nwse-resize; }
+.vector-nw { left: -10px; top: -10px; cursor: nwse-resize; }
+.vector-ne { left: calc(100% + 10px); top: -10px; cursor: nesw-resize; }
+.vector-sw { left: -10px; top: calc(100% + 10px); cursor: nesw-resize; }
+.vector-se { left: calc(100% + 10px); top: calc(100% + 10px); cursor: nwse-resize; }
 .vector-rotate { left: 50%; top: -22px; border-radius: 50%; cursor: grab; }
 .is-vector-selecting { touch-action: none; cursor: crosshair; }
 .map-marker.is-vector-selected > img { outline: 1px solid var(--accent); outline-offset: 2px; }
@@ -693,3 +695,9 @@
   display: none !important;
 }
 .editor-tools-toggle[hidden] { display: none; }
+
+.marker-tools, .modal-marker-tools { flex-wrap: nowrap; overflow-x: auto; }
+.marker-tools > *, .modal-marker-tools > *, .vector-editor-tools > * { flex-shrink: 0; }
+.vector-lock { display: inline-flex; align-items: center; gap: 5px; white-space: nowrap; }
+.marker-editor-note, .modal-marker-editor-note { display: none; }
+.vector-status:empty, .marker-status:empty, .modal-marker-status:empty { display: none; }
