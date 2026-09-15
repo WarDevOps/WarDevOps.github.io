@@ -27,3 +27,4 @@
 !/generate-comment-image-manifest.mjs
 !/scripts/generate-map-catalog.mjs
 !/scripts/test-map-summary-html.mjs
+/assets/data/ReplayCalibration
