@@ -2439,18 +2439,20 @@ let vectorEditor = null;
     }
     function deleteAllPlacedMarkers() {
       if (!window.confirm(t("confirmDeleteAllMarkers"))) return;
-      for (const key of validMarkerLayoutKeys) {
-        markerLayout.markers[key] = [];
-        if (Array.isArray(markerLayout.annotations[key])) {
-          markerLayout.annotations[key] = markerLayout.annotations[key].filter(annotation => annotation.type !== "aimHere");
-        }
-      }
+      markerLayout.markers = {};
+      markerLayout.annotations = {};
       if (upstreamMarkerLayout) {
         markLayoutAsLocalEdits(markerLayout, upstreamMarkerLayout, mapNames, upstreamMarkerLayoutRevision);
       }
       hiddenMarkers.clear();
       hiddenAnnotations.clear();
+      hiddenMarkerTypes.clear();
+      state.focusedTankMarkerId = null;
+      state.drawing = null;
+      updateDrawingState();
       hideMarkerContextMenu();
+      hideAnnotationContextMenu();
+      updateLegendVisibility();
       renderMarkers();
       persistMarkerLayout("allMarkersDeleted");
     }
