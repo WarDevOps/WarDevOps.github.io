@@ -1,6 +1,6 @@
     import { MARKER_LAYOUT_VERSION, backupMarkerLayout, loadMarkerLayout, saveMarkerLayout as saveMarkerLayoutToStorage } from './marker-storage.js?v=replay-vectors-20260915';
 import { initDiscordMemberCount } from './discord-stats.js';
-import { createVectorEditor } from './vector-editor.js?v=replay-vectors-20260915';
+import { createVectorEditor } from './vector-editor.js?v=replay-import-add-20260915';
 import { validateVectorGroups, pruneGroups } from './vector-model.js?v=replay-vectors-20260915';
 let vectorEditor = null;
     import { commentImages } from './comment-images.js?v=comment-images-c25d702d2907';
@@ -1976,9 +1976,29 @@ let vectorEditor = null;
         }
       });
     }
+    let editorToolsCollapsed = false;
+    const editorToolToggles = [toggleEditor, modalToggleEditor].map(modeButton => {
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = "marker-tool editor-tools-toggle";
+      button.hidden = true;
+      modeButton.after(button);
+      button.addEventListener("click", () => {
+        editorToolsCollapsed = !editorToolsCollapsed;
+        updateMarkerEditor();
+      });
+      return button;
+    });
     function updateMarkerEditor() {
       mapViewer.classList.toggle("is-editing", state.editMode);
-      if (state.editMode) $("#editor-disclosure").open = true;
+      editorToolToggles.forEach(button => {
+        button.hidden = !state.editMode;
+        button.textContent = state.language === "ko"
+          ? (editorToolsCollapsed ? "편집 도구 펼치기" : "편집 도구 접기")
+          : (editorToolsCollapsed ? "Show editing tools" : "Hide editing tools");
+        button.setAttribute("aria-expanded", String(!editorToolsCollapsed));
+        button.parentElement.classList.toggle("is-tools-collapsed", state.editMode && editorToolsCollapsed);
+      });
       dialog.classList.toggle("is-editing", state.editMode);
       toggleEditor.setAttribute("aria-pressed", String(state.editMode));
       modalToggleEditor.setAttribute("aria-pressed", String(state.editMode));
@@ -2006,6 +2026,7 @@ let vectorEditor = null;
         cancelDrawing();
         closeTacticalSummaryEditor();
       }
+      if (enabled && !state.editMode) $("#editor-disclosure").open = true;
       state.editMode = enabled;
       state.focusedTankMarkerId = null;
       hideMarkerContextMenu();
@@ -2228,7 +2249,14 @@ let vectorEditor = null;
         return;
       }
       try {
-        applyMarkerLayout(validateImportedMarkerLayout(JSON.parse(await file.text())));
+        const imported = validateImportedMarkerLayout(JSON.parse(await file.text()));
+        const isReplay = Object.values(imported.vectorGroups || {}).some(groups =>
+          groups.some(group => group.source?.replayId));
+        if (isReplay) {
+          await vectorEditor.addFile(file);
+          return;
+        }
+        applyMarkerLayout(imported);
         if (upstreamMarkerLayout) {
           markLayoutAsLocalEdits(markerLayout, upstreamMarkerLayout, mapNames, upstreamMarkerLayoutRevision);
         }
@@ -2628,9 +2656,6 @@ let vectorEditor = null;
       updateSummaryPreview();
     });
     new ResizeObserver(updateSummaryPreview).observe(mapTacticalSummaryCopy);
-    $("#editor-disclosure").addEventListener("toggle", () => {
-      if (!$("#editor-disclosure").open && state.editMode) setEditorMode(false);
-    });
     toggleEditor.addEventListener("click", () => setEditorMode(!state.editMode));
     modalToggleEditor.addEventListener("click", () => setEditorMode(!state.editMode));
     editMapTacticalSummary.addEventListener("click", openTacticalSummaryEditor);

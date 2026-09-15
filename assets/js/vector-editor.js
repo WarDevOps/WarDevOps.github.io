@@ -49,8 +49,8 @@ export function createVectorEditor(h) {
     if(action==='scale'){const scale=Number(bar.scale.value)/100;if(scale>=.001&&scale<=1000)matrixAction(around(b.cx,b.cy,scale));}
   }
   const file=document.createElement('input');file.id='vector-import-file';file.type='file';file.accept='.json,application/json';file.hidden=true;document.body.append(file);
-  file.addEventListener('change',async()=>{
-    const targetKey=key,layout=h.layout(),chosen=file.files[0];if(!chosen)return;
+  async function addFile(chosen) {
+    const targetKey=h.key(),layout=h.layout();if(!chosen||!targetKey||!h.editing())return;
     try {
       if(chosen.size>16*1024*1024)throw new Error('Too large');
       const imported=h.validate(JSON.parse(await chosen.text()));
@@ -68,7 +68,8 @@ export function createVectorEditor(h) {
       restore(layout,targetKey,snapshot(candidate,targetKey));
       selected=added;editable=new Set([...editable,...added]);active=true;h.cancelDrawing();save(before);h.render();announce(msg().added);
     }catch(error){announce(msg().invalid);}
-  });
+  }
+  file.addEventListener('change',()=>addFile(file.files[0]));
   for(const container of h.toolbars) {
     const panel=document.createElement('div');panel.className='vector-editor-tools';panel.hidden=true;
     const buttons={};const controls=document.createElement('div');controls.className='vector-actions';
@@ -204,7 +205,7 @@ export function createVectorEditor(h) {
   },true);
   new ResizeObserver(refresh).observe(h.surfaces[0].stage);
   refresh();
-  return {refresh,onExternalCommit(){
+  return {refresh,addFile,onExternalCommit(){
     const current=new Set(entries(h.layout(),key).map(({kind,value})=>ref(kind,value.id)));
     if(!internal){undo=[];redo=[];for(const r of current)if(!known.has(r))editable.add(r);}
     known=current;

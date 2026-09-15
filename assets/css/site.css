@@ -686,3 +686,10 @@
   #modal-map-variation { width: 100%; min-width: 0; max-width: none; }
   .modal-team-switch { margin-top: 0; }
 }
+
+/* Keep editing active while reclaiming space for the map. */
+.marker-tools.is-tools-collapsed > :not(#toggle-editor):not(.editor-tools-toggle),
+.modal-marker-tools.is-tools-collapsed > :not(#modal-toggle-editor):not(.editor-tools-toggle) {
+  display: none !important;
+}
+.editor-tools-toggle[hidden] { display: none; }

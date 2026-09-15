@@ -15,3 +15,9 @@
 
 # Internal documentation stays on local machines.
 /[dD][oO][cC][sS]/
+
+# Keep only MJS entry points required by the Pages build and its checks.
+*.mjs
+!/generate-comment-image-manifest.mjs
+!/scripts/generate-map-catalog.mjs
+!/scripts/test-map-summary-html.mjs
