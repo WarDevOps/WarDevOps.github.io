@@ -45,13 +45,13 @@
     "Pradesh": "2026-08-31",
     "Red Desert": "2026-09-15",
     "Sands of Sinai": "2026-09-15",
-    "Second Battle of El Alamein": "2026-09-01",
+    "Second Battle of El Alamein": "2026-09-15",
     "Seversk-13": "2026-09-14",
     "Sinai": "2026-09-15",
     "Spaceport": "2026-09-15",
     "Stalingrad": "2026-08-25",
     "Sun City": "2026-09-15",
-    "Surroundings of Volokolamsk": "2026-08-16",
+    "Surroundings of Volokolamsk": "2026-09-15",
     "Sweden": "2026-09-01",
     "Test Site-2271": "2026-09-14",
     "Tunisia": "2026-09-15",
@@ -92,16 +92,18 @@
     "North Holland": "2026-09-14T23:28:36Z",
     "Poland": "2026-09-15T02:55:29Z",
     "Port Novorossiysk": "2026-09-08T23:53:12Z",
+    "Red Desert": "2026-09-15T03:19:40Z",
     "Sands of Sinai": "2026-09-15T02:08:32Z",
     "Seversk-13": "2026-09-13T19:59:09Z",
     "Sinai": "2026-09-15T03:39:06Z",
     "Spaceport": "2026-09-15T03:04:03Z",
     "Sun City": "2026-09-14T16:27:44Z",
+    "Surroundings of Volokolamsk": "2026-09-15T03:51:26Z",
     "Test Site-2271": "2026-09-13T19:14:47Z",
     "Tunisia": "2026-09-15T02:42:55Z",
     "Vietnam": "2026-09-12T00:24:23Z",
     "White Rock Fortress": "2026-09-02T04:58:42Z",
-    "Red Desert": "2026-09-15T03:19:40Z"
+    "Second Battle of El Alamein": "2026-09-15T04:50:18Z"
   },
   "tacticalSummaries": {
     "Eastern Europe": {
@@ -14810,7 +14812,7 @@
       },
       {
         "id": "second-battle-of-el-alamein-domination-2-red-role-01",
-        "type": "spawnKill",
+        "type": "sniper",
         "x": 48.33,
         "y": 3.54,
         "parentTankId": "second-battle-of-el-alamein-domination-2-red-unit-02"
@@ -14981,6 +14983,13 @@
         "x": 17.99,
         "y": 92.99,
         "parentTankId": "second-battle-of-el-alamein-domination-2-red-unit-17"
+      },
+      {
+        "id": "mu270seg-aau5vf",
+        "type": "spawnKill",
+        "x": 63.75,
+        "y": 78.82,
+        "parentTankId": "second-battle-of-el-alamein-domination-2-red-unit-16"
       }
     ],
     "Second Battle of El Alamein::domination-2|Blue": [
@@ -15050,7 +15059,7 @@
       },
       {
         "id": "second-battle-of-el-alamein-domination-2-blue-role-05",
-        "type": "spawnKill",
+        "type": "sniper",
         "x": 87.64,
         "y": 48.12,
         "parentTankId": "second-battle-of-el-alamein-domination-2-blue-unit-06"
@@ -15178,7 +15187,7 @@
       },
       {
         "id": "second-battle-of-el-alamein-domination-2-blue-role-13",
-        "type": "spawnKill",
+        "type": "sniper",
         "x": 80.49,
         "y": 92.99,
         "parentTankId": "second-battle-of-el-alamein-domination-2-blue-unit-18"
@@ -15191,10 +15200,31 @@
       },
       {
         "id": "second-battle-of-el-alamein-domination-2-blue-role-14",
-        "type": "spawnKill",
+        "type": "sniper",
         "x": 55.35,
         "y": 94.03,
         "parentTankId": "second-battle-of-el-alamein-domination-2-blue-unit-19"
+      },
+      {
+        "id": "mu26zwt5-coto6t",
+        "type": "spawnKill",
+        "x": 17.15,
+        "y": 48.33,
+        "parentTankId": "second-battle-of-el-alamein-domination-2-blue-unit-07"
+      },
+      {
+        "id": "mu26zxs6-970kcw",
+        "type": "spawnKill",
+        "x": 9.93,
+        "y": 50.97,
+        "parentTankId": "second-battle-of-el-alamein-domination-2-blue-unit-09"
+      },
+      {
+        "id": "mu26zz2c-8ost7n",
+        "type": "spawnKill",
+        "x": 52.08,
+        "y": 23.19,
+        "parentTankId": "second-battle-of-el-alamein-domination-2-blue-unit-01"
       }
     ],
     "Seversk-13::domination-1|Blue": [
@@ -16828,7 +16858,21 @@
       }
     ],
     "Surroundings of Volokolamsk::domination-1|Blue": [],
-    "Surroundings of Volokolamsk::domination-1|Red": [],
+    "Surroundings of Volokolamsk::domination-1|Red": [
+      {
+        "id": "mu24veoz-axd8ht",
+        "type": "tankDestroyer",
+        "x": 66.94,
+        "y": 81.16
+      },
+      {
+        "id": "mu24vgey-bfrh0r",
+        "type": "sniper",
+        "x": 66.94,
+        "y": 81.16,
+        "parentTankId": "mu24veoz-axd8ht"
+      }
+    ],
     "Sweden::domination-1|Blue": [
       {
         "id": "sweden-blue-unit-01",
@@ -51349,6 +51393,42 @@
           }
         ],
         "dangerRoute": true
+      },
+      {
+        "id": "mu270nux-s02jnt",
+        "type": "aimHere",
+        "parentTankId": "second-battle-of-el-alamein-domination-2-red-unit-13",
+        "startX": 23.75,
+        "startY": 58.75,
+        "endX": 85.97,
+        "endY": 32.93
+      },
+      {
+        "id": "mu270r4t-9c4lr5",
+        "type": "aimHere",
+        "parentTankId": "second-battle-of-el-alamein-domination-2-red-unit-08",
+        "startX": 15.21,
+        "startY": 37.92,
+        "endX": 62.42,
+        "endY": 77.15
+      },
+      {
+        "id": "mu270u0f-w4sgnb",
+        "type": "aimHere",
+        "parentTankId": "second-battle-of-el-alamein-domination-2-red-unit-16",
+        "startX": 63.75,
+        "startY": 78.82,
+        "endX": 80.15,
+        "endY": 66.29
+      },
+      {
+        "id": "mu2711b3-mvilcj",
+        "type": "aimHere",
+        "parentTankId": "second-battle-of-el-alamein-domination-2-red-unit-02",
+        "startX": 48.33,
+        "startY": 3.54,
+        "endX": 78.06,
+        "endY": 57.17
       }
     ],
     "Second Battle of El Alamein::domination-2|Blue": [
@@ -52105,6 +52185,24 @@
           }
         ],
         "dangerRoute": true
+      },
+      {
+        "id": "mu2703yh-hyy30t",
+        "type": "aimHere",
+        "parentTankId": "second-battle-of-el-alamein-domination-2-blue-unit-07",
+        "startX": 17.15,
+        "startY": 48.33,
+        "endX": 34.45,
+        "endY": 16.16
+      },
+      {
+        "id": "mu2706fm-c6tfjj",
+        "type": "aimHere",
+        "parentTankId": "second-battle-of-el-alamein-domination-2-blue-unit-09",
+        "startX": 9.93,
+        "startY": 50.97,
+        "endX": 33.58,
+        "endY": 16.42
       }
     ],
     "Seversk-13::domination-1|Blue": [
@@ -55068,6 +55166,37 @@
           }
         ],
         "dangerRoute": true
+      },
+      {
+        "id": "mu24t809-58ycdo",
+        "type": "route",
+        "points": [
+          {
+            "x": 69.6,
+            "y": 81.67
+          },
+          {
+            "x": 75.79,
+            "y": 79.52
+          },
+          {
+            "x": 80.21,
+            "y": 77.88
+          },
+          {
+            "x": 81.35,
+            "y": 76.23
+          }
+        ]
+      },
+      {
+        "id": "mu24xcbg-itfskq",
+        "type": "aimHere",
+        "parentTankId": "mu24veoz-axd8ht",
+        "startX": 66.94,
+        "startY": 81.16,
+        "endX": 25.73,
+        "endY": 87.48
       }
     ],
     "Sweden::domination-1|Blue": [
@@ -61805,6 +61934,6 @@
     "Arctic Pier::domination-1|Blue": [],
     "Sands of Sinai::domination-1|Blue": []
   },
-  "updatedAt": "2026-09-15T03:39:06.884Z",
-  "exportedAt": "2026-09-15T03:46:03.365Z"
+  "updatedAt": "2026-09-15T04:50:18.208Z",
+  "exportedAt": "2026-09-15T04:59:50.600Z"
 }

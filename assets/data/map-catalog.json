@@ -426,8 +426,8 @@
       "name": "Battle of Hürtgen Forest",
       "aliases": "휘르트겐 숲 전투",
       "slug": "battle-of-hurtgen-forest",
-      "updated": "2026-09-14",
-      "updatedAt": "2026-09-13T23:17:23Z",
+      "updated": "2026-09-15",
+      "updatedAt": "2026-09-15T02:14:42Z",
       "br": {
         "min": 4.7
       },
@@ -808,7 +808,7 @@
       "aliases": "폴란드의 들판",
       "slug": "fields-of-poland",
       "updated": "2026-09-15",
-      "updatedAt": "2026-09-14T17:05:44Z",
+      "updatedAt": "2026-09-15T02:54:34Z",
       "br": {
         "min": 4.7
       },
@@ -923,7 +923,8 @@
       "name": "Fulda",
       "aliases": "풀다",
       "slug": "fulda",
-      "updated": "2026-08-18",
+      "updated": "2026-09-15",
+      "updatedAt": "2026-09-15T02:33:41Z",
       "br": {
         "min": 6.7
       },
@@ -1100,7 +1101,7 @@
       "aliases": "중동",
       "slug": "middle-east",
       "updated": "2026-09-15",
-      "updatedAt": "2026-09-14T16:43:26Z",
+      "updatedAt": "2026-09-15T03:32:27Z",
       "br": {
         "min": 5
       },
@@ -1120,8 +1121,8 @@
       "name": "Mozdok",
       "aliases": "모즈도크",
       "slug": "mozdok",
-      "updated": "2026-09-07",
-      "updatedAt": "2026-09-07T14:15:23Z",
+      "updated": "2026-09-15",
+      "updatedAt": "2026-09-15T03:13:51Z",
       "br": {
         "min": 3.7
       },
@@ -1192,7 +1193,7 @@
       "aliases": "폴란드",
       "slug": "poland",
       "updated": "2026-09-15",
-      "updatedAt": "2026-09-14T17:01:59Z",
+      "updatedAt": "2026-09-15T02:55:29Z",
       "br": {
         "min": 1
       },
@@ -1267,7 +1268,8 @@
       "name": "Red Desert",
       "aliases": "붉은 사막",
       "slug": "red-desert",
-      "updated": "2026-08-25",
+      "updated": "2026-09-15",
+      "updatedAt": "2026-09-15T03:19:40Z",
       "br": {
         "min": 9.7
       },
@@ -1288,7 +1290,7 @@
       "aliases": "시나이의 모래사장",
       "slug": "sands-of-sinai",
       "updated": "2026-09-15",
-      "updatedAt": "2026-09-15T01:23:21Z",
+      "updatedAt": "2026-09-15T02:08:32Z",
       "br": {
         "min": 5
       },
@@ -1308,7 +1310,8 @@
       "name": "Second Battle of El Alamein",
       "aliases": "엘 알라메인",
       "slug": "second-battle-of-el-alamein",
-      "updated": "2026-09-01",
+      "updated": "2026-09-15",
+      "updatedAt": "2026-09-15T04:50:18Z",
       "br": {
         "min": 5
       },
@@ -1358,8 +1361,8 @@
       "name": "Sinai",
       "aliases": "시나이",
       "slug": "sinai",
-      "updated": "2026-09-14",
-      "updatedAt": "2026-09-13T19:47:49Z",
+      "updated": "2026-09-15",
+      "updatedAt": "2026-09-15T03:39:06Z",
       "br": {
         "min": 1
       },
@@ -1379,8 +1382,8 @@
       "name": "Spaceport",
       "aliases": "우주공항",
       "slug": "spaceport",
-      "updated": "2026-09-14",
-      "updatedAt": "2026-09-13T19:57:57Z",
+      "updated": "2026-09-15",
+      "updatedAt": "2026-09-15T03:04:03Z",
       "br": {
         "min": 6.7
       },
@@ -1443,7 +1446,8 @@
       "name": "Surroundings of Volokolamsk",
       "aliases": "볼로콜람스크 포위",
       "slug": "surroundings-of-volokolamsk",
-      "updated": "2026-08-16",
+      "updated": "2026-09-15",
+      "updatedAt": "2026-09-15T03:51:26Z",
       "br": {
         "min": 9.7
       },
@@ -1504,8 +1508,8 @@
       "name": "Tunisia",
       "aliases": "튀니지",
       "slug": "tunisia",
-      "updated": "2026-09-14",
-      "updatedAt": "2026-09-13T19:32:06Z",
+      "updated": "2026-09-15",
+      "updatedAt": "2026-09-15T02:42:55Z",
       "br": {
         "min": 4.7
       },

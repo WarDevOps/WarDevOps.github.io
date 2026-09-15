@@ -75,7 +75,7 @@ export function createVectorEditor(h) {
     const overlay=document.createElement('div');overlay.className='vector-selection-layer';config.stage.append(overlay);
     const surface={...config,overlay};surfaces.push(surface);config.stage.tabIndex=-1;
     config.stage.addEventListener('pointerdown',event=>{
-      if(!active||!h.editing()||h.drawing()||event.button!==0||event.target.closest('button:not([data-vector-handle]):not(.map-marker),input,textarea,.marker-context-menu'))return;
+      if(!active||!h.editing()||h.drawing()||event.button!==0||event.target.closest('button:not([data-vector-handle]):not(.map-marker),input,textarea,.marker-context-menu,.annotation-context-menu'))return;
       const r=config.layer.getBoundingClientRect();if(!r.width||!r.height)return;
       const p=position(event,surface),handle=event.target.closest('[data-vector-handle]')?.dataset.vectorHandle;
       const target=event.target.closest('[data-marker-id],[data-annotation-id]');
@@ -111,7 +111,7 @@ export function createVectorEditor(h) {
     }
     config.stage.addEventListener('pointerup',event=>finish(event),true);
     config.stage.addEventListener('pointercancel',event=>finish(event,true),true);
-    config.stage.addEventListener('click',event=>{if(active&&h.editing()&&!event.target.closest('.marker-context-menu,.modal-map-close,.map-marker')){event.preventDefault();event.stopImmediatePropagation();}},true);
+    config.stage.addEventListener('click',event=>{if(active&&h.editing()&&!event.target.closest('.marker-context-menu,.annotation-context-menu,.modal-map-close,.map-marker')){event.preventDefault();event.stopImmediatePropagation();}},true);
     config.stage.addEventListener('dragstart',event=>{if(active&&h.editing()&&!event.target.closest('.map-marker')){event.preventDefault();event.stopImmediatePropagation();}},true);
   }
   function preview() {
