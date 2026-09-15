@@ -13,7 +13,7 @@
     "Ardennes": "2026-09-14",
     "Ash River": "2026-09-02",
     "Attica": "2026-09-03",
-    "Battle of Hürtgen Forest": "2026-09-14",
+    "Battle of Hürtgen Forest": "2026-09-15",
     "Berlin": "2026-09-11",
     "Breslau": "2026-09-11",
     "Campania": "2026-09-03",
@@ -72,7 +72,7 @@
     "Ardennes": "2026-09-13T23:15:39Z",
     "Ash River": "2026-09-01T16:50:15Z",
     "Attica": "2026-09-03T02:06:24Z",
-    "Battle of Hürtgen Forest": "2026-09-13T23:17:23Z",
+    "Battle of Hürtgen Forest": "2026-09-15T02:14:42Z",
     "Berlin": "2026-09-10T23:37:22Z",
     "Breslau": "2026-09-11T09:46:34Z",
     "Campania": "2026-09-03T01:49:21Z",
@@ -91,7 +91,7 @@
     "North Holland": "2026-09-14T23:28:36Z",
     "Poland": "2026-09-14T17:01:59Z",
     "Port Novorossiysk": "2026-09-08T23:53:12Z",
-    "Sands of Sinai": "2026-09-15T01:23:21Z",
+    "Sands of Sinai": "2026-09-15T02:08:32Z",
     "Seversk-13": "2026-09-13T19:59:09Z",
     "Sinai": "2026-09-13T19:47:49Z",
     "Spaceport": "2026-09-13T19:57:57Z",
@@ -6372,37 +6372,50 @@
         "y": 23.13
       },
       {
-        "id": "mtw6d80d-q032y8",
-        "type": "tankDestroyerRed",
-        "x": 16.04,
-        "y": 58.2
-      },
-      {
-        "id": "mtw6dci8-291aju",
-        "type": "sniper",
-        "x": 16.04,
-        "y": 58.2,
-        "parentTankId": "mtw6d80d-q032y8"
-      },
-      {
-        "id": "mtw6g00q-rnjear",
-        "type": "mainBattleTankRed",
-        "x": 28.26,
-        "y": 31.15
-      },
-      {
-        "id": "mtw6g8z1-6tg7z3",
-        "type": "highRiskSpot",
-        "x": 28.26,
-        "y": 31.15,
-        "parentTankId": "mtw6g00q-rnjear"
-      },
-      {
         "id": "mtw6ga7d-qkovf6",
         "type": "highRiskSpot",
         "x": 20.61,
         "y": 23.13,
         "parentTankId": "mtw67mmp-9vw55z"
+      },
+      {
+        "id": "mu219wkg-suk072",
+        "type": "tankDestroyerRed",
+        "x": 10.3,
+        "y": 40.83
+      },
+      {
+        "id": "mu219y0j-xr3kc6",
+        "type": "highRiskSpot",
+        "x": 10.3,
+        "y": 40.83,
+        "parentTankId": "mu219wkg-suk072"
+      },
+      {
+        "id": "mu21ee0f-4jc6e3",
+        "type": "mainBattleTankRed",
+        "x": 70.73,
+        "y": 39.95
+      },
+      {
+        "id": "mu21egd3-qbafxh",
+        "type": "highRiskSpot",
+        "x": 70.73,
+        "y": 39.95,
+        "parentTankId": "mu21ee0f-4jc6e3"
+      },
+      {
+        "id": "mu21gpkx-f7mlar",
+        "type": "mainBattleTankRed",
+        "x": 80.97,
+        "y": 43.87
+      },
+      {
+        "id": "mu21grbz-ftz6sh",
+        "type": "spawnKill",
+        "x": 80.97,
+        "y": 43.87,
+        "parentTankId": "mu21gpkx-f7mlar"
       }
     ],
     "Battle of Hürtgen Forest::conquest-3|Red": [],
@@ -13672,16 +13685,10 @@
     "Red Desert::domination-1|Red": [],
     "Sands of Sinai::domination-1|Red": [
       {
-        "id": "sands-of-sinai-red-unit-01",
-        "type": "mainBattleTankRed",
-        "x": 43.61,
-        "y": 23.82
-      },
-      {
         "id": "sands-of-sinai-red-unit-02",
         "type": "mainBattleTankRed",
-        "x": 23.89,
-        "y": 25.76
+        "x": 20.42,
+        "y": 17.57
       },
       {
         "id": "sands-of-sinai-red-unit-03",
@@ -13833,7 +13840,7 @@
       },
       {
         "id": "sands-of-sinai-red-role-11",
-        "type": "highRiskSpot",
+        "type": "sniper",
         "x": 77.15,
         "y": 65.14,
         "parentTankId": "sands-of-sinai-red-unit-15"
@@ -13859,7 +13866,7 @@
       },
       {
         "id": "sands-of-sinai-red-role-13",
-        "type": "highRiskSpot",
+        "type": "sniper",
         "x": 51.04,
         "y": 79.38,
         "parentTankId": "sands-of-sinai-red-unit-17"
@@ -13872,7 +13879,7 @@
       },
       {
         "id": "sands-of-sinai-red-role-14",
-        "type": "highRiskSpot",
+        "type": "sniper",
         "x": 67.92,
         "y": 88.82,
         "parentTankId": "sands-of-sinai-red-unit-18"
@@ -13888,6 +13895,27 @@
         "type": "antiAirRed",
         "x": 37.85,
         "y": 94.58
+      },
+      {
+        "id": "mu217rdd-qmwe47",
+        "type": "spawnKill",
+        "x": 79.65,
+        "y": 32.43,
+        "parentTankId": "sands-of-sinai-red-unit-03"
+      },
+      {
+        "id": "mu217t3k-7zawdx",
+        "type": "spawnKill",
+        "x": 90.83,
+        "y": 34.72,
+        "parentTankId": "sands-of-sinai-red-unit-04"
+      },
+      {
+        "id": "mu218005-nq9nvo",
+        "type": "spawnKill",
+        "x": 20.42,
+        "y": 17.57,
+        "parentTankId": "sands-of-sinai-red-unit-02"
       }
     ],
     "Sands of Sinai::domination-1|Blue": [
@@ -14072,16 +14100,31 @@
         "y": 60.42
       },
       {
-        "id": "sands-of-sinai-blue-unit-17",
-        "type": "mainBattleTank",
-        "x": 46.67,
-        "y": 75.35
-      },
-      {
         "id": "sands-of-sinai-blue-unit-18",
         "type": "mainBattleTank",
-        "x": 25.69,
-        "y": 76.04
+        "x": 22.57,
+        "y": 87.61
+      },
+      {
+        "id": "mu2173wn-gd9eje",
+        "type": "spawnKill",
+        "x": 22.57,
+        "y": 87.61,
+        "parentTankId": "sands-of-sinai-blue-unit-18"
+      },
+      {
+        "id": "mu2179c0-wfnr5r",
+        "type": "sniper",
+        "x": 88.19,
+        "y": 56.94,
+        "parentTankId": "sands-of-sinai-blue-unit-15"
+      },
+      {
+        "id": "mu217c0j-fxxpd1",
+        "type": "spawnKill",
+        "x": 76.46,
+        "y": 60.42,
+        "parentTankId": "sands-of-sinai-blue-unit-16"
       }
     ],
     "Second Battle of El Alamein::domination-1|Red": [
@@ -32862,22 +32905,151 @@
     ],
     "Battle of Hürtgen Forest::domination-2|Red": [
       {
-        "id": "mtw6dax0-z63zde",
+        "id": "mu21a7xv-l62u01",
         "type": "aimHere",
-        "parentTankId": "mtw6d80d-q032y8",
-        "startX": 16.04,
-        "startY": 58.2,
-        "endX": 82.93,
-        "endY": 22.75
+        "parentTankId": "mu219wkg-suk072",
+        "startX": 10.3,
+        "startY": 40.83,
+        "endX": 63.02,
+        "endY": 51.45
       },
       {
-        "id": "mtw6g4tp-azqruj",
+        "id": "mu21axkv-hl4uol",
         "type": "aimHere",
-        "parentTankId": "mtw6g00q-rnjear",
-        "startX": 28.26,
-        "startY": 31.15,
-        "endX": 86.29,
-        "endY": 47.94
+        "parentTankId": "mtw67mmp-9vw55z",
+        "startX": 20.61,
+        "startY": 23.13,
+        "endX": 75.28,
+        "endY": 44.63
+      },
+      {
+        "id": "mu21bmsa-nj6f72",
+        "type": "aimHere",
+        "parentTankId": "mu219wkg-suk072",
+        "startX": 10.3,
+        "startY": 40.83,
+        "endX": 75.41,
+        "endY": 45.26
+      },
+      {
+        "id": "mu21ctb9-uo2ngg",
+        "type": "route",
+        "points": [
+          {
+            "x": 10.43,
+            "y": 39.7
+          },
+          {
+            "x": 11.82,
+            "y": 34.64
+          },
+          {
+            "x": 15.49,
+            "y": 27.94
+          },
+          {
+            "x": 18.77,
+            "y": 28.57
+          },
+          {
+            "x": 21.93,
+            "y": 34.64
+          },
+          {
+            "x": 24.97,
+            "y": 38.43
+          },
+          {
+            "x": 29.77,
+            "y": 39.44
+          },
+          {
+            "x": 34.58,
+            "y": 37.93
+          },
+          {
+            "x": 41.91,
+            "y": 39.06
+          },
+          {
+            "x": 47.35,
+            "y": 37.93
+          }
+        ]
+      },
+      {
+        "id": "mu21e0pj-heudmu",
+        "type": "route",
+        "points": [
+          {
+            "x": 9.67,
+            "y": 63.34
+          },
+          {
+            "x": 7.9,
+            "y": 59.54
+          },
+          {
+            "x": 7.14,
+            "y": 53.98
+          },
+          {
+            "x": 8.41,
+            "y": 46.9
+          },
+          {
+            "x": 9.92,
+            "y": 41.47
+          }
+        ]
+      },
+      {
+        "id": "mu21ec51-nnxlca",
+        "type": "route",
+        "points": [
+          {
+            "x": 47.72,
+            "y": 37.67
+          },
+          {
+            "x": 54.17,
+            "y": 36.16
+          },
+          {
+            "x": 58.09,
+            "y": 36.16
+          },
+          {
+            "x": 61.88,
+            "y": 36.79
+          },
+          {
+            "x": 68.84,
+            "y": 39.19
+          },
+          {
+            "x": 70.23,
+            "y": 39.95
+          }
+        ]
+      },
+      {
+        "id": "mu21gtyq-tcuxkb",
+        "type": "aimHere",
+        "parentTankId": "mu21gpkx-f7mlar",
+        "startX": 80.97,
+        "startY": 43.87,
+        "endX": 88.81,
+        "endY": 48.93
+      },
+      {
+        "id": "mu21gy6z-kjozyg",
+        "type": "aimHere",
+        "parentTankId": "mu21ee0f-4jc6e3",
+        "startX": 70.73,
+        "startY": 39.95,
+        "endX": 79.58,
+        "endY": 45.89
       }
     ],
     "Battle of Hürtgen Forest::conquest-3|Red": [],
@@ -48454,15 +48626,6 @@
         "endY": 91.26
       },
       {
-        "id": "sands-of-sinai-blue-aim-13",
-        "type": "aimHere",
-        "parentTankId": "sands-of-sinai-blue-unit-17",
-        "startX": 46.67,
-        "startY": 75.35,
-        "endX": 35.11,
-        "endY": 94.98
-      },
-      {
         "id": "sands-of-sinai-blue-route-01",
         "type": "route",
         "points": [
@@ -60420,6 +60583,6 @@
     "Arctic Pier::domination-1|Blue": [],
     "Sands of Sinai::domination-1|Blue": []
   },
-  "updatedAt": "2026-09-15T01:24:34.159Z",
-  "exportedAt": "2026-09-15T01:24:44.054Z"
+  "updatedAt": "2026-09-15T02:14:42.972Z",
+  "exportedAt": "2026-09-15T02:15:32.341Z"
 }
