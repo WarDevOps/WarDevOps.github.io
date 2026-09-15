@@ -16,6 +16,12 @@
 # Internal documentation stays on local machines.
 /[dD][oO][cC][sS]/
 
+# Private replay parser, binaries, downloads and extracted account routes.
+/scripts/replay-extractor/
+
+# Local Codex artifacts archived off the system drive.
+/local-artifacts/
+
 # Keep only MJS entry points required by the Pages build and its checks.
 *.mjs
 !/generate-comment-image-manifest.mjs

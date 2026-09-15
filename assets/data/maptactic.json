@@ -8,7 +8,7 @@
     "Alaska": "2026-09-14",
     "American Desert": "2026-09-15",
     "Aral Sea": "2026-09-10",
-    "Arctic Pier": "2026-09-12",
+    "Arctic Pier": "2026-09-15",
     "Arctic Polar Base": "2026-09-12",
     "Ardennes": "2026-09-14",
     "Ash River": "2026-09-02",
@@ -67,7 +67,7 @@
     "Alaska": "2026-09-13T23:26:53Z",
     "American Desert": "2026-09-14T15:49:37Z",
     "Aral Sea": "2026-09-10T12:50:30Z",
-    "Arctic Pier": "2026-09-12T05:21:39Z",
+    "Arctic Pier": "2026-09-15T01:05:22Z",
     "Arctic Polar Base": "2026-09-12T01:01:54Z",
     "Ardennes": "2026-09-13T23:15:39Z",
     "Ash River": "2026-09-01T16:50:15Z",
@@ -4050,6 +4050,19 @@
         "x": 5.46,
         "y": 73.82,
         "parentTankId": "mtjqcvfo-xotokf"
+      },
+      {
+        "id": "mu1yy82f-ojoap2",
+        "type": "mainBattleTank",
+        "x": 46.71,
+        "y": 44.88
+      },
+      {
+        "id": "mu1yy9n8-9u0q0o",
+        "type": "sniper",
+        "x": 46.71,
+        "y": 44.88,
+        "parentTankId": "mu1yy82f-ojoap2"
       }
     ],
     "Arctic Pier::domination-1|Red": [
@@ -26925,6 +26938,37 @@
           }
         ],
         "dangerRoute": true
+      },
+      {
+        "id": "mu1yytik-mxv3h8",
+        "type": "aimHere",
+        "parentTankId": "mu1yy82f-ojoap2",
+        "startX": 46.71,
+        "startY": 44.88,
+        "endX": 18.52,
+        "endY": 66.25
+      },
+      {
+        "id": "mu1yzrry-v7bs6f",
+        "type": "route",
+        "points": [
+          {
+            "x": 47.35,
+            "y": 44.37
+          },
+          {
+            "x": 49.37,
+            "y": 39.32
+          },
+          {
+            "x": 52.91,
+            "y": 36.03
+          },
+          {
+            "x": 56.45,
+            "y": 30.72
+          }
+        ]
       }
     ],
     "Arctic Pier::domination-1|Red": [
@@ -60362,6 +60406,9 @@
       }
     ]
   },
-  "updatedAt": "2026-09-14T23:28:36.398Z",
-  "exportedAt": "2026-09-14T23:34:39.270Z"
+  "vectorGroups": {
+    "Arctic Pier::domination-1|Blue": []
+  },
+  "updatedAt": "2026-09-15T01:05:22.271Z",
+  "exportedAt": "2026-09-15T01:05:28.010Z"
 }
