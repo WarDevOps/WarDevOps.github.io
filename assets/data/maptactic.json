@@ -10,7 +10,7 @@
     "Aral Sea": "2026-09-10",
     "Arctic Pier": "2026-09-15",
     "Arctic Polar Base": "2026-09-12",
-    "Ardennes": "2026-09-14",
+    "Ardennes": "2026-09-17",
     "Ash River": "2026-09-02",
     "Attica": "2026-09-03",
     "Battle of Hürtgen Forest": "2026-09-15",
@@ -69,7 +69,7 @@
     "Aral Sea": "2026-09-10T12:50:30Z",
     "Arctic Pier": "2026-09-15T01:05:22Z",
     "Arctic Polar Base": "2026-09-12T01:01:54Z",
-    "Ardennes": "2026-09-13T23:15:39Z",
+    "Ardennes": "2026-09-16T19:23:55Z",
     "Ash River": "2026-09-01T16:50:15Z",
     "Attica": "2026-09-03T02:06:24Z",
     "Battle of Hürtgen Forest": "2026-09-15T02:14:42Z",
@@ -5159,7 +5159,7 @@
         "parentTankId": "mtices2d-8mrbqf"
       }
     ],
-    "Ardennes::conquest-1|Red": [
+    "Ardennes::conquest-1|Blue": [
       {
         "id": "mtviao9j-0whso7",
         "type": "lightTank",
@@ -5291,7 +5291,7 @@
         "parentTankId": "mtw5lv5z-nbfhb0"
       }
     ],
-    "Ardennes::conquest-1|Blue": [
+    "Ardennes::conquest-1|Red": [
       {
         "id": "mtvho5ls-noey8e",
         "type": "mainBattleTankRed",
@@ -31131,7 +31131,7 @@
         "endY": 87.23
       }
     ],
-    "Ardennes::conquest-1|Red": [
+    "Ardennes::conquest-1|Blue": [
       {
         "id": "mtviaz5d-eczkxk",
         "type": "aimHere",
@@ -31555,7 +31555,7 @@
         "endY": 85.26
       }
     ],
-    "Ardennes::conquest-1|Blue": [
+    "Ardennes::conquest-1|Red": [
       {
         "id": "mtvhowy2-sqeka9",
         "type": "aimHere",

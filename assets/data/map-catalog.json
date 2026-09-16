@@ -281,8 +281,8 @@
       "name": "Ardennes",
       "aliases": "아르덴",
       "slug": "ardennes",
-      "updated": "2026-09-14",
-      "updatedAt": "2026-09-13T23:15:39Z",
+      "updated": "2026-09-17",
+      "updatedAt": "2026-09-16T19:23:55Z",
       "br": {
         "min": 3.7
       },
@@ -673,7 +673,7 @@
       "aliases": "다윈 힐",
       "slug": "darwin-hill",
       "updated": "2026-09-17",
-      "updatedAt": "2026-09-16T18:03:00Z",
+      "updatedAt": "2026-09-16T19:10:11Z",
       "br": {
         "min": 5
       },
