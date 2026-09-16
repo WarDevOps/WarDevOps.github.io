@@ -34,11 +34,10 @@ export function bounds(layout,key,selection) {
   return Number.isFinite(minX)?{minX,minY,maxX,maxY,cx:(minX+maxX)/2,cy:(minY+maxY)/2}:null;
 }
 export function expandSelection(layout,key,selection) {
-  const result=new Set(selection), groups=layout.vectorGroups?.[key]||[], all=entries(layout,key);
+  const result=new Set(selection), all=entries(layout,key);
   let changed=true;
   while(changed) {
     const size=result.size;
-    for(const g of groups) if(g.members.some(m=>result.has(ref(m.kind,m.id)))) for(const m of g.members) result.add(ref(m.kind,m.id));
     for(const {kind,value} of all) if(value.parentTankId && (result.has(ref(kind,value.id))||result.has(ref('m',value.parentTankId)))) {
       result.add(ref(kind,value.id)); result.add(ref('m',value.parentTankId));
     }
@@ -55,7 +54,7 @@ export function copySelection(layout,key,selection) {
   return structuredClone({version:2,
     markers:{[key]:(layout.markers[key]||[]).filter(v=>selected.has(ref('m',v.id)))},
     annotations:{[key]:(layout.annotations[key]||[]).filter(v=>selected.has(ref('a',v.id)))},
-    vectorGroups:{[key]:(layout.vectorGroups?.[key]||[]).filter(g=>g.members.some(m=>selected.has(ref(m.kind,m.id))))}
+    vectorGroups:{[key]:(layout.vectorGroups?.[key]||[]).map(g=>({...g,members:g.members.filter(m=>selected.has(ref(m.kind,m.id)))})).filter(g=>g.members.length)}
   });
 }
 export function deleteSelection(layout,key,selection) {
@@ -73,7 +72,7 @@ export function transform(layout,key,selection,matrix,base) {
   const selected=expandSelection(work,key,selection), grouped=new Set();
   const current=new Map(entries(layout,key).map(({kind,value})=>[ref(kind,value.id),value]));
   const groups=structuredClone(base.groups);
-  for(const g of groups) if(g.members.some(p=>selected.has(ref(p.kind,p.id)))) {
+  for(const g of groups) if(g.members.every(p=>selected.has(ref(p.kind,p.id)))) {
     g.matrix=multiply(matrix,g.matrix);
     for(const member of g.members) {
       const r=ref(member.kind,member.id),v=current.get(r);
@@ -86,6 +85,7 @@ export function transform(layout,key,selection,matrix,base) {
     if(selected.has(r)&&!grouped.has(r)&&current.has(r)) Object.assign(current.get(r),mapped(geometry(value),matrix));
   }
   (layout.vectorGroups??={})[key]=groups;
+  pruneGroups(layout,key);
 }
 export function fitsTransform(layout,key,selection,matrix) {
   for(const g of layout.vectorGroups?.[key]||[]) if(g.members.some(m=>selection.has(ref(m.kind,m.id)))) {
@@ -170,6 +170,5 @@ export function appendLayout(target,key,source,sourceKey,idFactory) {
   (target.markers[key]??=[]).push(...incoming.markers);(target.annotations[key]??=[]).push(...incoming.annotations);
   (target.vectorGroups??={})[key]=[...(target.vectorGroups[key]||[]),...incoming.groups];
   const selected=new Set([...incoming.markers.map(v=>ref('m',v.id)),...incoming.annotations.map(v=>ref('a',v.id))]);
-  if(incoming.groups.length!==1||incoming.groups[0].members.length!==selected.size) makeGroup(target,key,selected,idFactory(),'Imported paths');
   return selected;
 }

@@ -1,4 +1,4 @@
-import {around,ref,entries,vertices,bounds,expandSelection,snapshot,restore,transform,deleteSelection,copySelection,appendLayout,fitsTransform} from './vector-model.js?v=copy-paste-20260916';
+import {around,ref,entries,vertices,bounds,expandSelection,snapshot,restore,transform,deleteSelection,copySelection,appendLayout,fitsTransform} from './vector-model.js?v=independent-selection-20260917';
 
 const words={
   ko:{copy:'복사',paste:'붙여넣기',copied:'선택한 객체를 복사했습니다.',pasteError:'붙여넣을 수 없습니다. 지도 데이터 제한을 확인하세요.',lock:'기존 객체 잠금',undo:'되돌리기',redo:'다시 실행',delete:'선택 삭제',rotate:'선택 회전',resize:'선택 크기 조절',move:'선택 이동',invalid:'JSON을 추가할 수 없습니다. 지도와 파일 형식을 확인하세요.',added:'리플레이를 추가했습니다.'},
@@ -47,7 +47,7 @@ export function createVectorEditor(h) {
       const added=appendLayout(candidate,key,clipboard.layout,clipboard.key,id);
       h.validate(candidate);
       restore(h.layout(),key,snapshot(candidate,key));
-      selected=added;editable=new Set([...editable,...added]);
+      selected.clear();editable=new Set([...editable,...added]);
       save(before);h.render();announce('');
     }catch(error){announce(msg().pasteError);}
   }
