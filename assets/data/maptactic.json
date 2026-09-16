@@ -78,7 +78,7 @@
     "Campania": "2026-09-03T01:49:21Z",
     "Cargo Port": "2026-09-03T01:49:31Z",
     "Carpathians": "2026-09-04T03:02:19Z",
-    "Darwin Hill": "2026-09-16T18:01:08Z",
+    "Darwin Hill": "2026-09-16T18:03:00Z",
     "Eastern Europe": "2026-09-03T01:49:56Z",
     "European Province": "2026-09-04T05:43:30Z",
     "Fields of Normandy": "2026-09-15T05:00:19Z",
@@ -8982,7 +8982,10 @@
         "id": "vector-268540a6-e6d0-4faf-b388-640cdcb8b026",
         "type": "mainBattleTankRed",
         "x": 40.7,
-        "y": 19.46
+        "y": 19.46,
+        "commentImages": [
+          "Darwin Hill/scr_ (9).png"
+        ]
       },
       {
         "id": "vector-db041030-5a90-4047-a4df-1c2f917614be",
@@ -64746,6 +64749,6 @@
       }
     ]
   },
-  "updatedAt": "2026-09-16T18:01:26.430Z",
-  "exportedAt": "2026-09-16T18:01:27.073Z"
+  "updatedAt": "2026-09-16T18:03:00.805Z",
+  "exportedAt": "2026-09-16T18:03:03.956Z"
 }

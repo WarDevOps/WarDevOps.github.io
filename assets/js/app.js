@@ -3,7 +3,7 @@ import { initDiscordMemberCount } from './discord-stats.js';
 import { createVectorEditor } from './vector-editor.js?v=independent-selection-20260917';
 import { validateVectorGroups, pruneGroups } from './vector-model.js?v=independent-selection-20260917';
 let vectorEditor = null;
-    import { commentImages } from './comment-images.js?v=comment-images-c25d702d2907';
+    import { commentImages } from './comment-images.js?v=comment-images-23858e38a190';
     import { defaultMarkerLayout, maps, translations } from './data.js?v=delete-all-markers-20260915';
     import { normalizeTacticalSummary, resolveTacticalSummary, withVariationSummary } from './tactical-summary.js?v=variation-switch-20260914';
     import { acceptUpstreamMap, isMapSyncState, markLayoutAsLocalEdits, markMapEdited, mergeMapLayouts, sourceRevision } from './marker-merge.js?v=replay-vectors-20260915';
@@ -1326,10 +1326,13 @@ let vectorEditor = null;
     }
     function selectableCommentImages() {
       const currentKey = currentMarkerKey();
+      const variationKey = currentKey?.slice(0, currentKey.lastIndexOf("|"));
       const ownMarker = currentMarkers().find(marker => marker.id === state.commentMarkerId);
       const ownImageIds = new Set(ownMarker ? markerCommentImageIds(ownMarker) : []);
       const assignedImageIds = new Set();
       Object.entries(markerLayout.markers).forEach(([key, markers]) => {
+        // Image assignments are exclusive within a variation, not across the whole map.
+        if (key.slice(0, key.lastIndexOf("|")) !== variationKey) return;
         markers.forEach(marker => {
           if (key === currentKey && marker.id === state.commentMarkerId) return;
           markerCommentImageIds(marker).forEach(id => assignedImageIds.add(id));

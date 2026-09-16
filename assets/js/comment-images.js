@@ -1132,6 +1132,61 @@ export const commentImages = Object.freeze([
     "label": "scr_ (9).png"
   },
   {
+    "id": "Darwin Hill/scr_ (1).png",
+    "path": "img/Darwin Hill/scr_ (1).png",
+    "label": "scr_ (1).png"
+  },
+  {
+    "id": "Darwin Hill/scr_ (10).png",
+    "path": "img/Darwin Hill/scr_ (10).png",
+    "label": "scr_ (10).png"
+  },
+  {
+    "id": "Darwin Hill/scr_ (11).png",
+    "path": "img/Darwin Hill/scr_ (11).png",
+    "label": "scr_ (11).png"
+  },
+  {
+    "id": "Darwin Hill/scr_ (2).png",
+    "path": "img/Darwin Hill/scr_ (2).png",
+    "label": "scr_ (2).png"
+  },
+  {
+    "id": "Darwin Hill/scr_ (3).png",
+    "path": "img/Darwin Hill/scr_ (3).png",
+    "label": "scr_ (3).png"
+  },
+  {
+    "id": "Darwin Hill/scr_ (4).png",
+    "path": "img/Darwin Hill/scr_ (4).png",
+    "label": "scr_ (4).png"
+  },
+  {
+    "id": "Darwin Hill/scr_ (5).png",
+    "path": "img/Darwin Hill/scr_ (5).png",
+    "label": "scr_ (5).png"
+  },
+  {
+    "id": "Darwin Hill/scr_ (6).png",
+    "path": "img/Darwin Hill/scr_ (6).png",
+    "label": "scr_ (6).png"
+  },
+  {
+    "id": "Darwin Hill/scr_ (7).png",
+    "path": "img/Darwin Hill/scr_ (7).png",
+    "label": "scr_ (7).png"
+  },
+  {
+    "id": "Darwin Hill/scr_ (8).png",
+    "path": "img/Darwin Hill/scr_ (8).png",
+    "label": "scr_ (8).png"
+  },
+  {
+    "id": "Darwin Hill/scr_ (9).png",
+    "path": "img/Darwin Hill/scr_ (9).png",
+    "label": "scr_ (9).png"
+  },
+  {
     "id": "Golden Quarry/scr_1.png",
     "path": "img/Golden Quarry/scr_1.png",
     "label": "scr_1.png"
