@@ -10,14 +10,14 @@
     "Aral Sea": "2026-09-10",
     "Arctic Pier": "2026-09-15",
     "Arctic Polar Base": "2026-09-12",
-    "Ardennes": "2026-09-17",
+    "Ardennes": "2026-09-14",
     "Ash River": "2026-09-02",
     "Attica": "2026-09-03",
-    "Battle of Hürtgen Forest": "2026-09-15",
+    "Battle of Hürtgen Forest": "2026-09-17",
     "Berlin": "2026-09-11",
     "Breslau": "2026-09-11",
     "Campania": "2026-09-03",
-    "Cargo Port": "2026-09-03",
+    "Cargo Port": "2026-09-17",
     "Carpathians": "2026-09-04",
     "Darwin Hill": "2026-09-17",
     "Eastern Europe": "2026-09-03",
@@ -31,11 +31,11 @@
     "Fulda": "2026-09-15",
     "Golden Quarry": "2026-09-12",
     "Iberian Castle": "2026-08-16",
-    "Japan": "2026-08-16",
+    "Japan": "2026-09-17",
     "Jungle": "2026-09-10",
     "Karelia": "2026-08-30",
     "Kuban": "2026-08-18",
-    "Maginot Line": "2026-08-16",
+    "Maginot Line": "2026-09-17",
     "Middle East": "2026-09-15",
     "Mozdok": "2026-09-15",
     "Normandy": "2026-09-04",
@@ -54,7 +54,7 @@
     "Surroundings of Volokolamsk": "2026-09-15",
     "Sweden": "2026-09-01",
     "Test Site-2271": "2026-09-14",
-    "Tunisia": "2026-09-16",
+    "Tunisia": "2026-09-17",
     "Vietnam": "2026-09-16",
     "Volokolamsk": "2026-08-31",
     "White Rock Fortress": "2026-09-02"
@@ -69,14 +69,14 @@
     "Aral Sea": "2026-09-10T12:50:30Z",
     "Arctic Pier": "2026-09-15T01:05:22Z",
     "Arctic Polar Base": "2026-09-12T01:01:54Z",
-    "Ardennes": "2026-09-16T19:23:55Z",
+    "Ardennes": "2026-09-13T23:15:39Z",
     "Ash River": "2026-09-01T16:50:15Z",
     "Attica": "2026-09-03T02:06:24Z",
-    "Battle of Hürtgen Forest": "2026-09-15T02:14:42Z",
+    "Battle of Hürtgen Forest": "2026-09-16T19:35:57Z",
     "Berlin": "2026-09-10T23:37:22Z",
     "Breslau": "2026-09-11T09:46:34Z",
     "Campania": "2026-09-03T01:49:21Z",
-    "Cargo Port": "2026-09-03T01:49:31Z",
+    "Cargo Port": "2026-09-16T19:28:29Z",
     "Carpathians": "2026-09-04T03:02:19Z",
     "Darwin Hill": "2026-09-16T19:10:11Z",
     "Eastern Europe": "2026-09-03T01:49:56Z",
@@ -101,9 +101,11 @@
     "Sun City": "2026-09-14T16:27:44Z",
     "Surroundings of Volokolamsk": "2026-09-15T03:51:26Z",
     "Test Site-2271": "2026-09-13T19:14:47Z",
-    "Tunisia": "2026-09-16T02:52:07Z",
+    "Tunisia": "2026-09-16T19:37:22Z",
     "Vietnam": "2026-09-16T02:50:51Z",
-    "White Rock Fortress": "2026-09-02T04:58:42Z"
+    "White Rock Fortress": "2026-09-02T04:58:42Z",
+    "Japan": "2026-09-16T19:32:10Z",
+    "Maginot Line": "2026-09-16T19:34:11Z"
   },
   "tacticalSummaries": {
     "Eastern Europe": {
@@ -5159,7 +5161,7 @@
         "parentTankId": "mtices2d-8mrbqf"
       }
     ],
-    "Ardennes::conquest-1|Blue": [
+    "Ardennes::conquest-1|Red": [
       {
         "id": "mtviao9j-0whso7",
         "type": "lightTank",
@@ -5291,7 +5293,7 @@
         "parentTankId": "mtw5lv5z-nbfhb0"
       }
     ],
-    "Ardennes::conquest-1|Red": [
+    "Ardennes::conquest-1|Blue": [
       {
         "id": "mtvho5ls-noey8e",
         "type": "mainBattleTankRed",
@@ -6328,14 +6330,14 @@
       },
       {
         "id": "mtw6cbyg-spkaot",
-        "type": "battleLine",
+        "type": "highRiskSpot",
         "x": 61.01,
         "y": 6.99,
         "parentTankId": "mtw6brle-gxykch"
       },
       {
         "id": "mtw6ccpg-jdlasv",
-        "type": "highRiskSpot",
+        "type": "sniper",
         "x": 61.2,
         "y": 18.74,
         "parentTankId": "mtw67swp-yp6iyq"
@@ -6381,7 +6383,7 @@
       },
       {
         "id": "mtw6ga7d-qkovf6",
-        "type": "highRiskSpot",
+        "type": "sniper",
         "x": 20.61,
         "y": 23.13,
         "parentTankId": "mtw67mmp-9vw55z"
@@ -6394,7 +6396,7 @@
       },
       {
         "id": "mu219y0j-xr3kc6",
-        "type": "highRiskSpot",
+        "type": "sniper",
         "x": 10.3,
         "y": 40.83,
         "parentTankId": "mu219wkg-suk072"
@@ -7659,7 +7661,7 @@
       },
       {
         "id": "cargo-port-red-role-15",
-        "type": "highRiskSpot",
+        "type": "sniper",
         "x": 10.97,
         "y": 80.76,
         "parentTankId": "cargo-port-red-unit-19"
@@ -7681,6 +7683,34 @@
         "type": "tankDestroyerRed",
         "x": 2.15,
         "y": 98.12
+      },
+      {
+        "id": "mu4hta6o-h06aj8",
+        "type": "spawnKill",
+        "x": 88.61,
+        "y": 16.74,
+        "parentTankId": "cargo-port-red-unit-02"
+      },
+      {
+        "id": "mu4htb8l-q0wb6m",
+        "type": "spawnKill",
+        "x": 56.81,
+        "y": 19.38,
+        "parentTankId": "cargo-port-red-unit-03"
+      },
+      {
+        "id": "mu4htc6d-ojyc8r",
+        "type": "spawnKill",
+        "x": 50.97,
+        "y": 29.86,
+        "parentTankId": "cargo-port-red-unit-04"
+      },
+      {
+        "id": "mu4htdyd-fd6tm6",
+        "type": "highRiskSpot",
+        "x": 65.56,
+        "y": 33.61,
+        "parentTankId": "cargo-port-red-unit-06"
       }
     ],
     "Cargo Port::domination-1|Blue": [
@@ -7723,7 +7753,7 @@
       },
       {
         "id": "cargo-port-blue-role-02",
-        "type": "highRiskSpot",
+        "type": "sniper",
         "x": 68.26,
         "y": 30.35,
         "parentTankId": "cargo-port-blue-unit-05"
@@ -7736,7 +7766,7 @@
       },
       {
         "id": "cargo-port-blue-role-03",
-        "type": "highRiskSpot",
+        "type": "battleLine",
         "x": 66.74,
         "y": 36.32,
         "parentTankId": "cargo-port-blue-unit-06"
@@ -7749,7 +7779,7 @@
       },
       {
         "id": "cargo-port-blue-role-04",
-        "type": "battleLine",
+        "type": "sniper",
         "x": 71.32,
         "y": 38.89,
         "parentTankId": "cargo-port-blue-unit-07"
@@ -7907,6 +7937,34 @@
         "type": "mainBattleTank",
         "x": 86.18,
         "y": 87.15
+      },
+      {
+        "id": "mu4hsn22-5ftatz",
+        "type": "spawnKill",
+        "x": 73.19,
+        "y": 72.57,
+        "parentTankId": "cargo-port-blue-unit-18"
+      },
+      {
+        "id": "mu4hso48-g4t27z",
+        "type": "spawnKill",
+        "x": 86.18,
+        "y": 87.15,
+        "parentTankId": "cargo-port-blue-unit-21"
+      },
+      {
+        "id": "mu4hsp3b-9qzbux",
+        "type": "spawnKill",
+        "x": 53.75,
+        "y": 82.57,
+        "parentTankId": "cargo-port-blue-unit-20"
+      },
+      {
+        "id": "mu4hsvie-3jm7x1",
+        "type": "spawnKill",
+        "x": 19.65,
+        "y": 78.75,
+        "parentTankId": "cargo-port-blue-unit-19"
       }
     ],
     "Carpathians::domination-1|Blue": [
@@ -11951,7 +12009,7 @@
       },
       {
         "id": "japan-blue-role-07",
-        "type": "highRiskSpot",
+        "type": "sniper",
         "x": 72.36,
         "y": 48.06,
         "parentTankId": "japan-blue-unit-07"
@@ -12063,6 +12121,41 @@
         "type": "mainBattleTank",
         "x": 63.75,
         "y": 87.71
+      },
+      {
+        "id": "mu4hxe7d-8hfunh",
+        "type": "spawnKill",
+        "x": 37.92,
+        "y": 65.56,
+        "parentTankId": "japan-blue-unit-16"
+      },
+      {
+        "id": "mu4hxf51-pvxkxk",
+        "type": "spawnKill",
+        "x": 28.4,
+        "y": 61.67,
+        "parentTankId": "japan-blue-unit-12"
+      },
+      {
+        "id": "mu4hxgcd-4wunf6",
+        "type": "spawnKill",
+        "x": 19.03,
+        "y": 74.79,
+        "parentTankId": "japan-blue-unit-17"
+      },
+      {
+        "id": "mu4hxhw1-wvdoak",
+        "type": "spawnKill",
+        "x": 63.75,
+        "y": 87.71,
+        "parentTankId": "japan-blue-unit-18"
+      },
+      {
+        "id": "mu4hxj9r-7nfjix",
+        "type": "spawnKill",
+        "x": 48.26,
+        "y": 64.51,
+        "parentTankId": "japan-blue-unit-14"
       }
     ],
     "Japan::domination-1|Red": [
@@ -12077,12 +12170,6 @@
         "type": "mainBattleTankRed",
         "x": 41.18,
         "y": 17.01
-      },
-      {
-        "id": "japan-red-unit-03",
-        "type": "mainBattleTankRed",
-        "x": 82.29,
-        "y": 22.01
       },
       {
         "id": "japan-red-unit-04",
@@ -12117,7 +12204,7 @@
       },
       {
         "id": "japan-red-role-02",
-        "type": "highRiskSpot",
+        "type": "sniper",
         "x": 94.93,
         "y": 32.71,
         "parentTankId": "japan-red-unit-07"
@@ -12221,7 +12308,7 @@
       },
       {
         "id": "japan-red-role-10",
-        "type": "highRiskSpot",
+        "type": "sniper",
         "x": 23.4,
         "y": 55.07,
         "parentTankId": "japan-red-unit-15"
@@ -12247,23 +12334,10 @@
       },
       {
         "id": "japan-red-role-12",
-        "type": "highRiskSpot",
+        "type": "sniper",
         "x": 66.53,
         "y": 64.93,
         "parentTankId": "japan-red-unit-17"
-      },
-      {
-        "id": "japan-red-unit-18",
-        "type": "mainBattleTankRed",
-        "x": 85.56,
-        "y": 65.14
-      },
-      {
-        "id": "japan-red-role-13",
-        "type": "highRiskSpot",
-        "x": 85.56,
-        "y": 65.14,
-        "parentTankId": "japan-red-unit-18"
       },
       {
         "id": "japan-red-unit-19",
@@ -12312,10 +12386,38 @@
       },
       {
         "id": "japan-red-role-17",
-        "type": "spawnKill",
+        "type": "sniper",
         "x": 83.4,
         "y": 91.11,
         "parentTankId": "japan-red-unit-22"
+      },
+      {
+        "id": "mu4hwpgx-n7m0v9",
+        "type": "spawnKill",
+        "x": 40,
+        "y": 30.56,
+        "parentTankId": "japan-red-unit-06"
+      },
+      {
+        "id": "mu4hwqax-6t01cz",
+        "type": "spawnKill",
+        "x": 41.18,
+        "y": 17.01,
+        "parentTankId": "japan-red-unit-02"
+      },
+      {
+        "id": "mu4hwtqj-ml72i1",
+        "type": "spawnKill",
+        "x": 76.11,
+        "y": 28.75,
+        "parentTankId": "japan-red-unit-04"
+      },
+      {
+        "id": "mu4hwuxd-khqhbh",
+        "type": "spawnKill",
+        "x": 86.04,
+        "y": 9.86,
+        "parentTankId": "japan-red-unit-01"
       }
     ],
     "Jungle::domination-1|Red": [],
@@ -12495,7 +12597,7 @@
       },
       {
         "id": "maginot-line-red-role-01",
-        "type": "highRiskSpot",
+        "type": "sniper",
         "x": 41.04,
         "y": 4.17,
         "parentTankId": "maginot-line-red-unit-02"
@@ -12508,7 +12610,7 @@
       },
       {
         "id": "maginot-line-red-role-02",
-        "type": "highRiskSpot",
+        "type": "sniper",
         "x": 88.89,
         "y": 21.25,
         "parentTankId": "maginot-line-red-unit-03"
@@ -12547,7 +12649,7 @@
       },
       {
         "id": "maginot-line-red-role-05",
-        "type": "highRiskSpot",
+        "type": "sniper",
         "x": 13.19,
         "y": 36.18,
         "parentTankId": "maginot-line-red-unit-06"
@@ -12679,6 +12781,34 @@
         "x": 17.08,
         "y": 90.28,
         "parentTankId": "maginot-line-red-unit-18"
+      },
+      {
+        "id": "mu4hzpw3-ptcayn",
+        "type": "spawnKill",
+        "x": 42.57,
+        "y": 66.46,
+        "parentTankId": "maginot-line-red-unit-16"
+      },
+      {
+        "id": "mu4hzqx9-4ioxxr",
+        "type": "spawnKill",
+        "x": 32.29,
+        "y": 66.11,
+        "parentTankId": "maginot-line-red-unit-15"
+      },
+      {
+        "id": "mu4hzs1j-2jhe9h",
+        "type": "spawnKill",
+        "x": 25.69,
+        "y": 90.21,
+        "parentTankId": "maginot-line-red-unit-17"
+      },
+      {
+        "id": "mu4hzxe3-bjfrd8",
+        "type": "spawnKill",
+        "x": 53.06,
+        "y": 56.81,
+        "parentTankId": "maginot-line-red-unit-12"
       }
     ],
     "Maginot Line::domination-1|Blue": [
@@ -12812,7 +12942,7 @@
       },
       {
         "id": "maginot-line-blue-role-09",
-        "type": "highRiskSpot",
+        "type": "sniper",
         "x": 89.38,
         "y": 62.08,
         "parentTankId": "maginot-line-blue-unit-12"
@@ -12825,7 +12955,7 @@
       },
       {
         "id": "maginot-line-blue-role-10",
-        "type": "highRiskSpot",
+        "type": "sniper",
         "x": 54.37,
         "y": 66.18,
         "parentTankId": "maginot-line-blue-unit-13"
@@ -12842,6 +12972,27 @@
         "x": 43.61,
         "y": 69.38,
         "parentTankId": "maginot-line-blue-unit-14"
+      },
+      {
+        "id": "mu4i02bj-oelkjy",
+        "type": "spawnKill",
+        "x": 32.36,
+        "y": 32.22,
+        "parentTankId": "maginot-line-blue-unit-03"
+      },
+      {
+        "id": "mu4i03bz-xbh1zk",
+        "type": "spawnKill",
+        "x": 11.11,
+        "y": 19.72,
+        "parentTankId": "maginot-line-blue-unit-02"
+      },
+      {
+        "id": "mu4i04bh-psjpwl",
+        "type": "spawnKill",
+        "x": 86.88,
+        "y": 19.65,
+        "parentTankId": "maginot-line-blue-unit-01"
       }
     ],
     "Middle East::domination-1|Red": [
@@ -20766,7 +20917,9 @@
         "x": 32.89,
         "y": 17.37
       }
-    ]
+    ],
+    "Maginot Line::domination-2|Blue": [],
+    "Maginot Line::domination-2|Red": []
   },
   "annotations": {
     "38th Parallel::domination-1|Red": [
@@ -31131,7 +31284,7 @@
         "endY": 87.23
       }
     ],
-    "Ardennes::conquest-1|Blue": [
+    "Ardennes::conquest-1|Red": [
       {
         "id": "mtviaz5d-eczkxk",
         "type": "aimHere",
@@ -31555,7 +31708,7 @@
         "endY": 85.26
       }
     ],
-    "Ardennes::conquest-1|Red": [
+    "Ardennes::conquest-1|Blue": [
       {
         "id": "mtvhowy2-sqeka9",
         "type": "aimHere",
@@ -37250,6 +37403,42 @@
           }
         ],
         "dangerRoute": true
+      },
+      {
+        "id": "mu4htknx-yiyxe6",
+        "type": "aimHere",
+        "parentTankId": "cargo-port-red-unit-03",
+        "startX": 56.81,
+        "startY": 19.38,
+        "endX": 44.01,
+        "endY": 9.12
+      },
+      {
+        "id": "mu4htmon-jqkoqx",
+        "type": "aimHere",
+        "parentTankId": "cargo-port-red-unit-02",
+        "startX": 88.61,
+        "startY": 16.74,
+        "endX": 71.2,
+        "endY": 13.21
+      },
+      {
+        "id": "mu4hu1xv-0d1lgq",
+        "type": "aimHere",
+        "parentTankId": "cargo-port-red-unit-18",
+        "startX": 34.03,
+        "startY": 69.44,
+        "endX": 26.63,
+        "endY": 6.52
+      },
+      {
+        "id": "mu4hu45v-20i4wl",
+        "type": "aimHere",
+        "parentTankId": "cargo-port-red-unit-19",
+        "startX": 10.97,
+        "startY": 80.76,
+        "endX": 11.77,
+        "endY": 11.12
       }
     ],
     "Cargo Port::domination-1|Blue": [
@@ -37297,15 +37486,6 @@
         "startY": 44.51,
         "endX": 18.58,
         "endY": 49.5
-      },
-      {
-        "id": "cargo-port-blue-aim-06",
-        "type": "aimHere",
-        "parentTankId": "cargo-port-blue-unit-19",
-        "startX": 19.65,
-        "startY": 78.75,
-        "endX": 23.49,
-        "endY": 81.92
       },
       {
         "id": "cargo-port-blue-aim-07",
@@ -37808,6 +37988,51 @@
           }
         ],
         "dangerRoute": true
+      },
+      {
+        "id": "mu4hsymy-1vpg4y",
+        "type": "aimHere",
+        "parentTankId": "cargo-port-blue-unit-20",
+        "startX": 53.75,
+        "startY": 82.57,
+        "endX": 36.27,
+        "endY": 89.23
+      },
+      {
+        "id": "mu4ht14v-2ydai8",
+        "type": "aimHere",
+        "parentTankId": "cargo-port-blue-unit-19",
+        "startX": 19.65,
+        "startY": 78.75,
+        "endX": 35.32,
+        "endY": 88.88
+      },
+      {
+        "id": "mu4ht52r-4hxf10",
+        "type": "aimHere",
+        "parentTankId": "cargo-port-blue-unit-18",
+        "startX": 73.19,
+        "startY": 72.57,
+        "endX": 75.11,
+        "endY": 88.79
+      },
+      {
+        "id": "mu4ht7dk-6a204u",
+        "type": "aimHere",
+        "parentTankId": "cargo-port-blue-unit-21",
+        "startX": 86.18,
+        "startY": 87.15,
+        "endX": 69.9,
+        "endY": 89.4
+      },
+      {
+        "id": "mu4hu8mf-2cfj4y",
+        "type": "aimHere",
+        "parentTankId": "cargo-port-blue-unit-03",
+        "startX": 12.43,
+        "startY": 10.62,
+        "endX": 8.56,
+        "endY": 70.63
       }
     ],
     "Carpathians::domination-1|Blue": [
@@ -46817,15 +47042,6 @@
         "endY": 20.08
       },
       {
-        "id": "japan-red-aim-02",
-        "type": "aimHere",
-        "parentTankId": "japan-red-unit-03",
-        "startX": 82.29,
-        "startY": 22.01,
-        "endX": 74.87,
-        "endY": 16.99
-      },
-      {
         "id": "japan-red-aim-03",
         "type": "aimHere",
         "parentTankId": "japan-red-unit-04",
@@ -46869,15 +47085,6 @@
         "startY": 37.01,
         "endX": 57.3,
         "endY": 35.97
-      },
-      {
-        "id": "japan-red-aim-08",
-        "type": "aimHere",
-        "parentTankId": "japan-red-unit-09",
-        "startX": 35.62,
-        "startY": 38.12,
-        "endX": 49.82,
-        "endY": 39.81
       },
       {
         "id": "japan-red-aim-09",
@@ -47136,6 +47343,60 @@
           }
         ],
         "dangerRoute": true
+      },
+      {
+        "id": "mu4hws4t-mzc9hc",
+        "type": "aimHere",
+        "parentTankId": "japan-red-unit-02",
+        "startX": 41.18,
+        "startY": 17.01,
+        "endX": 59.38,
+        "endY": 11.03
+      },
+      {
+        "id": "mu4hxy4m-v7frvt",
+        "type": "aimHere",
+        "parentTankId": "japan-red-unit-08",
+        "startX": 48.82,
+        "startY": 37.01,
+        "endX": 41.4,
+        "endY": 31.1
+      },
+      {
+        "id": "mu4hy3r9-b4pypb",
+        "type": "aimHere",
+        "parentTankId": "japan-red-unit-09",
+        "startX": 35.62,
+        "startY": 38.12,
+        "endX": 53.39,
+        "endY": 42.66
+      },
+      {
+        "id": "mu4hya3p-bwo7po",
+        "type": "aimHere",
+        "parentTankId": "japan-red-unit-11",
+        "startX": 25.35,
+        "startY": 48.12,
+        "endX": 18.46,
+        "endY": 30.41
+      },
+      {
+        "id": "mu4hye7d-t2nzn4",
+        "type": "aimHere",
+        "parentTankId": "japan-red-unit-15",
+        "startX": 23.4,
+        "startY": 55.07,
+        "endX": 35.84,
+        "endY": 35.01
+      },
+      {
+        "id": "mu4hygrl-0xozyr",
+        "type": "aimHere",
+        "parentTankId": "japan-red-unit-15",
+        "startX": 23.4,
+        "startY": 55.07,
+        "endX": 48.61,
+        "endY": 40.92
       }
     ],
     "Jungle::domination-1|Red": [],
@@ -47692,6 +47953,60 @@
           }
         ],
         "dangerRoute": true
+      },
+      {
+        "id": "mu4i10h7-2fl7el",
+        "type": "aimHere",
+        "parentTankId": "maginot-line-red-unit-03",
+        "startX": 88.89,
+        "startY": 21.25,
+        "endX": 85.97,
+        "endY": 66.81
+      },
+      {
+        "id": "mu4i152n-kab3k1",
+        "type": "aimHere",
+        "parentTankId": "maginot-line-red-unit-02",
+        "startX": 41.04,
+        "startY": 4.17,
+        "endX": 48.7,
+        "endY": 60.99
+      },
+      {
+        "id": "mu4i1duw-i0dc9h",
+        "type": "aimHere",
+        "parentTankId": "maginot-line-red-unit-17",
+        "startX": 25.69,
+        "startY": 90.21,
+        "endX": 45.57,
+        "endY": 86.27
+      },
+      {
+        "id": "mu4i1g4k-pnwd4h",
+        "type": "aimHere",
+        "parentTankId": "maginot-line-red-unit-16",
+        "startX": 42.57,
+        "startY": 66.46,
+        "endX": 46,
+        "endY": 85.66
+      },
+      {
+        "id": "mu4i1im6-lrzptz",
+        "type": "aimHere",
+        "parentTankId": "maginot-line-red-unit-12",
+        "startX": 53.06,
+        "startY": 56.81,
+        "endX": 77.02,
+        "endY": 78.45
+      },
+      {
+        "id": "mu4i1kvy-xgd64z",
+        "type": "aimHere",
+        "parentTankId": "maginot-line-red-unit-15",
+        "startX": 32.29,
+        "startY": 66.11,
+        "endX": 44.27,
+        "endY": 85.14
       }
     ],
     "Maginot Line::domination-1|Blue": [
@@ -47999,6 +48314,24 @@
           }
         ],
         "dangerRoute": true
+      },
+      {
+        "id": "mu4i05vn-6w7g42",
+        "type": "aimHere",
+        "parentTankId": "maginot-line-blue-unit-01",
+        "startX": 86.88,
+        "startY": 19.65,
+        "endX": 57.12,
+        "endY": 12.95
+      },
+      {
+        "id": "mu4i0bns-xof2ig",
+        "type": "aimHere",
+        "parentTankId": "maginot-line-blue-unit-03",
+        "startX": 32.36,
+        "startY": 32.22,
+        "endX": 53.39,
+        "endY": 14.42
       }
     ],
     "Middle East::domination-1|Red": [
@@ -61100,6 +61433,42 @@
           }
         ],
         "dangerRoute": true
+      },
+      {
+        "id": "mu4i4wzc-3dv472",
+        "type": "aimHere",
+        "parentTankId": "mu07f13l-8n55aq",
+        "startX": 86,
+        "startY": 43.08,
+        "endX": 81.36,
+        "endY": 46.05
+      },
+      {
+        "id": "mu4i5e62-kbgqmb",
+        "type": "aimHere",
+        "parentTankId": "mu0777dt-gkwpks",
+        "startX": 90.43,
+        "startY": 63.47,
+        "endX": 96.83,
+        "endY": 76.63
+      },
+      {
+        "id": "mu4i5knc-9umrob",
+        "type": "aimHere",
+        "parentTankId": "mu076t91-2ytoib",
+        "startX": 88.3,
+        "startY": 55.49,
+        "endX": 96.39,
+        "endY": 77.76
+      },
+      {
+        "id": "mu4i5ntg-tsebxj",
+        "type": "aimHere",
+        "parentTankId": "mu076cyt-jzr22a",
+        "startX": 94.6,
+        "startY": 45.74,
+        "endX": 94.83,
+        "endY": 75.33
       }
     ],
     "Vietnam::domination-1|Red": [
@@ -64597,7 +64966,9 @@
           }
         ]
       }
-    ]
+    ],
+    "Maginot Line::domination-2|Blue": [],
+    "Maginot Line::domination-2|Red": []
   },
   "vectorGroups": {
     "Arctic Pier::domination-1|Blue": [],
@@ -64611,6 +64982,6 @@
     "Darwin Hill::battle-1|Red": [],
     "Sands of Sinai::domination-1|Blue": []
   },
-  "updatedAt": "2026-09-16T19:10:21.294Z",
-  "exportedAt": "2026-09-16T19:10:22.296Z"
+  "updatedAt": "2026-09-16T19:37:22.133Z",
+  "exportedAt": "2026-09-16T19:37:38.387Z"
 }
