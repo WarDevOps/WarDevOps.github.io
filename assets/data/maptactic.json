@@ -19,7 +19,7 @@
     "Campania": "2026-09-03",
     "Cargo Port": "2026-09-03",
     "Carpathians": "2026-09-04",
-    "Darwin Hill": "2026-09-12",
+    "Darwin Hill": "2026-09-17",
     "Eastern Europe": "2026-09-03",
     "European Province": "2026-09-04",
     "Fields of Normandy": "2026-09-15",
@@ -54,8 +54,8 @@
     "Surroundings of Volokolamsk": "2026-09-15",
     "Sweden": "2026-09-01",
     "Test Site-2271": "2026-09-14",
-    "Tunisia": "2026-09-15",
-    "Vietnam": "2026-09-12",
+    "Tunisia": "2026-09-16",
+    "Vietnam": "2026-09-16",
     "Volokolamsk": "2026-08-31",
     "White Rock Fortress": "2026-09-02"
   },
@@ -78,7 +78,7 @@
     "Campania": "2026-09-03T01:49:21Z",
     "Cargo Port": "2026-09-03T01:49:31Z",
     "Carpathians": "2026-09-04T03:02:19Z",
-    "Darwin Hill": "2026-09-12T01:07:40Z",
+    "Darwin Hill": "2026-09-16T17:44:56Z",
     "Eastern Europe": "2026-09-03T01:49:56Z",
     "European Province": "2026-09-04T05:43:30Z",
     "Fields of Normandy": "2026-09-15T05:00:19Z",
@@ -101,8 +101,8 @@
     "Sun City": "2026-09-14T16:27:44Z",
     "Surroundings of Volokolamsk": "2026-09-15T03:51:26Z",
     "Test Site-2271": "2026-09-13T19:14:47Z",
-    "Tunisia": "2026-09-15T02:42:55Z",
-    "Vietnam": "2026-09-12T00:24:23Z",
+    "Tunisia": "2026-09-16T02:52:07Z",
+    "Vietnam": "2026-09-16T02:50:51Z",
     "White Rock Fortress": "2026-09-02T04:58:42Z"
   },
   "tacticalSummaries": {
@@ -8525,7 +8525,153 @@
         "y": 82.89
       }
     ],
-    "Darwin Hill::domination-1|Blue": [],
+    "Darwin Hill::domination-1|Blue": [
+      {
+        "id": "mu4dup0t-t0c66q",
+        "type": "mainBattleTank",
+        "x": 10.3,
+        "y": 38.58,
+        "commentImages": [
+          "Darwin Hill/scr_ (2).png"
+        ]
+      },
+      {
+        "id": "mu4dus78-6g5str",
+        "type": "battleLine",
+        "x": 10.3,
+        "y": 38.58,
+        "parentTankId": "mu4dup0t-t0c66q"
+      },
+      {
+        "id": "mu4dw312-6t13j8",
+        "type": "mainBattleTank",
+        "x": 14.64,
+        "y": 76.72,
+        "commentImages": [
+          "Darwin Hill/scr_ (3).png"
+        ]
+      },
+      {
+        "id": "mu4dw4p6-i7t6j5",
+        "type": "spawnKill",
+        "x": 14.64,
+        "y": 76.72,
+        "parentTankId": "mu4dw312-6t13j8"
+      },
+      {
+        "id": "mu4dwt71-e0dx8p",
+        "type": "mainBattleTank",
+        "x": 33.93,
+        "y": 75.67,
+        "commentImages": [
+          "Darwin Hill/scr_ (4).png"
+        ]
+      },
+      {
+        "id": "mu4dwud1-1ngfj5",
+        "type": "spawnKill",
+        "x": 33.93,
+        "y": 75.67,
+        "parentTankId": "mu4dwt71-e0dx8p"
+      },
+      {
+        "id": "mu4dxetb-zb6y0c",
+        "type": "mainBattleTank",
+        "x": 61.21,
+        "y": 81.84,
+        "commentImages": [
+          "Darwin Hill/scr_ (5).png"
+        ]
+      },
+      {
+        "id": "mu4dxl8v-au6wwn",
+        "type": "spawnKill",
+        "x": 61.21,
+        "y": 81.84,
+        "parentTankId": "mu4dxetb-zb6y0c"
+      },
+      {
+        "id": "mu4dxy0l-yshnuk",
+        "type": "mainBattleTank",
+        "x": 81.02,
+        "y": 80.36,
+        "commentImages": [
+          "Darwin Hill/scr_ (6).png"
+        ]
+      },
+      {
+        "id": "mu4dyaf9-4xcxax",
+        "type": "spawnKill",
+        "x": 81.02,
+        "y": 80.36,
+        "parentTankId": "mu4dxy0l-yshnuk"
+      }
+    ],
+    "Darwin Hill::domination-1|Red": [
+      {
+        "id": "mu4dtwnw-bif504",
+        "type": "mainBattleTankRed",
+        "x": 9.86,
+        "y": 17.38,
+        "commentImages": [
+          "Darwin Hill/scr_ (1).png"
+        ]
+      },
+      {
+        "id": "mu4du3hg-a9jv9e",
+        "type": "spawnKill",
+        "x": 9.86,
+        "y": 17.38,
+        "parentTankId": "mu4dtwnw-bif504"
+      },
+      {
+        "id": "mu4dyuwt-lbv638",
+        "type": "mainBattleTankRed",
+        "x": 57.04,
+        "y": 23.28,
+        "commentImages": [
+          "Darwin Hill/scr_ (7).png",
+          "Darwin Hill/scr_ (8).png"
+        ]
+      },
+      {
+        "id": "mu4dza23-wcih5q",
+        "type": "spawnKill",
+        "x": 57.04,
+        "y": 23.28,
+        "parentTankId": "mu4dyuwt-lbv638"
+      },
+      {
+        "id": "mu4dzw4l-zzuks8",
+        "type": "mainBattleTankRed",
+        "x": 40.7,
+        "y": 19.46
+      },
+      {
+        "id": "mu4dzxf7-bds67z",
+        "type": "spawnKill",
+        "x": 40.7,
+        "y": 19.46,
+        "parentTankId": "mu4dzw4l-zzuks8"
+      },
+      {
+        "id": "mu4e0guo-4nok3i",
+        "type": "mainBattleTankRed",
+        "x": 24.2,
+        "y": 23.02,
+        "commentImages": [
+          "Darwin Hill/scr_ (10).png",
+          "Darwin Hill/scr_ (11).png"
+        ]
+      },
+      {
+        "id": "mu4e0lpf-3ea2nz",
+        "type": "spawnKill",
+        "x": 24.2,
+        "y": 23.02,
+        "parentTankId": "mu4e0guo-4nok3i"
+      }
+    ],
     "Eastern Europe::domination-1|Red": [],
     "Eastern Europe::domination-1|Blue": [],
     "Eastern Europe::domination-2|Blue": [],
@@ -10200,6 +10346,7 @@
     "Flanders::domination-1|Blue": [],
     "Flanders::domination-1|Red": [],
     "Frozen Pass::domination-1|Blue": [],
+    "Frozen Pass::domination-1|Red": [],
     "Fulda::domination-1|Red": [
       {
         "id": "mu21zea3-ohjgx7",
@@ -19064,8 +19211,8 @@
       {
         "id": "vietnam-domination-2-red-unit-23",
         "type": "mainBattleTankRed",
-        "x": 82.5,
-        "y": 86.25
+        "x": 77.69,
+        "y": 93.55
       },
       {
         "id": "vietnam-domination-2-red-unit-24",
@@ -19092,19 +19239,6 @@
         "x": 48.19,
         "y": 91.88,
         "parentTankId": "vietnam-domination-2-red-unit-25"
-      },
-      {
-        "id": "mtxn3s8k-muhrp8",
-        "type": "mainBattleTankRed",
-        "x": 54.52,
-        "y": 56.91
-      },
-      {
-        "id": "mtxn3v1m-rijdxr",
-        "type": "highRiskSpot",
-        "x": 54.52,
-        "y": 56.91,
-        "parentTankId": "mtxn3s8k-muhrp8"
       },
       {
         "id": "mtxn4luv-c7bn5o",
@@ -19136,8 +19270,8 @@
       {
         "id": "mtxn53ci-h354jx",
         "type": "spawnKill",
-        "x": 82.5,
-        "y": 86.25,
+        "x": 77.69,
+        "y": 93.55,
         "parentTankId": "vietnam-domination-2-red-unit-23"
       }
     ],
@@ -19998,8 +20132,14 @@
         "y": 17.37
       }
     ],
-    "Darwin Hill::domination-1|Red": [],
-    "Frozen Pass::domination-1|Red": []
+    "Darwin Hill::conquest-1|Blue": [],
+    "Darwin Hill::conquest-2|Blue": [],
+    "Darwin Hill::conquest-3|Blue": [],
+    "Darwin Hill::battle-1|Blue": [],
+    "Darwin Hill::battle-1|Red": [],
+    "Darwin Hill::conquest-1|Red": [],
+    "Darwin Hill::conquest-2|Red": [],
+    "Darwin Hill::conquest-3|Red": []
   },
   "annotations": {
     "38th Parallel::domination-1|Red": [
@@ -38222,7 +38362,155 @@
         "endY": 23.57
       }
     ],
-    "Darwin Hill::domination-1|Blue": [],
+    "Darwin Hill::domination-1|Blue": [
+      {
+        "id": "mu4duvtc-m61sqa",
+        "type": "aimHere",
+        "parentTankId": "mu4dup0t-t0c66q",
+        "startX": 10.3,
+        "startY": 38.58,
+        "endX": 8.21,
+        "endY": 63.6
+      },
+      {
+        "id": "mu4dve3m-sr6zaq",
+        "type": "route",
+        "points": [
+          {
+            "x": 10.82,
+            "y": 39.36
+          },
+          {
+            "x": 9.25,
+            "y": 35.97
+          },
+          {
+            "x": 8.91,
+            "y": 34.75
+          },
+          {
+            "x": 7.95,
+            "y": 30.41
+          },
+          {
+            "x": 9.43,
+            "y": 27.63
+          },
+          {
+            "x": 12.03,
+            "y": 23.54
+          },
+          {
+            "x": 12.12,
+            "y": 20.07
+          },
+          {
+            "x": 14.29,
+            "y": 17.29
+          },
+          {
+            "x": 18.9,
+            "y": 13.81
+          },
+          {
+            "x": 23.68,
+            "y": 11.99
+          }
+        ]
+      },
+      {
+        "id": "mu4dwcpx-gvvtl3",
+        "type": "aimHere",
+        "parentTankId": "mu4dw312-6t13j8",
+        "startX": 14.64,
+        "startY": 76.72,
+        "endX": 26.02,
+        "endY": 89.31
+      },
+      {
+        "id": "mu4dwvuk-x80jma",
+        "type": "aimHere",
+        "parentTankId": "mu4dwt71-e0dx8p",
+        "startX": 33.93,
+        "startY": 75.67,
+        "endX": 26.46,
+        "endY": 89.49
+      },
+      {
+        "id": "mu4dxh6n-7j05ly",
+        "type": "aimHere",
+        "parentTankId": "mu4dxetb-zb6y0c",
+        "startX": 61.21,
+        "startY": 81.84,
+        "endX": 68.59,
+        "endY": 93.83
+      },
+      {
+        "id": "mu4dy801-wnijjb",
+        "type": "aimHere",
+        "parentTankId": "mu4dxy0l-yshnuk",
+        "startX": 81.02,
+        "startY": 80.36,
+        "endX": 68.68,
+        "endY": 93.48
+      }
+    ],
+    "Darwin Hill::domination-1|Red": [
+      {
+        "id": "mu4du5gy-o0w11i",
+        "type": "aimHere",
+        "parentTankId": "mu4dtwnw-bif504",
+        "startX": 9.86,
+        "startY": 17.38,
+        "endX": 22.37,
+        "endY": 12.16
+      },
+      {
+        "id": "mu4dyyp9-4fi9h2",
+        "type": "aimHere",
+        "parentTankId": "mu4dyuwt-lbv638",
+        "startX": 57.04,
+        "startY": 23.28,
+        "endX": 63.03,
+        "endY": 8.08
+      },
+      {
+        "id": "mu4dz0d1-w3sk1p",
+        "type": "aimHere",
+        "parentTankId": "mu4dyuwt-lbv638",
+        "startX": 57.04,
+        "startY": 23.28,
+        "endX": 74.5,
+        "endY": 10.08
+      },
+      {
+        "id": "mu4e08ib-airu0f",
+        "type": "aimHere",
+        "parentTankId": "mu4dzw4l-zzuks8",
+        "startX": 40.7,
+        "startY": 19.46,
+        "endX": 26.37,
+        "endY": 12.68
+      },
+      {
+        "id": "mu4e0ojr-vsvh2z",
+        "type": "aimHere",
+        "parentTankId": "mu4e0guo-4nok3i",
+        "startX": 24.2,
+        "startY": 23.02,
+        "endX": 27.58,
+        "endY": 12.77
+      },
+      {
+        "id": "mu4e0qwl-f94bqo",
+        "type": "aimHere",
+        "parentTankId": "mu4e0guo-4nok3i",
+        "startX": 24.2,
+        "startY": 23.02,
+        "endX": 20.37,
+        "endY": 12.86
+      }
+    ],
     "Eastern Europe::domination-1|Red": [],
     "Eastern Europe::domination-1|Blue": [],
     "Eastern Europe::domination-2|Blue": [],
@@ -42249,6 +42537,7 @@
     "Flanders::domination-1|Blue": [],
     "Flanders::domination-1|Red": [],
     "Frozen Pass::domination-1|Blue": [],
+    "Frozen Pass::domination-1|Red": [],
     "Fulda::domination-1|Red": [
       {
         "id": "mu2204u5-d7oj9f",
@@ -58099,15 +58388,6 @@
         "dangerRoute": true
       },
       {
-        "id": "mu07mpmu-x06ot7",
-        "type": "aimHere",
-        "parentTankId": "mu071n2i-bt3kyd",
-        "startX": 83.07,
-        "startY": 34.48,
-        "endX": 24.02,
-        "endY": 30.67
-      },
-      {
         "id": "mu228iaa-ezl6ri",
         "type": "aimHere",
         "parentTankId": "mu228c45-ry7zl9",
@@ -58181,7 +58461,8 @@
             "x": 74.02,
             "y": 37.04
           }
-        ]
+        ],
+        "dangerRoute": true
       },
       {
         "id": "mu22fseb-rtkfha",
@@ -58211,7 +58492,8 @@
             "x": 75.41,
             "y": 19.47
           }
-        ]
+        ],
+        "dangerRoute": true
       },
       {
         "id": "mu22fzhk-gsmu7s",
@@ -58241,7 +58523,8 @@
             "x": 65.04,
             "y": 20.99
           }
-        ]
+        ],
+        "dangerRoute": true
       }
     ],
     "Tunisia::domination-1|Blue": [
@@ -60344,8 +60627,8 @@
         "id": "mtxn5a3e-3gi6lg",
         "type": "aimHere",
         "parentTankId": "vietnam-domination-2-red-unit-23",
-        "startX": 82.5,
-        "startY": 86.25,
+        "startX": 77.69,
+        "startY": 93.55,
         "endX": 94.33,
         "endY": 75.26
       },
@@ -62284,13 +62567,21 @@
         ]
       }
     ],
-    "Darwin Hill::domination-1|Red": [],
-    "Frozen Pass::domination-1|Red": []
+    "Darwin Hill::conquest-1|Blue": [],
+    "Darwin Hill::conquest-2|Blue": [],
+    "Darwin Hill::conquest-3|Blue": [],
+    "Darwin Hill::battle-1|Blue": [],
+    "Darwin Hill::battle-1|Red": [],
+    "Darwin Hill::conquest-1|Red": [],
+    "Darwin Hill::conquest-2|Red": [],
+    "Darwin Hill::conquest-3|Red": []
   },
   "vectorGroups": {
     "Arctic Pier::domination-1|Blue": [],
-    "Sands of Sinai::domination-1|Blue": []
+    "Sands of Sinai::domination-1|Blue": [],
+    "Darwin Hill::conquest-1|Red": [],
+    "Darwin Hill::conquest-2|Red": []
   },
-  "updatedAt": "2026-09-16T02:39:09.223Z",
-  "exportedAt": "2026-09-16T02:40:44.466Z"
+  "updatedAt": "2026-09-16T17:44:56.803Z",
+  "exportedAt": "2026-09-16T17:45:20.222Z"
 }

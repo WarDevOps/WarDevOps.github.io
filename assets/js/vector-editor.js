@@ -45,12 +45,6 @@ export function createVectorEditor(h) {
     try {
       const candidate=structuredClone(h.layout()),before=snapshot(h.layout(),key);
       const added=appendLayout(candidate,key,clipboard.layout,clipboard.key,id);
-      const b=bounds(candidate,key,added);
-      const dx=Math.max(-b.minX,Math.min(2,100-b.maxX));
-      const dy=Math.max(-b.minY,Math.min(2,100-b.maxY));
-      const matrix=[1,0,0,1,dx,dy];
-      if(!fitsTransform(candidate,key,added,matrix))throw new Error('Outside map');
-      transform(candidate,key,added,matrix,snapshot(candidate,key));
       h.validate(candidate);
       restore(h.layout(),key,snapshot(candidate,key));
       selected=added;editable=new Set([...editable,...added]);

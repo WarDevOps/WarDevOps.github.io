@@ -1,6 +1,6 @@
     import { MARKER_LAYOUT_VERSION, backupMarkerLayout, loadMarkerLayout, saveMarkerLayout as saveMarkerLayoutToStorage } from './marker-storage.js?v=replay-vectors-20260915';
 import { initDiscordMemberCount } from './discord-stats.js';
-import { createVectorEditor } from './vector-editor.js?v=copy-paste-20260916';
+import { createVectorEditor } from './vector-editor.js?v=paste-in-place-20260917';
 import { validateVectorGroups, pruneGroups } from './vector-model.js?v=copy-paste-20260916';
 let vectorEditor = null;
     import { commentImages } from './comment-images.js?v=comment-images-c25d702d2907';

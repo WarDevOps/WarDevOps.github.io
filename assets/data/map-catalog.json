@@ -672,8 +672,8 @@
       "name": "Darwin Hill",
       "aliases": "다윈 힐",
       "slug": "darwin-hill",
-      "updated": "2026-09-12",
-      "updatedAt": "2026-09-12T01:07:40Z",
+      "updated": "2026-09-17",
+      "updatedAt": "2026-09-16T17:42:13Z",
       "br": {
         "min": 5
       },
@@ -1544,8 +1544,8 @@
       "name": "Tunisia",
       "aliases": "튀니지",
       "slug": "tunisia",
-      "updated": "2026-09-15",
-      "updatedAt": "2026-09-15T02:42:55Z",
+      "updated": "2026-09-16",
+      "updatedAt": "2026-09-16T02:52:07Z",
       "br": {
         "min": 4.7
       },
@@ -1574,8 +1574,8 @@
       "name": "Vietnam",
       "aliases": "베트남",
       "slug": "vietnam",
-      "updated": "2026-09-12",
-      "updatedAt": "2026-09-12T00:24:23Z",
+      "updated": "2026-09-16",
+      "updatedAt": "2026-09-16T02:50:51Z",
       "br": {
         "min": 5
       },
