@@ -3,8 +3,8 @@ import { initDiscordMemberCount } from './discord-stats.js';
 import { createVectorEditor } from './vector-editor.js?v=independent-selection-20260917';
 import { validateVectorGroups, pruneGroups } from './vector-model.js?v=independent-selection-20260917';
 let vectorEditor = null;
-    import { commentImages } from './comment-images.js?v=comment-images-23858e38a190';
-    import { defaultMarkerLayout, maps, translations } from './data.js?v=delete-all-markers-20260915';
+    import { commentImages } from './comment-images.js?v=comment-images-b1788d2b577f';
+    import { defaultMarkerLayout, maps, translations } from './data.js?v=map-news-20260917';
     import { normalizeTacticalSummary, resolveTacticalSummary, withVariationSummary } from './tactical-summary.js?v=variation-switch-20260914';
     import { acceptUpstreamMap, isMapSyncState, markLayoutAsLocalEdits, markMapEdited, mergeMapLayouts, sourceRevision } from './marker-merge.js?v=replay-vectors-20260915';
 

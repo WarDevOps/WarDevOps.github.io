@@ -99,6 +99,8 @@
     .seo-title { max-width: 900px; margin: 20px 0 0; font-size: clamp(1.35rem, 3vw, 2rem); line-height: 1.15; letter-spacing: -.035em; }
     .hero-copy { max-width: 620px; margin: 20px 0 0; color: var(--muted); font-size: clamp(1rem, 2vw, 1.12rem); line-height: 1.75; }
     .recent-updates { width: 100%; padding-bottom: 3px; }
+    .map-news { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid var(--line); }
+    .map-news p { margin: 4px 0 0; color: var(--muted); font-size: .76rem; line-height: 1.6; overflow-wrap: anywhere; }
     .recent-updates h2 { margin: 0 0 8px; color: var(--accent); font-size: .68rem; font-weight: 850; letter-spacing: .14em; text-transform: uppercase; }
     .recent-updates ol { margin: 0; padding: 0; list-style: none; }
     .recent-updates li { border-bottom: 1px solid var(--line); }

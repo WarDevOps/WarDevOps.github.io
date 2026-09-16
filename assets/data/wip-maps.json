@@ -15,5 +15,8 @@
   "kuban",
   "normandy",
   "red-desert",
-  { "slug": "stalingrad", "color": "black" }
+  { "slug": "stalingrad", "color": "black" },
+  "poland",
+  "berlin",
+  "battle-of-hurtgen-forest"
 ]

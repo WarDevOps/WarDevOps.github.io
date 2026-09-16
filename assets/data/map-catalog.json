@@ -281,8 +281,8 @@
       "name": "Ardennes",
       "aliases": "아르덴",
       "slug": "ardennes",
-      "updated": "2026-09-17",
-      "updatedAt": "2026-09-16T19:23:55Z",
+      "updated": "2026-09-14",
+      "updatedAt": "2026-09-13T23:15:39Z",
       "br": {
         "min": 3.7
       },
@@ -426,8 +426,8 @@
       "name": "Battle of Hürtgen Forest",
       "aliases": "휘르트겐 숲 전투",
       "slug": "battle-of-hurtgen-forest",
-      "updated": "2026-09-15",
-      "updatedAt": "2026-09-15T02:14:42Z",
+      "updated": "2026-09-17",
+      "updatedAt": "2026-09-16T19:35:57Z",
       "br": {
         "min": 4.7
       },
@@ -604,8 +604,8 @@
       "name": "Cargo Port",
       "aliases": "카고 포트",
       "slug": "cargo-port",
-      "updated": "2026-09-03",
-      "updatedAt": "2026-09-03T01:49:31Z",
+      "updated": "2026-09-17",
+      "updatedAt": "2026-09-16T19:28:29Z",
       "br": {
         "min": 4.7
       },
@@ -1021,7 +1021,8 @@
       "name": "Japan",
       "aliases": "일본",
       "slug": "japan",
-      "updated": "2026-08-16",
+      "updated": "2026-09-17",
+      "updatedAt": "2026-09-16T19:32:10Z",
       "br": {
         "min": 1
       },
@@ -1107,7 +1108,8 @@
       "name": "Maginot Line",
       "aliases": "마지노선",
       "slug": "maginot-line",
-      "updated": "2026-08-16",
+      "updated": "2026-09-17",
+      "updatedAt": "2026-09-16T19:34:11Z",
       "br": {
         "min": 5
       },
@@ -1544,8 +1546,8 @@
       "name": "Tunisia",
       "aliases": "튀니지",
       "slug": "tunisia",
-      "updated": "2026-09-16",
-      "updatedAt": "2026-09-16T02:52:07Z",
+      "updated": "2026-09-17",
+      "updatedAt": "2026-09-16T19:37:22Z",
       "br": {
         "min": 4.7
       },

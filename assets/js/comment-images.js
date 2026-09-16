@@ -1147,6 +1147,21 @@ export const commentImages = Object.freeze([
     "label": "scr_ (11).png"
   },
   {
+    "id": "Darwin Hill/scr_ (12).png",
+    "path": "img/Darwin Hill/scr_ (12).png",
+    "label": "scr_ (12).png"
+  },
+  {
+    "id": "Darwin Hill/scr_ (13).png",
+    "path": "img/Darwin Hill/scr_ (13).png",
+    "label": "scr_ (13).png"
+  },
+  {
+    "id": "Darwin Hill/scr_ (14).png",
+    "path": "img/Darwin Hill/scr_ (14).png",
+    "label": "scr_ (14).png"
+  },
+  {
     "id": "Darwin Hill/scr_ (2).png",
     "path": "img/Darwin Hill/scr_ (2).png",
     "label": "scr_ (2).png"
