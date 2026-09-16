@@ -1928,7 +1928,7 @@ let vectorEditor = null;
         labelBoxes.push(box);
       });
     }
-    const workInProgressMaps = new Set();
+    const workInProgressMaps = new Map();
     const wipStorageKey = "maptactic-wip-overrides";
     let wipOverrides = {};
     try {
@@ -1953,9 +1953,14 @@ let vectorEditor = null;
     });
     fetch("/assets/data/wip-maps.json", { cache: "no-store" })
       .then(response => { if (!response.ok) throw new Error("WIP configuration unavailable"); return response.json(); })
-      .then(slugs => {
-        if (!Array.isArray(slugs) || !slugs.every(slug => typeof slug === "string")) throw new Error("Invalid WIP configuration");
-        slugs.forEach(slug => workInProgressMaps.add(slug));
+      .then(entries => {
+        if (!Array.isArray(entries) || !entries.every(entry => typeof entry === "string" || (
+          entry && typeof entry.slug === "string" && ["white", "black"].includes(entry.color)
+        ))) throw new Error("Invalid WIP configuration");
+        entries.forEach(entry => workInProgressMaps.set(
+          typeof entry === "string" ? entry : entry.slug,
+          typeof entry === "string" ? "white" : entry.color
+        ));
         renderMarkers();
       })
       .catch(error => console.warn(error));
@@ -1973,6 +1978,7 @@ let vectorEditor = null;
         stage.append(layer);
       }
       layer.hidden = !visible;
+      layer.firstElementChild.style.filter = workInProgressMaps.get(state.selected?.slug) === "black" ? "brightness(0)" : "none";
       layer.firstElementChild.alt = state.language === "ko" ? "공략 준비 중" : "Tactical guide under construction";
       if (visible) syncMarkerLayer(layer, image, stage);
     }

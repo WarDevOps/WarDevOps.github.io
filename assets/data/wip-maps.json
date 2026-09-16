@@ -1,3 +1,5 @@
 [
-  "darwin-hill"
+  "darwin-hill",
+  { "slug": "volokolamsk", "color": "black" },
+  { "slug": "surroundings-of-volokolamsk", "color": "black" }
 ]
