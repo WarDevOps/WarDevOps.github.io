@@ -91,8 +91,8 @@
       "name": "Advance to the Rhine",
       "aliases": "라인 강 진격",
       "slug": "advance-to-the-rhine",
-      "updated": "2026-09-14",
-      "updatedAt": "2026-09-13T23:13:46Z",
+      "updated": "2026-09-16",
+      "updatedAt": "2026-09-16T02:26:57Z",
       "br": {
         "min": 1
       },
@@ -149,8 +149,8 @@
       "name": "American Desert",
       "aliases": "아메리칸 데저트",
       "slug": "american-desert",
-      "updated": "2026-09-15",
-      "updatedAt": "2026-09-14T15:49:37Z",
+      "updated": "2026-09-16",
+      "updatedAt": "2026-09-16T02:29:34Z",
       "br": {
         "min": 5
       },
@@ -772,8 +772,8 @@
       "name": "Fields of Normandy",
       "aliases": "노르망디의 들판",
       "slug": "fields-of-normandy",
-      "updated": "2026-09-04",
-      "updatedAt": "2026-09-04T05:43:38Z",
+      "updated": "2026-09-15",
+      "updatedAt": "2026-09-15T05:00:19Z",
       "br": {
         "min": 2.3
       },
@@ -1289,8 +1289,8 @@
       "name": "Sands of Sinai",
       "aliases": "시나이의 모래사장",
       "slug": "sands-of-sinai",
-      "updated": "2026-09-15",
-      "updatedAt": "2026-09-15T02:08:32Z",
+      "updated": "2026-09-16",
+      "updatedAt": "2026-09-16T02:39:09Z",
       "br": {
         "min": 5
       },

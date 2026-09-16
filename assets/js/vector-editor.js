@@ -1,12 +1,12 @@
-import {around,ref,entries,vertices,bounds,expandSelection,snapshot,restore,transform,deleteSelection,appendLayout,fitsTransform} from './vector-model.js?v=compact-editor-20260915';
+import {around,ref,entries,vertices,bounds,expandSelection,snapshot,restore,transform,deleteSelection,copySelection,appendLayout,fitsTransform} from './vector-model.js?v=copy-paste-20260916';
 
 const words={
-  ko:{lock:'기존 객체 잠금',undo:'되돌리기',redo:'다시 실행',delete:'선택 삭제',rotate:'선택 회전',resize:'선택 크기 조절',move:'선택 이동',invalid:'JSON을 추가할 수 없습니다. 지도와 파일 형식을 확인하세요.',added:'리플레이를 추가했습니다.'},
-  en:{lock:'Lock existing objects',undo:'Undo',redo:'Redo',delete:'Delete selected',rotate:'Rotate selection',resize:'Resize selection',move:'Move selection',invalid:'Cannot add this JSON. Check the map and file format.',added:'Replay added.'}
+  ko:{copy:'복사',paste:'붙여넣기',copied:'선택한 객체를 복사했습니다.',pasteError:'붙여넣을 수 없습니다. 지도 데이터 제한을 확인하세요.',lock:'기존 객체 잠금',undo:'되돌리기',redo:'다시 실행',delete:'선택 삭제',rotate:'선택 회전',resize:'선택 크기 조절',move:'선택 이동',invalid:'JSON을 추가할 수 없습니다. 지도와 파일 형식을 확인하세요.',added:'리플레이를 추가했습니다.'},
+  en:{copy:'Copy',paste:'Paste',copied:'Selection copied.',pasteError:'Cannot paste. Check map data limits.',lock:'Lock existing objects',undo:'Undo',redo:'Redo',delete:'Delete selected',rotate:'Rotate selection',resize:'Resize selection',move:'Move selection',invalid:'Cannot add this JSON. Check the map and file format.',added:'Replay added.'}
 };
 export function createVectorEditor(h) {
   let active=false,lock=true,key=null,selected=new Set(),editable=new Set(),known=new Set(),gesture=null,undo=[],redo=[],internal=false;
-  let frame=0,reading=false;
+  let frame=0,reading=false,clipboard=null;
   const bars=[], surfaces=[];
   const msg=()=>words[h.language()==='ko'?'ko':'en'];
   const id=()=>`vector-${crypto.randomUUID()}`;
@@ -35,6 +35,28 @@ export function createVectorEditor(h) {
     mutate(()=>deleteSelection(h.layout(),key,selected));
     selected.clear();h.render();refresh();
   }
+  function copySelected() {
+    if(!selected.size||gesture||!key)return;
+    clipboard={key,layout:copySelection(h.layout(),key,selected)};
+    refresh();announce(msg().copied);
+  }
+  function pasteSelected() {
+    if(!clipboard||gesture||!key||!h.editing())return;
+    try {
+      const candidate=structuredClone(h.layout()),before=snapshot(h.layout(),key);
+      const added=appendLayout(candidate,key,clipboard.layout,clipboard.key,id);
+      const b=bounds(candidate,key,added);
+      const dx=Math.max(-b.minX,Math.min(2,100-b.maxX));
+      const dy=Math.max(-b.minY,Math.min(2,100-b.maxY));
+      const matrix=[1,0,0,1,dx,dy];
+      if(!fitsTransform(candidate,key,added,matrix))throw new Error('Outside map');
+      transform(candidate,key,added,matrix,snapshot(candidate,key));
+      h.validate(candidate);
+      restore(h.layout(),key,snapshot(candidate,key));
+      selected=added;editable=new Set([...editable,...added]);
+      save(before);h.render();announce('');
+    }catch(error){announce(msg().pasteError);}
+  }
   async function addFile(chosen) {
     const targetKey=h.key(),layout=h.layout();if(!chosen||!targetKey||!h.editing())return;
     try {
@@ -58,9 +80,9 @@ export function createVectorEditor(h) {
   for(const container of h.toolbars) {
     const panel=document.createElement('div');panel.className='vector-editor-tools';panel.hidden=true;
     const buttons={};
-    for(const action of ['undo','redo','delete']) {
+    for(const action of ['undo','redo','copy','paste','delete']) {
       const button=document.createElement('button');button.type='button';button.className='marker-tool';button.dataset.vectorAction=action;
-      button.addEventListener('click',()=>action==='delete'?removeSelected():history(action==='undo'));
+      button.addEventListener('click',()=>action==='delete'?removeSelected():action==='copy'?copySelected():action==='paste'?pasteSelected():history(action==='undo'));
       buttons[action]=button;panel.append(button);
     }
     const lockLabel=document.createElement('label');lockLabel.className='vector-lock';
@@ -144,7 +166,7 @@ export function createVectorEditor(h) {
     for(const bar of bars) {
       bar.panel.hidden=!h.editing()||!key;
       for(const [action,button] of Object.entries(bar.buttons)) {
-        button.textContent=w[action];button.disabled=!key||!!gesture||(action==='delete'&&!selected.size)||(action==='undo'&&!undo.length)||(action==='redo'&&!redo.length);
+        button.textContent=w[action];button.disabled=!key||!!gesture||(['delete','copy'].includes(action)&&!selected.size)||(action==='paste'&&!clipboard)||(action==='undo'&&!undo.length)||(action==='redo'&&!redo.length);
       }
       bar.checkbox.checked=lock;bar.lockText.textContent=w.lock;
     }
@@ -169,7 +191,11 @@ export function createVectorEditor(h) {
   }
   document.addEventListener('keydown',event=>{
     if(!h.editing()||!active||event.target.closest('input,textarea,select,[contenteditable="true"]'))return;
-    if((event.ctrlKey||event.metaKey)&&['z','y'].includes(event.key.toLowerCase())) {
+    if((event.ctrlKey||event.metaKey)&&['c','v'].includes(event.key.toLowerCase())&&!gesture) {
+      if(event.key.toLowerCase()==='c'?!selected.size:!clipboard)return;
+      event.preventDefault();event.stopImmediatePropagation();
+      if(event.key.toLowerCase()==='c')copySelected();else pasteSelected();
+    }else if((event.ctrlKey||event.metaKey)&&['z','y'].includes(event.key.toLowerCase())) {
       event.preventDefault();event.stopImmediatePropagation();const k=event.key.toLowerCase();history(k==='z'&&!event.shiftKey);
     }else if(event.key==='Delete'&&selected.size&&!gesture) {
       event.preventDefault();event.stopImmediatePropagation();removeSelected();

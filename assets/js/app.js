@@ -1,7 +1,7 @@
     import { MARKER_LAYOUT_VERSION, backupMarkerLayout, loadMarkerLayout, saveMarkerLayout as saveMarkerLayoutToStorage } from './marker-storage.js?v=replay-vectors-20260915';
 import { initDiscordMemberCount } from './discord-stats.js';
-import { createVectorEditor } from './vector-editor.js?v=context-menu-20260916';
-import { validateVectorGroups, pruneGroups } from './vector-model.js?v=compact-editor-20260915';
+import { createVectorEditor } from './vector-editor.js?v=copy-paste-20260916';
+import { validateVectorGroups, pruneGroups } from './vector-model.js?v=copy-paste-20260916';
 let vectorEditor = null;
     import { commentImages } from './comment-images.js?v=comment-images-c25d702d2907';
     import { defaultMarkerLayout, maps, translations } from './data.js?v=delete-all-markers-20260915';
@@ -2698,6 +2698,12 @@ let vectorEditor = null;
     bindMarkerContextMenu(modalMarkerContextMenu);
     bindAnnotationContextMenu(annotationContextMenu);
     bindAnnotationContextMenu(modalAnnotationContextMenu);
+    // Run before map selection/drag handlers can stop event propagation.
+    document.addEventListener("pointerdown", event => {
+      if (event.button !== 0) return;
+      if (!markerContextMenu.contains(event.target) && !modalMarkerContextMenu.contains(event.target)) hideMarkerContextMenu();
+      if (!annotationContextMenu.contains(event.target) && !modalAnnotationContextMenu.contains(event.target)) hideAnnotationContextMenu();
+    }, true);
     document.addEventListener("click", event => {
       const clickedComment = markerCommentPopover.contains(event.target) || markerCommentImagePreview.contains(event.target);
       const clickedMapBackground = event.target.closest?.(".map-stage, .modal-map-stage") && !event.target.closest?.(".map-marker");

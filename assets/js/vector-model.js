@@ -50,6 +50,14 @@ export function expandSelection(layout,key,selection) {
 export function snapshot(layout,key) {
   return structuredClone({markers:layout.markers?.[key]||[],annotations:layout.annotations?.[key]||[],groups:layout.vectorGroups?.[key]||[]});
 }
+export function copySelection(layout,key,selection) {
+  const selected=expandSelection(layout,key,selection);
+  return structuredClone({version:2,
+    markers:{[key]:(layout.markers[key]||[]).filter(v=>selected.has(ref('m',v.id)))},
+    annotations:{[key]:(layout.annotations[key]||[]).filter(v=>selected.has(ref('a',v.id)))},
+    vectorGroups:{[key]:(layout.vectorGroups?.[key]||[]).filter(g=>g.members.some(m=>selected.has(ref(m.kind,m.id))))}
+  });
+}
 export function deleteSelection(layout,key,selection) {
   const removed=expandSelection(layout,key,selection);
   layout.markers[key]=(layout.markers[key]||[]).filter(v=>!removed.has(ref('m',v.id)));

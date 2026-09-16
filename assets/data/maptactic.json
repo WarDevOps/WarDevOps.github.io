@@ -4,9 +4,9 @@
     "38th Parallel": "2026-09-14",
     "Abandoned Factory": "2026-09-14",
     "Abandoned Town": "2026-09-14",
-    "Advance to the Rhine": "2026-09-14",
+    "Advance to the Rhine": "2026-09-16",
     "Alaska": "2026-09-14",
-    "American Desert": "2026-09-15",
+    "American Desert": "2026-09-16",
     "Aral Sea": "2026-09-10",
     "Arctic Pier": "2026-09-15",
     "Arctic Polar Base": "2026-09-12",
@@ -22,7 +22,7 @@
     "Darwin Hill": "2026-09-12",
     "Eastern Europe": "2026-09-03",
     "European Province": "2026-09-04",
-    "Fields of Normandy": "2026-09-04",
+    "Fields of Normandy": "2026-09-15",
     "Fields of Poland": "2026-09-15",
     "Finland": "2026-08-16",
     "Fire Arc": "2026-08-31",
@@ -44,7 +44,7 @@
     "Port Novorossiysk": "2026-09-09",
     "Pradesh": "2026-08-31",
     "Red Desert": "2026-09-15",
-    "Sands of Sinai": "2026-09-15",
+    "Sands of Sinai": "2026-09-16",
     "Second Battle of El Alamein": "2026-09-15",
     "Seversk-13": "2026-09-14",
     "Sinai": "2026-09-15",
@@ -63,9 +63,9 @@
     "38th Parallel": "2026-09-13T22:45:42Z",
     "Abandoned Factory": "2026-09-13T23:29:02Z",
     "Abandoned Town": "2026-09-13T23:30:35Z",
-    "Advance to the Rhine": "2026-09-13T23:13:46Z",
+    "Advance to the Rhine": "2026-09-16T02:26:57Z",
     "Alaska": "2026-09-13T23:26:53Z",
-    "American Desert": "2026-09-14T15:49:37Z",
+    "American Desert": "2026-09-16T02:29:34Z",
     "Aral Sea": "2026-09-10T12:50:30Z",
     "Arctic Pier": "2026-09-15T01:05:22Z",
     "Arctic Polar Base": "2026-09-12T01:01:54Z",
@@ -81,7 +81,7 @@
     "Darwin Hill": "2026-09-12T01:07:40Z",
     "Eastern Europe": "2026-09-03T01:49:56Z",
     "European Province": "2026-09-04T05:43:30Z",
-    "Fields of Normandy": "2026-09-04T05:43:38Z",
+    "Fields of Normandy": "2026-09-15T05:00:19Z",
     "Fields of Poland": "2026-09-15T02:54:34Z",
     "Fulda": "2026-09-15T02:33:41Z",
     "Golden Quarry": "2026-09-12T00:18:22Z",
@@ -93,7 +93,8 @@
     "Poland": "2026-09-15T02:55:29Z",
     "Port Novorossiysk": "2026-09-08T23:53:12Z",
     "Red Desert": "2026-09-15T03:19:40Z",
-    "Sands of Sinai": "2026-09-15T02:08:32Z",
+    "Sands of Sinai": "2026-09-16T02:39:09Z",
+    "Second Battle of El Alamein": "2026-09-15T04:50:18Z",
     "Seversk-13": "2026-09-13T19:59:09Z",
     "Sinai": "2026-09-15T03:39:06Z",
     "Spaceport": "2026-09-15T03:04:03Z",
@@ -102,8 +103,7 @@
     "Test Site-2271": "2026-09-13T19:14:47Z",
     "Tunisia": "2026-09-15T02:42:55Z",
     "Vietnam": "2026-09-12T00:24:23Z",
-    "White Rock Fortress": "2026-09-02T04:58:42Z",
-    "Second Battle of El Alamein": "2026-09-15T04:50:18Z"
+    "White Rock Fortress": "2026-09-02T04:58:42Z"
   },
   "tacticalSummaries": {
     "Eastern Europe": {
@@ -1955,7 +1955,10 @@
         "id": "mtigek2r-ykhypi",
         "type": "mainBattleTankRed",
         "x": 35.46,
-        "y": 50.08
+        "y": 50.08,
+        "commentImages": [
+          "Advance to the Rhine/scr_ (15).png"
+        ]
       },
       {
         "id": "mtigelzr-e6lb6e",
@@ -3151,7 +3154,6 @@
         "x": 24.38,
         "y": 47.42,
         "commentImages": [
-          "American Desert/scr_ (1).png",
           "American Desert/scr_ (35).png"
         ]
       },
@@ -3180,7 +3182,8 @@
         "x": 58.08,
         "y": 40.1,
         "commentImages": [
-          "American Desert/scr_ (23).png"
+          "American Desert/scr_ (23).png",
+          "American Desert/scr_ (26).png"
         ]
       },
       {
@@ -3296,7 +3299,8 @@
         "x": 59.64,
         "y": 50.25,
         "commentImages": [
-          "American Desert/scr_ (14).png"
+          "American Desert/scr_ (14).png",
+          "American Desert/scr_ (31).png"
         ]
       },
       {
@@ -9037,6 +9041,20 @@
         "x": 54.03,
         "y": 96.46,
         "parentTankId": "fields-of-normandy-blue-unit-15"
+      },
+      {
+        "id": "mu27dvol-618zoe",
+        "type": "spawnKill",
+        "x": 94.86,
+        "y": 31.18,
+        "parentTankId": "fields-of-normandy-blue-unit-05"
+      },
+      {
+        "id": "mu27dx6p-ci11r2",
+        "type": "spawnKill",
+        "x": 97.08,
+        "y": 72.43,
+        "parentTankId": "fields-of-normandy-blue-unit-12"
       }
     ],
     "Fields of Normandy::domination-1|Red": [
@@ -9173,6 +9191,20 @@
         "x": 54.79,
         "y": 96.11,
         "parentTankId": "fields-of-normandy-red-unit-13"
+      },
+      {
+        "id": "mu27djqj-epqkqf",
+        "type": "spawnKill",
+        "x": 7.01,
+        "y": 12.57,
+        "parentTankId": "fields-of-normandy-red-unit-03"
+      },
+      {
+        "id": "mu27dl4n-km7kgl",
+        "type": "spawnKill",
+        "x": 8.4,
+        "y": 52.64,
+        "parentTankId": "fields-of-normandy-red-unit-08"
       }
     ],
     "Fields of Poland::domination-1|Blue": [
@@ -14004,32 +14036,6 @@
         "parentTankId": "sands-of-sinai-red-unit-08"
       },
       {
-        "id": "sands-of-sinai-red-unit-09",
-        "type": "mainBattleTankRed",
-        "x": 83.26,
-        "y": 52.99
-      },
-      {
-        "id": "sands-of-sinai-red-role-05",
-        "type": "battleLine",
-        "x": 83.26,
-        "y": 52.99,
-        "parentTankId": "sands-of-sinai-red-unit-09"
-      },
-      {
-        "id": "sands-of-sinai-red-unit-10",
-        "type": "mainBattleTankRed",
-        "x": 30.49,
-        "y": 53.54
-      },
-      {
-        "id": "sands-of-sinai-red-role-06",
-        "type": "battleLine",
-        "x": 30.49,
-        "y": 53.54,
-        "parentTankId": "sands-of-sinai-red-unit-10"
-      },
-      {
         "id": "sands-of-sinai-red-unit-11",
         "type": "mainBattleTankRed",
         "x": 88.19,
@@ -14050,7 +14056,7 @@
       },
       {
         "id": "sands-of-sinai-red-role-08",
-        "type": "battleLine",
+        "type": "highRiskSpot",
         "x": 74.93,
         "y": 58.19,
         "parentTankId": "sands-of-sinai-red-unit-12"
@@ -14165,6 +14171,12 @@
         "x": 20.42,
         "y": 17.57,
         "parentTankId": "sands-of-sinai-red-unit-02"
+      },
+      {
+        "id": "mu3hlnwo-ywjcws",
+        "type": "smokeshell",
+        "x": 91.18,
+        "y": 55.86
       }
     ],
     "Sands of Sinai::domination-1|Blue": [
@@ -14201,7 +14213,7 @@
       },
       {
         "id": "sands-of-sinai-blue-role-02",
-        "type": "highRiskSpot",
+        "type": "sniper",
         "x": 19.03,
         "y": 23.47,
         "parentTankId": "sands-of-sinai-blue-unit-04"
@@ -14214,7 +14226,7 @@
       },
       {
         "id": "sands-of-sinai-blue-role-03",
-        "type": "highRiskSpot",
+        "type": "sniper",
         "x": 75.76,
         "y": 28.96,
         "parentTankId": "sands-of-sinai-blue-unit-05"
@@ -14235,14 +14247,14 @@
       {
         "id": "sands-of-sinai-blue-unit-07",
         "type": "mainBattleTank",
-        "x": 90.62,
-        "y": 42.64
+        "x": 90.92,
+        "y": 38.49
       },
       {
         "id": "sands-of-sinai-blue-role-05",
         "type": "battleLine",
-        "x": 90.62,
-        "y": 42.64,
+        "x": 90.92,
+        "y": 38.49,
         "parentTankId": "sands-of-sinai-blue-unit-07"
       },
       {
@@ -14253,7 +14265,7 @@
       },
       {
         "id": "sands-of-sinai-blue-role-06",
-        "type": "battleLine",
+        "type": "highRiskSpot",
         "x": 74.58,
         "y": 42.71,
         "parentTankId": "sands-of-sinai-blue-unit-08"
@@ -14283,19 +14295,6 @@
         "x": 31.275398230088502,
         "y": 51.06826801517068,
         "parentTankId": "sands-of-sinai-blue-unit-10"
-      },
-      {
-        "id": "sands-of-sinai-blue-unit-11",
-        "type": "mainBattleTank",
-        "x": 84.44,
-        "y": 48.61
-      },
-      {
-        "id": "sands-of-sinai-blue-role-09",
-        "type": "battleLine",
-        "x": 84.44,
-        "y": 48.61,
-        "parentTankId": "sands-of-sinai-blue-unit-11"
       },
       {
         "id": "sands-of-sinai-blue-unit-12",
@@ -14363,7 +14362,7 @@
       },
       {
         "id": "mu2179c0-wfnr5r",
-        "type": "sniper",
+        "type": "spawnKill",
         "x": 88.19,
         "y": 56.94,
         "parentTankId": "sands-of-sinai-blue-unit-15"
@@ -14374,6 +14373,18 @@
         "x": 76.46,
         "y": 60.42,
         "parentTankId": "sands-of-sinai-blue-unit-16"
+      },
+      {
+        "id": "mu3hktp1-zgo8b8",
+        "type": "smokeshell",
+        "x": 59.9,
+        "y": 37.45
+      },
+      {
+        "id": "mu3hlr4u-dug5f3",
+        "type": "smokeshell",
+        "x": 92.05,
+        "y": 52.39
       }
     ],
     "Second Battle of El Alamein::domination-1|Red": [
@@ -19986,7 +19997,9 @@
         "x": 32.89,
         "y": 17.37
       }
-    ]
+    ],
+    "Darwin Hill::domination-1|Red": [],
+    "Frozen Pass::domination-1|Red": []
   },
   "annotations": {
     "38th Parallel::domination-1|Red": [
@@ -25275,24 +25288,6 @@
         "endY": 11.43
       },
       {
-        "id": "mtif6xg1-23nrwk",
-        "type": "route",
-        "points": [
-          {
-            "x": 61.17,
-            "y": 49.46
-          },
-          {
-            "x": 58.42,
-            "y": 50.79
-          },
-          {
-            "x": 57.09,
-            "y": 50.17
-          }
-        ]
-      },
-      {
         "id": "mtif6zqp-2deecu",
         "type": "route",
         "points": [
@@ -25663,6 +25658,20 @@
           {
             "x": 84.4,
             "y": 68.26
+          }
+        ]
+      },
+      {
+        "id": "mu3hfwz3-lbolpp",
+        "type": "route",
+        "points": [
+          {
+            "x": 57.21,
+            "y": 50.48
+          },
+          {
+            "x": 59.47,
+            "y": 50.48
           }
         ]
       }
@@ -49518,21 +49527,6 @@
         ]
       },
       {
-        "id": "sands-of-sinai-red-route-03",
-        "type": "route",
-        "points": [
-          {
-            "x": 27.64,
-            "y": 72.37
-          },
-          {
-            "x": 29.9,
-            "y": 55.2
-          }
-        ],
-        "dangerRoute": true
-      },
-      {
         "id": "sands-of-sinai-red-route-04",
         "type": "route",
         "points": [
@@ -49573,6 +49567,148 @@
           }
         ],
         "dangerRoute": true
+      },
+      {
+        "id": "mu3hjb46-wfng88",
+        "type": "aimHere",
+        "parentTankId": "sands-of-sinai-red-unit-02",
+        "startX": 20.42,
+        "startY": 17.57,
+        "endX": 32.54,
+        "endY": 5.21
+      },
+      {
+        "id": "mu3hlka2-9itzsz",
+        "type": "aimHere",
+        "parentTankId": "sands-of-sinai-red-unit-08",
+        "startX": 87.36,
+        "startY": 50.62,
+        "endX": 73.63,
+        "endY": 45.61
+      },
+      {
+        "id": "mu3hp15d-h4brxf",
+        "type": "route",
+        "points": [
+          {
+            "x": 81.02,
+            "y": 66.03
+          },
+          {
+            "x": 79.28,
+            "y": 63.25
+          },
+          {
+            "x": 78.06,
+            "y": 61.51
+          },
+          {
+            "x": 76.32,
+            "y": 59.17
+          },
+          {
+            "x": 75.37,
+            "y": 58.47
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "mu3hpk9w-epifpk",
+        "type": "route",
+        "points": [
+          {
+            "x": 66.33,
+            "y": 62.64
+          },
+          {
+            "x": 63.9,
+            "y": 61.86
+          },
+          {
+            "x": 59.47,
+            "y": 61.34
+          },
+          {
+            "x": 58.17,
+            "y": 59.77
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "mu3hq5l5-8rlbud",
+        "type": "route",
+        "points": [
+          {
+            "x": 30.28,
+            "y": 94.96
+          },
+          {
+            "x": 28.54,
+            "y": 93.22
+          },
+          {
+            "x": 25.07,
+            "y": 90.7
+          },
+          {
+            "x": 22.2,
+            "y": 86.79
+          },
+          {
+            "x": 19.07,
+            "y": 82.19
+          },
+          {
+            "x": 17.42,
+            "y": 76.63
+          },
+          {
+            "x": 17.42,
+            "y": 73.41
+          }
+        ]
+      },
+      {
+        "id": "mu3hrszh-suxgx4",
+        "type": "route",
+        "points": [
+          {
+            "x": 32.62,
+            "y": 46.31
+          },
+          {
+            "x": 29.58,
+            "y": 37.71
+          },
+          {
+            "x": 27.58,
+            "y": 33.1
+          },
+          {
+            "x": 22.81,
+            "y": 29.19
+          },
+          {
+            "x": 19.42,
+            "y": 22.68
+          },
+          {
+            "x": 19.94,
+            "y": 18.42
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "mu3hs886-czburc",
+        "type": "aimHere",
+        "parentTankId": "sands-of-sinai-red-unit-18",
+        "startX": 67.92,
+        "startY": 88.82,
+        "endX": 30.97,
+        "endY": 47
       }
     ],
     "Sands of Sinai::domination-1|Blue": [
@@ -49616,8 +49752,8 @@
         "id": "sands-of-sinai-blue-aim-05",
         "type": "aimHere",
         "parentTankId": "sands-of-sinai-blue-unit-07",
-        "startX": 90.62,
-        "startY": 42.64,
+        "startX": 90.92,
+        "startY": 38.49,
         "endX": 89.72,
         "endY": 54.13
       },
@@ -49750,21 +49886,6 @@
         "dangerRoute": true
       },
       {
-        "id": "sands-of-sinai-blue-route-04",
-        "type": "route",
-        "points": [
-          {
-            "x": 39.2,
-            "y": 42.78
-          },
-          {
-            "x": 39.2,
-            "y": 22.252729715198495
-          }
-        ],
-        "dangerRoute": true
-      },
-      {
         "id": "mu1zml2k-izoloo",
         "type": "aimHere",
         "parentTankId": "sands-of-sinai-blue-unit-10",
@@ -49772,6 +49893,240 @@
         "startY": 51.06826801517068,
         "endX": 88.56,
         "endY": 86.35
+      },
+      {
+        "id": "mu3hjf0f-87ajby",
+        "type": "aimHere",
+        "parentTankId": "sands-of-sinai-blue-unit-18",
+        "startX": 22.57,
+        "startY": 87.61,
+        "endX": 31.15,
+        "endY": 94.79
+      },
+      {
+        "id": "mu3hkbpl-oy0tnq",
+        "type": "route",
+        "points": [
+          {
+            "x": 31.41,
+            "y": 50.48
+          },
+          {
+            "x": 28.63,
+            "y": 45.96
+          },
+          {
+            "x": 27.5,
+            "y": 38.66
+          },
+          {
+            "x": 27.24,
+            "y": 33.28
+          },
+          {
+            "x": 26.46,
+            "y": 26.32
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "mu3ho5h1-fdku2g",
+        "type": "route",
+        "points": [
+          {
+            "x": 75.28,
+            "y": 30.15
+          },
+          {
+            "x": 75.37,
+            "y": 33.45
+          },
+          {
+            "x": 74.24,
+            "y": 34.75
+          },
+          {
+            "x": 73.72,
+            "y": 35.79
+          },
+          {
+            "x": 73.28,
+            "y": 37.1
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "mu3hob8g-o6yct1",
+        "type": "route",
+        "points": [
+          {
+            "x": 90.57,
+            "y": 37.01
+          },
+          {
+            "x": 90.57,
+            "y": 32.06
+          },
+          {
+            "x": 89.18,
+            "y": 26.24
+          },
+          {
+            "x": 89.36,
+            "y": 17.12
+          },
+          {
+            "x": 91.44,
+            "y": 12.68
+          },
+          {
+            "x": 93.09,
+            "y": 8.17
+          }
+        ]
+      },
+      {
+        "id": "mu3hol8v-k7rrax",
+        "type": "route",
+        "points": [
+          {
+            "x": 73.98,
+            "y": 41.7
+          },
+          {
+            "x": 74.33,
+            "y": 39.27
+          },
+          {
+            "x": 75.02,
+            "y": 37.53
+          },
+          {
+            "x": 78.24,
+            "y": 35.01
+          },
+          {
+            "x": 81.54,
+            "y": 34.32
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "mu3hqp3v-3rxyd3",
+        "type": "route",
+        "points": [
+          {
+            "x": 32.28,
+            "y": 5.47
+          },
+          {
+            "x": 30.28,
+            "y": 8.86
+          },
+          {
+            "x": 23.76,
+            "y": 11.9
+          },
+          {
+            "x": 19.85,
+            "y": 16.25
+          },
+          {
+            "x": 18.2,
+            "y": 20.42
+          },
+          {
+            "x": 19.07,
+            "y": 23.11
+          }
+        ]
+      },
+      {
+        "id": "mu3hqxme-xse242",
+        "type": "route",
+        "points": [
+          {
+            "x": 75.63,
+            "y": 28.93
+          },
+          {
+            "x": 76.93,
+            "y": 25.8
+          },
+          {
+            "x": 79.97,
+            "y": 20.94
+          },
+          {
+            "x": 84.23,
+            "y": 16.33
+          },
+          {
+            "x": 90.4,
+            "y": 9.21
+          },
+          {
+            "x": 92.48,
+            "y": 7.12
+          }
+        ]
+      },
+      {
+        "id": "mu3hr3ce-kpxvon",
+        "type": "route",
+        "points": [
+          {
+            "x": 72.33,
+            "y": 23.72
+          },
+          {
+            "x": 74.67,
+            "y": 21.89
+          },
+          {
+            "x": 78.67,
+            "y": 19.55
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "mu3hripw-17gnzz",
+        "type": "route",
+        "points": [
+          {
+            "x": 21.85,
+            "y": 86.79
+          },
+          {
+            "x": 19.85,
+            "y": 79.84
+          },
+          {
+            "x": 19.94,
+            "y": 74.72
+          },
+          {
+            "x": 20.72,
+            "y": 68.38
+          },
+          {
+            "x": 26.46,
+            "y": 63.25
+          },
+          {
+            "x": 29.84,
+            "y": 56.39
+          },
+          {
+            "x": 29.67,
+            "y": 52.91
+          }
+        ],
+        "dangerRoute": true
       }
     ],
     "Second Battle of El Alamein::domination-1|Red": [
@@ -61928,12 +62283,14 @@
           }
         ]
       }
-    ]
+    ],
+    "Darwin Hill::domination-1|Red": [],
+    "Frozen Pass::domination-1|Red": []
   },
   "vectorGroups": {
     "Arctic Pier::domination-1|Blue": [],
     "Sands of Sinai::domination-1|Blue": []
   },
-  "updatedAt": "2026-09-15T04:50:18.208Z",
-  "exportedAt": "2026-09-15T04:59:50.600Z"
+  "updatedAt": "2026-09-16T02:39:09.223Z",
+  "exportedAt": "2026-09-16T02:40:44.466Z"
 }
