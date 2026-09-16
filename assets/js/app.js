@@ -1928,7 +1928,61 @@ let vectorEditor = null;
         labelBoxes.push(box);
       });
     }
+    const workInProgressMaps = new Set();
+    const wipStorageKey = "maptactic-wip-overrides";
+    let wipOverrides = {};
+    try {
+      const saved = JSON.parse(localStorage.getItem(wipStorageKey) || "{}");
+      if (saved && typeof saved === "object" && !Array.isArray(saved)) wipOverrides = saved;
+    } catch (error) { console.warn("WIP preferences could not be loaded.", error); }
+    const wipToggle = document.createElement("button");
+    wipToggle.type = "button";
+    wipToggle.className = "marker-tool";
+    wipToggle.hidden = true;
+    modalToggleEditor.after(wipToggle);
+    function isMapWorkInProgress() {
+      const slug = state.selected?.slug;
+      return typeof wipOverrides[slug] === "boolean" ? wipOverrides[slug] : workInProgressMaps.has(slug);
+    }
+    wipToggle.addEventListener("click", () => {
+      if (!dialog.open || !state.editMode || !state.selected) return;
+      wipOverrides[state.selected.slug] = !isMapWorkInProgress();
+      try { localStorage.setItem(wipStorageKey, JSON.stringify(wipOverrides)); }
+      catch (error) { console.warn("WIP preferences could not be saved.", error); setMarkerStatus("storageError"); }
+      renderMarkers();
+    });
+    fetch("/assets/data/wip-maps.json", { cache: "no-store" })
+      .then(response => { if (!response.ok) throw new Error("WIP configuration unavailable"); return response.json(); })
+      .then(slugs => {
+        if (!Array.isArray(slugs) || !slugs.every(slug => typeof slug === "string")) throw new Error("Invalid WIP configuration");
+        slugs.forEach(slug => workInProgressMaps.add(slug));
+        renderMarkers();
+      })
+      .catch(error => console.warn(error));
+    function renderWorkInProgress(stage, image) {
+      let layer = stage.querySelector(".map-wip-layer");
+      const visible = isMapWorkInProgress() && !image.hidden;
+      if (!layer && !visible) return;
+      if (!layer) {
+        layer = document.createElement("div");
+        layer.className = "map-wip-layer";
+        const notice = document.createElement("img");
+        notice.src = "/Legend/WIP.png";
+        notice.draggable = false;
+        layer.append(notice);
+        stage.append(layer);
+      }
+      layer.hidden = !visible;
+      layer.firstElementChild.alt = state.language === "ko" ? "공략 준비 중" : "Tactical guide under construction";
+      if (visible) syncMarkerLayer(layer, image, stage);
+    }
     function renderMarkers() {
+      wipToggle.hidden = !dialog.open || !state.editMode;
+      wipToggle.textContent = state.language === "ko" ? "공사 중 표시" : "WIP overlay";
+      wipToggle.setAttribute("aria-pressed", String(isMapWorkInProgress()));
+      wipToggle.title = state.language === "ko" ? "이 지도의 모든 팀과 모드에 적용 · 이 브라우저에 저장" : "Applies to all teams and modes on this map · Saved in this browser";
+      renderWorkInProgress(mapStage, mapImage);
+      renderWorkInProgress(modalMapStage, modalImage);
       hideMarkerCommentPopover(null, { force: true });
       const focusedTankMarker = currentMarkers().find(marker => marker.id === state.focusedTankMarkerId);
       if (state.focusedTankMarkerId && (!isTankMarker(focusedTankMarker) || isMarkerHidden(focusedTankMarker))) state.focusedTankMarkerId = null;
@@ -1990,9 +2044,9 @@ let vectorEditor = null;
       return button;
     });
     function updateMarkerEditor() {
-      mapViewer.classList.toggle("is-editing", state.editMode);
+      mapViewer.classList.remove("is-editing");
       editorToolToggles.forEach(button => {
-        button.hidden = !state.editMode;
+        button.hidden = !state.editMode || !dialog.contains(button);
         button.textContent = state.language === "ko"
           ? (editorToolsCollapsed ? "편집 도구 펼치기" : "편집 도구 접기")
           : (editorToolsCollapsed ? "Show editing tools" : "Hide editing tools");
@@ -2008,25 +2062,24 @@ let vectorEditor = null;
       modalToggleEditor.textContent = editorLabel;
       markerEditorNote.textContent = editorNote;
       modalMarkerEditorNote.textContent = editorNote;
-      markerEditorNote.hidden = !state.editMode;
+      markerEditorNote.hidden = true;
       modalMarkerEditorNote.hidden = !state.editMode;
       copyLink.hidden = state.editMode;
-      editorActions.forEach(action => { action.hidden = !state.editMode; });
+      editorActions.forEach(action => { action.hidden = !state.editMode || !dialog.contains(action); });
       allLegendItems().forEach(item => {
         const placementEnabled = isLegendPlacementEnabled(item.dataset.markerType);
         const drawingTool = isDrawingTool(item.dataset.markerType);
-        item.draggable = state.editMode && placementEnabled;
+        item.draggable = state.editMode && dialog.contains(item) && placementEnabled;
         item.classList.toggle("is-placement-disabled", state.editMode && !placementEnabled && !drawingTool);
         item.setAttribute("aria-disabled", String(state.editMode && !placementEnabled && !drawingTool));
       });
     }
     function setEditorMode(enabled) {
-      if (enabled && usesMobileDeviceLayout()) return;
+      if (enabled && (!dialog.open || usesMobileDeviceLayout())) return;
       if (!enabled) {
         cancelDrawing();
         closeTacticalSummaryEditor();
       }
-      if (enabled && !state.editMode) $("#editor-disclosure").open = true;
       state.editMode = enabled;
       state.focusedTankMarkerId = null;
       hideMarkerContextMenu();
@@ -2037,8 +2090,8 @@ let vectorEditor = null;
     }
     function syncMobileEditingAvailability() {
       const mobile = usesMobileDeviceLayout();
-      $("#editor-disclosure").hidden = mobile;
-      toggleEditor.hidden = mobile;
+      $("#editor-disclosure").hidden = true;
+      toggleEditor.hidden = true;
       modalToggleEditor.hidden = mobile;
       if (mobile && state.editMode) setEditorMode(false);
     }
@@ -2347,6 +2400,7 @@ let vectorEditor = null;
     function setModalMapSource() {
       if (!state.selected) return;
       modalImage.hidden = true;
+      renderWorkInProgress(modalMapStage, modalImage);
       modalMapCloseLayer.hidden = true;
       modalMapOverlayLayer.replaceChildren();
       modalAnnotationLayer.replaceChildren();
@@ -2369,6 +2423,7 @@ let vectorEditor = null;
         button.setAttribute("aria-pressed", String(button.dataset.team === team));
       });
       mapImage.hidden = true;
+      renderWorkInProgress(mapStage, mapImage);
       mapStage.classList.remove("loaded", "load-error");
       mapOverlayLayer.replaceChildren();
       markerLayer.replaceChildren();
@@ -2799,6 +2854,7 @@ let vectorEditor = null;
     });
     dialog.addEventListener("click", event => { if (event.target === dialog) dialog.close(); });
     dialog.addEventListener("close", () => {
+      setEditorMode(false);
       const listScrollTop = mapList.scrollTop;
       mapIndexPlaceholder.replaceWith(mapIndex);
       mapList.scrollTop = listScrollTop;
@@ -2855,7 +2911,7 @@ let vectorEditor = null;
     vectorEditor = createVectorEditor({
       layout: () => markerLayout,
       key: currentMarkerKey,
-      editing: () => state.editMode,
+      editing: () => dialog.open && state.editMode,
       drawing: () => Boolean(state.drawing),
       language: () => state.language,
       validate: validateImportedMarkerLayout,
@@ -2863,8 +2919,8 @@ let vectorEditor = null;
       render: renderMarkers,
       commit: () => persistMarkerLayout("savedLocally", { touchMap: true }),
       visible: (kind, value) => kind === "m" ? !isMarkerHidden(value) : !hiddenAnnotations.has(annotationIdentity(value)) && !hiddenMarkerTypes.has(markerTypeIdentity(value.type)),
-      toolbars: [document.querySelector(".marker-tools"), document.querySelector(".modal-marker-tools")],
-      surfaces: [{ stage: mapStage, layer: markerLayer }, { stage: modalMapStage, layer: modalMarkerLayer }]
+      toolbars: [document.querySelector(".modal-marker-tools")],
+      surfaces: [{ stage: modalMapStage, layer: modalMarkerLayer }]
     });
     setLanguage("en");
     syncMobileEditingAvailability();

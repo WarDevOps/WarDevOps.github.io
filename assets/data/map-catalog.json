@@ -686,6 +686,42 @@
             "min": 4.7
           },
           "sharedImage": "Darwin Hill.png"
+        },
+        {
+          "mode": "conquest",
+          "number": 1,
+          "br": {
+            "min": 4.7
+          },
+          "folder": "Darwin Hill/Conquest #1",
+          "sharedImage": "Darwin Hill.png"
+        },
+        {
+          "mode": "conquest",
+          "number": 2,
+          "br": {
+            "min": 4.7
+          },
+          "folder": "Darwin Hill/Conquest #2",
+          "sharedImage": "Darwin Hill.png"
+        },
+        {
+          "mode": "conquest",
+          "number": 3,
+          "br": {
+            "min": 4.7
+          },
+          "folder": "Darwin Hill/Conquest #3",
+          "sharedImage": "Darwin Hill.png"
+        },
+        {
+          "mode": "battle",
+          "number": 1,
+          "br": {
+            "min": 4.7
+          },
+          "folder": "Darwin Hill/Battle #1",
+          "sharedImage": "Darwin Hill.png"
         }
       ]
     },
