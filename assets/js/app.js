@@ -6,7 +6,7 @@ let vectorEditor = null;
     import { commentImages } from './comment-images.js?v=comment-images-b1788d2b577f';
     import { defaultMarkerLayout, maps, translations } from './data.js?v=map-news-20260917';
     import { normalizeTacticalSummary, resolveTacticalSummary, withVariationSummary } from './tactical-summary.js?v=variation-switch-20260914';
-    import { acceptUpstreamMap, isMapSyncState, markLayoutAsLocalEdits, markMapEdited, mergeMapLayouts, sourceRevision } from './marker-merge.js?v=replay-vectors-20260915';
+    import { acceptUpstreamMap, isMapSyncState, markLayoutAsLocalEdits, markMapEdited, mergeMapLayouts, sourceRevision } from './marker-merge.js?v=mobile-default-layout-20260917';
 
 
     const DEFAULT_ANNOTATION_OPACITY = 50;
@@ -2884,9 +2884,10 @@ let vectorEditor = null;
       if (!defaultMarkerLayout) throw new Error("Default marker layout could not be loaded.");
       upstreamMarkerLayout = validateImportedMarkerLayout(defaultMarkerLayout, { migrateLegacyCommentImages: false });
       upstreamMarkerLayoutRevision = sourceRevision(defaultMarkerLayout);
-      if (hadStoredMarkerLayout && !hadMapSyncState) backupMarkerLayout(MARKER_STORAGE_KEY, MARKER_STORAGE_BACKUP_KEY);
+      const useDefaultMarkerLayout = usesMobileDeviceLayout();
+      if (!useDefaultMarkerLayout && hadStoredMarkerLayout && !hadMapSyncState) backupMarkerLayout(MARKER_STORAGE_KEY, MARKER_STORAGE_BACKUP_KEY);
       const syncResult = mergeMapLayouts(markerLayout, upstreamMarkerLayout, mapNames, {
-        hadStoredLayout: hadStoredMarkerLayout,
+        hadStoredLayout: !useDefaultMarkerLayout && hadStoredMarkerLayout,
         sourceRevision: upstreamMarkerLayoutRevision
       });
       markerLayout = syncResult.layout;
@@ -2897,8 +2898,9 @@ let vectorEditor = null;
         markLayoutAsLocalEdits(markerLayout, upstreamMarkerLayout, mapNames, upstreamMarkerLayoutRevision);
         markerLayout.sync.conflicts = markerLayout.sync.dirtyMaps.filter(mapName => priorConflicts.has(mapName));
       }
-      startupAppliedDefaultUpdates = hadStoredMarkerLayout && syncResult.updatedMaps.length > 0;
-      const needsSyncSave = !hadStoredMarkerLayout
+      startupAppliedDefaultUpdates = !useDefaultMarkerLayout && hadStoredMarkerLayout && syncResult.updatedMaps.length > 0;
+      const needsSyncSave = useDefaultMarkerLayout
+        || !hadStoredMarkerLayout
         || !hadMapSyncState
         || previousSourceRevision !== upstreamMarkerLayoutRevision
         || previousMapSyncState !== JSON.stringify(markerLayout.sync)
