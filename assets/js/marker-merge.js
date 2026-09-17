@@ -158,7 +158,9 @@ export function mergeMapLayouts(localLayout, upstreamLayout, mapNames, options =
 
     if (hadStoredLayout && localFingerprint !== upstreamFingerprint) {
       const baseFingerprint = priorSync?.baseFingerprints?.[mapName];
-      if (priorConflicts.has(mapName)) {
+      if (priorSync && typeof baseFingerprint !== "string") {
+        decision = "upstream";
+      } else if (priorConflicts.has(mapName)) {
         decision = "conflict";
       } else if (typeof baseFingerprint === "string") {
         if (localFingerprint === baseFingerprint) decision = "upstream";
