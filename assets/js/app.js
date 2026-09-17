@@ -4,7 +4,7 @@ import { createVectorEditor } from './vector-editor.js?v=independent-selection-2
 import { validateVectorGroups, pruneGroups } from './vector-model.js?v=independent-selection-20260917';
 let vectorEditor = null;
     import { commentImages } from './comment-images.js?v=comment-images-b1788d2b577f';
-    import { defaultMarkerLayout, maps, translations } from './data.js?v=map-news-20260917';
+    import { defaultMarkerLayout, maps, translations } from './data.js?v=sky-odyssey-news-20260917';
     import { normalizeTacticalSummary, resolveTacticalSummary, withVariationSummary } from './tactical-summary.js?v=variation-switch-20260914';
     import { acceptUpstreamMap, isMapSyncState, markLayoutAsLocalEdits, markMapEdited, mergeMapLayouts, sourceRevision } from './marker-merge.js?v=mobile-default-layout-20260917';
 
