@@ -226,7 +226,7 @@
     .annotation-layer { z-index: 2; }
     .marker-layer { z-index: 3; }
     .map-area-overlay { position: absolute; inset: 0; display: block; width: 100%; height: 100%; pointer-events: none; transition: opacity .16s ease; }
-    .map-area-overlay.is-dimmed { opacity: .1; }
+    .map-area-overlay.is-dimmed { opacity: .2; }
     .map-annotation { position: absolute; display: block; padding: 0; border: 0; background: transparent; color: #fff; cursor: default; opacity: var(--annotation-opacity, .5); pointer-events: none; transition: opacity .16s ease; }
     .map-annotation.is-dimmed { opacity: var(--annotation-dimmed-opacity, .1); }
     .map-annotation.is-preview { pointer-events: none; }
