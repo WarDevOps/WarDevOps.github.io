@@ -96,6 +96,8 @@
     .eyebrow { margin: 0 0 12px; color: var(--accent); font-size: .78rem; font-weight: 800; letter-spacing: .14em; }
     .hero-title { max-width: 900px; margin: 0; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: clamp(3rem, 9vw, 7rem); font-kerning: normal; font-synthesis: none; font-weight: 850; line-height: .8; letter-spacing: -.07em; }
     .hero-title em { color: transparent; font-style: normal; font-weight: 800; letter-spacing: -.035em; -webkit-text-fill-color: transparent; -webkit-text-stroke: 1px var(--accent); }
+    .hero-title-a { display: inline-block; width: .73em; height: .76em; margin: 0 -.015em 0 -.005em; overflow: visible; color: var(--accent); vertical-align: -.045em; }
+    .hero-title-a path { fill: none; stroke: currentColor; stroke-width: 1; stroke-linecap: square; stroke-linejoin: miter; vector-effect: non-scaling-stroke; }
     .seo-title { max-width: 900px; margin: 20px 0 0; font-size: clamp(1.35rem, 3vw, 2rem); line-height: 1.15; letter-spacing: -.035em; }
     .hero-copy { max-width: 620px; margin: 20px 0 0; color: var(--muted); font-size: clamp(1rem, 2vw, 1.12rem); line-height: 1.75; }
     .recent-updates { width: 100%; padding-bottom: 3px; }
