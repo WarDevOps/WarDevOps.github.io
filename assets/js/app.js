@@ -3,7 +3,7 @@ import { initDiscordMemberCount } from './discord-stats.js';
 import { createVectorEditor } from './vector-editor.js?v=independent-selection-20260917';
 import { validateVectorGroups, pruneGroups } from './vector-model.js?v=independent-selection-20260917';
 let vectorEditor = null;
-    import { commentImages } from './comment-images.js?v=comment-images-b1788d2b577f';
+    import { commentImages } from './comment-images.js?v=comment-images-e5696e00de9a';
     import { defaultMarkerLayout, maps, translations } from './data.js?v=map-loading-20260919';
     import { normalizeTacticalSummary, resolveTacticalSummary, withVariationSummary } from './tactical-summary.js?v=variation-switch-20260914';
     import { acceptUpstreamMap, isMapSyncState, markLayoutAsLocalEdits, markMapEdited, mergeMapLayouts, sourceRevision } from './marker-merge.js?v=mobile-default-layout-20260917';
@@ -141,6 +141,25 @@ let vectorEditor = null;
       COMMENT_IMAGES_BY_ID.set(image.id, Object.freeze({ id: image.id, path: `/${image.path}`, label: image.label }));
     });
     const COMMENT_IMAGES = Object.freeze([...COMMENT_IMAGES_BY_ID.values()]);
+    function webpAssetPath(pngPath) {
+      return pngPath.replace(/\.png(?=([?#].*)?$)/i, ".webp");
+    }
+    function tryPngImageFallback(image) {
+      const pngPath = image.dataset.pngFallback;
+      if (!pngPath || image.dataset.webpFallbackPending !== "true") return false;
+      image.dataset.webpFallbackPending = "false";
+      image.src = pngPath;
+      return true;
+    }
+    function setOptimizedImageSource(image, pngPath) {
+      if (image.dataset.pngFallbackBound !== "true") {
+        image.dataset.pngFallbackBound = "true";
+        image.addEventListener("error", () => tryPngImageFallback(image));
+      }
+      image.dataset.pngFallback = pngPath;
+      image.dataset.webpFallbackPending = "true";
+      image.src = webpAssetPath(pngPath);
+    }
     const ANNOTATION_TYPES = new Set(["aimHere", "route"]);
     const MAP_DRAWING_REFERENCE_SIZE = 600;
     const MAP_MARKER_REFERENCE_SIZE = 1440;
@@ -804,7 +823,7 @@ let vectorEditor = null;
       const changed = nextIndex !== carousel._commentImageIndex;
       carousel._commentImageIndex = nextIndex;
       image.draggable = false;
-      image.src = images[nextIndex].path;
+      setOptimizedImageSource(image, images[nextIndex].path);
       image.alt = images[nextIndex].label;
       if (changed && animate) {
         image.classList.remove("is-changing");
@@ -1381,7 +1400,7 @@ let vectorEditor = null;
         option.draggable = isSelected;
         option.title = !isSelected && resolvedImageIds.length >= MAX_COMMENT_IMAGES ? t("commentImageLimitReached") : image.label;
         option.disabled = !isSelected && resolvedImageIds.length >= MAX_COMMENT_IMAGES;
-        thumbnail.src = image.path;
+        setOptimizedImageSource(thumbnail, image.path);
         thumbnail.alt = "";
         thumbnail.loading = "lazy";
         thumbnail.draggable = false;
@@ -2421,7 +2440,7 @@ let vectorEditor = null;
       modalAnnotationLayer.replaceChildren();
       modalMarkerLayer.replaceChildren();
       modalImage.alt = `${mapLabel(state.selected)} ${mapVariationLabel(state.selected)} ${state.team}`;
-      modalImage.src = mapPath(state.selected, state.team);
+      setOptimizedImageSource(modalImage, mapPath(state.selected, state.team));
       $("#modal-title").textContent = `${mapLabel(state.selected)} · ${mapVariationLabel(state.selected)} · ${state.team.toUpperCase()} ${t("teamLabel")}`;
     }
     function selectMap(map, team = state.team, variationId, { historyMode = "replace", syncUrl = true } = {}) {
@@ -2445,7 +2464,7 @@ let vectorEditor = null;
       annotationLayer.replaceChildren();
       imageStatus.textContent = t("loading");
       mapImage.alt = `${mapLabel(state.selected)} ${mapVariationLabel(state.selected)} ${team}`;
-      mapImage.src = mapPath(state.selected, team);
+      setOptimizedImageSource(mapImage, mapPath(state.selected, team));
       if (dialog.open) setModalMapSource();
       renderList();
       if (syncUrl) updateUrl(historyMode);
@@ -2805,6 +2824,7 @@ let vectorEditor = null;
       renderMarkers();
     });
     mapImage.addEventListener("error", () => {
+      if (tryPngImageFallback(mapImage)) return;
       mapStage.classList.add("load-error");
       mapOverlayLayer.replaceChildren();
       annotationLayer.replaceChildren();
@@ -2817,6 +2837,7 @@ let vectorEditor = null;
       renderMarkers();
     });
     modalImage.addEventListener("error", () => {
+      if (tryPngImageFallback(modalImage)) return;
       modalMapCloseLayer.hidden = true;
       modalMapOverlayLayer.replaceChildren();
       modalAnnotationLayer.replaceChildren();
