@@ -247,7 +247,7 @@
     .map-marker.is-dimmed { opacity: .1; }
     .map-viewer.is-editing .map-marker:hover, dialog.is-editing .map-marker:hover { filter: drop-shadow(0 0 4px var(--accent)); }
     .map-marker img { display: block; width: auto; height: auto; max-width: none; max-height: none; object-fit: initial; pointer-events: none; }
-    .map-marker img.is-special-role-marker { filter: brightness(0); opacity: .5; }
+    .map-marker img.is-special-role-marker { filter: brightness(0); opacity: 1; }
     .map-viewer:not(.is-editing) :is(.map-marker, .legend-panel),
     .map-viewer:not(.is-editing) :is(.map-marker, .legend-panel) *,
     #image-modal:not(.is-editing) :is(.map-marker, .modal-legend-region),
