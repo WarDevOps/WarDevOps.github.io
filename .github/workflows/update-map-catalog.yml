@@ -35,6 +35,24 @@ jobs:
       - name: Generate map catalog
         run: node scripts/generate-map-catalog.mjs
 
+      - name: Install WebP encoder
+        run: |
+          sudo apt-get update
+          sudo apt-get install --yes webp
+
+      - name: Restore generated WebP cache
+        uses: actions/cache@v5
+        with:
+          path: ${{ runner.temp }}/wardevops-webp-cache
+          key: webp-v1-${{ hashFiles('img/**/*.png') }}
+          restore-keys: |
+            webp-v1-
+
+      - name: Generate optimized WebP assets
+        env:
+          WEBP_CACHE_DIR: ${{ runner.temp }}/wardevops-webp-cache
+        run: node scripts/generate-webp-assets.mjs
+
       - name: Verify initial tactical summary HTML
         run: node --test scripts/test-map-summary-html.mjs
 
