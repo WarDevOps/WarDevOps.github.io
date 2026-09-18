@@ -1,6 +1,14 @@
+const dataRevision = new URL(import.meta.url).searchParams.get("v") || "current";
+
+function versionedDataUrl(relativePath) {
+  const url = new URL(relativePath, import.meta.url);
+  url.searchParams.set("v", dataRevision);
+  return url;
+}
+
 const [mapCatalogResponse, defaultMarkerLayout] = await Promise.all([
-  fetch(new URL("../data/map-catalog.json", import.meta.url), { cache: "no-store" }),
-  fetch(new URL("../data/maptactic.json", import.meta.url), { cache: "no-store" })
+  fetch(versionedDataUrl("../data/map-catalog.json")),
+  fetch(versionedDataUrl("../data/maptactic.json"))
     .then(response => {
       if (!response.ok) throw new Error(`Default marker layout request failed: ${response.status}`);
       return response.json();
@@ -64,7 +72,8 @@ function createMap({ name, aliases, slug, updated, updatedAt, br, tacticalSummar
         br: variation.br ?? br,
         folder: variation.folder || folder,
         teamImages: variation.teamImages || teamImages,
-        sharedImage: variation.sharedImage ?? sharedImage
+        sharedImage: variation.sharedImage ?? sharedImage,
+        overlays: Array.isArray(variation.overlays) ? variation.overlays : []
       };
     })
   };

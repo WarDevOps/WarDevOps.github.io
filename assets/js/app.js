@@ -4,7 +4,7 @@ import { createVectorEditor } from './vector-editor.js?v=independent-selection-2
 import { validateVectorGroups, pruneGroups } from './vector-model.js?v=independent-selection-20260917';
 let vectorEditor = null;
     import { commentImages } from './comment-images.js?v=comment-images-b1788d2b577f';
-    import { defaultMarkerLayout, maps, translations } from './data.js?v=sky-odyssey-news-20260917';
+    import { defaultMarkerLayout, maps, translations } from './data.js?v=map-loading-20260919';
     import { normalizeTacticalSummary, resolveTacticalSummary, withVariationSummary } from './tactical-summary.js?v=variation-switch-20260914';
     import { acceptUpstreamMap, isMapSyncState, markLayoutAsLocalEdits, markMapEdited, mergeMapLayouts, sourceRevision } from './marker-merge.js?v=mobile-default-layout-20260917';
 
@@ -674,9 +674,15 @@ let vectorEditor = null;
       return `${map.folder}|${file}`;
     }
     function currentMapOverlays() {
-      return state.selected
-        ? MAP_AREA_OVERLAYS.filter(overlay => !overlay.team || overlay.team === state.team)
-        : [];
+      if (!state.selected) return [];
+      const availableFiles = new Set(state.selected.overlays || []);
+      return MAP_AREA_OVERLAYS
+        .filter(overlay => !overlay.team || overlay.team === state.team)
+        .map(overlay => {
+          const file = overlay.files.find(candidate => availableFiles.has(candidate));
+          return file ? { ...overlay, files: [file] } : null;
+        })
+        .filter(Boolean);
     }
     function isMarkerHidden(marker) {
       return hiddenMarkers.has(markerIdentity(marker)) || hiddenMarkerTypes.has(markerTypeIdentity(marker.type));

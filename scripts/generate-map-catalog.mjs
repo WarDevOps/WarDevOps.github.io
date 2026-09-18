@@ -18,6 +18,39 @@ const SITEMAP_PATH = path.join(REPO_ROOT, "sitemap.xml");
 const VARIATION_FOLDER_PATTERN = /^(domination|conquest|battle)\s*#(\d+)$/i;
 const MODE_ORDER = Object.freeze({ domination: 0, conquest: 1, battle: 2 });
 const MAP_UPDATED_AT_PATTERN = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d{1,3})?Z$/;
+const MAP_OVERLAY_FILE_NAMES = new Set([
+  "c.png",
+  "CoreArea.png",
+  "cb.png",
+  "CoreAreaBlue.png",
+  "cr.png",
+  "CoreAreaRed.png",
+  "d.png",
+  "DangerArea.png",
+  "db.png",
+  "DangerAreaBlue.png",
+  "dr.png",
+  "DangerAreaRed.png",
+  "n.png",
+  "NotRecommended.png",
+  "nb.png",
+  "NotRecommendedBlue.png",
+  "nr.png",
+  "NotRecommendedRed.png",
+  "a.png",
+  "AntiAir.png",
+  "AntiAirArea.png",
+  "ab.png",
+  "AntiAirBlue.png",
+  "ar.png",
+  "AntiAirRed.png",
+  "s.png",
+  "SpawnArea.png",
+  "sb.png",
+  "SpawnAreaBlue.png",
+  "sr.png",
+  "SpawnAreaRed.png"
+]);
 const CHECK_ONLY = process.argv.includes("--check");
 const WATCH_MODE = process.argv.includes("--watch");
 
@@ -192,6 +225,14 @@ async function discoverMapImages(relativeFolder, { requireExact = false, failOnP
   return null;
 }
 
+async function discoverMapOverlays(relativeFolder) {
+  const entries = await directoryEntries(safeImageFolder(relativeFolder));
+  return entries
+    .filter(entry => entry.isFile() && MAP_OVERLAY_FILE_NAMES.has(entry.name))
+    .map(entry => entry.name)
+    .sort((left, right) => left.localeCompare(right, "en"));
+}
+
 async function configuredVariation(definition) {
   const mode = String(definition.mode || "domination").toLowerCase();
   const number = Number(definition.number || 1);
@@ -231,6 +272,7 @@ function compactVariation(variation, rootFolder) {
   } else if (variation.teamImages.Red !== "Red.png" || variation.teamImages.Blue !== "Blue.png") {
     result.teamImages = variation.teamImages;
   }
+  if (variation.overlays?.length) result.overlays = variation.overlays;
   return result;
 }
 
@@ -297,6 +339,7 @@ async function discoverMap(folderName, metadata, mapUpdated, mapUpdatedAt, tacti
   const seenIds = new Set();
   variations.sort((left, right) => (MODE_ORDER[left.mode] - MODE_ORDER[right.mode]) || (left.number - right.number));
   for (const variation of variations) {
+    variation.overlays = await discoverMapOverlays(variation.folder);
     const id = `${variation.mode}-${variation.number}`;
     if (seenIds.has(id)) throw new Error(`Duplicate variation ${id} for ${name}`);
     seenIds.add(id);
