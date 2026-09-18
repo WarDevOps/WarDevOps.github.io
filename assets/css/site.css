@@ -65,11 +65,7 @@
     .brand-name { font-size: 1.05rem; font-weight: 800; letter-spacing: .04em; }
     .brand-owner { color: var(--ink); }
     .brand-product { color: var(--accent); }
-    .primary-nav { display: flex; align-items: center; justify-content: center; gap: 4px; margin-left: auto; }
-    .primary-nav a { padding: 9px 10px; border-radius: 8px; color: var(--muted); font-size: .72rem; font-weight: 850; letter-spacing: .055em; text-decoration: none; transition: color .18s, background .18s; }
-    .primary-nav a:hover, .primary-nav a:focus-visible { color: var(--ink); background: rgba(255,255,255,.05); }
-    .primary-nav a[aria-current="page"] { color: var(--accent); }
-    .header-actions { display: flex; align-items: center; gap: 18px; }
+    .header-actions { display: flex; margin-left: auto; align-items: center; gap: 18px; }
     .squadron-link { display: inline-flex; align-items: center; gap: 7px; color: var(--muted); font-family: Arial, "Helvetica Neue", sans-serif; font-size: .72rem; font-weight: 650; letter-spacing: .01em; line-height: 1.2; text-decoration: none; white-space: nowrap; transition: color .18s; }
     .squadron-link:hover, .squadron-link:focus-visible { color: var(--accent); }
     .squadron-link img { display: block; width: 20px; height: 20px; object-fit: contain; }
@@ -499,8 +495,6 @@
     @media (max-width: 560px) {
       .site-header { gap: 8px; }
       .brand-name { display: none; }
-      .primary-nav { gap: 0; }
-      .primary-nav a { padding-inline: 7px; font-size: .65rem; }
       .header-actions { gap: 6px; }
     }
     @media (max-width: 430px) {
@@ -512,8 +506,6 @@
       .legend-list { grid-template-columns: 1fr; }
       .site-header { flex-wrap: nowrap; justify-content: space-between; padding: 8px 0; }
       .brand-mark { flex-basis: 30px; width: 30px; height: 30px; }
-      .primary-nav a:first-child { font-size: 0; }
-      .primary-nav a:first-child::after { content: "MAPS"; font-size: .65rem; }
       .language-button { padding-inline: 6px; }
       .theme-toggle { padding-inline: 7px; }
       .modal-toolbar { align-items: flex-start; }
