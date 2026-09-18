@@ -465,7 +465,6 @@ export function renderMapRoutePage(rootPage, map) {
 function renderSitemap(maps) {
   const staticRoutes = [
     { url: "https://wardevops.github.io/", updated: "2026-08-28" },
-    { url: "https://wardevops.github.io/tier-list/", updated: "2026-08-28" },
     { url: "https://wardevops.github.io/privacy/", updated: "2026-08-28" }
   ];
   const routes = [...staticRoutes, ...maps.map(map => ({
