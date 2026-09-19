@@ -493,6 +493,22 @@
         "B와 C 사이의 높은 언덕을 확보하면 밀도가 낮은 시가지인 C 거점을 통제하기 쉬워지고, 동시에 B 거점으로 진입하는 적의 측면을 노릴 수 있습니다.",
         "기동성이 좋은 전차라면 C 거점 외곽을 따라 빠르게 전진해 적 스폰 지역까지 도달하는 고위험 우회도 가능합니다. 성공한다면 비교적 손쉽게 적 스폰 지역을 압박할 수 있습니다."
       ]
+    },
+    "Golden Quarry": {
+      "en": [
+        "Golden Quarry is divided into three distinct areas: point A across the river, point B inside the urban district, and point C surrounded by hills and rolling terrain.",
+        "Point A is separated by a river that can be crossed, but the surrounding terrain is almost completely flat, making the capture point difficult to secure safely. Even if your team wins the fight around A, the position provides very little influence over points B or C, so its overall strategic value is limited.",
+        "Point B is located in the urban area. The railway provides the fastest route for wide flanking maneuvers, and several paths through this sector can lead directly into immediate pressure on the enemy spawn.",
+        "Point C has a large excavator that provides some cover, but the terrain immediately around the capture point is almost completely flat, making it difficult to secure the point early without exposing your vehicle.",
+        "The most important area on Golden Quarry is the terrain between points B and C, including the hills, rolling ground, and parts of the urban area. Both teams have routes from this position that can quickly lead into the enemy spawn, so maintaining control of this central sector is essential."
+      ],
+      "ko": [
+        "금광지대는 강 건너편의 A 거점, 시가지로 구성된 B 거점, 그리고 언덕과 구릉 지형으로 이루어진 C 거점의 세 구역으로 나뉩니다.",
+        "A 거점은 도하가 가능한 강으로 분리되어 있지만 주변이 거의 완전한 평지이기 때문에 안전하게 점령하기가 쉽지 않습니다. 또한 A 거점 전투에서 승리하더라도 B나 C 거점에 영향력을 행사하기 어려운 지형이어서 전체적인 전략적 가치는 상대적으로 낮은 편입니다.",
+        "B 거점은 시가지에 위치해 있습니다. 철도를 따라 이동하면 가장 빠르게 크게 우회할 수 있으며, 이 구역에는 돌파에 성공할 경우 곧바로 적 스폰 지역 압박으로 이어지는 경로가 여러 개 존재합니다.",
+        "C 거점은 대형 굴착기를 엄폐물로 활용할 수 있지만 거점 주변이 거의 완전한 평지이기 때문에 초반에 먼저 점령하기가 쉽지 않은 구조입니다.",
+        "금광지대의 핵심 지역은 B와 C 거점 사이의 언덕과 구릉, 그리고 일부 시가지를 포함하는 구역입니다. 이 지역에서는 양 팀 모두 적 스폰 지역까지 빠르게 이어지는 경로를 사용할 수 있기 때문에, 상대에게 내주지 않고 반드시 통제해야 하는 핵심 전장입니다."
+      ]
     }
   },
   "markers": {
