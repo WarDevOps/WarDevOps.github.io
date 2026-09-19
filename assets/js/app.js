@@ -4,7 +4,7 @@ import { createVectorEditor } from './vector-editor.js?v=independent-selection-2
 import { validateVectorGroups, pruneGroups } from './vector-model.js?v=independent-selection-20260917';
 let vectorEditor = null;
     import { commentImages } from './comment-images.js?v=comment-images-e5696e00de9a';
-    import { defaultMarkerLayout, maps, translations } from './data.js?v=map-loading-20260919';
+    import { defaultMarkerLayout, maps, translations } from './data.js?v=comment-media-20260919';
     import { normalizeTacticalSummary, resolveTacticalSummary, withVariationSummary } from './tactical-summary.js?v=variation-switch-20260914';
     import { acceptUpstreamMap, isMapSyncState, markLayoutAsLocalEdits, markMapEdited, mergeMapLayouts, sourceRevision } from './marker-merge.js?v=mobile-default-layout-20260917';
 
@@ -24,11 +24,8 @@ let vectorEditor = null;
     markerCommentImagePreview.className = "map-marker-comment-image-preview";
     markerCommentImagePreview.setAttribute("aria-hidden", "true");
     markerCommentImagePreview.hidden = true;
-    const markerCommentImagePreviewImage = document.createElement("img");
-    markerCommentImagePreviewImage.alt = "";
     const markerCommentImagePreviewCarousel = document.createElement("div");
     markerCommentImagePreviewCarousel.className = "map-marker-comment-carousel map-marker-comment-preview-carousel";
-    markerCommentImagePreviewCarousel.append(markerCommentImagePreviewImage);
     const markerCommentImagePreviewClose = document.createElement("button");
     markerCommentImagePreviewClose.type = "button";
     markerCommentImagePreviewClose.className = "map-marker-comment-image-preview-close";
@@ -135,10 +132,13 @@ let vectorEditor = null;
     const MAP_UPDATED_AT_PATTERN = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d{1,3})?Z$/;
     const COMMENT_TEXT_ENCODER = new TextEncoder();
     const COMMENT_IMAGES_BY_ID = new Map();
+    const COMMENT_MEDIA_PATH_PATTERN = /^img\/(?:[^/]+\/)*scr_[^/]+\.(png|gif|mp4)$/i;
     commentImages.forEach(image => {
-      const hasSafePath = typeof image?.path === "string" && /^img\/(?:[^/]+\/)*scr_[^/]+\.png$/.test(image.path) && !image.path.split("/").some(part => part === "." || part === "..");
+      const pathMatch = typeof image?.path === "string" ? image.path.match(COMMENT_MEDIA_PATH_PATTERN) : null;
+      const hasSafePath = Boolean(pathMatch) && !image.path.split("/").some(part => part === "." || part === "..");
       if (typeof image?.id !== "string" || !image.id || image.id.length > 240 || typeof image.label !== "string" || image.label.length > 240 || !hasSafePath || COMMENT_IMAGES_BY_ID.has(image.id)) return;
-      COMMENT_IMAGES_BY_ID.set(image.id, Object.freeze({ id: image.id, path: `/${image.path}`, label: image.label }));
+      const kind = pathMatch[1].toLowerCase() === "mp4" ? "video" : "image";
+      COMMENT_IMAGES_BY_ID.set(image.id, Object.freeze({ id: image.id, path: `/${image.path}`, label: image.label, kind }));
     });
     const COMMENT_IMAGES = Object.freeze([...COMMENT_IMAGES_BY_ID.values()]);
     function webpAssetPath(pngPath) {
@@ -159,6 +159,58 @@ let vectorEditor = null;
       image.dataset.pngFallback = pngPath;
       image.dataset.webpFallbackPending = "true";
       image.src = webpAssetPath(pngPath);
+    }
+    function setCommentMediaSource(media, item) {
+      if (media instanceof HTMLVideoElement) {
+        media.pause();
+        media.src = item.path;
+        media.load();
+        const playPromise = media.play();
+        if (playPromise?.catch) playPromise.catch(() => {});
+        return;
+      }
+      if (/\.png(?=([?#].*)?$)/i.test(item.path)) {
+        setOptimizedImageSource(media, item.path);
+        return;
+      }
+      media.dataset.pngFallback = "";
+      media.dataset.webpFallbackPending = "false";
+      media.src = item.path;
+    }
+    function createCommentMediaElement(item, { thumbnail = false } = {}) {
+      const media = document.createElement(item.kind === "video" ? "video" : "img");
+      media.className = thumbnail ? "marker-comment-media-thumbnail" : "map-marker-comment-media map-marker-comment-image";
+      media.draggable = false;
+      if (media instanceof HTMLVideoElement) {
+        media.autoplay = true;
+        media.loop = true;
+        media.muted = true;
+        media.defaultMuted = true;
+        media.playsInline = true;
+        media.controls = false;
+        media.preload = thumbnail ? "metadata" : "auto";
+        media.setAttribute("autoplay", "");
+        media.setAttribute("loop", "");
+        media.setAttribute("muted", "");
+        media.setAttribute("playsinline", "");
+        media.setAttribute("disablepictureinpicture", "");
+        media.setAttribute("aria-label", item.label);
+      } else {
+        media.alt = thumbnail ? "" : item.label;
+        if (thumbnail) media.loading = "lazy";
+      }
+      if (thumbnail) media.setAttribute("aria-hidden", "true");
+      setCommentMediaSource(media, item);
+      return media;
+    }
+    function commentCarouselMedia(carousel) {
+      return carousel?.querySelector(".map-marker-comment-media") || null;
+    }
+    function commentMediaDimensions(media) {
+      if (media instanceof HTMLVideoElement) {
+        return { ready: media.readyState >= 1, width: media.videoWidth, height: media.videoHeight };
+      }
+      return { ready: Boolean(media?.complete), width: media?.naturalWidth || 0, height: media?.naturalHeight || 0 };
     }
     const ANNOTATION_TYPES = new Set(["aimHere", "route"]);
     const MAP_DRAWING_REFERENCE_SIZE = 600;
@@ -819,16 +871,34 @@ let vectorEditor = null;
       const images = carousel?._commentImages || [];
       if (!images.length) return;
       const nextIndex = normalizedCarouselIndex(index, images.length);
-      const image = carousel.querySelector("img");
+      const item = images[nextIndex];
+      const expectedTagName = item.kind === "video" ? "VIDEO" : "IMG";
       const changed = nextIndex !== carousel._commentImageIndex;
+      let media = commentCarouselMedia(carousel);
+      if (!media || media.tagName !== expectedTagName) {
+        const nextMedia = createCommentMediaElement(item);
+        if (media) media.replaceWith(nextMedia);
+        else carousel.prepend(nextMedia);
+        media = nextMedia;
+      } else {
+        setCommentMediaSource(media, item);
+      }
       carousel._commentImageIndex = nextIndex;
-      image.draggable = false;
-      setOptimizedImageSource(image, images[nextIndex].path);
-      image.alt = images[nextIndex].label;
+      media.title = item.label;
+      if (media instanceof HTMLImageElement) media.alt = item.label;
+      else media.setAttribute("aria-label", item.label);
+      if (carousel._commentMediaInteractive) {
+        media.tabIndex = 0;
+        media.setAttribute("role", "button");
+        media.setAttribute("aria-label", t("enlargeCommentImage"));
+      } else {
+        media.removeAttribute("tabindex");
+        media.removeAttribute("role");
+      }
       if (changed && animate) {
-        image.classList.remove("is-changing");
-        void image.offsetWidth;
-        image.classList.add("is-changing");
+        media.classList.remove("is-changing");
+        void media.offsetWidth;
+        media.classList.add("is-changing");
       }
       carousel.querySelectorAll(".map-marker-comment-indicator").forEach((indicator, indicatorIndex) => {
         indicator.setAttribute("aria-pressed", String(indicatorIndex === nextIndex));
@@ -872,7 +942,7 @@ let vectorEditor = null;
       carousel.addEventListener("pointercancel", finishSwipe);
     }
     function hideMarkerCommentImagePreview({ restoreFocus = false } = {}) {
-      const sourceImage = markerCommentImagePreviewSource;
+      const sourceCarousel = markerCommentImagePreviewSourceCarousel;
       markerCommentImagePreview.hidden = true;
       markerCommentImagePreview.classList.remove("is-touch-open");
       markerCommentImagePreview.style.removeProperty("left");
@@ -883,20 +953,25 @@ let vectorEditor = null;
       markerCommentImagePreview.removeAttribute("role");
       markerCommentImagePreview.removeAttribute("aria-modal");
       markerCommentImagePreview.removeAttribute("aria-label");
-      markerCommentImagePreviewImage.style.removeProperty("max-width");
-      markerCommentImagePreviewImage.style.removeProperty("max-height");
-      markerCommentImagePreviewImage.removeAttribute("src");
-      markerCommentImagePreviewImage.alt = "";
+      const previewMedia = commentCarouselMedia(markerCommentImagePreviewCarousel);
+      if (previewMedia instanceof HTMLVideoElement) {
+        previewMedia.pause();
+        previewMedia.removeAttribute("src");
+        previewMedia.load();
+      }
+      previewMedia?.remove();
       markerCommentImagePreviewSource = null;
       markerCommentImagePreviewSourceCarousel = null;
       markerCommentImagePreviewCarousel._commentImages = [];
       markerCommentImagePreviewCarousel._commentImageIndex = 0;
       markerCommentImagePreviewCarousel._commentImageChange = null;
       markerCommentImagePreviewCarousel.querySelector(".map-marker-comment-indicator-hit-area")?.remove();
-      if (restoreFocus) sourceImage?.focus({ preventScroll: true });
+      if (restoreFocus) sourceCarousel?.querySelector(".map-marker-comment-media")?.focus({ preventScroll: true });
     }
     function positionMarkerCommentImagePreview() {
       if (markerCommentImagePreview.hidden || !markerCommentImagePreviewSource?.isConnected) return;
+      const previewMedia = commentCarouselMedia(markerCommentImagePreviewCarousel);
+      if (!previewMedia) return;
       const visualViewport = window.visualViewport;
       const viewportLeft = visualViewport?.offsetLeft || 0;
       const viewportTop = visualViewport?.offsetTop || 0;
@@ -906,15 +981,15 @@ let vectorEditor = null;
       markerCommentImagePreview.style.top = `${viewportTop}px`;
       markerCommentImagePreview.style.width = `${viewportWidth}px`;
       markerCommentImagePreview.style.height = `${viewportHeight}px`;
-      markerCommentImagePreviewImage.style.maxWidth = `${Math.max(0, viewportWidth - 16)}px`;
-      markerCommentImagePreviewImage.style.maxHeight = `${Math.max(0, viewportHeight - 16)}px`;
+      previewMedia.style.maxWidth = `${Math.max(0, viewportWidth - 16)}px`;
+      previewMedia.style.maxHeight = `${Math.max(0, viewportHeight - 16)}px`;
     }
     function showMarkerCommentImagePreview(sourceCarousel, { interactive = false } = {}) {
-      const sourceImage = sourceCarousel?.querySelector("img");
-      if (!markerCommentPopover.classList.contains("is-pinned") || !sourceImage?.isConnected) return;
+      const sourceMedia = commentCarouselMedia(sourceCarousel);
+      if (!markerCommentPopover.classList.contains("is-pinned") || !sourceMedia?.isConnected) return;
       const previewHost = dialog.open ? dialog : document.body;
       if (markerCommentImagePreview.parentElement !== previewHost) previewHost.append(markerCommentImagePreview);
-      markerCommentImagePreviewSource = sourceImage;
+      markerCommentImagePreviewSource = sourceCarousel;
       markerCommentImagePreviewSourceCarousel = sourceCarousel;
       markerCommentImagePreview.classList.toggle("is-touch-open", interactive);
       markerCommentImagePreview.setAttribute("aria-hidden", String(!interactive));
@@ -935,11 +1010,21 @@ let vectorEditor = null;
       );
       markerCommentImagePreviewClose.setAttribute("aria-label", t("closeCommentImage"));
       markerCommentImagePreview.hidden = false;
+      const previewVideo = markerCommentImagePreviewCarousel.querySelector("video");
+      if (previewVideo) {
+        const playPromise = previewVideo.play();
+        if (playPromise?.catch) playPromise.catch(() => {});
+      }
       positionMarkerCommentImagePreview();
       if (usesMobileCommentLayout()) activateCommentCarouselIndicators(markerCommentImagePreviewCarousel);
       if (interactive) window.requestAnimationFrame(() => markerCommentImagePreviewClose.focus({ preventScroll: true }));
     }
-    markerCommentImagePreviewImage.addEventListener("load", positionMarkerCommentImagePreview);
+    markerCommentImagePreviewCarousel.addEventListener("load", event => {
+      if (event.target.matches?.(".map-marker-comment-media")) positionMarkerCommentImagePreview();
+    }, true);
+    markerCommentImagePreviewCarousel.addEventListener("loadedmetadata", event => {
+      if (event.target.matches?.(".map-marker-comment-media")) positionMarkerCommentImagePreview();
+    }, true);
     markerCommentImagePreview.addEventListener("click", event => {
       if (!markerCommentImagePreview.classList.contains("is-touch-open")) return;
       if (event.target !== markerCommentImagePreview) return;
@@ -1019,26 +1104,27 @@ let vectorEditor = null;
       );
       markerCommentPopover.style.maxWidth = `${maximumPopoverWidth}px`;
       markerCommentPopover.style.maxHeight = `${maximumPopoverHeight}px`;
-      const commentImage = markerCommentPopover.querySelector(".map-marker-comment-image");
-      if (commentImage?.complete && commentImage.naturalWidth && commentImage.naturalHeight) {
-        const imageHeight = commentImage.getBoundingClientRect().height;
-        const nonImageHeight = Math.max(0, markerCommentPopover.scrollHeight - imageHeight);
+      const commentMedia = markerCommentPopover.querySelector(".map-marker-comment-media");
+      const mediaDimensions = commentMediaDimensions(commentMedia);
+      if (mediaDimensions.ready && mediaDimensions.width && mediaDimensions.height) {
+        const mediaHeight = commentMedia.getBoundingClientRect().height;
+        const nonMediaHeight = Math.max(0, markerCommentPopover.scrollHeight - mediaHeight);
         const popoverStyle = getComputedStyle(markerCommentPopover);
         const contentWidth = Math.max(0, markerCommentPopover.clientWidth - Number.parseFloat(popoverStyle.paddingLeft) - Number.parseFloat(popoverStyle.paddingRight));
-        const imageRatio = commentImage.naturalWidth / commentImage.naturalHeight;
-        const availableImageHeight = Math.max(0, maximumPopoverHeight - nonImageHeight);
-        const minimumImageHeight = markerCommentPopover.classList.contains("is-pinned")
-          ? Math.min(MIN_PINNED_COMMENT_IMAGE_HEIGHT, commentImage.naturalHeight)
+        const mediaRatio = mediaDimensions.width / mediaDimensions.height;
+        const availableMediaHeight = Math.max(0, maximumPopoverHeight - nonMediaHeight);
+        const minimumMediaHeight = markerCommentPopover.classList.contains("is-pinned")
+          ? Math.min(MIN_PINNED_COMMENT_IMAGE_HEIGHT, mediaDimensions.height)
           : 0;
-        const targetImageHeight = Math.min(
-          commentImage.naturalHeight,
-          Math.max(minimumImageHeight, Math.min(contentWidth / imageRatio, availableImageHeight))
+        const targetMediaHeight = Math.min(
+          mediaDimensions.height,
+          Math.max(minimumMediaHeight, Math.min(contentWidth / mediaRatio, availableMediaHeight))
         );
-        const targetImageWidth = targetImageHeight * imageRatio;
-        commentImage.style.width = `${targetImageWidth}px`;
-        commentImage.style.maxWidth = "none";
-        commentImage.style.maxHeight = "none";
-        commentImage.style.justifySelf = targetImageWidth > contentWidth ? "start" : "center";
+        const targetMediaWidth = targetMediaHeight * mediaRatio;
+        commentMedia.style.width = `${targetMediaWidth}px`;
+        commentMedia.style.maxWidth = "none";
+        commentMedia.style.maxHeight = "none";
+        commentMedia.style.justifySelf = targetMediaWidth > contentWidth ? "start" : "center";
       }
       const popoverRect = markerCommentPopover.getBoundingClientRect();
       const placeAbove = availableAbove >= popoverRect.height || availableAbove >= availableBelow;
@@ -1100,39 +1186,37 @@ let vectorEditor = null;
       }
       if (commentImages.length) {
         const carousel = document.createElement("div");
-        const image = document.createElement("img");
         carousel.className = "map-marker-comment-carousel";
-        image.className = "map-marker-comment-image";
-        carousel.append(image);
-        if (mobileSheet) {
-          image.tabIndex = 0;
-          image.setAttribute("role", "button");
-          image.setAttribute("aria-label", t("enlargeCommentImage"));
-        }
+        carousel._commentMediaInteractive = mobileSheet;
         configureCommentCarousel(carousel, commentImages, 0, index => {
           if (!markerCommentImagePreview.hidden && markerCommentImagePreviewSourceCarousel === carousel) {
             setCommentCarouselIndex(markerCommentImagePreviewCarousel, index, { notify: false });
           }
           positionMarkerCommentPopover(anchor);
         });
-        image.addEventListener("load", () => positionMarkerCommentPopover(anchor));
-        image.addEventListener("pointerdown", event => {
+        const handleMediaReady = event => {
+          if (event.target === commentCarouselMedia(carousel)) positionMarkerCommentPopover(anchor);
+        };
+        carousel.addEventListener("load", handleMediaReady, true);
+        carousel.addEventListener("loadedmetadata", handleMediaReady, true);
+        carousel.addEventListener("pointerdown", event => {
           if (event.pointerType !== "mouse") activateCommentCarouselIndicators(carousel);
         });
-        image.addEventListener("pointerenter", event => {
+        carousel.addEventListener("pointerenter", event => {
           if (!mobileSheet && event.pointerType === "mouse") showMarkerCommentImagePreview(carousel);
         });
-        image.addEventListener("pointerleave", event => {
+        carousel.addEventListener("pointerleave", event => {
           if (!mobileSheet && event.pointerType === "mouse" && !markerCommentImagePreview.classList.contains("is-touch-open")) hideMarkerCommentImagePreview();
         });
-        image.addEventListener("click", event => {
+        carousel.addEventListener("click", event => {
+          if (!event.target.closest?.(".map-marker-comment-media")) return;
           event.preventDefault();
           event.stopPropagation();
           if (markerCommentImagePreview.hidden || !markerCommentImagePreview.classList.contains("is-touch-open")) showMarkerCommentImagePreview(carousel, { interactive: true });
           else hideMarkerCommentImagePreview();
         });
-        image.addEventListener("keydown", event => {
-          if (!mobileSheet || (event.key !== "Enter" && event.key !== " ")) return;
+        carousel.addEventListener("keydown", event => {
+          if (!mobileSheet || !event.target.matches?.(".map-marker-comment-media") || (event.key !== "Enter" && event.key !== " ")) return;
           event.preventDefault();
           if (markerCommentImagePreview.hidden) showMarkerCommentImagePreview(carousel, { interactive: true });
           else hideMarkerCommentImagePreview();
@@ -1388,7 +1472,7 @@ let vectorEditor = null;
       options.append(noImageOption);
       orderedImages.forEach(image => {
         const option = document.createElement("button");
-        const thumbnail = document.createElement("img");
+        const thumbnail = createCommentMediaElement(image, { thumbnail: true });
         const label = document.createElement("span");
         const isSelected = resolvedImageIdSet.has(image.id);
         const selectionIndex = resolvedImageIds.indexOf(image.id);
@@ -1400,10 +1484,6 @@ let vectorEditor = null;
         option.draggable = isSelected;
         option.title = !isSelected && resolvedImageIds.length >= MAX_COMMENT_IMAGES ? t("commentImageLimitReached") : image.label;
         option.disabled = !isSelected && resolvedImageIds.length >= MAX_COMMENT_IMAGES;
-        setOptimizedImageSource(thumbnail, image.path);
-        thumbnail.alt = "";
-        thumbnail.loading = "lazy";
-        thumbnail.draggable = false;
         label.textContent = isSelected ? `${selectionIndex + 1}. ${image.label}` : image.label;
         option.append(thumbnail, label);
         options.append(option);
