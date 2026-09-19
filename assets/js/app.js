@@ -2770,13 +2770,57 @@ let vectorEditor = null;
         hideAnnotationContextMenu();
       });
     }
+    let mapModalScrollLock = null;
+    function lockPageScrollForMapModal() {
+      if (mapModalScrollLock) return;
+      const bodyStyle = document.body.style;
+      mapModalScrollLock = {
+        x: window.scrollX,
+        y: window.scrollY,
+        position: bodyStyle.position,
+        top: bodyStyle.top,
+        left: bodyStyle.left,
+        right: bodyStyle.right,
+        width: bodyStyle.width,
+        overflow: bodyStyle.overflow
+      };
+      document.documentElement.classList.add("map-modal-open");
+      document.body.classList.add("map-modal-open");
+      bodyStyle.position = "fixed";
+      bodyStyle.top = `-${mapModalScrollLock.y}px`;
+      bodyStyle.left = `-${mapModalScrollLock.x}px`;
+      bodyStyle.right = "0";
+      bodyStyle.width = "100%";
+      bodyStyle.overflow = "hidden";
+    }
+    function unlockPageScrollForMapModal() {
+      if (!mapModalScrollLock) return;
+      const lock = mapModalScrollLock;
+      const bodyStyle = document.body.style;
+      bodyStyle.position = lock.position;
+      bodyStyle.top = lock.top;
+      bodyStyle.left = lock.left;
+      bodyStyle.right = lock.right;
+      bodyStyle.width = lock.width;
+      bodyStyle.overflow = lock.overflow;
+      document.body.classList.remove("map-modal-open");
+      window.scrollTo({ left: lock.x, top: lock.y, behavior: "auto" });
+      document.documentElement.classList.remove("map-modal-open");
+      mapModalScrollLock = null;
+    }
     function openMapModal() {
       if (dialog.open) return;
       buildModalLegend();
       const listScrollTop = mapList.scrollTop;
       mapIndex.replaceWith(mapIndexPlaceholder);
       dialog.querySelector(".modal-workspace").prepend(mapIndex);
-      dialog.showModal();
+      lockPageScrollForMapModal();
+      try {
+        dialog.showModal();
+      } catch (error) {
+        unlockPageScrollForMapModal();
+        throw error;
+      }
       mapList.scrollTop = listScrollTop;
       setModalMapSource();
       window.requestAnimationFrame(renderMarkers);
@@ -2978,6 +3022,7 @@ let vectorEditor = null;
       modalMapOverlayLayer.replaceChildren();
       modalAnnotationLayer.replaceChildren();
       modalMarkerLayer.replaceChildren();
+      unlockPageScrollForMapModal();
       renderMarkers();
     });
     setAnnotationOpacity(state.annotationOpacity, { persist: false });
