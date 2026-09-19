@@ -92,6 +92,8 @@
     .eyebrow { margin: 0 0 12px; color: var(--accent); font-size: .78rem; font-weight: 800; letter-spacing: .14em; }
     .hero-title { max-width: 900px; margin: 0; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: clamp(3rem, 9vw, 7rem); font-kerning: normal; font-synthesis: none; font-weight: 850; line-height: .8; letter-spacing: -.07em; }
     .hero-title em { color: transparent; font-style: normal; -webkit-text-stroke: 1px var(--accent); }
+    .hero-title-a { position: relative; display: inline-block; -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpath fill='white' fill-rule='evenodd' d='M0 0H100V100H0Z M22 59.5H78V61H22Z M22 77.5H78V79H22Z'/%3E%3C/svg%3E") center / 100% 100% no-repeat; mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpath fill='white' fill-rule='evenodd' d='M0 0H100V100H0Z M22 59.5H78V61H22Z M22 77.5H78V79H22Z'/%3E%3C/svg%3E") center / 100% 100% no-repeat; }
+    .hero-title-a::after { position: absolute; top: 69%; right: 24%; left: 24%; height: 1px; background: var(--accent); content: ""; transform: translateY(-.5px); -webkit-text-stroke: 0; }
     .seo-title { max-width: 900px; margin: 20px 0 0; font-size: clamp(1.35rem, 3vw, 2rem); line-height: 1.15; letter-spacing: -.035em; }
     .hero-copy { max-width: 620px; margin: 20px 0 0; color: var(--muted); font-size: clamp(1rem, 2vw, 1.12rem); line-height: 1.75; }
     .recent-updates { width: 100%; padding-bottom: 3px; }
