@@ -1160,12 +1160,6 @@ let vectorEditor = null;
       markerCommentPopover.classList.toggle("is-mobile-sheet", mobileSheet);
       markerCommentPopover.setAttribute("role", mobileSheet ? "dialog" : "tooltip");
       if (mobileSheet) {
-        const header = document.createElement("div");
-        header.className = "map-marker-comment-header";
-        const title = document.createElement("strong");
-        title.className = "map-marker-comment-title";
-        title.id = "map-marker-comment-title";
-        title.textContent = `${t(marker.type)} · ${t("commentTitle")}`;
         const closeButton = document.createElement("button");
         closeButton.type = "button";
         closeButton.className = "map-marker-comment-close";
@@ -1176,12 +1170,13 @@ let vectorEditor = null;
           event.stopPropagation();
           closeFocusedTankComment({ restoreFocus: true });
         });
-        header.append(title, closeButton);
-        content.append(header);
+        content.append(closeButton);
         markerCommentPopover.setAttribute("aria-modal", "false");
-        markerCommentPopover.setAttribute("aria-labelledby", title.id);
+        markerCommentPopover.setAttribute("aria-label", t("commentTitle"));
+        markerCommentPopover.removeAttribute("aria-labelledby");
       } else {
         markerCommentPopover.removeAttribute("aria-modal");
+        markerCommentPopover.removeAttribute("aria-label");
         markerCommentPopover.removeAttribute("aria-labelledby");
       }
       if (commentImages.length) {
