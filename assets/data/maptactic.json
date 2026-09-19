@@ -547,6 +547,40 @@
         "C 거점에서는 B 거점 쪽에 가까운 산맥을 따라 엄폐를 받으며 돌파하는 방식이 가능합니다. 또는 C 거점 동쪽의 완만한 언덕 지대에서 헐다운을 시도하며 장거리 교전으로 적 전력을 소모시키는 선택도 가능합니다.",
         "이 맵의 핵심 지역은 A와 B 거점 사이의 구릉지입니다. 이곳을 장악하면 A와 B 거점을 모두 훨씬 쉽게 확보할 수 있으며, 반대로 이 지역에서 밀릴 경우 양 팀 모두 곧바로 적 스폰 지역 압박으로 이어질 수 있는 경로가 열리게 됩니다."
       ]
+    },
+    "Maginot Line": {
+      "variations": {
+        "domination-1": {
+          "en": [
+            "The key area on Maginot Line Domination #1 is the hilly ground between points A and B together with the urban area around A. Controlling this sector allows pressure on both capture points, and a successful breakthrough can quickly lead toward the enemy spawn.",
+            "Point C is a defensible basin surrounded by hills, making it difficult to capture and relatively less influential on the overall battle."
+          ],
+          "ko": [
+            "마지노선 도미네이션 #1의 핵심 지역은 A와 B 거점 사이의 구릉지와 A 거점 시가지입니다. 이 구역을 장악하면 A와 B를 동시에 압박할 수 있으며, 돌파에 성공할 경우 곧바로 적 스폰 지역까지 진입할 수 있습니다.",
+            "C 거점은 주변 언덕에서 방어하기 쉬운 분지 지형이라 점령이 어렵고, 전체 전투에 미치는 영향도 상대적으로 낮습니다."
+          ]
+        }
+      }
+    },
+    "Middle East": {
+      "en": [
+        "The key area on Middle East is the urban frontline between points B and C. The two sectors are closely connected, so losing one often puts the other under immediate pressure.",
+        "A northern flank around point A can lead toward the enemy spawn, but it is a high-risk route. In most matches, controlling the B–C urban frontline is the more important objective."
+      ],
+      "ko": [
+        "중동의 핵심 지역은 B와 C 거점 사이의 시가지입니다. 두 전선은 서로 강하게 연결되어 있어 한쪽이 무너지면 다른 쪽도 함께 압박받게 됩니다.",
+        "A 거점 북쪽에는 스폰 지역까지 이어지는 우회로가 있지만 성공 확률이 낮은 도박성 경로입니다. 따라서 대부분의 전투에서는 B–C 시가지 전선을 장악하는 것이 가장 중요합니다."
+      ]
+    },
+    "North Holland": {
+      "en": [
+        "The key area on North Holland is the urban district and river between points A and B. The river sits in low ground and is difficult to spot, allowing fast vehicles to break through and quickly pressure the enemy spawn.",
+        "Point A favors close-range defensive fighting inside the building, while point C is strongly influenced by sniper positions, making flanking routes more effective than direct pushes."
+      ],
+      "ko": [
+        "노르드 홀란드의 핵심 지역은 A와 B 거점 사이의 시가지와 강입니다. 특히 강은 저지대라 발견되기 어렵고, 빠른 전차가 돌파하면 곧바로 적 스폰 지역을 압박할 수 있습니다.",
+        "A 거점은 건물 내부에서 근접 난전이 자주 발생하며 방어가 유리합니다. C 거점은 저격 지형의 영향이 커 정면 돌파보다 우회 경로를 활용하는 편이 효과적입니다."
+      ]
     }
   },
   "markers": {
