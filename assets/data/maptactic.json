@@ -509,6 +509,24 @@
         "C 거점은 대형 굴착기를 엄폐물로 활용할 수 있지만 거점 주변이 거의 완전한 평지이기 때문에 초반에 먼저 점령하기가 쉽지 않은 구조입니다.",
         "금광지대의 핵심 지역은 B와 C 거점 사이의 언덕과 구릉, 그리고 일부 시가지를 포함하는 구역입니다. 이 지역에서는 양 팀 모두 적 스폰 지역까지 빠르게 이어지는 경로를 사용할 수 있기 때문에, 상대에게 내주지 않고 반드시 통제해야 하는 핵심 전장입니다."
       ]
+    },
+    "Mozdok": {
+      "en": [
+        "The key area on Mozdok is the high ground around point B. Whichever team controls this position can immediately threaten the enemy spawn, so winning the fight for B is usually the most important factor in taking control of the match.",
+        "If your team secures the high ground around point B, it becomes much easier to influence both points A and C from the center of the map.",
+        "Around point C, fast vehicles have several options for making wide flanking maneuvers, but in most situations the safer choice is to use the hills for hull-down positions and engage enemies at range.",
+        "It is also possible to advance along the recessed riverbed near point C. For the southern team in particular, this route provides useful cover and allows a relatively protected advance toward the enemy side.",
+        "Point A is very different. The area consists of broad, gently sloping open ground where neither team can easily force the other side back. The terrain strongly favors the defender, making a direct assault on A extremely difficult.",
+        "For that reason, point B should be treated as the decisive sector on Mozdok. Holding the B high ground and pushing the enemy away from it should be the primary objective whenever possible."
+      ],
+      "ko": [
+        "모즈도크의 핵심 지역은 B 거점 주변의 고지대입니다. 이 지역을 장악한 팀은 곧바로 적 스폰 지역을 압박할 수 있기 때문에, B 거점 교전에서 승리하는 것이 전체 전투의 주도권을 잡는 데 가장 중요합니다.",
+        "B 거점 주변의 고지대를 확보하면 중앙에서 A와 C 거점 모두에 영향력을 행사하기 훨씬 쉬워집니다.",
+        "C 거점 주변에는 기동성이 좋은 전차가 크게 우회할 수 있는 경로가 여러 개 존재하지만, 대부분의 상황에서는 언덕을 이용해 헐다운 자세를 취하고 장거리 교전을 하는 편이 더 안전합니다.",
+        "C 거점 주변의 움푹 파인 강줄기를 따라 전진하는 것도 가능합니다. 특히 남쪽 팀은 이 경로를 이용하면 지형 엄폐를 받으면서 비교적 안전하게 적 방향으로 진군할 수 있습니다.",
+        "반면 A 거점은 넓고 완만한 평야로 이루어져 있어 양 팀 모두 상대를 쉽게 밀어내기 어렵습니다. 지형 자체가 방어 측에 크게 유리하기 때문에 정면으로 공격해 돌파하기는 매우 어렵습니다.",
+        "따라서 모즈도크에서는 B 거점을 결정적인 핵심 구역으로 보는 것이 좋습니다. 가능하면 B 고지대를 반드시 유지하고, 적이 장악했을 경우에는 우선적으로 밀어내는 것이 중요합니다."
+      ]
     }
   },
   "markers": {
