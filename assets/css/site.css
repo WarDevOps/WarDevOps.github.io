@@ -15,6 +15,9 @@
 
     * { box-sizing: border-box; }
     html { color-scheme: dark; scroll-behavior: smooth; }
+    html.map-modal-open { overflow: hidden; overscroll-behavior: none; scroll-behavior: auto; }
+    body.map-modal-open { overflow: hidden; overscroll-behavior: none; }
+    dialog[open], dialog[open] .modal-workspace { overscroll-behavior: contain; }
     body {
       min-width: 320px;
       margin: 0;
