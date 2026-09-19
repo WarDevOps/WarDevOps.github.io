@@ -649,6 +649,30 @@
         "세베르스크-13은 B와 C 거점의 방어전이 강하게 형성되고, A 거점에서는 언덕과 헐다운을 이용한 교전이 중심이 됩니다. A와 B 사이에서는 우회가 가능하지만 노출된 고속도로보다 그 동쪽의 저지대를 이용하는 편이 더 안전합니다.",
         "A 거점을 돌파하면 곧바로 스폰 압박으로 이어질 수 있습니다. 부각이 좋은 전차라면 A 전선의 가치가 높고, 기동성이 좋은 전차라면 B와 C 주변에서 더 큰 영향력을 발휘하기 쉽습니다."
       ]
+    },
+    "Vietnam": {
+      "variations": {
+        "domination-1": {
+          "en": [
+            "Vietnam Domination #1 is defined by the swamp fighting around point A and the dense urban combat around point C. The swamp is broken up by jungle, rocks, and rolling terrain, making it relatively easy to push through and creating frequent large-scale brawls.",
+            "Capturing A can open several routes toward the enemy spawn, but leaving the swamp also exposes vehicles to long lines of fire. Point B has low strategic value because its basin terrain is very easy to defend, while the southern flank around C is a more reliable route that can lead directly into spawn pressure."
+          ],
+          "ko": [
+            "베트남 도미네이션 #1은 A 거점 늪지대와 C 거점 시가지가 핵심 전장입니다. A 주변은 정글과 바위, 구릉이 늪지대 사이에 섞여 있어 돌파가 비교적 쉬우며 대규모 난전이 자주 발생합니다.",
+            "A를 장악하면 적 스폰 지역으로 이어지는 경로가 열리지만 늪지대를 벗어나는 순간 엄폐물이 줄어 사격에 노출되기 쉽습니다. B 거점은 분지 지형이라 방어가 쉬워 전략적 가치가 낮고, C 남쪽 우회로는 성공률이 높은 편이며 성공 시 곧바로 스폰 압박으로 이어질 수 있습니다."
+          ]
+        },
+        "domination-2": {
+          "en": [
+            "Vietnam Domination #2 expands the northern side of the map, moving point A out of the swamp and into rocky hills. The swamp becomes a flanking route instead, and an additional northern mountain flank creates much more room for mobile vehicles to maneuver.",
+            "The importance of points B and C changes very little from Domination #1, so the main difference is the stronger emphasis on mobility and flanking around the expanded northern sector."
+          ],
+          "ko": [
+            "베트남 도미네이션 #2는 북쪽 전장이 크게 확장되며 A 거점도 늪지대가 아니라 바위산과 구릉 사이로 이동합니다. 기존 늪지대는 우회로 역할로 바뀌고, 북쪽 산맥을 따라 도는 경로까지 추가되어 기동성이 좋은 전차들의 기동전 비중이 크게 높아집니다.",
+            "B와 C 거점의 전략적 가치는 도미네이션 #1과 크게 달라지지 않기 때문에, 가장 큰 차이는 확장된 북쪽 구역에서의 우회와 기동전입니다."
+          ]
+        }
+      }
     }
   },
   "markers": {
