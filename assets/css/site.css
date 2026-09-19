@@ -538,11 +538,11 @@
       .modal-workspace .modal-legend-list .legend-list { grid-template-columns: 1fr; }
       .modal-workspace .modal-legend-actions { grid-template-columns: 1fr; }
     }
-    @media (max-width: 760px) {
+    @media (max-width: 760px), (any-pointer: coarse) and (max-height: 599px), (any-pointer: coarse) and (max-width: 899px) {
       .modal-workspace { grid-template-columns: minmax(0, 1fr); grid-template-rows: auto auto auto; overflow-x: hidden; overflow-y: auto; }
-      .modal-workspace > .map-index { grid-column: 1; grid-row: 1; width: 100%; height: auto; min-height: 0; border-right: 0; border-bottom: 1px solid var(--line); }
+      .modal-workspace > .map-index { position: relative; z-index: 2; grid-column: 1; grid-row: 1; width: 100%; height: auto; min-height: 0; border-right: 0; border-bottom: 1px solid var(--line); }
       .modal-workspace .map-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); max-height: 128px; overflow-y: auto; }
-      .modal-workspace .modal-map-stage { grid-column: 1; grid-row: 2; min-height: min(75dvh, 100vw); }
+      .modal-workspace .modal-map-stage { position: relative; z-index: 1; grid-column: 1; grid-row: 2; min-height: min(75dvh, 100vw); }
       .modal-workspace .modal-legend-region { grid-column: 1; grid-row: 3; max-height: min(45dvh, 320px); padding: 8px 10px; overflow: auto; border-top: 1px solid var(--line); border-left: 0; }
       .modal-workspace .modal-legend-list .legend-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .modal-workspace .modal-legend-actions { grid-template-columns: repeat(2, minmax(0, 1fr)); }
