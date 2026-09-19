@@ -602,6 +602,16 @@
         "시나이는 남쪽 팀이 유리한 비대칭형 맵이며, 핵심 지역은 B와 C 거점 사이의 바위 능선입니다. 이 능선을 장악하면 B 점령을 사실상 봉쇄하면서 B와 C를 동시에 통제할 수 있고, 적 스폰 지역으로 이어지는 경로도 열립니다.",
         "남쪽 팀은 A 거점과 A–B 사이의 유류 저장고 지역에 비교적 안전하게 접근할 수 있지만, 북쪽 팀은 노출된 평야를 지나야 하므로 진입 시 연막 사용이 중요합니다. 북쪽 팀은 A를 내주더라도 유류 저장고 구역의 돌파만큼은 반드시 막아야 하며, 이곳이 뚫리면 B–C 능선의 측면과 양쪽 스폰이 동시에 위협받을 수 있습니다."
       ]
+    },
+    "Spaceport": {
+      "en": [
+        "The key area on Spaceport is the dense urban district around point B. If this sector is broken through, it can quickly lead to direct pressure on the enemy spawn, giving the northern side a slight disadvantage because some building windows provide firing angles into its northern spawn.",
+        "Fast vehicles can flank through the open ground northwest of point A, while another route runs beneath the elevated road between points B and C. These routes can bypass the main frontline, but control of the B-side urban area remains the most important objective."
+      ],
+      "ko": [
+        "우주공항의 핵심 지역은 B 거점의 고밀도 시가지입니다. 이 구역이 돌파되면 곧바로 적 스폰 지역 압박으로 이어질 수 있으며, 일부 건물 창문에서 북쪽 스폰을 직접 노릴 수 있어 북쪽 팀이 약간 불리합니다.",
+        "기동성이 좋은 전차는 A 거점 북서쪽의 황무지 평야를 통해 빠르게 우회할 수 있고, B와 C 거점 사이의 고가도로 아래를 이용하는 우회로도 존재합니다. 다만 전체 전투에서 가장 중요한 것은 B 시가지의 주도권입니다."
+      ]
     }
   },
   "markers": {
