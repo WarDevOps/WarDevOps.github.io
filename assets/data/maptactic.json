@@ -592,6 +592,16 @@
           ]
         }
       }
+    },
+    "Sinai": {
+      "en": [
+        "Sinai is an asymmetrical map that favors the southern team. The key area is the rocky ridge between points B and C; controlling it can deny B, secure both B and C, and open routes toward the enemy spawn.",
+        "The southern team can approach point A and the oil-storage area between A and B much more safely, while the northern team must cross exposed ground and should use smoke when advancing. For the north, holding the oil-storage sector is critical, because if the south breaks through there it can flank the B–C ridge and pressure both northern spawns."
+      ],
+      "ko": [
+        "시나이는 남쪽 팀이 유리한 비대칭형 맵이며, 핵심 지역은 B와 C 거점 사이의 바위 능선입니다. 이 능선을 장악하면 B 점령을 사실상 봉쇄하면서 B와 C를 동시에 통제할 수 있고, 적 스폰 지역으로 이어지는 경로도 열립니다.",
+        "남쪽 팀은 A 거점과 A–B 사이의 유류 저장고 지역에 비교적 안전하게 접근할 수 있지만, 북쪽 팀은 노출된 평야를 지나야 하므로 진입 시 연막 사용이 중요합니다. 북쪽 팀은 A를 내주더라도 유류 저장고 구역의 돌파만큼은 반드시 막아야 하며, 이곳이 뚫리면 B–C 능선의 측면과 양쪽 스폰이 동시에 위협받을 수 있습니다."
+      ]
     }
   },
   "markers": {
