@@ -241,52 +241,25 @@
       ]
     },
     "Ardennes": {
-      "en": [
-        "Domination #1",
-        "In Ardennes Domination #1, points A and C are usually secured early by the southern and northern teams respectively. Surprisingly, the central point B is not the most strategically valuable position on the map.",
-        "The southeastern urban area is far more important. While the central city often settles into a prolonged stalemate, the outcome of the match is frequently decided by whichever team gains control of the southeastern city and successfully completes a flanking maneuver.",
-        "Once this area is breached, it provides strong and relatively safe positions from which the enemy spawn can be pressured.",
-        "The northwestern flank consists almost entirely of exposed terrain. It can occasionally be used as an unexpected high-risk maneuver, but it is generally not recommended.",
-        "Domination #2",
-        "Ardennes Domination #2 is essentially a larger version of Domination #1, but the tactical situation changes considerably.",
-        "The most important position is point C, located on the highest ground of asd"
-      ],
-      "ko": [
-        "아르덴 도미네이션 #1에서는 A와 C 거점을 각각 남쪽 팀과 북쪽 팀이 비교적 쉽게 확보하는 형태로 전투가 시작됩니다. 의외로 중앙에 위치한 B 거점 자체의 전략적 가치는 그리 높지 않습니다.",
-        "이 맵에서 가장 중요한 지역은 남동쪽 시가지입니다. 중앙 시가지에서 교착 상태가 이어지는 동안 어느 팀이 남동쪽 시가지를 장악하고 우회 공격에 성공하는지가 승부를 결정하는 경우가 많습니다.",
-        "남동쪽 시가지가 돌파당하면 상대 스폰 지역을 안정적으로 압박할 수 있는 위치가 확보되기 때문입니다.",
-        "북서쪽 우회로는 대부분이 완전히 노출된 개활지로 이루어져 있습니다. 간혹 예상 밖의 기습 경로로 사용할 수는 있지만 위험 부담이 매우 크기 때문에 일반적으로 추천하지 않습니다.",
-        "아르덴 도미네이션 #2는 도미네이션 #1을 확장한 대형 전장이지만, 실제 전투 양상은 상당히 달라집니다.",
-        "가장 중요한 지역은 맵에서 가장 높은 지형에 위치한 C 거점입니다. 이 고지대를 장악하면 맵 대부분을 사정거리 안에 둘 수 있으며, 양 팀의 스폰 지역까지 직접적인 압박이 가능해집니다.",
-        "전장이 넓어진 만큼 전선의 밀도가 낮아지기 때문에 북서쪽 시가지 역시 도미네이션 #1에 비해 훨씬 빠르게 돌파할 수 있습니다. 이 지역을 이용하면 적의 측면과 후방으로 깊숙이 진입하여 스폰 지역을 기습할 수 있습니다."
-      ],
       "variations": {
         "domination-1": {
           "en": [
-            "In Ardennes Domination #1, points A and C are usually secured early by the southern and northern teams respectively. Surprisingly, the central point B is not the most strategically valuable position on the map.",
-            "The southeastern urban area is far more important. While the central city often settles into a prolonged stalemate, the outcome of the match is frequently decided by whichever team gains control of the southeastern city and successfully completes a flanking maneuver.",
-            "Once this area is breached, it provides strong and relatively safe positions from which the enemy spawn can be pressured.",
-            "The northwestern flank consists almost entirely of exposed terrain. It can occasionally be used as an unexpected high-risk maneuver, but it is generally not recommended."
+            "The key area on Ardennes Domination #1 is the southeastern urban district rather than the central point B. Winning this sector opens a strong flanking route and can lead directly into pressure on the enemy spawn.",
+            "The northwestern flank is mostly exposed open ground and is generally a high-risk option, so controlling the southeastern city is the more reliable way to break the frontline."
           ],
           "ko": [
-            "아르덴 도미네이션 #1에서는 A와 C 거점을 각각 남쪽 팀과 북쪽 팀이 비교적 쉽게 확보하는 형태로 전투가 시작됩니다. 의외로 중앙에 위치한 B 거점 자체의 전략적 가치는 그리 높지 않습니다.",
-            "이 맵에서 가장 중요한 지역은 남동쪽 시가지입니다. 중앙 시가지에서 교착 상태가 이어지는 동안 어느 팀이 남동쪽 시가지를 장악하고 우회 공격에 성공하는지가 승부를 결정하는 경우가 많습니다.",
-            "남동쪽 시가지가 돌파당하면 상대 스폰 지역을 안정적으로 압박할 수 있는 위치가 확보되기 때문입니다.",
-            "북서쪽 우회로는 대부분이 완전히 노출된 개활지로 이루어져 있습니다. 간혹 예상 밖의 기습 경로로 사용할 수는 있지만 위험 부담이 매우 크기 때문에 일반적으로 추천하지 않습니다.",
-            "아르덴 도미네이션 #2는 도미네이션 #1을 확장한 대형 전장이지만, 실제 전투 양상은 상당히 달라집니다.",
-            "가장 중요한 지역은 맵에서 가장 높은 지형에 위치한 C 거점입니다. 이 고지대를 장악하면 맵 대부분을 사정거리 안에 둘 수 있으며, 양 팀의 스폰 지역까지 직접적인 압박이 가능해집니다.",
-            "전장이 넓어진 만큼 전선의 밀도가 낮아지기 때문에 북서쪽 시가지 역시 도미네이션 #1에 비해 훨씬 빠르게 돌파할 수 있습니다. 이 지역을 이용하면 적의 측면과 후방으로 깊숙이 진입하여 스폰 지역을 기습할 수 있습니다."
+            "아르덴 도미네이션 #1의 핵심 지역은 중앙 B 거점이 아니라 남동쪽 시가지입니다. 이 구역에서 승리하면 강력한 우회로가 열리고 곧바로 적 스폰 지역을 압박할 수 있습니다.",
+            "북서쪽 우회로는 대부분 노출된 개활지라 위험 부담이 큽니다. 따라서 남동쪽 시가지를 장악해 전선을 돌파하는 방식이 훨씬 안정적입니다."
           ]
         },
         "domination-2": {
           "en": [
-            "Ardennes Domination #2 is essentially a larger version of Domination #1, but the tactical situation changes considerably.",
-            "The most important position is point C, located on the highest ground of"
+            "The key position on Ardennes Domination #2 is point C on the highest ground of the map. Controlling it provides wide firing coverage and direct pressure on both spawn areas.",
+            "Because the larger map has a lower frontline density, the northwestern urban area is easier to break through than in Domination #1 and can be used to reach the enemy flank, rear, or spawn."
           ],
           "ko": [
-            "아르덴 도미네이션 #2는 도미네이션 #1을 확장한 대형 전장이지만, 실제 전투 양상은 상당히 달라집니다.",
-            "가장 중요한 지역은 맵에서 가장 높은 지형에 위치한 C 거점입니다. 이 고지대를 장악하면 맵 대부분을 사정거리 안에 둘 수 있으며, 양 팀의 스폰 지역까지 직접적인 압박이 가능해집니다.",
-            "전장이 넓어진 만큼 전선의 밀도가 낮아지기 때문에 북서쪽 시가지 역시 도미네이션 #1에 비해 훨씬 빠르게 돌파할 수 있습니다. 이 지역을 이용하면 적의 측면과 후방으로 깊숙이 진입하여 스폰 지역을 기습할 수 있습니다."
+            "아르덴 도미네이션 #2의 핵심은 맵에서 가장 높은 지형에 위치한 C 거점입니다. 이곳을 장악하면 넓은 지역을 사격으로 통제하면서 양 팀의 스폰 지역까지 직접 압박할 수 있습니다.",
+            "전장이 넓어 전선 밀도가 낮기 때문에 북서쪽 시가지도 도미네이션 #1보다 돌파하기 쉽습니다. 이 경로를 이용하면 적의 측후방이나 스폰 지역까지 깊게 진입할 수 있습니다."
           ]
         }
       }
@@ -308,55 +281,25 @@
       ]
     },
     "Battle of Hürtgen Forest": {
-      "en": [
-        "Domination #1",
-        "The central urban area is the most important part of Battle of Hürtgen Forest Domination #1. At the beginning of the match, points A and B are commonly divided between the two teams.",
-        "The mountain in the north is the major strategic variable. Controlling this high ground can provide direct opportunities to pressure the enemy spawn.",
-        "The western team has a slight terrain advantage when climbing the mountain because the surrounding hills and ridgelines provide better opportunities for concealment and cover.",
-        "However, losing the mountain does not necessarily decide the match. The urban area around point C is largely protected from direct fire from the mountain, which means a team can abandon the northern fight and concentrate its offensive through the southern city instead.",
-        "Vehicles with strong gun depression can also make effective use of the hill at the far southern edge of the map, which provides excellent control over the approaches to point C."
-      ],
-      "ko": [
-        "도미네이션 #1",
-        "휘르트겐 숲 도미네이션 #1에서는 중앙 시가지가 가장 중요한 지역입니다. 전투 초반에는 A와 B 거점을 양 팀이 하나씩 나누어 확보하는 형태가 자주 나타납니다.",
-        "북쪽 산악 지대가 주요 변수이며, 이 지역을 장악하면 적 스폰 지역까지 직접적인 압박이 가능해집니다.",
-        "서쪽 팀은 산을 오를 때 구릉과 능선을 엄폐물로 활용하기 쉬워 상대적으로 유리한 지형을 가지고 있습니다.",
-        "다만 산악 지대를 빼앗겼다고 해서 반드시 패배하는 것은 아닙니다. C 거점 주변 시가지는 산에서 직접적인 사선이 나오지 않기 때문에 산악 지대를 포기하고 남쪽 시가지에 공세를 집중하는 방식으로 역전을 노릴 수 있습니다.",
-        "부각이 좋은 전차를 운용한다면 맵 최남단의 언덕을 확보하는 것도 좋은 선택입니다. 이 위치에서는 C 거점 일대를 효과적으로 통제할 수 있습니다.",
-        "도미네이션 #2",
-        "휘르트겐 숲 도미네이션 #2에서는 북쪽 산악 지대의 중요성이 더욱 커집니다.",
-        "이 지역을 장악하면 적 스폰 지역을 압박할 수 있을 뿐만 아니라 A 거점을 확보한 뒤 B 거점까지 동시에 통제할 수 있습니다.",
-        "B 거점은 북쪽 방향에서 들어오는 사격을 막아줄 엄폐물이 매우 부족합니다. 따라서 산악 지대를 확보했다면 반드시 유지해야 하며, 반대로 빼앗겼다면 지상전만으로 탈환하기 어렵더라도 공중 지원 등을 활용해 적을 제거하는 것이 중요합니다."
-      ],
       "variations": {
         "domination-1": {
           "en": [
-            "Domination #1",
-            "The central urban area is the most important part of Battle of Hürtgen Forest Domination #1. At the beginning of the match, points A and B are commonly divided between the two teams.",
-            "The mountain in the north is the major strategic variable. Controlling this high ground can provide direct opportunities to pressure the enemy spawn.",
-            "The western team has a slight terrain advantage when climbing the mountain because the surrounding hills and ridgelines provide better opportunities for concealment and cover.",
-            "However, losing the mountain does not necessarily decide the match. The urban area around point C is largely protected from direct fire from the mountain, which means a team can abandon the northern fight and concentrate its offensive through the southern city instead.",
-            "Vehicles with strong gun depression can also make effective use of the hill at the far southern edge of the map, which provides excellent control over the approaches to point C."
+            "The central urban area is the main battlefield in Battle of Hürtgen Forest Domination #1, while the northern mountain is the key strategic variable. Controlling the mountain can create direct pressure on the enemy spawn.",
+            "Losing the northern high ground does not necessarily decide the match because the C-side urban area remains protected from direct mountain fire. Vehicles with strong gun depression can also use the far southern hill to control the approaches to C."
           ],
           "ko": [
-            "도미네이션 #1",
-            "휘르트겐 숲 도미네이션 #1에서는 중앙 시가지가 가장 중요한 지역입니다. 전투 초반에는 A와 B 거점을 양 팀이 하나씩 나누어 확보하는 형태가 자주 나타납니다.",
-            "북쪽 산악 지대가 주요 변수이며, 이 지역을 장악하면 적 스폰 지역까지 직접적인 압박이 가능해집니다.",
-            "서쪽 팀은 산을 오를 때 구릉과 능선을 엄폐물로 활용하기 쉬워 상대적으로 유리한 지형을 가지고 있습니다.",
-            "다만 산악 지대를 빼앗겼다고 해서 반드시 패배하는 것은 아닙니다. C 거점 주변 시가지는 산에서 직접적인 사선이 나오지 않기 때문에 산악 지대를 포기하고 남쪽 시가지에 공세를 집중하는 방식으로 역전을 노릴 수 있습니다.",
-            "부각이 좋은 전차를 운용한다면 맵 최남단의 언덕을 확보하는 것도 좋은 선택입니다. 이 위치에서는 C 거점 일대를 효과적으로 통제할 수 있습니다."
+            "휘르트겐 숲 도미네이션 #1의 주 전장은 중앙 시가지이며, 가장 큰 변수는 북쪽 산악 지대입니다. 산악 지대를 장악하면 적 스폰 지역까지 직접 압박할 수 있습니다.",
+            "북쪽 고지를 빼앗기더라도 C 거점 시가지는 산에서 직접 사격하기 어려워 남쪽 공세로 전환할 수 있습니다. 부각이 좋은 전차는 맵 최남단 언덕을 이용해 C 거점 접근로를 통제하는 것도 효과적입니다."
           ]
         },
         "domination-2": {
-          "ko": [
-            "휘르트겐 숲 도미네이션 #2에서는 북쪽 산악 지대의 중요성이 더욱 커집니다.",
-            "이 지역을 장악하면 적 스폰 지역을 압박할 수 있을 뿐만 아니라 A 거점을 확보한 뒤 B 거점까지 동시에 통제할 수 있습니다.",
-            "B 거점은 북쪽 방향에서 들어오는 사격을 막아줄 엄폐물이 매우 부족합니다. 따라서 산악 지대를 확보했다면 반드시 유지해야 하며, 반대로 빼앗겼다면 지상전만으로 탈환하기 어렵더라도 공중 지원 등을 활용해 적을 제거하는 것이 중요합니다."
-          ],
           "en": [
-            "In Battle of Hürtgen Forest Domination #2, the northern mountainous area becomes even more important.",
-            "Controlling this area not only allows you to pressure the enemy spawn, but also lets you secure point A and control point B at the same time.",
-            "Point B has very little cover against fire coming from the north. Therefore, if your team secures the mountainous area, it is important to hold it. If you lose it, even when retaking the area with ground forces is difficult, using air support or other means to eliminate the enemy positions becomes a high priority."
+            "In Battle of Hürtgen Forest Domination #2, the northern mountainous area is the decisive sector. Controlling it allows pressure on the enemy spawn while also influencing both points A and B.",
+            "Point B has very little cover from fire coming from the north, so once the mountain is secured it should be held whenever possible. If it is lost, removing enemy positions there becomes a high priority."
+          ],
+          "ko": [
+            "휘르트겐 숲 도미네이션 #2에서는 북쪽 산악 지대가 결정적인 핵심 지역입니다. 이곳을 장악하면 적 스폰을 압박하면서 A와 B 거점 모두에 영향력을 행사할 수 있습니다.",
+            "B 거점은 북쪽에서 들어오는 사격을 막아줄 엄폐물이 거의 없기 때문에 산악 지대를 확보했다면 반드시 유지하는 것이 좋습니다. 반대로 빼앗겼다면 해당 지역의 적을 제거하는 것을 우선해야 합니다."
           ]
         }
       }
@@ -496,56 +439,32 @@
     },
     "Golden Quarry": {
       "en": [
-        "Golden Quarry is divided into three distinct areas: point A across the river, point B inside the urban district, and point C surrounded by hills and rolling terrain.",
-        "Point A is separated by a river that can be crossed, but the surrounding terrain is almost completely flat, making the capture point difficult to secure safely. Even if your team wins the fight around A, the position provides very little influence over points B or C, so its overall strategic value is limited.",
-        "Point B is located in the urban area. The railway provides the fastest route for wide flanking maneuvers, and several paths through this sector can lead directly into immediate pressure on the enemy spawn.",
-        "Point C has a large excavator that provides some cover, but the terrain immediately around the capture point is almost completely flat, making it difficult to secure the point early without exposing your vehicle.",
-        "The most important area on Golden Quarry is the terrain between points B and C, including the hills, rolling ground, and parts of the urban area. Both teams have routes from this position that can quickly lead into the enemy spawn, so maintaining control of this central sector is essential."
+        "The key area on Golden Quarry is the hills and urban terrain between points B and C. Controlling this sector opens several routes toward the enemy spawn, while the railway around B provides one of the fastest flanking routes.",
+        "Point A has relatively low strategic value because its flat terrain makes it difficult to capture safely and offers little influence over the rest of the map. Point C is also exposed despite the large excavator providing limited cover."
       ],
       "ko": [
-        "금광지대는 강 건너편의 A 거점, 시가지로 구성된 B 거점, 그리고 언덕과 구릉 지형으로 이루어진 C 거점의 세 구역으로 나뉩니다.",
-        "A 거점은 도하가 가능한 강으로 분리되어 있지만 주변이 거의 완전한 평지이기 때문에 안전하게 점령하기가 쉽지 않습니다. 또한 A 거점 전투에서 승리하더라도 B나 C 거점에 영향력을 행사하기 어려운 지형이어서 전체적인 전략적 가치는 상대적으로 낮은 편입니다.",
-        "B 거점은 시가지에 위치해 있습니다. 철도를 따라 이동하면 가장 빠르게 크게 우회할 수 있으며, 이 구역에는 돌파에 성공할 경우 곧바로 적 스폰 지역 압박으로 이어지는 경로가 여러 개 존재합니다.",
-        "C 거점은 대형 굴착기를 엄폐물로 활용할 수 있지만 거점 주변이 거의 완전한 평지이기 때문에 초반에 먼저 점령하기가 쉽지 않은 구조입니다.",
-        "금광지대의 핵심 지역은 B와 C 거점 사이의 언덕과 구릉, 그리고 일부 시가지를 포함하는 구역입니다. 이 지역에서는 양 팀 모두 적 스폰 지역까지 빠르게 이어지는 경로를 사용할 수 있기 때문에, 상대에게 내주지 않고 반드시 통제해야 하는 핵심 전장입니다."
+        "금광지대의 핵심 지역은 B와 C 거점 사이의 구릉지와 시가지입니다. 이곳을 장악하면 적 스폰 지역으로 이어지는 여러 경로가 열리며, B 거점의 철도는 가장 빠른 우회로 중 하나입니다.",
+        "A 거점은 평지에 놓여 있어 안전하게 점령하기 어렵고 다른 전선에 미치는 영향도 적어 전략적 가치가 낮습니다. C 역시 대형 굴착기를 제외하면 주변이 크게 노출되어 있어 선점하기 쉽지 않습니다."
       ]
     },
     "Mozdok": {
       "en": [
-        "The key area on Mozdok is the high ground around point B. Whichever team controls this position can immediately threaten the enemy spawn, so winning the fight for B is usually the most important factor in taking control of the match.",
-        "If your team secures the high ground around point B, it becomes much easier to influence both points A and C from the center of the map.",
-        "Around point C, fast vehicles have several options for making wide flanking maneuvers, but in most situations the safer choice is to use the hills for hull-down positions and engage enemies at range.",
-        "It is also possible to advance along the recessed riverbed near point C. For the southern team in particular, this route provides useful cover and allows a relatively protected advance toward the enemy side.",
-        "Point A is very different. The area consists of broad, gently sloping open ground where neither team can easily force the other side back. The terrain strongly favors the defender, making a direct assault on A extremely difficult.",
-        "For that reason, point B should be treated as the decisive sector on Mozdok. Holding the B high ground and pushing the enemy away from it should be the primary objective whenever possible."
+        "The decisive area on Mozdok is the high ground around point B. Controlling it gives strong influence over both A and C and can quickly create pressure on the enemy spawn.",
+        "Point A strongly favors the defender and is difficult to break directly. Around C, hull-down fighting is usually safer than wide flanks, although the recessed riverbed provides the southern team with a relatively protected approach."
       ],
       "ko": [
-        "모즈도크의 핵심 지역은 B 거점 주변의 고지대입니다. 이 지역을 장악한 팀은 곧바로 적 스폰 지역을 압박할 수 있기 때문에, B 거점 교전에서 승리하는 것이 전체 전투의 주도권을 잡는 데 가장 중요합니다.",
-        "B 거점 주변의 고지대를 확보하면 중앙에서 A와 C 거점 모두에 영향력을 행사하기 훨씬 쉬워집니다.",
-        "C 거점 주변에는 기동성이 좋은 전차가 크게 우회할 수 있는 경로가 여러 개 존재하지만, 대부분의 상황에서는 언덕을 이용해 헐다운 자세를 취하고 장거리 교전을 하는 편이 더 안전합니다.",
-        "C 거점 주변의 움푹 파인 강줄기를 따라 전진하는 것도 가능합니다. 특히 남쪽 팀은 이 경로를 이용하면 지형 엄폐를 받으면서 비교적 안전하게 적 방향으로 진군할 수 있습니다.",
-        "반면 A 거점은 넓고 완만한 평야로 이루어져 있어 양 팀 모두 상대를 쉽게 밀어내기 어렵습니다. 지형 자체가 방어 측에 크게 유리하기 때문에 정면으로 공격해 돌파하기는 매우 어렵습니다.",
-        "따라서 모즈도크에서는 B 거점을 결정적인 핵심 구역으로 보는 것이 좋습니다. 가능하면 B 고지대를 반드시 유지하고, 적이 장악했을 경우에는 우선적으로 밀어내는 것이 중요합니다."
+        "모즈도크의 핵심 지역은 B 거점 주변의 고지대입니다. 이곳을 장악하면 A와 C 모두에 강한 영향력을 행사할 수 있으며 곧바로 적 스폰 지역을 압박할 수도 있습니다.",
+        "A 거점은 방어 측에 크게 유리해 정면 돌파가 어렵습니다. C 주변에서는 큰 우회보다 헐다운 교전이 안전한 편이며, 남쪽 팀은 움푹 파인 강줄기를 이용해 비교적 엄폐된 상태로 진격할 수 있습니다."
       ]
     },
     "Japan": {
       "en": [
-        "Japan is divided into three distinct areas: point A in a low basin surrounded by hills, point B blocked through the center by a large shrine complex, and point C spread across a wide, low-density urban area.",
-        "Point A is extremely easy to defend, and both teams have difficulty committing to an early capture without exposing themselves. Most of the important fighting takes place on the hills and rolling terrain between points A and B, and the team that wins this engagement usually secures point A as well.",
-        "At point B, the large shrine building blocks direct contact between the two sides, allowing both teams to enter the capture area relatively easily. However, if neither team establishes a clear advantage, actually completing the capture can still be difficult because both sides can remain inside the large capture zone and continuously contest it.",
-        "The shrine complex around point B contains many openings and gaps, so unexpected firing angles can occasionally appear through the structure. Outside of those opportunities, directly breaking through the B sector is generally difficult.",
-        "The approaches on either side of point B are very different. The side closer to point A consists of hills and rolling terrain, while the side closer to point C is mostly open ground. Trying to push across the open side is close to suicidal, and the team that wins the fight on the hilly side usually gains control of point B as well.",
-        "At point C, the mountain ridge closer to point B can be used as a covered route for a breakthrough. Alternatively, you can use the gentle hills east of point C for hull-down positions and focus on wearing down enemy vehicles from range.",
-        "The key area on Japan is the hilly terrain between points A and B. Winning control of this sector makes it much easier to secure both capture points, and if your team loses it, both sides have routes from this area that can quickly develop into direct pressure on the spawn."
+        "The key area on Japan is the hilly ground between points A and B. Winning this sector makes it much easier to control both capture points, while losing it can quickly open routes toward the spawn.",
+        "Point B often becomes a stalemate around the large shrine, with occasional firing angles through its openings. Around point C, the ridge toward B can be used for a covered push, while the eastern hills provide safer hull-down positions."
       ],
       "ko": [
-        "일본은 언덕으로 둘러싸인 저지대의 A 거점, 중앙을 가로막는 대형 신사 건물이 있는 B 거점, 그리고 낮은 밀도의 시가지가 넓게 펼쳐진 C 거점으로 구성되어 있습니다.",
-        "A 거점은 방어가 매우 쉬운 지형으로, 양 팀 모두 섣불리 접근해 점령을 시도하기 어렵습니다. 주요 교전은 A와 B 거점 사이의 언덕과 구릉지에서 이루어지며, 이 전투에서 승리한 팀이 일반적으로 A 거점까지 확보하게 됩니다.",
-        "B 거점은 대형 신사 건물이 양측을 서로 차단하고 있어 양 팀 모두 점령 구역에는 비교적 쉽게 진입할 수 있습니다. 그러나 어느 한쪽이 확실한 우세를 만들지 못하면 넓은 점령 구역 안에서 서로 계속 홀드하며 경합하게 되기 때문에 실제 점령을 완료하기는 쉽지 않습니다.",
-        "B 거점의 신사 건물에는 곳곳에 빈 공간과 틈이 있어 예상하지 못한 사격각이 나오는 경우가 있습니다. 이런 각을 활용하는 경우를 제외하면 B 거점을 정면으로 돌파하기는 어렵습니다.",
-        "B 거점 양쪽의 접근 지형은 크게 다릅니다. A 거점에 가까운 쪽은 구릉지로 이루어져 있고, C 거점에 가까운 쪽은 대부분 평야입니다. 평야를 정면으로 돌파하는 것은 사실상 자살에 가깝고, 구릉지 교전에서 승리한 팀이 일반적으로 B 거점까지 가져가게 됩니다.",
-        "C 거점에서는 B 거점 쪽에 가까운 산맥을 따라 엄폐를 받으며 돌파하는 방식이 가능합니다. 또는 C 거점 동쪽의 완만한 언덕 지대에서 헐다운을 시도하며 장거리 교전으로 적 전력을 소모시키는 선택도 가능합니다.",
-        "이 맵의 핵심 지역은 A와 B 거점 사이의 구릉지입니다. 이곳을 장악하면 A와 B 거점을 모두 훨씬 쉽게 확보할 수 있으며, 반대로 이 지역에서 밀릴 경우 양 팀 모두 곧바로 적 스폰 지역 압박으로 이어질 수 있는 경로가 열리게 됩니다."
+        "일본의 핵심 지역은 A와 B 거점 사이의 구릉지입니다. 이 구역에서 승리하면 A와 B를 모두 장악하기 쉬워지며, 반대로 밀릴 경우 곧바로 스폰 지역으로 이어지는 경로가 열릴 수 있습니다.",
+        "B 거점은 대형 신사를 사이에 둔 교착전이 자주 발생하며 건물 틈을 통한 예상 밖의 사격각이 존재합니다. C 거점에서는 B 방향의 산맥을 따라 돌파하거나 동쪽 언덕에서 헐다운 교전을 하는 방식이 효과적입니다."
       ]
     },
     "Maginot Line": {
