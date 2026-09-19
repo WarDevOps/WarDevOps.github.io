@@ -467,6 +467,32 @@
         "반면 C 거점 주변에서는 맵 최남단의 숲이 동서 방향으로 길게 이어져 있습니다. 이 숲을 이용하면 적에게 발각될 가능성을 줄인 상태로 측면을 따라 이동할 수 있어 효과적인 우회 공격이 가능합니다.",
         "따라서 C 거점을 공격할 때는 개활지를 직접 횡단하기보다는 남쪽 숲을 이용하여 은폐된 상태로 우회한 뒤 적의 측면이나 후방을 공격하는 것을 추천합니다."
       ]
+    },
+    "Iberian Castle": {
+      "en": [
+        "On Iberian Castle, the area around point A is a broad plain made up of monastery buildings and expansive vineyards. If you use the vineyards for concealment and complete a flank without being spotted, you can quickly reach and pressure the enemy spawn area.",
+        "The urban area around point B is the key position on the map. Winning the fight for this area makes it much easier to control both points A and B at the same time and secure the initiative across the battlefield.",
+        "Point C consists of low hills and rolling terrain separated from the main urban area by the castle walls. Because it functions as a relatively isolated battlefield with limited influence on the other capture points, its strategic value is comparatively low."
+      ],
+      "ko": [
+        "이베리아 성에서 A 거점 일대는 수도원 건물과 넓은 포도밭으로 이루어진 평야입니다. 포도밭을 이용해 은폐한 채 적에게 발각되지 않고 우회에 성공하면 곧바로 적 스폰 지역을 압박할 수 있습니다.",
+        "B 거점 주변 시가지는 이 맵의 핵심 지역입니다. 이곳의 힘싸움에서 우위를 점하면 A와 B 거점을 동시에 통제하기 쉬워져 전장 주도권을 확보할 수 있습니다.",
+        "C 거점은 낮은 언덕과 구릉으로 구성되어 있으며 성벽으로 주 시가지와 분리된 독립적인 전장에 가깝습니다. 다른 거점과의 연계가 약해 전략적 가치는 상대적으로 낮은 편입니다."
+      ]
+    },
+    "Finland": {
+      "en": [
+        "On Finland, control of the two areas between the three capture points is more important than the capture points themselves.",
+        "If your team controls the valley between points A and B, enemies attempting to enter point A are forced to expose their sides, creating a very favorable engagement for the defending team.",
+        "Controlling the high ground between points B and C makes it easier to dominate point C, which consists of a relatively sparse urban area, while also providing opportunities to fire into the sides of enemies approaching point B.",
+        "Fast vehicles can also make a high-risk flanking push along the outer edge of point C. If successful, this route can provide a relatively easy path toward the enemy spawn area."
+      ],
+      "ko": [
+        "핀란드에서는 세 거점 자체보다 A와 B 사이의 골짜기와 B와 C 사이의 고지대, 이 두 지역의 통제가 특히 중요합니다.",
+        "A와 B 사이의 골짜기를 장악하면 A 거점으로 진입하는 적이 측면을 크게 노출할 수밖에 없어 방어 측에서 매우 유리한 교전 구도를 만들 수 있습니다.",
+        "B와 C 사이의 높은 언덕을 확보하면 밀도가 낮은 시가지인 C 거점을 통제하기 쉬워지고, 동시에 B 거점으로 진입하는 적의 측면을 노릴 수 있습니다.",
+        "기동성이 좋은 전차라면 C 거점 외곽을 따라 빠르게 전진해 적 스폰 지역까지 도달하는 고위험 우회도 가능합니다. 성공한다면 비교적 손쉽게 적 스폰 지역을 압박할 수 있습니다."
+      ]
     }
   },
   "markers": {
