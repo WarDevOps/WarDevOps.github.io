@@ -605,6 +605,50 @@
         "프라데시는 맵 전체가 저지대를 둘러싼 분지 형태의 특이한 구조를 가지고 있으며, 핵심 지역은 각 팀 스폰 지역 바로 앞의 고지대입니다. 이곳에서는 맵의 넓은 범위를 사격으로 통제할 수 있습니다.",
         "A, B, C 세 거점 모두 엄폐물이 부족해 초반에 먼저 점령하기가 위험합니다. 특히 C 거점은 맵에서 가장 높은 고지대에 있지만 엄폐물이 거의 없어 교전 시 매우 취약합니다."
       ]
+    },
+    "Sands of Sinai": {
+      "en": [
+        "The key areas on Sands of Sinai are the high ground east of point A and the vertical corridor between points A and B. Controlling either one gives strong influence over both capture points.",
+        "Points A and B are closely connected, while point C is isolated behind the rocky mountain range. C has less overall influence, but losing it completely can open routes toward the spawn. Around B, failing to defend the route along the mountains can also lead directly to spawn pressure."
+      ],
+      "ko": [
+        "시나이의 모래사장에서 핵심 지역은 A 거점 동쪽의 고지대와 A와 B 거점 사이의 세로 구역입니다. 이 둘 중 하나만 장악해도 A와 B 거점 모두에 강한 영향력을 행사할 수 있습니다.",
+        "A와 B 거점은 서로 밀접하게 연결되어 있지만 C 거점은 바위 산맥에 가로막혀 분리되어 있습니다. C의 영향력은 상대적으로 낮지만 완전히 내줄 경우 스폰 압박 경로가 열리며, B 역시 산맥을 따라 진입하는 루트를 방어하지 못하면 곧바로 스폰 지역이 위협받을 수 있습니다."
+      ]
+    },
+    "Second Battle of El Alamein": {
+      "variations": {
+        "domination-1": {
+          "en": [
+            "Second Battle of El Alamein Domination #1 is split between the rocky high ground around points A and B and the low desert around point C. The A–B sector is the more important part of the map.",
+            "Points A and B are easier to break through because the rocks create dense cover, and losing either side can quickly open a route toward the spawn. Point C has much lower strategic value, though the desert still needs enough attention to prevent flanking along the boundary between the desert and the rocky terrain."
+          ],
+          "ko": [
+            "엘 알라메인 도미네이션 #1은 A와 B 거점이 위치한 바위 산맥 고지대와 C 거점의 저지대 사막으로 나뉘며, 실제 핵심은 A–B 전선입니다.",
+            "A와 B는 바위 지형이 밀집되어 있어 돌파가 비교적 쉽고, 어느 한쪽이 무너지면 곧바로 스폰 압박 경로가 열릴 수 있습니다. C 거점의 전략적 가치는 낮지만, 사막과 바위 산맥의 경계를 따라 들어오는 우회만큼은 차단할 필요가 있습니다."
+          ]
+        },
+        "domination-2": {
+          "en": [
+            "Second Battle of El Alamein Domination #2 is an open desert map where the most important play is to establish hull-down lines on the dunes immediately after leaving spawn.",
+            "The large dune near point C provides strong map-wide firing positions, while the flank around C can lead directly toward the enemy spawn. Point A is difficult to break because of long-range hull-down fighting, and point B has several protected approaches but offers less overall strategic value."
+          ],
+          "ko": [
+            "엘 알라메인 도미네이션 #2는 사막으로만 이루어진 맵으로, 스폰 직후 사구를 따라 헐다운 라인을 형성하는 것이 가장 중요합니다.",
+            "C 거점 쪽의 대형 사구는 맵 전체를 저격할 수 있는 강력한 위치이며, C 외곽 우회는 성공할 경우 곧바로 스폰 압박으로 이어질 수 있습니다. A는 장거리 헐다운 대치 때문에 돌파가 어렵고, B는 사구를 끼고 접근할 수 있는 경로가 있지만 전략적 가치는 상대적으로 낮습니다."
+          ]
+        }
+      }
+    },
+    "Seversk-13": {
+      "en": [
+        "Seversk-13 has very defensive fighting around points B and C, while point A is defined by hill and hull-down engagements. Fast vehicles can try flanking between A and B, but the exposed highway is risky and the lower ground east of it is the safer route.",
+        "Breaking through point A can quickly lead toward the enemy spawn. For vehicles with strong gun depression, A is usually the most valuable sector, while highly mobile vehicles can often have more impact around points B and C."
+      ],
+      "ko": [
+        "세베르스크-13은 B와 C 거점의 방어전이 강하게 형성되고, A 거점에서는 언덕과 헐다운을 이용한 교전이 중심이 됩니다. A와 B 사이에서는 우회가 가능하지만 노출된 고속도로보다 그 동쪽의 저지대를 이용하는 편이 더 안전합니다.",
+        "A 거점을 돌파하면 곧바로 스폰 압박으로 이어질 수 있습니다. 부각이 좋은 전차라면 A 전선의 가치가 높고, 기동성이 좋은 전차라면 B와 C 주변에서 더 큰 영향력을 발휘하기 쉽습니다."
+      ]
     }
   },
   "markers": {
