@@ -581,6 +581,30 @@
         "노르드 홀란드의 핵심 지역은 A와 B 거점 사이의 시가지와 강입니다. 특히 강은 저지대라 발견되기 어렵고, 빠른 전차가 돌파하면 곧바로 적 스폰 지역을 압박할 수 있습니다.",
         "A 거점은 건물 내부에서 근접 난전이 자주 발생하며 방어가 유리합니다. C 거점은 저격 지형의 영향이 커 정면 돌파보다 우회 경로를 활용하는 편이 효과적입니다."
       ]
+    },
+    "Port Novorossiysk": {
+      "variations": {
+        "conquest-1": {
+          "en": [
+            "Port Novorossiysk is a special Conquest-only map built almost entirely from flat urban terrain. The key area is not the capture point itself, but the dense urban sector to its south and southwest.",
+            "Controlling this area opens flanking routes that can lead directly toward the enemy spawn while also allowing side shots into the capture point. By contrast, the low hills and coastline near the point provide strong sniper positions, making a direct breakthrough much more difficult."
+          ],
+          "ko": [
+            "포트 노보로시스크는 점령지가 하나뿐인 컨퀘스트 전용 맵으로, 전장이 대부분 평지 위의 시가지로 구성되어 있습니다. 핵심 지역은 점령지 자체가 아니라 점령지 남쪽과 남서쪽의 밀도 높은 시가지입니다.",
+            "이 지역을 장악하면 적 스폰 지역으로 이어지는 우회로를 확보하는 동시에 점령지의 측면을 타격할 수 있습니다. 반면 점령지 주변의 낮은 구릉과 해안선은 저격에 유리해 정면 돌파가 어렵기 때문에, 남쪽 시가지의 주도권이 특히 중요합니다."
+          ]
+        }
+      }
+    },
+    "Pradesh": {
+      "en": [
+        "Pradesh has an unusual basin-shaped layout, and its most important positions are the high grounds directly in front of each team's spawn. From these positions, large portions of the map can be covered by fire.",
+        "All three capture points have very little cover, making early captures risky. Point C sits on the highest ground on the map, but its lack of cover also leaves vehicles there highly exposed."
+      ],
+      "ko": [
+        "프라데시는 맵 전체가 저지대를 둘러싼 분지 형태의 특이한 구조를 가지고 있으며, 핵심 지역은 각 팀 스폰 지역 바로 앞의 고지대입니다. 이곳에서는 맵의 넓은 범위를 사격으로 통제할 수 있습니다.",
+        "A, B, C 세 거점 모두 엄폐물이 부족해 초반에 먼저 점령하기가 위험합니다. 특히 C 거점은 맵에서 가장 높은 고지대에 있지만 엄폐물이 거의 없어 교전 시 매우 취약합니다."
+      ]
     }
   },
   "markers": {
