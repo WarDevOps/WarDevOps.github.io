@@ -130,6 +130,12 @@
         "If your team loses control of the mountain, holding point A becomes extremely difficult, and launching an effective offensive toward point B is also heavily restricted. On the other hand, losing control of the stream can allow the enemy to break through the flanking routes leading toward point C.",
         "Most of the major flanking routes on this map pass through the stream. If no one is defending this area, enemy vehicles can use it to move around the map and launch surprise attacks against your team's flanks.",
         "However, the stream itself is located on low ground, which makes it very difficult to defend. Therefore, when defending, it is generally better to hold the mountainous terrain, while on the offensive, breaking through the stream is an effective way to open up flanking routes."
+      ],
+      "ko": [
+        "38선에서 핵심 지역은 A와 B 거점 사이의 산악 지대와 B와 C 거점 사이의 하천 지대로 나눌 수 있습니다.",
+        "산악 지대의 주도권을 잃으면 A 거점을 방어하기가 매우 어려워지고 B 거점을 향한 효과적인 공세도 크게 제한됩니다. 반대로 하천 지대를 내주면 적이 C 거점 방향으로 이어지는 우회로를 돌파할 수 있습니다.",
+        "이 맵의 주요 우회로 대부분은 하천 지대를 통과합니다. 이 지역을 아무도 방어하지 않으면 적 차량이 하천을 이용해 맵을 크게 돌아 아군의 측면을 기습할 수 있습니다.",
+        "다만 하천 자체가 저지대에 있어 방어하기는 매우 어렵습니다. 따라서 방어할 때는 산악 지대를 유지하는 편이 좋고, 공격할 때는 하천을 돌파해 우회로를 여는 방식이 효과적입니다."
       ]
     },
     "Abandoned Factory": {
@@ -137,6 +143,11 @@
         "On Abandoned Factory, point A is effectively the only major high ground on the map. All approaches to the capture point consist of gentle slopes separated from the main urban area, which is why much of the main frontline fighting tends to take place here.",
         "Point A also provides a commanding view over most of the area around point B. As a result, losing the fight for A can place the entire B frontline under significant pressure.",
         "If your team loses point A, it is usually better not to force a defensive line around B. Instead, consider falling back slightly to draw the enemy forward and counterattack, or shift the offensive toward point C."
+      ],
+      "ko": [
+        "버려진 공장에서 A 거점은 사실상 맵의 유일한 주요 고지대입니다. 거점으로 접근하는 모든 길이 주 시가지와 분리된 완만한 경사로 이루어져 있기 때문에 주 전선의 교전이 이곳에 집중되는 경우가 많습니다.",
+        "A 거점에서는 B 거점 주변 대부분을 내려다볼 수 있습니다. 따라서 A 지역에서의 전투에서 밀리면 B 전선 전체가 큰 압박을 받을 수 있습니다.",
+        "A 거점을 빼앗겼다면 B 주변에서 억지로 방어선을 유지하기보다는 조금 후퇴해 적을 끌어낸 뒤 역습하거나, 공세 방향을 C 거점 쪽으로 전환하는 것을 고려하는 편이 좋습니다."
       ]
     },
     "Abandoned Town": {
@@ -145,6 +156,12 @@
         "Point A is located in the middle of a wide and exposed road, making it difficult to capture while enemy vehicles are still present nearby. When attacking A, it is therefore important to eliminate or suppress the opposing force in the area before attempting to capture the point.",
         "The route toward point B contains several long corridors that provide strong sniping angles. However, as long as you avoid driving directly through the middle of the main roads, breaking through this area is relatively manageable.",
         "Point C is located inside an isolated basin. Once you enter the area, it can be difficult to return quickly to the rest of the battlefield. Because of this, vehicles fighting around C often have relatively little influence on the overall match, so priorit"
+      ],
+      "ko": [
+        "버려진 마을에서 가장 중요한 지역은 A와 B 거점 사이의 중앙 시가지입니다. 이 지역의 주도권을 잃으면 적이 빠르게 아군 스폰 지역까지 진출할 수 있어 스폰 압박이 심해지는 경우가 많습니다.",
+        "A 거점은 넓고 노출된 도로 한가운데에 있어 주변에 적 차량이 남아 있는 상태에서는 점령하기 어렵습니다. 따라서 A를 공격할 때는 거점에 들어가기 전에 주변의 적을 먼저 제거하거나 제압하는 것이 중요합니다.",
+        "B 거점으로 향하는 경로에는 장거리 사격에 유리한 긴 직선 구간이 여러 곳 있습니다. 다만 주요 도로 한가운데로 그대로 진입하는 것만 피한다면 이 지역을 돌파하는 난도는 비교적 높지 않습니다.",
+        "C 거점은 고립된 분지 안에 있습니다. 이 지역에 들어가면 전장의 다른 구역으로 빠르게 복귀하기 어렵기 때문에 C 주변에서 싸우는 차량은 전체 전투에 미치는 영향력이 상대적으로 낮은 편입니다. 따라서 C에 지나치게 많은 전력을 투입하는 것은 추천하지 않습니다."
       ]
     },
     "Advance to the Rhine": {
@@ -153,6 +170,12 @@
         "In most matches, points B and C are initially divided between the two teams. Between these capture points are three long, straight avenues.",
         "In many cases, at least one of these three routes will be lightly defended or completely open. Identifying and breaking through that route can allow you to reach the enemy's flank or rear and, in some situations, continue directly toward their spawn area.",
         "The central urban area is particularly complex, with many walls that can be penetrated by tank rounds. This creates firing angles from almost every direction. Rather than advancing too aggressively, it is often more effective to reduce your engine noise, listen for approaching vehicles, and ambush enemies as th"
+      ],
+      "ko": [
+        "라인강 진격에서 A 거점 인근 서쪽 전선은 거의 항상 전차가 밀집해 장시간 교착 상태가 이어집니다. 따라서 긴 우회 기동보다 전선을 유지하는 데 강한 저기동 차량이 특히 활용하기 좋은 지역입니다.",
+        "대부분의 전투에서는 B와 C 거점을 양 팀이 초반에 하나씩 나누어 확보하게 됩니다. 두 거점 사이에는 길고 곧은 세 개의 도로가 있습니다.",
+        "이 세 경로 가운데 적어도 하나는 방어가 약하거나 완전히 비어 있는 경우가 많습니다. 그 경로를 찾아 돌파하면 적의 측면이나 후방으로 진입할 수 있으며, 상황에 따라 그대로 적 스폰 지역까지 압박할 수도 있습니다.",
+        "중앙 시가지는 구조가 특히 복잡하고 전차 포탄으로 관통 가능한 벽이 많아 거의 모든 방향에서 사선이 만들어집니다. 무리하게 전진하기보다는 엔진음을 줄이고 접근하는 적의 소리를 들으면서 매복하는 편이 더 효과적인 경우가 많습니다."
       ]
     },
     "Alaska": {
@@ -161,6 +184,12 @@
         "Point B, on the other hand, slightly favors the southern team because they can more easily establish control over the central hill and the surrounding urban area.",
         "Point C is located inside a basin that is difficult to reach and capture quickly. Engagement distances are relatively long, and both teams can make effective use of hull-down positions, which often results in a prolonged stalemate.",
         "For vehicles with good mobility, rather than committing to a direct fight around point C, I recommend following the river east of C and using it as a flanking route to break through toward the enemy's side or rear."
+      ],
+      "ko": [
+        "알래스카의 A 거점은 비대칭 구조로 되어 있어 북쪽 팀이 약간 유리합니다. 북쪽에서 접근하는 차량은 다리 구조물에 붙어 이동하면서 적의 사선에 몸을 크게 노출하지 않고 거점을 점령할 수 있습니다.",
+        "반대로 B 거점은 남쪽 팀이 중앙 언덕과 주변 시가지를 비교적 쉽게 장악할 수 있기 때문에 남쪽 팀이 약간 유리합니다.",
+        "C 거점은 빠르게 접근하고 점령하기 어려운 분지 안에 있습니다. 교전 거리가 비교적 길고 양 팀 모두 헐다운 포지션을 효과적으로 활용할 수 있어 장시간 교착 상태가 이어지는 경우가 많습니다.",
+        "기동성이 좋은 차량이라면 C 거점 주변에서 정면 교전에 매달리기보다 C 동쪽의 강을 따라 이동해 우회로로 활용하고, 적의 측면이나 후방으로 돌파하는 것을 추천합니다."
       ]
     },
     "American Desert": {
@@ -253,6 +282,11 @@
           "en": [
             "Ardennes Domination #2 is essentially a larger version of Domination #1, but the tactical situation changes considerably.",
             "The most important position is point C, located on the highest ground of"
+          ],
+          "ko": [
+            "아르덴 도미네이션 #2는 도미네이션 #1을 확장한 대형 전장이지만, 실제 전투 양상은 상당히 달라집니다.",
+            "가장 중요한 지역은 맵에서 가장 높은 지형에 위치한 C 거점입니다. 이 고지대를 장악하면 맵 대부분을 사정거리 안에 둘 수 있으며, 양 팀의 스폰 지역까지 직접적인 압박이 가능해집니다.",
+            "전장이 넓어진 만큼 전선의 밀도가 낮아지기 때문에 북서쪽 시가지 역시 도미네이션 #1에 비해 훨씬 빠르게 돌파할 수 있습니다. 이 지역을 이용하면 적의 측면과 후방으로 깊숙이 진입하여 스폰 지역을 기습할 수 있습니다."
           ]
         }
       }
@@ -318,6 +352,11 @@
             "휘르트겐 숲 도미네이션 #2에서는 북쪽 산악 지대의 중요성이 더욱 커집니다.",
             "이 지역을 장악하면 적 스폰 지역을 압박할 수 있을 뿐만 아니라 A 거점을 확보한 뒤 B 거점까지 동시에 통제할 수 있습니다.",
             "B 거점은 북쪽 방향에서 들어오는 사격을 막아줄 엄폐물이 매우 부족합니다. 따라서 산악 지대를 확보했다면 반드시 유지해야 하며, 반대로 빼앗겼다면 지상전만으로 탈환하기 어렵더라도 공중 지원 등을 활용해 적을 제거하는 것이 중요합니다."
+          ],
+          "en": [
+            "In Battle of Hürtgen Forest Domination #2, the northern mountainous area becomes even more important.",
+            "Controlling this area not only allows you to pressure the enemy spawn, but also lets you secure point A and control point B at the same time.",
+            "Point B has very little cover against fire coming from the north. Therefore, if your team secures the mountainous area, it is important to hold it. If you lose it, even when retaking the area with ground forces is difficult, using air support or other means to eliminate the enemy positions becomes a high priority."
           ]
         }
       }
