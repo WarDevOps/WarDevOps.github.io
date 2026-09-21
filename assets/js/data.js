@@ -7,8 +7,8 @@ function versionedDataUrl(relativePath) {
 }
 
 const [mapCatalogResponse, defaultMarkerLayout] = await Promise.all([
-  fetch(versionedDataUrl("../data/map-catalog.json")),
-  fetch(versionedDataUrl("../data/maptactic.json"))
+  fetch(versionedDataUrl("../data/map-catalog.json"), { cache: "no-store" }),
+  fetch(versionedDataUrl("../data/maptactic.json"), { cache: "no-store" })
     .then(response => {
       if (!response.ok) throw new Error(`Default marker layout request failed: ${response.status}`);
       return response.json();
