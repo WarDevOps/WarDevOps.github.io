@@ -208,8 +208,8 @@
             <h3 class="legend-heading" data-i18n="mapLegend">Map Legend</h3>
             <div class="legend-actions">
               <button class="marker-tool" id="reset-hidden-markers" type="button" data-i18n="resetHidden">Reset Hidden</button>
-          <div class="marker-danger-actions" data-editor-action hidden>
-            <button class="marker-tool danger" id="reset-all-markers" type="button" data-i18n="resetAllMarkers">Reset All Markers</button>
+          <div class="marker-danger-actions" data-editor-action data-mobile-reset-action hidden>
+            <button class="marker-tool danger" id="reset-all-markers" type="button" data-editor-action data-mobile-reset-action hidden data-i18n="resetAllMarkers">Reset All Markers</button>
             <button class="marker-tool danger" id="delete-all-markers" type="button" data-i18n="deleteAllMarkers">Delete All Markers</button>
           </div>
             </div>
@@ -382,7 +382,7 @@
         <div class="modal-legend-actions">
           <button class="marker-tool" id="modal-toggle-editor" type="button" aria-pressed="false" data-i18n="editMarkers">Edit Map</button>
           <button class="marker-tool" id="modal-reset-hidden-markers" type="button" data-i18n="resetHidden">Reset Hidden</button>
-          <button class="marker-tool danger" id="modal-reset-all-markers" type="button" data-editor-action hidden data-i18n="resetAllMarkers">Reset All Markers</button>
+          <button class="marker-tool danger" id="modal-reset-all-markers" type="button" data-editor-action data-mobile-reset-action hidden data-i18n="resetAllMarkers">Reset All Markers</button>
           <button class="marker-tool danger" id="modal-delete-all-markers" type="button" data-editor-action hidden data-i18n="deleteAllMarkers">Delete All Markers</button>
         </div>
       </aside>
@@ -391,7 +391,7 @@
 
   <input id="marker-layout-import-file" type="file" accept="application/json,.json" hidden>
 
-  <script type="module" src="/assets/js/app.js?v=modal-scroll-lock-20260920"></script>
+  <script type="module" src="/assets/js/app.js?v=mobile-marker-sync-20260921"></script>
   <script type="module" src="/assets/js/consent-controls.js?v=20260828"></script>
 </body>
 </html>
