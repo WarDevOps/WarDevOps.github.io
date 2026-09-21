@@ -554,6 +554,16 @@ let vectorEditor = null;
       themeToggle.textContent = t(isLight ? "darkTheme" : "lightTheme");
       themeToggle.setAttribute("aria-label", t(isLight ? "switchToDarkTheme" : "switchToLightTheme"));
     }
+    function updatePrimaryImageMetadata(url, imageUrl, caption) {
+      const metadata = document.getElementById("page-image-metadata");
+      if (!metadata) return;
+      metadata.textContent = JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        url,
+        primaryImageOfPage: { "@type": "ImageObject", contentUrl: imageUrl, caption }
+      });
+    }
     function updateMapDocumentMetadata() {
       $(".hero").classList.add("map-detail-hero");
       if (!state.selected) return;
@@ -561,6 +571,7 @@ let vectorEditor = null;
       const pageDescription = mapDocumentDescription(state.selected);
       const canonicalUrl = `https://wardevops.github.io/maps/${state.selected.slug}/`;
       const previewUrl = `https://wardevops.github.io${mapPath(state.selected, state.team)}`;
+      updatePrimaryImageMetadata(canonicalUrl, previewUrl, `${state.selected.name} map for War Thunder Ground Battles`);
       document.title = pageTitle;
       pageTitleHeading.textContent = `${state.selected.name} War Thunder Map Guide`;
       document.querySelector('meta[name="description"]').setAttribute("content", pageDescription);
@@ -574,6 +585,7 @@ let vectorEditor = null;
       document.querySelector('meta[name="twitter:image"]').setAttribute("content", previewUrl);
     }
     function updateLibraryDocumentMetadata() {
+      updatePrimaryImageMetadata("https://wardevops.github.io/", "https://wardevops.github.io/img/38th%20Parallel/38th%20Parallel.png", "38th Parallel map for War Thunder Ground Battles");
       $(".hero").classList.remove("map-detail-hero");
       document.title = t("pageTitle");
       pageTitleHeading.textContent = "War Thunder Map Guides & Tactics";

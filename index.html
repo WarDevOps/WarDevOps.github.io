@@ -47,6 +47,9 @@
       ]
     }
   </script>
+  <script type="application/ld+json" id="page-image-metadata">
+    {"@context":"https://schema.org","@type":"WebPage","url":"https://wardevops.github.io/","primaryImageOfPage":{"@type":"ImageObject","contentUrl":"https://wardevops.github.io/img/38th%20Parallel/38th%20Parallel.png","caption":"38th Parallel map for War Thunder Ground Battles"}}
+  </script>
   <title>War Thunder Map Guide &amp; Tactics | WarDevOps</title>
 
   <link rel="stylesheet" href="/assets/css/site.css?v=smartphone-selector-overlap-20260920">
@@ -134,7 +137,7 @@
           <div class="map-primary-column">
             <div class="map-stage" id="map-stage">
           <span class="image-loading" id="image-status">Now Loading…</span>
-          <img id="map-image" alt="" hidden decoding="async" fetchpriority="high">
+          <img id="map-image" src="/img/38th%20Parallel/38th%20Parallel.webp" data-png-fallback="/img/38th%20Parallel/38th%20Parallel.png" alt="38th Parallel map for War Thunder Ground Battles" decoding="async" fetchpriority="high" loading="eager">
           <div class="map-overlay-layer" id="map-overlay-layer" aria-label="Map area overlays" data-i18n-aria="mapAreaOverlays"></div>
           <div class="annotation-layer" id="annotation-layer" aria-label="Map drawings" data-i18n-aria="mapDrawings"></div>
           <div class="marker-layer" id="marker-layer" aria-label="Map markers" data-i18n-aria="mapMarkers"></div>
@@ -391,7 +394,7 @@
 
   <input id="marker-layout-import-file" type="file" accept="application/json,.json" hidden>
 
-  <script type="module" src="/assets/js/app.js?v=mobile-hard-reset-20260921"></script>
+  <script type="module" src="/assets/js/app.js?v=map-primary-image-20260921"></script>
   <script type="module" src="/assets/js/consent-controls.js?v=20260828"></script>
 </body>
 </html>

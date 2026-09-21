@@ -440,7 +440,17 @@ export function renderMapRoutePage(rootPage, map) {
   const description = escapeHtml(summary.sentences.join(" ") || `Explore the ${map.name} tactical map, team positions, routes, markers, and key combat areas for War Thunder Ground Battles.`);
   const canonical = `https://wardevops.github.io/maps/${map.slug}/`;
   const preview = mapPreviewUrl(map);
+  const imagePath = new URL(preview).pathname;
+  const imageAlt = `${map.name} map for War Thunder Ground Battles`;
+  const imageMetadata = JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    url: canonical,
+    primaryImageOfPage: { "@type": "ImageObject", contentUrl: preview, caption: imageAlt }
+  }).replace(/</g, "\\u003c");
   let page = rootPage;
+  page = replacePageValue(page, /<script type="application\/ld\+json" id="page-image-metadata">[\s\S]*?<\/script>/, `<script type="application/ld+json" id="page-image-metadata">${imageMetadata}</script>`, "primary image metadata");
+  page = replacePageValue(page, /<img\b[^>]*\bid="map-image"[^>]*>/, `<img id="map-image" src="${escapeHtml(imagePath.replace(/\.png$/i, ".webp"))}" data-png-fallback="${escapeHtml(imagePath)}" alt="${escapeHtml(imageAlt)}" decoding="async" fetchpriority="high" loading="eager">`, "initial map image");
   page = page.replace('class="hero home-hero"', 'class="hero map-detail-hero"');
   page = page.replace(/\n\s*<aside class="recent-updates"[\s\S]*?<\/aside>/, "");
   page = replacePageValue(page, /<meta name="description" content="[^"]*">/, `<meta name="description" content="${description}">`, "description");

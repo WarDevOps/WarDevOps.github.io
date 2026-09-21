@@ -7,6 +7,26 @@ const rootPage = await readFile(new URL("../index.html", import.meta.url), "utf8
 const catalog = JSON.parse(await readFile(new URL("../assets/data/map-catalog.json", import.meta.url), "utf8"));
 const baseMap = { ...catalog.maps[0], tacticalSummary: undefined };
 
+test("every map exposes its base image in initial HTML and consistent preview metadata", () => {
+  for (const map of catalog.maps) {
+    const page = renderMapRoutePage(rootPage, map);
+    const first = map.variations[0];
+    const folder = (first.folder || map.folder).split("/").map(encodeURIComponent).join("/");
+    const file = encodeURIComponent(first.sharedImage || first.teamImages?.Red || "Red.png");
+    const png = `/img/${folder}/${file}`;
+    const image = page.match(/<img\b[^>]*\bid="map-image"[^>]*>/)?.[0];
+    assert.ok(image, map.name);
+    assert.ok(image.includes(`src="${png.replace(/\.png$/i, ".webp")}"`), map.name);
+    assert.ok(image.includes(`data-png-fallback="${png}"`), map.name);
+    assert.doesNotMatch(image, /\shidden(?:\s|>)/);
+    const metadata = JSON.parse(page.match(/<script type="application\/ld\+json" id="page-image-metadata">([\s\S]*?)<\/script>/)[1]);
+    assert.equal(metadata.url, `https://wardevops.github.io/maps/${map.slug}/`);
+    assert.equal(metadata.primaryImageOfPage.contentUrl, `https://wardevops.github.io${png}`);
+    assert.ok(page.includes(`<meta property="og:image" content="${metadata.primaryImageOfPage.contentUrl}">`));
+    assert.ok(page.includes(`<meta name="twitter:image" content="${metadata.primaryImageOfPage.contentUrl}">`));
+  }
+});
+
 function summarySection(page) {
   const section = page.match(/(<details\b[^>]*\bid="map-tactical-summary"[^>]*>)([\s\S]*?)<\/details>/);
   assert.ok(section, "The page must contain the native summary disclosure");
