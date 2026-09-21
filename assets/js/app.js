@@ -4,7 +4,7 @@ import { createVectorEditor } from './vector-editor.js?v=independent-selection-2
 import { validateVectorGroups, pruneGroups } from './vector-model.js?v=independent-selection-20260917';
 let vectorEditor = null;
     import { commentImages } from './comment-images.js?v=comment-images-e5696e00de9a';
-    import { defaultMarkerLayout, maps, translations } from './data.js?v=comment-media-20260919';
+    import { defaultMarkerLayout, maps, translations } from './data.js?v=mobile-marker-sync-20260921';
     import { normalizeTacticalSummary, resolveTacticalSummary, withVariationSummary } from './tactical-summary.js?v=variation-switch-20260914';
     import { acceptUpstreamMap, isMapSyncState, markLayoutAsLocalEdits, markMapEdited, mergeMapLayouts, sourceRevision } from './marker-merge.js?v=mobile-default-layout-20260917';
 
@@ -2174,7 +2174,10 @@ let vectorEditor = null;
       markerEditorNote.hidden = true;
       modalMarkerEditorNote.hidden = !state.editMode;
       copyLink.hidden = state.editMode;
-      editorActions.forEach(action => { action.hidden = !state.editMode || !dialog.contains(action); });
+      editorActions.forEach(action => {
+        const mobileResetAction = usesMobileDeviceLayout() && action.hasAttribute("data-mobile-reset-action");
+        action.hidden = mobileResetAction ? false : !state.editMode || !dialog.contains(action);
+      });
       allLegendItems().forEach(item => {
         const placementEnabled = isLegendPlacementEnabled(item.dataset.markerType);
         const drawingTool = isDrawingTool(item.dataset.markerType);
