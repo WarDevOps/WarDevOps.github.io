@@ -924,10 +924,13 @@ let vectorEditor = null;
       renderCommentCarouselIndicators(carousel);
       setCommentCarouselIndex(carousel, carousel._commentImageIndex, { animate: false, notify: false });
     }
-    function bindExpandedCommentImageSwipe(carousel) {
+    function bindCommentImageSwipe(carousel, enabled = () => usesMobileCommentLayout()) {
+      if (carousel._commentSwipeBound) return;
+      carousel._commentSwipeBound = true;
       let swipe = null;
+      let blockClick = false;
       carousel.addEventListener("pointerdown", event => {
-        if (!usesMobileCommentLayout() || markerCommentImagePreview.hidden) return;
+        if (event.pointerType === "mouse" || !enabled() || (carousel._commentImages?.length || 0) < 2) return;
         swipe = { pointerId: event.pointerId, startX: event.clientX, startY: event.clientY };
         activateCommentCarouselIndicators(carousel);
         carousel.setPointerCapture?.(event.pointerId);
@@ -946,12 +949,19 @@ let vectorEditor = null;
         const requiredDistance = Math.max(COMMENT_IMAGE_SWIPE_MIN_DISTANCE, carousel.clientWidth * .1);
         if (Math.abs(deltaX) >= requiredDistance && Math.abs(deltaX) > Math.abs(deltaY)) {
           setCommentCarouselIndex(carousel, carousel._commentImageIndex + (deltaX < 0 ? 1 : -1));
+          blockClick = true;
         }
         activateCommentCarouselIndicators(carousel);
         swipe = null;
       };
       carousel.addEventListener("pointerup", finishSwipe);
       carousel.addEventListener("pointercancel", finishSwipe);
+      carousel.addEventListener("click", event => {
+        if (!blockClick) return;
+        blockClick = false;
+        event.preventDefault();
+        event.stopImmediatePropagation();
+      }, true);
     }
     function hideMarkerCommentImagePreview({ restoreFocus = false } = {}) {
       const sourceCarousel = markerCommentImagePreviewSourceCarousel;
@@ -1053,7 +1063,7 @@ let vectorEditor = null;
       event.preventDefault();
       markerCommentImagePreviewClose.focus({ preventScroll: true });
     });
-    bindExpandedCommentImageSwipe(markerCommentImagePreviewCarousel);
+    bindCommentImageSwipe(markerCommentImagePreviewCarousel, () => usesMobileCommentLayout() && !markerCommentImagePreview.hidden);
     function hideMarkerCommentPopover(anchor = null, { force = false } = {}) {
       if (anchor && markerCommentPopoverAnchor !== anchor) return;
       if (!force && markerCommentPopover.classList.contains("is-pinned")) return;
@@ -1201,6 +1211,7 @@ let vectorEditor = null;
           }
           positionMarkerCommentPopover(anchor);
         });
+        bindCommentImageSwipe(carousel);
         const handleMediaReady = event => {
           if (event.target === commentCarouselMedia(carousel)) positionMarkerCommentPopover(anchor);
         };

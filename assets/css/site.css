@@ -258,7 +258,7 @@
     .map-marker-comment-popover[hidden] { display: none; }
     .map-marker-comment-popover.has-image { width: min(720px, calc(100vw - 16px)); }
     .map-marker-comment-popover.is-pinned { pointer-events: auto; }
-    .map-marker-comment-carousel { position: relative; display: inline-grid; max-width: 100%; justify-self: center; place-items: center; overflow: hidden; border-radius: 7px; }
+    .map-marker-comment-carousel { position: relative; display: inline-grid; max-width: 100%; justify-self: center; place-items: center; overflow: hidden; border-radius: 7px; touch-action: pan-y; }
     .map-marker-comment-image { box-sizing: border-box; display: block; justify-self: center; width: auto; max-width: 100%; height: auto; max-height: min(60dvh, 420px); border: 1px solid var(--line); border-radius: 7px; background: var(--bg); object-fit: contain; }
     .map-marker-comment-image.is-changing { animation: comment-image-fade .15s ease-out; }
     @keyframes comment-image-fade { from { opacity: .2; } to { opacity: 1; } }
