@@ -4,7 +4,7 @@ import { createVectorEditor } from './vector-editor.js?v=independent-selection-2
 import { validateVectorGroups, pruneGroups } from './vector-model.js?v=independent-selection-20260917';
 let vectorEditor = null;
     import { commentImages } from './comment-images.js?v=comment-images-e5696e00de9a';
-    import { defaultMarkerLayout, maps, translations } from './data.js?v=mobile-marker-sync-20260921';
+    import { defaultMarkerLayout, maps, translations } from './data.js?v=mobile-hard-reset-20260921';
     import { normalizeTacticalSummary, resolveTacticalSummary, withVariationSummary } from './tactical-summary.js?v=variation-switch-20260914';
     import { acceptUpstreamMap, isMapSyncState, markLayoutAsLocalEdits, markMapEdited, mergeMapLayouts, sourceRevision } from './marker-merge.js?v=mobile-default-layout-20260917';
 
@@ -2597,7 +2597,15 @@ let vectorEditor = null;
     async function resetAllPlacedMarkers() {
       if (!window.confirm(t("confirmResetAll"))) return;
       try {
-        await importDefaultMarkerLayout();
+        const resetUrl = new URL("/assets/data/maptactic.json", window.location.origin);
+        resetUrl.searchParams.set("reset", String(Date.now()));
+        const response = await fetch(resetUrl, { cache: "no-store" });
+        if (!response.ok) throw new Error(`Default marker layout request failed: ${response.status}`);
+        const latestDefaultLayout = validateImportedMarkerLayout(await response.json(), { migrateLegacyCommentImages: false });
+        upstreamMarkerLayout = latestDefaultLayout;
+        upstreamMarkerLayoutRevision = sourceRevision(latestDefaultLayout);
+        applyMarkerLayout(latestDefaultLayout);
+        markLayoutAsLocalEdits(markerLayout, latestDefaultLayout, mapNames, upstreamMarkerLayoutRevision);
         persistMarkerLayout("defaultLayoutRestored");
       } catch (error) {
         console.error("Default marker layout reset failed.", error);
