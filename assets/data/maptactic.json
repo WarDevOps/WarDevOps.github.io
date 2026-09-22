@@ -9,7 +9,7 @@
     "American Desert": "2026-09-16",
     "Aral Sea": "2026-09-23",
     "Arctic Pier": "2026-09-15",
-    "Arctic Polar Base": "2026-09-12",
+    "Arctic Polar Base": "2026-09-23",
     "Ardennes": "2026-09-23",
     "Ash River": "2026-09-02",
     "Attica": "2026-09-23",
@@ -68,8 +68,8 @@
     "American Desert": "2026-09-16T02:29:34Z",
     "Aral Sea": "2026-09-22T19:21:50Z",
     "Arctic Pier": "2026-09-15T01:05:22Z",
-    "Arctic Polar Base": "2026-09-12T01:01:54Z",
-    "Ardennes": "2026-09-22T19:33:31Z",
+    "Arctic Polar Base": "2026-09-22T20:26:43Z",
+    "Ardennes": "2026-09-22T20:23:20Z",
     "Ash River": "2026-09-01T16:50:15Z",
     "Attica": "2026-09-22T18:50:32Z",
     "Battle of Hürtgen Forest": "2026-09-22T18:52:38Z",
@@ -4603,18 +4603,103 @@
       {
         "id": "mtjygzia-vx0vls",
         "type": "mainBattleTank",
-        "x": 58.07,
-        "y": 11.52
+        "x": 58.95,
+        "y": 12.42,
+        "commentImages": [
+          "Arctic Polar Base/scr_ (1).png"
+        ]
       },
       {
         "id": "mtjyh2ta-5fdq6f",
         "type": "battleLine",
-        "x": 58.07,
-        "y": 11.52,
+        "x": 58.95,
+        "y": 12.42,
         "parentTankId": "mtjygzia-vx0vls"
+      },
+      {
+        "id": "mud4hqmf-0jf9fw",
+        "type": "mainBattleTank",
+        "x": 67.2,
+        "y": 34.14,
+        "commentImages": [
+          "Arctic Polar Base/scr_ (2).png"
+        ]
+      },
+      {
+        "id": "mud4hs2c-pvlwjj",
+        "type": "highRiskSpot",
+        "x": 67.2,
+        "y": 34.14,
+        "parentTankId": "mud4hqmf-0jf9fw"
+      },
+      {
+        "id": "mud4jdt5-wkx5dy",
+        "type": "tankDestroyer",
+        "x": 37.23,
+        "y": 13.03
+      },
+      {
+        "id": "mud4jezm-y02jbp",
+        "type": "sniper",
+        "x": 37.23,
+        "y": 13.03,
+        "parentTankId": "mud4jdt5-wkx5dy"
+      },
+      {
+        "id": "mud4jiwz-g53kfx",
+        "type": "mainBattleTank",
+        "x": 14.81,
+        "y": 64.12
+      },
+      {
+        "id": "mud4jkqi-31bkcd",
+        "type": "battleLine",
+        "x": 14.81,
+        "y": 64.12,
+        "parentTankId": "mud4jiwz-g53kfx"
+      },
+      {
+        "id": "mud4jnx5-cztbvz",
+        "type": "mainBattleTank",
+        "x": 29.76,
+        "y": 73.59
+      },
+      {
+        "id": "mud4jpwu-0mt6hq",
+        "type": "highRiskSpot",
+        "x": 29.76,
+        "y": 73.59,
+        "parentTankId": "mud4jnx5-cztbvz"
+      },
+      {
+        "id": "mud4jv8v-c961x0",
+        "type": "mainBattleTank",
+        "x": 73.89,
+        "y": 62.21
+      },
+      {
+        "id": "mud4jwka-2hxbcd",
+        "type": "spawnKill",
+        "x": 73.89,
+        "y": 62.21,
+        "parentTankId": "mud4jv8v-c961x0"
       }
     ],
-    "Arctic Polar Base::domination-1|Red": [],
+    "Arctic Polar Base::domination-1|Red": [
+      {
+        "id": "mud4ilpb-bece14",
+        "type": "mainBattleTankRed",
+        "x": 64.51,
+        "y": 34.06
+      },
+      {
+        "id": "mud4in3w-b4kbut",
+        "type": "highRiskSpot",
+        "x": 64.51,
+        "y": 34.06,
+        "parentTankId": "mud4ilpb-bece14"
+      }
+    ],
     "Ardennes::domination-1|Red": [
       {
         "id": "aredennes-red-unit-01",
@@ -5587,7 +5672,7 @@
       },
       {
         "id": "mticeuzc-1n77c2",
-        "type": "spawnKill",
+        "type": "highRiskSpot",
         "x": 30.28,
         "y": 62.9,
         "parentTankId": "mtices2d-8mrbqf"
@@ -30620,13 +30705,41 @@
         "id": "mtjyh81u-he7q7y",
         "type": "aimHere",
         "parentTankId": "mtjygzia-vx0vls",
-        "startX": 58.07,
-        "startY": 11.52,
+        "startX": 58.95,
+        "startY": 12.42,
         "endX": 77.49,
         "endY": 34.39
+      },
+      {
+        "id": "mud4i56a-ygjxyf",
+        "type": "aimHere",
+        "parentTankId": "mud4hqmf-0jf9fw",
+        "startX": 67.2,
+        "startY": 34.14,
+        "endX": 82.67,
+        "endY": 26.67
+      },
+      {
+        "id": "mud4k1tk-he6w5p",
+        "type": "aimHere",
+        "parentTankId": "mud4jv8v-c961x0",
+        "startX": 73.89,
+        "startY": 62.21,
+        "endX": 85.01,
+        "endY": 67.25
       }
     ],
-    "Arctic Polar Base::domination-1|Red": [],
+    "Arctic Polar Base::domination-1|Red": [
+      {
+        "id": "mud4iw9u-isk0lq",
+        "type": "aimHere",
+        "parentTankId": "mud4ilpb-bece14",
+        "startX": 64.51,
+        "startY": 34.06,
+        "endX": 77.98,
+        "endY": 18.16
+      }
+    ],
     "Ardennes::domination-1|Red": [
       {
         "id": "mth6s91n-89ka4h",
@@ -69958,6 +70071,6 @@
     "Darwin Hill::battle-1|Red": [],
     "Sands of Sinai::domination-1|Blue": []
   },
-  "updatedAt": "2026-09-22T19:33:31.633Z",
-  "exportedAt": "2026-09-22T19:33:38.177Z"
+  "updatedAt": "2026-09-22T20:26:43.562Z",
+  "exportedAt": "2026-09-22T20:26:49.570Z"
 }
