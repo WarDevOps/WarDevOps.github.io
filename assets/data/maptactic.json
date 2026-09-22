@@ -7,13 +7,13 @@
     "Advance to the Rhine": "2026-09-16",
     "Alaska": "2026-09-14",
     "American Desert": "2026-09-16",
-    "Aral Sea": "2026-09-22",
+    "Aral Sea": "2026-09-23",
     "Arctic Pier": "2026-09-15",
     "Arctic Polar Base": "2026-09-12",
     "Ardennes": "2026-09-23",
     "Ash River": "2026-09-02",
     "Attica": "2026-09-23",
-    "Battle of Hürtgen Forest": "2026-09-17",
+    "Battle of Hürtgen Forest": "2026-09-23",
     "Berlin": "2026-09-11",
     "Breslau": "2026-09-11",
     "Campania": "2026-09-03",
@@ -66,13 +66,13 @@
     "Advance to the Rhine": "2026-09-16T02:26:57Z",
     "Alaska": "2026-09-13T23:26:53Z",
     "American Desert": "2026-09-16T02:29:34Z",
-    "Aral Sea": "2026-09-22T09:25:46Z",
+    "Aral Sea": "2026-09-22T19:21:50Z",
     "Arctic Pier": "2026-09-15T01:05:22Z",
     "Arctic Polar Base": "2026-09-12T01:01:54Z",
-    "Ardennes": "2026-09-22T18:37:38Z",
+    "Ardennes": "2026-09-22T19:33:31Z",
     "Ash River": "2026-09-01T16:50:15Z",
     "Attica": "2026-09-22T18:50:32Z",
-    "Battle of Hürtgen Forest": "2026-09-16T19:35:57Z",
+    "Battle of Hürtgen Forest": "2026-09-22T18:52:38Z",
     "Berlin": "2026-09-10T23:37:22Z",
     "Breslau": "2026-09-11T09:46:34Z",
     "Campania": "2026-09-03T01:49:21Z",
@@ -4088,8 +4088,8 @@
       {
         "id": "mtgsfqp5-pmg0vi",
         "type": "mainBattleTank",
-        "x": 51.33,
-        "y": 49.64,
+        "x": 51.48,
+        "y": 47.09,
         "commentImages": [
           "Aral Sea/scr_ (14).png"
         ]
@@ -4097,8 +4097,8 @@
       {
         "id": "mtgsfs00-seluha",
         "type": "highRiskSpot",
-        "x": 51.33,
-        "y": 49.64,
+        "x": 51.48,
+        "y": 47.09,
         "parentTankId": "mtgsfqp5-pmg0vi"
       },
       {
@@ -4693,23 +4693,14 @@
         "parentTankId": "aredennes-red-unit-08"
       },
       {
-        "id": "aredennes-red-unit-09",
-        "type": "mainBattleTankRed",
-        "x": 50.35,
-        "y": 52.08
-      },
-      {
-        "id": "aredennes-red-role-05",
-        "type": "highRiskSpot",
-        "x": 50.35,
-        "y": 52.08,
-        "parentTankId": "aredennes-red-unit-09"
-      },
-      {
         "id": "aredennes-red-unit-10",
         "type": "mainBattleTankRed",
         "x": 46.53,
-        "y": 52.15
+        "y": 52.15,
+        "commentImages": [
+          "Ardennes/scr_ (32).png",
+          "Ardennes/scr_ (33).png"
+        ]
       },
       {
         "id": "aredennes-red-role-06",
@@ -4722,7 +4713,11 @@
         "id": "aredennes-red-unit-11",
         "type": "mainBattleTankRed",
         "x": 43.47,
-        "y": 57.43
+        "y": 57.43,
+        "commentImages": [
+          "Ardennes/scr_ (30).png",
+          "Ardennes/scr_ (31).png"
+        ]
       },
       {
         "id": "aredennes-red-role-07",
@@ -4761,7 +4756,10 @@
         "id": "aredennes-red-unit-15",
         "type": "mainBattleTankRed",
         "x": 51.81,
-        "y": 70.49
+        "y": 70.49,
+        "commentImages": [
+          "Ardennes/scr_ (28).png"
+        ]
       },
       {
         "id": "aredennes-red-role-11",
@@ -4847,7 +4845,11 @@
         "id": "mth73lbn-eggfa0",
         "type": "tankDestroyerRed",
         "x": 41.8,
-        "y": 87.11
+        "y": 87.11,
+        "commentImages": [
+          "Ardennes/scr_ (26).png",
+          "Ardennes/scr_ (27).png"
+        ]
       },
       {
         "id": "mth73nvu-z3ytw6",
@@ -4866,7 +4868,10 @@
         "id": "mth74khz-77ij73",
         "type": "tankDestroyerRed",
         "x": 27.47,
-        "y": 93.62
+        "y": 93.62,
+        "commentImages": [
+          "Ardennes/scr_ (25).png"
+        ]
       },
       {
         "id": "mth74v1q-0iaz5l",
@@ -4894,6 +4899,22 @@
         "x": 67.2,
         "y": 51.41,
         "parentTankId": "mticbr9e-2dl97u"
+      },
+      {
+        "id": "mud2nkkx-j9biz0",
+        "type": "mainBattleTankRed",
+        "x": 51.04,
+        "y": 51.95,
+        "commentImages": [
+          "Ardennes/scr_ (34).png"
+        ]
+      },
+      {
+        "id": "mud2nn38-ys1mhg",
+        "type": "highRiskSpot",
+        "x": 51.04,
+        "y": 51.95,
+        "parentTankId": "mud2nkkx-j9biz0"
       }
     ],
     "Ardennes::domination-2|Red": [
@@ -5233,14 +5254,17 @@
       {
         "id": "aredennes-blue-unit-01",
         "type": "lightTank",
-        "x": 8.26,
-        "y": 14.03
+        "x": 2.82,
+        "y": 18.33,
+        "commentImages": [
+          "Ardennes/scr_ (16).png"
+        ]
       },
       {
         "id": "aredennes-blue-role-01",
         "type": "sniper",
-        "x": 8.26,
-        "y": 14.03,
+        "x": 2.82,
+        "y": 18.33,
         "parentTankId": "aredennes-blue-unit-01"
       },
       {
@@ -5253,7 +5277,11 @@
         "id": "aredennes-blue-unit-03",
         "type": "mainBattleTank",
         "x": 44.03,
-        "y": 25.28
+        "y": 25.28,
+        "commentImages": [
+          "Ardennes/scr_ (17).png",
+          "Ardennes/scr_ (19).png"
+        ]
       },
       {
         "id": "aredennes-blue-role-02",
@@ -5266,7 +5294,10 @@
         "id": "aredennes-blue-unit-04",
         "type": "mainBattleTank",
         "x": 45.76,
-        "y": 30.07
+        "y": 30.07,
+        "commentImages": [
+          "Ardennes/scr_ (18).png"
+        ]
       },
       {
         "id": "aredennes-blue-role-03",
@@ -5278,34 +5309,43 @@
       {
         "id": "aredennes-blue-unit-05",
         "type": "mainBattleTank",
-        "x": 57.22,
-        "y": 38.54
+        "x": 58.6,
+        "y": 36.66,
+        "commentImages": [
+          "Ardennes/scr_ (21).png"
+        ]
       },
       {
         "id": "aredennes-blue-role-04",
         "type": "battleLine",
-        "x": 57.22,
-        "y": 38.54,
+        "x": 58.6,
+        "y": 36.66,
         "parentTankId": "aredennes-blue-unit-05"
       },
       {
         "id": "aredennes-blue-unit-06",
         "type": "mainBattleTank",
-        "x": 47.29,
-        "y": 41.74
+        "x": 44.01,
+        "y": 43.7,
+        "commentImages": [
+          "Ardennes/scr_ (22).png"
+        ]
       },
       {
         "id": "aredennes-blue-role-05",
         "type": "battleLine",
-        "x": 47.29,
-        "y": 41.74,
+        "x": 44.01,
+        "y": 43.7,
         "parentTankId": "aredennes-blue-unit-06"
       },
       {
         "id": "aredennes-blue-unit-07",
         "type": "mainBattleTank",
         "x": 51.04,
-        "y": 41.74
+        "y": 41.74,
+        "commentImages": [
+          "Ardennes/scr_ (20).png"
+        ]
       },
       {
         "id": "aredennes-blue-role-06",
@@ -5318,7 +5358,10 @@
         "id": "aredennes-blue-unit-11",
         "type": "mainBattleTank",
         "x": 56.74,
-        "y": 52.08
+        "y": 52.08,
+        "commentImages": [
+          "Ardennes/scr_ (24).png"
+        ]
       },
       {
         "id": "aredennes-blue-role-10",
@@ -5331,7 +5374,11 @@
         "id": "aredennes-blue-unit-12",
         "type": "mainBattleTank",
         "x": 69.31,
-        "y": 52.43
+        "y": 52.43,
+        "commentImages": [
+          "Ardennes/scr_ (3).png",
+          "Ardennes/scr_ (4).png"
+        ]
       },
       {
         "id": "aredennes-blue-role-11",
@@ -5343,27 +5390,36 @@
       {
         "id": "aredennes-blue-unit-13",
         "type": "lightTank",
-        "x": 11.74,
-        "y": 57.85
+        "x": 11.95,
+        "y": 59.17,
+        "commentImages": [
+          "Ardennes/scr_ (15).png"
+        ]
       },
       {
         "id": "aredennes-blue-role-12",
         "type": "highRiskSpot",
-        "x": 11.74,
-        "y": 57.85,
+        "x": 11.95,
+        "y": 59.17,
         "parentTankId": "aredennes-blue-unit-13"
       },
       {
         "id": "aredennes-blue-unit-14",
         "type": "lightTank",
-        "x": 7.15,
-        "y": 63.89
+        "x": 5.17,
+        "y": 62.99,
+        "commentImages": [
+          "Ardennes/scr_ (14).png"
+        ]
       },
       {
         "id": "aredennes-blue-unit-15",
         "type": "mainBattleTank",
         "x": 70.97,
-        "y": 65.21
+        "y": 65.21,
+        "commentImages": [
+          "Ardennes/scr_ (5).png"
+        ]
       },
       {
         "id": "aredennes-blue-role-13",
@@ -5376,7 +5432,10 @@
         "id": "aredennes-blue-unit-16",
         "type": "mainBattleTank",
         "x": 97.22,
-        "y": 82.43
+        "y": 82.43,
+        "commentImages": [
+          "Ardennes/scr_ (8).png"
+        ]
       },
       {
         "id": "aredennes-blue-role-14",
@@ -5389,7 +5448,10 @@
         "id": "aredennes-blue-unit-17",
         "type": "mainBattleTank",
         "x": 43.96,
-        "y": 88.47
+        "y": 88.47,
+        "commentImages": [
+          "Ardennes/scr_ (11).png"
+        ]
       },
       {
         "id": "aredennes-blue-role-15",
@@ -5399,42 +5461,39 @@
         "parentTankId": "aredennes-blue-unit-17"
       },
       {
-        "id": "aredennes-blue-unit-18",
-        "type": "mainBattleTank",
-        "x": 97.99,
-        "y": 88.89
-      },
-      {
-        "id": "aredennes-blue-role-16",
-        "type": "highRiskSpot",
-        "x": 97.99,
-        "y": 88.89,
-        "parentTankId": "aredennes-blue-unit-18"
-      },
-      {
         "id": "aredennes-blue-unit-19",
         "type": "mainBattleTank",
-        "x": 97.08,
-        "y": 91.04
+        "x": 97.09,
+        "y": 89.83,
+        "commentImages": [
+          "Ardennes/scr_ (9).png",
+          "Ardennes/scr_ (10).png"
+        ]
       },
       {
         "id": "aredennes-blue-role-17",
         "type": "highRiskSpot",
-        "x": 97.08,
-        "y": 91.04,
+        "x": 97.09,
+        "y": 89.83,
         "parentTankId": "aredennes-blue-unit-19"
       },
       {
         "id": "aredennes-blue-unit-20",
         "type": "mainBattleTank",
         "x": 31.8,
-        "y": 98.1
+        "y": 98.1,
+        "commentImages": [
+          "Ardennes/scr_ (12).png"
+        ]
       },
       {
         "id": "aredennes-blue-unit-21",
         "type": "mainBattleTank",
         "x": 96.32,
-        "y": 97.01
+        "y": 97.01,
+        "commentImages": [
+          "Ardennes/scr_ (7).png"
+        ]
       },
       {
         "id": "aredennes-blue-role-18",
@@ -5446,21 +5505,24 @@
       {
         "id": "mth7bxbm-3azwz5",
         "type": "tankDestroyer",
-        "x": 93.71,
-        "y": 42.46
+        "x": 94.31,
+        "y": 40.75,
+        "commentImages": [
+          "Ardennes/scr_ (1).png"
+        ]
       },
       {
         "id": "mth7byhj-k3w54c",
         "type": "sniper",
-        "x": 93.71,
-        "y": 42.46,
+        "x": 94.31,
+        "y": 40.75,
         "parentTankId": "mth7bxbm-3azwz5"
       },
       {
         "id": "mth7fjrz-ash3qt",
         "type": "spawnKill",
-        "x": 7.15,
-        "y": 63.89,
+        "x": 5.17,
+        "y": 62.99,
         "parentTankId": "aredennes-blue-unit-14"
       },
       {
@@ -5473,21 +5535,27 @@
       {
         "id": "mth7h4tk-cf5lpt",
         "type": "tankDestroyer",
-        "x": 83.96,
-        "y": 51.41
+        "x": 83.1,
+        "y": 49.44,
+        "commentImages": [
+          "Ardennes/scr_ (2).png"
+        ]
       },
       {
         "id": "mth7h62y-hb311x",
         "type": "sniper",
-        "x": 83.96,
-        "y": 51.41,
+        "x": 83.1,
+        "y": 49.44,
         "parentTankId": "mth7h4tk-cf5lpt"
       },
       {
         "id": "mth7hd90-ojq3un",
         "type": "mainBattleTank",
         "x": 77.56,
-        "y": 82.68
+        "y": 82.68,
+        "commentImages": [
+          "Ardennes/scr_ (6).png"
+        ]
       },
       {
         "id": "mth7hfvi-gk5vdt",
@@ -5511,21 +5579,27 @@
       {
         "id": "mtices2d-8mrbqf",
         "type": "mainBattleTank",
-        "x": 30.23,
-        "y": 66.22
+        "x": 30.28,
+        "y": 62.9,
+        "commentImages": [
+          "Ardennes/scr_ (13).png"
+        ]
       },
       {
         "id": "mticeuzc-1n77c2",
         "type": "spawnKill",
-        "x": 30.23,
-        "y": 66.22,
+        "x": 30.28,
+        "y": 62.9,
         "parentTankId": "mtices2d-8mrbqf"
       },
       {
         "id": "mud0lxdu-8id1nw",
         "type": "mainBattleTank",
         "x": 52.4,
-        "y": 49.94
+        "y": 49.94,
+        "commentImages": [
+          "Ardennes/scr_ (23).png"
+        ]
       },
       {
         "id": "mud0lym8-ej139j",
@@ -6679,7 +6753,7 @@
       },
       {
         "id": "mt703nms-1bwrn4",
-        "type": "highRiskSpot",
+        "type": "sniper",
         "x": 53.64,
         "y": 7.44,
         "parentTankId": "mt703bzb-0qnuka"
@@ -29422,8 +29496,8 @@
         "id": "mucgsx8w-hei0mw",
         "type": "aimHere",
         "parentTankId": "mtgsfqp5-pmg0vi",
-        "startX": 51.33,
-        "startY": 49.64,
+        "startX": 51.48,
+        "startY": 47.09,
         "endX": 39.4,
         "endY": 54.56
       },
@@ -30690,15 +30764,6 @@
         "endY": 49.73
       },
       {
-        "id": "mth6y5ta-b7azy8",
-        "type": "aimHere",
-        "parentTankId": "aredennes-red-unit-09",
-        "startX": 50.35,
-        "startY": 52.08,
-        "endX": 52.21,
-        "endY": 48.82
-      },
-      {
         "id": "mth6yfam-g86afj",
         "type": "route",
         "points": [
@@ -31200,6 +31265,15 @@
           }
         ],
         "dangerRoute": true
+      },
+      {
+        "id": "mud2nq46-qieqj6",
+        "type": "aimHere",
+        "parentTankId": "mud2nkkx-j9biz0",
+        "startX": 51.04,
+        "startY": 51.95,
+        "endX": 51.04,
+        "endY": 44.14
       }
     ],
     "Ardennes::domination-2|Red": [
@@ -32313,20 +32387,11 @@
         "endY": 90.42
       },
       {
-        "id": "mth7eyub-b0gcf4",
-        "type": "aimHere",
-        "parentTankId": "aredennes-blue-unit-18",
-        "startX": 97.99,
-        "startY": 88.89,
-        "endX": 71.81,
-        "endY": 71.63
-      },
-      {
         "id": "mth7f3z3-04v8br",
         "type": "aimHere",
         "parentTankId": "aredennes-blue-unit-19",
-        "startX": 97.08,
-        "startY": 91.04,
+        "startX": 97.09,
+        "startY": 89.83,
         "endX": 53.1,
         "endY": 56.11
       },
@@ -32358,20 +32423,11 @@
         "endY": 89.36
       },
       {
-        "id": "mth7fqwr-mxxsga",
-        "type": "aimHere",
-        "parentTankId": "aredennes-blue-unit-14",
-        "startX": 7.15,
-        "startY": 63.89,
-        "endX": 8.6,
-        "endY": 87.68
-      },
-      {
         "id": "mth7ft4j-85t66y",
         "type": "aimHere",
         "parentTankId": "aredennes-blue-unit-13",
-        "startX": 11.74,
-        "startY": 57.85,
+        "startX": 11.95,
+        "startY": 59.17,
         "endX": 14.18,
         "endY": 84.04
       },
@@ -32379,8 +32435,8 @@
         "id": "mth7g1or-ausps0",
         "type": "aimHere",
         "parentTankId": "aredennes-blue-unit-01",
-        "startX": 8.26,
-        "startY": 14.03,
+        "startX": 2.82,
+        "startY": 18.33,
         "endX": 7.89,
         "endY": 57.35
       },
@@ -32406,8 +32462,8 @@
         "id": "mth7gbmi-kdokwg",
         "type": "aimHere",
         "parentTankId": "aredennes-blue-unit-05",
-        "startX": 57.22,
-        "startY": 38.54,
+        "startX": 58.6,
+        "startY": 36.66,
         "endX": 45.57,
         "endY": 52.57
       },
@@ -32424,8 +32480,8 @@
         "id": "mth7gjzi-opjfc3",
         "type": "aimHere",
         "parentTankId": "aredennes-blue-unit-06",
-        "startX": 47.29,
-        "startY": 41.74,
+        "startX": 44.01,
+        "startY": 43.7,
         "endX": 44.5,
         "endY": 45.03
       },
@@ -32466,20 +32522,11 @@
         "endY": 93.44
       },
       {
-        "id": "mth7od2h-qtbtpv",
-        "type": "aimHere",
-        "parentTankId": "mth7h4tk-cf5lpt",
-        "startX": 83.96,
-        "startY": 51.41,
-        "endX": 65.25,
-        "endY": 67.99
-      },
-      {
         "id": "mth7otp9-igfv6w",
         "type": "aimHere",
         "parentTankId": "mth7bxbm-3azwz5",
-        "startX": 93.71,
-        "startY": 42.46,
+        "startX": 94.31,
+        "startY": 40.75,
         "endX": 80.68,
         "endY": 77.66
       },
@@ -32806,33 +32853,6 @@
         "dangerRoute": true
       },
       {
-        "id": "mth8q4dm-qtkr28",
-        "type": "route",
-        "points": [
-          {
-            "x": 28.54,
-            "y": 91.84
-          },
-          {
-            "x": 44.24,
-            "y": 89.54
-          },
-          {
-            "x": 56.21,
-            "y": 93.08
-          },
-          {
-            "x": 64.28,
-            "y": 91.75
-          },
-          {
-            "x": 77.49,
-            "y": 81.74
-          }
-        ],
-        "dangerRoute": true
-      },
-      {
         "id": "mth8qiza-r86lms",
         "type": "route",
         "points": [
@@ -32903,61 +32923,162 @@
         ]
       },
       {
-        "id": "mticelvf-s0nm2m",
+        "id": "mud2bd1m-xgza3e",
+        "type": "aimHere",
+        "parentTankId": "mth7h4tk-cf5lpt",
+        "startX": 83.1,
+        "startY": 49.44,
+        "endX": 69.29,
+        "endY": 65.07
+      },
+      {
+        "id": "mud2e0v4-i0494w",
+        "type": "aimHere",
+        "parentTankId": "mth7hd90-ojq3un",
+        "startX": 77.56,
+        "startY": 82.68,
+        "endX": 44.35,
+        "endY": 85.75
+      },
+      {
+        "id": "mud2fx7e-v2jenq",
         "type": "route",
         "points": [
           {
-            "x": 46.81,
-            "y": 42.46
+            "x": 32.1,
+            "y": 98.09
           },
           {
-            "x": 45.04,
-            "y": 45.47
+            "x": 37.4,
+            "y": 96.96
           },
           {
-            "x": 42.11,
-            "y": 48.84
+            "x": 42.96,
+            "y": 94.27
           },
           {
-            "x": 39.27,
-            "y": 51.15
+            "x": 49.3,
+            "y": 92.88
           },
           {
-            "x": 37.41,
-            "y": 52.3
+            "x": 55.21,
+            "y": 94.09
           },
           {
-            "x": 35.73,
-            "y": 55.85
+            "x": 61.82,
+            "y": 95.66
           },
           {
-            "x": 32.71,
-            "y": 59.57
+            "x": 69.2,
+            "y": 94.35
           },
           {
-            "x": 31.03,
-            "y": 65.69
+            "x": 73.98,
+            "y": 89.14
+          },
+          {
+            "x": 77.37,
+            "y": 86.79
+          },
+          {
+            "x": 78.15,
+            "y": 83.41
           }
         ],
         "dangerRoute": true
       },
       {
-        "id": "mticf065-7x2ehj",
-        "type": "aimHere",
-        "parentTankId": "mtices2d-8mrbqf",
-        "startX": 30.23,
-        "startY": 66.22,
-        "endX": 12.41,
-        "endY": 87.23
+        "id": "mud2g1io-6ok7mw",
+        "type": "route",
+        "points": [
+          {
+            "x": 44.35,
+            "y": 89.4
+          },
+          {
+            "x": 50.26,
+            "y": 92.79
+          }
+        ]
       },
       {
-        "id": "mud0nyk4-vlcdam",
+        "id": "mud2gw0k-wgg3zh",
         "type": "aimHere",
-        "parentTankId": "mth7hd90-ojq3un",
-        "startX": 77.56,
-        "startY": 82.68,
-        "endX": 73.14,
-        "endY": 82.17
+        "parentTankId": "mtices2d-8mrbqf",
+        "startX": 30.28,
+        "startY": 62.9,
+        "endX": 16.9,
+        "endY": 81.75
+      },
+      {
+        "id": "mud2haoy-pmrxpg",
+        "type": "route",
+        "points": [
+          {
+            "x": 47.13,
+            "y": 42.14
+          },
+          {
+            "x": 44.44,
+            "y": 46.22
+          },
+          {
+            "x": 41.4,
+            "y": 49.52
+          },
+          {
+            "x": 39.4,
+            "y": 51.35
+          },
+          {
+            "x": 37.66,
+            "y": 52.22
+          },
+          {
+            "x": 34.8,
+            "y": 55.34
+          },
+          {
+            "x": 33.49,
+            "y": 58.64
+          },
+          {
+            "x": 32.1,
+            "y": 60.47
+          },
+          {
+            "x": 30.71,
+            "y": 62.55
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "mud2hw2q-khn9ky",
+        "type": "aimHere",
+        "parentTankId": "aredennes-blue-unit-14",
+        "startX": 5.17,
+        "startY": 62.99,
+        "endX": 12.64,
+        "endY": 87.32
+      },
+      {
+        "id": "mud2jr8q-18h1a8",
+        "type": "aimHere",
+        "parentTankId": "aredennes-blue-unit-03",
+        "startX": 44.03,
+        "startY": 25.28,
+        "endX": 33.06,
+        "endY": 50.22
+      },
+      {
+        "id": "mud2kv56-6ojgf2",
+        "type": "aimHere",
+        "parentTankId": "aredennes-blue-unit-06",
+        "startX": 44.01,
+        "startY": 43.7,
+        "endX": 38.44,
+        "endY": 52.74
       }
     ],
     "Ardennes::conquest-1|Red": [
@@ -69837,6 +69958,6 @@
     "Darwin Hill::battle-1|Red": [],
     "Sands of Sinai::domination-1|Blue": []
   },
-  "updatedAt": "2026-09-22T18:50:32.119Z",
-  "exportedAt": "2026-09-22T18:50:45.487Z"
+  "updatedAt": "2026-09-22T19:33:31.633Z",
+  "exportedAt": "2026-09-22T19:33:38.177Z"
 }
