@@ -5,7 +5,7 @@
   "categories": {
     "tank": {
       "source": "https://wiki.warthunder.com/ground",
-      "count": 1224,
+      "count": 1214,
       "units": [
         {
           "wikiId": "us_m2a4",
@@ -1945,20 +1945,6 @@
           "imageSource": "https://static.encyclopedia.warthunder.com/images/us_sl_amraam_fcs.png"
         },
         {
-          "wikiId": "us_sl_amraam_launcher",
-          "name": "CLAWS (TEL)",
-          "file": "us_sl_amraam_launcher.png",
-          "countryCode": "US",
-          "country": "USA",
-          "rank": 8,
-          "br": 12.3,
-          "unitClass": "aa",
-          "role": "SPAA",
-          "source": "https://wiki.warthunder.com/unit/us_sl_amraam_launcher",
-          "imageSource": "https://static.encyclopedia.warthunder.com/images/us_sl_amraam_launcher.png",
-          "inheritsRankAndBrFrom": "us_sl_amraam_fcs"
-        },
-        {
           "wikiId": "us_m1a2_sep3_abrams",
           "name": "M1A2 SEPv3",
           "file": "us_m1a2_sep3_abrams.png",
@@ -1983,20 +1969,6 @@
           "role": "SPAA",
           "source": "https://wiki.warthunder.com/unit/us_nasams_fcs",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/us_nasams_fcs.png"
-        },
-        {
-          "wikiId": "us_nasams_launcher",
-          "name": "NASAMS 3 (TEL)",
-          "file": "us_nasams_launcher.png",
-          "countryCode": "US",
-          "country": "USA",
-          "rank": 8,
-          "br": 12.7,
-          "unitClass": "aa",
-          "role": "SPAA",
-          "source": "https://wiki.warthunder.com/unit/us_nasams_launcher",
-          "imageSource": "https://static.encyclopedia.warthunder.com/images/us_nasams_launcher.png",
-          "inheritsRankAndBrFrom": "us_nasams_fcs"
         },
         {
           "wikiId": "germ_garford_putilov",
@@ -4246,20 +4218,6 @@
           "role": "SPAA",
           "source": "https://wiki.warthunder.com/unit/germ_iris_slm_fcs",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/germ_iris_slm_fcs.png"
-        },
-        {
-          "wikiId": "germ_iris_slm_launcher",
-          "name": "IRIS-T SLM (TEL)",
-          "file": "germ_iris_slm_launcher.png",
-          "countryCode": "DE",
-          "country": "Germany",
-          "rank": 8,
-          "br": 12.7,
-          "unitClass": "aa",
-          "role": "SPAA",
-          "source": "https://wiki.warthunder.com/unit/germ_iris_slm_launcher",
-          "imageSource": "https://static.encyclopedia.warthunder.com/images/germ_iris_slm_launcher.png",
-          "inheritsRankAndBrFrom": "germ_iris_slm_fcs"
         },
         {
           "wikiId": "germ_leopard_2a7v",
@@ -6719,20 +6677,6 @@
           "imageSource": "https://static.encyclopedia.warthunder.com/images/ussr_buk_m3_fcs.png"
         },
         {
-          "wikiId": "ussr_buk_m3_launcher",
-          "name": "9K317M \"BUK-M3\" (TELAR)",
-          "file": "ussr_buk_m3_launcher.png",
-          "countryCode": "RU",
-          "country": "USSR",
-          "rank": 8,
-          "br": 12.7,
-          "unitClass": "aa",
-          "role": "SPAA",
-          "source": "https://wiki.warthunder.com/unit/ussr_buk_m3_launcher",
-          "imageSource": "https://static.encyclopedia.warthunder.com/images/ussr_buk_m3_launcher.png",
-          "inheritsRankAndBrFrom": "ussr_buk_m3_fcs"
-        },
-        {
           "wikiId": "ussr_t_90m_arena_m",
           "name": "T-90M (Arena-M)",
           "file": "ussr_t_90m_arena_m.png",
@@ -8618,20 +8562,6 @@
           "imageSource": "https://static.encyclopedia.warthunder.com/images/uk_sky_sabre_fcs.png"
         },
         {
-          "wikiId": "uk_sky_sabre_launcher",
-          "name": "Sky Sabre (TEL)",
-          "file": "uk_sky_sabre_launcher.png",
-          "countryCode": "UK",
-          "country": "Great Britain",
-          "rank": 8,
-          "br": 12.7,
-          "unitClass": "aa",
-          "role": "SPAA",
-          "source": "https://wiki.warthunder.com/unit/uk_sky_sabre_launcher",
-          "imageSource": "https://static.encyclopedia.warthunder.com/images/uk_sky_sabre_launcher.png",
-          "inheritsRankAndBrFrom": "uk_sky_sabre_fcs"
-        },
-        {
           "wikiId": "jp_type_95_ha_go",
           "name": "Ha-Go",
           "file": "jp_type_95_ha_go.png",
@@ -9698,20 +9628,6 @@
           "imageSource": "https://static.encyclopedia.warthunder.com/images/jp_type_81_tansam_fcs.png"
         },
         {
-          "wikiId": "jp_type_81_tansam_launcher",
-          "name": "Tan-SAM Kai (TEL)",
-          "file": "jp_type_81_tansam_launcher.png",
-          "countryCode": "JP",
-          "country": "Japan",
-          "rank": 8,
-          "br": 12.0,
-          "unitClass": "aa",
-          "role": "SPAA",
-          "source": "https://wiki.warthunder.com/unit/jp_type_81_tansam_launcher",
-          "imageSource": "https://static.encyclopedia.warthunder.com/images/jp_type_81_tansam_launcher.png",
-          "inheritsRankAndBrFrom": "jp_type_81_tansam_fcs"
-        },
-        {
           "wikiId": "jp_oplot_t",
           "name": "BM Oplot-T",
           "file": "jp_oplot_t.png",
@@ -9736,20 +9652,6 @@
           "role": "SPAA",
           "source": "https://wiki.warthunder.com/unit/jp_type_03_chusam_fcs",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/jp_type_03_chusam_fcs.png"
-        },
-        {
-          "wikiId": "jp_type_03_chusam_launcher",
-          "name": "Type 03 (TEL)",
-          "file": "jp_type_03_chusam_launcher.png",
-          "countryCode": "JP",
-          "country": "Japan",
-          "rank": 8,
-          "br": 12.7,
-          "unitClass": "aa",
-          "role": "SPAA",
-          "source": "https://wiki.warthunder.com/unit/jp_type_03_chusam_launcher",
-          "imageSource": "https://static.encyclopedia.warthunder.com/images/jp_type_03_chusam_launcher.png",
-          "inheritsRankAndBrFrom": "jp_type_03_chusam_fcs"
         },
         {
           "wikiId": "cn_m8_greyhound",
@@ -12378,20 +12280,6 @@
           "imageSource": "https://static.encyclopedia.warthunder.com/images/it_samp_t_fcs.png"
         },
         {
-          "wikiId": "it_samp_t_launcher",
-          "name": "FSAF SAMP/T (TEL)",
-          "file": "it_samp_t_launcher.png",
-          "countryCode": "IT",
-          "country": "Italy",
-          "rank": 8,
-          "br": 12.7,
-          "unitClass": "aa",
-          "role": "SPAA",
-          "source": "https://wiki.warthunder.com/unit/it_samp_t_launcher",
-          "imageSource": "https://static.encyclopedia.warthunder.com/images/it_samp_t_launcher.png",
-          "inheritsRankAndBrFrom": "it_samp_t_fcs"
-        },
-        {
           "wikiId": "it_leopard_2a7_hungary",
           "name": "Leopard 2A7HU",
           "file": "it_leopard_2a7_hungary.png",
@@ -13744,20 +13632,6 @@
           "imageSource": "https://static.encyclopedia.warthunder.com/images/fr_samp_t_fcs.png"
         },
         {
-          "wikiId": "fr_samp_t_launcher",
-          "name": "FSAF SAMP/T (Mamba) (TEL)",
-          "file": "fr_samp_t_launcher.png",
-          "countryCode": "FR",
-          "country": "France",
-          "rank": 8,
-          "br": 12.7,
-          "unitClass": "aa",
-          "role": "SPAA",
-          "source": "https://wiki.warthunder.com/unit/fr_samp_t_launcher",
-          "imageSource": "https://static.encyclopedia.warthunder.com/images/fr_samp_t_launcher.png",
-          "inheritsRankAndBrFrom": "fr_samp_t_fcs"
-        },
-        {
           "wikiId": "fr_leclerc_azur",
           "name": "Leclerc AZUR",
           "file": "fr_leclerc_azur.png",
@@ -14991,20 +14865,6 @@
           "role": "SPAA",
           "source": "https://wiki.warthunder.com/unit/sw_nasams_fcs",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/sw_nasams_fcs.png"
-        },
-        {
-          "wikiId": "sw_nasams_launcher",
-          "name": "NASAMS 3 (TEL)",
-          "file": "sw_nasams_launcher.png",
-          "countryCode": "SE",
-          "country": "Sweden",
-          "rank": 8,
-          "br": 12.7,
-          "unitClass": "aa",
-          "role": "SPAA",
-          "source": "https://wiki.warthunder.com/unit/sw_nasams_launcher",
-          "imageSource": "https://static.encyclopedia.warthunder.com/images/sw_nasams_launcher.png",
-          "inheritsRankAndBrFrom": "sw_nasams_fcs"
         },
         {
           "wikiId": "sw_t_80u",

@@ -182,6 +182,11 @@ def list_unit_ids(page: str) -> list[str]:
     return ordered_ids
 
 
+def include_in_tier_catalog(category: str, wiki_id: str) -> bool:
+    """Keep multi-vehicle SAM systems represented by their radar/control unit."""
+    return category != "tank" or not wiki_id.endswith("_launcher")
+
+
 def valid_png(path: Path) -> bool:
     try:
         return path.is_file() and path.stat().st_size > 100 and path.read_bytes()[:8] == b"\x89PNG\r\n\x1a\n"
@@ -290,7 +295,11 @@ def main() -> int:
         if existing_catalog.get("battleRatingMode") != "RB":
             raise RuntimeError("Existing catalog must use Realistic Battles ratings")
         catalog = {
-            category: list(existing_catalog["categories"][category]["units"])
+            category: [
+                unit
+                for unit in existing_catalog["categories"][category]["units"]
+                if include_in_tier_catalog(category, unit["wikiId"])
+            ]
             for category in CATEGORIES
         }
     else:
@@ -298,7 +307,7 @@ def main() -> int:
     failures: list[str] = []
     for category in arguments.categories:
         page = CATEGORIES[category]["page"]
-        unit_ids = list_unit_ids(page)
+        unit_ids = [wiki_id for wiki_id in list_unit_ids(page) if include_in_tier_catalog(category, wiki_id)]
         if arguments.new_only:
             existing_ids = {unit["wikiId"] for unit in catalog[category]}
             unit_ids = [wiki_id for wiki_id in unit_ids if wiki_id not in existing_ids]
