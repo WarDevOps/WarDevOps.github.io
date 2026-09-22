@@ -331,12 +331,6 @@
     .legend-item.is-marker-hidden { filter: brightness(.5); }
     .legend-icon { display: grid; flex: 0 0 28px; width: 28px; height: 28px; place-items: center; border: 1px solid rgba(255,255,255,.08); border-radius: 6px; background: rgba(255,255,255,.035); }
     .legend-icon img { display: block; max-width: 22px; max-height: 22px; object-fit: contain; }
-    .team-legend { display: flex; gap: 15px; padding: 0 clamp(20px, 4vw, 38px) 28px; color: var(--muted); font-size: .8rem; }
-    .team-legend span { display: inline-flex; align-items: center; gap: 7px; }
-    .team-legend i { width: 9px; height: 9px; border-radius: 50%; }
-    .team-legend .red-dot { background: var(--red); }
-    .team-legend .blue-dot { background: var(--blue); }
-
     .marker-context-menu, .annotation-context-menu { box-sizing: border-box; position: absolute; z-index: 4; min-width: min(172px, calc(100vw - 16px)); max-width: calc(100vw - 16px); max-height: calc(100dvh - 16px); overflow-y: auto; overscroll-behavior: contain; padding: 5px; border: 1px solid var(--line); border-radius: 9px; background: var(--surface); box-shadow: 0 12px 30px rgba(0,0,0,.35); }
     .marker-context-menu { width: min(212px, calc(100vw - 16px)); }
     .marker-context-menu[hidden], .annotation-context-menu[hidden] { display: none; }
