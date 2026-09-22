@@ -612,6 +612,16 @@
         "우주공항의 핵심 지역은 B 거점의 고밀도 시가지입니다. 이 구역이 돌파되면 곧바로 적 스폰 지역 압박으로 이어질 수 있으며, 일부 건물 창문에서 북쪽 스폰을 직접 노릴 수 있어 북쪽 팀이 약간 불리합니다.",
         "기동성이 좋은 전차는 A 거점 북서쪽의 황무지 평야를 통해 빠르게 우회할 수 있고, B와 C 거점 사이의 고가도로 아래를 이용하는 우회로도 존재합니다. 다만 전체 전투에서 가장 중요한 것은 B 시가지의 주도권입니다."
       ]
+    },
+    "Darwin Hill": {
+      "en": [
+        "Darwin Hill has an asymmetric opening around its capture points. Point A is very easy for the southern team to secure, while point B is very easy for the northern team to secure.",
+        "Because each side has a natural advantage around one of these objectives, early control usually develops around this A–B split rather than an even contest for both points."
+      ],
+      "ko": [
+        "다윈 힐은 거점별로 초반 유불리가 뚜렷한 비대칭형 맵입니다. A 거점은 남쪽 팀이 매우 쉽게 점령할 수 있는 반면, B 거점은 북쪽 팀이 매우 쉽게 점령할 수 있습니다.",
+        "따라서 초반에는 두 팀이 A와 B를 각각 유리한 방향에서 확보하는 형태로 전선이 형성되는 경우가 많습니다."
+      ]
     }
   },
   "markers": {
