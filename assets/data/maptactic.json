@@ -19,7 +19,7 @@
     "Campania": "2026-09-03",
     "Cargo Port": "2026-09-17",
     "Carpathians": "2026-09-04",
-    "Darwin Hill": "2026-09-17",
+    "Darwin Hill": "2026-09-22",
     "Eastern Europe": "2026-09-03",
     "European Province": "2026-09-04",
     "Fields of Normandy": "2026-09-15",
@@ -78,14 +78,16 @@
     "Campania": "2026-09-03T01:49:21Z",
     "Cargo Port": "2026-09-16T19:28:29Z",
     "Carpathians": "2026-09-04T03:02:19Z",
-    "Darwin Hill": "2026-09-16T19:10:11Z",
+    "Darwin Hill": "2026-09-22T02:58:45Z",
     "Eastern Europe": "2026-09-03T01:49:56Z",
     "European Province": "2026-09-04T05:43:30Z",
     "Fields of Normandy": "2026-09-15T05:00:19Z",
     "Fields of Poland": "2026-09-15T02:54:34Z",
     "Fulda": "2026-09-15T02:33:41Z",
     "Golden Quarry": "2026-09-12T00:18:22Z",
+    "Japan": "2026-09-16T19:32:10Z",
     "Jungle": "2026-09-10T12:20:47Z",
+    "Maginot Line": "2026-09-16T19:34:11Z",
     "Middle East": "2026-09-15T03:32:27Z",
     "Mozdok": "2026-09-15T03:13:51Z",
     "Normandy": "2026-09-04T05:44:50Z",
@@ -103,9 +105,7 @@
     "Test Site-2271": "2026-09-13T19:14:47Z",
     "Tunisia": "2026-09-16T19:37:22Z",
     "Vietnam": "2026-09-16T02:50:51Z",
-    "White Rock Fortress": "2026-09-02T04:58:42Z",
-    "Japan": "2026-09-16T19:32:10Z",
-    "Maginot Line": "2026-09-16T19:34:11Z"
+    "White Rock Fortress": "2026-09-02T04:58:42Z"
   },
   "tacticalSummaries": {
     "Eastern Europe": {
@@ -411,18 +411,6 @@
         "따라서 C 거점을 공격할 때는 개활지를 직접 횡단하기보다는 남쪽 숲을 이용하여 은폐된 상태로 우회한 뒤 적의 측면이나 후방을 공격하는 것을 추천합니다."
       ]
     },
-    "Iberian Castle": {
-      "en": [
-        "On Iberian Castle, the area around point A is a broad plain made up of monastery buildings and expansive vineyards. If you use the vineyards for concealment and complete a flank without being spotted, you can quickly reach and pressure the enemy spawn area.",
-        "The urban area around point B is the key position on the map. Winning the fight for this area makes it much easier to control both points A and B at the same time and secure the initiative across the battlefield.",
-        "Point C consists of low hills and rolling terrain separated from the main urban area by the castle walls. Because it functions as a relatively isolated battlefield with limited influence on the other capture points, its strategic value is comparatively low."
-      ],
-      "ko": [
-        "이베리아 성에서 A 거점 일대는 수도원 건물과 넓은 포도밭으로 이루어진 평야입니다. 포도밭을 이용해 은폐한 채 적에게 발각되지 않고 우회에 성공하면 곧바로 적 스폰 지역을 압박할 수 있습니다.",
-        "B 거점 주변 시가지는 이 맵의 핵심 지역입니다. 이곳의 힘싸움에서 우위를 점하면 A와 B 거점을 동시에 통제하기 쉬워져 전장 주도권을 확보할 수 있습니다.",
-        "C 거점은 낮은 언덕과 구릉으로 구성되어 있으며 성벽으로 주 시가지와 분리된 독립적인 전장에 가깝습니다. 다른 거점과의 연계가 약해 전략적 가치는 상대적으로 낮은 편입니다."
-      ]
-    },
     "Finland": {
       "en": [
         "On Finland, control of the two areas between the three capture points is more important than the capture points themselves.",
@@ -447,14 +435,16 @@
         "A 거점은 평지에 놓여 있어 안전하게 점령하기 어렵고 다른 전선에 미치는 영향도 적어 전략적 가치가 낮습니다. C 역시 대형 굴착기를 제외하면 주변이 크게 노출되어 있어 선점하기 쉽지 않습니다."
       ]
     },
-    "Mozdok": {
+    "Iberian Castle": {
       "en": [
-        "The decisive area on Mozdok is the high ground around point B. Controlling it gives strong influence over both A and C and can quickly create pressure on the enemy spawn.",
-        "Point A strongly favors the defender and is difficult to break directly. Around C, hull-down fighting is usually safer than wide flanks, although the recessed riverbed provides the southern team with a relatively protected approach."
+        "On Iberian Castle, the area around point A is a broad plain made up of monastery buildings and expansive vineyards. If you use the vineyards for concealment and complete a flank without being spotted, you can quickly reach and pressure the enemy spawn area.",
+        "The urban area around point B is the key position on the map. Winning the fight for this area makes it much easier to control both points A and B at the same time and secure the initiative across the battlefield.",
+        "Point C consists of low hills and rolling terrain separated from the main urban area by the castle walls. Because it functions as a relatively isolated battlefield with limited influence on the other capture points, its strategic value is comparatively low."
       ],
       "ko": [
-        "모즈도크의 핵심 지역은 B 거점 주변의 고지대입니다. 이곳을 장악하면 A와 C 모두에 강한 영향력을 행사할 수 있으며 곧바로 적 스폰 지역을 압박할 수도 있습니다.",
-        "A 거점은 방어 측에 크게 유리해 정면 돌파가 어렵습니다. C 주변에서는 큰 우회보다 헐다운 교전이 안전한 편이며, 남쪽 팀은 움푹 파인 강줄기를 이용해 비교적 엄폐된 상태로 진격할 수 있습니다."
+        "이베리아 성에서 A 거점 일대는 수도원 건물과 넓은 포도밭으로 이루어진 평야입니다. 포도밭을 이용해 은폐한 채 적에게 발각되지 않고 우회에 성공하면 곧바로 적 스폰 지역을 압박할 수 있습니다.",
+        "B 거점 주변 시가지는 이 맵의 핵심 지역입니다. 이곳의 힘싸움에서 우위를 점하면 A와 B 거점을 동시에 통제하기 쉬워져 전장 주도권을 확보할 수 있습니다.",
+        "C 거점은 낮은 언덕과 구릉으로 구성되어 있으며 성벽으로 주 시가지와 분리된 독립적인 전장에 가깝습니다. 다른 거점과의 연계가 약해 전략적 가치는 상대적으로 낮은 편입니다."
       ]
     },
     "Japan": {
@@ -489,6 +479,16 @@
       "ko": [
         "중동의 핵심 지역은 B와 C 거점 사이의 시가지입니다. 두 전선은 서로 강하게 연결되어 있어 한쪽이 무너지면 다른 쪽도 함께 압박받게 됩니다.",
         "A 거점 북쪽에는 스폰 지역까지 이어지는 우회로가 있지만 성공 확률이 낮은 도박성 경로입니다. 따라서 대부분의 전투에서는 B–C 시가지 전선을 장악하는 것이 가장 중요합니다."
+      ]
+    },
+    "Mozdok": {
+      "en": [
+        "The decisive area on Mozdok is the high ground around point B. Controlling it gives strong influence over both A and C and can quickly create pressure on the enemy spawn.",
+        "Point A strongly favors the defender and is difficult to break directly. Around C, hull-down fighting is usually safer than wide flanks, although the recessed riverbed provides the southern team with a relatively protected approach."
+      ],
+      "ko": [
+        "모즈도크의 핵심 지역은 B 거점 주변의 고지대입니다. 이곳을 장악하면 A와 C 모두에 강한 영향력을 행사할 수 있으며 곧바로 적 스폰 지역을 압박할 수도 있습니다.",
+        "A 거점은 방어 측에 크게 유리해 정면 돌파가 어렵습니다. C 주변에서는 큰 우회보다 헐다운 교전이 안전한 편이며, 남쪽 팀은 움푹 파인 강줄기를 이용해 비교적 엄폐된 상태로 진격할 수 있습니다."
       ]
     },
     "North Holland": {
@@ -569,6 +569,26 @@
         "A 거점을 돌파하면 곧바로 스폰 압박으로 이어질 수 있습니다. 부각이 좋은 전차라면 A 전선의 가치가 높고, 기동성이 좋은 전차라면 B와 C 주변에서 더 큰 영향력을 발휘하기 쉽습니다."
       ]
     },
+    "Sinai": {
+      "en": [
+        "Sinai is an asymmetrical map that favors the southern team. The key area is the rocky ridge between points B and C; controlling it can deny B, secure both B and C, and open routes toward the enemy spawn.",
+        "The southern team can approach point A and the oil-storage area between A and B much more safely, while the northern team must cross exposed ground and should use smoke when advancing. For the north, holding the oil-storage sector is critical, because if the south breaks through there it can flank the B–C ridge and pressure both northern spawns."
+      ],
+      "ko": [
+        "시나이는 남쪽 팀이 유리한 비대칭형 맵이며, 핵심 지역은 B와 C 거점 사이의 바위 능선입니다. 이 능선을 장악하면 B 점령을 사실상 봉쇄하면서 B와 C를 동시에 통제할 수 있고, 적 스폰 지역으로 이어지는 경로도 열립니다.",
+        "남쪽 팀은 A 거점과 A–B 사이의 유류 저장고 지역에 비교적 안전하게 접근할 수 있지만, 북쪽 팀은 노출된 평야를 지나야 하므로 진입 시 연막 사용이 중요합니다. 북쪽 팀은 A를 내주더라도 유류 저장고 구역의 돌파만큼은 반드시 막아야 하며, 이곳이 뚫리면 B–C 능선의 측면과 양쪽 스폰이 동시에 위협받을 수 있습니다."
+      ]
+    },
+    "Spaceport": {
+      "en": [
+        "The key area on Spaceport is the dense urban district around point B. If this sector is broken through, it can quickly lead to direct pressure on the enemy spawn, giving the northern side a slight disadvantage because some building windows provide firing angles into its northern spawn.",
+        "Fast vehicles can flank through the open ground northwest of point A, while another route runs beneath the elevated road between points B and C. These routes can bypass the main frontline, but control of the B-side urban area remains the most important objective."
+      ],
+      "ko": [
+        "우주공항의 핵심 지역은 B 거점의 고밀도 시가지입니다. 이 구역이 돌파되면 곧바로 적 스폰 지역 압박으로 이어질 수 있으며, 일부 건물 창문에서 북쪽 스폰을 직접 노릴 수 있어 북쪽 팀이 약간 불리합니다.",
+        "기동성이 좋은 전차는 A 거점 북서쪽의 황무지 평야를 통해 빠르게 우회할 수 있고, B와 C 거점 사이의 고가도로 아래를 이용하는 우회로도 존재합니다. 다만 전체 전투에서 가장 중요한 것은 B 시가지의 주도권입니다."
+      ]
+    },
     "Vietnam": {
       "variations": {
         "domination-1": {
@@ -592,36 +612,6 @@
           ]
         }
       }
-    },
-    "Sinai": {
-      "en": [
-        "Sinai is an asymmetrical map that favors the southern team. The key area is the rocky ridge between points B and C; controlling it can deny B, secure both B and C, and open routes toward the enemy spawn.",
-        "The southern team can approach point A and the oil-storage area between A and B much more safely, while the northern team must cross exposed ground and should use smoke when advancing. For the north, holding the oil-storage sector is critical, because if the south breaks through there it can flank the B–C ridge and pressure both northern spawns."
-      ],
-      "ko": [
-        "시나이는 남쪽 팀이 유리한 비대칭형 맵이며, 핵심 지역은 B와 C 거점 사이의 바위 능선입니다. 이 능선을 장악하면 B 점령을 사실상 봉쇄하면서 B와 C를 동시에 통제할 수 있고, 적 스폰 지역으로 이어지는 경로도 열립니다.",
-        "남쪽 팀은 A 거점과 A–B 사이의 유류 저장고 지역에 비교적 안전하게 접근할 수 있지만, 북쪽 팀은 노출된 평야를 지나야 하므로 진입 시 연막 사용이 중요합니다. 북쪽 팀은 A를 내주더라도 유류 저장고 구역의 돌파만큼은 반드시 막아야 하며, 이곳이 뚫리면 B–C 능선의 측면과 양쪽 스폰이 동시에 위협받을 수 있습니다."
-      ]
-    },
-    "Spaceport": {
-      "en": [
-        "The key area on Spaceport is the dense urban district around point B. If this sector is broken through, it can quickly lead to direct pressure on the enemy spawn, giving the northern side a slight disadvantage because some building windows provide firing angles into its northern spawn.",
-        "Fast vehicles can flank through the open ground northwest of point A, while another route runs beneath the elevated road between points B and C. These routes can bypass the main frontline, but control of the B-side urban area remains the most important objective."
-      ],
-      "ko": [
-        "우주공항의 핵심 지역은 B 거점의 고밀도 시가지입니다. 이 구역이 돌파되면 곧바로 적 스폰 지역 압박으로 이어질 수 있으며, 일부 건물 창문에서 북쪽 스폰을 직접 노릴 수 있어 북쪽 팀이 약간 불리합니다.",
-        "기동성이 좋은 전차는 A 거점 북서쪽의 황무지 평야를 통해 빠르게 우회할 수 있고, B와 C 거점 사이의 고가도로 아래를 이용하는 우회로도 존재합니다. 다만 전체 전투에서 가장 중요한 것은 B 시가지의 주도권입니다."
-      ]
-    },
-    "Darwin Hill": {
-      "en": [
-        "Darwin Hill has an asymmetric opening around its capture points. Point A is very easy for the southern team to secure, while point B is very easy for the northern team to secure.",
-        "Because each side has a natural advantage around one of these objectives, early control usually develops around this A–B split rather than an even contest for both points."
-      ],
-      "ko": [
-        "다윈 힐은 거점별로 초반 유불리가 뚜렷한 비대칭형 맵입니다. A 거점은 남쪽 팀이 매우 쉽게 점령할 수 있는 반면, B 거점은 북쪽 팀이 매우 쉽게 점령할 수 있습니다.",
-        "따라서 초반에는 두 팀이 A와 B를 각각 유리한 방향에서 확보하는 형태로 전선이 형성되는 경우가 많습니다."
-      ]
     }
   },
   "markers": {
@@ -8869,6 +8859,126 @@
         "type": "antiAir",
         "x": 65.73,
         "y": 8.34
+      },
+      {
+        "id": "mubal7iz-whicb4",
+        "type": "tankDestroyer",
+        "x": 19.79,
+        "y": 28.32,
+        "commentImages": [
+          "Darwin Hill/scr_ (15).png"
+        ]
+      },
+      {
+        "id": "mubaqswn-92qarx",
+        "type": "sniper",
+        "x": 19.79,
+        "y": 28.32,
+        "parentTankId": "mubal7iz-whicb4"
+      },
+      {
+        "id": "mubatx9x-zm31wu",
+        "type": "tankDestroyer",
+        "x": 49.62,
+        "y": 29.58,
+        "commentImages": [
+          "Darwin Hill/scr_ (24).png"
+        ]
+      },
+      {
+        "id": "mubau3sf-7k20ri",
+        "type": "sniper",
+        "x": 49.62,
+        "y": 29.58,
+        "parentTankId": "mubatx9x-zm31wu"
+      },
+      {
+        "id": "mubb4w0d-0rua5p",
+        "type": "mainBattleTank",
+        "x": 38.63,
+        "y": 53.54,
+        "commentImages": [
+          "Darwin Hill/scr_ (18).png"
+        ]
+      },
+      {
+        "id": "mubb4xcz-saavrh",
+        "type": "highRiskSpot",
+        "x": 38.63,
+        "y": 53.54,
+        "parentTankId": "mubb4w0d-0rua5p"
+      },
+      {
+        "id": "mubbgzd1-0dnyzg",
+        "type": "mainBattleTank",
+        "x": 23.96,
+        "y": 41.59,
+        "commentImages": [
+          "Darwin Hill/scr_ (16).png",
+          "Darwin Hill/scr_ (17).png"
+        ]
+      },
+      {
+        "id": "mubbh0e7-vfuc0q",
+        "type": "battleLine",
+        "x": 23.96,
+        "y": 41.59,
+        "parentTankId": "mubbgzd1-0dnyzg"
+      },
+      {
+        "id": "mubxbewy-arv10e",
+        "type": "mainBattleTank",
+        "x": 50.13,
+        "y": 51.07,
+        "commentImages": [
+          "Darwin Hill/scr_ (23).png"
+        ]
+      },
+      {
+        "id": "mubxbg0r-ikif0z",
+        "type": "battleLine",
+        "x": 50.13,
+        "y": 51.07,
+        "parentTankId": "mubxbewy-arv10e"
+      },
+      {
+        "id": "mubxp0pj-d9ldx5",
+        "type": "lightTank",
+        "x": 15.49,
+        "y": 49.94,
+        "commentImages": [
+          "Darwin Hill/scr_ (30).png"
+        ]
+      },
+      {
+        "id": "mubxp1ov-1wjtsp",
+        "type": "highRiskSpot",
+        "x": 15.49,
+        "y": 49.94,
+        "parentTankId": "mubxp0pj-d9ldx5"
+      },
+      {
+        "id": "mubyk3ik-6nlyuc",
+        "type": "smokeshell",
+        "x": 38.24,
+        "y": 50.7
+      },
+      {
+        "id": "mubymwi7-folgm3",
+        "type": "mainBattleTank",
+        "x": 31.16,
+        "y": 50.7,
+        "commentImages": [
+          "Darwin Hill/scr_ (19).png",
+          "Darwin Hill/scr_ (20).png"
+        ]
+      },
+      {
+        "id": "mubymz5n-8oe6d1",
+        "type": "highRiskSpot",
+        "x": 31.16,
+        "y": 50.7,
+        "parentTankId": "mubymwi7-folgm3"
       }
     ],
     "Darwin Hill::domination-1|Red": [
@@ -8949,6 +9059,135 @@
         "type": "antiAirRed",
         "x": 55.73,
         "y": 97.22
+      },
+      {
+        "id": "mubat7l1-izgvmg",
+        "type": "tankDestroyerRed",
+        "x": 52.91,
+        "y": 68.77,
+        "commentImages": [
+          "Darwin Hill/scr_ (26).png"
+        ]
+      },
+      {
+        "id": "mubaudnv-0xen1j",
+        "type": "sniper",
+        "x": 52.91,
+        "y": 68.77,
+        "parentTankId": "mubat7l1-izgvmg"
+      },
+      {
+        "id": "mubaydul-8igofe",
+        "type": "tankDestroyerRed",
+        "x": 15.23,
+        "y": 78.26,
+        "commentImages": [
+          "Darwin Hill/scr_ (32).png",
+          "Darwin Hill/scr_ (33).png"
+        ]
+      },
+      {
+        "id": "mubaymgt-9f2tuo",
+        "type": "sniper",
+        "x": 15.23,
+        "y": 78.26,
+        "parentTankId": "mubaydul-8igofe"
+      },
+      {
+        "id": "mubb3ec0-j8l4r1",
+        "type": "mainBattleTankRed",
+        "x": 47.35,
+        "y": 58.28,
+        "commentImages": [
+          "Darwin Hill/scr_ (21).png",
+          "Darwin Hill/scr_ (25).png"
+        ]
+      },
+      {
+        "id": "mubb3fc7-q8n436",
+        "type": "battleLine",
+        "x": 47.35,
+        "y": 58.28,
+        "parentTankId": "mubb3ec0-j8l4r1"
+      },
+      {
+        "id": "mubb9nzr-g9xr4v",
+        "type": "mainBattleTankRed",
+        "x": 18.39,
+        "y": 53.98,
+        "commentImages": [
+          "Darwin Hill/scr_ (28).png",
+          "Darwin Hill/scr_ (29).png"
+        ]
+      },
+      {
+        "id": "mubband1-tdms4v",
+        "type": "battleLine",
+        "x": 18.39,
+        "y": 53.98,
+        "parentTankId": "mubb9nzr-g9xr4v"
+      },
+      {
+        "id": "mubbc2hs-vsq2kq",
+        "type": "tankDestroyerRed",
+        "x": 5.25,
+        "y": 72.82
+      },
+      {
+        "id": "mubbc3wr-9vnmzu",
+        "type": "sniper",
+        "x": 5.25,
+        "y": 72.82,
+        "parentTankId": "mubbc2hs-vsq2kq"
+      },
+      {
+        "id": "mubbh998-b6yv4k",
+        "type": "mainBattleTankRed",
+        "x": 23.96,
+        "y": 71.18,
+        "commentImages": [
+          "Darwin Hill/scr_ (27).png"
+        ]
+      },
+      {
+        "id": "mubbhken-grmhhh",
+        "type": "battleLine",
+        "x": 23.96,
+        "y": 71.18,
+        "parentTankId": "mubbh998-b6yv4k"
+      },
+      {
+        "id": "mubxjph7-h0uw7s",
+        "type": "mainBattleTankRed",
+        "x": 10.81,
+        "y": 34.77,
+        "commentImages": [
+          "Darwin Hill/scr_ (31).png"
+        ]
+      },
+      {
+        "id": "mubxjqg1-3o0ad0",
+        "type": "highRiskSpot",
+        "x": 10.81,
+        "y": 34.77,
+        "parentTankId": "mubxjph7-h0uw7s"
+      },
+      {
+        "id": "muc33s5n-nvm7ch",
+        "type": "tankDestroyerRed",
+        "x": 78.73,
+        "y": 64.38,
+        "commentImages": [
+          "Darwin Hill/scr_ (35).png",
+          "Darwin Hill/scr_ (36).png"
+        ]
+      },
+      {
+        "id": "muc34hwv-og9ycp",
+        "type": "sniper",
+        "x": 78.73,
+        "y": 64.38,
+        "parentTankId": "muc33s5n-nvm7ch"
       }
     ],
     "Darwin Hill::conquest-1|Blue": [
@@ -13189,6 +13428,8 @@
         "parentTankId": "maginot-line-blue-unit-01"
       }
     ],
+    "Maginot Line::domination-2|Blue": [],
+    "Maginot Line::domination-2|Red": [],
     "Middle East::domination-1|Red": [
       {
         "id": "mu1gmxcu-sd3c1f",
@@ -21111,9 +21352,7 @@
         "x": 32.89,
         "y": 17.37
       }
-    ],
-    "Maginot Line::domination-2|Blue": [],
-    "Maginot Line::domination-2|Red": []
+    ]
   },
   "annotations": {
     "38th Parallel::domination-1|Red": [
@@ -39619,6 +39858,308 @@
           }
         ],
         "dangerRoute": true
+      },
+      {
+        "id": "mubaqr11-54behw",
+        "type": "aimHere",
+        "parentTankId": "mubal7iz-whicb4",
+        "startX": 19.79,
+        "startY": 28.32,
+        "endX": 18.65,
+        "endY": 73.2
+      },
+      {
+        "id": "mubaqxhd-8dknn9",
+        "type": "route",
+        "points": [
+          {
+            "x": 19.79,
+            "y": 14.54
+          },
+          {
+            "x": 19.03,
+            "y": 19.22
+          },
+          {
+            "x": 19.03,
+            "y": 24.4
+          },
+          {
+            "x": 19.91,
+            "y": 27.94
+          }
+        ]
+      },
+      {
+        "id": "mubau207-ed2w9v",
+        "type": "aimHere",
+        "parentTankId": "mubatx9x-zm31wu",
+        "startX": 49.62,
+        "startY": 29.58,
+        "endX": 49.12,
+        "endY": 70.54
+      },
+      {
+        "id": "mubbmmz9-m78hfo",
+        "type": "aimHere",
+        "parentTankId": "mubb4w0d-0rua5p",
+        "startX": 38.63,
+        "startY": 53.54,
+        "endX": 50.88,
+        "endY": 60.56
+      },
+      {
+        "id": "mubxp8hj-nrptgm",
+        "type": "route",
+        "points": [
+          {
+            "x": 8.15,
+            "y": 36.03
+          },
+          {
+            "x": 7.27,
+            "y": 39.32
+          },
+          {
+            "x": 8.15,
+            "y": 42.6
+          },
+          {
+            "x": 10.81,
+            "y": 48.04
+          },
+          {
+            "x": 15.11,
+            "y": 49.81
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "mubxpf1j-kvf4p1",
+        "type": "aimHere",
+        "parentTankId": "mubxp0pj-d9ldx5",
+        "startX": 15.49,
+        "startY": 49.94,
+        "endX": 19.66,
+        "endY": 55.63
+      },
+      {
+        "id": "mubxur2n-56thpi",
+        "type": "route",
+        "points": [
+          {
+            "x": 24.21,
+            "y": 41.09
+          },
+          {
+            "x": 27.75,
+            "y": 37.42
+          },
+          {
+            "x": 29.52,
+            "y": 33
+          },
+          {
+            "x": 28.51,
+            "y": 30.72
+          }
+        ]
+      },
+      {
+        "id": "mubxv6dx-7gcvw4",
+        "type": "route",
+        "points": [
+          {
+            "x": 49.37,
+            "y": 29.46
+          },
+          {
+            "x": 48.99,
+            "y": 25.16
+          },
+          {
+            "x": 49.49,
+            "y": 21.62
+          },
+          {
+            "x": 52.02,
+            "y": 19.34
+          },
+          {
+            "x": 56.95,
+            "y": 16.43
+          },
+          {
+            "x": 60.49,
+            "y": 14.92
+          },
+          {
+            "x": 61,
+            "y": 11.25
+          },
+          {
+            "x": 61.5,
+            "y": 9.86
+          }
+        ]
+      },
+      {
+        "id": "mubyernu-ppffny",
+        "type": "route",
+        "points": [
+          {
+            "x": 42.67,
+            "y": 30.21
+          },
+          {
+            "x": 41.4,
+            "y": 34.13
+          },
+          {
+            "x": 38.87,
+            "y": 35.78
+          },
+          {
+            "x": 37.36,
+            "y": 41.21
+          },
+          {
+            "x": 36.47,
+            "y": 43.74
+          }
+        ]
+      },
+      {
+        "id": "mubyevgk-dvksf1",
+        "type": "route",
+        "points": [
+          {
+            "x": 35.97,
+            "y": 51.71
+          },
+          {
+            "x": 35.59,
+            "y": 48.67
+          },
+          {
+            "x": 36.35,
+            "y": 43.49
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "mubyncgc-o2n0w0",
+        "type": "aimHere",
+        "parentTankId": "mubymwi7-folgm3",
+        "startX": 31.16,
+        "startY": 50.7,
+        "endX": 25.22,
+        "endY": 70.54
+      },
+      {
+        "id": "mubyobpq-jjkq55",
+        "type": "aimHere",
+        "parentTankId": "mubymwi7-folgm3",
+        "startX": 31.16,
+        "startY": 50.7,
+        "endX": 34.32,
+        "endY": 72.57
+      },
+      {
+        "id": "mubyvinm-ku4bax",
+        "type": "route",
+        "points": [
+          {
+            "x": 31.42,
+            "y": 50.82
+          },
+          {
+            "x": 31.54,
+            "y": 48.42
+          },
+          {
+            "x": 35.46,
+            "y": 46.4
+          },
+          {
+            "x": 35.97,
+            "y": 45.01
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "mubzd741-oa0q3i",
+        "type": "route",
+        "points": [
+          {
+            "x": 48.86,
+            "y": 40.71
+          },
+          {
+            "x": 51.39,
+            "y": 44.12
+          },
+          {
+            "x": 53.41,
+            "y": 47.53
+          },
+          {
+            "x": 53.41,
+            "y": 52.34
+          },
+          {
+            "x": 52.02,
+            "y": 54.11
+          },
+          {
+            "x": 50.38,
+            "y": 51.45
+          }
+        ]
+      },
+      {
+        "id": "mubzdfgr-hi4mt5",
+        "type": "aimHere",
+        "parentTankId": "mubxbewy-arv10e",
+        "startX": 50.13,
+        "startY": 51.07,
+        "endX": 51.39,
+        "endY": 60.56
+      },
+      {
+        "id": "muc2xjab-48u3a3",
+        "type": "aimHere",
+        "parentTankId": "mubbgzd1-0dnyzg",
+        "startX": 23.96,
+        "startY": 41.59,
+        "endX": 11.06,
+        "endY": 55.51
+      },
+      {
+        "id": "muc2xns5-2b5586",
+        "type": "aimHere",
+        "parentTankId": "mubbgzd1-0dnyzg",
+        "startX": 23.96,
+        "startY": 41.59,
+        "endX": 32.19,
+        "endY": 76.1
+      },
+      {
+        "id": "muc2y2q1-knunur",
+        "type": "route",
+        "points": [
+          {
+            "x": 36.04,
+            "y": 52.11
+          },
+          {
+            "x": 38.1,
+            "y": 53.37
+          }
+        ]
       }
     ],
     "Darwin Hill::domination-1|Red": [
@@ -39791,6 +40332,177 @@
           }
         ],
         "dangerRoute": true
+      },
+      {
+        "id": "mubatsgf-gwzo6l",
+        "type": "aimHere",
+        "parentTankId": "mubat7l1-izgvmg",
+        "startX": 52.91,
+        "startY": 68.77,
+        "endX": 47.47,
+        "endY": 31.61
+      },
+      {
+        "id": "mubayitb-6mbjoo",
+        "type": "aimHere",
+        "parentTankId": "mubaydul-8igofe",
+        "startX": 15.23,
+        "startY": 78.26,
+        "endX": 19.28,
+        "endY": 36.79
+      },
+      {
+        "id": "mubb3l8q-7e81xv",
+        "type": "aimHere",
+        "parentTankId": "mubb3ec0-j8l4r1",
+        "startX": 47.35,
+        "startY": 58.28,
+        "endX": 48.99,
+        "endY": 45.01
+      },
+      {
+        "id": "mubb7dmd-zfitk1",
+        "type": "aimHere",
+        "parentTankId": "mubb3ec0-j8l4r1",
+        "startX": 47.35,
+        "startY": 58.28,
+        "endX": 34.2,
+        "endY": 49.05
+      },
+      {
+        "id": "mubbab3q-t42zh3",
+        "type": "route",
+        "points": [
+          {
+            "x": 29.14,
+            "y": 67.89
+          },
+          {
+            "x": 28.26,
+            "y": 64.48
+          },
+          {
+            "x": 25.22,
+            "y": 62.71
+          },
+          {
+            "x": 20.67,
+            "y": 60.56
+          },
+          {
+            "x": 19.79,
+            "y": 59.54
+          }
+        ]
+      },
+      {
+        "id": "mubbae4d-bbc90l",
+        "type": "route",
+        "points": [
+          {
+            "x": 18.52,
+            "y": 54.36
+          },
+          {
+            "x": 19.53,
+            "y": 59.92
+          }
+        ],
+        "dangerRoute": false
+      },
+      {
+        "id": "mubbhj2z-8pjnur",
+        "type": "aimHere",
+        "parentTankId": "mubbh998-b6yv4k",
+        "startX": 23.96,
+        "startY": 71.18,
+        "endX": 34.2,
+        "endY": 48.42
+      },
+      {
+        "id": "mubxjtit-rovn0j",
+        "type": "aimHere",
+        "parentTankId": "mubxjph7-h0uw7s",
+        "startX": 10.81,
+        "startY": 34.77,
+        "endX": 19.03,
+        "endY": 19.22
+      },
+      {
+        "id": "mubxkaa7-o8xi7t",
+        "type": "route",
+        "points": [
+          {
+            "x": 10.94,
+            "y": 35.52
+          },
+          {
+            "x": 12.07,
+            "y": 36.28
+          },
+          {
+            "x": 9.42,
+            "y": 37.67
+          },
+          {
+            "x": 7.65,
+            "y": 39.44
+          },
+          {
+            "x": 7.9,
+            "y": 42.48
+          },
+          {
+            "x": 10.94,
+            "y": 46.14
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "mubzqjbt-9ampsh",
+        "type": "aimHere",
+        "parentTankId": "mubb9nzr-g9xr4v",
+        "startX": 18.39,
+        "startY": 53.98,
+        "endX": 9.8,
+        "endY": 44.63
+      },
+      {
+        "id": "muc036ee-4ew6ej",
+        "type": "aimHere",
+        "parentTankId": "mubbc2hs-vsq2kq",
+        "startX": 5.25,
+        "startY": 72.82,
+        "endX": 8.41,
+        "endY": 30.47
+      },
+      {
+        "id": "muc339y9-0ysemn",
+        "type": "aimHere",
+        "parentTankId": "mubaydul-8igofe",
+        "startX": 15.23,
+        "startY": 78.26,
+        "endX": 8.92,
+        "endY": 35.91
+      },
+      {
+        "id": "muc33ypr-9nu9p6",
+        "type": "aimHere",
+        "parentTankId": "muc33s5n-nvm7ch",
+        "startX": 78.73,
+        "startY": 64.38,
+        "endX": 86.88,
+        "endY": 46.56
+      },
+      {
+        "id": "muc346l3-owrvca",
+        "type": "aimHere",
+        "parentTankId": "muc33s5n-nvm7ch",
+        "startX": 78.73,
+        "startY": 64.38,
+        "endX": 57.97,
+        "endY": 23.02
       }
     ],
     "Darwin Hill::conquest-1|Blue": [
@@ -48528,6 +49240,8 @@
         "endY": 14.42
       }
     ],
+    "Maginot Line::domination-2|Blue": [],
+    "Maginot Line::domination-2|Red": [],
     "Middle East::domination-1|Red": [
       {
         "id": "mu1gn9he-ipfi38",
@@ -65160,9 +65874,7 @@
           }
         ]
       }
-    ],
-    "Maginot Line::domination-2|Blue": [],
-    "Maginot Line::domination-2|Red": []
+    ]
   },
   "vectorGroups": {
     "Arctic Pier::domination-1|Blue": [],
@@ -65176,6 +65888,6 @@
     "Darwin Hill::battle-1|Red": [],
     "Sands of Sinai::domination-1|Blue": []
   },
-  "updatedAt": "2026-09-16T19:37:22.133Z",
-  "exportedAt": "2026-09-16T19:37:38.387Z"
+  "updatedAt": "2026-09-22T02:59:14.243Z",
+  "exportedAt": "2026-09-22T02:59:14.977Z"
 }
