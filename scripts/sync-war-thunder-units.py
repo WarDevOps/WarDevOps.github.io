@@ -276,6 +276,7 @@ def parse_arguments() -> argparse.Namespace:
     parser.add_argument("--limit", type=int, default=0, help="Limit each category for parser testing")
     parser.add_argument("--metadata-only", action="store_true", help="Do not download images")
     parser.add_argument("--dry-run", action="store_true", help="Parse and report without writing the catalog")
+    parser.add_argument("--new-only", action="store_true", help="Append only Wiki units missing from the current catalog")
     parser.add_argument("--categories", nargs="+", choices=tuple(CATEGORIES), default=list(CATEGORIES))
     return parser.parse_args()
 
@@ -283,14 +284,29 @@ def parse_arguments() -> argparse.Namespace:
 def main() -> int:
     arguments = parse_arguments()
     repo_root = arguments.repo_root.resolve()
-    catalog: dict[str, list[dict]] = {category: [] for category in CATEGORIES}
+    catalog_path = repo_root / "assets" / "data" / "tier-units.json"
+    if arguments.new_only:
+        existing_catalog = json.loads(catalog_path.read_text(encoding="utf-8"))
+        if existing_catalog.get("battleRatingMode") != "RB":
+            raise RuntimeError("Existing catalog must use Realistic Battles ratings")
+        catalog = {
+            category: list(existing_catalog["categories"][category]["units"])
+            for category in CATEGORIES
+        }
+    else:
+        catalog: dict[str, list[dict]] = {category: [] for category in CATEGORIES}
     failures: list[str] = []
     for category in arguments.categories:
         page = CATEGORIES[category]["page"]
         unit_ids = list_unit_ids(page)
+        if arguments.new_only:
+            existing_ids = {unit["wikiId"] for unit in catalog[category]}
+            unit_ids = [wiki_id for wiki_id in unit_ids if wiki_id not in existing_ids]
+            log(f"[{category}] discovered {len(unit_ids)} new units")
         if arguments.limit:
             unit_ids = unit_ids[: arguments.limit]
-        log(f"[{category}] discovered {len(unit_ids)} units")
+        if not arguments.new_only:
+            log(f"[{category}] discovered {len(unit_ids)} units")
         results: dict[str, dict] = {}
         with concurrent.futures.ThreadPoolExecutor(max_workers=max(1, arguments.workers)) as executor:
             future_to_id = {
@@ -306,14 +322,17 @@ def main() -> int:
                     log(f"[{category}] ERROR {wiki_id}: {error}")
                 if completed % 25 == 0 or completed == len(unit_ids):
                     log(f"[{category}] {completed}/{len(unit_ids)} complete")
-        catalog[category] = [results[wiki_id] for wiki_id in unit_ids if wiki_id in results]
+        parsed_units = [results[wiki_id] for wiki_id in unit_ids if wiki_id in results]
+        if arguments.new_only:
+            catalog[category].extend(parsed_units)
+        else:
+            catalog[category] = parsed_units
     if failures:
         log(f"Synchronization failed for {len(failures)} units")
         for failure in failures:
             log(f"  {failure}")
         return 1
     if not arguments.dry_run:
-        catalog_path = repo_root / "assets" / "data" / "tier-units.json"
         write_catalog(catalog_path, catalog)
         log(f"Wrote {catalog_path}")
     for category in arguments.categories:

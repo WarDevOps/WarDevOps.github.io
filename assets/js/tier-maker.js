@@ -4,7 +4,7 @@ if (tierRoot) {
   const TIER_ZONES = Object.freeze(["s", "a", "b", "c", "d", "pool"]);
   const STORAGE_KEY = "maptactic-tier-maker-v1";
 
-  const catalogResponse = await fetch(new URL("../data/tier-units.json?v=rb-catalog-20260818", import.meta.url));
+  const catalogResponse = await fetch(new URL("../data/tier-units.json?v=sky-odyssey-20260922", import.meta.url));
   if (!catalogResponse.ok) throw new Error(`Tier catalog request failed: ${catalogResponse.status}`);
   const tierCatalog = await catalogResponse.json();
   if (tierCatalog.battleRatingMode !== "RB") throw new Error("Tier catalog must use Realistic Battles ratings");
