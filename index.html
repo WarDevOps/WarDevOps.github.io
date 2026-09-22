@@ -52,7 +52,7 @@
   </script>
   <title>War Thunder Map Guide &amp; Tactics | WarDevOps</title>
 
-  <link rel="stylesheet" href="/assets/css/site.css?v=tier-restored-20260922">
+  <link rel="stylesheet" href="/assets/css/site.css?v=tank-marker-type-20260923">
 </head>
 <body>
   <header class="site-header">
@@ -148,6 +148,10 @@
           <span class="map-enlarge-hint" data-i18n="enlargeHint">Click to enlarge</span>
           <div class="marker-context-menu" id="marker-context-menu" role="menu" aria-label="Marker actions" data-i18n-aria="markerActions" hidden>
             <div data-marker-action-list>
+              <div class="marker-context-tank-actions" data-tank-marker-actions hidden>
+                <p class="marker-context-role-title" data-i18n="tankMarkerType">Tank Marker</p>
+                <div data-tank-marker-options></div>
+              </div>
               <div class="marker-context-role-actions" data-role-marker-actions hidden>
                 <p class="marker-context-role-title" data-i18n="roleMarker">Role Marker</p>
                 <button class="marker-context-action role" type="button" data-marker-role="battleLine" role="menuitemradio" aria-pressed="false" data-i18n="battleLine">Front Line</button>
@@ -346,6 +350,10 @@
         <div class="marker-layer" id="modal-marker-layer" aria-label="Map markers" data-i18n-aria="mapMarkers"></div>
         <div class="marker-context-menu" id="modal-marker-context-menu" role="menu" aria-label="Marker actions" data-i18n-aria="markerActions" hidden>
           <div data-marker-action-list>
+            <div class="marker-context-tank-actions" data-tank-marker-actions hidden>
+              <p class="marker-context-role-title" data-i18n="tankMarkerType">Tank Marker</p>
+              <div data-tank-marker-options></div>
+            </div>
             <div class="marker-context-role-actions" data-role-marker-actions hidden>
               <p class="marker-context-role-title" data-i18n="roleMarker">Role Marker</p>
               <button class="marker-context-action role" type="button" data-marker-role="battleLine" role="menuitemradio" aria-pressed="false" data-i18n="battleLine">Front Line</button>
@@ -398,7 +406,7 @@
 
   <input id="marker-layout-import-file" type="file" accept="application/json,.json" hidden>
 
-  <script type="module" src="/assets/js/app.js?v=comment-carousel-swipe-20260921"></script>
+  <script type="module" src="/assets/js/app.js?v=tank-marker-type-20260923"></script>
   <script type="module" src="/assets/js/consent-controls.js?v=20260828"></script>
 </body>
 </html>

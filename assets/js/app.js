@@ -4,7 +4,7 @@ import { createVectorEditor } from './vector-editor.js?v=independent-selection-2
 import { validateVectorGroups, pruneGroups } from './vector-model.js?v=independent-selection-20260917';
 let vectorEditor = null;
     import { commentImages } from './comment-images.js?v=comment-images-e5696e00de9a';
-    import { defaultMarkerLayout, maps, translations } from './data.js?v=mobile-hard-reset-20260921';
+    import { defaultMarkerLayout, maps, translations } from './data.js?v=tank-marker-type-20260923';
     import { normalizeTacticalSummary, resolveTacticalSummary, withVariationSummary } from './tactical-summary.js?v=variation-switch-20260914';
     import { acceptUpstreamMap, isMapSyncState, markLayoutAsLocalEdits, markMapEdited, mergeMapLayouts, sourceRevision } from './marker-merge.js?v=mobile-default-layout-20260917';
 
@@ -272,6 +272,10 @@ let vectorEditor = null;
       "antiAir",
       "antiAirRed"
     ]);
+    const TANK_MARKER_TYPE_GROUPS = Object.freeze({
+      standard: Object.freeze(["lightTank", "mainBattleTank", "tankDestroyer", "antiAir"]),
+      red: Object.freeze(["lightTankRed", "mainBattleTankRed", "tankDestroyerRed", "antiAirRed"])
+    });
     const ROLE_MARKER_TYPES = new Set(["battleLine", "highRiskSpot", "sniper", "spawnKill"]);
     const SPECIAL_MARKER_MAP_NAMES = new Set([
       "Surroundings of Volokolamsk",
@@ -1435,6 +1439,14 @@ let vectorEditor = null;
       persistMarkerLayout("roleMarkerApplied", { touchMap: true });
       renderMarkers();
     }
+    function changeTankMarkerType(tankMarker, tankType) {
+      if (!isTankMarker(tankMarker) || !TANK_MARKER_TYPES.has(tankType)) return;
+      const currentGroup = tankMarker.type.endsWith("Red") ? "red" : "standard";
+      if (!TANK_MARKER_TYPE_GROUPS[currentGroup].includes(tankType) || tankMarker.type === tankType) return;
+      tankMarker.type = tankType;
+      persistMarkerLayout("tankMarkerTypeChanged", { touchMap: true });
+      renderMarkers();
+    }
     function resetCommentEditor(contextMenu) {
       const actionList = contextMenu.querySelector("[data-marker-action-list]");
       const editor = contextMenu.querySelector("[data-marker-comment-editor]");
@@ -1740,13 +1752,32 @@ let vectorEditor = null;
       return true;
     }
     function updateMarkerContextActions(contextMenu, marker) {
+      const tankActions = contextMenu.querySelector("[data-tank-marker-actions]");
+      const tankOptions = contextMenu.querySelector("[data-tank-marker-options]");
       const roleActions = contextMenu.querySelector("[data-role-marker-actions]");
       const tankMarker = linkedTankMarker(marker);
+      tankActions.hidden = !state.editMode || !tankMarker;
       roleActions.hidden = !state.editMode || !tankMarker;
       contextMenu.querySelector("[data-marker-tool='aimHere']").hidden = !state.editMode || !tankMarker;
       contextMenu.querySelector("[data-marker-action='addComment']").hidden = !state.editMode || !isTankMarker(marker);
       contextMenu.querySelector("[data-marker-action='delete']").hidden = !state.editMode;
       if (!state.editMode || !tankMarker) return;
+      const tankGroup = tankMarker.type.endsWith("Red") ? "red" : "standard";
+      tankOptions.replaceChildren(...TANK_MARKER_TYPE_GROUPS[tankGroup].map(type => {
+        const button = document.createElement("button");
+        button.className = "marker-context-action tank-type";
+        button.type = "button";
+        button.dataset.tankMarkerType = type;
+        button.setAttribute("role", "menuitemradio");
+        button.setAttribute("aria-pressed", String(type === tankMarker.type));
+        const icon = document.createElement("img");
+        icon.src = markerIconPath({ type }, markerTypes.get(type)?.icon || "");
+        icon.alt = "";
+        const label = document.createElement("span");
+        label.textContent = t(type);
+        button.append(icon, label);
+        return button;
+      }));
       const selectedRoleMarker = linkedRoleMarker(tankMarker);
       roleActions.querySelectorAll("[data-marker-role]").forEach(button => {
         button.setAttribute("aria-pressed", String(button.dataset.markerRole === selectedRoleMarker?.type));
@@ -2744,12 +2775,19 @@ let vectorEditor = null;
     }
     function bindMarkerContextMenu(contextMenu) {
       contextMenu.addEventListener("click", event => {
+        const tankType = event.target.closest("[data-tank-marker-type]")?.dataset.tankMarkerType;
         const roleType = event.target.closest("[data-marker-role]")?.dataset.markerRole;
         const drawingTool = event.target.closest("[data-marker-tool]")?.dataset.markerTool;
         const action = event.target.closest("[data-marker-action]")?.dataset.markerAction;
         const commentAction = event.target.closest("[data-marker-comment-action]")?.dataset.markerCommentAction;
         if (!state.contextMarkerId) return;
         const marker = currentMarkers().find(item => item.id === state.contextMarkerId);
+        if (tankType && marker) {
+          const tankMarker = linkedTankMarker(marker);
+          if (tankMarker) changeTankMarkerType(tankMarker, tankType);
+          hideMarkerContextMenu();
+          return;
+        }
         if (roleType && marker) {
           const tankMarker = linkedTankMarker(marker);
           if (tankMarker) applyRoleMarker(tankMarker, roleType);
