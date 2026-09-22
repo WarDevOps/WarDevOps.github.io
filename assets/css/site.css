@@ -330,6 +330,7 @@
     .team-legend .blue-dot { background: var(--blue); }
 
     .marker-context-menu, .annotation-context-menu { box-sizing: border-box; position: absolute; z-index: 4; min-width: min(172px, calc(100vw - 16px)); max-width: calc(100vw - 16px); max-height: calc(100dvh - 16px); overflow-y: auto; overscroll-behavior: contain; padding: 5px; border: 1px solid var(--line); border-radius: 9px; background: var(--surface); box-shadow: 0 12px 30px rgba(0,0,0,.35); }
+    .marker-context-menu { width: min(212px, calc(100vw - 16px)); }
     .marker-context-menu[hidden], .annotation-context-menu[hidden] { display: none; }
     .marker-comment-editor { box-sizing: border-box; display: grid; width: min(232px, calc(100vw - 28px)); max-width: 100%; gap: 7px; padding: 3px; }
     .marker-comment-editor[hidden] { display: none; }

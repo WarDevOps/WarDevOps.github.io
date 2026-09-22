@@ -10,9 +10,9 @@
     "Aral Sea": "2026-09-22",
     "Arctic Pier": "2026-09-15",
     "Arctic Polar Base": "2026-09-12",
-    "Ardennes": "2026-09-14",
+    "Ardennes": "2026-09-23",
     "Ash River": "2026-09-02",
-    "Attica": "2026-09-03",
+    "Attica": "2026-09-23",
     "Battle of Hürtgen Forest": "2026-09-17",
     "Berlin": "2026-09-11",
     "Breslau": "2026-09-11",
@@ -69,9 +69,9 @@
     "Aral Sea": "2026-09-22T09:25:46Z",
     "Arctic Pier": "2026-09-15T01:05:22Z",
     "Arctic Polar Base": "2026-09-12T01:01:54Z",
-    "Ardennes": "2026-09-13T23:15:39Z",
+    "Ardennes": "2026-09-22T18:37:38Z",
     "Ash River": "2026-09-01T16:50:15Z",
-    "Attica": "2026-09-03T02:06:24Z",
+    "Attica": "2026-09-22T18:50:32Z",
     "Battle of Hürtgen Forest": "2026-09-16T19:35:57Z",
     "Berlin": "2026-09-10T23:37:22Z",
     "Breslau": "2026-09-11T09:46:34Z",
@@ -5011,7 +5011,7 @@
       },
       {
         "id": "aredennes-domination-2-red-role-05",
-        "type": "spawnKill",
+        "type": "sniper",
         "x": 45.21,
         "y": 86.74,
         "parentTankId": "aredennes-domination-2-red-unit-14"
@@ -5043,6 +5043,20 @@
         "x": 59.72,
         "y": 72.5,
         "parentTankId": "aredennes-domination-2-red-unit-08"
+      },
+      {
+        "id": "muciga20-0ccgqn",
+        "type": "spawnKill",
+        "x": 52.36,
+        "y": 23.96,
+        "parentTankId": "aredennes-domination-2-red-unit-02"
+      },
+      {
+        "id": "mucigbcw-i40a3x",
+        "type": "spawnKill",
+        "x": 65.49,
+        "y": 17.5,
+        "parentTankId": "aredennes-domination-2-red-unit-01"
       }
     ],
     "Ardennes::domination-2|Blue": [
@@ -5192,6 +5206,27 @@
         "type": "mainBattleTank",
         "x": 35.35,
         "y": 94.51
+      },
+      {
+        "id": "mucifm7i-5bqf11",
+        "type": "spawnKill",
+        "x": 33.26,
+        "y": 57.36,
+        "parentTankId": "aredennes-domination-2-blue-unit-07"
+      },
+      {
+        "id": "mucifnaw-rihqiv",
+        "type": "spawnKill",
+        "x": 14.72,
+        "y": 59.31,
+        "parentTankId": "aredennes-domination-2-blue-unit-08"
+      },
+      {
+        "id": "mucifos6-bfgm2y",
+        "type": "spawnKill",
+        "x": 35.35,
+        "y": 94.51,
+        "parentTankId": "aredennes-domination-2-blue-unit-14"
       }
     ],
     "Ardennes::domination-1|Blue": [
@@ -5278,19 +5313,6 @@
         "x": 51.04,
         "y": 41.74,
         "parentTankId": "aredennes-blue-unit-07"
-      },
-      {
-        "id": "aredennes-blue-unit-09",
-        "type": "mainBattleTank",
-        "x": 55.07,
-        "y": 49.72
-      },
-      {
-        "id": "aredennes-blue-role-08",
-        "type": "battleLine",
-        "x": 55.07,
-        "y": 49.72,
-        "parentTankId": "aredennes-blue-unit-09"
       },
       {
         "id": "aredennes-blue-unit-11",
@@ -5405,8 +5427,8 @@
       {
         "id": "aredennes-blue-unit-20",
         "type": "mainBattleTank",
-        "x": 28.54,
-        "y": 91.88
+        "x": 31.8,
+        "y": 98.1
       },
       {
         "id": "aredennes-blue-unit-21",
@@ -5444,8 +5466,8 @@
       {
         "id": "mth7fmq6-wjs9qs",
         "type": "spawnKill",
-        "x": 28.54,
-        "y": 91.88,
+        "x": 31.8,
+        "y": 98.1,
         "parentTankId": "aredennes-blue-unit-20"
       },
       {
@@ -5464,14 +5486,14 @@
       {
         "id": "mth7hd90-ojq3un",
         "type": "mainBattleTank",
-        "x": 78.55,
-        "y": 81.38
+        "x": 77.56,
+        "y": 82.68
       },
       {
         "id": "mth7hfvi-gk5vdt",
         "type": "highRiskSpot",
-        "x": 78.55,
-        "y": 81.38,
+        "x": 77.56,
+        "y": 82.68,
         "parentTankId": "mth7hd90-ojq3un"
       },
       {
@@ -5498,6 +5520,19 @@
         "x": 30.23,
         "y": 66.22,
         "parentTankId": "mtices2d-8mrbqf"
+      },
+      {
+        "id": "mud0lxdu-8id1nw",
+        "type": "mainBattleTank",
+        "x": 52.4,
+        "y": 49.94
+      },
+      {
+        "id": "mud0lym8-ej139j",
+        "type": "battleLine",
+        "x": 52.4,
+        "y": 49.94,
+        "parentTankId": "mud0lxdu-8id1nw"
       }
     ],
     "Ardennes::conquest-1|Red": [
@@ -5881,9 +5916,13 @@
       },
       {
         "id": "attica-blue-unit-02",
-        "type": "mainBattleTank",
+        "type": "tankDestroyer",
         "x": 53.75,
-        "y": 16.04
+        "y": 16.04,
+        "commentImages": [
+          "Attica/scr_ (60).png",
+          "Attica/scr_ (61).png"
+        ]
       },
       {
         "id": "attica-blue-role-01",
@@ -5900,9 +5939,12 @@
       },
       {
         "id": "attica-blue-unit-04",
-        "type": "mainBattleTank",
+        "type": "tankDestroyer",
         "x": 56.04,
-        "y": 21.04
+        "y": 21.04,
+        "commentImages": [
+          "Attica/scr_ (1).png"
+        ]
       },
       {
         "id": "attica-blue-role-02",
@@ -5913,9 +5955,14 @@
       },
       {
         "id": "attica-blue-unit-05",
-        "type": "mainBattleTank",
+        "type": "tankDestroyer",
         "x": 58.4,
-        "y": 21.32
+        "y": 21.32,
+        "commentImages": [
+          "Attica/scr_ (2).png",
+          "Attica/scr_ (3).png",
+          "Attica/scr_ (4).png"
+        ]
       },
       {
         "id": "attica-blue-role-03",
@@ -5926,9 +5973,12 @@
       },
       {
         "id": "attica-blue-unit-06",
-        "type": "mainBattleTank",
+        "type": "tankDestroyer",
         "x": 42.71,
-        "y": 29.51
+        "y": 29.51,
+        "commentImages": [
+          "Attica/scr_ (59).png"
+        ]
       },
       {
         "id": "attica-blue-role-04",
@@ -5941,7 +5991,11 @@
         "id": "attica-blue-unit-07",
         "type": "mainBattleTank",
         "x": 35.07,
-        "y": 31.53
+        "y": 31.53,
+        "commentImages": [
+          "Attica/scr_ (10).png",
+          "Attica/scr_ (11).png"
+        ]
       },
       {
         "id": "attica-blue-role-05",
@@ -5954,7 +6008,12 @@
         "id": "attica-blue-unit-08",
         "type": "mainBattleTank",
         "x": 16.94,
-        "y": 32.01
+        "y": 32.01,
+        "commentImages": [
+          "Attica/scr_ (14).png",
+          "Attica/scr_ (15).png",
+          "Attica/scr_ (16).png"
+        ]
       },
       {
         "id": "attica-blue-role-06",
@@ -5967,7 +6026,11 @@
         "id": "attica-blue-unit-09",
         "type": "mainBattleTank",
         "x": 24.03,
-        "y": 33.4
+        "y": 33.4,
+        "commentImages": [
+          "Attica/scr_ (12).png",
+          "Attica/scr_ (13).png"
+        ]
       },
       {
         "id": "attica-blue-role-07",
@@ -5981,7 +6044,10 @@
         "type": "mainBattleTank",
         "x": 74.58,
         "y": 40.07,
-        "comment": "Smoke shell recommended"
+        "commentEn": "Smoke shell recommended",
+        "commentImages": [
+          "Attica/scr_ (58).png"
+        ]
       },
       {
         "id": "attica-blue-role-08",
@@ -5994,7 +6060,11 @@
         "id": "attica-blue-unit-12",
         "type": "mainBattleTank",
         "x": 57.22,
-        "y": 41.18
+        "y": 41.18,
+        "commentImages": [
+          "Attica/scr_ (6).png",
+          "Attica/scr_ (7).png"
+        ]
       },
       {
         "id": "attica-blue-role-10",
@@ -6008,7 +6078,10 @@
         "type": "mainBattleTank",
         "x": 78.47,
         "y": 42.22,
-        "comment": "Smoke shell recommended"
+        "commentEn": "Smoke shell recommended",
+        "commentImages": [
+          "Attica/scr_ (57).png"
+        ]
       },
       {
         "id": "attica-blue-role-11",
@@ -6021,7 +6094,11 @@
         "id": "attica-blue-unit-14",
         "type": "lightTank",
         "x": 35.76,
-        "y": 44.03
+        "y": 44.03,
+        "commentImages": [
+          "Attica/scr_ (8).png",
+          "Attica/scr_ (9).png"
+        ]
       },
       {
         "id": "attica-blue-role-12",
@@ -6035,7 +6112,10 @@
         "type": "mainBattleTank",
         "x": 75,
         "y": 45.65,
-        "comment": "Smoke shell recommended"
+        "commentEn": "Smoke shell recommended",
+        "commentImages": [
+          "Attica/scr_ (56).png"
+        ]
       },
       {
         "id": "attica-blue-role-13",
@@ -6062,11 +6142,14 @@
         "id": "attica-blue-unit-19",
         "type": "mainBattleTank",
         "x": 75.35,
-        "y": 61.32
+        "y": 61.32,
+        "commentImages": [
+          "Attica/scr_ (55).png"
+        ]
       },
       {
         "id": "attica-blue-role-17",
-        "type": "highRiskSpot",
+        "type": "spawnKill",
         "x": 75.35,
         "y": 61.32,
         "parentTankId": "attica-blue-unit-19"
@@ -6075,7 +6158,11 @@
         "id": "attica-blue-unit-20",
         "type": "lightTank",
         "x": 5,
-        "y": 62.43
+        "y": 62.43,
+        "commentImages": [
+          "Attica/scr_ (20).png",
+          "Attica/scr_ (21).png"
+        ]
       },
       {
         "id": "attica-blue-role-18",
@@ -6088,7 +6175,10 @@
         "id": "attica-blue-unit-22",
         "type": "mainBattleTank",
         "x": 44.51,
-        "y": 70.76
+        "y": 70.76,
+        "commentImages": [
+          "Attica/scr_ (53).png"
+        ]
       },
       {
         "id": "attica-blue-role-20",
@@ -6100,21 +6190,27 @@
       {
         "id": "attica-blue-unit-24",
         "type": "mainBattleTank",
-        "x": 23.76,
-        "y": 75.26
+        "x": 15.25,
+        "y": 73.94,
+        "commentImages": [
+          "Attica/scr_ (49).png"
+        ]
       },
       {
         "id": "attica-blue-role-22",
         "type": "spawnKill",
-        "x": 23.76,
-        "y": 75.26,
+        "x": 15.25,
+        "y": 73.94,
         "parentTankId": "attica-blue-unit-24"
       },
       {
         "id": "attica-blue-unit-25",
         "type": "mainBattleTank",
         "x": 51.88,
-        "y": 78.19
+        "y": 78.19,
+        "commentImages": [
+          "Attica/scr_ (50).png"
+        ]
       },
       {
         "id": "attica-blue-role-23",
@@ -6127,7 +6223,10 @@
         "id": "attica-blue-unit-26",
         "type": "mainBattleTank",
         "x": 62.08,
-        "y": 83.19
+        "y": 83.19,
+        "commentImages": [
+          "Attica/scr_ (52).png"
+        ]
       },
       {
         "id": "attica-blue-role-24",
@@ -6140,7 +6239,10 @@
         "id": "attica-blue-unit-27",
         "type": "mainBattleTank",
         "x": 46.18,
-        "y": 83.89
+        "y": 83.89,
+        "commentImages": [
+          "Attica/scr_ (51).png"
+        ]
       },
       {
         "id": "attica-blue-role-25",
@@ -6165,11 +6267,14 @@
         "id": "mtgl6cls-51h2tw",
         "type": "mainBattleTank",
         "x": 69.24,
-        "y": 70.21
+        "y": 70.21,
+        "commentImages": [
+          "Attica/scr_ (54).png"
+        ]
       },
       {
         "id": "mtgl6dth-firqjy",
-        "type": "highRiskSpot",
+        "type": "spawnKill",
         "x": 69.24,
         "y": 70.21,
         "parentTankId": "mtgl6cls-51h2tw"
@@ -6180,7 +6285,11 @@
         "id": "attica-red-unit-01",
         "type": "mainBattleTankRed",
         "x": 56.88,
-        "y": 24.44
+        "y": 24.44,
+        "commentImages": [
+          "Attica/scr_ (33).png",
+          "Attica/scr_ (34).png"
+        ]
       },
       {
         "id": "attica-red-role-01",
@@ -6192,21 +6301,27 @@
       {
         "id": "attica-red-unit-02",
         "type": "mainBattleTankRed",
-        "x": 20.9,
-        "y": 24.79
+        "x": 15.49,
+        "y": 25.92,
+        "commentImages": [
+          "Attica/scr_ (38).png"
+        ]
       },
       {
         "id": "attica-red-role-02",
         "type": "spawnKill",
-        "x": 20.9,
-        "y": 24.79,
+        "x": 15.49,
+        "y": 25.92,
         "parentTankId": "attica-red-unit-02"
       },
       {
         "id": "attica-red-unit-03",
         "type": "mainBattleTankRed",
         "x": 36.39,
-        "y": 27.99
+        "y": 27.99,
+        "commentImages": [
+          "Attica/scr_ (39).png"
+        ]
       },
       {
         "id": "attica-red-role-03",
@@ -6219,11 +6334,14 @@
         "id": "attica-red-unit-04",
         "type": "mainBattleTankRed",
         "x": 44.38,
-        "y": 30.56
+        "y": 30.56,
+        "commentImages": [
+          "Attica/scr_ (35).png"
+        ]
       },
       {
         "id": "attica-red-role-04",
-        "type": "spawnKill",
+        "type": "highRiskSpot",
         "x": 44.38,
         "y": 30.56,
         "parentTankId": "attica-red-unit-04"
@@ -6231,21 +6349,29 @@
       {
         "id": "attica-red-unit-05",
         "type": "mainBattleTankRed",
-        "x": 70.83,
-        "y": 35
+        "x": 69.29,
+        "y": 28.67,
+        "commentImages": [
+          "Attica/scr_ (36).png"
+        ]
       },
       {
         "id": "attica-red-role-05",
         "type": "spawnKill",
-        "x": 70.83,
-        "y": 35,
+        "x": 69.29,
+        "y": 28.67,
         "parentTankId": "attica-red-unit-05"
       },
       {
         "id": "attica-red-unit-06",
         "type": "lightTankRed",
         "x": 4.1,
-        "y": 39.51
+        "y": 39.51,
+        "commentImages": [
+          "Attica/scr_ (17).png",
+          "Attica/scr_ (18).png",
+          "Attica/scr_ (19).png"
+        ]
       },
       {
         "id": "attica-red-role-06",
@@ -6273,7 +6399,10 @@
         "type": "mainBattleTankRed",
         "x": 69.1,
         "y": 50.97,
-        "comment": "Smoke shell recommended"
+        "commentEn": "Smoke shell recommended",
+        "commentImages": [
+          "Attica/scr_ (32).png"
+        ]
       },
       {
         "id": "attica-red-role-08",
@@ -6287,7 +6416,10 @@
         "type": "mainBattleTankRed",
         "x": 78.96,
         "y": 56.25,
-        "comment": "Smoke shell recommended"
+        "commentEn": "Smoke shell recommended",
+        "commentImages": [
+          "Attica/scr_ (48).png"
+        ]
       },
       {
         "id": "attica-red-role-10",
@@ -6300,7 +6432,10 @@
         "id": "attica-red-unit-12",
         "type": "mainBattleTankRed",
         "x": 54.37,
-        "y": 58.54
+        "y": 58.54,
+        "commentImages": [
+          "Attica/scr_ (31).png"
+        ]
       },
       {
         "id": "attica-red-role-12",
@@ -6313,7 +6448,10 @@
         "id": "attica-red-unit-13",
         "type": "mainBattleTankRed",
         "x": 47.15,
-        "y": 62.92
+        "y": 62.92,
+        "commentImages": [
+          "Attica/scr_ (28).png"
+        ]
       },
       {
         "id": "attica-red-role-13",
@@ -6324,32 +6462,43 @@
       },
       {
         "id": "attica-red-unit-14",
-        "type": "mainBattleTankRed",
-        "x": 42.64,
-        "y": 65.9
+        "type": "tankDestroyerRed",
+        "x": 44.35,
+        "y": 65.77,
+        "commentImages": [
+          "Attica/scr_ (26).png",
+          "Attica/scr_ (27).png"
+        ]
       },
       {
         "id": "attica-red-role-14",
         "type": "sniper",
-        "x": 42.64,
-        "y": 65.9,
+        "x": 44.35,
+        "y": 65.77,
         "parentTankId": "attica-red-unit-14"
       },
       {
         "id": "attica-red-unit-15",
         "type": "mainBattleTankRed",
         "x": 24.93,
-        "y": 67.71
+        "y": 67.71,
+        "commentImages": [
+          "Attica/scr_ (41).png"
+        ]
       },
       {
         "id": "attica-red-unit-16",
         "type": "mainBattleTankRed",
         "x": 15.69,
-        "y": 69.31
+        "y": 69.31,
+        "commentImages": [
+          "Attica/scr_ (42).png",
+          "Attica/scr_ (43).png"
+        ]
       },
       {
         "id": "attica-red-role-15",
-        "type": "sniper",
+        "type": "battleLine",
         "x": 15.69,
         "y": 69.31,
         "parentTankId": "attica-red-unit-16"
@@ -6358,7 +6507,10 @@
         "id": "attica-red-unit-17",
         "type": "mainBattleTankRed",
         "x": 34.58,
-        "y": 70.07
+        "y": 70.07,
+        "commentImages": [
+          "Attica/scr_ (40).png"
+        ]
       },
       {
         "id": "attica-red-role-16",
@@ -6369,9 +6521,13 @@
       },
       {
         "id": "attica-red-unit-18",
-        "type": "mainBattleTankRed",
+        "type": "tankDestroyerRed",
         "x": 40.56,
-        "y": 72.85
+        "y": 72.85,
+        "commentImages": [
+          "Attica/scr_ (22).png",
+          "Attica/scr_ (23).png"
+        ]
       },
       {
         "id": "attica-red-role-17",
@@ -6382,9 +6538,13 @@
       },
       {
         "id": "attica-red-unit-19",
-        "type": "mainBattleTankRed",
+        "type": "tankDestroyerRed",
         "x": 43.19,
-        "y": 73.33
+        "y": 73.33,
+        "commentImages": [
+          "Attica/scr_ (24).png",
+          "Attica/scr_ (25).png"
+        ]
       },
       {
         "id": "attica-red-role-18",
@@ -6395,15 +6555,18 @@
       },
       {
         "id": "attica-red-unit-20",
-        "type": "mainBattleTankRed",
-        "x": 52.15,
-        "y": 73.82
+        "type": "tankDestroyerRed",
+        "x": 53.04,
+        "y": 80.63,
+        "commentImages": [
+          "Attica/scr_ (29).png"
+        ]
       },
       {
         "id": "attica-red-role-19",
         "type": "sniper",
-        "x": 52.15,
-        "y": 73.82,
+        "x": 53.04,
+        "y": 80.63,
         "parentTankId": "attica-red-unit-20"
       },
       {
@@ -6454,15 +6617,51 @@
       {
         "id": "mtgkvsbu-fnl6uh",
         "type": "lightTankRed",
-        "x": 34.49,
-        "y": 54.61
+        "x": 35.58,
+        "y": 56.39,
+        "commentImages": [
+          "Attica/scr_ (46).png",
+          "Attica/scr_ (47).png"
+        ]
       },
       {
         "id": "mtgkvug9-vmnzlj",
         "type": "highRiskSpot",
-        "x": 34.49,
-        "y": 54.61,
+        "x": 35.58,
+        "y": 56.39,
         "parentTankId": "mtgkvsbu-fnl6uh"
+      },
+      {
+        "id": "mucyt171-x4vtrg",
+        "type": "tankDestroyerRed",
+        "x": 52.43,
+        "y": 74.54,
+        "commentImages": [
+          "Attica/scr_ (30).png"
+        ]
+      },
+      {
+        "id": "mucyt2j8-npaz49",
+        "type": "sniper",
+        "x": 52.43,
+        "y": 74.54,
+        "parentTankId": "mucyt171-x4vtrg"
+      },
+      {
+        "id": "mucyw2lf-pgsb5q",
+        "type": "mainBattleTankRed",
+        "x": 71.72,
+        "y": 35.53,
+        "commentImages": [
+          "Attica/scr_ (37).png"
+        ]
+      },
+      {
+        "id": "mucyw54w-4h2exq",
+        "type": "highRiskSpot",
+        "x": 71.72,
+        "y": 35.53,
+        "parentTankId": "mucyw2lf-pgsb5q"
       }
     ],
     "Battle of Hürtgen Forest::domination-1|Blue": [
@@ -31005,15 +31204,6 @@
     ],
     "Ardennes::domination-2|Red": [
       {
-        "id": "aredennes-domination-2-red-aim-03",
-        "type": "aimHere",
-        "parentTankId": "aredennes-domination-2-red-unit-13",
-        "startX": 47.57,
-        "startY": 84.65,
-        "endX": 71.28,
-        "endY": 81.62
-      },
-      {
         "id": "aredennes-domination-2-red-aim-04",
         "type": "aimHere",
         "parentTankId": "aredennes-domination-2-red-unit-02",
@@ -31041,15 +31231,6 @@
         "endY": 47
       },
       {
-        "id": "aredennes-domination-2-red-aim-07",
-        "type": "aimHere",
-        "parentTankId": "aredennes-domination-2-red-unit-03",
-        "startX": 43.26,
-        "startY": 43.47,
-        "endX": 42.47,
-        "endY": 55.14
-      },
-      {
         "id": "aredennes-domination-2-red-aim-08",
         "type": "aimHere",
         "parentTankId": "aredennes-domination-2-red-unit-06",
@@ -31075,15 +31256,6 @@
         "startY": 83.82,
         "endX": 42.47,
         "endY": 76.46
-      },
-      {
-        "id": "aredennes-domination-2-red-aim-11",
-        "type": "aimHere",
-        "parentTankId": "aredennes-domination-2-red-unit-13",
-        "startX": 47.57,
-        "startY": 84.65,
-        "endX": 53.46,
-        "endY": 72.66
       },
       {
         "id": "aredennes-domination-2-red-aim-12",
@@ -31535,15 +31707,6 @@
         "startY": 49.44,
         "endX": 47.57,
         "endY": 47.91
-      },
-      {
-        "id": "aredennes-domination-2-blue-aim-05",
-        "type": "aimHere",
-        "parentTankId": "aredennes-domination-2-blue-unit-04",
-        "startX": 76.39,
-        "startY": 36.53,
-        "endX": 74.42,
-        "endY": 41.7
       },
       {
         "id": "aredennes-domination-2-blue-aim-06",
@@ -32189,8 +32352,8 @@
         "id": "mth7foy3-3r31uh",
         "type": "aimHere",
         "parentTankId": "aredennes-blue-unit-20",
-        "startX": 28.54,
-        "startY": 91.88,
+        "startX": 31.8,
+        "startY": 98.1,
         "endX": 11.26,
         "endY": 89.36
       },
@@ -32292,24 +32455,6 @@
         "startY": 52.08,
         "endX": 46.01,
         "endY": 56.91
-      },
-      {
-        "id": "mth7gxbq-7svg6y",
-        "type": "aimHere",
-        "parentTankId": "aredennes-blue-unit-09",
-        "startX": 55.07,
-        "startY": 49.72,
-        "endX": 50.62,
-        "endY": 49.29
-      },
-      {
-        "id": "mth7hi9a-ewyqan",
-        "type": "aimHere",
-        "parentTankId": "mth7hd90-ojq3un",
-        "startX": 78.55,
-        "startY": 81.38,
-        "endX": 74.47,
-        "endY": 83.69
       },
       {
         "id": "mth7hn8q-5taqkr",
@@ -32804,6 +32949,15 @@
         "startY": 66.22,
         "endX": 12.41,
         "endY": 87.23
+      },
+      {
+        "id": "mud0nyk4-vlcdam",
+        "type": "aimHere",
+        "parentTankId": "mth7hd90-ojq3un",
+        "startX": 77.56,
+        "startY": 82.68,
+        "endX": 73.14,
+        "endY": 82.17
       }
     ],
     "Ardennes::conquest-1|Red": [
@@ -34014,31 +34168,13 @@
         "endY": 74.73
       },
       {
-        "id": "mtgl0q9b-i8h61t",
-        "type": "aimHere",
-        "parentTankId": "attica-blue-unit-25",
-        "startX": 51.88,
-        "startY": 78.19,
-        "endX": 31.91,
-        "endY": 82.27
-      },
-      {
         "id": "mtgl1a1v-2oudyw",
         "type": "aimHere",
         "parentTankId": "attica-blue-unit-24",
-        "startX": 23.76,
-        "startY": 75.26,
+        "startX": 15.25,
+        "startY": 73.94,
         "endX": 26.86,
         "endY": 89.8
-      },
-      {
-        "id": "mtgl1d8j-y1gcgq",
-        "type": "aimHere",
-        "parentTankId": "attica-blue-unit-27",
-        "startX": 46.18,
-        "startY": 83.89,
-        "endX": 30.58,
-        "endY": 90.07
       },
       {
         "id": "mtgl1fwv-uor6oo",
@@ -34223,15 +34359,6 @@
         "endY": 66.75
       },
       {
-        "id": "mtgl63uf-s5c97g",
-        "type": "aimHere",
-        "parentTankId": "attica-blue-unit-22",
-        "startX": 44.51,
-        "startY": 70.76,
-        "endX": 28.28,
-        "endY": 84.31
-      },
-      {
         "id": "mtgl6ga7-3tvocz",
         "type": "aimHere",
         "parentTankId": "mtgl6cls-51h2tw",
@@ -34302,6 +34429,42 @@
             "y": 39.27
           }
         ]
+      },
+      {
+        "id": "mucyo2w6-ovhagb",
+        "type": "aimHere",
+        "parentTankId": "attica-blue-unit-12",
+        "startX": 57.22,
+        "startY": 41.18,
+        "endX": 35.49,
+        "endY": 55.17
+      },
+      {
+        "id": "mucz0cjm-4ib8cy",
+        "type": "aimHere",
+        "parentTankId": "attica-blue-unit-25",
+        "startX": 51.88,
+        "startY": 78.19,
+        "endX": 36.79,
+        "endY": 81.49
+      },
+      {
+        "id": "mucz0mkk-1noe7h",
+        "type": "aimHere",
+        "parentTankId": "attica-blue-unit-27",
+        "startX": 46.18,
+        "startY": 83.89,
+        "endX": 25.5,
+        "endY": 81.93
+      },
+      {
+        "id": "mucz196g-eg4nru",
+        "type": "aimHere",
+        "parentTankId": "attica-blue-unit-22",
+        "startX": 44.51,
+        "startY": 70.76,
+        "endX": 35.14,
+        "endY": 76.8
       }
     ],
     "Attica::domination-1|Red": [
@@ -34554,37 +34717,6 @@
         "dangerRoute": true
       },
       {
-        "id": "attica-red-route-13",
-        "type": "route",
-        "points": [
-          {
-            "x": 34.9,
-            "y": 55
-          },
-          {
-            "x": 38.36,
-            "y": 55.86
-          },
-          {
-            "x": 40.76,
-            "y": 57.22
-          },
-          {
-            "x": 42.54,
-            "y": 59.34
-          },
-          {
-            "x": 44.14,
-            "y": 61.64
-          },
-          {
-            "x": 45.64,
-            "y": 63.73
-          }
-        ],
-        "dangerRoute": true
-      },
-      {
         "id": "mtgknu2d-6qph0f",
         "type": "route",
         "points": [
@@ -34615,19 +34747,10 @@
         "id": "mtgkp8ij-ov7xh3",
         "type": "aimHere",
         "parentTankId": "attica-red-unit-14",
-        "startX": 42.64,
-        "startY": 65.9,
+        "startX": 44.35,
+        "startY": 65.77,
         "endX": 76.95,
         "endY": 40.69
-      },
-      {
-        "id": "mtgkpmdt-bo1p5f",
-        "type": "aimHere",
-        "parentTankId": "attica-red-unit-05",
-        "startX": 70.83,
-        "startY": 35,
-        "endX": 70.57,
-        "endY": 19.76
       },
       {
         "id": "mtgkppvd-1fclja",
@@ -34731,15 +34854,6 @@
         "endY": 34.66
       },
       {
-        "id": "mtgksmzn-m6i2tj",
-        "type": "aimHere",
-        "parentTankId": "attica-red-unit-20",
-        "startX": 52.15,
-        "startY": 73.82,
-        "endX": 53.9,
-        "endY": 24.99
-      },
-      {
         "id": "mtgksyol-41yevu",
         "type": "aimHere",
         "parentTankId": "attica-red-unit-19",
@@ -34797,8 +34911,8 @@
         "id": "mtgkuvb3-hibkiv",
         "type": "aimHere",
         "parentTankId": "attica-red-unit-02",
-        "startX": 20.9,
-        "startY": 24.79,
+        "startX": 15.49,
+        "startY": 25.92,
         "endX": 28.54,
         "endY": 9.39
       },
@@ -34824,8 +34938,8 @@
         "id": "mtgkwsdr-7crpsy",
         "type": "aimHere",
         "parentTankId": "mtgkvsbu-fnl6uh",
-        "startX": 34.49,
-        "startY": 54.61,
+        "startX": 35.58,
+        "startY": 56.39,
         "endX": 57.18,
         "endY": 42.28
       },
@@ -34882,6 +34996,95 @@
           {
             "x": 71.19,
             "y": 35.9
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "mucysevj-rdn64n",
+        "type": "aimHere",
+        "parentTankId": "attica-red-unit-20",
+        "startX": 53.04,
+        "startY": 80.63,
+        "endX": 53.13,
+        "endY": 17.72
+      },
+      {
+        "id": "mucyt6qm-jeyz6z",
+        "type": "aimHere",
+        "parentTankId": "mucyt171-x4vtrg",
+        "startX": 52.43,
+        "startY": 74.54,
+        "endX": 54.69,
+        "endY": 21.98
+      },
+      {
+        "id": "mucytv8q-1fut0f",
+        "type": "aimHere",
+        "parentTankId": "attica-red-unit-14",
+        "startX": 44.35,
+        "startY": 65.77,
+        "endX": 56.95,
+        "endY": 42.48
+      },
+      {
+        "id": "mucyva3k-xsib0x",
+        "type": "aimHere",
+        "parentTankId": "attica-red-unit-05",
+        "startX": 69.29,
+        "startY": 28.67,
+        "endX": 69.2,
+        "endY": 12.16
+      },
+      {
+        "id": "mucyw9zk-31uvog",
+        "type": "aimHere",
+        "parentTankId": "mucyw2lf-pgsb5q",
+        "startX": 71.72,
+        "startY": 35.53,
+        "endX": 67.2,
+        "endY": 15.2
+      },
+      {
+        "id": "mucyxqpy-gylwgj",
+        "type": "aimHere",
+        "parentTankId": "mtgkvsbu-fnl6uh",
+        "startX": 35.58,
+        "startY": 56.39,
+        "endX": 71.03,
+        "endY": 28.32
+      },
+      {
+        "id": "mucyywr4-u21r7k",
+        "type": "route",
+        "points": [
+          {
+            "x": 45.83,
+            "y": 63.25
+          },
+          {
+            "x": 43.92,
+            "y": 62.12
+          },
+          {
+            "x": 42.88,
+            "y": 60.21
+          },
+          {
+            "x": 41.05,
+            "y": 58.12
+          },
+          {
+            "x": 39.92,
+            "y": 56.65
+          },
+          {
+            "x": 37.23,
+            "y": 56.65
+          },
+          {
+            "x": 35.32,
+            "y": 56.56
           }
         ],
         "dangerRoute": true
@@ -69634,6 +69837,6 @@
     "Darwin Hill::battle-1|Red": [],
     "Sands of Sinai::domination-1|Blue": []
   },
-  "updatedAt": "2026-09-22T09:25:46.324Z",
-  "exportedAt": "2026-09-22T09:26:58.472Z"
+  "updatedAt": "2026-09-22T18:50:32.119Z",
+  "exportedAt": "2026-09-22T18:50:45.487Z"
 }
