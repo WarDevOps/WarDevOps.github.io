@@ -68,7 +68,7 @@
     "American Desert": "2026-09-16T02:29:34Z",
     "Aral Sea": "2026-09-22T19:21:50Z",
     "Arctic Pier": "2026-09-15T01:05:22Z",
-    "Arctic Polar Base": "2026-09-22T20:26:43Z",
+    "Arctic Polar Base": "2026-09-22T20:33:11Z",
     "Ardennes": "2026-09-22T20:23:20Z",
     "Ash River": "2026-09-01T16:50:15Z",
     "Attica": "2026-09-22T18:50:32Z",
@@ -4690,7 +4690,10 @@
         "id": "mud4ilpb-bece14",
         "type": "mainBattleTankRed",
         "x": 64.51,
-        "y": 34.06
+        "y": 34.06,
+        "commentImages": [
+          "Arctic Polar Base/scr_ (3).png"
+        ]
       },
       {
         "id": "mud4in3w-b4kbut",
@@ -70071,6 +70074,6 @@
     "Darwin Hill::battle-1|Red": [],
     "Sands of Sinai::domination-1|Blue": []
   },
-  "updatedAt": "2026-09-22T20:26:43.562Z",
-  "exportedAt": "2026-09-22T20:26:49.570Z"
+  "updatedAt": "2026-09-22T20:45:13.099Z",
+  "exportedAt": "2026-09-22T20:48:27.885Z"
 }

@@ -884,6 +884,50 @@ let vectorEditor = null;
       hitArea.append(indicators);
       carousel.append(hitArea);
     }
+    function renderCommentCarouselClickNavigation(carousel) {
+      carousel.querySelector(".map-marker-comment-click-navigation")?.remove();
+      const images = carousel._commentImages || [];
+      if (images.length < 2) return;
+      const navigation = document.createElement("div");
+      navigation.className = "map-marker-comment-click-navigation";
+      [
+        { direction: -1, className: "previous", label: t("previousCommentImage") },
+        { direction: 1, className: "next", label: t("nextCommentImage") }
+      ].forEach(({ direction, className, label }) => {
+        const button = document.createElement("button");
+        let handledMousePointer = false;
+        const navigate = () => {
+          setCommentCarouselIndex(carousel, carousel._commentImageIndex + direction);
+          activateCommentCarouselIndicators(carousel);
+        };
+        button.type = "button";
+        button.className = `map-marker-comment-click-zone ${className}`;
+        button.setAttribute("aria-label", label);
+        button.title = label;
+        button.addEventListener("pointerenter", () => {
+          if (!markerCommentImagePreview.classList.contains("is-touch-open")) hideMarkerCommentImagePreview();
+        });
+        button.addEventListener("pointerdown", event => {
+          if (event.pointerType !== "mouse") return;
+          event.preventDefault();
+          event.stopPropagation();
+          handledMousePointer = true;
+          navigate();
+        });
+        button.addEventListener("click", event => {
+          event.preventDefault();
+          event.stopPropagation();
+          if (handledMousePointer) {
+            handledMousePointer = false;
+            return;
+          }
+          handledMousePointer = false;
+          navigate();
+        });
+        navigation.append(button);
+      });
+      carousel.append(navigation);
+    }
     function setCommentCarouselIndex(carousel, index, { animate = true, notify = true } = {}) {
       const images = carousel?._commentImages || [];
       if (!images.length) return;
@@ -920,6 +964,8 @@ let vectorEditor = null;
       carousel.querySelectorAll(".map-marker-comment-indicator").forEach((indicator, indicatorIndex) => {
         indicator.setAttribute("aria-pressed", String(indicatorIndex === nextIndex));
       });
+      const clickNavigation = carousel.querySelector(".map-marker-comment-click-navigation");
+      if (clickNavigation) clickNavigation.hidden = item.kind === "video";
       if (notify && changed) carousel._commentImageChange?.(nextIndex);
     }
     function configureCommentCarousel(carousel, images, initialIndex = 0, onChange = null) {
@@ -927,6 +973,7 @@ let vectorEditor = null;
       carousel._commentImageIndex = normalizedCarouselIndex(initialIndex, images.length);
       carousel._commentImageChange = onChange;
       renderCommentCarouselIndicators(carousel);
+      renderCommentCarouselClickNavigation(carousel);
       setCommentCarouselIndex(carousel, carousel._commentImageIndex, { animate: false, notify: false });
     }
     function bindCommentImageSwipe(carousel, enabled = () => usesMobileCommentLayout()) {
@@ -993,6 +1040,7 @@ let vectorEditor = null;
       markerCommentImagePreviewCarousel._commentImageIndex = 0;
       markerCommentImagePreviewCarousel._commentImageChange = null;
       markerCommentImagePreviewCarousel.querySelector(".map-marker-comment-indicator-hit-area")?.remove();
+      markerCommentImagePreviewCarousel.querySelector(".map-marker-comment-click-navigation")?.remove();
       if (restoreFocus) sourceCarousel?.querySelector(".map-marker-comment-media")?.focus({ preventScroll: true });
     }
     function positionMarkerCommentImagePreview() {

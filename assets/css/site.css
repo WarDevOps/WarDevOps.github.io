@@ -266,6 +266,14 @@
     .map-marker-comment-image { box-sizing: border-box; display: block; justify-self: center; width: auto; max-width: 100%; height: auto; max-height: min(60dvh, 420px); border: 1px solid var(--line); border-radius: 7px; background: var(--bg); object-fit: contain; }
     .map-marker-comment-image.is-changing { animation: comment-image-fade .15s ease-out; }
     @keyframes comment-image-fade { from { opacity: .2; } to { opacity: 1; } }
+    .map-marker-comment-click-navigation { position: absolute; z-index: 1; inset: 0; display: grid; grid-template-columns: 1fr 1fr; pointer-events: none; }
+    .map-marker-comment-click-navigation[hidden] { display: none; }
+    .map-marker-comment-click-zone { position: relative; min-width: 0; padding: 0 12px; border: 0; background: transparent; color: #fff; opacity: 0; cursor: pointer; pointer-events: auto; transition: opacity .15s ease, background .15s ease; }
+    .map-marker-comment-click-zone::after { display: grid; width: 30px; height: 42px; border-radius: 999px; background: rgba(0,0,0,.35); font-size: 2rem; line-height: 1; place-items: center; }
+    .map-marker-comment-click-zone.previous::after { content: "‹"; }
+    .map-marker-comment-click-zone.next::after { content: "›"; margin-left: auto; }
+    .map-marker-comment-click-zone:hover, .map-marker-comment-click-zone:focus-visible { opacity: .9; }
+    .map-marker-comment-click-zone:focus-visible { outline: 2px solid var(--accent); outline-offset: -3px; }
     .map-marker-comment-indicator-hit-area { position: absolute; z-index: 2; right: 0; bottom: 0; left: 0; display: flex; min-height: 52px; padding: 0 12px 10px; align-items: flex-end; justify-content: center; }
     .map-marker-comment-indicators { display: flex; max-width: 100%; gap: 9px; padding: 5px 8px; border-radius: 999px; background: rgba(0,0,0,.16); opacity: .2; transition: opacity .15s ease; }
     .map-marker-comment-indicator-hit-area:hover .map-marker-comment-indicators,
