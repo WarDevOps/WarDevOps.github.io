@@ -7,7 +7,7 @@
     "Advance to the Rhine": "2026-09-16",
     "Alaska": "2026-09-14",
     "American Desert": "2026-09-16",
-    "Aral Sea": "2026-09-10",
+    "Aral Sea": "2026-09-22",
     "Arctic Pier": "2026-09-15",
     "Arctic Polar Base": "2026-09-12",
     "Ardennes": "2026-09-14",
@@ -32,7 +32,7 @@
     "Golden Quarry": "2026-09-12",
     "Iberian Castle": "2026-08-16",
     "Japan": "2026-09-17",
-    "Jungle": "2026-09-10",
+    "Jungle": "2026-09-22",
     "Karelia": "2026-08-30",
     "Kuban": "2026-08-18",
     "Maginot Line": "2026-09-17",
@@ -52,7 +52,7 @@
     "Stalingrad": "2026-08-25",
     "Sun City": "2026-09-15",
     "Surroundings of Volokolamsk": "2026-09-15",
-    "Sweden": "2026-09-01",
+    "Sweden": "2026-09-22",
     "Test Site-2271": "2026-09-14",
     "Tunisia": "2026-09-17",
     "Vietnam": "2026-09-16",
@@ -66,7 +66,7 @@
     "Advance to the Rhine": "2026-09-16T02:26:57Z",
     "Alaska": "2026-09-13T23:26:53Z",
     "American Desert": "2026-09-16T02:29:34Z",
-    "Aral Sea": "2026-09-10T12:50:30Z",
+    "Aral Sea": "2026-09-22T09:25:46Z",
     "Arctic Pier": "2026-09-15T01:05:22Z",
     "Arctic Polar Base": "2026-09-12T01:01:54Z",
     "Ardennes": "2026-09-13T23:15:39Z",
@@ -86,7 +86,7 @@
     "Fulda": "2026-09-15T02:33:41Z",
     "Golden Quarry": "2026-09-12T00:18:22Z",
     "Japan": "2026-09-16T19:32:10Z",
-    "Jungle": "2026-09-10T12:20:47Z",
+    "Jungle": "2026-09-22T06:01:21Z",
     "Maginot Line": "2026-09-16T19:34:11Z",
     "Middle East": "2026-09-15T03:32:27Z",
     "Mozdok": "2026-09-15T03:13:51Z",
@@ -102,6 +102,7 @@
     "Spaceport": "2026-09-15T03:04:03Z",
     "Sun City": "2026-09-14T16:27:44Z",
     "Surroundings of Volokolamsk": "2026-09-15T03:51:26Z",
+    "Sweden": "2026-09-22T04:54:25Z",
     "Test Site-2271": "2026-09-13T19:14:47Z",
     "Tunisia": "2026-09-16T19:37:22Z",
     "Vietnam": "2026-09-16T02:50:51Z",
@@ -3793,21 +3794,27 @@
       {
         "id": "aral-sea-red-unit-01",
         "type": "mainBattleTankRed",
-        "x": 57.22,
-        "y": 20
+        "x": 64.03,
+        "y": 15.68,
+        "commentImages": [
+          "Aral Sea/scr_ (20).png"
+        ]
       },
       {
         "id": "aral-sea-red-role-01",
         "type": "spawnKill",
-        "x": 57.22,
-        "y": 20,
+        "x": 64.03,
+        "y": 15.68,
         "parentTankId": "aral-sea-red-unit-01"
       },
       {
         "id": "aral-sea-red-unit-02",
         "type": "mainBattleTankRed",
         "x": 7.43,
-        "y": 22.22
+        "y": 22.22,
+        "commentImages": [
+          "Aral Sea/scr_ (2).png"
+        ]
       },
       {
         "id": "aral-sea-red-role-02",
@@ -3820,13 +3827,19 @@
         "id": "aral-sea-red-unit-03",
         "type": "mainBattleTankRed",
         "x": 41.11,
-        "y": 33.68
+        "y": 33.68,
+        "commentImages": [
+          "Aral Sea/scr_ (22).png"
+        ]
       },
       {
         "id": "aral-sea-red-unit-05",
         "type": "mainBattleTankRed",
         "x": 51.42,
-        "y": 37.76
+        "y": 37.76,
+        "commentImages": [
+          "Aral Sea/scr_ (21).png"
+        ]
       },
       {
         "id": "aral-sea-red-role-03",
@@ -3838,34 +3851,43 @@
       {
         "id": "aral-sea-red-unit-07",
         "type": "mainBattleTankRed",
-        "x": 35.64,
-        "y": 52.39
+        "x": 35.84,
+        "y": 60.56,
+        "commentImages": [
+          "Aral Sea/scr_ (17).png"
+        ]
       },
       {
         "id": "aral-sea-red-role-05",
         "type": "battleLine",
-        "x": 35.64,
-        "y": 52.39,
+        "x": 35.84,
+        "y": 60.56,
         "parentTankId": "aral-sea-red-unit-07"
       },
       {
         "id": "aral-sea-red-unit-13",
         "type": "mainBattleTankRed",
-        "x": 20.21,
-        "y": 61.43
+        "x": 17.76,
+        "y": 60.43,
+        "commentImages": [
+          "Aral Sea/scr_ (25).png"
+        ]
       },
       {
         "id": "aral-sea-red-role-11",
         "type": "battleLine",
-        "x": 20.21,
-        "y": 61.43,
+        "x": 17.76,
+        "y": 60.43,
         "parentTankId": "aral-sea-red-unit-13"
       },
       {
         "id": "aral-sea-red-unit-14",
         "type": "mainBattleTankRed",
         "x": 33.07,
-        "y": 65.51
+        "y": 65.51,
+        "commentImages": [
+          "Aral Sea/scr_ (26).png"
+        ]
       },
       {
         "id": "aral-sea-red-role-12",
@@ -3877,14 +3899,18 @@
       {
         "id": "aral-sea-red-unit-15",
         "type": "mainBattleTankRed",
-        "x": 53.89,
-        "y": 72.5
+        "x": 55.69,
+        "y": 75.22,
+        "commentImages": [
+          "Aral Sea/scr_ (28).png",
+          "Aral Sea/scr_ (29).png"
+        ]
       },
       {
         "id": "aral-sea-red-role-13",
         "type": "sniper",
-        "x": 53.89,
-        "y": 72.5,
+        "x": 55.69,
+        "y": 75.22,
         "parentTankId": "aral-sea-red-unit-15"
       },
       {
@@ -3897,49 +3923,111 @@
       {
         "id": "mtgsjrn0-60jh43",
         "type": "mainBattleTankRed",
-        "x": 26.51,
-        "y": 37.49
+        "x": 22.31,
+        "y": 30.59,
+        "commentImages": [
+          "Aral Sea/scr_ (1).png"
+        ]
       },
       {
         "id": "mtgsjt2e-lshq10",
         "type": "spawnKill",
-        "x": 26.51,
-        "y": 37.49,
+        "x": 22.31,
+        "y": 30.59,
         "parentTankId": "mtgsjrn0-60jh43"
+      },
+      {
+        "id": "mucgt2k9-9rfqxm",
+        "type": "mainBattleTankRed",
+        "x": 51.13,
+        "y": 48.13,
+        "commentImages": [
+          "Aral Sea/scr_ (15).png"
+        ]
+      },
+      {
+        "id": "mucgt3x8-z3x472",
+        "type": "highRiskSpot",
+        "x": 51.13,
+        "y": 48.13,
+        "parentTankId": "mucgt2k9-9rfqxm"
+      },
+      {
+        "id": "mucgv1wm-hc01a1",
+        "type": "mainBattleTankRed",
+        "x": 26.02,
+        "y": 37.62,
+        "commentImages": [
+          "Aral Sea/scr_ (23).png",
+          "Aral Sea/scr_ (24).png"
+        ]
+      },
+      {
+        "id": "mucgv3as-nvm9vz",
+        "type": "spawnKill",
+        "x": 26.02,
+        "y": 37.62,
+        "parentTankId": "mucgv1wm-hc01a1"
+      },
+      {
+        "id": "mucgwg3i-2oqn1k",
+        "type": "mainBattleTankRed",
+        "x": 39.49,
+        "y": 54.47,
+        "commentImages": [
+          "Aral Sea/scr_ (27).png"
+        ]
+      },
+      {
+        "id": "mucgwlwc-vxczir",
+        "type": "highRiskSpot",
+        "x": 39.49,
+        "y": 54.47,
+        "parentTankId": "mucgwg3i-2oqn1k"
       }
     ],
     "Aral Sea::domination-1|Blue": [
       {
         "id": "aral-sea-blue-unit-02",
         "type": "mainBattleTank",
-        "x": 56.11,
-        "y": 21.04
+        "x": 59.99,
+        "y": 20.86,
+        "commentImages": [
+          "Aral Sea/scr_ (19).png"
+        ]
       },
       {
         "id": "aral-sea-blue-role-02",
         "type": "sniper",
-        "x": 56.11,
-        "y": 21.04,
+        "x": 59.99,
+        "y": 20.86,
         "parentTankId": "aral-sea-blue-unit-02"
       },
       {
         "id": "aral-sea-blue-unit-05",
         "type": "mainBattleTank",
-        "x": 22.36,
-        "y": 34.03
+        "x": 20.67,
+        "y": 37.55,
+        "commentImages": [
+          "Aral Sea/scr_ (3).png",
+          "Aral Sea/scr_ (4).png"
+        ]
       },
       {
         "id": "aral-sea-blue-role-05",
         "type": "battleLine",
-        "x": 22.36,
-        "y": 34.03,
+        "x": 20.67,
+        "y": 37.55,
         "parentTankId": "aral-sea-blue-unit-05"
       },
       {
         "id": "aral-sea-blue-unit-06",
         "type": "mainBattleTank",
         "x": 33.12,
-        "y": 36.25
+        "y": 36.25,
+        "commentImages": [
+          "Aral Sea/scr_ (18).png"
+        ]
       },
       {
         "id": "aral-sea-blue-role-06",
@@ -3952,7 +4040,10 @@
         "id": "aral-sea-blue-unit-07",
         "type": "mainBattleTank",
         "x": 11.08,
-        "y": 33.68
+        "y": 33.68,
+        "commentImages": [
+          "Aral Sea/scr_ (5).png"
+        ]
       },
       {
         "id": "aral-sea-blue-role-07",
@@ -3965,7 +4056,10 @@
         "id": "aral-sea-blue-unit-08",
         "type": "mainBattleTank",
         "x": 41.49,
-        "y": 43.61
+        "y": 43.61,
+        "commentImages": [
+          "Aral Sea/scr_ (16).png"
+        ]
       },
       {
         "id": "aral-sea-blue-role-08",
@@ -3978,13 +4072,11 @@
         "id": "aral-sea-blue-unit-11",
         "type": "mainBattleTank",
         "x": 33.89,
-        "y": 59.86
-      },
-      {
-        "id": "aral-sea-blue-unit-12",
-        "type": "mainBattleTank",
-        "x": 54.97,
-        "y": 70.65
+        "y": 59.86,
+        "commentImages": [
+          "Aral Sea/scr_ (7).png",
+          "Aral Sea/scr_ (8).png"
+        ]
       },
       {
         "id": "mtgsd7ro-7ru92r",
@@ -3994,17 +4086,13 @@
         "parentTankId": "aral-sea-blue-unit-11"
       },
       {
-        "id": "mtgseka6-b4mn02",
-        "type": "spawnKill",
-        "x": 54.97,
-        "y": 70.65,
-        "parentTankId": "aral-sea-blue-unit-12"
-      },
-      {
         "id": "mtgsfqp5-pmg0vi",
         "type": "mainBattleTank",
         "x": 51.33,
-        "y": 49.64
+        "y": 49.64,
+        "commentImages": [
+          "Aral Sea/scr_ (14).png"
+        ]
       },
       {
         "id": "mtgsfs00-seluha",
@@ -4017,7 +4105,10 @@
         "id": "mtgsl49x-f5qlx3",
         "type": "mainBattleTank",
         "x": 23.67,
-        "y": 53.01
+        "y": 53.01,
+        "commentImages": [
+          "Aral Sea/scr_ (6).png"
+        ]
       },
       {
         "id": "mtgsl584-9etjy5",
@@ -4029,15 +4120,67 @@
       {
         "id": "mtviz3on-92exn2",
         "type": "mainBattleTank",
-        "x": 41.49,
-        "y": 61.79
+        "x": 27.75,
+        "y": 58.15,
+        "commentImages": [
+          "Aral Sea/scr_ (9).png",
+          "Aral Sea/scr_ (10).png"
+        ]
       },
       {
         "id": "mtvizbc1-0o4385",
         "type": "spawnKill",
-        "x": 41.49,
-        "y": 61.79,
+        "x": 27.75,
+        "y": 58.15,
         "parentTankId": "mtviz3on-92exn2"
+      },
+      {
+        "id": "mucgrg4d-yya5gi",
+        "type": "mainBattleTank",
+        "x": 50.96,
+        "y": 72.2,
+        "commentImages": [
+          "Aral Sea/scr_ (11).png"
+        ]
+      },
+      {
+        "id": "mucgrlp6-4okr8m",
+        "type": "spawnKill",
+        "x": 50.96,
+        "y": 72.2,
+        "parentTankId": "mucgrg4d-yya5gi"
+      },
+      {
+        "id": "mucgruew-nmxyhy",
+        "type": "mainBattleTank",
+        "x": 59.04,
+        "y": 82.36,
+        "commentImages": [
+          "Aral Sea/scr_ (12).png"
+        ]
+      },
+      {
+        "id": "mucgrvzg-kwplwg",
+        "type": "spawnKill",
+        "x": 59.04,
+        "y": 82.36,
+        "parentTankId": "mucgruew-nmxyhy"
+      },
+      {
+        "id": "mucgs931-yh5dbs",
+        "type": "mainBattleTank",
+        "x": 41.23,
+        "y": 71.07,
+        "commentImages": [
+          "Aral Sea/scr_ (13).png"
+        ]
+      },
+      {
+        "id": "mucgsa9e-ja2wqi",
+        "type": "spawnKill",
+        "x": 41.23,
+        "y": 71.07,
+        "parentTankId": "mucgs931-yh5dbs"
       }
     ],
     "Arctic Pier::domination-1|Blue": [
@@ -13768,12 +13911,6 @@
         "parentTankId": "mtvhs4c6-c8c886"
       },
       {
-        "id": "mtvhsfzt-j58z56",
-        "type": "tankDestroyer",
-        "x": 52.57,
-        "y": 63.29
-      },
-      {
         "id": "mtvhsleo-w4gll5",
         "type": "sniper",
         "x": 59.49,
@@ -19330,6 +19467,48 @@
         "type": "mainBattleTank",
         "x": 16.25,
         "y": 83.82
+      },
+      {
+        "id": "muc78gdj-3pxvg0",
+        "type": "spawnKill",
+        "x": 72.99,
+        "y": 72.5,
+        "parentTankId": "sweden-blue-unit-19"
+      },
+      {
+        "id": "muc78hk3-2l68v2",
+        "type": "spawnKill",
+        "x": 59.79,
+        "y": 73.06,
+        "parentTankId": "sweden-blue-unit-20"
+      },
+      {
+        "id": "muc78iql-pf7hdr",
+        "type": "spawnKill",
+        "x": 87.92,
+        "y": 79.65,
+        "parentTankId": "sweden-blue-unit-23"
+      },
+      {
+        "id": "muc78lrv-f0ktqe",
+        "type": "spawnKill",
+        "x": 21.88,
+        "y": 77.78,
+        "parentTankId": "sweden-blue-unit-22"
+      },
+      {
+        "id": "muc78mxp-q4i5tk",
+        "type": "spawnKill",
+        "x": 24.1,
+        "y": 76.67,
+        "parentTankId": "sweden-blue-unit-21"
+      },
+      {
+        "id": "muc78p71-hiow13",
+        "type": "spawnKill",
+        "x": 16.25,
+        "y": 83.82,
+        "parentTankId": "sweden-blue-unit-24"
       }
     ],
     "Sweden::domination-1|Red": [
@@ -19622,6 +19801,34 @@
         "type": "tankDestroyerRed",
         "x": 1.94,
         "y": 97.78
+      },
+      {
+        "id": "muc77j05-mvjjgz",
+        "type": "spawnKill",
+        "x": 65.56,
+        "y": 25.42,
+        "parentTankId": "sweden-red-unit-04"
+      },
+      {
+        "id": "muc77jyd-egrzd1",
+        "type": "spawnKill",
+        "x": 74.65,
+        "y": 21.67,
+        "parentTankId": "sweden-red-unit-02"
+      },
+      {
+        "id": "muc77kxn-4yk26j",
+        "type": "spawnKill",
+        "x": 92.29,
+        "y": 10.42,
+        "parentTankId": "sweden-red-unit-01"
+      },
+      {
+        "id": "muc7875f-pe6or9",
+        "type": "spawnKill",
+        "x": 24.03,
+        "y": 24.58,
+        "parentTankId": "sweden-red-unit-03"
       }
     ],
     "Test Site-2271::domination-1|Red": [
@@ -28480,8 +28687,8 @@
         "id": "mtgsh394-0632uw",
         "type": "aimHere",
         "parentTankId": "aral-sea-red-unit-13",
-        "startX": 20.21,
-        "startY": 61.43,
+        "startX": 17.76,
+        "startY": 60.43,
         "endX": 20.21,
         "endY": 34.57
       },
@@ -28504,20 +28711,11 @@
         "endY": 35.81
       },
       {
-        "id": "mtgsiank-7dxwki",
-        "type": "aimHere",
-        "parentTankId": "aral-sea-red-unit-15",
-        "startX": 53.89,
-        "startY": 72.5,
-        "endX": 76.51,
-        "endY": 16.22
-      },
-      {
         "id": "mtgsicu8-gj2y5z",
         "type": "aimHere",
         "parentTankId": "aral-sea-red-unit-01",
-        "startX": 57.22,
-        "startY": 20,
+        "startX": 64.03,
+        "startY": 15.68,
         "endX": 88.12,
         "endY": 10.1
       },
@@ -28525,8 +28723,8 @@
         "id": "mtgsjxh6-dyycdm",
         "type": "aimHere",
         "parentTankId": "mtgsjrn0-60jh43",
-        "startX": 26.51,
-        "startY": 37.49,
+        "startX": 22.31,
+        "startY": 30.59,
         "endX": 10.28,
         "endY": 14
       },
@@ -28540,15 +28738,6 @@
         "endY": 13.11
       },
       {
-        "id": "mtgsmvt8-6dfeiw",
-        "type": "aimHere",
-        "parentTankId": "aral-sea-red-unit-07",
-        "startX": 35.64,
-        "startY": 52.39,
-        "endX": 42.2,
-        "endY": 43.7
-      },
-      {
         "id": "mtgsn7r4-i0b2in",
         "type": "aimHere",
         "parentTankId": "aral-sea-red-unit-14",
@@ -28556,15 +28745,6 @@
         "startY": 65.51,
         "endX": 34.22,
         "endY": 35.01
-      },
-      {
-        "id": "mtgsndq6-i37qdh",
-        "type": "aimHere",
-        "parentTankId": "aral-sea-red-unit-13",
-        "startX": 20.21,
-        "startY": 61.43,
-        "endX": 6.38,
-        "endY": 37.94
       },
       {
         "id": "mtgsobj2-ja7383",
@@ -28691,6 +28871,78 @@
             "y": 53.1
           }
         ]
+      },
+      {
+        "id": "mucezgl4-6sw9ae",
+        "type": "aimHere",
+        "parentTankId": "aral-sea-red-unit-07",
+        "startX": 35.84,
+        "startY": 60.56,
+        "endX": 41.53,
+        "endY": 44.12
+      },
+      {
+        "id": "mucgt9ng-krdv2a",
+        "type": "aimHere",
+        "parentTankId": "mucgt2k9-9rfqxm",
+        "startX": 51.13,
+        "startY": 48.13,
+        "endX": 34.54,
+        "endY": 35.62
+      },
+      {
+        "id": "mucgv952-zhrjnk",
+        "type": "aimHere",
+        "parentTankId": "mucgv1wm-hc01a1",
+        "startX": 26.02,
+        "startY": 37.62,
+        "endX": 22.63,
+        "endY": 23.54
+      },
+      {
+        "id": "mucgvgu0-hvhqhl",
+        "type": "aimHere",
+        "parentTankId": "mucgv1wm-hc01a1",
+        "startX": 26.02,
+        "startY": 37.62,
+        "endX": 7.86,
+        "endY": 14.16
+      },
+      {
+        "id": "mucgw1fs-xlfcaw",
+        "type": "aimHere",
+        "parentTankId": "aral-sea-red-unit-13",
+        "startX": 17.76,
+        "startY": 60.43,
+        "endX": 8.12,
+        "endY": 21.11
+      },
+      {
+        "id": "mucgwklr-e25xv9",
+        "type": "aimHere",
+        "parentTankId": "mucgwg3i-2oqn1k",
+        "startX": 39.49,
+        "startY": 54.47,
+        "endX": 42.09,
+        "endY": 42.92
+      },
+      {
+        "id": "mucgx2kw-j6vnec",
+        "type": "aimHere",
+        "parentTankId": "aral-sea-red-unit-15",
+        "startX": 55.69,
+        "startY": 75.22,
+        "endX": 59.99,
+        "endY": 21.81
+      },
+      {
+        "id": "mucgx8wu-8kt9ud",
+        "type": "aimHere",
+        "parentTankId": "aral-sea-red-unit-15",
+        "startX": 55.69,
+        "startY": 75.22,
+        "endX": 80.06,
+        "endY": 34.67
       }
     ],
     "Aral Sea::domination-1|Blue": [
@@ -28716,37 +28968,19 @@
         "id": "mtgse50u-k6zdg4",
         "type": "aimHere",
         "parentTankId": "aral-sea-blue-unit-05",
-        "startX": 22.36,
-        "startY": 34.03,
+        "startX": 20.67,
+        "startY": 37.55,
         "endX": 19.86,
         "endY": 59.3
-      },
-      {
-        "id": "mtgse7gk-2lqmif",
-        "type": "aimHere",
-        "parentTankId": "aral-sea-blue-unit-07",
-        "startX": 11.08,
-        "startY": 33.68,
-        "endX": 10.55,
-        "endY": 58.15
       },
       {
         "id": "mtgsegz2-10nclb",
         "type": "aimHere",
         "parentTankId": "aral-sea-blue-unit-02",
-        "startX": 56.11,
-        "startY": 21.04,
+        "startX": 59.99,
+        "startY": 20.86,
         "endX": 70.22,
         "endY": 81.03
-      },
-      {
-        "id": "mtgsenqy-5yekfj",
-        "type": "aimHere",
-        "parentTankId": "aral-sea-blue-unit-12",
-        "startX": 54.97,
-        "startY": 70.65,
-        "endX": 13.38,
-        "endY": 87.94
       },
       {
         "id": "mtgsfism-i45hkl",
@@ -28771,24 +29005,6 @@
           }
         ],
         "dangerRoute": true
-      },
-      {
-        "id": "mtgsgpik-d8q70h",
-        "type": "aimHere",
-        "parentTankId": "mtgsfqp5-pmg0vi",
-        "startX": 51.33,
-        "startY": 49.64,
-        "endX": 31.29,
-        "endY": 59.93
-      },
-      {
-        "id": "mtgsk7ku-fdjowp",
-        "type": "aimHere",
-        "parentTankId": "aral-sea-blue-unit-12",
-        "startX": 54.97,
-        "startY": 70.65,
-        "endX": 85.11,
-        "endY": 87.76
       },
       {
         "id": "mtgskkak-pualrp",
@@ -28817,36 +29033,10 @@
         "id": "mtgsni7u-ns6miz",
         "type": "aimHere",
         "parentTankId": "aral-sea-blue-unit-05",
-        "startX": 22.36,
-        "startY": 34.03,
+        "startX": 20.67,
+        "startY": 37.55,
         "endX": 7.98,
         "endY": 59.22
-      },
-      {
-        "id": "mtiw9qa3-obmano",
-        "type": "route",
-        "points": [
-          {
-            "x": 56.12,
-            "y": 21.09
-          },
-          {
-            "x": 58.69,
-            "y": 17.55
-          },
-          {
-            "x": 63.3,
-            "y": 14.09
-          },
-          {
-            "x": 72.61,
-            "y": 12.85
-          },
-          {
-            "x": 89.28,
-            "y": 9.39
-          }
-        ]
       },
       {
         "id": "mtiw9ulx-p4oc9w",
@@ -28976,13 +29166,76 @@
         "dangerRoute": true
       },
       {
-        "id": "mtviz7tf-olxvvg",
+        "id": "mucgp6ti-w9ekwk",
+        "type": "aimHere",
+        "parentTankId": "aral-sea-blue-unit-11",
+        "startX": 33.89,
+        "startY": 59.86,
+        "endX": 12.03,
+        "endY": 88.53
+      },
+      {
+        "id": "mucgqtva-gcjxqa",
         "type": "aimHere",
         "parentTankId": "mtviz3on-92exn2",
-        "startX": 41.49,
-        "startY": 61.79,
-        "endX": 4.52,
-        "endY": 78.99
+        "startX": 27.75,
+        "startY": 58.15,
+        "endX": 2.74,
+        "endY": 78.37
+      },
+      {
+        "id": "mucgr42m-anlk75",
+        "type": "aimHere",
+        "parentTankId": "mtviz3on-92exn2",
+        "startX": 27.75,
+        "startY": 58.15,
+        "endX": 14.47,
+        "endY": 76.8
+      },
+      {
+        "id": "mucgrjrm-2vzqc5",
+        "type": "aimHere",
+        "parentTankId": "mucgrg4d-yya5gi",
+        "startX": 50.96,
+        "startY": 72.2,
+        "endX": 10.99,
+        "endY": 88.62
+      },
+      {
+        "id": "mucgry9u-9j1m03",
+        "type": "aimHere",
+        "parentTankId": "mucgruew-nmxyhy",
+        "startX": 59.04,
+        "startY": 82.36,
+        "endX": 89.36,
+        "endY": 88.44
+      },
+      {
+        "id": "mucgsco8-48e3zb",
+        "type": "aimHere",
+        "parentTankId": "mucgs931-yh5dbs",
+        "startX": 41.23,
+        "startY": 71.07,
+        "endX": 11.6,
+        "endY": 87.66
+      },
+      {
+        "id": "mucgsx8w-hei0mw",
+        "type": "aimHere",
+        "parentTankId": "mtgsfqp5-pmg0vi",
+        "startX": 51.33,
+        "startY": 49.64,
+        "endX": 39.4,
+        "endY": 54.56
+      },
+      {
+        "id": "mucgy95e-48vg7f",
+        "type": "aimHere",
+        "parentTankId": "aral-sea-blue-unit-07",
+        "startX": 11.08,
+        "startY": 33.68,
+        "endX": 17.94,
+        "endY": 59.95
       }
     ],
     "Arctic Pier::domination-1|Blue": [
@@ -62935,6 +63188,60 @@
           }
         ],
         "dangerRoute": true
+      },
+      {
+        "id": "muc78sex-fle3jw",
+        "type": "aimHere",
+        "parentTankId": "sweden-blue-unit-24",
+        "startX": 16.25,
+        "startY": 83.82,
+        "endX": 34.1,
+        "endY": 86.53
+      },
+      {
+        "id": "muc78x7n-ja5iy2",
+        "type": "aimHere",
+        "parentTankId": "sweden-blue-unit-22",
+        "startX": 21.88,
+        "startY": 77.78,
+        "endX": 29.58,
+        "endY": 88.36
+      },
+      {
+        "id": "muc790di-cm5hm3",
+        "type": "aimHere",
+        "parentTankId": "sweden-blue-unit-21",
+        "startX": 24.1,
+        "startY": 76.67,
+        "endX": 31.49,
+        "endY": 83.93
+      },
+      {
+        "id": "muc794m7-ej0qay",
+        "type": "aimHere",
+        "parentTankId": "sweden-blue-unit-20",
+        "startX": 59.79,
+        "startY": 73.06,
+        "endX": 65.03,
+        "endY": 84.19
+      },
+      {
+        "id": "muc796n2-yyj0i2",
+        "type": "aimHere",
+        "parentTankId": "sweden-blue-unit-19",
+        "startX": 72.99,
+        "startY": 72.5,
+        "endX": 69.29,
+        "endY": 86.36
+      },
+      {
+        "id": "muc79alv-hkixw6",
+        "type": "aimHere",
+        "parentTankId": "sweden-blue-unit-23",
+        "startX": 87.92,
+        "startY": 79.65,
+        "endX": 65.99,
+        "endY": 87.32
       }
     ],
     "Sweden::domination-1|Red": [
@@ -62946,33 +63253,6 @@
         "startY": 24.58,
         "endX": 18.5,
         "endY": 17.53
-      },
-      {
-        "id": "sweden-red-aim-02",
-        "type": "aimHere",
-        "parentTankId": "sweden-red-unit-04",
-        "startX": 65.56,
-        "startY": 25.42,
-        "endX": 65.6,
-        "endY": 20.35
-      },
-      {
-        "id": "sweden-red-aim-03",
-        "type": "aimHere",
-        "parentTankId": "sweden-red-unit-05",
-        "startX": 57.99,
-        "startY": 30.49,
-        "endX": 52.94,
-        "endY": 27.56
-      },
-      {
-        "id": "sweden-red-aim-04",
-        "type": "aimHere",
-        "parentTankId": "sweden-red-unit-05",
-        "startX": 57.99,
-        "startY": 30.49,
-        "endX": 56.13,
-        "endY": 25.4
       },
       {
         "id": "sweden-red-aim-05",
@@ -63413,6 +63693,60 @@
           }
         ],
         "dangerRoute": true
+      },
+      {
+        "id": "muc77mv8-e1h39m",
+        "type": "aimHere",
+        "parentTankId": "sweden-red-unit-01",
+        "startX": 92.29,
+        "startY": 10.42,
+        "endX": 67.64,
+        "endY": 11.56
+      },
+      {
+        "id": "muc77pjj-3tfd1a",
+        "type": "aimHere",
+        "parentTankId": "sweden-red-unit-02",
+        "startX": 74.65,
+        "startY": 21.67,
+        "endX": 72.85,
+        "endY": 11.56
+      },
+      {
+        "id": "muc77vjg-d967qb",
+        "type": "aimHere",
+        "parentTankId": "sweden-red-unit-04",
+        "startX": 65.56,
+        "startY": 25.42,
+        "endX": 67.2,
+        "endY": 11.73
+      },
+      {
+        "id": "muc7809v-4qnn1q",
+        "type": "aimHere",
+        "parentTankId": "sweden-red-unit-05",
+        "startX": 57.99,
+        "startY": 30.49,
+        "endX": 53.82,
+        "endY": 19.2
+      },
+      {
+        "id": "muc7857n-xbj4ir",
+        "type": "aimHere",
+        "parentTankId": "sweden-red-unit-05",
+        "startX": 57.99,
+        "startY": 30.49,
+        "endX": 39.23,
+        "endY": 16.85
+      },
+      {
+        "id": "muc789a4-d4x0bd",
+        "type": "aimHere",
+        "parentTankId": "sweden-red-unit-03",
+        "startX": 24.03,
+        "startY": 24.58,
+        "endX": 33.75,
+        "endY": 10.86
       }
     ],
     "Test Site-2271::domination-1|Red": [
@@ -69300,6 +69634,6 @@
     "Darwin Hill::battle-1|Red": [],
     "Sands of Sinai::domination-1|Blue": []
   },
-  "updatedAt": "2026-09-22T04:24:18.022Z",
-  "exportedAt": "2026-09-22T04:24:56.354Z"
+  "updatedAt": "2026-09-22T09:25:46.324Z",
+  "exportedAt": "2026-09-22T09:26:58.472Z"
 }

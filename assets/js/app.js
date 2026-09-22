@@ -275,6 +275,7 @@ let vectorEditor = null;
     const ROLE_MARKER_TYPES = new Set(["battleLine", "highRiskSpot", "sniper", "spawnKill"]);
     const SPECIAL_MARKER_MAP_NAMES = new Set([
       "Surroundings of Volokolamsk",
+      "Aral Sea",
       "Arctic Polar Base",
       "Arctic Pier",
       "Volokolamsk",
