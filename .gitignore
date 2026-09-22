@@ -11,6 +11,7 @@
 /maps/
 *.py
 !/scripts/export-replay-layout.py
+!/scripts/sync-war-thunder-units.py
 *.psd
 
 # Internal documentation stays on local machines.
