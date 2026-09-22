@@ -40,7 +40,7 @@
     "Middle East": { "ko": "중동", "br": { "min": 5.0 } },
     "Mozdok": { "ko": "모즈도크", "br": { "min": 3.7 } },
     "Normandy": { "ko": "노르망디", "br": { "min": 3.7 } },
-    "North Holland": { "ko": "노르드 홀란트", "br": { "min": 1.0 } },
+    "North Holland": { "ko": "노르트 홀란트", "br": { "min": 1.0 } },
     "Poland": { "ko": "폴란드", "br": { "min": 1.0 } },
     "Port Novorossiysk": { "ko": "노보로시스크 항구", "defaultMode": "conquest", "br": { "min": 2.3 } },
     "Pradesh": { "ko": "프라데시", "br": { "min": 7.7 } },
