@@ -6,7 +6,7 @@
     "Abandoned Town": "2026-09-14",
     "Advance to the Rhine": "2026-09-16",
     "Alaska": "2026-09-14",
-    "American Desert": "2026-09-16",
+    "American Desert": "2026-09-23",
     "Aral Sea": "2026-09-23",
     "Arctic Pier": "2026-09-15",
     "Arctic Polar Base": "2026-09-23",
@@ -65,7 +65,7 @@
     "Abandoned Town": "2026-09-13T23:30:35Z",
     "Advance to the Rhine": "2026-09-16T02:26:57Z",
     "Alaska": "2026-09-13T23:26:53Z",
-    "American Desert": "2026-09-16T02:29:34Z",
+    "American Desert": "2026-09-22T21:47:17Z",
     "Aral Sea": "2026-09-22T19:21:50Z",
     "Arctic Pier": "2026-09-15T01:05:22Z",
     "Arctic Polar Base": "2026-09-22T20:33:11Z",
@@ -3396,7 +3396,10 @@
         "id": "mtxo514r-a8imao",
         "type": "artilleryStrike",
         "x": 45.92,
-        "y": 47.34
+        "y": 47.34,
+        "commentImages": [
+          "American Desert/scr_strike01.mp4"
+        ]
       },
       {
         "id": "mtxozmvw-xf5syz",
@@ -3701,7 +3704,10 @@
         "id": "mtxo4erb-0h6qhc",
         "type": "artilleryStrike",
         "x": 58.96,
-        "y": 52.39
+        "y": 52.39,
+        "commentImages": [
+          "American Desert/scr_strike02.mp4"
+        ]
       },
       {
         "id": "mtxqg6wx-kscdwb",
@@ -70074,6 +70080,6 @@
     "Darwin Hill::battle-1|Red": [],
     "Sands of Sinai::domination-1|Blue": []
   },
-  "updatedAt": "2026-09-22T20:45:13.099Z",
-  "exportedAt": "2026-09-22T20:48:27.885Z"
+  "updatedAt": "2026-09-22T21:47:17.233Z",
+  "exportedAt": "2026-09-22T21:47:29.452Z"
 }
