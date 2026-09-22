@@ -272,6 +272,11 @@ let vectorEditor = null;
       "antiAir",
       "antiAirRed"
     ]);
+    const COMMENTABLE_MARKER_TYPES = new Set([
+      ...TANK_MARKER_TYPES,
+      "smokeshell",
+      "artilleryStrike"
+    ]);
     const TANK_MARKER_TYPE_GROUPS = Object.freeze({
       standard: Object.freeze(["lightTank", "mainBattleTank", "tankDestroyer", "antiAir"]),
       red: Object.freeze(["lightTankRed", "mainBattleTankRed", "tankDestroyerRed", "antiAirRed"])
@@ -781,6 +786,9 @@ let vectorEditor = null;
     function isTankMarker(marker) {
       return Boolean(marker && TANK_MARKER_TYPES.has(marker.type));
     }
+    function isCommentableMarker(marker) {
+      return Boolean(marker && COMMENTABLE_MARKER_TYPES.has(marker.type));
+    }
     function isRoleMarker(marker) {
       return Boolean(marker && ROLE_MARKER_TYPES.has(marker.type));
     }
@@ -814,13 +822,13 @@ let vectorEditor = null;
       return limitCommentToByteLength(String(value ?? "").trim());
     }
     function markerComment(marker) {
-      if (!isTankMarker(marker)) return "";
+      if (!isCommentableMarker(marker)) return "";
       const preferred = marker[`comment${state.language === "ko" ? "Ko" : "En"}`];
       const alternate = marker[`comment${state.language === "ko" ? "En" : "Ko"}`];
       return normalizeMarkerComment(preferred) || normalizeMarkerComment(alternate) || normalizeMarkerComment(marker.comment);
     }
     function markerCommentImageIds(marker) {
-      if (!isTankMarker(marker)) return [];
+      if (!isCommentableMarker(marker)) return [];
       const candidateIds = Array.isArray(marker.commentImages)
         ? marker.commentImages
         : (typeof marker.commentImage === "string" ? [marker.commentImage] : []);
@@ -1672,7 +1680,7 @@ let vectorEditor = null;
       counter.textContent = `${commentByteLength(input.value)} / ${MAX_MARKER_COMMENT_BYTES} B`;
     }
     function showCommentEditor(contextMenu, marker) {
-      if (!isTankMarker(marker)) return;
+      if (!isCommentableMarker(marker)) return;
       const actionList = contextMenu.querySelector("[data-marker-action-list]");
       const editor = contextMenu.querySelector("[data-marker-comment-editor]");
       const inputEn = contextMenu.querySelector('[data-marker-comment-input="en"]');
@@ -1689,7 +1697,7 @@ let vectorEditor = null;
       fitMarkerContextMenu(contextMenu);
     }
     function saveMarkerComment(marker, comments, imageIds) {
-      if (!isTankMarker(marker)) return;
+      if (!isCommentableMarker(marker)) return;
       const en = normalizeMarkerComment(comments.en);
       const ko = normalizeMarkerComment(comments.ko);
       const resolvedImageIds = [...new Set(imageIds)]
@@ -1807,7 +1815,7 @@ let vectorEditor = null;
       tankActions.hidden = !state.editMode || !tankMarker;
       roleActions.hidden = !state.editMode || !tankMarker;
       contextMenu.querySelector("[data-marker-tool='aimHere']").hidden = !state.editMode || !tankMarker;
-      contextMenu.querySelector("[data-marker-action='addComment']").hidden = !state.editMode || !isTankMarker(marker);
+      contextMenu.querySelector("[data-marker-action='addComment']").hidden = !state.editMode || !isCommentableMarker(marker);
       contextMenu.querySelector("[data-marker-action='delete']").hidden = !state.editMode;
       if (!state.editMode || !tankMarker) return;
       const tankGroup = tankMarker.type.endsWith("Red") ? "red" : "standard";
@@ -2085,7 +2093,7 @@ let vectorEditor = null;
           button.setAttribute("aria-label", `${markerLabel} — ${editTitle}`);
         } else {
           button.setAttribute("aria-label", markerLabel);
-          if (isTankMarker(marker)) button.setAttribute("aria-pressed", String(marker.id === state.focusedTankMarkerId));
+          if (isTankMarker(marker) || markerHasComment(marker)) button.setAttribute("aria-pressed", String(marker.id === state.focusedTankMarkerId));
         }
         const icon = document.createElement("img");
         icon.src = markerIconPath(marker, type.icon);
@@ -2197,7 +2205,7 @@ let vectorEditor = null;
       renderWorkInProgress(modalMapStage, modalImage);
       hideMarkerCommentPopover(null, { force: true });
       const focusedTankMarker = currentMarkers().find(marker => marker.id === state.focusedTankMarkerId);
-      if (state.focusedTankMarkerId && (!isTankMarker(focusedTankMarker) || isMarkerHidden(focusedTankMarker))) state.focusedTankMarkerId = null;
+      if (state.focusedTankMarkerId && ((!isTankMarker(focusedTankMarker) && !markerHasComment(focusedTankMarker)) || isMarkerHidden(focusedTankMarker))) state.focusedTankMarkerId = null;
       syncMarkerLayer(mapOverlayLayer, mapImage, mapStage);
       renderMapOverlayLayer(mapOverlayLayer, mapImage);
       syncMarkerLayer(annotationLayer, mapImage, mapStage);
@@ -2416,12 +2424,12 @@ let vectorEditor = null;
           const hasCommentKo = Object.prototype.hasOwnProperty.call(marker || {}, "commentKo");
           const hasCommentImage = Object.prototype.hasOwnProperty.call(marker || {}, "commentImage");
           const hasCommentImages = Object.prototype.hasOwnProperty.call(marker || {}, "commentImages");
-          const validCommentImages = !hasCommentImages || (isTankMarker(marker)
+          const validCommentImages = !hasCommentImages || (isCommentableMarker(marker)
             && Array.isArray(marker.commentImages)
             && marker.commentImages.length <= MAX_COMMENT_IMAGES
             && marker.commentImages.every(imageId => typeof imageId === "string" && COMMENT_IMAGES_BY_ID.has(imageId))
             && new Set(marker.commentImages).size === marker.commentImages.length);
-          if (!marker || typeof marker !== "object" || Array.isArray(marker) || typeof marker.id !== "string" || !marker.id || ids.has(marker.id) || !markerTypes.has(marker.type) || !Number.isFinite(marker.x) || !Number.isFinite(marker.y) || marker.x < 0 || marker.x > 100 || marker.y < 0 || marker.y > 100 || (hasParentTankId && (!isRoleMarker(marker) || typeof marker.parentTankId !== "string" || !marker.parentTankId)) || (hasComment && (!isTankMarker(marker) || typeof marker.comment !== "string" || commentByteLength(marker.comment) > MAX_MARKER_COMMENT_BYTES)) || (hasCommentEn && (!isTankMarker(marker) || typeof marker.commentEn !== "string" || commentByteLength(marker.commentEn) > MAX_MARKER_COMMENT_BYTES)) || (hasCommentKo && (!isTankMarker(marker) || typeof marker.commentKo !== "string" || commentByteLength(marker.commentKo) > MAX_MARKER_COMMENT_BYTES)) || (hasCommentImage && (!isTankMarker(marker) || typeof marker.commentImage !== "string" || !COMMENT_IMAGES_BY_ID.has(marker.commentImage))) || !validCommentImages || (hasCommentImage && hasCommentImages)) {
+          if (!marker || typeof marker !== "object" || Array.isArray(marker) || typeof marker.id !== "string" || !marker.id || ids.has(marker.id) || !markerTypes.has(marker.type) || !Number.isFinite(marker.x) || !Number.isFinite(marker.y) || marker.x < 0 || marker.x > 100 || marker.y < 0 || marker.y > 100 || (hasParentTankId && (!isRoleMarker(marker) || typeof marker.parentTankId !== "string" || !marker.parentTankId)) || (hasComment && (!isCommentableMarker(marker) || typeof marker.comment !== "string" || commentByteLength(marker.comment) > MAX_MARKER_COMMENT_BYTES)) || (hasCommentEn && (!isCommentableMarker(marker) || typeof marker.commentEn !== "string" || commentByteLength(marker.commentEn) > MAX_MARKER_COMMENT_BYTES)) || (hasCommentKo && (!isCommentableMarker(marker) || typeof marker.commentKo !== "string" || commentByteLength(marker.commentKo) > MAX_MARKER_COMMENT_BYTES)) || (hasCommentImage && (!isCommentableMarker(marker) || typeof marker.commentImage !== "string" || !COMMENT_IMAGES_BY_ID.has(marker.commentImage))) || !validCommentImages || (hasCommentImage && hasCommentImages)) {
             throw new Error("Invalid marker.");
           }
           markerCount += 1;
@@ -2740,7 +2748,7 @@ let vectorEditor = null;
         const markerButton = event.target.closest(".map-marker");
         if (!markerButton) return;
         const marker = currentMarkers().find(item => item.id === markerButton.dataset.markerId);
-        if (!isTankMarker(marker)) return;
+        if (!isTankMarker(marker) && !markerHasComment(marker)) return;
         event.preventDefault();
         event.stopPropagation();
         hideMarkerContextMenu();
