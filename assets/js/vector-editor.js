@@ -94,7 +94,7 @@ export function createVectorEditor(h) {
       if(!active||!h.editing()||h.drawing()||event.button!==0||event.target.closest('button:not([data-vector-handle]):not(.map-marker),input,textarea,.marker-context-menu,.annotation-context-menu'))return;
       const r=config.layer.getBoundingClientRect();if(!r.width||!r.height)return;
       const p=position(event,surface),handle=event.target.closest('[data-vector-handle]')?.dataset.vectorHandle;
-      const target=event.target.closest('[data-marker-id],[data-annotation-id]');
+      const target=event.target.closest('[data-marker-id]');
       // Leave native marker drag/drop in charge, even inside a selected group.
       if(target){selected.clear();refresh();return;}
       const b=bounds(h.layout(),key,selected);
