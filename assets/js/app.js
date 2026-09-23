@@ -912,9 +912,6 @@ let vectorEditor = null;
         button.className = `map-marker-comment-click-zone ${className}`;
         button.setAttribute("aria-label", label);
         button.title = label;
-        button.addEventListener("pointerenter", () => {
-          if (!markerCommentImagePreview.classList.contains("is-touch-open")) hideMarkerCommentImagePreview();
-        });
         button.addEventListener("pointerdown", event => {
           if (event.pointerType !== "mouse") return;
           event.preventDefault();
@@ -976,12 +973,13 @@ let vectorEditor = null;
       if (clickNavigation) clickNavigation.hidden = item.kind === "video";
       if (notify && changed) carousel._commentImageChange?.(nextIndex);
     }
-    function configureCommentCarousel(carousel, images, initialIndex = 0, onChange = null) {
+    function configureCommentCarousel(carousel, images, initialIndex = 0, onChange = null, { clickNavigation = false } = {}) {
       carousel._commentImages = images;
       carousel._commentImageIndex = normalizedCarouselIndex(initialIndex, images.length);
       carousel._commentImageChange = onChange;
       renderCommentCarouselIndicators(carousel);
-      renderCommentCarouselClickNavigation(carousel);
+      if (clickNavigation) renderCommentCarouselClickNavigation(carousel);
+      else carousel.querySelector(".map-marker-comment-click-navigation")?.remove();
       setCommentCarouselIndex(carousel, carousel._commentImageIndex, { animate: false, notify: false });
     }
     function bindCommentImageSwipe(carousel, enabled = () => usesMobileCommentLayout()) {
@@ -1089,7 +1087,8 @@ let vectorEditor = null;
         markerCommentImagePreviewCarousel,
         sourceCarousel._commentImages || [],
         sourceCarousel._commentImageIndex,
-        index => setCommentCarouselIndex(sourceCarousel, index, { notify: false })
+        index => setCommentCarouselIndex(sourceCarousel, index, { notify: false }),
+        { clickNavigation: true }
       );
       markerCommentImagePreviewClose.setAttribute("aria-label", t("closeCommentImage"));
       markerCommentImagePreview.hidden = false;

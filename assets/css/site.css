@@ -165,6 +165,7 @@
     .map-viewer { min-height: 600px; overflow: hidden; }
     .viewer-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 18px; padding: clamp(20px, 4vw, 32px) clamp(20px, 4vw, 38px) 18px; }
     .viewer-heading { min-width: 0; flex: 1; }
+    .viewer-controls { display: flex; flex-shrink: 0; align-items: center; gap: 8px; }
     .viewer-top h2 { margin: 0; font-size: clamp(1.5rem, 3vw, 2.1rem); letter-spacing: -.03em; }
     .viewer-top p { margin: 7px 0 0; color: var(--muted); font-size: .9rem; }
     .map-tactical-summary { width: 100%; padding: 13px 16px 14px; border-left: 3px solid var(--accent); border-radius: 0 10px 10px 0; background: rgba(214, 219, 157, .07); }
@@ -605,7 +606,9 @@
       h1 { font-size: 3rem; }
       .map-list { grid-template-columns: 1fr; }
       .viewer-top { display: block; }
-      .team-switch { margin-top: 18px; }
+      .viewer-controls { margin-top: 18px; gap: 6px; }
+      .viewer-controls .team-button { min-width: 72px; }
+      .viewer-controls .team-switch { margin-top: 0; }
       .team-button { min-width: 104px; }
       .legend-list { grid-template-columns: 1fr; }
       .site-header { flex-wrap: nowrap; justify-content: space-between; padding: 8px 0; }
@@ -664,7 +667,6 @@
 .map-detail-hero .hero-title, .map-detail-hero .hero-copy, .map-detail-hero .recent-updates { display: none; }
 .map-detail-hero .eyebrow { margin-bottom: 8px; font-size: .65rem; }
 .map-detail-hero .seo-title { margin: 0; font-size: clamp(1.2rem, 2.4vw, 1.7rem); line-height: 1.25; }
-.viewer-actions { display: flex; padding: 0 clamp(20px, 4vw, 38px) 16px; }
 .map-tactical-summary blockquote { padding-right: 0; }
 .map-tactical-summary blockquote.is-condensed { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; overflow: hidden; }
 .is-editing .map-tactical-summary blockquote { padding-right: 38px; }

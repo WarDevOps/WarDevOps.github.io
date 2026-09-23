@@ -120,16 +120,16 @@
               <p class="map-last-updated"><span data-i18n="lastUpdatedLabel">Last updated</span> <time id="map-last-updated" datetime=""></time></p>
             </div>
           </div>
-          <div class="team-switch" aria-label="Team selection" data-i18n-aria="teamSelection">
-            <button class="team-button red" type="button" data-team="Red" aria-pressed="true">RED</button>
-            <button class="team-button blue" type="button" data-team="Blue" aria-pressed="false">BLUE</button>
+          <div class="viewer-controls">
+            <button class="copy-link" id="copy-link" type="button" aria-label="Copy a link to the current map, team, and mode" data-i18n-aria="copyLinkAria">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.1.1l2-2a5 5 0 0 0-7.1-7.1l-1.1 1.1"></path><path d="M14 11a5 5 0 0 0-7.1-.1l-2 2A5 5 0 0 0 12 20l1.1-1.1"></path></svg>
+              <span data-copy-link-label data-i18n="copyLink">COPY LINK</span>
+            </button>
+            <div class="team-switch" aria-label="Team selection" data-i18n-aria="teamSelection">
+              <button class="team-button red" type="button" data-team="Red" aria-pressed="true">RED</button>
+              <button class="team-button blue" type="button" data-team="Blue" aria-pressed="false">BLUE</button>
+            </div>
           </div>
-        </div>
-        <div class="viewer-actions">
-          <button class="copy-link" id="copy-link" type="button" aria-label="Copy a link to the current map, team, and mode" data-i18n-aria="copyLinkAria">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.1.1l2-2a5 5 0 0 0-7.1-7.1l-1.1 1.1"></path><path d="M14 11a5 5 0 0 0-7.1-.1l-2 2A5 5 0 0 0 12 20l1.1-1.1"></path></svg>
-            <span data-copy-link-label data-i18n="copyLink">COPY LINK</span>
-          </button>
         </div>
         <div class="viewer-sync-status">
           <div class="map-sync-alert" id="map-sync-alert" role="status" hidden>
@@ -405,7 +405,7 @@
 
   <input id="marker-layout-import-file" type="file" accept="application/json,.json" hidden>
 
-  <script type="module" src="/assets/js/app.js?v=tactical-marker-comments-20260923"></script>
+  <script type="module" src="/assets/js/app.js?v=expanded-comment-navigation-20260923"></script>
   <script type="module" src="/assets/js/consent-controls.js?v=20260828"></script>
 </body>
 </html>

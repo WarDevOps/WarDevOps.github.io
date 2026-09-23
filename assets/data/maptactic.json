@@ -17,7 +17,7 @@
     "Berlin": "2026-09-11",
     "Breslau": "2026-09-11",
     "Campania": "2026-09-03",
-    "Cargo Port": "2026-09-17",
+    "Cargo Port": "2026-09-23",
     "Carpathians": "2026-09-04",
     "Darwin Hill": "2026-09-22",
     "Eastern Europe": "2026-09-03",
@@ -76,7 +76,7 @@
     "Berlin": "2026-09-10T23:37:22Z",
     "Breslau": "2026-09-11T09:46:34Z",
     "Campania": "2026-09-03T01:49:21Z",
-    "Cargo Port": "2026-09-16T19:28:29Z",
+    "Cargo Port": "2026-09-23T01:28:04Z",
     "Carpathians": "2026-09-04T03:02:19Z",
     "Darwin Hill": "2026-09-22T04:24:18Z",
     "Eastern Europe": "2026-09-03T01:49:56Z",
@@ -8180,7 +8180,7 @@
       },
       {
         "id": "cargo-port-red-unit-04",
-        "type": "lightTankRed",
+        "type": "mainBattleTankRed",
         "x": 50.97,
         "y": 29.86
       },
@@ -8232,14 +8232,14 @@
       {
         "id": "cargo-port-red-unit-09",
         "type": "mainBattleTankRed",
-        "x": 52.92,
-        "y": 44.65
+        "x": 52.52,
+        "y": 45.44
       },
       {
         "id": "cargo-port-red-role-05",
         "type": "highRiskSpot",
-        "x": 52.92,
-        "y": 44.65,
+        "x": 52.52,
+        "y": 45.44,
         "parentTankId": "cargo-port-red-unit-09"
       },
       {
@@ -8309,13 +8309,13 @@
       },
       {
         "id": "cargo-port-red-unit-15",
-        "type": "mainBattleTankRed",
+        "type": "tankDestroyerRed",
         "x": 94.44,
         "y": 60
       },
       {
         "id": "cargo-port-red-role-11",
-        "type": "spawnKill",
+        "type": "sniper",
         "x": 94.44,
         "y": 60,
         "parentTankId": "cargo-port-red-unit-15"
@@ -8335,7 +8335,7 @@
       },
       {
         "id": "cargo-port-red-unit-17",
-        "type": "mainBattleTankRed",
+        "type": "tankDestroyerRed",
         "x": 87.15,
         "y": 64.86
       },
@@ -8348,7 +8348,7 @@
       },
       {
         "id": "cargo-port-red-unit-18",
-        "type": "mainBattleTankRed",
+        "type": "tankDestroyerRed",
         "x": 34.03,
         "y": 69.44
       },
@@ -8361,7 +8361,7 @@
       },
       {
         "id": "cargo-port-red-unit-19",
-        "type": "mainBattleTankRed",
+        "type": "tankDestroyerRed",
         "x": 10.97,
         "y": 80.76
       },
@@ -8417,6 +8417,25 @@
         "x": 65.56,
         "y": 33.61,
         "parentTankId": "cargo-port-red-unit-06"
+      },
+      {
+        "id": "mudf0oks-hdbc2f",
+        "type": "mainBattleTankRed",
+        "x": 61.64,
+        "y": 47.7
+      },
+      {
+        "id": "mudf0qj5-syqadl",
+        "type": "highRiskSpot",
+        "x": 61.64,
+        "y": 47.7,
+        "parentTankId": "mudf0oks-hdbc2f"
+      },
+      {
+        "id": "mudf6zvm-6cvjbw",
+        "type": "smokeshell",
+        "x": 28.71,
+        "y": 85.14
       }
     ],
     "Cargo Port::domination-1|Blue": [
@@ -8453,7 +8472,7 @@
       },
       {
         "id": "cargo-port-blue-unit-05",
-        "type": "mainBattleTank",
+        "type": "tankDestroyer",
         "x": 68.26,
         "y": 30.35
       },
@@ -8479,7 +8498,7 @@
       },
       {
         "id": "cargo-port-blue-unit-07",
-        "type": "mainBattleTank",
+        "type": "tankDestroyer",
         "x": 71.32,
         "y": 38.89
       },
@@ -8671,6 +8690,25 @@
         "x": 19.65,
         "y": 78.75,
         "parentTankId": "cargo-port-blue-unit-19"
+      },
+      {
+        "id": "mudf6vtw-v15zis",
+        "type": "smokeshell",
+        "x": 30.97,
+        "y": 10.51
+      },
+      {
+        "id": "mudfaa2e-ku2lqs",
+        "type": "mainBattleTank",
+        "x": 47.22,
+        "y": 75.15
+      },
+      {
+        "id": "mudfabc3-ft78m0",
+        "type": "spawnKill",
+        "x": 47.22,
+        "y": 75.15,
+        "parentTankId": "mudfaa2e-ku2lqs"
       }
     ],
     "Carpathians::domination-1|Blue": [
@@ -38848,78 +38886,6 @@
         "endY": 42.3
       },
       {
-        "id": "cargo-port-red-aim-02",
-        "type": "aimHere",
-        "parentTankId": "cargo-port-red-unit-04",
-        "startX": 50.97,
-        "startY": 29.86,
-        "endX": 68.74,
-        "endY": 29.31
-      },
-      {
-        "id": "cargo-port-red-aim-03",
-        "type": "aimHere",
-        "parentTankId": "cargo-port-red-unit-09",
-        "startX": 52.92,
-        "startY": 44.65,
-        "endX": 48.12,
-        "endY": 45.29
-      },
-      {
-        "id": "cargo-port-red-aim-04",
-        "type": "aimHere",
-        "parentTankId": "cargo-port-red-unit-17",
-        "startX": 87.15,
-        "startY": 64.86,
-        "endX": 89.88,
-        "endY": 50.9
-      },
-      {
-        "id": "cargo-port-red-aim-05",
-        "type": "aimHere",
-        "parentTankId": "cargo-port-red-unit-10",
-        "startX": 34.31,
-        "startY": 49.86,
-        "endX": 37.29,
-        "endY": 46.88
-      },
-      {
-        "id": "cargo-port-red-aim-06",
-        "type": "aimHere",
-        "parentTankId": "cargo-port-red-unit-14",
-        "startX": 17.57,
-        "startY": 57.08,
-        "endX": 24.34,
-        "endY": 53.46
-      },
-      {
-        "id": "cargo-port-red-aim-07",
-        "type": "aimHere",
-        "parentTankId": "cargo-port-red-unit-10",
-        "startX": 34.31,
-        "startY": 49.86,
-        "endX": 37.32,
-        "endY": 45.13
-      },
-      {
-        "id": "cargo-port-red-aim-08",
-        "type": "aimHere",
-        "parentTankId": "cargo-port-red-unit-11",
-        "startX": 87.15,
-        "startY": 54.65,
-        "endX": 89.82,
-        "endY": 50.93
-      },
-      {
-        "id": "cargo-port-red-aim-09",
-        "type": "aimHere",
-        "parentTankId": "cargo-port-red-unit-04",
-        "startX": 50.97,
-        "startY": 29.86,
-        "endX": 47.74,
-        "endY": 22.45
-      },
-      {
         "id": "cargo-port-red-route-01",
         "type": "route",
         "points": [
@@ -38962,32 +38928,6 @@
           {
             "x": 80.94,
             "y": 87.85
-          }
-        ]
-      },
-      {
-        "id": "cargo-port-red-route-02",
-        "type": "route",
-        "points": [
-          {
-            "x": 34.72,
-            "y": 58.16
-          },
-          {
-            "x": 34.72,
-            "y": 60.94
-          },
-          {
-            "x": 34.72,
-            "y": 63.72
-          },
-          {
-            "x": 34.72,
-            "y": 66.49
-          },
-          {
-            "x": 34.79,
-            "y": 67.79
           }
         ]
       },
@@ -39058,122 +38998,6 @@
         ]
       },
       {
-        "id": "cargo-port-red-route-04",
-        "type": "route",
-        "points": [
-          {
-            "x": 71.25,
-            "y": 58.09
-          },
-          {
-            "x": 71.74,
-            "y": 60.8
-          },
-          {
-            "x": 72.01,
-            "y": 63.51
-          },
-          {
-            "x": 71.84,
-            "y": 66.22
-          },
-          {
-            "x": 72.59,
-            "y": 68.78
-          },
-          {
-            "x": 74.55,
-            "y": 67.25
-          },
-          {
-            "x": 75.94,
-            "y": 64.89
-          },
-          {
-            "x": 77.25,
-            "y": 62.49
-          },
-          {
-            "x": 77.36,
-            "y": 59.76
-          },
-          {
-            "x": 77.5,
-            "y": 56.98
-          },
-          {
-            "x": 77.57,
-            "y": 54.2
-          },
-          {
-            "x": 77.68,
-            "y": 51.64
-          },
-          {
-            "x": 72.85,
-            "y": 71.53
-          },
-          {
-            "x": 73.02,
-            "y": 74.27
-          },
-          {
-            "x": 73.57,
-            "y": 76.88
-          },
-          {
-            "x": 74.24,
-            "y": 79.41
-          },
-          {
-            "x": 74.31,
-            "y": 82.12
-          },
-          {
-            "x": 74.34,
-            "y": 84.9
-          },
-          {
-            "x": 74.12,
-            "y": 87.45
-          }
-        ]
-      },
-      {
-        "id": "cargo-port-red-route-05",
-        "type": "route",
-        "points": [
-          {
-            "x": 36.15,
-            "y": 86.91
-          },
-          {
-            "x": 35.94,
-            "y": 84.1
-          },
-          {
-            "x": 35.69,
-            "y": 81.35
-          },
-          {
-            "x": 35.45,
-            "y": 78.58
-          },
-          {
-            "x": 35.24,
-            "y": 75.8
-          },
-          {
-            "x": 35,
-            "y": 73.02
-          },
-          {
-            "x": 34.9,
-            "y": 71.63
-          }
-        ]
-      },
-      {
         "id": "cargo-port-red-route-06",
         "type": "route",
         "points": [
@@ -39224,47 +39048,6 @@
         ]
       },
       {
-        "id": "cargo-port-red-route-07",
-        "type": "route",
-        "points": [
-          {
-            "x": 88.42,
-            "y": 66.59
-          },
-          {
-            "x": 91.1,
-            "y": 65.97
-          },
-          {
-            "x": 93.37,
-            "y": 64.53
-          },
-          {
-            "x": 94.17,
-            "y": 61.98
-          }
-        ]
-      },
-      {
-        "id": "cargo-port-red-route-08",
-        "type": "route",
-        "points": [
-          {
-            "x": 61.45,
-            "y": 48.09
-          },
-          {
-            "x": 63.48,
-            "y": 45.05
-          },
-          {
-            "x": 64.09,
-            "y": 43.76
-          }
-        ],
-        "dangerRoute": true
-      },
-      {
         "id": "cargo-port-red-route-09",
         "type": "route",
         "points": [
@@ -39291,25 +39074,6 @@
           {
             "x": 94.2,
             "y": 31.85
-          }
-        ],
-        "dangerRoute": true
-      },
-      {
-        "id": "cargo-port-red-route-10",
-        "type": "route",
-        "points": [
-          {
-            "x": 76.23,
-            "y": 38.92
-          },
-          {
-            "x": 75.4,
-            "y": 36.02
-          },
-          {
-            "x": 75.23,
-            "y": 33.21
           }
         ],
         "dangerRoute": true
@@ -39407,81 +39171,426 @@
         "startY": 80.76,
         "endX": 11.77,
         "endY": 11.12
+      },
+      {
+        "id": "mudeznvx-pgqc5s",
+        "type": "aimHere",
+        "parentTankId": "cargo-port-red-unit-09",
+        "startX": 52.52,
+        "startY": 45.44,
+        "endX": 51.48,
+        "endY": 34.14
+      },
+      {
+        "id": "mudezsop-zvzkys",
+        "type": "aimHere",
+        "parentTankId": "cargo-port-red-unit-09",
+        "startX": 52.52,
+        "startY": 45.44,
+        "endX": 37.05,
+        "endY": 45.7
+      },
+      {
+        "id": "mudf03jr-k7tk0v",
+        "type": "aimHere",
+        "parentTankId": "cargo-port-red-unit-07",
+        "startX": 36.18,
+        "startY": 38.89,
+        "endX": 38.1,
+        "endY": 16.51
+      },
+      {
+        "id": "mudf07nh-euu4cj",
+        "type": "aimHere",
+        "parentTankId": "cargo-port-red-unit-10",
+        "startX": 34.31,
+        "startY": 49.86,
+        "endX": 47.91,
+        "endY": 40.66
+      },
+      {
+        "id": "mudf0d1z-3el4jq",
+        "type": "aimHere",
+        "parentTankId": "cargo-port-red-unit-06",
+        "startX": 65.56,
+        "startY": 33.61,
+        "endX": 67.81,
+        "endY": 14.94
+      },
+      {
+        "id": "mudf0tur-b67l52",
+        "type": "aimHere",
+        "parentTankId": "cargo-port-red-unit-13",
+        "startX": 59.17,
+        "startY": 55.97,
+        "endX": 52.43,
+        "endY": 47.87
+      },
+      {
+        "id": "mudf0wlz-6ns4te",
+        "type": "aimHere",
+        "parentTankId": "cargo-port-red-unit-12",
+        "startX": 70.76,
+        "startY": 55.21,
+        "endX": 69.03,
+        "endY": 27.98
+      },
+      {
+        "id": "mudf12a7-wq1grb",
+        "type": "aimHere",
+        "parentTankId": "cargo-port-red-unit-17",
+        "startX": 87.15,
+        "startY": 64.86,
+        "endX": 92.05,
+        "endY": 43.27
+      },
+      {
+        "id": "mudf1508-w3a6p9",
+        "type": "aimHere",
+        "parentTankId": "cargo-port-red-unit-11",
+        "startX": 87.15,
+        "startY": 54.65,
+        "endX": 92.4,
+        "endY": 46.22
+      },
+      {
+        "id": "mudf19bb-04v48u",
+        "type": "aimHere",
+        "parentTankId": "cargo-port-red-unit-15",
+        "startX": 94.44,
+        "startY": 60,
+        "endX": 96.66,
+        "endY": 9.9
+      },
+      {
+        "id": "mudf1tbh-59zhpy",
+        "type": "aimHere",
+        "parentTankId": "cargo-port-red-unit-04",
+        "startX": 50.97,
+        "startY": 29.86,
+        "endX": 45.4,
+        "endY": 13.99
+      },
+      {
+        "id": "mudf1wk5-amuml4",
+        "type": "aimHere",
+        "parentTankId": "cargo-port-red-unit-01",
+        "startX": 23.26,
+        "startY": 12.78,
+        "endX": 39.14,
+        "endY": 11.21
+      },
+      {
+        "id": "mudf1zdj-78iobx",
+        "type": "aimHere",
+        "parentTankId": "cargo-port-red-unit-01",
+        "startX": 23.26,
+        "startY": 12.78,
+        "endX": 36.97,
+        "endY": 3.48
+      },
+      {
+        "id": "mudf2e8t-pqu0ku",
+        "type": "route",
+        "points": [
+          {
+            "x": 87.36,
+            "y": 66.64
+          },
+          {
+            "x": 90.75,
+            "y": 66.2
+          },
+          {
+            "x": 93.27,
+            "y": 65.42
+          },
+          {
+            "x": 94.48,
+            "y": 62.9
+          },
+          {
+            "x": 94.66,
+            "y": 60.21
+          }
+        ]
+      },
+      {
+        "id": "mudf2osp-588ksj",
+        "type": "route",
+        "points": [
+          {
+            "x": 74.59,
+            "y": 88.1
+          },
+          {
+            "x": 74.5,
+            "y": 78.19
+          },
+          {
+            "x": 73.02,
+            "y": 75.59
+          },
+          {
+            "x": 72.94,
+            "y": 70.03
+          },
+          {
+            "x": 71.89,
+            "y": 68.11
+          },
+          {
+            "x": 71.81,
+            "y": 63.94
+          },
+          {
+            "x": 71.98,
+            "y": 61.51
+          },
+          {
+            "x": 70.85,
+            "y": 58.12
+          },
+          {
+            "x": 70.85,
+            "y": 55.08
+          }
+        ]
+      },
+      {
+        "id": "mudf2tiv-f8eclf",
+        "type": "route",
+        "points": [
+          {
+            "x": 72.76,
+            "y": 69.33
+          },
+          {
+            "x": 76.76,
+            "y": 64.81
+          },
+          {
+            "x": 77.54,
+            "y": 51.95
+          }
+        ]
+      },
+      {
+        "id": "mudf2wwb-87cb3e",
+        "type": "route",
+        "points": [
+          {
+            "x": 77.8,
+            "y": 51.69
+          },
+          {
+            "x": 77.54,
+            "y": 45.87
+          },
+          {
+            "x": 78.5,
+            "y": 43.7
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "mudf3icp-gw4m04",
+        "type": "route",
+        "points": [
+          {
+            "x": 59.12,
+            "y": 55.95
+          },
+          {
+            "x": 59.3,
+            "y": 51.52
+          },
+          {
+            "x": 61.99,
+            "y": 47.96
+          },
+          {
+            "x": 62.95,
+            "y": 47.52
+          },
+          {
+            "x": 64.07,
+            "y": 43.01
+          },
+          {
+            "x": 65.46,
+            "y": 41.7
+          },
+          {
+            "x": 64.86,
+            "y": 37.53
+          },
+          {
+            "x": 65.73,
+            "y": 36.23
+          },
+          {
+            "x": 65.64,
+            "y": 33.88
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "mudf3qt9-5ntqzh",
+        "type": "route",
+        "points": [
+          {
+            "x": 52.26,
+            "y": 45.53
+          },
+          {
+            "x": 54,
+            "y": 50.04
+          },
+          {
+            "x": 57.56,
+            "y": 52.65
+          },
+          {
+            "x": 58.69,
+            "y": 53.69
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "mudf4223-0g4mcs",
+        "type": "route",
+        "points": [
+          {
+            "x": 46.18,
+            "y": 63.34
+          },
+          {
+            "x": 48.35,
+            "y": 65.25
+          },
+          {
+            "x": 58.69,
+            "y": 65.16
+          },
+          {
+            "x": 61.73,
+            "y": 65.16
+          }
+        ]
+      },
+      {
+        "id": "mudf4dkf-lfwun8",
+        "type": "route",
+        "points": [
+          {
+            "x": 22.37,
+            "y": 84.71
+          },
+          {
+            "x": 34.62,
+            "y": 89.05
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "mudf4mbr-hwy4y4",
+        "type": "route",
+        "points": [
+          {
+            "x": 35.58,
+            "y": 89.23
+          },
+          {
+            "x": 34.71,
+            "y": 68.64
+          },
+          {
+            "x": 34.88,
+            "y": 58.82
+          }
+        ]
+      },
+      {
+        "id": "mudf4ra7-b541kc",
+        "type": "route",
+        "points": [
+          {
+            "x": 34.62,
+            "y": 58.56
+          },
+          {
+            "x": 34.62,
+            "y": 54.82
+          },
+          {
+            "x": 36.01,
+            "y": 53.95
+          },
+          {
+            "x": 35.84,
+            "y": 52.39
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "mudf4uk2-rhzr3d",
+        "type": "route",
+        "points": [
+          {
+            "x": 35.84,
+            "y": 52.22
+          },
+          {
+            "x": 34.97,
+            "y": 50.22
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "mudf5mu6-pgpixy",
+        "type": "aimHere",
+        "parentTankId": "cargo-port-red-unit-05",
+        "startX": 74.44,
+        "startY": 30.83,
+        "endX": 43.66,
+        "endY": 31.19
+      },
+      {
+        "id": "mudf5zyf-wq16rh",
+        "type": "aimHere",
+        "parentTankId": "cargo-port-red-unit-14",
+        "startX": 17.57,
+        "startY": 57.08,
+        "endX": 37.23,
+        "endY": 47
+      },
+      {
+        "id": "mudf69jo-iozbkm",
+        "type": "aimHere",
+        "parentTankId": "cargo-port-red-unit-16",
+        "startX": 46.32,
+        "startY": 62.64,
+        "endX": 35.32,
+        "endY": 42.83
+      },
+      {
+        "id": "mudf6f4h-lkz9as",
+        "type": "aimHere",
+        "parentTankId": "mudf0oks-hdbc2f",
+        "startX": 61.64,
+        "startY": 47.7,
+        "endX": 70.07,
+        "endY": 40.23
       }
     ],
     "Cargo Port::domination-1|Blue": [
-      {
-        "id": "cargo-port-blue-aim-01",
-        "type": "aimHere",
-        "parentTankId": "cargo-port-blue-unit-17",
-        "startX": 83.12,
-        "startY": 68.61,
-        "endX": 73.68,
-        "endY": 68.46
-      },
-      {
-        "id": "cargo-port-blue-aim-02",
-        "type": "aimHere",
-        "parentTankId": "cargo-port-blue-unit-15",
-        "startX": 91.18,
-        "startY": 51.81,
-        "endX": 95.14,
-        "endY": 56.31
-      },
-      {
-        "id": "cargo-port-blue-aim-03",
-        "type": "aimHere",
-        "parentTankId": "cargo-port-blue-unit-14",
-        "startX": 75.14,
-        "startY": 51.53,
-        "endX": 83.4,
-        "endY": 50.92
-      },
-      {
-        "id": "cargo-port-blue-aim-04",
-        "type": "aimHere",
-        "parentTankId": "cargo-port-blue-unit-14",
-        "startX": 75.14,
-        "startY": 51.53,
-        "endX": 70.35,
-        "endY": 51.41
-      },
-      {
-        "id": "cargo-port-blue-aim-05",
-        "type": "aimHere",
-        "parentTankId": "cargo-port-blue-unit-11",
-        "startX": 17.22,
-        "startY": 44.51,
-        "endX": 18.58,
-        "endY": 49.5
-      },
-      {
-        "id": "cargo-port-blue-aim-07",
-        "type": "aimHere",
-        "parentTankId": "cargo-port-blue-unit-15",
-        "startX": 91.18,
-        "startY": 51.81,
-        "endX": 87.58,
-        "endY": 45.02
-      },
-      {
-        "id": "cargo-port-blue-aim-08",
-        "type": "aimHere",
-        "parentTankId": "cargo-port-blue-unit-13",
-        "startX": 35.62,
-        "startY": 47.43,
-        "endX": 38.6,
-        "endY": 51.19
-      },
-      {
-        "id": "cargo-port-blue-aim-09",
-        "type": "aimHere",
-        "parentTankId": "cargo-port-blue-unit-16",
-        "startX": 64.24,
-        "startY": 52.78,
-        "endX": 60.62,
-        "endY": 51.25
-      },
       {
         "id": "cargo-port-blue-route-01",
         "type": "route",
@@ -39976,24 +40085,6 @@
         "endY": 88.88
       },
       {
-        "id": "mu4ht52r-4hxf10",
-        "type": "aimHere",
-        "parentTankId": "cargo-port-blue-unit-18",
-        "startX": 73.19,
-        "startY": 72.57,
-        "endX": 75.11,
-        "endY": 88.79
-      },
-      {
-        "id": "mu4ht7dk-6a204u",
-        "type": "aimHere",
-        "parentTankId": "cargo-port-blue-unit-21",
-        "startX": 86.18,
-        "startY": 87.15,
-        "endX": 69.9,
-        "endY": 89.4
-      },
-      {
         "id": "mu4hu8mf-2cfj4y",
         "type": "aimHere",
         "parentTankId": "cargo-port-blue-unit-03",
@@ -40001,6 +40092,250 @@
         "startY": 10.62,
         "endX": 8.56,
         "endY": 70.63
+      },
+      {
+        "id": "mudf7bsx-imf5iw",
+        "type": "route",
+        "points": [
+          {
+            "x": 22.11,
+            "y": 8.69
+          },
+          {
+            "x": 35.93,
+            "y": 5.47
+          },
+          {
+            "x": 38.18,
+            "y": 5.56
+          },
+          {
+            "x": 42.27,
+            "y": 7.82
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "mudf7kor-gm2snu",
+        "type": "route",
+        "points": [
+          {
+            "x": 64.42,
+            "y": 52.3
+          },
+          {
+            "x": 64.07,
+            "y": 48.91
+          },
+          {
+            "x": 64.86,
+            "y": 46.13
+          },
+          {
+            "x": 65.73,
+            "y": 43.79
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "mudf7s8f-6m1s3k",
+        "type": "route",
+        "points": [
+          {
+            "x": 65.55,
+            "y": 42.75
+          },
+          {
+            "x": 64.86,
+            "y": 37.27
+          },
+          {
+            "x": 66.07,
+            "y": 36.23
+          },
+          {
+            "x": 67.12,
+            "y": 29.28
+          }
+        ]
+      },
+      {
+        "id": "mudf7x6v-wj6ifn",
+        "type": "aimHere",
+        "parentTankId": "cargo-port-blue-unit-05",
+        "startX": 68.26,
+        "startY": 30.35,
+        "endX": 70.94,
+        "endY": 69.33
+      },
+      {
+        "id": "mudf806n-wcur72",
+        "type": "aimHere",
+        "parentTankId": "cargo-port-blue-unit-07",
+        "startX": 71.32,
+        "startY": 38.89,
+        "endX": 40.79,
+        "endY": 60.03
+      },
+      {
+        "id": "mudf89f3-fsqytd",
+        "type": "aimHere",
+        "parentTankId": "cargo-port-blue-unit-12",
+        "startX": 94.44,
+        "startY": 46.53,
+        "endX": 95.61,
+        "endY": 69.68
+      },
+      {
+        "id": "mudf8jo3-28kahr",
+        "type": "aimHere",
+        "parentTankId": "cargo-port-blue-unit-18",
+        "startX": 73.19,
+        "startY": 72.57,
+        "endX": 75.37,
+        "endY": 91.57
+      },
+      {
+        "id": "mudf8mgd-ak0sjt",
+        "type": "aimHere",
+        "parentTankId": "cargo-port-blue-unit-21",
+        "startX": 86.18,
+        "startY": 87.15,
+        "endX": 71.72,
+        "endY": 88.71
+      },
+      {
+        "id": "mudf8p03-56n8ko",
+        "type": "aimHere",
+        "parentTankId": "cargo-port-blue-unit-17",
+        "startX": 83.12,
+        "startY": 68.61,
+        "endX": 63.29,
+        "endY": 68.11
+      },
+      {
+        "id": "mudf8xon-aud1b7",
+        "type": "aimHere",
+        "parentTankId": "cargo-port-blue-unit-09",
+        "startX": 86.04,
+        "startY": 41.11,
+        "endX": 90.49,
+        "endY": 54.91
+      },
+      {
+        "id": "mudf90b7-wynaxs",
+        "type": "aimHere",
+        "parentTankId": "cargo-port-blue-unit-15",
+        "startX": 91.18,
+        "startY": 51.81,
+        "endX": 86.06,
+        "endY": 56.65
+      },
+      {
+        "id": "mudf92hn-4fd035",
+        "type": "aimHere",
+        "parentTankId": "cargo-port-blue-unit-15",
+        "startX": 91.18,
+        "startY": 51.81,
+        "endX": 96.74,
+        "endY": 52.48
+      },
+      {
+        "id": "mudf99f2-1ozdaa",
+        "type": "aimHere",
+        "parentTankId": "cargo-port-blue-unit-14",
+        "startX": 75.14,
+        "startY": 51.53,
+        "endX": 95.96,
+        "endY": 49.87
+      },
+      {
+        "id": "mudf9hmz-4tc92m",
+        "type": "aimHere",
+        "parentTankId": "cargo-port-blue-unit-16",
+        "startX": 64.24,
+        "startY": 52.78,
+        "endX": 56.69,
+        "endY": 54.21
+      },
+      {
+        "id": "mudf9jp5-s5ieha",
+        "type": "aimHere",
+        "parentTankId": "cargo-port-blue-unit-14",
+        "startX": 75.14,
+        "startY": 51.53,
+        "endX": 52.69,
+        "endY": 51.17
+      },
+      {
+        "id": "mudf9oeq-60y974",
+        "type": "aimHere",
+        "parentTankId": "cargo-port-blue-unit-10",
+        "startX": 65.62,
+        "startY": 43.4,
+        "endX": 70.07,
+        "endY": 54.91
+      },
+      {
+        "id": "mudfa137-lw5iow",
+        "type": "aimHere",
+        "parentTankId": "cargo-port-blue-unit-06",
+        "startX": 66.74,
+        "startY": 36.32,
+        "endX": 40.36,
+        "endY": 54.74
+      },
+      {
+        "id": "mudfa5ev-26g596",
+        "type": "aimHere",
+        "parentTankId": "cargo-port-blue-unit-13",
+        "startX": 35.62,
+        "startY": 47.43,
+        "endX": 47.13,
+        "endY": 61.25
+      },
+      {
+        "id": "mudfadzh-5eu6be",
+        "type": "aimHere",
+        "parentTankId": "mudfaa2e-ku2lqs",
+        "startX": 47.22,
+        "startY": 75.15,
+        "endX": 36.1,
+        "endY": 89.05
+      },
+      {
+        "id": "mudfbhqu-oj1ums",
+        "type": "aimHere",
+        "parentTankId": "cargo-port-blue-unit-08",
+        "startX": 22.5,
+        "startY": 40.97,
+        "endX": 35.23,
+        "endY": 58.64
+      },
+      {
+        "id": "mudfbm2r-2p0vzx",
+        "type": "route",
+        "points": [
+          {
+            "x": 17.51,
+            "y": 36.75
+          },
+          {
+            "x": 22.11,
+            "y": 41.18
+          }
+        ]
+      },
+      {
+        "id": "mudfbs9n-n46fkx",
+        "type": "aimHere",
+        "parentTankId": "cargo-port-blue-unit-11",
+        "startX": 17.22,
+        "startY": 44.51,
+        "endX": 19.77,
+        "endY": 57.34
       }
     ],
     "Carpathians::domination-1|Blue": [
@@ -70080,6 +70415,6 @@
     "Darwin Hill::battle-1|Red": [],
     "Sands of Sinai::domination-1|Blue": []
   },
-  "updatedAt": "2026-09-22T21:47:17.233Z",
-  "exportedAt": "2026-09-22T21:47:29.452Z"
+  "updatedAt": "2026-09-23T01:28:04.573Z",
+  "exportedAt": "2026-09-23T01:28:19.346Z"
 }
