@@ -21,6 +21,9 @@ export function vertices(v) {
   if (Number.isFinite(v.startX)) return [{x:v.startX,y:v.startY},{x:v.endX,y:v.endY}];
   return [{x:v.x,y:v.y}];
 }
+export function insideSelectionBox(v,box,toleranceX=0,toleranceY=toleranceX) {
+  return vertices(v).every(p=>p.x>=box.minX-toleranceX&&p.x<=box.maxX+toleranceX&&p.y>=box.minY-toleranceY&&p.y<=box.maxY+toleranceY);
+}
 export function mapped(g,m) {
   if (g.points) return {points:g.points.map(p=>point(m,p))};
   if (Number.isFinite(g.startX)) { const a=point(m,{x:g.startX,y:g.startY}),b=point(m,{x:g.endX,y:g.endY}); return {startX:a.x,startY:a.y,endX:b.x,endY:b.y}; }
@@ -45,6 +48,10 @@ export function expandSelection(layout,key,selection) {
   }
   const existing=new Set(all.map(({kind,value})=>ref(kind,value.id)));
   return new Set([...result].filter(r=>existing.has(r)));
+}
+export function selectionInsideBox(layout,key,candidates,box,toleranceX=0,toleranceY=toleranceX,prior=new Set()) {
+  const hits=candidates.filter(({value})=>insideSelectionBox(value,box,toleranceX,toleranceY)).map(({kind,value})=>ref(kind,value.id));
+  return expandSelection(layout,key,new Set([...prior,...hits]));
 }
 export function snapshot(layout,key) {
   return structuredClone({markers:layout.markers?.[key]||[],annotations:layout.annotations?.[key]||[],groups:layout.vectorGroups?.[key]||[]});

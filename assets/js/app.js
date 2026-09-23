@@ -1,7 +1,7 @@
     import { MARKER_LAYOUT_VERSION, backupMarkerLayout, loadMarkerLayout, saveMarkerLayout as saveMarkerLayoutToStorage } from './marker-storage.js?v=replay-vectors-20260915';
 import { initDiscordMemberCount } from './discord-stats.js';
-import { createVectorEditor } from './vector-editor.js?v=independent-selection-20260917';
-import { validateVectorGroups, pruneGroups } from './vector-model.js?v=independent-selection-20260917';
+import { createVectorEditor } from './vector-editor.js?v=route-selection-20260923';
+import { validateVectorGroups, pruneGroups } from './vector-model.js?v=route-selection-20260923';
 let vectorEditor = null;
     import { commentImages } from './comment-images.js?v=comment-images-e5696e00de9a';
     import { defaultMarkerLayout, maps, translations } from './data.js?v=tank-marker-type-20260923';

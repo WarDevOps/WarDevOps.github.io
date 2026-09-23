@@ -1,4 +1,4 @@
-import {around,ref,entries,vertices,bounds,expandSelection,snapshot,restore,transform,deleteSelection,copySelection,appendLayout,fitsTransform} from './vector-model.js?v=independent-selection-20260917';
+import {around,ref,entries,bounds,selectionInsideBox,expandSelection,snapshot,restore,transform,deleteSelection,copySelection,appendLayout,fitsTransform} from './vector-model.js?v=route-selection-20260923';
 
 const words={
   ko:{copy:'복사',paste:'붙여넣기',copied:'선택한 객체를 복사했습니다.',pasteError:'붙여넣을 수 없습니다. 지도 데이터 제한을 확인하세요.',lock:'기존 객체 잠금',undo:'되돌리기',redo:'다시 실행',delete:'선택 삭제',rotate:'선택 회전',resize:'선택 크기 조절',move:'선택 이동',invalid:'JSON을 추가할 수 없습니다. 지도와 파일 형식을 확인하세요.',added:'리플레이를 추가했습니다.'},
@@ -117,9 +117,10 @@ export function createVectorEditor(h) {
       if(cancel){restore(h.layout(),key,g.base);selected=g.selection;}
       else if(g.mode==='marquee') {
         const box={minX:Math.min(g.start.x,g.last.x),maxX:Math.max(g.start.x,g.last.x),minY:Math.min(g.start.y,g.last.y),maxY:Math.max(g.start.y,g.last.y)};
-        const hits=eligibleEntries().filter(({value})=>vertices(value).every(p=>p.x>=box.minX&&p.x<=box.maxX&&p.y>=box.minY&&p.y<=box.maxY)).map(({kind,value})=>ref(kind,value.id));
-        const picked=new Set([...(g.append?g.selection:[]),...hits]);
-        selected=picked.size>=2?expandSelection(h.layout(),key,picked):new Set();
+        const layerRect=g.surface.layer.getBoundingClientRect();
+        // Pointer coordinates and percentage geometry can differ by a fraction of a pixel.
+        const toleranceX=layerRect.width?200/layerRect.width:0,toleranceY=layerRect.height?200/layerRect.height:0;
+        selected=selectionInsideBox(h.layout(),key,eligibleEntries(),box,toleranceX,toleranceY,g.append?g.selection:new Set());
       }else if(g.moved&&g.transformed)save(g.base);
       else restore(h.layout(),key,g.base);
       if(config.stage.hasPointerCapture(event.pointerId))config.stage.releasePointerCapture(event.pointerId);
@@ -174,7 +175,7 @@ export function createVectorEditor(h) {
       if(overlay.hidden||!r.width)continue;
       function rectangle(box,className) {const el=document.createElement('div');el.className=className;Object.assign(el.style,{left:`${box.minX}%`,top:`${box.minY}%`,width:`${box.maxX-box.minX}%`,height:`${box.maxY-box.minY}%`});overlay.append(el);return el;}
       if(gesture?.mode==='marquee'&&gesture.surface===surface){const a=gesture.start,c=gesture.last;rectangle({minX:Math.min(a.x,c.x),minY:Math.min(a.y,c.y),maxX:Math.max(a.x,c.x),maxY:Math.max(a.y,c.y)},'vector-marquee');}
-      else if(b&&selected.size>=2) {
+      else if(b&&(selected.size>=2||b.maxX>b.minX||b.maxY>b.minY)) {
         const box=rectangle(b,'vector-box');
         for(const name of ['nw','ne','sw','se','rotate','move']) {
           const handle=document.createElement('button');handle.type='button';handle.dataset.vectorHandle=name;handle.className=`vector-handle vector-${name}`;handle.setAttribute('aria-label',name==='rotate'?w.rotate:name==='move'?w.move:`${w.resize} ${name}`);box.append(handle);
