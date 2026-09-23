@@ -22,7 +22,7 @@
     "Darwin Hill": "2026-09-22",
     "Eastern Europe": "2026-09-03",
     "European Province": "2026-09-23",
-    "Fields of Normandy": "2026-09-15",
+    "Fields of Normandy": "2026-09-23",
     "Fields of Poland": "2026-09-15",
     "Finland": "2026-08-16",
     "Fire Arc": "2026-08-31",
@@ -81,7 +81,7 @@
     "Darwin Hill": "2026-09-22T04:24:18Z",
     "Eastern Europe": "2026-09-03T01:49:56Z",
     "European Province": "2026-09-23T01:49:25Z",
-    "Fields of Normandy": "2026-09-15T05:00:19Z",
+    "Fields of Normandy": "2026-09-23T02:21:06Z",
     "Fields of Poland": "2026-09-15T02:54:34Z",
     "Fulda": "2026-09-15T02:33:41Z",
     "Golden Quarry": "2026-09-12T00:18:22Z",
@@ -11586,7 +11586,7 @@
     "Fields of Normandy::domination-1|Blue": [
       {
         "id": "fields-of-normandy-blue-unit-01",
-        "type": "mainBattleTank",
+        "type": "tankDestroyer",
         "x": 2.5,
         "y": 4.31
       },
@@ -11604,21 +11604,8 @@
         "y": 12.92
       },
       {
-        "id": "fields-of-normandy-blue-unit-03",
-        "type": "mainBattleTank",
-        "x": 17.36,
-        "y": 24.86
-      },
-      {
-        "id": "fields-of-normandy-blue-role-02",
-        "type": "sniper",
-        "x": 17.36,
-        "y": 24.86,
-        "parentTankId": "fields-of-normandy-blue-unit-03"
-      },
-      {
         "id": "fields-of-normandy-blue-unit-04",
-        "type": "mainBattleTank",
+        "type": "tankDestroyer",
         "x": 19.24,
         "y": 28.4
       },
@@ -11637,13 +11624,13 @@
       },
       {
         "id": "fields-of-normandy-blue-unit-06",
-        "type": "mainBattleTank",
+        "type": "lightTank",
         "x": 52.85,
         "y": 33.19
       },
       {
         "id": "fields-of-normandy-blue-role-04",
-        "type": "highRiskSpot",
+        "type": "battleLine",
         "x": 52.85,
         "y": 33.19,
         "parentTankId": "fields-of-normandy-blue-unit-06"
@@ -11713,13 +11700,13 @@
       },
       {
         "id": "fields-of-normandy-blue-unit-14",
-        "type": "mainBattleTank",
+        "type": "tankDestroyer",
         "x": 30.42,
         "y": 87.85
       },
       {
         "id": "fields-of-normandy-blue-role-08",
-        "type": "battleLine",
+        "type": "sniper",
         "x": 30.42,
         "y": 87.85,
         "parentTankId": "fields-of-normandy-blue-unit-14"
@@ -11750,12 +11737,57 @@
         "x": 97.08,
         "y": 72.43,
         "parentTankId": "fields-of-normandy-blue-unit-12"
+      },
+      {
+        "id": "mudgh163-50wmqf",
+        "type": "smokeshell",
+        "x": 8.38,
+        "y": 4.78
+      },
+      {
+        "id": "mudghqvj-41sqct",
+        "type": "mainBattleTank",
+        "x": 48.61,
+        "y": 15.03
+      },
+      {
+        "id": "mudghu7k-oi6794",
+        "type": "battleLine",
+        "x": 48.61,
+        "y": 15.03,
+        "parentTankId": "mudghqvj-41sqct"
+      },
+      {
+        "id": "mudglfjz-x28z6h",
+        "type": "mainBattleTank",
+        "x": 88.14,
+        "y": 2.52
+      },
+      {
+        "id": "mudgli7y-kjoos2",
+        "type": "spawnKill",
+        "x": 88.14,
+        "y": 2.52,
+        "parentTankId": "mudglfjz-x28z6h"
+      },
+      {
+        "id": "mudh35we-obavk8",
+        "type": "mainBattleTank",
+        "x": 48.44,
+        "y": 82.1
+      },
+      {
+        "id": "mudh37ql-3t0nys",
+        "type": "highRiskSpot",
+        "x": 48.44,
+        "y": 82.1,
+        "parentTankId": "mudh35we-obavk8"
       }
     ],
     "Fields of Normandy::domination-1|Red": [
       {
         "id": "fields-of-normandy-red-unit-01",
-        "type": "mainBattleTankRed",
+        "type": "tankDestroyerRed",
         "x": 89.17,
         "y": 2.43
       },
@@ -11774,14 +11806,14 @@
       },
       {
         "id": "fields-of-normandy-red-role-02",
-        "type": "battleLine",
+        "type": "highRiskSpot",
         "x": 76.94,
         "y": 4.44,
         "parentTankId": "fields-of-normandy-red-unit-02"
       },
       {
         "id": "fields-of-normandy-red-unit-03",
-        "type": "mainBattleTankRed",
+        "type": "lightTankRed",
         "x": 7.01,
         "y": 12.57
       },
@@ -11819,13 +11851,13 @@
       },
       {
         "id": "fields-of-normandy-red-unit-07",
-        "type": "mainBattleTankRed",
+        "type": "tankDestroyerRed",
         "x": 66.88,
         "y": 44.79
       },
       {
         "id": "fields-of-normandy-red-role-05",
-        "type": "battleLine",
+        "type": "sniper",
         "x": 66.88,
         "y": 44.79,
         "parentTankId": "fields-of-normandy-red-unit-07"
@@ -11835,19 +11867,6 @@
         "type": "mainBattleTankRed",
         "x": 8.4,
         "y": 52.64
-      },
-      {
-        "id": "fields-of-normandy-red-unit-09",
-        "type": "mainBattleTankRed",
-        "x": 58.75,
-        "y": 56.04
-      },
-      {
-        "id": "fields-of-normandy-red-role-06",
-        "type": "battleLine",
-        "x": 58.75,
-        "y": 56.04,
-        "parentTankId": "fields-of-normandy-red-unit-09"
       },
       {
         "id": "fields-of-normandy-red-unit-10",
@@ -11863,7 +11882,7 @@
       },
       {
         "id": "fields-of-normandy-red-unit-12",
-        "type": "mainBattleTankRed",
+        "type": "lightTankRed",
         "x": 57.85,
         "y": 92.01
       },
@@ -11900,6 +11919,64 @@
         "x": 8.4,
         "y": 52.64,
         "parentTankId": "fields-of-normandy-red-unit-08"
+      },
+      {
+        "id": "mudgdiu2-scj5wa",
+        "type": "lightTankRed",
+        "x": 58.34,
+        "y": 55
+      },
+      {
+        "id": "mudgdkqk-xu1scp",
+        "type": "battleLine",
+        "x": 58.34,
+        "y": 55,
+        "parentTankId": "mudgdiu2-scj5wa"
+      },
+      {
+        "id": "mudgdxvo-ysi5g7",
+        "type": "mainBattleTankRed",
+        "x": 59.56,
+        "y": 56.91
+      },
+      {
+        "id": "mudgegya-k3qak7",
+        "type": "battleLine",
+        "x": 59.56,
+        "y": 56.91,
+        "parentTankId": "mudgdxvo-ysi5g7"
+      },
+      {
+        "id": "mudghhur-bz4fqf",
+        "type": "lightTankRed",
+        "x": 56.34,
+        "y": 15.29
+      },
+      {
+        "id": "mudghjai-p65rb9",
+        "type": "highRiskSpot",
+        "x": 56.34,
+        "y": 15.29,
+        "parentTankId": "mudghhur-bz4fqf"
+      },
+      {
+        "id": "mudgi9ni-h80gg8",
+        "type": "mainBattleTankRed",
+        "x": 50.35,
+        "y": 14.51
+      },
+      {
+        "id": "mudgib5q-wgkja6",
+        "type": "highRiskSpot",
+        "x": 50.35,
+        "y": 14.51,
+        "parentTankId": "mudgi9ni-h80gg8"
+      },
+      {
+        "id": "mudgl8eb-xa3wko",
+        "type": "smokeshell",
+        "x": 90.75,
+        "y": 8.25
       }
     ],
     "Fields of Poland::domination-1|Blue": [
@@ -47370,15 +47447,6 @@
     ],
     "Fields of Normandy::domination-1|Blue": [
       {
-        "id": "fields-of-normandy-blue-aim-01",
-        "type": "aimHere",
-        "parentTankId": "fields-of-normandy-blue-unit-09",
-        "startX": 58.75,
-        "startY": 45.28,
-        "endX": 78.39,
-        "endY": 28.78
-      },
-      {
         "id": "fields-of-normandy-blue-aim-02",
         "type": "aimHere",
         "parentTankId": "fields-of-normandy-blue-unit-11",
@@ -47395,40 +47463,6 @@
         "startY": 96.46,
         "endX": 67.97,
         "endY": 89.77
-      },
-      {
-        "id": "fields-of-normandy-blue-route-01",
-        "type": "route",
-        "points": [
-          {
-            "x": 38.26,
-            "y": 26.77
-          },
-          {
-            "x": 37.16,
-            "y": 24.2
-          },
-          {
-            "x": 36.38,
-            "y": 21.49
-          },
-          {
-            "x": 35.74,
-            "y": 18.8
-          },
-          {
-            "x": 34.55,
-            "y": 16.33
-          },
-          {
-            "x": 33.01,
-            "y": 14.02
-          },
-          {
-            "x": 31.43,
-            "y": 11.69
-          }
-        ]
       },
       {
         "id": "fields-of-normandy-blue-route-02",
@@ -47477,118 +47511,6 @@
         ]
       },
       {
-        "id": "fields-of-normandy-blue-route-03",
-        "type": "route",
-        "points": [
-          {
-            "x": 5.79,
-            "y": 82.34
-          },
-          {
-            "x": 6.63,
-            "y": 79.72
-          },
-          {
-            "x": 7.43,
-            "y": 77.04
-          },
-          {
-            "x": 8.12,
-            "y": 74.38
-          },
-          {
-            "x": 8.68,
-            "y": 71.63
-          },
-          {
-            "x": 8.96,
-            "y": 68.86
-          },
-          {
-            "x": 9.1,
-            "y": 66.09
-          },
-          {
-            "x": 9.24,
-            "y": 63.3
-          },
-          {
-            "x": 9.31,
-            "y": 60.52
-          },
-          {
-            "x": 9.32,
-            "y": 57.78
-          },
-          {
-            "x": 9.38,
-            "y": 54.97
-          },
-          {
-            "x": 9.38,
-            "y": 52.2
-          },
-          {
-            "x": 9.68,
-            "y": 49.4
-          },
-          {
-            "x": 10.12,
-            "y": 46.7
-          },
-          {
-            "x": 10.62,
-            "y": 43.91
-          },
-          {
-            "x": 11.17,
-            "y": 41.21
-          },
-          {
-            "x": 11.74,
-            "y": 38.52
-          },
-          {
-            "x": 12.37,
-            "y": 35.78
-          },
-          {
-            "x": 13.31,
-            "y": 33.18
-          },
-          {
-            "x": 15.24,
-            "y": 31.17
-          },
-          {
-            "x": 15.65,
-            "y": 30.81
-          }
-        ]
-      },
-      {
-        "id": "fields-of-normandy-blue-route-04",
-        "type": "route",
-        "points": [
-          {
-            "x": 23.37,
-            "y": 6.9
-          },
-          {
-            "x": 26.02,
-            "y": 7.79
-          },
-          {
-            "x": 28.62,
-            "y": 8.78
-          },
-          {
-            "x": 29.83,
-            "y": 9.44
-          }
-        ]
-      },
-      {
         "id": "fields-of-normandy-blue-route-05",
         "type": "route",
         "points": [
@@ -47623,150 +47545,6 @@
           {
             "x": 9.21,
             "y": 85.61
-          }
-        ]
-      },
-      {
-        "id": "fields-of-normandy-blue-route-06",
-        "type": "route",
-        "points": [
-          {
-            "x": 37.18,
-            "y": 41.12
-          },
-          {
-            "x": 34.47,
-            "y": 40.58
-          },
-          {
-            "x": 31.72,
-            "y": 40.17
-          },
-          {
-            "x": 29.17,
-            "y": 39.01
-          },
-          {
-            "x": 26.76,
-            "y": 37.66
-          },
-          {
-            "x": 24.26,
-            "y": 36.33
-          },
-          {
-            "x": 22.08,
-            "y": 34.72
-          },
-          {
-            "x": 20.42,
-            "y": 32.47
-          },
-          {
-            "x": 19.14,
-            "y": 30.17
-          }
-        ]
-      },
-      {
-        "id": "fields-of-normandy-blue-route-07",
-        "type": "route",
-        "points": [
-          {
-            "x": 9.93,
-            "y": 66.63
-          },
-          {
-            "x": 11.11,
-            "y": 64.07
-          },
-          {
-            "x": 12.35,
-            "y": 61.63
-          },
-          {
-            "x": 13.85,
-            "y": 59.27
-          },
-          {
-            "x": 15.92,
-            "y": 57.48
-          },
-          {
-            "x": 18.44,
-            "y": 56.32
-          },
-          {
-            "x": 21.01,
-            "y": 55.24
-          },
-          {
-            "x": 23.63,
-            "y": 54.21
-          },
-          {
-            "x": 26.21,
-            "y": 53.32
-          },
-          {
-            "x": 28.93,
-            "y": 52.67
-          },
-          {
-            "x": 31.69,
-            "y": 52.89
-          },
-          {
-            "x": 34.41,
-            "y": 53.47
-          },
-          {
-            "x": 35.71,
-            "y": 53.79
-          }
-        ]
-      },
-      {
-        "id": "fields-of-normandy-blue-route-08",
-        "type": "route",
-        "points": [
-          {
-            "x": 5.51,
-            "y": 8.48
-          },
-          {
-            "x": 4.51,
-            "y": 5.83
-          },
-          {
-            "x": 4.78,
-            "y": 8.51
-          }
-        ]
-      },
-      {
-        "id": "fields-of-normandy-blue-route-09",
-        "type": "route",
-        "points": [
-          {
-            "x": 50.11,
-            "y": 32.95
-          },
-          {
-            "x": 47.33,
-            "y": 32.64
-          },
-          {
-            "x": 44.69,
-            "y": 31.84
-          },
-          {
-            "x": 42.41,
-            "y": 30.31
-          },
-          {
-            "x": 40.04,
-            "y": 28.83
           }
         ]
       },
@@ -47901,33 +47679,6 @@
         "dangerRoute": true
       },
       {
-        "id": "fields-of-normandy-blue-route-12",
-        "type": "route",
-        "points": [
-          {
-            "x": 16.1,
-            "y": 23.68
-          },
-          {
-            "x": 16.37,
-            "y": 21.02
-          },
-          {
-            "x": 16.81,
-            "y": 18.26
-          },
-          {
-            "x": 17.3,
-            "y": 15.54
-          },
-          {
-            "x": 17.82,
-            "y": 12.96
-          }
-        ],
-        "dangerRoute": true
-      },
-      {
         "id": "fields-of-normandy-blue-route-13",
         "type": "route",
         "points": [
@@ -48024,6 +47775,396 @@
           }
         ],
         "dangerRoute": true
+      },
+      {
+        "id": "mudg8mks-mt99sl",
+        "type": "aimHere",
+        "parentTankId": "fields-of-normandy-blue-unit-01",
+        "startX": 2.5,
+        "startY": 4.31,
+        "endX": 84.32,
+        "endY": 4.34
+      },
+      {
+        "id": "mudg8qzg-1nrnk7",
+        "type": "aimHere",
+        "parentTankId": "fields-of-normandy-blue-unit-01",
+        "startX": 2.5,
+        "startY": 4.31,
+        "endX": 86.92,
+        "endY": 23.2
+      },
+      {
+        "id": "mudg90gu-mn2kjn",
+        "type": "aimHere",
+        "parentTankId": "fields-of-normandy-blue-unit-04",
+        "startX": 19.24,
+        "startY": 28.4,
+        "endX": 91.27,
+        "endY": 28.15
+      },
+      {
+        "id": "mudg955w-ztbxwn",
+        "type": "aimHere",
+        "parentTankId": "fields-of-normandy-blue-unit-06",
+        "startX": 52.85,
+        "startY": 33.19,
+        "endX": 80.84,
+        "endY": 19.55
+      },
+      {
+        "id": "mudg97yy-p3s4ql",
+        "type": "aimHere",
+        "parentTankId": "fields-of-normandy-blue-unit-05",
+        "startX": 94.86,
+        "startY": 31.18,
+        "endX": 93.7,
+        "endY": 22.15
+      },
+      {
+        "id": "mudg9aqi-ydr2n5",
+        "type": "aimHere",
+        "parentTankId": "fields-of-normandy-blue-unit-12",
+        "startX": 97.08,
+        "startY": 72.43,
+        "endX": 90.83,
+        "endY": 88.79
+      },
+      {
+        "id": "mudg9e62-wqed8n",
+        "type": "aimHere",
+        "parentTankId": "fields-of-normandy-blue-unit-14",
+        "startX": 30.42,
+        "startY": 87.85,
+        "endX": 64.07,
+        "endY": 91.31
+      },
+      {
+        "id": "mudg9hbe-4vic0u",
+        "type": "aimHere",
+        "parentTankId": "fields-of-normandy-blue-unit-15",
+        "startX": 54.03,
+        "startY": 96.46,
+        "endX": 55.39,
+        "endY": 84.01
+      },
+      {
+        "id": "mudgflry-nkx24w",
+        "type": "aimHere",
+        "parentTankId": "fields-of-normandy-blue-unit-11",
+        "startX": 49.03,
+        "startY": 56.6,
+        "endX": 58.95,
+        "endY": 57.17
+      },
+      {
+        "id": "mudghwl2-9hg4ak",
+        "type": "aimHere",
+        "parentTankId": "mudghqvj-41sqct",
+        "startX": 48.61,
+        "startY": 15.03,
+        "endX": 56.34,
+        "endY": 16.94
+      },
+      {
+        "id": "mudgj3z8-pxujlo",
+        "type": "aimHere",
+        "parentTankId": "fields-of-normandy-blue-unit-04",
+        "startX": 19.24,
+        "startY": 28.4,
+        "endX": 86.14,
+        "endY": 7.21
+      },
+      {
+        "id": "mudglk5k-vvrf7x",
+        "type": "aimHere",
+        "parentTankId": "mudglfjz-x28z6h",
+        "startX": 88.14,
+        "startY": 2.52,
+        "endX": 92.75,
+        "endY": 19.9
+      },
+      {
+        "id": "mudgovmz-1x4u5v",
+        "type": "aimHere",
+        "parentTankId": "fields-of-normandy-blue-unit-08",
+        "startX": 41.25,
+        "startY": 42.01,
+        "endX": 68.25,
+        "endY": 39.62
+      },
+      {
+        "id": "mudgp0rw-o7v5u6",
+        "type": "aimHere",
+        "parentTankId": "fields-of-normandy-blue-unit-08",
+        "startX": 41.25,
+        "startY": 42.01,
+        "endX": 86.06,
+        "endY": 5.82
+      },
+      {
+        "id": "mudgp5cc-55czy3",
+        "type": "aimHere",
+        "parentTankId": "fields-of-normandy-blue-unit-08",
+        "startX": 41.25,
+        "startY": 42.01,
+        "endX": 56.69,
+        "endY": 50.04
+      },
+      {
+        "id": "mudgpge4-idy3br",
+        "type": "aimHere",
+        "parentTankId": "fields-of-normandy-blue-unit-09",
+        "startX": 58.75,
+        "startY": 45.28,
+        "endX": 89.7,
+        "endY": 21.46
+      },
+      {
+        "id": "mudh2d7n-tesfjv",
+        "type": "route",
+        "points": [
+          {
+            "x": 6.21,
+            "y": 84.45
+          },
+          {
+            "x": 8.56,
+            "y": 75.24
+          },
+          {
+            "x": 9.17,
+            "y": 70.11
+          },
+          {
+            "x": 9.34,
+            "y": 52.65
+          },
+          {
+            "x": 10.9,
+            "y": 38.66
+          },
+          {
+            "x": 12.03,
+            "y": 33.97
+          },
+          {
+            "x": 14.81,
+            "y": 31.28
+          },
+          {
+            "x": 18.38,
+            "y": 29.02
+          }
+        ]
+      },
+      {
+        "id": "mudh2lox-r0vq7g",
+        "type": "route",
+        "points": [
+          {
+            "x": 19.5,
+            "y": 30.06
+          },
+          {
+            "x": 20.89,
+            "y": 35.53
+          },
+          {
+            "x": 28.71,
+            "y": 41.36
+          },
+          {
+            "x": 34.19,
+            "y": 42.83
+          },
+          {
+            "x": 40.7,
+            "y": 42.14
+          }
+        ]
+      },
+      {
+        "id": "mudh2var-hmlvmb",
+        "type": "route",
+        "points": [
+          {
+            "x": 9.77,
+            "y": 71.24
+          },
+          {
+            "x": 13.34,
+            "y": 63.94
+          },
+          {
+            "x": 17.85,
+            "y": 58.12
+          },
+          {
+            "x": 29.84,
+            "y": 53.61
+          },
+          {
+            "x": 39.66,
+            "y": 55.26
+          },
+          {
+            "x": 44.87,
+            "y": 56.04
+          },
+          {
+            "x": 48.78,
+            "y": 56.47
+          }
+        ]
+      },
+      {
+        "id": "mudh327z-5b8czt",
+        "type": "route",
+        "points": [
+          {
+            "x": 23.33,
+            "y": 87.32
+          },
+          {
+            "x": 29.93,
+            "y": 88.01
+          }
+        ]
+      },
+      {
+        "id": "mudh3bif-vil5nm",
+        "type": "route",
+        "points": [
+          {
+            "x": 27.32,
+            "y": 86.01
+          },
+          {
+            "x": 48.52,
+            "y": 82.19
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "mudh3q99-3vlaui",
+        "type": "route",
+        "points": [
+          {
+            "x": 20.03,
+            "y": 6.26
+          },
+          {
+            "x": 18.29,
+            "y": 13.38
+          }
+        ]
+      },
+      {
+        "id": "mudh3ut5-7ubi44",
+        "type": "route",
+        "points": [
+          {
+            "x": 18.11,
+            "y": 13.64
+          },
+          {
+            "x": 17.33,
+            "y": 19.55
+          },
+          {
+            "x": 18.29,
+            "y": 27.54
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "mudh49en-5ipmey",
+        "type": "route",
+        "points": [
+          {
+            "x": 22.28,
+            "y": 5.73
+          },
+          {
+            "x": 29.15,
+            "y": 8.51
+          },
+          {
+            "x": 31.84,
+            "y": 13.21
+          },
+          {
+            "x": 34.97,
+            "y": 18.07
+          },
+          {
+            "x": 37.58,
+            "y": 25.37
+          },
+          {
+            "x": 39.31,
+            "y": 28.5
+          },
+          {
+            "x": 42.35,
+            "y": 30.93
+          },
+          {
+            "x": 44.7,
+            "y": 31.89
+          },
+          {
+            "x": 47.91,
+            "y": 33.19
+          },
+          {
+            "x": 52.61,
+            "y": 33.45
+          }
+        ]
+      },
+      {
+        "id": "mudh4g0p-1iegts",
+        "type": "route",
+        "points": [
+          {
+            "x": 29.76,
+            "y": 8.77
+          },
+          {
+            "x": 37.58,
+            "y": 11.9
+          },
+          {
+            "x": 41.92,
+            "y": 14.25
+          },
+          {
+            "x": 47.65,
+            "y": 15.38
+          }
+        ]
+      },
+      {
+        "id": "mudh4z6n-5m4vd7",
+        "type": "aimHere",
+        "parentTankId": "fields-of-normandy-blue-unit-01",
+        "startX": 2.5,
+        "startY": 4.31,
+        "endX": 57.3,
+        "endY": 43.79
+      },
+      {
+        "id": "mudh55e5-n426vd",
+        "type": "aimHere",
+        "parentTankId": "mudh35we-obavk8",
+        "startX": 48.44,
+        "startY": 82.1,
+        "endX": 55.39,
+        "endY": 83.32
       }
     ],
     "Fields of Normandy::domination-1|Red": [
@@ -48037,15 +48178,6 @@
         "endY": 88.28
       },
       {
-        "id": "fields-of-normandy-red-aim-02",
-        "type": "aimHere",
-        "parentTankId": "fields-of-normandy-red-unit-06",
-        "startX": 28.06,
-        "startY": 35.97,
-        "endX": 52.66,
-        "endY": 11.09
-      },
-      {
         "id": "fields-of-normandy-red-aim-03",
         "type": "aimHere",
         "parentTankId": "fields-of-normandy-red-unit-13",
@@ -48053,168 +48185,6 @@
         "startY": 96.11,
         "endX": 36.32,
         "endY": 97.48
-      },
-      {
-        "id": "fields-of-normandy-red-aim-04",
-        "type": "aimHere",
-        "parentTankId": "fields-of-normandy-red-unit-02",
-        "startX": 76.94,
-        "startY": 4.44,
-        "endX": 87.63,
-        "endY": 3.07
-      },
-      {
-        "id": "fields-of-normandy-red-aim-05",
-        "type": "aimHere",
-        "parentTankId": "fields-of-normandy-red-unit-08",
-        "startX": 8.4,
-        "startY": 52.64,
-        "endX": 7.65,
-        "endY": 67.16
-      },
-      {
-        "id": "fields-of-normandy-red-aim-06",
-        "type": "aimHere",
-        "parentTankId": "fields-of-normandy-red-unit-07",
-        "startX": 66.88,
-        "startY": 44.79,
-        "endX": 56.91,
-        "endY": 32.09
-      },
-      {
-        "id": "fields-of-normandy-red-aim-07",
-        "type": "aimHere",
-        "parentTankId": "fields-of-normandy-red-unit-01",
-        "startX": 89.17,
-        "startY": 2.43,
-        "endX": 76.5,
-        "endY": 11.76
-      },
-      {
-        "id": "fields-of-normandy-red-aim-08",
-        "type": "aimHere",
-        "parentTankId": "fields-of-normandy-red-unit-06",
-        "startX": 28.06,
-        "startY": 35.97,
-        "endX": 41.42,
-        "endY": 38.56
-      },
-      {
-        "id": "fields-of-normandy-red-aim-09",
-        "type": "aimHere",
-        "parentTankId": "fields-of-normandy-red-unit-09",
-        "startX": 58.75,
-        "startY": 56.04,
-        "endX": 55.95,
-        "endY": 62.87
-      },
-      {
-        "id": "fields-of-normandy-red-route-01",
-        "type": "route",
-        "points": [
-          {
-            "x": 88.84,
-            "y": 89.56
-          },
-          {
-            "x": 86.28,
-            "y": 90.66
-          },
-          {
-            "x": 83.77,
-            "y": 91.75
-          },
-          {
-            "x": 81.02,
-            "y": 92.32
-          },
-          {
-            "x": 78.3,
-            "y": 92.78
-          },
-          {
-            "x": 75.53,
-            "y": 93.17
-          },
-          {
-            "x": 72.77,
-            "y": 93.57
-          },
-          {
-            "x": 71.36,
-            "y": 93.77
-          }
-        ]
-      },
-      {
-        "id": "fields-of-normandy-red-route-02",
-        "type": "route",
-        "points": [
-          {
-            "x": 66.08,
-            "y": 55.97
-          },
-          {
-            "x": 68.82,
-            "y": 56.28
-          },
-          {
-            "x": 71.28,
-            "y": 57.47
-          },
-          {
-            "x": 74.59,
-            "y": 60.03
-          },
-          {
-            "x": 76.58,
-            "y": 61.95
-          },
-          {
-            "x": 78.47,
-            "y": 64.03
-          },
-          {
-            "x": 80.34,
-            "y": 66.12
-          },
-          {
-            "x": 82.15,
-            "y": 68.19
-          },
-          {
-            "x": 83.99,
-            "y": 70.29
-          },
-          {
-            "x": 85.79,
-            "y": 72.39
-          },
-          {
-            "x": 87.63,
-            "y": 74.53
-          },
-          {
-            "x": 89.1,
-            "y": 76.84
-          },
-          {
-            "x": 89.96,
-            "y": 79.48
-          },
-          {
-            "x": 90.53,
-            "y": 82.2
-          },
-          {
-            "x": 90.9,
-            "y": 84.98
-          },
-          {
-            "x": 91.04,
-            "y": 86.36
-          }
-        ]
       },
       {
         "id": "fields-of-normandy-red-route-03",
@@ -48248,7 +48218,8 @@
             "x": 94.89,
             "y": 19.95
           }
-        ]
+        ],
+        "dangerRoute": true
       },
       {
         "id": "fields-of-normandy-red-route-04",
@@ -48309,145 +48280,6 @@
         ]
       },
       {
-        "id": "fields-of-normandy-red-route-05",
-        "type": "route",
-        "points": [
-          {
-            "x": 6.96,
-            "y": 15.97
-          },
-          {
-            "x": 6.94,
-            "y": 20.1
-          },
-          {
-            "x": 6.98,
-            "y": 22.88
-          },
-          {
-            "x": 7.01,
-            "y": 25.66
-          },
-          {
-            "x": 7.09,
-            "y": 28.41
-          },
-          {
-            "x": 7.29,
-            "y": 31.23
-          },
-          {
-            "x": 7.88,
-            "y": 33.93
-          },
-          {
-            "x": 9.28,
-            "y": 36.35
-          },
-          {
-            "x": 10.97,
-            "y": 38.54
-          },
-          {
-            "x": 12.75,
-            "y": 40.65
-          },
-          {
-            "x": 14.91,
-            "y": 42.28
-          },
-          {
-            "x": 17.66,
-            "y": 42.64
-          },
-          {
-            "x": 20.37,
-            "y": 43.29
-          },
-          {
-            "x": 23.37,
-            "y": 44.96
-          },
-          {
-            "x": 26.09,
-            "y": 45.59
-          },
-          {
-            "x": 28.82,
-            "y": 46.04
-          },
-          {
-            "x": 31.58,
-            "y": 46.48
-          },
-          {
-            "x": 34.3,
-            "y": 46.95
-          },
-          {
-            "x": 37.03,
-            "y": 47.65
-          },
-          {
-            "x": 39.36,
-            "y": 49.14
-          },
-          {
-            "x": 41.75,
-            "y": 50.49
-          },
-          {
-            "x": 44.28,
-            "y": 51.67
-          },
-          {
-            "x": 46.94,
-            "y": 52.42
-          },
-          {
-            "x": 49.71,
-            "y": 52.95
-          },
-          {
-            "x": 52.43,
-            "y": 53.42
-          },
-          {
-            "x": 55.17,
-            "y": 53.89
-          },
-          {
-            "x": 57.92,
-            "y": 54.35
-          },
-          {
-            "x": 21.98,
-            "y": 44.78
-          },
-          {
-            "x": 19.26,
-            "y": 45.04
-          },
-          {
-            "x": 16.51,
-            "y": 45.56
-          },
-          {
-            "x": 13.97,
-            "y": 46.62
-          },
-          {
-            "x": 11.74,
-            "y": 48.26
-          },
-          {
-            "x": 9.72,
-            "y": 50.46
-          }
-        ],
-        "dangerRoute": true
-      },
-      {
         "id": "fields-of-normandy-red-route-06",
         "type": "route",
         "points": [
@@ -48498,27 +48330,409 @@
         "dangerRoute": true
       },
       {
-        "id": "fields-of-normandy-red-route-08",
+        "id": "mudgapye-we9ov0",
+        "type": "aimHere",
+        "parentTankId": "fields-of-normandy-red-unit-08",
+        "startX": 8.4,
+        "startY": 52.64,
+        "endX": 7.43,
+        "endY": 86.27
+      },
+      {
+        "id": "mudgas98-tnffkl",
+        "type": "aimHere",
+        "parentTankId": "fields-of-normandy-red-unit-03",
+        "startX": 7.01,
+        "startY": 12.57,
+        "endX": 20.55,
+        "endY": 5.82
+      },
+      {
+        "id": "mudgb4w2-kqzf2p",
+        "type": "aimHere",
+        "parentTankId": "fields-of-normandy-red-unit-01",
+        "startX": 89.17,
+        "startY": 2.43,
+        "endX": 54,
+        "endY": 32.93
+      },
+      {
+        "id": "mudgceny-vbb8pd",
+        "type": "aimHere",
+        "parentTankId": "fields-of-normandy-red-unit-02",
+        "startX": 76.94,
+        "startY": 4.44,
+        "endX": 28.8,
+        "endY": 8.08
+      },
+      {
+        "id": "mudgcqcc-90nkhh",
+        "type": "aimHere",
+        "parentTankId": "fields-of-normandy-red-unit-01",
+        "startX": 89.17,
+        "startY": 2.43,
+        "endX": 16.64,
+        "endY": 24.5
+      },
+      {
+        "id": "mudgex7o-g04t47",
+        "type": "aimHere",
+        "parentTankId": "fields-of-normandy-red-unit-05",
+        "startX": 41.6,
+        "startY": 34.93,
+        "endX": 45.4,
+        "endY": 11.47
+      },
+      {
+        "id": "mudgf0d0-pczn3q",
+        "type": "aimHere",
+        "parentTankId": "fields-of-normandy-red-unit-05",
+        "startX": 41.6,
+        "startY": 34.93,
+        "endX": 19.85,
+        "endY": 28.41
+      },
+      {
+        "id": "mudgf4rw-2ycyvr",
+        "type": "aimHere",
+        "parentTankId": "fields-of-normandy-red-unit-06",
+        "startX": 28.06,
+        "startY": 35.97,
+        "endX": 31.32,
+        "endY": 9.99
+      },
+      {
+        "id": "mudgf8ve-om1wl5",
+        "type": "aimHere",
+        "parentTankId": "fields-of-normandy-red-unit-06",
+        "startX": 28.06,
+        "startY": 35.97,
+        "endX": 51.56,
+        "endY": 15.12
+      },
+      {
+        "id": "mudgfowi-1uz5ch",
+        "type": "aimHere",
+        "parentTankId": "mudgdxvo-ysi5g7",
+        "startX": 59.56,
+        "startY": 56.91,
+        "endX": 48.7,
+        "endY": 55.34
+      },
+      {
+        "id": "mudghzre-q9uaxj",
+        "type": "aimHere",
+        "parentTankId": "mudghhur-bz4fqf",
+        "startX": 56.34,
+        "startY": 15.29,
+        "endX": 47.39,
+        "endY": 15.12
+      },
+      {
+        "id": "mudgijw0-uqyax5",
+        "type": "aimHere",
+        "parentTankId": "mudgi9ni-h80gg8",
+        "startX": 50.35,
+        "startY": 14.51,
+        "endX": 28.71,
+        "endY": 10.34
+      },
+      {
+        "id": "mudgjca2-oip6nb",
+        "type": "aimHere",
+        "parentTankId": "fields-of-normandy-red-unit-07",
+        "startX": 66.88,
+        "startY": 44.79,
+        "endX": 4.65,
+        "endY": 6.08
+      },
+      {
+        "id": "mudgk0tq-knb3fj",
+        "type": "aimHere",
+        "parentTankId": "fields-of-normandy-red-unit-07",
+        "startX": 66.88,
+        "startY": 44.79,
+        "endX": 56.26,
+        "endY": 31.1
+      },
+      {
+        "id": "mudgk5s8-olbml6",
+        "type": "aimHere",
+        "parentTankId": "fields-of-normandy-red-unit-07",
+        "startX": 66.88,
+        "startY": 44.79,
+        "endX": 30.19,
+        "endY": 37.19
+      },
+      {
+        "id": "mudgkale-wdmt2i",
+        "type": "aimHere",
+        "parentTankId": "mudgdxvo-ysi5g7",
+        "startX": 59.56,
+        "startY": 56.91,
+        "endX": 47.31,
+        "endY": 82.8
+      },
+      {
+        "id": "mudgkjuy-n49usd",
         "type": "route",
         "points": [
           {
-            "x": 22.5,
-            "y": 44.04
+            "x": 56.52,
+            "y": 15.12
           },
           {
-            "x": 23.58,
-            "y": 41.5
+            "x": 52.95,
+            "y": 14.16
           },
           {
-            "x": 25.22,
-            "y": 39.28
+            "x": 50.61,
+            "y": 14.42
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "mudgkpxc-whwx2r",
+        "type": "aimHere",
+        "parentTankId": "mudghhur-bz4fqf",
+        "startX": 56.34,
+        "startY": 15.29,
+        "endX": 49.13,
+        "endY": 21.72
+      },
+      {
+        "id": "mudh5shj-zfw806",
+        "type": "route",
+        "points": [
+          {
+            "x": 60.69,
+            "y": 56.47
           },
           {
-            "x": 26.11,
+            "x": 66.77,
+            "y": 58.38
+          },
+          {
+            "x": 73.28,
+            "y": 60.21
+          },
+          {
+            "x": 78.06,
+            "y": 61.86
+          },
+          {
+            "x": 88.92,
+            "y": 74.98
+          },
+          {
+            "x": 90.49,
+            "y": 79.24
+          },
+          {
+            "x": 90.83,
+            "y": 87.49
+          }
+        ]
+      },
+      {
+        "id": "mudh5ytj-7xnz3f",
+        "type": "route",
+        "points": [
+          {
+            "x": 60.6,
+            "y": 55.95
+          },
+          {
+            "x": 63.47,
+            "y": 55.17
+          },
+          {
+            "x": 64.77,
+            "y": 52.74
+          },
+          {
+            "x": 66.33,
+            "y": 48.74
+          },
+          {
+            "x": 67.29,
+            "y": 45.35
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "mudh6e27-bpya5i",
+        "type": "route",
+        "points": [
+          {
+            "x": 55.65,
+            "y": 95.57
+          },
+          {
+            "x": 57.3,
+            "y": 93.4
+          },
+          {
+            "x": 63.9,
+            "y": 94.18
+          },
+          {
+            "x": 72.33,
+            "y": 93.57
+          },
+          {
+            "x": 81.97,
+            "y": 92.35
+          },
+          {
+            "x": 89.44,
+            "y": 89.83
+          }
+        ]
+      },
+      {
+        "id": "mudh6s13-pbob0r",
+        "type": "route",
+        "points": [
+          {
+            "x": 41.75,
+            "y": 35.53
+          },
+          {
+            "x": 49.65,
+            "y": 37.45
+          },
+          {
+            "x": 60.17,
             "y": 38.23
           }
         ],
         "dangerRoute": true
+      },
+      {
+        "id": "mudh6zzh-hvh5y8",
+        "type": "route",
+        "points": [
+          {
+            "x": 8.82,
+            "y": 51.69
+          },
+          {
+            "x": 13.34,
+            "y": 46.57
+          },
+          {
+            "x": 20.03,
+            "y": 44.57
+          },
+          {
+            "x": 27.58,
+            "y": 36.75
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "mudh7h8f-sj9v6n",
+        "type": "route",
+        "points": [
+          {
+            "x": 6.47,
+            "y": 13.64
+          },
+          {
+            "x": 5.95,
+            "y": 22.07
+          },
+          {
+            "x": 6.21,
+            "y": 32.67
+          },
+          {
+            "x": 8.04,
+            "y": 38.49
+          },
+          {
+            "x": 13.34,
+            "y": 42.22
+          },
+          {
+            "x": 20.03,
+            "y": 43.61
+          },
+          {
+            "x": 22.63,
+            "y": 44.57
+          },
+          {
+            "x": 28.45,
+            "y": 46.31
+          },
+          {
+            "x": 37.49,
+            "y": 48.31
+          },
+          {
+            "x": 44.7,
+            "y": 52.82
+          },
+          {
+            "x": 50.52,
+            "y": 54.39
+          },
+          {
+            "x": 58.95,
+            "y": 56.13
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "mudh7rih-uo5ned",
+        "type": "route",
+        "points": [
+          {
+            "x": 57.56,
+            "y": 15.46
+          },
+          {
+            "x": 60.17,
+            "y": 15.46
+          },
+          {
+            "x": 62.34,
+            "y": 15.73
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "mudh7z9b-2d3z29",
+        "type": "route",
+        "points": [
+          {
+            "x": 62.34,
+            "y": 15.81
+          },
+          {
+            "x": 77.11,
+            "y": 17.72
+          },
+          {
+            "x": 87.53,
+            "y": 19.72
+          },
+          {
+            "x": 91.79,
+            "y": 20.5
+          },
+          {
+            "x": 93.53,
+            "y": 21.2
+          }
+        ]
       }
     ],
     "Fields of Poland::domination-1|Blue": [
@@ -70525,6 +70739,6 @@
     "Darwin Hill::battle-1|Red": [],
     "Sands of Sinai::domination-1|Blue": []
   },
-  "updatedAt": "2026-09-23T01:49:32.672Z",
-  "exportedAt": "2026-09-23T01:49:33.287Z"
+  "updatedAt": "2026-09-23T02:21:06.240Z",
+  "exportedAt": "2026-09-23T02:22:03.644Z"
 }
