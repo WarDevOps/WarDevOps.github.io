@@ -34,28 +34,28 @@
     "Japan": "2026-09-23",
     "Jungle": "2026-09-22",
     "Karelia": "2026-08-30",
-    "Kuban": "2026-08-18",
+    "Kuban": "2026-09-23",
     "Maginot Line": "2026-09-17",
-    "Middle East": "2026-09-15",
+    "Middle East": "2026-09-23",
     "Mozdok": "2026-09-15",
     "Normandy": "2026-09-04",
     "North Holland": "2026-09-15",
     "Poland": "2026-09-15",
-    "Port Novorossiysk": "2026-09-09",
+    "Port Novorossiysk": "2026-09-23",
     "Pradesh": "2026-08-31",
     "Red Desert": "2026-09-15",
     "Sands of Sinai": "2026-09-16",
-    "Second Battle of El Alamein": "2026-09-15",
+    "Second Battle of El Alamein": "2026-09-23",
     "Seversk-13": "2026-09-14",
     "Sinai": "2026-09-15",
     "Spaceport": "2026-09-15",
     "Stalingrad": "2026-08-25",
-    "Sun City": "2026-09-15",
+    "Sun City": "2026-09-23",
     "Surroundings of Volokolamsk": "2026-09-15",
-    "Sweden": "2026-09-22",
+    "Sweden": "2026-09-23",
     "Test Site-2271": "2026-09-14",
     "Tunisia": "2026-09-17",
-    "Vietnam": "2026-09-16",
+    "Vietnam": "2026-09-23",
     "Volokolamsk": "2026-08-31",
     "White Rock Fortress": "2026-09-02"
   },
@@ -76,7 +76,7 @@
     "Berlin": "2026-09-10T23:37:22Z",
     "Breslau": "2026-09-23T02:55:50Z",
     "Campania": "2026-09-03T01:49:21Z",
-    "Cargo Port": "2026-09-23T01:28:04Z",
+    "Cargo Port": "2026-09-23T04:02:44Z",
     "Carpathians": "2026-09-23T01:37:01Z",
     "Darwin Hill": "2026-09-22T04:24:18Z",
     "Eastern Europe": "2026-09-03T01:49:56Z",
@@ -91,25 +91,26 @@
     "Japan": "2026-09-23T03:21:06Z",
     "Jungle": "2026-09-22T06:01:21Z",
     "Maginot Line": "2026-09-16T19:34:11Z",
-    "Middle East": "2026-09-15T03:32:27Z",
+    "Middle East": "2026-09-23T03:56:31Z",
     "Mozdok": "2026-09-15T03:13:51Z",
     "Normandy": "2026-09-04T05:44:50Z",
     "North Holland": "2026-09-14T23:28:36Z",
     "Poland": "2026-09-15T02:55:29Z",
-    "Port Novorossiysk": "2026-09-08T23:53:12Z",
+    "Port Novorossiysk": "2026-09-23T04:09:25Z",
     "Red Desert": "2026-09-15T03:19:40Z",
     "Sands of Sinai": "2026-09-16T02:39:09Z",
-    "Second Battle of El Alamein": "2026-09-15T04:50:18Z",
+    "Second Battle of El Alamein": "2026-09-23T04:16:58Z",
     "Seversk-13": "2026-09-13T19:59:09Z",
     "Sinai": "2026-09-15T03:39:06Z",
     "Spaceport": "2026-09-15T03:04:03Z",
-    "Sun City": "2026-09-14T16:27:44Z",
+    "Sun City": "2026-09-23T05:11:46Z",
     "Surroundings of Volokolamsk": "2026-09-15T03:51:26Z",
-    "Sweden": "2026-09-22T04:54:25Z",
+    "Sweden": "2026-09-23T04:35:51Z",
     "Test Site-2271": "2026-09-13T19:14:47Z",
     "Tunisia": "2026-09-16T19:37:22Z",
-    "Vietnam": "2026-09-16T02:50:51Z",
-    "White Rock Fortress": "2026-09-02T04:58:42Z"
+    "Vietnam": "2026-09-23T05:16:37Z",
+    "White Rock Fortress": "2026-09-02T04:58:42Z",
+    "Kuban": "2026-09-23T03:55:33Z"
   },
   "tacticalSummaries": {
     "Eastern Europe": {
@@ -14636,8 +14637,42 @@
     ],
     "Karelia::domination-1|Blue": [],
     "Karelia::domination-1|Red": [],
-    "Kuban::domination-1|Blue": [],
-    "Kuban::domination-1|Red": [],
+    "Kuban::domination-1|Blue": [
+      {
+        "id": "mudkk30h-vgf54r",
+        "type": "lightTank",
+        "x": 72.33,
+        "y": 70.2
+      },
+      {
+        "id": "mudkkbr7-s597jn",
+        "type": "battleLine",
+        "x": 72.33,
+        "y": 70.2,
+        "parentTankId": "mudkk30h-vgf54r"
+      }
+    ],
+    "Kuban::domination-1|Red": [
+      {
+        "id": "mudkjugw-nqu765",
+        "type": "lightTankRed",
+        "x": 74.24,
+        "y": 58.99
+      },
+      {
+        "id": "mudkkhzv-7nc1dr",
+        "type": "highRiskSpot",
+        "x": 74.24,
+        "y": 58.99,
+        "parentTankId": "mudkjugw-nqu765"
+      },
+      {
+        "id": "mudkl286-kfz0r8",
+        "type": "smokeshell",
+        "x": 67.38,
+        "y": 60.73
+      }
+    ],
     "Maginot Line::domination-1|Red": [
       {
         "id": "maginot-line-red-unit-01",
@@ -16358,7 +16393,7 @@
       },
       {
         "id": "port-novorossiysk-conquest-1-red-role-10",
-        "type": "highRiskSpot",
+        "type": "sniper",
         "x": 58.4,
         "y": 71.67,
         "parentTankId": "port-novorossiysk-conquest-1-red-unit-12"
@@ -16394,7 +16429,7 @@
     "Port Novorossiysk::conquest-1|Blue": [
       {
         "id": "port-novorossiysk-conquest-1-blue-unit-01",
-        "type": "mainBattleTank",
+        "type": "tankDestroyer",
         "x": 43.89,
         "y": 22.85
       },
@@ -16407,7 +16442,7 @@
       },
       {
         "id": "port-novorossiysk-conquest-1-blue-unit-02",
-        "type": "mainBattleTank",
+        "type": "tankDestroyer",
         "x": 31.6,
         "y": 37.01
       },
@@ -16426,7 +16461,7 @@
       },
       {
         "id": "port-novorossiysk-conquest-1-blue-unit-04",
-        "type": "mainBattleTank",
+        "type": "tankDestroyer",
         "x": 27.36,
         "y": 44.93
       },
@@ -16439,13 +16474,13 @@
       },
       {
         "id": "port-novorossiysk-conquest-1-blue-unit-05",
-        "type": "mainBattleTank",
+        "type": "tankDestroyer",
         "x": 20.35,
         "y": 47.57
       },
       {
         "id": "port-novorossiysk-conquest-1-blue-role-04",
-        "type": "highRiskSpot",
+        "type": "sniper",
         "x": 20.35,
         "y": 47.57,
         "parentTankId": "port-novorossiysk-conquest-1-blue-unit-05"
@@ -16552,6 +16587,27 @@
         "x": 60.56,
         "y": 86.11,
         "parentTankId": "port-novorossiysk-conquest-1-blue-unit-14"
+      },
+      {
+        "id": "mudkoj9b-1v4wm9",
+        "type": "spawnKill",
+        "x": 51.6,
+        "y": 42.22,
+        "parentTankId": "port-novorossiysk-conquest-1-blue-unit-03"
+      },
+      {
+        "id": "mudkoqnz-6vajja",
+        "type": "spawnKill",
+        "x": 69.65,
+        "y": 57.71,
+        "parentTankId": "port-novorossiysk-conquest-1-blue-unit-09"
+      },
+      {
+        "id": "mudkoww1-rtzm2m",
+        "type": "spawnKill",
+        "x": 73.33,
+        "y": 81.04,
+        "parentTankId": "port-novorossiysk-conquest-1-blue-unit-13"
       }
     ],
     "Pradesh::domination-1|Red": [
@@ -17439,7 +17495,7 @@
       },
       {
         "id": "second-battle-of-el-alamein-red-unit-06",
-        "type": "mainBattleTankRed",
+        "type": "tankDestroyerRed",
         "x": 82.43,
         "y": 27.71
       },
@@ -17503,7 +17559,7 @@
       },
       {
         "id": "second-battle-of-el-alamein-red-role-09",
-        "type": "spawnKill",
+        "type": "sniper",
         "x": 71.81,
         "y": 40.56,
         "parentTankId": "second-battle-of-el-alamein-red-unit-11"
@@ -17584,12 +17640,26 @@
         "type": "antiAirRed",
         "x": 92.15,
         "y": 68.19
+      },
+      {
+        "id": "mudl42lh-5mb22r",
+        "type": "spawnKill",
+        "x": 81.53,
+        "y": 13.06,
+        "parentTankId": "second-battle-of-el-alamein-red-unit-02"
+      },
+      {
+        "id": "mudl44kb-noj6ym",
+        "type": "spawnKill",
+        "x": 58.75,
+        "y": 28.4,
+        "parentTankId": "second-battle-of-el-alamein-red-unit-07"
       }
     ],
     "Second Battle of El Alamein::domination-1|Blue": [
       {
         "id": "second-battle-of-el-alamein-blue-unit-01",
-        "type": "mainBattleTank",
+        "type": "tankDestroyer",
         "x": 38.89,
         "y": 2.29
       },
@@ -17633,7 +17703,7 @@
       },
       {
         "id": "second-battle-of-el-alamein-blue-role-03",
-        "type": "spawnKill",
+        "type": "sniper",
         "x": 64.93,
         "y": 16.74,
         "parentTankId": "second-battle-of-el-alamein-blue-unit-05"
@@ -17678,13 +17748,13 @@
       },
       {
         "id": "second-battle-of-el-alamein-blue-unit-10",
-        "type": "mainBattleTank",
+        "type": "tankDestroyer",
         "x": 26.81,
         "y": 22.92
       },
       {
         "id": "second-battle-of-el-alamein-blue-role-06",
-        "type": "spawnKill",
+        "type": "sniper",
         "x": 26.81,
         "y": 22.92,
         "parentTankId": "second-battle-of-el-alamein-blue-unit-10"
@@ -17787,7 +17857,7 @@
       },
       {
         "id": "second-battle-of-el-alamein-blue-role-13",
-        "type": "spawnKill",
+        "type": "highRiskSpot",
         "x": 67.85,
         "y": 57.78,
         "parentTankId": "second-battle-of-el-alamein-blue-unit-19"
@@ -17797,6 +17867,34 @@
         "type": "lightTank",
         "x": 82.36,
         "y": 63.68
+      },
+      {
+        "id": "mudl4dtp-0sdpti",
+        "type": "spawnKill",
+        "x": 64.38,
+        "y": 55.76,
+        "parentTankId": "second-battle-of-el-alamein-blue-unit-17"
+      },
+      {
+        "id": "mudl4feb-bc1g14",
+        "type": "spawnKill",
+        "x": 61.6,
+        "y": 57.5,
+        "parentTankId": "second-battle-of-el-alamein-blue-unit-18"
+      },
+      {
+        "id": "mudl4gtt-dhhhvy",
+        "type": "spawnKill",
+        "x": 82.36,
+        "y": 63.68,
+        "parentTankId": "second-battle-of-el-alamein-blue-unit-20"
+      },
+      {
+        "id": "mudl5g1z-vecbd5",
+        "type": "spawnKill",
+        "x": 95.76,
+        "y": 22.36,
+        "parentTankId": "second-battle-of-el-alamein-blue-unit-09"
       }
     ],
     "Second Battle of El Alamein::domination-2|Red": [
@@ -19460,19 +19558,6 @@
         "parentTankId": "sun-city-red-unit-02"
       },
       {
-        "id": "sun-city-red-unit-03",
-        "type": "mainBattleTankRed",
-        "x": 46.81,
-        "y": 32.29
-      },
-      {
-        "id": "sun-city-red-role-02",
-        "type": "battleLine",
-        "x": 46.81,
-        "y": 32.29,
-        "parentTankId": "sun-city-red-unit-03"
-      },
-      {
         "id": "sun-city-red-unit-04",
         "type": "mainBattleTankRed",
         "x": 50.56,
@@ -19647,6 +19732,19 @@
         "x": 60.03,
         "y": 50.77,
         "parentTankId": "mu1ghh8c-1qwd22"
+      },
+      {
+        "id": "mudnb146-fup4c4",
+        "type": "mainBattleTankRed",
+        "x": 46.61,
+        "y": 65.51
+      },
+      {
+        "id": "mudnb2fw-uukl8o",
+        "type": "battleLine",
+        "x": 46.61,
+        "y": 65.51,
+        "parentTankId": "mudnb146-fup4c4"
       }
     ],
     "Sun City::domination-1|Blue": [
@@ -19793,19 +19891,6 @@
         "y": 65.07
       },
       {
-        "id": "sun-city-blue-unit-13",
-        "type": "mainBattleTank",
-        "x": 46.88,
-        "y": 65.35
-      },
-      {
-        "id": "sun-city-blue-role-11",
-        "type": "highRiskSpot",
-        "x": 46.88,
-        "y": 65.35,
-        "parentTankId": "sun-city-blue-unit-13"
-      },
-      {
         "id": "sun-city-blue-unit-14",
         "type": "mainBattleTank",
         "x": 87.68,
@@ -19857,6 +19942,19 @@
         "x": 29.7,
         "y": 52.3,
         "parentTankId": "mu08ri4v-e9f3hq"
+      },
+      {
+        "id": "mudnay8k-eiv2qx",
+        "type": "mainBattleTank",
+        "x": 45.66,
+        "y": 33.01
+      },
+      {
+        "id": "mudnb9k5-6vy3dp",
+        "type": "battleLine",
+        "x": 45.66,
+        "y": 33.01,
+        "parentTankId": "mudnay8k-eiv2qx"
       }
     ],
     "Surroundings of Volokolamsk::domination-1|Blue": [],
@@ -19902,20 +20000,20 @@
       },
       {
         "id": "sweden-blue-unit-05",
-        "type": "mainBattleTank",
+        "type": "tankDestroyer",
         "x": 48.06,
         "y": 33.54
       },
       {
         "id": "sweden-blue-role-01",
-        "type": "highRiskSpot",
+        "type": "sniper",
         "x": 48.06,
         "y": 33.54,
         "parentTankId": "sweden-blue-unit-05"
       },
       {
         "id": "sweden-blue-unit-06",
-        "type": "mainBattleTank",
+        "type": "tankDestroyer",
         "x": 96.32,
         "y": 34.17
       },
@@ -19928,13 +20026,13 @@
       },
       {
         "id": "sweden-blue-unit-07",
-        "type": "mainBattleTank",
+        "type": "tankDestroyer",
         "x": 3.89,
         "y": 35.83
       },
       {
         "id": "sweden-blue-role-03",
-        "type": "highRiskSpot",
+        "type": "sniper",
         "x": 3.89,
         "y": 35.83,
         "parentTankId": "sweden-blue-unit-07"
@@ -19954,7 +20052,7 @@
       },
       {
         "id": "sweden-blue-unit-09",
-        "type": "mainBattleTank",
+        "type": "tankDestroyer",
         "x": 71.53,
         "y": 42.15
       },
@@ -19980,7 +20078,7 @@
       },
       {
         "id": "sweden-blue-unit-11",
-        "type": "mainBattleTank",
+        "type": "tankDestroyer",
         "x": 9.51,
         "y": 44.72
       },
@@ -20159,6 +20257,19 @@
         "x": 16.25,
         "y": 83.82,
         "parentTankId": "sweden-blue-unit-24"
+      },
+      {
+        "id": "mudlwruv-dpv7u4",
+        "type": "tankDestroyer",
+        "x": 56.08,
+        "y": 33.36
+      },
+      {
+        "id": "mudlwtr8-p8vgd9",
+        "type": "sniper",
+        "x": 56.08,
+        "y": 33.36,
+        "parentTankId": "mudlwruv-dpv7u4"
       }
     ],
     "Sweden::domination-1|Red": [
@@ -20409,20 +20520,20 @@
       },
       {
         "id": "sweden-red-unit-22",
-        "type": "mainBattleTankRed",
+        "type": "tankDestroyerRed",
         "x": 46.94,
         "y": 66.81
       },
       {
         "id": "sweden-red-role-18",
-        "type": "highRiskSpot",
+        "type": "sniper",
         "x": 46.94,
         "y": 66.81,
         "parentTankId": "sweden-red-unit-22"
       },
       {
         "id": "sweden-red-unit-23",
-        "type": "mainBattleTankRed",
+        "type": "tankDestroyerRed",
         "x": 60.9,
         "y": 68.33
       },
@@ -20435,7 +20546,7 @@
       },
       {
         "id": "sweden-red-unit-24",
-        "type": "mainBattleTankRed",
+        "type": "tankDestroyerRed",
         "x": 93.4,
         "y": 75.35
       },
@@ -20479,6 +20590,19 @@
         "x": 24.03,
         "y": 24.58,
         "parentTankId": "sweden-red-unit-03"
+      },
+      {
+        "id": "mudm0mpl-y0sj9p",
+        "type": "tankDestroyerRed",
+        "x": 54.52,
+        "y": 69.5
+      },
+      {
+        "id": "mudm0nry-jqriph",
+        "type": "sniper",
+        "x": 54.52,
+        "y": 69.5,
+        "parentTankId": "mudm0mpl-y0sj9p"
       }
     ],
     "Test Site-2271::domination-1|Red": [
@@ -21437,13 +21561,13 @@
       },
       {
         "id": "vietnam-red-unit-02",
-        "type": "mainBattleTankRed",
+        "type": "tankDestroyerRed",
         "x": 73.47,
         "y": 3.75
       },
       {
         "id": "vietnam-red-role-02",
-        "type": "highRiskSpot",
+        "type": "sniper",
         "x": 73.47,
         "y": 3.75,
         "parentTankId": "vietnam-red-unit-02"
@@ -21456,7 +21580,7 @@
       },
       {
         "id": "vietnam-red-role-03",
-        "type": "sniper",
+        "type": "highRiskSpot",
         "x": 14.58,
         "y": 12.85,
         "parentTankId": "vietnam-red-unit-03"
@@ -21482,7 +21606,7 @@
       },
       {
         "id": "vietnam-red-unit-06",
-        "type": "mainBattleTankRed",
+        "type": "tankDestroyerRed",
         "x": 67.57,
         "y": 25.83
       },
@@ -21545,13 +21669,13 @@
       },
       {
         "id": "vietnam-red-unit-13",
-        "type": "mainBattleTankRed",
+        "type": "tankDestroyerRed",
         "x": 74.17,
         "y": 65.83
       },
       {
         "id": "vietnam-red-role-08",
-        "type": "spawnKill",
+        "type": "sniper",
         "x": 74.17,
         "y": 65.83,
         "parentTankId": "vietnam-red-unit-13"
@@ -21590,13 +21714,13 @@
       },
       {
         "id": "vietnam-red-unit-17",
-        "type": "mainBattleTankRed",
+        "type": "tankDestroyerRed",
         "x": 70.49,
         "y": 98.4
       },
       {
         "id": "vietnam-red-role-11",
-        "type": "battleLine",
+        "type": "sniper",
         "x": 70.49,
         "y": 98.4,
         "parentTankId": "vietnam-red-unit-17"
@@ -21652,7 +21776,7 @@
       },
       {
         "id": "vietnam-blue-unit-03",
-        "type": "mainBattleTank",
+        "type": "tankDestroyer",
         "x": 28.89,
         "y": 7.85
       },
@@ -21671,7 +21795,7 @@
       },
       {
         "id": "vietnam-blue-unit-05",
-        "type": "mainBattleTank",
+        "type": "tankDestroyer",
         "x": 26.25,
         "y": 21.94
       },
@@ -21684,7 +21808,7 @@
       },
       {
         "id": "vietnam-blue-unit-06",
-        "type": "mainBattleTank",
+        "type": "tankDestroyer",
         "x": 29.79,
         "y": 23.33
       },
@@ -21735,7 +21859,7 @@
       },
       {
         "id": "vietnam-blue-unit-11",
-        "type": "mainBattleTank",
+        "type": "tankDestroyer",
         "x": 31.18,
         "y": 58.4
       },
@@ -21831,13 +21955,13 @@
       },
       {
         "id": "vietnam-blue-unit-20",
-        "type": "mainBattleTank",
+        "type": "tankDestroyer",
         "x": 37.92,
         "y": 89.44
       },
       {
         "id": "vietnam-blue-role-14",
-        "type": "battleLine",
+        "type": "sniper",
         "x": 37.92,
         "y": 89.44,
         "parentTankId": "vietnam-blue-unit-20"
@@ -21878,7 +22002,7 @@
       },
       {
         "id": "mtxn6eoe-z00f7g",
-        "type": "battleLine",
+        "type": "highRiskSpot",
         "x": 48.76,
         "y": 35.54,
         "parentTankId": "mtxn69xb-4x8rg3"
@@ -22498,6 +22622,20 @@
         "x": 14.51,
         "y": 15.07,
         "parentTankId": "vietnam-domination-2-blue-unit-04"
+      },
+      {
+        "id": "mudmf0cy-dd6nxp",
+        "type": "spawnKill",
+        "x": 24.1,
+        "y": 72.5,
+        "parentTankId": "vietnam-domination-2-blue-unit-21"
+      },
+      {
+        "id": "mudmf20k-yiyhwk",
+        "type": "spawnKill",
+        "x": 16.32,
+        "y": 66.81,
+        "parentTankId": "vietnam-domination-2-blue-unit-19"
       }
     ],
     "Volokolamsk::domination-1|Red": [],
@@ -39817,15 +39955,6 @@
         "dangerRoute": true
       },
       {
-        "id": "mudf5mu6-pgpixy",
-        "type": "aimHere",
-        "parentTankId": "cargo-port-red-unit-05",
-        "startX": 74.44,
-        "startY": 30.83,
-        "endX": 43.66,
-        "endY": 31.19
-      },
-      {
         "id": "mudf5zyf-wq16rh",
         "type": "aimHere",
         "parentTankId": "cargo-port-red-unit-14",
@@ -39851,6 +39980,54 @@
         "startY": 47.7,
         "endX": 70.07,
         "endY": 40.23
+      },
+      {
+        "id": "mudku5q0-42ricp",
+        "type": "route",
+        "points": [
+          {
+            "x": 77.98,
+            "y": 42.31
+          },
+          {
+            "x": 77.19,
+            "y": 41.53
+          },
+          {
+            "x": 77.19,
+            "y": 39.53
+          },
+          {
+            "x": 74.85,
+            "y": 39.01
+          },
+          {
+            "x": 74.85,
+            "y": 37.62
+          },
+          {
+            "x": 75.63,
+            "y": 35.45
+          },
+          {
+            "x": 75.11,
+            "y": 33.45
+          },
+          {
+            "x": 74.67,
+            "y": 31.19
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "mudkuox3-jq1y7v",
+        "type": "aimHere",
+        "parentTankId": "cargo-port-red-unit-05",
+        "startX": 74.44,
+        "startY": 30.83,
+        "endX": 34.62,
+        "endY": 30.32
       }
     ],
     "Cargo Port::domination-1|Blue": [
@@ -54521,8 +54698,117 @@
     ],
     "Karelia::domination-1|Blue": [],
     "Karelia::domination-1|Red": [],
-    "Kuban::domination-1|Blue": [],
-    "Kuban::domination-1|Red": [],
+    "Kuban::domination-1|Blue": [
+      {
+        "id": "mudkk7bf-cvu942",
+        "type": "aimHere",
+        "parentTankId": "mudkk30h-vgf54r",
+        "startX": 72.33,
+        "startY": 70.2,
+        "endX": 81.97,
+        "endY": 59.6
+      },
+      {
+        "id": "mudklaa1-mc2bl5",
+        "type": "route",
+        "points": [
+          {
+            "x": 55.39,
+            "y": 76.89
+          },
+          {
+            "x": 60.6,
+            "y": 72.63
+          },
+          {
+            "x": 63.12,
+            "y": 71.42
+          },
+          {
+            "x": 65.9,
+            "y": 71.85
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "mudklfur-8wujbu",
+        "type": "route",
+        "points": [
+          {
+            "x": 66.25,
+            "y": 71.94
+          },
+          {
+            "x": 68.33,
+            "y": 72.11
+          },
+          {
+            "x": 69.64,
+            "y": 71.33
+          },
+          {
+            "x": 71.37,
+            "y": 70.81
+          },
+          {
+            "x": 71.98,
+            "y": 70.55
+          }
+        ]
+      }
+    ],
+    "Kuban::domination-1|Red": [
+      {
+        "id": "mudkkkr3-nzogof",
+        "type": "aimHere",
+        "parentTankId": "mudkjugw-nqu765",
+        "startX": 74.24,
+        "startY": 58.99,
+        "endX": 69.03,
+        "endY": 71.42
+      },
+      {
+        "id": "mudkksm9-sk1hcw",
+        "type": "aimHere",
+        "parentTankId": "mudkjugw-nqu765",
+        "startX": 74.24,
+        "startY": 58.99,
+        "endX": 73.63,
+        "endY": 80.28
+      },
+      {
+        "id": "mudkky9x-7l6euv",
+        "type": "route",
+        "points": [
+          {
+            "x": 72.15,
+            "y": 52.82
+          },
+          {
+            "x": 69.37,
+            "y": 57.52
+          },
+          {
+            "x": 69.37,
+            "y": 59.51
+          },
+          {
+            "x": 71.72,
+            "y": 58.3
+          },
+          {
+            "x": 72.94,
+            "y": 57.17
+          },
+          {
+            "x": 73.89,
+            "y": 58.47
+          }
+        ],
+        "dangerRoute": true
+      }
+    ],
     "Maginot Line::domination-1|Red": [
       {
         "id": "maginot-line-red-aim-01",
@@ -55383,6 +55669,15 @@
         "startY": 43.08,
         "endX": 91.32,
         "endY": 34.92
+      },
+      {
+        "id": "mudkmoyr-t3pvhi",
+        "type": "aimHere",
+        "parentTankId": "mu1gxfrc-krmiyt",
+        "startX": 44.5,
+        "startY": 94.68,
+        "endX": 55.56,
+        "endY": 89.83
       }
     ],
     "Mozdok::domination-1|Blue": [
@@ -57835,18 +58130,101 @@
         "startY": 15.62,
         "endX": 33.98,
         "endY": 13.01
+      },
+      {
+        "id": "mudl0wbn-bfrn6t",
+        "type": "route",
+        "points": [
+          {
+            "x": 45.22,
+            "y": 64.03
+          },
+          {
+            "x": 43.48,
+            "y": 60.9
+          },
+          {
+            "x": 43.05,
+            "y": 58.64
+          },
+          {
+            "x": 40.79,
+            "y": 55.69
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "mudl14fp-bzsx5z",
+        "type": "route",
+        "points": [
+          {
+            "x": 58.51,
+            "y": 71.76
+          },
+          {
+            "x": 61.82,
+            "y": 71.16
+          },
+          {
+            "x": 64.25,
+            "y": 73.07
+          }
+        ]
+      },
+      {
+        "id": "mudl1b3p-i03cy0",
+        "type": "route",
+        "points": [
+          {
+            "x": 55.73,
+            "y": 65.25
+          },
+          {
+            "x": 59.3,
+            "y": 64.9
+          },
+          {
+            "x": 62.25,
+            "y": 63.25
+          }
+        ]
+      },
+      {
+        "id": "mudl1dw1-8evb8a",
+        "type": "route",
+        "points": [
+          {
+            "x": 52.17,
+            "y": 51.61
+          },
+          {
+            "x": 54.78,
+            "y": 54.39
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "mudl1l29-82thbq",
+        "type": "route",
+        "points": [
+          {
+            "x": 46.61,
+            "y": 77.85
+          },
+          {
+            "x": 51.91,
+            "y": 74.89
+          },
+          {
+            "x": 53.74,
+            "y": 75.15
+          }
+        ]
       }
     ],
     "Port Novorossiysk::conquest-1|Blue": [
-      {
-        "id": "port-novorossiysk-conquest-1-blue-aim-01",
-        "type": "aimHere",
-        "parentTankId": "port-novorossiysk-conquest-1-blue-unit-09",
-        "startX": 69.65,
-        "startY": 57.71,
-        "endX": 72.18,
-        "endY": 62.1
-      },
       {
         "id": "port-novorossiysk-conquest-1-blue-route-01",
         "type": "route",
@@ -58099,6 +58477,230 @@
           }
         ],
         "dangerRoute": true
+      },
+      {
+        "id": "mudknvox-986es0",
+        "type": "aimHere",
+        "parentTankId": "port-novorossiysk-conquest-1-blue-unit-10",
+        "startX": 43.4,
+        "startY": 58.33,
+        "endX": 52.35,
+        "endY": 51.26
+      },
+      {
+        "id": "mudknzib-ey5d0q",
+        "type": "aimHere",
+        "parentTankId": "port-novorossiysk-conquest-1-blue-unit-07",
+        "startX": 50.21,
+        "startY": 48.82,
+        "endX": 40.44,
+        "endY": 55.08
+      },
+      {
+        "id": "mudko2bt-a2bmrp",
+        "type": "aimHere",
+        "parentTankId": "port-novorossiysk-conquest-1-blue-unit-06",
+        "startX": 36.94,
+        "startY": 47.92,
+        "endX": 51.48,
+        "endY": 57.25
+      },
+      {
+        "id": "mudko971-u3bj1y",
+        "type": "aimHere",
+        "parentTankId": "port-novorossiysk-conquest-1-blue-unit-06",
+        "startX": 36.94,
+        "startY": 47.92,
+        "endX": 59.56,
+        "endY": 73.94
+      },
+      {
+        "id": "mudkofhl-tb0b2k",
+        "type": "aimHere",
+        "parentTankId": "port-novorossiysk-conquest-1-blue-unit-02",
+        "startX": 31.6,
+        "startY": 37.01,
+        "endX": 59.04,
+        "endY": 70.29
+      },
+      {
+        "id": "mudkoohj-to672a",
+        "type": "aimHere",
+        "parentTankId": "port-novorossiysk-conquest-1-blue-unit-03",
+        "startX": 51.6,
+        "startY": 42.22,
+        "endX": 81.54,
+        "endY": 72.98
+      },
+      {
+        "id": "mudkovch-sm2jfh",
+        "type": "aimHere",
+        "parentTankId": "port-novorossiysk-conquest-1-blue-unit-09",
+        "startX": 69.65,
+        "startY": 57.71,
+        "endX": 83.1,
+        "endY": 76.37
+      },
+      {
+        "id": "mudkp0kn-qt6jnu",
+        "type": "aimHere",
+        "parentTankId": "port-novorossiysk-conquest-1-blue-unit-13",
+        "startX": 73.33,
+        "startY": 81.04,
+        "endX": 85.71,
+        "endY": 72.11
+      },
+      {
+        "id": "mudkp39r-a5pgag",
+        "type": "aimHere",
+        "parentTankId": "port-novorossiysk-conquest-1-blue-unit-13",
+        "startX": 73.33,
+        "startY": 81.04,
+        "endX": 88.05,
+        "endY": 75.85
+      },
+      {
+        "id": "mudkp7l3-n5xhy3",
+        "type": "aimHere",
+        "parentTankId": "port-novorossiysk-conquest-1-blue-unit-14",
+        "startX": 60.56,
+        "startY": 86.11,
+        "endX": 82.58,
+        "endY": 65.42
+      },
+      {
+        "id": "mudkpcib-8p0msj",
+        "type": "aimHere",
+        "parentTankId": "port-novorossiysk-conquest-1-blue-unit-12",
+        "startX": 46.74,
+        "startY": 79.58,
+        "endX": 68.59,
+        "endY": 58.56
+      },
+      {
+        "id": "mudkphiz-8uq8bx",
+        "type": "aimHere",
+        "parentTankId": "port-novorossiysk-conquest-1-blue-unit-08",
+        "startX": 28.33,
+        "startY": 57.15,
+        "endX": 45.74,
+        "endY": 78.63
+      },
+      {
+        "id": "mudkpmez-8n557z",
+        "type": "aimHere",
+        "parentTankId": "port-novorossiysk-conquest-1-blue-unit-05",
+        "startX": 20.35,
+        "startY": 47.57,
+        "endX": 38.1,
+        "endY": 70.2
+      },
+      {
+        "id": "mudkqkvz-bg9lwu",
+        "type": "aimHere",
+        "parentTankId": "port-novorossiysk-conquest-1-blue-unit-01",
+        "startX": 43.89,
+        "startY": 22.85,
+        "endX": 70.24,
+        "endY": 56.65
+      },
+      {
+        "id": "mudkquu5-vy5p96",
+        "type": "aimHere",
+        "parentTankId": "port-novorossiysk-conquest-1-blue-unit-01",
+        "startX": 43.89,
+        "startY": 22.85,
+        "endX": 59.73,
+        "endY": 51.95
+      },
+      {
+        "id": "mudl2aat-2qwtv8",
+        "type": "route",
+        "points": [
+          {
+            "x": 34.88,
+            "y": 53.43
+          },
+          {
+            "x": 38.62,
+            "y": 54.39
+          },
+          {
+            "x": 41.83,
+            "y": 57.08
+          },
+          {
+            "x": 43.22,
+            "y": 58.21
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "mudl2igz-suu2t7",
+        "type": "route",
+        "points": [
+          {
+            "x": 45.13,
+            "y": 42.57
+          },
+          {
+            "x": 50,
+            "y": 48.05
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "mudl2v51-fjkbz6",
+        "type": "route",
+        "points": [
+          {
+            "x": 21.16,
+            "y": 46.66
+          },
+          {
+            "x": 46.18,
+            "y": 78.37
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "mudl3591-6fkpba",
+        "type": "route",
+        "points": [
+          {
+            "x": 62.95,
+            "y": 75.67
+          },
+          {
+            "x": 65.46,
+            "y": 77.58
+          },
+          {
+            "x": 67.64,
+            "y": 78.63
+          },
+          {
+            "x": 69.81,
+            "y": 78.11
+          },
+          {
+            "x": 72.33,
+            "y": 80.63
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "mudl39t5-h15buk",
+        "type": "aimHere",
+        "parentTankId": "port-novorossiysk-conquest-1-blue-unit-11",
+        "startX": 69.17,
+        "startY": 71.25,
+        "endX": 84.06,
+        "endY": 90.18
       }
     ],
     "Pradesh::domination-1|Red": [
@@ -59617,33 +60219,6 @@
         "endY": 8.95
       },
       {
-        "id": "second-battle-of-el-alamein-red-aim-05",
-        "type": "aimHere",
-        "parentTankId": "second-battle-of-el-alamein-red-unit-05",
-        "startX": 75.69,
-        "startY": 25.69,
-        "endX": 65.08,
-        "endY": 20.83
-      },
-      {
-        "id": "second-battle-of-el-alamein-red-aim-06",
-        "type": "aimHere",
-        "parentTankId": "second-battle-of-el-alamein-red-unit-06",
-        "startX": 82.43,
-        "startY": 27.71,
-        "endX": 44.51,
-        "endY": 14.13
-      },
-      {
-        "id": "second-battle-of-el-alamein-red-aim-07",
-        "type": "aimHere",
-        "parentTankId": "second-battle-of-el-alamein-red-unit-07",
-        "startX": 58.75,
-        "startY": 28.4,
-        "endX": 43.09,
-        "endY": 9.81
-      },
-      {
         "id": "second-battle-of-el-alamein-red-aim-08",
         "type": "aimHere",
         "parentTankId": "second-battle-of-el-alamein-red-unit-07",
@@ -59651,15 +60226,6 @@
         "startY": 28.4,
         "endX": 73.88,
         "endY": 43.42
-      },
-      {
-        "id": "second-battle-of-el-alamein-red-aim-09",
-        "type": "aimHere",
-        "parentTankId": "second-battle-of-el-alamein-red-unit-07",
-        "startX": 58.75,
-        "startY": 28.4,
-        "endX": 53.55,
-        "endY": 36.69
       },
       {
         "id": "second-battle-of-el-alamein-red-aim-10",
@@ -59671,24 +60237,6 @@
         "endY": 27.3
       },
       {
-        "id": "second-battle-of-el-alamein-red-aim-11",
-        "type": "aimHere",
-        "parentTankId": "second-battle-of-el-alamein-red-unit-09",
-        "startX": 60.9,
-        "startY": 32.29,
-        "endX": 53,
-        "endY": 20.45
-      },
-      {
-        "id": "second-battle-of-el-alamein-red-aim-12",
-        "type": "aimHere",
-        "parentTankId": "second-battle-of-el-alamein-red-unit-10",
-        "startX": 42.15,
-        "startY": 36.32,
-        "endX": 55.71,
-        "endY": 17.59
-      },
-      {
         "id": "second-battle-of-el-alamein-red-aim-13",
         "type": "aimHere",
         "parentTankId": "second-battle-of-el-alamein-red-unit-11",
@@ -59696,33 +60244,6 @@
         "startY": 40.56,
         "endX": 64.97,
         "endY": 17.6
-      },
-      {
-        "id": "second-battle-of-el-alamein-red-aim-14",
-        "type": "aimHere",
-        "parentTankId": "second-battle-of-el-alamein-red-unit-11",
-        "startX": 71.81,
-        "startY": 40.56,
-        "endX": 57.34,
-        "endY": 27.26
-      },
-      {
-        "id": "second-battle-of-el-alamein-red-aim-15",
-        "type": "aimHere",
-        "parentTankId": "second-battle-of-el-alamein-red-unit-12",
-        "startX": 47.43,
-        "startY": 44.17,
-        "endX": 53.58,
-        "endY": 35.08
-      },
-      {
-        "id": "second-battle-of-el-alamein-red-aim-16",
-        "type": "aimHere",
-        "parentTankId": "second-battle-of-el-alamein-red-unit-13",
-        "startX": 70.35,
-        "startY": 45.21,
-        "endX": 47.3,
-        "endY": 14.06
       },
       {
         "id": "second-battle-of-el-alamein-red-aim-17",
@@ -60049,6 +60570,161 @@
           }
         ],
         "dangerRoute": true
+      },
+      {
+        "id": "mudl7lab-feu1xd",
+        "type": "aimHere",
+        "parentTankId": "second-battle-of-el-alamein-red-unit-10",
+        "startX": 42.15,
+        "startY": 36.32,
+        "endX": 53.56,
+        "endY": 17.98
+      },
+      {
+        "id": "mudl7vlp-k788tu",
+        "type": "aimHere",
+        "parentTankId": "second-battle-of-el-alamein-red-unit-05",
+        "startX": 75.69,
+        "startY": 25.69,
+        "endX": 61.47,
+        "endY": 23.37
+      },
+      {
+        "id": "mudl7yap-m4uqd8",
+        "type": "aimHere",
+        "parentTankId": "second-battle-of-el-alamein-red-unit-06",
+        "startX": 82.43,
+        "startY": 27.71,
+        "endX": 42.79,
+        "endY": 13.29
+      },
+      {
+        "id": "mudl8983-00xl0m",
+        "type": "aimHere",
+        "parentTankId": "second-battle-of-el-alamein-red-unit-03",
+        "startX": 83.61,
+        "startY": 16.53,
+        "endX": 71.37,
+        "endY": 24.67
+      },
+      {
+        "id": "mudl8g25-guxsk6",
+        "type": "aimHere",
+        "parentTankId": "second-battle-of-el-alamein-red-unit-13",
+        "startX": 70.35,
+        "startY": 45.21,
+        "endX": 59.9,
+        "endY": 32.23
+      },
+      {
+        "id": "mudl8lzv-9f8pl0",
+        "type": "aimHere",
+        "parentTankId": "second-battle-of-el-alamein-red-unit-09",
+        "startX": 60.9,
+        "startY": 32.29,
+        "endX": 59.38,
+        "endY": 29.28
+      },
+      {
+        "id": "mudl8qjn-dy3873",
+        "type": "aimHere",
+        "parentTankId": "second-battle-of-el-alamein-red-unit-07",
+        "startX": 58.75,
+        "startY": 28.4,
+        "endX": 43.48,
+        "endY": 9.56
+      },
+      {
+        "id": "mudl924x-m5utbm",
+        "type": "route",
+        "points": [
+          {
+            "x": 59.12,
+            "y": 45.7
+          },
+          {
+            "x": 61.47,
+            "y": 47.96
+          },
+          {
+            "x": 63.21,
+            "y": 49.17
+          },
+          {
+            "x": 64.94,
+            "y": 50.3
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "mudl9ahn-mo9ew7",
+        "type": "route",
+        "points": [
+          {
+            "x": 72.68,
+            "y": 41.09
+          },
+          {
+            "x": 73.72,
+            "y": 42.66
+          },
+          {
+            "x": 73.89,
+            "y": 44.57
+          },
+          {
+            "x": 73.2,
+            "y": 46.31
+          }
+        ]
+      },
+      {
+        "id": "mudl9i5x-ewugpt",
+        "type": "aimHere",
+        "parentTankId": "second-battle-of-el-alamein-red-unit-12",
+        "startX": 47.43,
+        "startY": 44.17,
+        "endX": 58.34,
+        "endY": 30.23
+      },
+      {
+        "id": "mudl9u0v-375lt6",
+        "type": "route",
+        "points": [
+          {
+            "x": 90.31,
+            "y": 16.25
+          },
+          {
+            "x": 90.66,
+            "y": 12.25
+          }
+        ]
+      },
+      {
+        "id": "mudl9wjb-n639dd",
+        "type": "route",
+        "points": [
+          {
+            "x": 90.92,
+            "y": 11.47
+          },
+          {
+            "x": 92.75,
+            "y": 8.25
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "mudlczv5-3uewn1",
+        "type": "aimHere",
+        "parentTankId": "second-battle-of-el-alamein-red-unit-14",
+        "startX": 59.38,
+        "startY": 45.76,
+        "endX": 55.13,
+        "endY": 42.83
       }
     ],
     "Second Battle of El Alamein::domination-1|Blue": [
@@ -60069,15 +60745,6 @@
         "startY": 10.07,
         "endX": 93.8,
         "endY": 9.43
-      },
-      {
-        "id": "second-battle-of-el-alamein-blue-aim-03",
-        "type": "aimHere",
-        "parentTankId": "second-battle-of-el-alamein-blue-unit-05",
-        "startX": 64.93,
-        "startY": 16.74,
-        "endX": 73.01,
-        "endY": 37.89
       },
       {
         "id": "second-battle-of-el-alamein-blue-aim-04",
@@ -60134,15 +60801,6 @@
         "endY": 45.31
       },
       {
-        "id": "second-battle-of-el-alamein-blue-aim-10",
-        "type": "aimHere",
-        "parentTankId": "second-battle-of-el-alamein-blue-unit-12",
-        "startX": 68.61,
-        "startY": 27.78,
-        "endX": 73,
-        "endY": 37.91
-      },
-      {
         "id": "second-battle-of-el-alamein-blue-aim-11",
         "type": "aimHere",
         "parentTankId": "second-battle-of-el-alamein-blue-unit-12",
@@ -60152,15 +60810,6 @@
         "endY": 32.94
       },
       {
-        "id": "second-battle-of-el-alamein-blue-aim-12",
-        "type": "aimHere",
-        "parentTankId": "second-battle-of-el-alamein-blue-unit-12",
-        "startX": 68.61,
-        "startY": 27.78,
-        "endX": 66.82,
-        "endY": 20.71
-      },
-      {
         "id": "second-battle-of-el-alamein-blue-aim-13",
         "type": "aimHere",
         "parentTankId": "second-battle-of-el-alamein-blue-unit-13",
@@ -60168,15 +60817,6 @@
         "startY": 32.92,
         "endX": 54.84,
         "endY": 52.6
-      },
-      {
-        "id": "second-battle-of-el-alamein-blue-aim-14",
-        "type": "aimHere",
-        "parentTankId": "second-battle-of-el-alamein-blue-unit-14",
-        "startX": 71.6,
-        "startY": 36.04,
-        "endX": 67.28,
-        "endY": 21.46
       },
       {
         "id": "second-battle-of-el-alamein-blue-aim-15",
@@ -60636,6 +61276,69 @@
           {
             "x": 81.55,
             "y": 65.83
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "mudl64gz-1vjger",
+        "type": "route",
+        "points": [
+          {
+            "x": 49.39,
+            "y": 35.88
+          },
+          {
+            "x": 51.74,
+            "y": 37.88
+          },
+          {
+            "x": 54.34,
+            "y": 40.57
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "mudl6b5v-qqfqcb",
+        "type": "aimHere",
+        "parentTankId": "second-battle-of-el-alamein-blue-unit-14",
+        "startX": 71.6,
+        "startY": 36.04,
+        "endX": 74.33,
+        "endY": 43.79
+      },
+      {
+        "id": "mudl6l2p-rnvaxa",
+        "type": "route",
+        "points": [
+          {
+            "x": 82.32,
+            "y": 11.47
+          },
+          {
+            "x": 83.97,
+            "y": 14.16
+          },
+          {
+            "x": 85.79,
+            "y": 14.94
+          },
+          {
+            "x": 89.1,
+            "y": 16.07
+          },
+          {
+            "x": 92.57,
+            "y": 17.64
+          },
+          {
+            "x": 94.83,
+            "y": 18.85
+          },
+          {
+            "x": 95.53,
+            "y": 21.46
           }
         ],
         "dangerRoute": true
@@ -64395,15 +65098,6 @@
         "endY": 36.43
       },
       {
-        "id": "mu08tp7b-9bcbpu",
-        "type": "aimHere",
-        "parentTankId": "sun-city-red-unit-03",
-        "startX": 46.81,
-        "startY": 32.29,
-        "endX": 38.39,
-        "endY": 66.22
-      },
-      {
         "id": "mu08uipd-ossx9d",
         "type": "aimHere",
         "parentTankId": "mu08uahb-mj94gr",
@@ -64475,6 +65169,15 @@
         "startY": 50.77,
         "endX": 53.78,
         "endY": 35.28
+      },
+      {
+        "id": "mudnb4mw-26h8mw",
+        "type": "aimHere",
+        "parentTankId": "mudnb146-fup4c4",
+        "startX": 46.61,
+        "startY": 65.51,
+        "endX": 44.79,
+        "endY": 34.84
       }
     ],
     "Sun City::domination-1|Blue": [
@@ -64605,15 +65308,6 @@
         "endY": 41.48
       },
       {
-        "id": "mu08th5l-mwsn2h",
-        "type": "aimHere",
-        "parentTankId": "sun-city-blue-unit-13",
-        "startX": 46.88,
-        "startY": 65.35,
-        "endX": 42.11,
-        "endY": 35.1
-      },
-      {
         "id": "mu08tzng-ges87u",
         "type": "route",
         "points": [
@@ -64636,6 +65330,24 @@
         "startY": 79.52,
         "endX": 67.91,
         "endY": 85.46
+      },
+      {
+        "id": "mudnb7vk-n29w63",
+        "type": "aimHere",
+        "parentTankId": "mudnay8k-eiv2qx",
+        "startX": 45.66,
+        "startY": 33.01,
+        "endX": 44.18,
+        "endY": 64.55
+      },
+      {
+        "id": "mudnbglr-0druz0",
+        "type": "aimHere",
+        "parentTankId": "sun-city-blue-unit-06",
+        "startX": 54.17,
+        "startY": 67.82,
+        "endX": 57.38,
+        "endY": 80.97
       }
     ],
     "Surroundings of Volokolamsk::domination-1|Blue": [
@@ -65466,6 +66178,105 @@
         "startY": 79.65,
         "endX": 65.99,
         "endY": 87.32
+      },
+      {
+        "id": "mudlwoxc-xs51wz",
+        "type": "aimHere",
+        "parentTankId": "sweden-blue-unit-05",
+        "startX": 48.06,
+        "startY": 33.54,
+        "endX": 44.87,
+        "endY": 68.98
+      },
+      {
+        "id": "mudlwx9s-97ltgr",
+        "type": "aimHere",
+        "parentTankId": "mudlwruv-dpv7u4",
+        "startX": 56.08,
+        "startY": 33.36,
+        "endX": 55.73,
+        "endY": 73.15
+      },
+      {
+        "id": "mudlx2j2-ueetjl",
+        "type": "aimHere",
+        "parentTankId": "sweden-blue-unit-15",
+        "startX": 62.29,
+        "startY": 48.89,
+        "endX": 48.18,
+        "endY": 51.52
+      },
+      {
+        "id": "mudlx54q-cmj4d6",
+        "type": "aimHere",
+        "parentTankId": "sweden-blue-unit-15",
+        "startX": 62.29,
+        "startY": 48.89,
+        "endX": 71.03,
+        "endY": 51.87
+      },
+      {
+        "id": "mudlx9h0-p4rp21",
+        "type": "aimHere",
+        "parentTankId": "sweden-blue-unit-09",
+        "startX": 71.53,
+        "startY": 42.15,
+        "endX": 69.2,
+        "endY": 74.02
+      },
+      {
+        "id": "mudlxrje-n3f8ry",
+        "type": "aimHere",
+        "parentTankId": "sweden-blue-unit-22",
+        "startX": 21.88,
+        "startY": 77.78,
+        "endX": 36.1,
+        "endY": 84.45
+      },
+      {
+        "id": "mudlxxm4-jkgrxa",
+        "type": "aimHere",
+        "parentTankId": "sweden-blue-unit-17",
+        "startX": 90.9,
+        "startY": 52.5,
+        "endX": 71.81,
+        "endY": 54.65
+      },
+      {
+        "id": "mudly3js-q4d15k",
+        "type": "aimHere",
+        "parentTankId": "sweden-blue-unit-08",
+        "startX": 90.9,
+        "startY": 40.35,
+        "endX": 91.62,
+        "endY": 56.47
+      },
+      {
+        "id": "mudly88i-8exsf5",
+        "type": "aimHere",
+        "parentTankId": "sweden-blue-unit-06",
+        "startX": 96.32,
+        "startY": 34.17,
+        "endX": 94.14,
+        "endY": 75.67
+      },
+      {
+        "id": "mudlyfqe-i3i4e9",
+        "type": "aimHere",
+        "parentTankId": "sweden-blue-unit-10",
+        "startX": 37.36,
+        "startY": 43.96,
+        "endX": 33.06,
+        "endY": 66.64
+      },
+      {
+        "id": "mudlyijk-6dghtw",
+        "type": "aimHere",
+        "parentTankId": "sweden-blue-unit-18",
+        "startX": 30.69,
+        "startY": 52.92,
+        "endX": 8.38,
+        "endY": 59.08
       }
     ],
     "Sweden::domination-1|Red": [
@@ -65971,6 +66782,141 @@
         "startY": 24.58,
         "endX": 33.75,
         "endY": 10.86
+      },
+      {
+        "id": "mudlz7ag-1s3oy1",
+        "type": "aimHere",
+        "parentTankId": "sweden-red-unit-19",
+        "startX": 19.44,
+        "startY": 61.04,
+        "endX": 20.89,
+        "endY": 43.44
+      },
+      {
+        "id": "mudlzalm-qy2ztg",
+        "type": "aimHere",
+        "parentTankId": "sweden-red-unit-16",
+        "startX": 26.11,
+        "startY": 56.94,
+        "endX": 37.14,
+        "endY": 30.67
+      },
+      {
+        "id": "mudlze8i-x9zadq",
+        "type": "aimHere",
+        "parentTankId": "sweden-red-unit-06",
+        "startX": 42.15,
+        "startY": 36.18,
+        "endX": 38.88,
+        "endY": 12.95
+      },
+      {
+        "id": "mudlzgt2-1rvscq",
+        "type": "aimHere",
+        "parentTankId": "sweden-red-unit-06",
+        "startX": 42.15,
+        "startY": 36.18,
+        "endX": 67.98,
+        "endY": 18.16
+      },
+      {
+        "id": "mudlzlwo-g83joa",
+        "type": "aimHere",
+        "parentTankId": "sweden-red-unit-17",
+        "startX": 91.18,
+        "startY": 58.33,
+        "endX": 91.44,
+        "endY": 40.23
+      },
+      {
+        "id": "mudlzq24-isbibs",
+        "type": "aimHere",
+        "parentTankId": "sweden-red-unit-24",
+        "startX": 93.4,
+        "startY": 75.35,
+        "endX": 96.74,
+        "endY": 35.27
+      },
+      {
+        "id": "mudlzu3k-lt3bsa",
+        "type": "aimHere",
+        "parentTankId": "sweden-red-unit-10",
+        "startX": 67.15,
+        "startY": 50.62,
+        "endX": 80.06,
+        "endY": 44.22
+      },
+      {
+        "id": "mudlzyk0-6klcah",
+        "type": "aimHere",
+        "parentTankId": "sweden-red-unit-08",
+        "startX": 72.99,
+        "startY": 46.6,
+        "endX": 91.01,
+        "endY": 45.7
+      },
+      {
+        "id": "mudm05rk-lvqa8t",
+        "type": "aimHere",
+        "parentTankId": "sweden-red-unit-21",
+        "startX": 69.03,
+        "startY": 65.62,
+        "endX": 71.37,
+        "endY": 46.74
+      },
+      {
+        "id": "mudm08uc-pkfglf",
+        "type": "aimHere",
+        "parentTankId": "sweden-red-unit-18",
+        "startX": 62.57,
+        "startY": 59.86,
+        "endX": 67.98,
+        "endY": 39.01
+      },
+      {
+        "id": "mudm0dbk-5h4u6y",
+        "type": "aimHere",
+        "parentTankId": "sweden-red-unit-23",
+        "startX": 60.9,
+        "startY": 68.33,
+        "endX": 68.33,
+        "endY": 39.62
+      },
+      {
+        "id": "mudm0ghw-bss26j",
+        "type": "aimHere",
+        "parentTankId": "sweden-red-unit-20",
+        "startX": 38.12,
+        "startY": 63.19,
+        "endX": 41.4,
+        "endY": 42.48
+      },
+      {
+        "id": "mudm0krk-ddkjxe",
+        "type": "aimHere",
+        "parentTankId": "sweden-red-unit-22",
+        "startX": 46.94,
+        "startY": 66.81,
+        "endX": 44.35,
+        "endY": 32.93
+      },
+      {
+        "id": "mudm0rca-vru74h",
+        "type": "aimHere",
+        "parentTankId": "mudm0mpl-y0sj9p",
+        "startX": 54.52,
+        "startY": 69.5,
+        "endX": 56.78,
+        "endY": 33.01
+      },
+      {
+        "id": "mudm11uo-1448rp",
+        "type": "aimHere",
+        "parentTankId": "sweden-red-unit-13",
+        "startX": 16.53,
+        "startY": 51.94,
+        "endX": 19.59,
+        "endY": 49.44
       }
     ],
     "Test Site-2271::domination-1|Red": [
@@ -69123,6 +70069,15 @@
         "startY": 46.67,
         "endX": 83.78,
         "endY": 39.53
+      },
+      {
+        "id": "mudngxxt-2bbb9a",
+        "type": "aimHere",
+        "parentTankId": "vietnam-blue-unit-07",
+        "startX": 27.57,
+        "startY": 40.69,
+        "endX": 46.18,
+        "endY": 34.23
       }
     ],
     "Vietnam::domination-2|Red": [
@@ -70603,6 +71558,24 @@
         "startY": 15.07,
         "endX": 9.48,
         "endY": 25.44
+      },
+      {
+        "id": "mudmf3m6-slgbca",
+        "type": "aimHere",
+        "parentTankId": "vietnam-domination-2-blue-unit-21",
+        "startX": 24.1,
+        "startY": 72.5,
+        "endX": 11.95,
+        "endY": 79.06
+      },
+      {
+        "id": "mudmf5ee-0qqjx5",
+        "type": "aimHere",
+        "parentTankId": "vietnam-domination-2-blue-unit-19",
+        "startX": 16.32,
+        "startY": 66.81,
+        "endX": 11.08,
+        "endY": 78.28
       }
     ],
     "Volokolamsk::domination-1|Red": [],
@@ -71858,6 +72831,6 @@
     "Darwin Hill::battle-1|Red": [],
     "Sands of Sinai::domination-1|Blue": []
   },
-  "updatedAt": "2026-09-23T03:53:21.826Z",
-  "exportedAt": "2026-09-23T03:53:34.711Z"
+  "updatedAt": "2026-09-23T05:16:37.506Z",
+  "exportedAt": "2026-09-23T05:17:21.117Z"
 }
