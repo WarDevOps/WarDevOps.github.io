@@ -55,7 +55,7 @@
     "Sweden": "2026-09-23",
     "Test Site-2271": "2026-09-14",
     "Tunisia": "2026-09-17",
-    "Vietnam": "2026-09-23",
+    "Vietnam": "2026-09-24",
     "Volokolamsk": "2026-08-31",
     "White Rock Fortress": "2026-09-02"
   },
@@ -109,7 +109,7 @@
     "Sweden": "2026-09-23T04:35:51Z",
     "Test Site-2271": "2026-09-13T19:14:47Z",
     "Tunisia": "2026-09-16T19:37:22Z",
-    "Vietnam": "2026-09-23T05:16:37Z",
+    "Vietnam": "2026-09-24T06:10:00Z",
     "White Rock Fortress": "2026-09-02T04:58:42Z"
   },
   "tacticalSummaries": {
@@ -22011,7 +22011,7 @@
     "Vietnam::domination-2|Red": [
       {
         "id": "vietnam-domination-2-blue-unit-01",
-        "type": "mainBattleTank",
+        "type": "mainBattleTankRed",
         "x": 51.39,
         "y": 4.24
       },
@@ -22024,7 +22024,7 @@
       },
       {
         "id": "vietnam-domination-2-blue-unit-02",
-        "type": "mainBattleTank",
+        "type": "mainBattleTankRed",
         "x": 57.36,
         "y": 4.65
       },
@@ -22037,7 +22037,7 @@
       },
       {
         "id": "vietnam-domination-2-blue-unit-03",
-        "type": "mainBattleTank",
+        "type": "mainBattleTankRed",
         "x": 54.51,
         "y": 11.81
       },
@@ -22050,13 +22050,13 @@
       },
       {
         "id": "vietnam-domination-2-blue-unit-04",
-        "type": "mainBattleTank",
+        "type": "mainBattleTankRed",
         "x": 14.51,
         "y": 15.07
       },
       {
         "id": "vietnam-domination-2-blue-unit-05",
-        "type": "mainBattleTank",
+        "type": "mainBattleTankRed",
         "x": 36.67,
         "y": 16.32
       },
@@ -22069,7 +22069,7 @@
       },
       {
         "id": "vietnam-domination-2-blue-unit-06",
-        "type": "mainBattleTank",
+        "type": "mainBattleTankRed",
         "x": 72.36,
         "y": 18.75
       },
@@ -22082,7 +22082,7 @@
       },
       {
         "id": "vietnam-domination-2-blue-unit-07",
-        "type": "mainBattleTank",
+        "type": "mainBattleTankRed",
         "x": 51.67,
         "y": 20.76
       },
@@ -22095,7 +22095,7 @@
       },
       {
         "id": "vietnam-domination-2-blue-unit-08",
-        "type": "mainBattleTank",
+        "type": "mainBattleTankRed",
         "x": 54.93,
         "y": 23.68
       },
@@ -22108,7 +22108,7 @@
       },
       {
         "id": "vietnam-domination-2-blue-unit-09",
-        "type": "mainBattleTank",
+        "type": "mainBattleTankRed",
         "x": 76.53,
         "y": 23.68
       },
@@ -22127,7 +22127,7 @@
       },
       {
         "id": "vietnam-domination-2-blue-unit-11",
-        "type": "mainBattleTank",
+        "type": "mainBattleTankRed",
         "x": 30,
         "y": 31.67
       },
@@ -22140,7 +22140,7 @@
       },
       {
         "id": "vietnam-domination-2-blue-unit-12",
-        "type": "mainBattleTank",
+        "type": "mainBattleTankRed",
         "x": 58.75,
         "y": 34.1
       },
@@ -22153,7 +22153,7 @@
       },
       {
         "id": "vietnam-domination-2-blue-unit-13",
-        "type": "mainBattleTank",
+        "type": "mainBattleTankRed",
         "x": 71.81,
         "y": 41.11
       },
@@ -22172,7 +22172,7 @@
       },
       {
         "id": "vietnam-domination-2-blue-unit-15",
-        "type": "mainBattleTank",
+        "type": "mainBattleTankRed",
         "x": 51.67,
         "y": 47.43
       },
@@ -22185,7 +22185,7 @@
       },
       {
         "id": "vietnam-domination-2-blue-unit-16",
-        "type": "mainBattleTank",
+        "type": "mainBattleTankRed",
         "x": 62.08,
         "y": 51.81
       },
@@ -22204,7 +22204,7 @@
       },
       {
         "id": "vietnam-domination-2-blue-unit-18",
-        "type": "mainBattleTank",
+        "type": "mainBattleTankRed",
         "x": 71.25,
         "y": 66.6
       },
@@ -22217,7 +22217,7 @@
       },
       {
         "id": "vietnam-domination-2-blue-unit-19",
-        "type": "mainBattleTank",
+        "type": "mainBattleTankRed",
         "x": 16.32,
         "y": 66.81
       },
@@ -22229,13 +22229,13 @@
       },
       {
         "id": "vietnam-domination-2-blue-unit-21",
-        "type": "mainBattleTank",
+        "type": "mainBattleTankRed",
         "x": 24.1,
         "y": 72.5
       },
       {
         "id": "vietnam-domination-2-blue-unit-22",
-        "type": "mainBattleTank",
+        "type": "mainBattleTankRed",
         "x": 76.53,
         "y": 72.85
       },
@@ -22248,7 +22248,7 @@
       },
       {
         "id": "vietnam-domination-2-blue-unit-23",
-        "type": "mainBattleTank",
+        "type": "mainBattleTankRed",
         "x": 54.1,
         "y": 74.58
       },
@@ -22261,7 +22261,7 @@
       },
       {
         "id": "vietnam-domination-2-blue-unit-24",
-        "type": "mainBattleTank",
+        "type": "mainBattleTankRed",
         "x": 39.86,
         "y": 80.76
       },
@@ -22274,7 +22274,7 @@
       },
       {
         "id": "vietnam-domination-2-blue-unit-25",
-        "type": "mainBattleTank",
+        "type": "mainBattleTankRed",
         "x": 70.83,
         "y": 87.08
       },
@@ -22287,7 +22287,7 @@
       },
       {
         "id": "vietnam-domination-2-blue-unit-26",
-        "type": "mainBattleTank",
+        "type": "mainBattleTankRed",
         "x": 69.17,
         "y": 90.56
       },
@@ -22300,7 +22300,7 @@
       },
       {
         "id": "vietnam-domination-2-blue-unit-27",
-        "type": "mainBattleTank",
+        "type": "mainBattleTankRed",
         "x": 73.96,
         "y": 98.75
       },
@@ -22336,7 +22336,7 @@
     "Vietnam::domination-2|Blue": [
       {
         "id": "vietnam-domination-2-red-unit-01",
-        "type": "mainBattleTankRed",
+        "type": "mainBattleTank",
         "x": 74.1,
         "y": 3.82
       },
@@ -22349,7 +22349,7 @@
       },
       {
         "id": "vietnam-domination-2-red-unit-02",
-        "type": "mainBattleTankRed",
+        "type": "mainBattleTank",
         "x": 44.72,
         "y": 4.38
       },
@@ -22362,7 +22362,7 @@
       },
       {
         "id": "vietnam-domination-2-red-unit-03",
-        "type": "mainBattleTankRed",
+        "type": "mainBattleTank",
         "x": 54.17,
         "y": 9.58
       },
@@ -22375,7 +22375,7 @@
       },
       {
         "id": "vietnam-domination-2-red-unit-04",
-        "type": "mainBattleTankRed",
+        "type": "mainBattleTank",
         "x": 33.96,
         "y": 11.67
       },
@@ -22388,13 +22388,13 @@
       },
       {
         "id": "vietnam-domination-2-red-unit-05",
-        "type": "mainBattleTankRed",
+        "type": "mainBattleTank",
         "x": 78.54,
         "y": 14.51
       },
       {
         "id": "vietnam-domination-2-red-unit-06",
-        "type": "mainBattleTankRed",
+        "type": "mainBattleTank",
         "x": 39.03,
         "y": 15.76
       },
@@ -22407,13 +22407,13 @@
       },
       {
         "id": "vietnam-domination-2-red-unit-07",
-        "type": "mainBattleTankRed",
+        "type": "mainBattleTank",
         "x": 77.29,
         "y": 22.43
       },
       {
         "id": "vietnam-domination-2-red-unit-08",
-        "type": "mainBattleTankRed",
+        "type": "mainBattleTank",
         "x": 39.72,
         "y": 23.68
       },
@@ -22432,7 +22432,7 @@
       },
       {
         "id": "vietnam-domination-2-red-unit-10",
-        "type": "mainBattleTankRed",
+        "type": "mainBattleTank",
         "x": 40.42,
         "y": 27.29
       },
@@ -22445,7 +22445,7 @@
       },
       {
         "id": "vietnam-domination-2-red-unit-11",
-        "type": "mainBattleTankRed",
+        "type": "mainBattleTank",
         "x": 39.17,
         "y": 38.47
       },
@@ -22458,7 +22458,7 @@
       },
       {
         "id": "vietnam-domination-2-red-unit-12",
-        "type": "mainBattleTankRed",
+        "type": "mainBattleTank",
         "x": 40.14,
         "y": 53.26
       },
@@ -22471,7 +22471,7 @@
       },
       {
         "id": "vietnam-domination-2-red-unit-13",
-        "type": "mainBattleTankRed",
+        "type": "mainBattleTank",
         "x": 48.68,
         "y": 65.14
       },
@@ -22484,13 +22484,13 @@
       },
       {
         "id": "vietnam-domination-2-red-unit-14",
-        "type": "mainBattleTankRed",
+        "type": "mainBattleTank",
         "x": 85.62,
         "y": 66.74
       },
       {
         "id": "vietnam-domination-2-red-unit-15",
-        "type": "mainBattleTankRed",
+        "type": "mainBattleTank",
         "x": 43.06,
         "y": 67.22
       },
@@ -22509,7 +22509,7 @@
       },
       {
         "id": "vietnam-domination-2-red-unit-17",
-        "type": "mainBattleTankRed",
+        "type": "mainBattleTank",
         "x": 70.97,
         "y": 72.36
       },
@@ -22522,13 +22522,13 @@
       },
       {
         "id": "vietnam-domination-2-red-unit-18",
-        "type": "mainBattleTankRed",
+        "type": "mainBattleTank",
         "x": 79.03,
         "y": 74.1
       },
       {
         "id": "vietnam-domination-2-red-unit-19",
-        "type": "mainBattleTankRed",
+        "type": "mainBattleTank",
         "x": 49.44,
         "y": 75.76
       },
@@ -22547,7 +22547,7 @@
       },
       {
         "id": "vietnam-domination-2-red-unit-21",
-        "type": "mainBattleTankRed",
+        "type": "mainBattleTank",
         "x": 57.57,
         "y": 83.12
       },
@@ -22560,7 +22560,7 @@
       },
       {
         "id": "vietnam-domination-2-red-unit-22",
-        "type": "mainBattleTankRed",
+        "type": "mainBattleTank",
         "x": 82.15,
         "y": 84.44
       },
@@ -22573,13 +22573,13 @@
       },
       {
         "id": "vietnam-domination-2-red-unit-23",
-        "type": "mainBattleTankRed",
+        "type": "mainBattleTank",
         "x": 77.69,
         "y": 93.55
       },
       {
         "id": "vietnam-domination-2-red-unit-24",
-        "type": "mainBattleTankRed",
+        "type": "mainBattleTank",
         "x": 53.82,
         "y": 86.67
       },
@@ -22592,7 +22592,7 @@
       },
       {
         "id": "vietnam-domination-2-red-unit-25",
-        "type": "mainBattleTankRed",
+        "type": "mainBattleTank",
         "x": 48.19,
         "y": 91.88
       },
@@ -22605,7 +22605,7 @@
       },
       {
         "id": "mtxn4luv-c7bn5o",
-        "type": "mainBattleTankRed",
+        "type": "mainBattleTank",
         "x": 57,
         "y": 49.11
       },
@@ -72838,6 +72838,6 @@
     "Darwin Hill::battle-1|Red": [],
     "Sands of Sinai::domination-1|Blue": []
   },
-  "updatedAt": "2026-09-23T06:07:25.037Z",
-  "exportedAt": "2026-09-23T06:10:36.833Z"
+  "updatedAt": "2026-09-24T06:10:00.000Z",
+  "exportedAt": "2026-09-24T06:10:00.000Z"
 }
