@@ -1556,10 +1556,24 @@
       "name": "Port Novorossiysk",
       "aliases": "노보로시스크 항구",
       "slug": "port-novorossiysk",
-      "updated": "2026-09-27",
-      "updatedAt": "2026-09-27T08:37:34Z",
+      "updated": "2026-09-28",
+      "updatedAt": "2026-09-27T15:43:26Z",
       "br": {
         "min": 2.3
+      },
+      "tacticalSummary": {
+        "variations": {
+          "conquest-3": {
+            "en": [
+              "Port Novorossiysk is a special Conquest-only map built almost entirely from flat urban terrain. The key area is not the capture point itself, but the dense urban sector to its south and southwest.",
+              "Controlling this area opens flanking routes that can lead directly toward the enemy spawn while also allowing side shots into the capture point. By contrast, the low hills and coastline near the point provide strong sniper positions, making a direct breakthrough much more difficult."
+            ],
+            "ko": [
+              "포트 노보로시스크는 점령지가 하나뿐인 컨퀘스트 전용 맵으로, 전장이 대부분 평지 위의 시가지로 구성되어 있습니다. 핵심 지역은 점령지 자체가 아니라 점령지 남쪽과 남서쪽의 밀도 높은 시가지입니다.",
+              "이 지역을 장악하면 적 스폰 지역으로 이어지는 우회로를 확보하는 동시에 점령지의 측면을 타격할 수 있습니다. 반면 점령지 주변의 낮은 구릉과 해안선은 저격에 유리해 정면 돌파가 어렵기 때문에, 남쪽 시가지의 주도권이 특히 중요합니다."
+            ]
+          }
+        }
       },
       "folder": "Port Novorossiysk",
       "variations": [
@@ -1570,7 +1584,12 @@
             "min": 2.3
           },
           "folder": "Port Novorossiysk/Conquest #2",
-          "sharedImage": "Port Novorossiysk.png"
+          "sharedImage": "Port Novorossiysk.png",
+          "overlays": [
+            "d.png",
+            "db.png",
+            "dr.png"
+          ]
         },
         {
           "mode": "conquest",
@@ -1595,7 +1614,14 @@
             "min": 2.3
           },
           "folder": "Port Novorossiysk/Battle #1",
-          "sharedImage": "Port Novorossiysk.png"
+          "sharedImage": "Port Novorossiysk.png",
+          "overlays": [
+            "c.png",
+            "d.png",
+            "n.png",
+            "sb.png",
+            "sr.png"
+          ]
         }
       ]
     },
