@@ -78,7 +78,7 @@
     "Campania": "2026-09-03T01:49:21Z",
     "Cargo Port": "2026-09-23T04:02:44Z",
     "Carpathians": "2026-09-23T01:37:01Z",
-    "Darwin Hill": "2026-09-27T01:27:10Z",
+    "Darwin Hill": "2026-09-27T01:30:23Z",
     "Eastern Europe": "2026-09-03T01:49:56Z",
     "European Province": "2026-09-23T01:49:25Z",
     "Fields of Normandy": "2026-09-23T02:21:06Z",
@@ -10347,6 +10347,123 @@
         "x": 49.62,
         "y": 29.58,
         "parentTankId": "vector-df161d62-c7d9-4440-a367-4806a91ded62"
+      },
+      {
+        "id": "vector-2fc0e435-f607-4804-9f5e-09fb667a4aec",
+        "type": "antiAir",
+        "x": 68.42,
+        "y": 8.51
+      },
+      {
+        "id": "vector-d849b38f-500e-4168-a73f-3b7a71678866",
+        "type": "antiAir",
+        "x": 65.81,
+        "y": 8.34
+      },
+      {
+        "id": "vector-fa227ca2-8841-4795-b840-8eb2a42ebb92",
+        "type": "mainBattleTank",
+        "x": 76.3,
+        "y": 47.91,
+        "commentImages": [
+          "Darwin Hill/scr_ (46).png"
+        ]
+      },
+      {
+        "id": "vector-8d54185e-51de-422c-b9a2-867f59ff1e05",
+        "type": "battleLine",
+        "x": 76.3,
+        "y": 47.91,
+        "parentTankId": "vector-fa227ca2-8841-4795-b840-8eb2a42ebb92"
+      },
+      {
+        "id": "vector-067071c7-3c07-4872-929a-9f2cae92685e",
+        "type": "mainBattleTank",
+        "x": 61.38,
+        "y": 49.18,
+        "commentImages": [
+          "Darwin Hill/scr_ (41).png",
+          "Darwin Hill/scr_ (42).png"
+        ]
+      },
+      {
+        "id": "vector-51c1c0a9-9205-4fd9-a13d-406edc286911",
+        "type": "battleLine",
+        "x": 61.38,
+        "y": 49.18,
+        "parentTankId": "vector-067071c7-3c07-4872-929a-9f2cae92685e"
+      },
+      {
+        "id": "vector-9eb4b850-84ce-451b-a7e5-ebe63083355d",
+        "type": "tankDestroyer",
+        "x": 56.45,
+        "y": 22,
+        "commentImages": [
+          "Darwin Hill/scr_ (39).png",
+          "Darwin Hill/scr_ (40).png"
+        ]
+      },
+      {
+        "id": "vector-e2354993-fad2-4b97-b184-b2536a1e55f8",
+        "type": "sniper",
+        "x": 56.45,
+        "y": 22,
+        "parentTankId": "vector-9eb4b850-84ce-451b-a7e5-ebe63083355d"
+      },
+      {
+        "id": "vector-8888f1af-515f-4537-84a4-8e2778ebf8d4",
+        "type": "lightTank",
+        "x": 95.7,
+        "y": 45.7,
+        "commentImages": [
+          "Darwin Hill/scr_ (44).png"
+        ]
+      },
+      {
+        "id": "vector-2a69dfdc-9b8e-4289-a542-c30a04028b85",
+        "type": "highRiskSpot",
+        "x": 95.7,
+        "y": 45.7,
+        "parentTankId": "vector-8888f1af-515f-4537-84a4-8e2778ebf8d4"
+      },
+      {
+        "id": "vector-9d942cd4-edfd-423d-9690-30064a036752",
+        "type": "smokeshell",
+        "x": 88.18,
+        "y": 39.19
+      },
+      {
+        "id": "vector-fa36182d-7737-4034-926d-d790f2d15bac",
+        "type": "tankDestroyer",
+        "x": 84.77,
+        "y": 24.65,
+        "commentImages": [
+          "Darwin Hill/scr_ (38).png",
+          "Darwin Hill/scr_ (43).png"
+        ]
+      },
+      {
+        "id": "vector-5e92757f-ecb0-4658-94ff-9e470098313c",
+        "type": "sniper",
+        "x": 84.77,
+        "y": 24.65,
+        "parentTankId": "vector-fa36182d-7737-4034-926d-d790f2d15bac"
+      },
+      {
+        "id": "vector-5a7c10d1-ad31-44bf-a468-d4049f5dfa59",
+        "type": "tankDestroyer",
+        "x": 72.88,
+        "y": 15.3,
+        "commentImages": [
+          "Darwin Hill/scr_ (37).png"
+        ]
+      },
+      {
+        "id": "vector-2a5c11f6-d41d-4482-97dd-037caa7e449d",
+        "type": "sniper",
+        "x": 72.88,
+        "y": 15.3,
+        "parentTankId": "vector-5a7c10d1-ad31-44bf-a468-d4049f5dfa59"
       }
     ],
     "Darwin Hill::conquest-3|Blue": [
@@ -10441,6 +10558,123 @@
         "x": 49.62,
         "y": 29.58,
         "parentTankId": "vector-9368c36e-d396-4b9b-bf73-5358838fe55f"
+      },
+      {
+        "id": "vector-7121d67d-f54e-4cf0-a3b8-59ba88055dca",
+        "type": "antiAir",
+        "x": 68.42,
+        "y": 8.51
+      },
+      {
+        "id": "vector-ff540532-2f5b-45d0-b99d-e1311844b6e9",
+        "type": "antiAir",
+        "x": 65.81,
+        "y": 8.34
+      },
+      {
+        "id": "vector-86b68b7c-4b55-4268-8722-80ae097c3b64",
+        "type": "mainBattleTank",
+        "x": 76.3,
+        "y": 47.91,
+        "commentImages": [
+          "Darwin Hill/scr_ (46).png"
+        ]
+      },
+      {
+        "id": "vector-1e2e506d-ab8f-4e5f-bdbb-4d72408576c3",
+        "type": "battleLine",
+        "x": 76.3,
+        "y": 47.91,
+        "parentTankId": "vector-86b68b7c-4b55-4268-8722-80ae097c3b64"
+      },
+      {
+        "id": "vector-b2c58275-6cb4-4b10-bf59-792b3eee9471",
+        "type": "mainBattleTank",
+        "x": 61.38,
+        "y": 49.18,
+        "commentImages": [
+          "Darwin Hill/scr_ (41).png",
+          "Darwin Hill/scr_ (42).png"
+        ]
+      },
+      {
+        "id": "vector-ecd69b76-de3d-48bb-82dc-db8667d666f5",
+        "type": "battleLine",
+        "x": 61.38,
+        "y": 49.18,
+        "parentTankId": "vector-b2c58275-6cb4-4b10-bf59-792b3eee9471"
+      },
+      {
+        "id": "vector-3de6d752-9849-45ce-bb48-d7a4aaaa9356",
+        "type": "tankDestroyer",
+        "x": 56.45,
+        "y": 22,
+        "commentImages": [
+          "Darwin Hill/scr_ (39).png",
+          "Darwin Hill/scr_ (40).png"
+        ]
+      },
+      {
+        "id": "vector-18ea8b22-f03e-4ad1-a282-42457a5f612b",
+        "type": "sniper",
+        "x": 56.45,
+        "y": 22,
+        "parentTankId": "vector-3de6d752-9849-45ce-bb48-d7a4aaaa9356"
+      },
+      {
+        "id": "vector-163f0884-3c22-4b28-b380-ce1dd1ed92af",
+        "type": "lightTank",
+        "x": 95.7,
+        "y": 45.7,
+        "commentImages": [
+          "Darwin Hill/scr_ (44).png"
+        ]
+      },
+      {
+        "id": "vector-80c7672f-0529-47ce-98c5-f85baf170bc4",
+        "type": "highRiskSpot",
+        "x": 95.7,
+        "y": 45.7,
+        "parentTankId": "vector-163f0884-3c22-4b28-b380-ce1dd1ed92af"
+      },
+      {
+        "id": "vector-9a3bbf8a-7adf-4eb3-a7a4-3ed3c118d095",
+        "type": "smokeshell",
+        "x": 88.18,
+        "y": 39.19
+      },
+      {
+        "id": "vector-545ad309-1891-4d51-944e-0ae372c597fb",
+        "type": "tankDestroyer",
+        "x": 84.77,
+        "y": 24.65,
+        "commentImages": [
+          "Darwin Hill/scr_ (38).png",
+          "Darwin Hill/scr_ (43).png"
+        ]
+      },
+      {
+        "id": "vector-0c501c00-fe20-4998-9244-27b6d2013bf5",
+        "type": "sniper",
+        "x": 84.77,
+        "y": 24.65,
+        "parentTankId": "vector-545ad309-1891-4d51-944e-0ae372c597fb"
+      },
+      {
+        "id": "vector-18f8bcba-0964-4780-9fce-dc14733b1067",
+        "type": "tankDestroyer",
+        "x": 72.88,
+        "y": 15.3,
+        "commentImages": [
+          "Darwin Hill/scr_ (37).png"
+        ]
+      },
+      {
+        "id": "vector-2c864903-63d7-45f8-a3eb-86aa901c6d77",
+        "type": "sniper",
+        "x": 72.88,
+        "y": 15.3,
+        "parentTankId": "vector-18f8bcba-0964-4780-9fce-dc14733b1067"
       }
     ],
     "Darwin Hill::battle-1|Blue": [
@@ -10852,7 +11086,57 @@
         "parentTankId": "vector-4617479d-837a-4dbb-a24f-695863599ba4"
       },
       {
-        "id": "vector-fd2452df-5e43-4b65-9977-9d3428fc8e12",
+        "id": "vector-d5fdcdf0-b583-4fa1-acf9-fb5ca80c0d21",
+        "type": "mainBattleTankRed",
+        "x": 57.04,
+        "y": 23.28,
+        "commentImages": [
+          "Darwin Hill/scr_ (7).png",
+          "Darwin Hill/scr_ (8).png"
+        ]
+      },
+      {
+        "id": "vector-c3824372-6c8a-4c9c-a033-8f1aff22ccf1",
+        "type": "spawnKill",
+        "x": 57.04,
+        "y": 23.28,
+        "parentTankId": "vector-d5fdcdf0-b583-4fa1-acf9-fb5ca80c0d21"
+      },
+      {
+        "id": "vector-03eacbb6-9e5b-450f-98a6-03b046ccb95b",
+        "type": "tankDestroyerRed",
+        "x": 52.91,
+        "y": 68.77,
+        "commentImages": [
+          "Darwin Hill/scr_ (26).png"
+        ]
+      },
+      {
+        "id": "vector-b9b5e1b0-7ec4-476b-a37a-0ad362c31c8a",
+        "type": "sniper",
+        "x": 52.91,
+        "y": 68.77,
+        "parentTankId": "vector-03eacbb6-9e5b-450f-98a6-03b046ccb95b"
+      },
+      {
+        "id": "vector-979f7c37-430e-4c9f-9e13-2fbdfe501646",
+        "type": "mainBattleTankRed",
+        "x": 47.35,
+        "y": 58.28,
+        "commentImages": [
+          "Darwin Hill/scr_ (21).png",
+          "Darwin Hill/scr_ (25).png"
+        ]
+      },
+      {
+        "id": "vector-8c6775db-cded-4e30-85d4-9dfef6a8996b",
+        "type": "battleLine",
+        "x": 47.35,
+        "y": 58.28,
+        "parentTankId": "vector-979f7c37-430e-4c9f-9e13-2fbdfe501646"
+      },
+      {
+        "id": "vector-32bc8542-2863-4591-bb7c-a057ad17be0d",
         "type": "tankDestroyerRed",
         "x": 78.73,
         "y": 64.38,
@@ -10862,11 +11146,78 @@
         ]
       },
       {
-        "id": "vector-5b2e0068-3033-4b3f-b417-bb2169012814",
+        "id": "vector-bcae3e2b-4f14-48d6-88b4-d4d0df2c27e4",
         "type": "sniper",
         "x": 78.73,
         "y": 64.38,
-        "parentTankId": "vector-fd2452df-5e43-4b65-9977-9d3428fc8e12"
+        "parentTankId": "vector-32bc8542-2863-4591-bb7c-a057ad17be0d"
+      },
+      {
+        "id": "vector-360a32b3-65b1-4f37-8667-fe584bdd054b",
+        "type": "mainBattleTankRed",
+        "x": 64.16,
+        "y": 53.86,
+        "commentImages": [
+          "Darwin Hill/scr_ (48).png",
+          "Darwin Hill/scr_ (49).png",
+          "Darwin Hill/scr_ (50).png"
+        ]
+      },
+      {
+        "id": "vector-913270ab-12b9-493f-9b78-9003bd86a19d",
+        "type": "battleLine",
+        "x": 64.16,
+        "y": 53.86,
+        "parentTankId": "vector-360a32b3-65b1-4f37-8667-fe584bdd054b"
+      },
+      {
+        "id": "vector-9e5eed13-64d6-404a-a59f-03b859cb995f",
+        "type": "lightTankRed",
+        "x": 96.92,
+        "y": 45.53,
+        "commentImages": [
+          "Darwin Hill/scr_ (45).png"
+        ]
+      },
+      {
+        "id": "vector-953d346e-746f-4271-afae-9b2f176b6e14",
+        "type": "highRiskSpot",
+        "x": 96.92,
+        "y": 45.53,
+        "parentTankId": "vector-9e5eed13-64d6-404a-a59f-03b859cb995f"
+      },
+      {
+        "id": "vector-a67b942f-d2ef-4cb9-afe2-eb8491507b8c",
+        "type": "mainBattleTankRed",
+        "x": 77.18,
+        "y": 33.12,
+        "commentImages": [
+          "Darwin Hill/scr_ (51).png",
+          "Darwin Hill/scr_ (52).png"
+        ]
+      },
+      {
+        "id": "vector-1fe793a8-b024-4708-abe8-e903b803001a",
+        "type": "highRiskSpot",
+        "x": 77.18,
+        "y": 33.12,
+        "parentTankId": "vector-a67b942f-d2ef-4cb9-afe2-eb8491507b8c"
+      },
+      {
+        "id": "vector-2b995911-5217-4a59-9c26-56ab844abce1",
+        "type": "tankDestroyerRed",
+        "x": 63.53,
+        "y": 59.8,
+        "commentImages": [
+          "Darwin Hill/scr_ (47).png"
+        ]
+      },
+      {
+        "id": "vector-43dd880a-fd43-4d58-95c0-866ce52d6e1c",
+        "type": "sniper",
+        "x": 63.53,
+        "y": 59.8,
+        "parentTankId": "vector-2b995911-5217-4a59-9c26-56ab844abce1"
       }
     ],
     "Darwin Hill::conquest-1|Red": [
@@ -11258,7 +11609,57 @@
         "parentTankId": "vector-49ffecdb-057c-4355-a7e2-19f1b4f0c938"
       },
       {
-        "id": "vector-517cce6d-f1ba-4435-b0e0-add368eb645d",
+        "id": "vector-2e267eaf-0837-46e8-bfdf-232351a86e97",
+        "type": "mainBattleTankRed",
+        "x": 57.04,
+        "y": 23.28,
+        "commentImages": [
+          "Darwin Hill/scr_ (7).png",
+          "Darwin Hill/scr_ (8).png"
+        ]
+      },
+      {
+        "id": "vector-7476cd29-378a-4cac-8942-fe65cabcb062",
+        "type": "spawnKill",
+        "x": 57.04,
+        "y": 23.28,
+        "parentTankId": "vector-2e267eaf-0837-46e8-bfdf-232351a86e97"
+      },
+      {
+        "id": "vector-75acf127-1a67-4836-ba50-a04efe7c1baa",
+        "type": "tankDestroyerRed",
+        "x": 52.91,
+        "y": 68.77,
+        "commentImages": [
+          "Darwin Hill/scr_ (26).png"
+        ]
+      },
+      {
+        "id": "vector-1b9d6f5c-d16f-40bb-a673-cc4f0ec8e67b",
+        "type": "sniper",
+        "x": 52.91,
+        "y": 68.77,
+        "parentTankId": "vector-75acf127-1a67-4836-ba50-a04efe7c1baa"
+      },
+      {
+        "id": "vector-a3d61b84-583c-4939-961f-e9e3cd61ca3b",
+        "type": "mainBattleTankRed",
+        "x": 47.35,
+        "y": 58.28,
+        "commentImages": [
+          "Darwin Hill/scr_ (21).png",
+          "Darwin Hill/scr_ (25).png"
+        ]
+      },
+      {
+        "id": "vector-55383379-0ec7-4134-bf00-32959d019125",
+        "type": "battleLine",
+        "x": 47.35,
+        "y": 58.28,
+        "parentTankId": "vector-a3d61b84-583c-4939-961f-e9e3cd61ca3b"
+      },
+      {
+        "id": "vector-a5a269db-703d-406a-b18e-c383af1cce4e",
         "type": "tankDestroyerRed",
         "x": 78.73,
         "y": 64.38,
@@ -11268,11 +11669,78 @@
         ]
       },
       {
-        "id": "vector-c3644c6a-8e6c-4236-b9dd-da6520225b01",
+        "id": "vector-e773e330-9d72-49ad-9641-ddeaf53a1f3f",
         "type": "sniper",
         "x": 78.73,
         "y": 64.38,
-        "parentTankId": "vector-517cce6d-f1ba-4435-b0e0-add368eb645d"
+        "parentTankId": "vector-a5a269db-703d-406a-b18e-c383af1cce4e"
+      },
+      {
+        "id": "vector-11375854-9484-4e2d-9370-abab1e115c58",
+        "type": "mainBattleTankRed",
+        "x": 64.16,
+        "y": 53.86,
+        "commentImages": [
+          "Darwin Hill/scr_ (48).png",
+          "Darwin Hill/scr_ (49).png",
+          "Darwin Hill/scr_ (50).png"
+        ]
+      },
+      {
+        "id": "vector-0b579e89-ac74-451e-ad30-75e2f47f8ee9",
+        "type": "battleLine",
+        "x": 64.16,
+        "y": 53.86,
+        "parentTankId": "vector-11375854-9484-4e2d-9370-abab1e115c58"
+      },
+      {
+        "id": "vector-26e9c866-73af-4acd-87c3-1f7f7565e1e8",
+        "type": "lightTankRed",
+        "x": 96.92,
+        "y": 45.53,
+        "commentImages": [
+          "Darwin Hill/scr_ (45).png"
+        ]
+      },
+      {
+        "id": "vector-b0a0a0ac-68a3-4aac-8031-edd27a744023",
+        "type": "highRiskSpot",
+        "x": 96.92,
+        "y": 45.53,
+        "parentTankId": "vector-26e9c866-73af-4acd-87c3-1f7f7565e1e8"
+      },
+      {
+        "id": "vector-0120ea49-d5d9-4a61-9345-220e1cec873d",
+        "type": "mainBattleTankRed",
+        "x": 77.18,
+        "y": 33.12,
+        "commentImages": [
+          "Darwin Hill/scr_ (51).png",
+          "Darwin Hill/scr_ (52).png"
+        ]
+      },
+      {
+        "id": "vector-849842ad-78ce-4f9c-9abe-8454cbc099f7",
+        "type": "highRiskSpot",
+        "x": 77.18,
+        "y": 33.12,
+        "parentTankId": "vector-0120ea49-d5d9-4a61-9345-220e1cec873d"
+      },
+      {
+        "id": "vector-726d0448-9a86-41a4-8881-751f85fdfbac",
+        "type": "tankDestroyerRed",
+        "x": 63.53,
+        "y": 59.8,
+        "commentImages": [
+          "Darwin Hill/scr_ (47).png"
+        ]
+      },
+      {
+        "id": "vector-011e6243-cfb5-45c9-9185-396aaac63034",
+        "type": "sniper",
+        "x": 63.53,
+        "y": 59.8,
+        "parentTankId": "vector-726d0448-9a86-41a4-8881-751f85fdfbac"
       }
     ],
     "Darwin Hill::conquest-3|Red": [
@@ -11355,7 +11823,57 @@
         "parentTankId": "vector-f2098cd0-50eb-4b56-8c14-c74098fd1eee"
       },
       {
-        "id": "vector-92c3d423-539b-4066-9369-c173d815d38b",
+        "id": "vector-f452ce23-b424-4a0b-a8b6-565b190c202f",
+        "type": "mainBattleTankRed",
+        "x": 57.04,
+        "y": 23.28,
+        "commentImages": [
+          "Darwin Hill/scr_ (7).png",
+          "Darwin Hill/scr_ (8).png"
+        ]
+      },
+      {
+        "id": "vector-135ae79a-5ecc-470f-b8d9-64950900a38a",
+        "type": "spawnKill",
+        "x": 57.04,
+        "y": 23.28,
+        "parentTankId": "vector-f452ce23-b424-4a0b-a8b6-565b190c202f"
+      },
+      {
+        "id": "vector-d5be9b36-1dc6-4fb7-ba5c-06c341f86b1a",
+        "type": "tankDestroyerRed",
+        "x": 52.91,
+        "y": 68.77,
+        "commentImages": [
+          "Darwin Hill/scr_ (26).png"
+        ]
+      },
+      {
+        "id": "vector-256488cc-c5f9-4422-b60f-41c7ac1ec509",
+        "type": "sniper",
+        "x": 52.91,
+        "y": 68.77,
+        "parentTankId": "vector-d5be9b36-1dc6-4fb7-ba5c-06c341f86b1a"
+      },
+      {
+        "id": "vector-5697071f-4134-40d4-b695-8c28fa396d74",
+        "type": "mainBattleTankRed",
+        "x": 47.35,
+        "y": 58.28,
+        "commentImages": [
+          "Darwin Hill/scr_ (21).png",
+          "Darwin Hill/scr_ (25).png"
+        ]
+      },
+      {
+        "id": "vector-3f651e48-1039-476d-9013-b5ec138addc2",
+        "type": "battleLine",
+        "x": 47.35,
+        "y": 58.28,
+        "parentTankId": "vector-5697071f-4134-40d4-b695-8c28fa396d74"
+      },
+      {
+        "id": "vector-8ecb9e77-3f65-44ef-9d36-9ca7973f46ca",
         "type": "tankDestroyerRed",
         "x": 78.73,
         "y": 64.38,
@@ -11365,11 +11883,78 @@
         ]
       },
       {
-        "id": "vector-ab5a9d23-901f-4ae9-89ae-c9b0c0cd402c",
+        "id": "vector-e09fad14-29ad-4651-bed4-44cc35f2c71f",
         "type": "sniper",
         "x": 78.73,
         "y": 64.38,
-        "parentTankId": "vector-92c3d423-539b-4066-9369-c173d815d38b"
+        "parentTankId": "vector-8ecb9e77-3f65-44ef-9d36-9ca7973f46ca"
+      },
+      {
+        "id": "vector-cb448608-e664-48d4-befc-749e673d3ab6",
+        "type": "mainBattleTankRed",
+        "x": 64.16,
+        "y": 53.86,
+        "commentImages": [
+          "Darwin Hill/scr_ (48).png",
+          "Darwin Hill/scr_ (49).png",
+          "Darwin Hill/scr_ (50).png"
+        ]
+      },
+      {
+        "id": "vector-8e1308e8-edbc-4272-87ae-cc48c4002df8",
+        "type": "battleLine",
+        "x": 64.16,
+        "y": 53.86,
+        "parentTankId": "vector-cb448608-e664-48d4-befc-749e673d3ab6"
+      },
+      {
+        "id": "vector-118de2f6-4ba5-4493-9d53-3ec87cbd7a12",
+        "type": "lightTankRed",
+        "x": 96.92,
+        "y": 45.53,
+        "commentImages": [
+          "Darwin Hill/scr_ (45).png"
+        ]
+      },
+      {
+        "id": "vector-76fa56a8-1d0d-46ea-bf4d-a03794f6581c",
+        "type": "highRiskSpot",
+        "x": 96.92,
+        "y": 45.53,
+        "parentTankId": "vector-118de2f6-4ba5-4493-9d53-3ec87cbd7a12"
+      },
+      {
+        "id": "vector-6824fd0d-e576-43e4-bc5b-207b92ffc17a",
+        "type": "mainBattleTankRed",
+        "x": 77.18,
+        "y": 33.12,
+        "commentImages": [
+          "Darwin Hill/scr_ (51).png",
+          "Darwin Hill/scr_ (52).png"
+        ]
+      },
+      {
+        "id": "vector-8d73c8ad-7f09-41b9-8a83-a441b86b41b4",
+        "type": "highRiskSpot",
+        "x": 77.18,
+        "y": 33.12,
+        "parentTankId": "vector-6824fd0d-e576-43e4-bc5b-207b92ffc17a"
+      },
+      {
+        "id": "vector-d39a8fd8-b710-4fe0-88e0-7c23908a1477",
+        "type": "tankDestroyerRed",
+        "x": 63.53,
+        "y": 59.8,
+        "commentImages": [
+          "Darwin Hill/scr_ (47).png"
+        ]
+      },
+      {
+        "id": "vector-91ff9636-c728-4c49-be14-3b06ed00e1ee",
+        "type": "sniper",
+        "x": 63.53,
+        "y": 59.8,
+        "parentTankId": "vector-d39a8fd8-b710-4fe0-88e0-7c23908a1477"
       }
     ],
     "Eastern Europe::domination-1|Red": [],
@@ -44485,6 +45070,202 @@
             "y": 9.86
           }
         ]
+      },
+      {
+        "id": "vector-16faf7a2-c0e9-483b-b3ec-fd0467c10457",
+        "type": "aimHere",
+        "parentTankId": "vector-fa227ca2-8841-4795-b840-8eb2a42ebb92",
+        "startX": 76.3,
+        "startY": 47.91,
+        "endX": 80.06,
+        "endY": 64.38
+      },
+      {
+        "id": "vector-0a40cc1f-76aa-4d69-9310-cedbfe639c75",
+        "type": "aimHere",
+        "parentTankId": "vector-9eb4b850-84ce-451b-a7e5-ebe63083355d",
+        "startX": 56.45,
+        "startY": 22,
+        "endX": 61.99,
+        "endY": 60.64
+      },
+      {
+        "id": "vector-ecd85207-082f-4fa1-8c04-fa7a30c5495c",
+        "type": "route",
+        "points": [
+          {
+            "x": 88.14,
+            "y": 36.23
+          },
+          {
+            "x": 91.79,
+            "y": 37.19
+          },
+          {
+            "x": 95.18,
+            "y": 40.75
+          },
+          {
+            "x": 97.09,
+            "y": 41.88
+          },
+          {
+            "x": 97.78,
+            "y": 43.09
+          },
+          {
+            "x": 97.7,
+            "y": 44.66
+          },
+          {
+            "x": 97.09,
+            "y": 45.53
+          },
+          {
+            "x": 95.7,
+            "y": 45.87
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "vector-e985116a-29be-40b4-be31-c86beb2e4a75",
+        "type": "aimHere",
+        "parentTankId": "vector-9eb4b850-84ce-451b-a7e5-ebe63083355d",
+        "startX": 56.45,
+        "startY": 22,
+        "endX": 79.71,
+        "endY": 64.73
+      },
+      {
+        "id": "vector-75b3ccf3-b5b7-424b-b9e8-27808da7ec6e",
+        "type": "aimHere",
+        "parentTankId": "vector-fa36182d-7737-4034-926d-d790f2d15bac",
+        "startX": 84.77,
+        "startY": 24.65,
+        "endX": 79.58,
+        "endY": 65.36
+      },
+      {
+        "id": "vector-4890d05b-7f3a-4a76-90c3-4284e90a21cc",
+        "type": "aimHere",
+        "parentTankId": "vector-5a7c10d1-ad31-44bf-a468-d4049f5dfa59",
+        "startX": 72.88,
+        "startY": 15.3,
+        "endX": 79.58,
+        "endY": 65.11
+      },
+      {
+        "id": "vector-a7923bb1-80a3-4208-a7fb-eede45e0542a",
+        "type": "aimHere",
+        "parentTankId": "vector-067071c7-3c07-4872-929a-9f2cae92685e",
+        "startX": 61.38,
+        "startY": 49.18,
+        "endX": 61.25,
+        "endY": 64.48
+      },
+      {
+        "id": "vector-3d4d38f8-1450-4460-bb48-62f8b740e32a",
+        "type": "route",
+        "points": [
+          {
+            "x": 61.76,
+            "y": 48.42
+          },
+          {
+            "x": 61.76,
+            "y": 46.02
+          },
+          {
+            "x": 62.64,
+            "y": 43.62
+          },
+          {
+            "x": 63.27,
+            "y": 41.59
+          },
+          {
+            "x": 62.77,
+            "y": 39.44
+          },
+          {
+            "x": 62.01,
+            "y": 37.29
+          },
+          {
+            "x": 61.76,
+            "y": 35.65
+          },
+          {
+            "x": 60.87,
+            "y": 33.12
+          },
+          {
+            "x": 61.13,
+            "y": 25.66
+          },
+          {
+            "x": 61.25,
+            "y": 22.76
+          }
+        ]
+      },
+      {
+        "id": "vector-2eda1587-119f-4975-93f5-f5515685e095",
+        "type": "route",
+        "points": [
+          {
+            "x": 65.68,
+            "y": 6.95
+          },
+          {
+            "x": 69.85,
+            "y": 6.95
+          },
+          {
+            "x": 71.62,
+            "y": 9.36
+          },
+          {
+            "x": 72.76,
+            "y": 15.17
+          }
+        ]
+      },
+      {
+        "id": "vector-60248587-f581-4124-8a25-696270044004",
+        "type": "route",
+        "points": [
+          {
+            "x": 72.5,
+            "y": 11.76
+          },
+          {
+            "x": 77.31,
+            "y": 13.27
+          },
+          {
+            "x": 80.72,
+            "y": 14.79
+          },
+          {
+            "x": 82.87,
+            "y": 18.96
+          },
+          {
+            "x": 85.02,
+            "y": 24.4
+          }
+        ]
+      },
+      {
+        "id": "vector-f6f02438-953d-4262-8071-09cddc627bc3",
+        "type": "aimHere",
+        "parentTankId": "vector-8888f1af-515f-4537-84a4-8e2778ebf8d4",
+        "startX": 95.7,
+        "startY": 45.7,
+        "endX": 84.64,
+        "endY": 51.33
       }
     ],
     "Darwin Hill::conquest-3|Blue": [
@@ -44630,6 +45411,202 @@
             "y": 51.26
           }
         ]
+      },
+      {
+        "id": "vector-25e9977a-8eed-4fd9-a893-3c9bface8c7e",
+        "type": "aimHere",
+        "parentTankId": "vector-86b68b7c-4b55-4268-8722-80ae097c3b64",
+        "startX": 76.3,
+        "startY": 47.91,
+        "endX": 80.06,
+        "endY": 64.38
+      },
+      {
+        "id": "vector-0eaa3874-bb8a-4fe4-aee0-e1bf5c08fac8",
+        "type": "aimHere",
+        "parentTankId": "vector-3de6d752-9849-45ce-bb48-d7a4aaaa9356",
+        "startX": 56.45,
+        "startY": 22,
+        "endX": 61.99,
+        "endY": 60.64
+      },
+      {
+        "id": "vector-7750e9f5-bb0b-40d2-8c2f-e011dae5248e",
+        "type": "route",
+        "points": [
+          {
+            "x": 88.14,
+            "y": 36.23
+          },
+          {
+            "x": 91.79,
+            "y": 37.19
+          },
+          {
+            "x": 95.18,
+            "y": 40.75
+          },
+          {
+            "x": 97.09,
+            "y": 41.88
+          },
+          {
+            "x": 97.78,
+            "y": 43.09
+          },
+          {
+            "x": 97.7,
+            "y": 44.66
+          },
+          {
+            "x": 97.09,
+            "y": 45.53
+          },
+          {
+            "x": 95.7,
+            "y": 45.87
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "vector-473d2c41-34c4-4a4f-b6ba-885a41dd7c72",
+        "type": "aimHere",
+        "parentTankId": "vector-3de6d752-9849-45ce-bb48-d7a4aaaa9356",
+        "startX": 56.45,
+        "startY": 22,
+        "endX": 79.71,
+        "endY": 64.73
+      },
+      {
+        "id": "vector-46e35cc7-5044-4675-8915-cb299ca7b3b4",
+        "type": "aimHere",
+        "parentTankId": "vector-545ad309-1891-4d51-944e-0ae372c597fb",
+        "startX": 84.77,
+        "startY": 24.65,
+        "endX": 79.58,
+        "endY": 65.36
+      },
+      {
+        "id": "vector-a438f61e-8a7d-4d42-b5e0-d1391429108b",
+        "type": "aimHere",
+        "parentTankId": "vector-18f8bcba-0964-4780-9fce-dc14733b1067",
+        "startX": 72.88,
+        "startY": 15.3,
+        "endX": 79.58,
+        "endY": 65.11
+      },
+      {
+        "id": "vector-77dd861f-0e57-45f9-b6f5-44b8deded943",
+        "type": "aimHere",
+        "parentTankId": "vector-b2c58275-6cb4-4b10-bf59-792b3eee9471",
+        "startX": 61.38,
+        "startY": 49.18,
+        "endX": 61.25,
+        "endY": 64.48
+      },
+      {
+        "id": "vector-22500a00-cedb-4ef1-90de-d8da9afc8323",
+        "type": "route",
+        "points": [
+          {
+            "x": 61.76,
+            "y": 48.42
+          },
+          {
+            "x": 61.76,
+            "y": 46.02
+          },
+          {
+            "x": 62.64,
+            "y": 43.62
+          },
+          {
+            "x": 63.27,
+            "y": 41.59
+          },
+          {
+            "x": 62.77,
+            "y": 39.44
+          },
+          {
+            "x": 62.01,
+            "y": 37.29
+          },
+          {
+            "x": 61.76,
+            "y": 35.65
+          },
+          {
+            "x": 60.87,
+            "y": 33.12
+          },
+          {
+            "x": 61.13,
+            "y": 25.66
+          },
+          {
+            "x": 61.25,
+            "y": 22.76
+          }
+        ]
+      },
+      {
+        "id": "vector-c56e08cc-48fc-4a87-9c4b-18688a0a5376",
+        "type": "route",
+        "points": [
+          {
+            "x": 65.68,
+            "y": 6.95
+          },
+          {
+            "x": 69.85,
+            "y": 6.95
+          },
+          {
+            "x": 71.62,
+            "y": 9.36
+          },
+          {
+            "x": 72.76,
+            "y": 15.17
+          }
+        ]
+      },
+      {
+        "id": "vector-11ad54c2-2eb2-4052-bf5b-7de3d6c615c0",
+        "type": "route",
+        "points": [
+          {
+            "x": 72.5,
+            "y": 11.76
+          },
+          {
+            "x": 77.31,
+            "y": 13.27
+          },
+          {
+            "x": 80.72,
+            "y": 14.79
+          },
+          {
+            "x": 82.87,
+            "y": 18.96
+          },
+          {
+            "x": 85.02,
+            "y": 24.4
+          }
+        ]
+      },
+      {
+        "id": "vector-da703aac-979d-4b50-8c2b-d56ae3764db3",
+        "type": "aimHere",
+        "parentTankId": "vector-163f0884-3c22-4b28-b380-ce1dd1ed92af",
+        "startX": 95.7,
+        "startY": 45.7,
+        "endX": 84.64,
+        "endY": 51.33
       }
     ],
     "Darwin Hill::battle-1|Blue": [
@@ -45471,24 +46448,6 @@
         "endY": 35.91
       },
       {
-        "id": "vector-e99ea35b-84f6-4f2d-82dd-0c4c67586cc6",
-        "type": "aimHere",
-        "parentTankId": "vector-fd2452df-5e43-4b65-9977-9d3428fc8e12",
-        "startX": 78.73,
-        "startY": 64.38,
-        "endX": 86.88,
-        "endY": 46.56
-      },
-      {
-        "id": "vector-9e1cedf9-ceee-4074-8eb2-3c08d9afa7f6",
-        "type": "aimHere",
-        "parentTankId": "vector-fd2452df-5e43-4b65-9977-9d3428fc8e12",
-        "startX": 78.73,
-        "startY": 64.38,
-        "endX": 57.97,
-        "endY": 23.02
-      },
-      {
         "id": "vector-f542d316-a730-4c92-83cb-b6a542f69a43",
         "type": "route",
         "points": [
@@ -45603,64 +46562,6 @@
         ]
       },
       {
-        "id": "vector-de7aca3a-56e3-4ff6-9b10-408368ab2f2d",
-        "type": "route",
-        "points": [
-          {
-            "x": 66.59,
-            "y": 89.57
-          },
-          {
-            "x": 66.59,
-            "y": 86.45
-          },
-          {
-            "x": 66.94,
-            "y": 81.32
-          },
-          {
-            "x": 65.9,
-            "y": 78.02
-          },
-          {
-            "x": 68.16,
-            "y": 76.11
-          },
-          {
-            "x": 70.68,
-            "y": 74.28
-          },
-          {
-            "x": 71.72,
-            "y": 72.46
-          },
-          {
-            "x": 71.46,
-            "y": 68.98
-          },
-          {
-            "x": 72.07,
-            "y": 66.99
-          },
-          {
-            "x": 72.85,
-            "y": 64.55
-          },
-          {
-            "x": 74.15,
-            "y": 63.6
-          },
-          {
-            "x": 75.72,
-            "y": 63.16
-          },
-          {
-            "x": 78.84,
-            "y": 64.38
-          }
-        ]
-      },
-      {
         "id": "vector-f9377187-d04c-4c67-ae7e-716b20d9e24d",
         "type": "route",
         "points": [
@@ -45731,6 +46632,337 @@
             "y": 58.91
           }
         ]
+      },
+      {
+        "id": "vector-c462cf75-9069-433c-9de9-35be0769ff49",
+        "type": "aimHere",
+        "parentTankId": "vector-d5fdcdf0-b583-4fa1-acf9-fb5ca80c0d21",
+        "startX": 57.04,
+        "startY": 23.28,
+        "endX": 63.03,
+        "endY": 8.08
+      },
+      {
+        "id": "vector-0b29fdc7-4a7b-4470-9b0c-8338dc781fc8",
+        "type": "aimHere",
+        "parentTankId": "vector-d5fdcdf0-b583-4fa1-acf9-fb5ca80c0d21",
+        "startX": 57.04,
+        "startY": 23.28,
+        "endX": 74.5,
+        "endY": 10.08
+      },
+      {
+        "id": "vector-5ffa1f3b-535d-4525-907a-a6fdcaa05144",
+        "type": "route",
+        "points": [
+          {
+            "x": 57.21,
+            "y": 23.63
+          },
+          {
+            "x": 56.26,
+            "y": 26.24
+          },
+          {
+            "x": 56.34,
+            "y": 27.8
+          },
+          {
+            "x": 55.91,
+            "y": 29.8
+          },
+          {
+            "x": 53.56,
+            "y": 31.54
+          },
+          {
+            "x": 51.13,
+            "y": 33.36
+          },
+          {
+            "x": 50.09,
+            "y": 35.27
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "vector-f74f6cf0-24ea-4bf1-a3f6-92789ec61833",
+        "type": "aimHere",
+        "parentTankId": "vector-03eacbb6-9e5b-450f-98a6-03b046ccb95b",
+        "startX": 52.91,
+        "startY": 68.77,
+        "endX": 47.47,
+        "endY": 31.61
+      },
+      {
+        "id": "vector-dbb91f57-2e90-46f0-b278-08022d38d7fc",
+        "type": "aimHere",
+        "parentTankId": "vector-979f7c37-430e-4c9f-9e13-2fbdfe501646",
+        "startX": 47.35,
+        "startY": 58.28,
+        "endX": 48.99,
+        "endY": 45.01
+      },
+      {
+        "id": "vector-f9b8cd9c-3c38-4829-853c-2d4bbed16923",
+        "type": "aimHere",
+        "parentTankId": "vector-979f7c37-430e-4c9f-9e13-2fbdfe501646",
+        "startX": 47.35,
+        "startY": 58.28,
+        "endX": 34.2,
+        "endY": 49.05
+      },
+      {
+        "id": "vector-723c06fc-4b7a-4127-96fb-55b6800b45a2",
+        "type": "aimHere",
+        "parentTankId": "vector-32bc8542-2863-4591-bb7c-a057ad17be0d",
+        "startX": 78.73,
+        "startY": 64.38,
+        "endX": 86.88,
+        "endY": 46.56
+      },
+      {
+        "id": "vector-c1b844de-9182-4291-bcce-2d5f0275da54",
+        "type": "aimHere",
+        "parentTankId": "vector-32bc8542-2863-4591-bb7c-a057ad17be0d",
+        "startX": 78.73,
+        "startY": 64.38,
+        "endX": 57.97,
+        "endY": 23.02
+      },
+      {
+        "id": "vector-773e6851-ac1c-4cc0-acb2-8706d8b2a284",
+        "type": "route",
+        "points": [
+          {
+            "x": 66.59,
+            "y": 89.57
+          },
+          {
+            "x": 66.59,
+            "y": 86.45
+          },
+          {
+            "x": 66.94,
+            "y": 81.32
+          },
+          {
+            "x": 65.9,
+            "y": 78.02
+          },
+          {
+            "x": 68.16,
+            "y": 76.11
+          },
+          {
+            "x": 70.68,
+            "y": 74.28
+          },
+          {
+            "x": 71.72,
+            "y": 72.46
+          },
+          {
+            "x": 71.46,
+            "y": 68.98
+          },
+          {
+            "x": 72.07,
+            "y": 66.99
+          },
+          {
+            "x": 72.85,
+            "y": 64.55
+          },
+          {
+            "x": 74.15,
+            "y": 63.6
+          },
+          {
+            "x": 75.72,
+            "y": 63.16
+          },
+          {
+            "x": 78.84,
+            "y": 64.38
+          }
+        ]
+      },
+      {
+        "id": "vector-1196da16-ccb3-47a4-a62b-3d2e898c6ff8",
+        "type": "route",
+        "points": [
+          {
+            "x": 66.25,
+            "y": 87.14
+          },
+          {
+            "x": 61.12,
+            "y": 85.06
+          },
+          {
+            "x": 55.3,
+            "y": 83.49
+          },
+          {
+            "x": 53.13,
+            "y": 81.58
+          },
+          {
+            "x": 53.74,
+            "y": 79.15
+          },
+          {
+            "x": 53.65,
+            "y": 75.67
+          },
+          {
+            "x": 52.17,
+            "y": 72.98
+          },
+          {
+            "x": 51.74,
+            "y": 70.55
+          },
+          {
+            "x": 52.78,
+            "y": 69.07
+          }
+        ]
+      },
+      {
+        "id": "vector-853f201f-a28d-4028-a291-152cc7ad3ae4",
+        "type": "route",
+        "points": [
+          {
+            "x": 48.96,
+            "y": 73.07
+          },
+          {
+            "x": 48.52,
+            "y": 69.42
+          },
+          {
+            "x": 48.44,
+            "y": 66.2
+          },
+          {
+            "x": 47.65,
+            "y": 63.16
+          },
+          {
+            "x": 47.13,
+            "y": 60.73
+          },
+          {
+            "x": 47.31,
+            "y": 58.91
+          }
+        ]
+      },
+      {
+        "id": "vector-d5ac9f56-5437-4aa2-8b49-274cb7f8176c",
+        "type": "route",
+        "points": [
+          {
+            "x": 93.87,
+            "y": 57.17
+          },
+          {
+            "x": 94.22,
+            "y": 54.04
+          },
+          {
+            "x": 95.18,
+            "y": 51.09
+          },
+          {
+            "x": 96.92,
+            "y": 49.52
+          },
+          {
+            "x": 97.35,
+            "y": 48.31
+          },
+          {
+            "x": 97.52,
+            "y": 46.74
+          },
+          {
+            "x": 97.35,
+            "y": 45.87
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "vector-d34e1049-e2bb-4747-957f-bbfad4096aa8",
+        "type": "aimHere",
+        "parentTankId": "vector-a67b942f-d2ef-4cb9-afe2-eb8491507b8c",
+        "startX": 77.18,
+        "startY": 33.12,
+        "endX": 73.2,
+        "endY": 8.69
+      },
+      {
+        "id": "vector-a0262ea6-a2ce-4b2e-9e8a-2b22c29eceb2",
+        "type": "aimHere",
+        "parentTankId": "vector-a67b942f-d2ef-4cb9-afe2-eb8491507b8c",
+        "startX": 77.18,
+        "startY": 33.12,
+        "endX": 60.25,
+        "endY": 9.56
+      },
+      {
+        "id": "vector-97cfa1ae-0239-45db-b496-b4a9c7810c1b",
+        "type": "aimHere",
+        "parentTankId": "vector-2b995911-5217-4a59-9c26-56ab844abce1",
+        "startX": 63.53,
+        "startY": 59.8,
+        "endX": 73.14,
+        "endY": 16.43
+      },
+      {
+        "id": "vector-010f728e-bfe7-4452-9764-195bab0ad197",
+        "type": "aimHere",
+        "parentTankId": "vector-360a32b3-65b1-4f37-8667-fe584bdd054b",
+        "startX": 64.16,
+        "startY": 53.86,
+        "endX": 57.59,
+        "endY": 23.77
+      },
+      {
+        "id": "vector-4b23ffd2-b367-418b-a80d-8d733894addb",
+        "type": "aimHere",
+        "parentTankId": "vector-9e5eed13-64d6-404a-a59f-03b859cb995f",
+        "startX": 96.92,
+        "startY": 45.53,
+        "endX": 82.62,
+        "endY": 45.64
+      },
+      {
+        "id": "vector-f0f8dae6-8bfa-44de-a9a9-01c1cb708b2d",
+        "type": "route",
+        "points": [
+          {
+            "x": 76.04,
+            "y": 45.64
+          },
+          {
+            "x": 76.68,
+            "y": 40.83
+          },
+          {
+            "x": 76.68,
+            "y": 37.55
+          },
+          {
+            "x": 77.18,
+            "y": 33.75
+          }
+        ],
+        "dangerRoute": true
       }
     ],
     "Darwin Hill::conquest-1|Red": [
@@ -46538,24 +47770,6 @@
         "endY": 35.91
       },
       {
-        "id": "vector-1dd94031-ed0a-41f3-b6a9-982830ae6ac7",
-        "type": "aimHere",
-        "parentTankId": "vector-517cce6d-f1ba-4435-b0e0-add368eb645d",
-        "startX": 78.73,
-        "startY": 64.38,
-        "endX": 86.88,
-        "endY": 46.56
-      },
-      {
-        "id": "vector-2582224d-e4b4-4926-8cdf-f1389e2b5713",
-        "type": "aimHere",
-        "parentTankId": "vector-517cce6d-f1ba-4435-b0e0-add368eb645d",
-        "startX": 78.73,
-        "startY": 64.38,
-        "endX": 57.97,
-        "endY": 23.02
-      },
-      {
         "id": "vector-322612e5-d2ff-48bd-b351-eb3f1e1cbd0d",
         "type": "route",
         "points": [
@@ -46670,64 +47884,6 @@
         ]
       },
       {
-        "id": "vector-7ef4b200-6b00-4e6c-a66b-332ea5d03fb6",
-        "type": "route",
-        "points": [
-          {
-            "x": 66.59,
-            "y": 89.57
-          },
-          {
-            "x": 66.59,
-            "y": 86.45
-          },
-          {
-            "x": 66.94,
-            "y": 81.32
-          },
-          {
-            "x": 65.9,
-            "y": 78.02
-          },
-          {
-            "x": 68.16,
-            "y": 76.11
-          },
-          {
-            "x": 70.68,
-            "y": 74.28
-          },
-          {
-            "x": 71.72,
-            "y": 72.46
-          },
-          {
-            "x": 71.46,
-            "y": 68.98
-          },
-          {
-            "x": 72.07,
-            "y": 66.99
-          },
-          {
-            "x": 72.85,
-            "y": 64.55
-          },
-          {
-            "x": 74.15,
-            "y": 63.6
-          },
-          {
-            "x": 75.72,
-            "y": 63.16
-          },
-          {
-            "x": 78.84,
-            "y": 64.38
-          }
-        ]
-      },
-      {
         "id": "vector-9f79ed80-fb0f-4b0c-a64c-80a25f249543",
         "type": "route",
         "points": [
@@ -46798,6 +47954,337 @@
             "y": 58.91
           }
         ]
+      },
+      {
+        "id": "vector-291210ea-d51d-4b9a-a628-38baf3227267",
+        "type": "aimHere",
+        "parentTankId": "vector-2e267eaf-0837-46e8-bfdf-232351a86e97",
+        "startX": 57.04,
+        "startY": 23.28,
+        "endX": 63.03,
+        "endY": 8.08
+      },
+      {
+        "id": "vector-3ebd0e53-f23a-4f14-99df-72b995bf0d62",
+        "type": "aimHere",
+        "parentTankId": "vector-2e267eaf-0837-46e8-bfdf-232351a86e97",
+        "startX": 57.04,
+        "startY": 23.28,
+        "endX": 74.5,
+        "endY": 10.08
+      },
+      {
+        "id": "vector-6e87db34-3aca-48ac-b807-7c2e909aca79",
+        "type": "route",
+        "points": [
+          {
+            "x": 57.21,
+            "y": 23.63
+          },
+          {
+            "x": 56.26,
+            "y": 26.24
+          },
+          {
+            "x": 56.34,
+            "y": 27.8
+          },
+          {
+            "x": 55.91,
+            "y": 29.8
+          },
+          {
+            "x": 53.56,
+            "y": 31.54
+          },
+          {
+            "x": 51.13,
+            "y": 33.36
+          },
+          {
+            "x": 50.09,
+            "y": 35.27
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "vector-b0a9d587-1f7a-47d9-b193-0b7556865fba",
+        "type": "aimHere",
+        "parentTankId": "vector-75acf127-1a67-4836-ba50-a04efe7c1baa",
+        "startX": 52.91,
+        "startY": 68.77,
+        "endX": 47.47,
+        "endY": 31.61
+      },
+      {
+        "id": "vector-2e62ee94-51a0-4f43-8546-6b4f61cca4e5",
+        "type": "aimHere",
+        "parentTankId": "vector-a3d61b84-583c-4939-961f-e9e3cd61ca3b",
+        "startX": 47.35,
+        "startY": 58.28,
+        "endX": 48.99,
+        "endY": 45.01
+      },
+      {
+        "id": "vector-18b42220-0ba7-4ba3-bdf2-297745f38821",
+        "type": "aimHere",
+        "parentTankId": "vector-a3d61b84-583c-4939-961f-e9e3cd61ca3b",
+        "startX": 47.35,
+        "startY": 58.28,
+        "endX": 34.2,
+        "endY": 49.05
+      },
+      {
+        "id": "vector-bb6f990c-1735-4538-89f9-341eb6b3db53",
+        "type": "aimHere",
+        "parentTankId": "vector-a5a269db-703d-406a-b18e-c383af1cce4e",
+        "startX": 78.73,
+        "startY": 64.38,
+        "endX": 86.88,
+        "endY": 46.56
+      },
+      {
+        "id": "vector-f8a07d1e-519e-499d-b90e-e9cc56ec9dd2",
+        "type": "aimHere",
+        "parentTankId": "vector-a5a269db-703d-406a-b18e-c383af1cce4e",
+        "startX": 78.73,
+        "startY": 64.38,
+        "endX": 57.97,
+        "endY": 23.02
+      },
+      {
+        "id": "vector-460d7f90-4019-4acd-a928-ed18b92d201a",
+        "type": "route",
+        "points": [
+          {
+            "x": 66.59,
+            "y": 89.57
+          },
+          {
+            "x": 66.59,
+            "y": 86.45
+          },
+          {
+            "x": 66.94,
+            "y": 81.32
+          },
+          {
+            "x": 65.9,
+            "y": 78.02
+          },
+          {
+            "x": 68.16,
+            "y": 76.11
+          },
+          {
+            "x": 70.68,
+            "y": 74.28
+          },
+          {
+            "x": 71.72,
+            "y": 72.46
+          },
+          {
+            "x": 71.46,
+            "y": 68.98
+          },
+          {
+            "x": 72.07,
+            "y": 66.99
+          },
+          {
+            "x": 72.85,
+            "y": 64.55
+          },
+          {
+            "x": 74.15,
+            "y": 63.6
+          },
+          {
+            "x": 75.72,
+            "y": 63.16
+          },
+          {
+            "x": 78.84,
+            "y": 64.38
+          }
+        ]
+      },
+      {
+        "id": "vector-e0e8cd2d-7fe9-4d70-8370-88839b4618d8",
+        "type": "route",
+        "points": [
+          {
+            "x": 66.25,
+            "y": 87.14
+          },
+          {
+            "x": 61.12,
+            "y": 85.06
+          },
+          {
+            "x": 55.3,
+            "y": 83.49
+          },
+          {
+            "x": 53.13,
+            "y": 81.58
+          },
+          {
+            "x": 53.74,
+            "y": 79.15
+          },
+          {
+            "x": 53.65,
+            "y": 75.67
+          },
+          {
+            "x": 52.17,
+            "y": 72.98
+          },
+          {
+            "x": 51.74,
+            "y": 70.55
+          },
+          {
+            "x": 52.78,
+            "y": 69.07
+          }
+        ]
+      },
+      {
+        "id": "vector-d60be851-daec-43a4-a8c2-7ec755b21469",
+        "type": "route",
+        "points": [
+          {
+            "x": 48.96,
+            "y": 73.07
+          },
+          {
+            "x": 48.52,
+            "y": 69.42
+          },
+          {
+            "x": 48.44,
+            "y": 66.2
+          },
+          {
+            "x": 47.65,
+            "y": 63.16
+          },
+          {
+            "x": 47.13,
+            "y": 60.73
+          },
+          {
+            "x": 47.31,
+            "y": 58.91
+          }
+        ]
+      },
+      {
+        "id": "vector-fffe9e48-a185-4ac3-94d7-5fd9a6c9fba9",
+        "type": "route",
+        "points": [
+          {
+            "x": 93.87,
+            "y": 57.17
+          },
+          {
+            "x": 94.22,
+            "y": 54.04
+          },
+          {
+            "x": 95.18,
+            "y": 51.09
+          },
+          {
+            "x": 96.92,
+            "y": 49.52
+          },
+          {
+            "x": 97.35,
+            "y": 48.31
+          },
+          {
+            "x": 97.52,
+            "y": 46.74
+          },
+          {
+            "x": 97.35,
+            "y": 45.87
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "vector-bc58ce42-37a0-4e49-b358-8ca77821b1d5",
+        "type": "aimHere",
+        "parentTankId": "vector-0120ea49-d5d9-4a61-9345-220e1cec873d",
+        "startX": 77.18,
+        "startY": 33.12,
+        "endX": 73.2,
+        "endY": 8.69
+      },
+      {
+        "id": "vector-2694408b-ecf9-4f0b-9fe0-0c092eb30528",
+        "type": "aimHere",
+        "parentTankId": "vector-0120ea49-d5d9-4a61-9345-220e1cec873d",
+        "startX": 77.18,
+        "startY": 33.12,
+        "endX": 60.25,
+        "endY": 9.56
+      },
+      {
+        "id": "vector-d6ac2d0f-ee1e-4a7b-b23c-db786af97af5",
+        "type": "aimHere",
+        "parentTankId": "vector-726d0448-9a86-41a4-8881-751f85fdfbac",
+        "startX": 63.53,
+        "startY": 59.8,
+        "endX": 73.14,
+        "endY": 16.43
+      },
+      {
+        "id": "vector-47347922-26d6-4cd5-8ead-e6b5f7b3dfb2",
+        "type": "aimHere",
+        "parentTankId": "vector-11375854-9484-4e2d-9370-abab1e115c58",
+        "startX": 64.16,
+        "startY": 53.86,
+        "endX": 57.59,
+        "endY": 23.77
+      },
+      {
+        "id": "vector-0ae69b2c-edf3-43bb-a864-d51e1db6891f",
+        "type": "aimHere",
+        "parentTankId": "vector-26e9c866-73af-4acd-87c3-1f7f7565e1e8",
+        "startX": 96.92,
+        "startY": 45.53,
+        "endX": 82.62,
+        "endY": 45.64
+      },
+      {
+        "id": "vector-97b9c044-bd95-4154-ba6d-f2921d7f62a2",
+        "type": "route",
+        "points": [
+          {
+            "x": 76.04,
+            "y": 45.64
+          },
+          {
+            "x": 76.68,
+            "y": 40.83
+          },
+          {
+            "x": 76.68,
+            "y": 37.55
+          },
+          {
+            "x": 77.18,
+            "y": 33.75
+          }
+        ],
+        "dangerRoute": true
       }
     ],
     "Darwin Hill::conquest-3|Red": [
@@ -46882,82 +48369,6 @@
         "endY": 45.01
       },
       {
-        "id": "vector-22ea2d07-510c-4df8-af7d-ff98ba072d35",
-        "type": "aimHere",
-        "parentTankId": "vector-92c3d423-539b-4066-9369-c173d815d38b",
-        "startX": 78.73,
-        "startY": 64.38,
-        "endX": 86.88,
-        "endY": 46.56
-      },
-      {
-        "id": "vector-4d361b13-995e-417e-ae7c-c3e60fb0494f",
-        "type": "aimHere",
-        "parentTankId": "vector-92c3d423-539b-4066-9369-c173d815d38b",
-        "startX": 78.73,
-        "startY": 64.38,
-        "endX": 57.97,
-        "endY": 23.02
-      },
-      {
-        "id": "vector-7b2cb619-79b1-489f-8ef0-81e035df6eb7",
-        "type": "route",
-        "points": [
-          {
-            "x": 66.59,
-            "y": 89.57
-          },
-          {
-            "x": 66.59,
-            "y": 86.45
-          },
-          {
-            "x": 66.94,
-            "y": 81.32
-          },
-          {
-            "x": 65.9,
-            "y": 78.02
-          },
-          {
-            "x": 68.16,
-            "y": 76.11
-          },
-          {
-            "x": 70.68,
-            "y": 74.28
-          },
-          {
-            "x": 71.72,
-            "y": 72.46
-          },
-          {
-            "x": 71.46,
-            "y": 68.98
-          },
-          {
-            "x": 72.07,
-            "y": 66.99
-          },
-          {
-            "x": 72.85,
-            "y": 64.55
-          },
-          {
-            "x": 74.15,
-            "y": 63.6
-          },
-          {
-            "x": 75.72,
-            "y": 63.16
-          },
-          {
-            "x": 78.84,
-            "y": 64.38
-          }
-        ]
-      },
-      {
         "id": "vector-13bdeb93-9df1-42e5-b5f2-e5b80fb3037f",
         "type": "route",
         "points": [
@@ -47028,6 +48439,337 @@
             "y": 58.91
           }
         ]
+      },
+      {
+        "id": "vector-9b392e61-c8eb-4991-affc-9ec79b799e06",
+        "type": "aimHere",
+        "parentTankId": "vector-f452ce23-b424-4a0b-a8b6-565b190c202f",
+        "startX": 57.04,
+        "startY": 23.28,
+        "endX": 63.03,
+        "endY": 8.08
+      },
+      {
+        "id": "vector-1a08dbc5-7b77-4d6f-a93f-43aa5af1251e",
+        "type": "aimHere",
+        "parentTankId": "vector-f452ce23-b424-4a0b-a8b6-565b190c202f",
+        "startX": 57.04,
+        "startY": 23.28,
+        "endX": 74.5,
+        "endY": 10.08
+      },
+      {
+        "id": "vector-cb460f2a-89b2-4b04-b899-dccd1f07f023",
+        "type": "route",
+        "points": [
+          {
+            "x": 57.21,
+            "y": 23.63
+          },
+          {
+            "x": 56.26,
+            "y": 26.24
+          },
+          {
+            "x": 56.34,
+            "y": 27.8
+          },
+          {
+            "x": 55.91,
+            "y": 29.8
+          },
+          {
+            "x": 53.56,
+            "y": 31.54
+          },
+          {
+            "x": 51.13,
+            "y": 33.36
+          },
+          {
+            "x": 50.09,
+            "y": 35.27
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "vector-44c023c7-98b1-43af-8928-5a1a099c03d8",
+        "type": "aimHere",
+        "parentTankId": "vector-d5be9b36-1dc6-4fb7-ba5c-06c341f86b1a",
+        "startX": 52.91,
+        "startY": 68.77,
+        "endX": 47.47,
+        "endY": 31.61
+      },
+      {
+        "id": "vector-14466e20-d2f3-4b37-ab1d-3efce55e259b",
+        "type": "aimHere",
+        "parentTankId": "vector-5697071f-4134-40d4-b695-8c28fa396d74",
+        "startX": 47.35,
+        "startY": 58.28,
+        "endX": 48.99,
+        "endY": 45.01
+      },
+      {
+        "id": "vector-387dee3b-47d4-484f-b3c6-e12db7e25e45",
+        "type": "aimHere",
+        "parentTankId": "vector-5697071f-4134-40d4-b695-8c28fa396d74",
+        "startX": 47.35,
+        "startY": 58.28,
+        "endX": 34.2,
+        "endY": 49.05
+      },
+      {
+        "id": "vector-e75dcadd-d126-4790-9a22-9970cebd2c00",
+        "type": "aimHere",
+        "parentTankId": "vector-8ecb9e77-3f65-44ef-9d36-9ca7973f46ca",
+        "startX": 78.73,
+        "startY": 64.38,
+        "endX": 86.88,
+        "endY": 46.56
+      },
+      {
+        "id": "vector-5cef5e00-950d-4e81-afd3-f11d30f98a4a",
+        "type": "aimHere",
+        "parentTankId": "vector-8ecb9e77-3f65-44ef-9d36-9ca7973f46ca",
+        "startX": 78.73,
+        "startY": 64.38,
+        "endX": 57.97,
+        "endY": 23.02
+      },
+      {
+        "id": "vector-ff17ce59-7e92-4628-a97c-c930666615bf",
+        "type": "route",
+        "points": [
+          {
+            "x": 66.59,
+            "y": 89.57
+          },
+          {
+            "x": 66.59,
+            "y": 86.45
+          },
+          {
+            "x": 66.94,
+            "y": 81.32
+          },
+          {
+            "x": 65.9,
+            "y": 78.02
+          },
+          {
+            "x": 68.16,
+            "y": 76.11
+          },
+          {
+            "x": 70.68,
+            "y": 74.28
+          },
+          {
+            "x": 71.72,
+            "y": 72.46
+          },
+          {
+            "x": 71.46,
+            "y": 68.98
+          },
+          {
+            "x": 72.07,
+            "y": 66.99
+          },
+          {
+            "x": 72.85,
+            "y": 64.55
+          },
+          {
+            "x": 74.15,
+            "y": 63.6
+          },
+          {
+            "x": 75.72,
+            "y": 63.16
+          },
+          {
+            "x": 78.84,
+            "y": 64.38
+          }
+        ]
+      },
+      {
+        "id": "vector-d54ec0ac-6bf0-40a9-9e20-e7bfc38a4651",
+        "type": "route",
+        "points": [
+          {
+            "x": 66.25,
+            "y": 87.14
+          },
+          {
+            "x": 61.12,
+            "y": 85.06
+          },
+          {
+            "x": 55.3,
+            "y": 83.49
+          },
+          {
+            "x": 53.13,
+            "y": 81.58
+          },
+          {
+            "x": 53.74,
+            "y": 79.15
+          },
+          {
+            "x": 53.65,
+            "y": 75.67
+          },
+          {
+            "x": 52.17,
+            "y": 72.98
+          },
+          {
+            "x": 51.74,
+            "y": 70.55
+          },
+          {
+            "x": 52.78,
+            "y": 69.07
+          }
+        ]
+      },
+      {
+        "id": "vector-157d2beb-915c-4b4d-968a-45d26e90b064",
+        "type": "route",
+        "points": [
+          {
+            "x": 48.96,
+            "y": 73.07
+          },
+          {
+            "x": 48.52,
+            "y": 69.42
+          },
+          {
+            "x": 48.44,
+            "y": 66.2
+          },
+          {
+            "x": 47.65,
+            "y": 63.16
+          },
+          {
+            "x": 47.13,
+            "y": 60.73
+          },
+          {
+            "x": 47.31,
+            "y": 58.91
+          }
+        ]
+      },
+      {
+        "id": "vector-950d0c01-0e0f-4608-82f1-1e874be6df65",
+        "type": "route",
+        "points": [
+          {
+            "x": 93.87,
+            "y": 57.17
+          },
+          {
+            "x": 94.22,
+            "y": 54.04
+          },
+          {
+            "x": 95.18,
+            "y": 51.09
+          },
+          {
+            "x": 96.92,
+            "y": 49.52
+          },
+          {
+            "x": 97.35,
+            "y": 48.31
+          },
+          {
+            "x": 97.52,
+            "y": 46.74
+          },
+          {
+            "x": 97.35,
+            "y": 45.87
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "vector-4cc2a4fb-03af-4957-ad4f-5233e588a6fe",
+        "type": "aimHere",
+        "parentTankId": "vector-6824fd0d-e576-43e4-bc5b-207b92ffc17a",
+        "startX": 77.18,
+        "startY": 33.12,
+        "endX": 73.2,
+        "endY": 8.69
+      },
+      {
+        "id": "vector-8c98cb85-50df-4ab4-867f-d4a811025bb2",
+        "type": "aimHere",
+        "parentTankId": "vector-6824fd0d-e576-43e4-bc5b-207b92ffc17a",
+        "startX": 77.18,
+        "startY": 33.12,
+        "endX": 60.25,
+        "endY": 9.56
+      },
+      {
+        "id": "vector-bcee4d50-7954-43f5-9b9f-010e9833d8e3",
+        "type": "aimHere",
+        "parentTankId": "vector-d39a8fd8-b710-4fe0-88e0-7c23908a1477",
+        "startX": 63.53,
+        "startY": 59.8,
+        "endX": 73.14,
+        "endY": 16.43
+      },
+      {
+        "id": "vector-d9adc8e7-8a18-46cc-8965-bc3153d5a7cb",
+        "type": "aimHere",
+        "parentTankId": "vector-cb448608-e664-48d4-befc-749e673d3ab6",
+        "startX": 64.16,
+        "startY": 53.86,
+        "endX": 57.59,
+        "endY": 23.77
+      },
+      {
+        "id": "vector-5409bdec-0f55-4c4c-816f-4103f89d16d0",
+        "type": "aimHere",
+        "parentTankId": "vector-118de2f6-4ba5-4493-9d53-3ec87cbd7a12",
+        "startX": 96.92,
+        "startY": 45.53,
+        "endX": 82.62,
+        "endY": 45.64
+      },
+      {
+        "id": "vector-f66bd613-a8f9-4613-ae98-d504a04719b2",
+        "type": "route",
+        "points": [
+          {
+            "x": 76.04,
+            "y": 45.64
+          },
+          {
+            "x": 76.68,
+            "y": 40.83
+          },
+          {
+            "x": 76.68,
+            "y": 37.55
+          },
+          {
+            "x": 77.18,
+            "y": 33.75
+          }
+        ],
+        "dangerRoute": true
       }
     ],
     "Eastern Europe::domination-1|Red": [],
@@ -73309,6 +75051,6 @@
     "Darwin Hill::battle-1|Red": [],
     "Sands of Sinai::domination-1|Blue": []
   },
-  "updatedAt": "2026-09-27T01:27:10.262Z",
-  "exportedAt": "2026-09-27T01:27:16.350Z"
+  "updatedAt": "2026-09-27T01:30:38.688Z",
+  "exportedAt": "2026-09-27T01:30:39.350Z"
 }
