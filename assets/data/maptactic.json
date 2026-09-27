@@ -19,7 +19,7 @@
     "Campania": "2026-09-03",
     "Cargo Port": "2026-09-23",
     "Carpathians": "2026-09-23",
-    "Darwin Hill": "2026-09-22",
+    "Darwin Hill": "2026-09-27",
     "Eastern Europe": "2026-09-03",
     "European Province": "2026-09-23",
     "Fields of Normandy": "2026-09-23",
@@ -78,7 +78,7 @@
     "Campania": "2026-09-03T01:49:21Z",
     "Cargo Port": "2026-09-23T04:02:44Z",
     "Carpathians": "2026-09-23T01:37:01Z",
-    "Darwin Hill": "2026-09-22T04:24:18Z",
+    "Darwin Hill": "2026-09-27T01:27:10Z",
     "Eastern Europe": "2026-09-03T01:49:56Z",
     "European Province": "2026-09-23T01:49:25Z",
     "Fields of Normandy": "2026-09-23T02:21:06Z",
@@ -9557,6 +9557,111 @@
         "x": 31.16,
         "y": 50.7,
         "parentTankId": "mubymwi7-folgm3"
+      },
+      {
+        "id": "muj2iyq5-j4zmec",
+        "type": "mainBattleTank",
+        "x": 76.3,
+        "y": 47.91,
+        "commentImages": [
+          "Darwin Hill/scr_ (46).png"
+        ]
+      },
+      {
+        "id": "muj2j0p8-2j7ydu",
+        "type": "battleLine",
+        "x": 76.3,
+        "y": 47.91,
+        "parentTankId": "muj2iyq5-j4zmec"
+      },
+      {
+        "id": "muj2jegv-mhspfo",
+        "type": "mainBattleTank",
+        "x": 61.38,
+        "y": 49.18,
+        "commentImages": [
+          "Darwin Hill/scr_ (41).png",
+          "Darwin Hill/scr_ (42).png"
+        ]
+      },
+      {
+        "id": "muj2jh0c-y3veag",
+        "type": "battleLine",
+        "x": 61.38,
+        "y": 49.18,
+        "parentTankId": "muj2jegv-mhspfo"
+      },
+      {
+        "id": "muj2o1yh-nqsrqv",
+        "type": "tankDestroyer",
+        "x": 56.45,
+        "y": 22,
+        "commentImages": [
+          "Darwin Hill/scr_ (39).png",
+          "Darwin Hill/scr_ (40).png"
+        ]
+      },
+      {
+        "id": "muj2o439-y5038c",
+        "type": "sniper",
+        "x": 56.45,
+        "y": 22,
+        "parentTankId": "muj2o1yh-nqsrqv"
+      },
+      {
+        "id": "muj2tzxb-xgjop9",
+        "type": "lightTank",
+        "x": 95.7,
+        "y": 45.7,
+        "commentImages": [
+          "Darwin Hill/scr_ (44).png"
+        ]
+      },
+      {
+        "id": "muj2u4cp-favwt9",
+        "type": "highRiskSpot",
+        "x": 95.7,
+        "y": 45.7,
+        "parentTankId": "muj2tzxb-xgjop9"
+      },
+      {
+        "id": "muj3c34e-s86nfk",
+        "type": "smokeshell",
+        "x": 88.18,
+        "y": 39.19
+      },
+      {
+        "id": "muj3dkjg-ptt86p",
+        "type": "tankDestroyer",
+        "x": 84.77,
+        "y": 24.65,
+        "commentImages": [
+          "Darwin Hill/scr_ (38).png",
+          "Darwin Hill/scr_ (43).png"
+        ]
+      },
+      {
+        "id": "muj3dmvq-e3le3v",
+        "type": "sniper",
+        "x": 84.77,
+        "y": 24.65,
+        "parentTankId": "muj3dkjg-ptt86p"
+      },
+      {
+        "id": "muj3e2my-7d8z2r",
+        "type": "tankDestroyer",
+        "x": 72.88,
+        "y": 15.3,
+        "commentImages": [
+          "Darwin Hill/scr_ (37).png"
+        ]
+      },
+      {
+        "id": "muj3e41g-34ll8p",
+        "type": "sniper",
+        "x": 72.88,
+        "y": 15.3,
+        "parentTankId": "muj3e2my-7d8z2r"
       }
     ],
     "Darwin Hill::domination-1|Red": [
@@ -9769,6 +9874,73 @@
         "x": 78.73,
         "y": 64.38,
         "parentTankId": "muc33s5n-nvm7ch"
+      },
+      {
+        "id": "muj2kdix-4j8bpq",
+        "type": "mainBattleTankRed",
+        "x": 64.16,
+        "y": 53.86,
+        "commentImages": [
+          "Darwin Hill/scr_ (48).png",
+          "Darwin Hill/scr_ (49).png",
+          "Darwin Hill/scr_ (50).png"
+        ]
+      },
+      {
+        "id": "muj2kfly-yhj3i2",
+        "type": "battleLine",
+        "x": 64.16,
+        "y": 53.86,
+        "parentTankId": "muj2kdix-4j8bpq"
+      },
+      {
+        "id": "muj2p6dh-h6ynm6",
+        "type": "lightTankRed",
+        "x": 96.92,
+        "y": 45.53,
+        "commentImages": [
+          "Darwin Hill/scr_ (45).png"
+        ]
+      },
+      {
+        "id": "muj2p8rn-jhhkf3",
+        "type": "highRiskSpot",
+        "x": 96.92,
+        "y": 45.53,
+        "parentTankId": "muj2p6dh-h6ynm6"
+      },
+      {
+        "id": "muj2uua0-wd3ni3",
+        "type": "mainBattleTankRed",
+        "x": 77.18,
+        "y": 33.12,
+        "commentImages": [
+          "Darwin Hill/scr_ (51).png",
+          "Darwin Hill/scr_ (52).png"
+        ]
+      },
+      {
+        "id": "muj2uxdb-ea6wx8",
+        "type": "highRiskSpot",
+        "x": 77.18,
+        "y": 33.12,
+        "parentTankId": "muj2uua0-wd3ni3"
+      },
+      {
+        "id": "muj41h6d-njpa9a",
+        "type": "tankDestroyerRed",
+        "x": 63.53,
+        "y": 59.8,
+        "commentImages": [
+          "Darwin Hill/scr_ (47).png"
+        ]
+      },
+      {
+        "id": "muj41jhg-az6fi9",
+        "type": "sniper",
+        "x": 63.53,
+        "y": 59.8,
+        "parentTankId": "muj41h6d-njpa9a"
       }
     ],
     "Darwin Hill::conquest-1|Blue": [
@@ -42470,6 +42642,202 @@
             "y": 53.37
           }
         ]
+      },
+      {
+        "id": "muj2j3tg-uyts3w",
+        "type": "aimHere",
+        "parentTankId": "muj2iyq5-j4zmec",
+        "startX": 76.3,
+        "startY": 47.91,
+        "endX": 80.06,
+        "endY": 64.38
+      },
+      {
+        "id": "muj2o8z5-3uecc0",
+        "type": "aimHere",
+        "parentTankId": "muj2o1yh-nqsrqv",
+        "startX": 56.45,
+        "startY": 22,
+        "endX": 61.99,
+        "endY": 60.64
+      },
+      {
+        "id": "muj2uau1-ccdcqb",
+        "type": "route",
+        "points": [
+          {
+            "x": 88.14,
+            "y": 36.23
+          },
+          {
+            "x": 91.79,
+            "y": 37.19
+          },
+          {
+            "x": 95.18,
+            "y": 40.75
+          },
+          {
+            "x": 97.09,
+            "y": 41.88
+          },
+          {
+            "x": 97.78,
+            "y": 43.09
+          },
+          {
+            "x": 97.7,
+            "y": 44.66
+          },
+          {
+            "x": 97.09,
+            "y": 45.53
+          },
+          {
+            "x": 95.7,
+            "y": 45.87
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "muj35q1j-xzcvxy",
+        "type": "aimHere",
+        "parentTankId": "muj2o1yh-nqsrqv",
+        "startX": 56.45,
+        "startY": 22,
+        "endX": 79.71,
+        "endY": 64.73
+      },
+      {
+        "id": "muj3dpnm-xm2ucf",
+        "type": "aimHere",
+        "parentTankId": "muj3dkjg-ptt86p",
+        "startX": 84.77,
+        "startY": 24.65,
+        "endX": 79.58,
+        "endY": 65.36
+      },
+      {
+        "id": "muj3e7iv-sn7wox",
+        "type": "aimHere",
+        "parentTankId": "muj3e2my-7d8z2r",
+        "startX": 72.88,
+        "startY": 15.3,
+        "endX": 79.58,
+        "endY": 65.11
+      },
+      {
+        "id": "muj3fkdi-stn7bx",
+        "type": "aimHere",
+        "parentTankId": "muj2jegv-mhspfo",
+        "startX": 61.38,
+        "startY": 49.18,
+        "endX": 61.25,
+        "endY": 64.48
+      },
+      {
+        "id": "muj3fxpi-s02k8d",
+        "type": "route",
+        "points": [
+          {
+            "x": 61.76,
+            "y": 48.42
+          },
+          {
+            "x": 61.76,
+            "y": 46.02
+          },
+          {
+            "x": 62.64,
+            "y": 43.62
+          },
+          {
+            "x": 63.27,
+            "y": 41.59
+          },
+          {
+            "x": 62.77,
+            "y": 39.44
+          },
+          {
+            "x": 62.01,
+            "y": 37.29
+          },
+          {
+            "x": 61.76,
+            "y": 35.65
+          },
+          {
+            "x": 60.87,
+            "y": 33.12
+          },
+          {
+            "x": 61.13,
+            "y": 25.66
+          },
+          {
+            "x": 61.25,
+            "y": 22.76
+          }
+        ]
+      },
+      {
+        "id": "muj3g2l8-3vii7f",
+        "type": "route",
+        "points": [
+          {
+            "x": 65.68,
+            "y": 6.95
+          },
+          {
+            "x": 69.85,
+            "y": 6.95
+          },
+          {
+            "x": 71.62,
+            "y": 9.36
+          },
+          {
+            "x": 72.76,
+            "y": 15.17
+          }
+        ]
+      },
+      {
+        "id": "muj3g6o4-uzjz0j",
+        "type": "route",
+        "points": [
+          {
+            "x": 72.5,
+            "y": 11.76
+          },
+          {
+            "x": 77.31,
+            "y": 13.27
+          },
+          {
+            "x": 80.72,
+            "y": 14.79
+          },
+          {
+            "x": 82.87,
+            "y": 18.96
+          },
+          {
+            "x": 85.02,
+            "y": 24.4
+          }
+        ]
+      },
+      {
+        "id": "muj3v85w-4mhwmo",
+        "type": "aimHere",
+        "parentTankId": "muj2tzxb-xgjop9",
+        "startX": 95.7,
+        "startY": 45.7,
+        "endX": 84.64,
+        "endY": 51.33
       }
     ],
     "Darwin Hill::domination-1|Red": [
@@ -43056,6 +43424,109 @@
             "y": 58.91
           }
         ]
+      },
+      {
+        "id": "muj2pfp8-s1r2re",
+        "type": "route",
+        "points": [
+          {
+            "x": 93.87,
+            "y": 57.17
+          },
+          {
+            "x": 94.22,
+            "y": 54.04
+          },
+          {
+            "x": 95.18,
+            "y": 51.09
+          },
+          {
+            "x": 96.92,
+            "y": 49.52
+          },
+          {
+            "x": 97.35,
+            "y": 48.31
+          },
+          {
+            "x": 97.52,
+            "y": 46.74
+          },
+          {
+            "x": 97.35,
+            "y": 45.87
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "muj2v2hf-2td5be",
+        "type": "aimHere",
+        "parentTankId": "muj2uua0-wd3ni3",
+        "startX": 77.18,
+        "startY": 33.12,
+        "endX": 73.2,
+        "endY": 8.69
+      },
+      {
+        "id": "muj2v5il-9mzztm",
+        "type": "aimHere",
+        "parentTankId": "muj2uua0-wd3ni3",
+        "startX": 77.18,
+        "startY": 33.12,
+        "endX": 60.25,
+        "endY": 9.56
+      },
+      {
+        "id": "muj41oco-dp6ot8",
+        "type": "aimHere",
+        "parentTankId": "muj41h6d-njpa9a",
+        "startX": 63.53,
+        "startY": 59.8,
+        "endX": 73.14,
+        "endY": 16.43
+      },
+      {
+        "id": "muj42ihd-6qlkx4",
+        "type": "aimHere",
+        "parentTankId": "muj2kdix-4j8bpq",
+        "startX": 64.16,
+        "startY": 53.86,
+        "endX": 57.59,
+        "endY": 23.77
+      },
+      {
+        "id": "muj4a4cj-v7ygxi",
+        "type": "aimHere",
+        "parentTankId": "muj2p6dh-h6ynm6",
+        "startX": 96.92,
+        "startY": 45.53,
+        "endX": 82.62,
+        "endY": 45.64
+      },
+      {
+        "id": "muj4bfqj-g0ysjt",
+        "type": "route",
+        "points": [
+          {
+            "x": 76.04,
+            "y": 45.64
+          },
+          {
+            "x": 76.68,
+            "y": 40.83
+          },
+          {
+            "x": 76.68,
+            "y": 37.55
+          },
+          {
+            "x": 77.18,
+            "y": 33.75
+          }
+        ],
+        "dangerRoute": true
       }
     ],
     "Darwin Hill::conquest-1|Blue": [
@@ -72838,6 +73309,6 @@
     "Darwin Hill::battle-1|Red": [],
     "Sands of Sinai::domination-1|Blue": []
   },
-  "updatedAt": "2026-09-24T06:10:00.000Z",
-  "exportedAt": "2026-09-24T06:10:00.000Z"
+  "updatedAt": "2026-09-27T01:27:10.262Z",
+  "exportedAt": "2026-09-27T01:27:16.350Z"
 }
