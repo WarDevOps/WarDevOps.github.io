@@ -286,7 +286,7 @@ async function discoverMap(folderName, metadata, mapUpdated, mapUpdatedAt, tacti
   const updatedAt = mapUpdatedAt?.[name];
   const defaultMode = String(mapMetadata.defaultMode || "domination").toLowerCase();
   const mapBr = battleRating(mapMetadata.br ?? metadata.defaultBr, folderName);
-  const mapTacticalSummary = tacticalSummary(tacticalSummaries?.[name], name);
+  let mapTacticalSummary = tacticalSummary(tacticalSummaries?.[name], name);
   const variationBrs = mapMetadata.variationBrs ?? {};
   if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(slug)) {
     throw new Error(`Invalid map slug for ${folderName}: ${slug}`);
@@ -317,9 +317,9 @@ async function discoverMap(folderName, metadata, mapUpdated, mapUpdatedAt, tacti
       rootImages = await discoverMapImages(primaryFolder, { failOnPartial: true });
     }
   }
-  if (!rootImages) return null;
-
-  const variations = [{ mode: defaultMode, number: 1, folder: primaryFolder, ...rootImages }];
+  const variations = rootImages
+    ? [{ mode: defaultMode, number: 1, folder: primaryFolder, ...rootImages }]
+    : [];
   for (const entry of rootEntries.filter(item => item.isDirectory())) {
     const match = entry.name.match(VARIATION_FOLDER_PATTERN);
     if (!match) continue;
@@ -335,6 +335,7 @@ async function discoverMap(folderName, metadata, mapUpdated, mapUpdatedAt, tacti
   for (const definition of mapMetadata.extraVariations || []) {
     variations.push(await configuredVariation(definition));
   }
+  if (!variations.length) return null;
 
   const seenIds = new Set();
   variations.sort((left, right) => (MODE_ORDER[left.mode] - MODE_ORDER[right.mode]) || (left.number - right.number));
@@ -346,7 +347,15 @@ async function discoverMap(folderName, metadata, mapUpdated, mapUpdatedAt, tacti
     variation.br = battleRating(variation.br ?? variationBrs[id] ?? mapBr, `${name} ${id}`);
   }
   const unusedVariationBrs = Object.keys(variationBrs).filter(id => !seenIds.has(id));
-  if (mapTacticalSummary) normalizeTacticalSummary(mapTacticalSummary, [...seenIds]);
+  if (mapTacticalSummary?.variations) {
+    const obsoleteIds = Object.keys(mapTacticalSummary.variations).filter(id => !seenIds.has(id));
+    for (const id of obsoleteIds) delete mapTacticalSummary.variations[id];
+    if (obsoleteIds.length) {
+      console.warn(`Ignoring tactical summaries for missing variations on ${name}: ${obsoleteIds.join(", ")}`);
+    }
+    if (!Object.keys(mapTacticalSummary.variations).length) delete mapTacticalSummary.variations;
+    if (!Object.keys(mapTacticalSummary).length) mapTacticalSummary = null;
+  }
   if (unusedVariationBrs.length) {
     throw new Error(`BR metadata references unknown variations for ${name}: ${unusedVariationBrs.join(", ")}`);
   }
