@@ -45,7 +45,7 @@
     "Pradesh": "2026-08-31",
     "Red Desert": "2026-09-15",
     "Sands of Sinai": "2026-09-23",
-    "Second Battle of El Alamein": "2026-09-23",
+    "Second Battle of El Alamein": "2026-09-27",
     "Seversk-13": "2026-09-14",
     "Sinai": "2026-09-15",
     "Spaceport": "2026-09-15",
@@ -100,7 +100,7 @@
     "Port Novorossiysk": "2026-09-23T04:09:25Z",
     "Red Desert": "2026-09-15T03:19:40Z",
     "Sands of Sinai": "2026-09-23T06:07:25Z",
-    "Second Battle of El Alamein": "2026-09-23T04:16:58Z",
+    "Second Battle of El Alamein": "2026-09-27T04:24:11Z",
     "Seversk-13": "2026-09-13T19:59:09Z",
     "Sinai": "2026-09-15T03:39:06Z",
     "Spaceport": "2026-09-15T03:04:03Z",
@@ -18663,7 +18663,7 @@
       },
       {
         "id": "second-battle-of-el-alamein-domination-2-red-unit-02",
-        "type": "mainBattleTankRed",
+        "type": "tankDestroyerRed",
         "x": 48.33,
         "y": 3.54
       },
@@ -18707,7 +18707,7 @@
       },
       {
         "id": "second-battle-of-el-alamein-domination-2-red-role-03",
-        "type": "highRiskSpot",
+        "type": "battleLine",
         "x": 56.67,
         "y": 29.86,
         "parentTankId": "second-battle-of-el-alamein-domination-2-red-unit-06"
@@ -18720,14 +18720,14 @@
       },
       {
         "id": "second-battle-of-el-alamein-domination-2-red-role-04",
-        "type": "sniper",
+        "type": "battleLine",
         "x": 39.51,
         "y": 35.56,
         "parentTankId": "second-battle-of-el-alamein-domination-2-red-unit-07"
       },
       {
         "id": "second-battle-of-el-alamein-domination-2-red-unit-08",
-        "type": "mainBattleTankRed",
+        "type": "tankDestroyerRed",
         "x": 15.21,
         "y": 37.92
       },
@@ -18785,7 +18785,7 @@
       },
       {
         "id": "second-battle-of-el-alamein-domination-2-red-unit-13",
-        "type": "mainBattleTankRed",
+        "type": "tankDestroyerRed",
         "x": 23.75,
         "y": 58.75
       },
@@ -18836,7 +18836,7 @@
       },
       {
         "id": "second-battle-of-el-alamein-domination-2-red-role-12",
-        "type": "highRiskSpot",
+        "type": "sniper",
         "x": 17.99,
         "y": 92.99,
         "parentTankId": "second-battle-of-el-alamein-domination-2-red-unit-17"
@@ -18847,6 +18847,13 @@
         "x": 63.75,
         "y": 78.82,
         "parentTankId": "second-battle-of-el-alamein-domination-2-red-unit-16"
+      },
+      {
+        "id": "mujb97cs-nmm9me",
+        "type": "spawnKill",
+        "x": 93.4,
+        "y": 43.61,
+        "parentTankId": "second-battle-of-el-alamein-domination-2-red-unit-12"
       }
     ],
     "Second Battle of El Alamein::domination-2|Blue": [
@@ -18910,7 +18917,7 @@
       },
       {
         "id": "second-battle-of-el-alamein-domination-2-blue-unit-06",
-        "type": "mainBattleTank",
+        "type": "tankDestroyer",
         "x": 87.64,
         "y": 48.12
       },
@@ -18948,13 +18955,13 @@
       },
       {
         "id": "second-battle-of-el-alamein-domination-2-blue-unit-10",
-        "type": "mainBattleTank",
+        "type": "tankDestroyer",
         "x": 81.04,
         "y": 56.32
       },
       {
         "id": "second-battle-of-el-alamein-domination-2-blue-role-07",
-        "type": "highRiskSpot",
+        "type": "sniper",
         "x": 81.04,
         "y": 56.32,
         "parentTankId": "second-battle-of-el-alamein-domination-2-blue-unit-10"
@@ -19038,7 +19045,7 @@
       },
       {
         "id": "second-battle-of-el-alamein-domination-2-blue-unit-18",
-        "type": "mainBattleTank",
+        "type": "tankDestroyer",
         "x": 80.49,
         "y": 92.99
       },
@@ -19051,7 +19058,7 @@
       },
       {
         "id": "second-battle-of-el-alamein-domination-2-blue-unit-19",
-        "type": "mainBattleTank",
+        "type": "tankDestroyer",
         "x": 55.35,
         "y": 94.03
       },
@@ -19082,6 +19089,19 @@
         "x": 52.08,
         "y": 23.19,
         "parentTankId": "second-battle-of-el-alamein-domination-2-blue-unit-01"
+      },
+      {
+        "id": "mujb52p7-2t3tv7",
+        "type": "tankDestroyer",
+        "x": 61.99,
+        "y": 66.72
+      },
+      {
+        "id": "mujb56em-mafe2q",
+        "type": "sniper",
+        "x": 61.99,
+        "y": 66.72,
+        "parentTankId": "mujb52p7-2t3tv7"
       }
     ],
     "Seversk-13::domination-1|Blue": [
@@ -63584,15 +63604,6 @@
         "endY": 60.76
       },
       {
-        "id": "second-battle-of-el-alamein-domination-2-red-aim-03",
-        "type": "aimHere",
-        "parentTankId": "second-battle-of-el-alamein-domination-2-red-unit-06",
-        "startX": 56.67,
-        "startY": 29.86,
-        "endX": 48.57,
-        "endY": 5.17
-      },
-      {
         "id": "second-battle-of-el-alamein-domination-2-red-aim-04",
         "type": "aimHere",
         "parentTankId": "second-battle-of-el-alamein-domination-2-red-unit-14",
@@ -63600,15 +63611,6 @@
         "startY": 64.03,
         "endX": 33.9,
         "endY": 79.04
-      },
-      {
-        "id": "second-battle-of-el-alamein-domination-2-red-aim-05",
-        "type": "aimHere",
-        "parentTankId": "second-battle-of-el-alamein-domination-2-red-unit-05",
-        "startX": 67.64,
-        "startY": 24.72,
-        "endX": 73.01,
-        "endY": 26.82
       },
       {
         "id": "second-battle-of-el-alamein-domination-2-red-aim-06",
@@ -63821,28 +63823,6 @@
           {
             "x": 29.16,
             "y": 26.7
-          }
-        ]
-      },
-      {
-        "id": "second-battle-of-el-alamein-domination-2-red-route-06",
-        "type": "route",
-        "points": [
-          {
-            "x": 45.15,
-            "y": 11.94
-          },
-          {
-            "x": 47.32,
-            "y": 13.6
-          },
-          {
-            "x": 49.17,
-            "y": 15.66
-          },
-          {
-            "x": 51.79,
-            "y": 16.57
           }
         ]
       },
@@ -64123,24 +64103,6 @@
         "dangerRoute": true
       },
       {
-        "id": "mu270nux-s02jnt",
-        "type": "aimHere",
-        "parentTankId": "second-battle-of-el-alamein-domination-2-red-unit-13",
-        "startX": 23.75,
-        "startY": 58.75,
-        "endX": 85.97,
-        "endY": 32.93
-      },
-      {
-        "id": "mu270r4t-9c4lr5",
-        "type": "aimHere",
-        "parentTankId": "second-battle-of-el-alamein-domination-2-red-unit-08",
-        "startX": 15.21,
-        "startY": 37.92,
-        "endX": 62.42,
-        "endY": 77.15
-      },
-      {
         "id": "mu270u0f-w4sgnb",
         "type": "aimHere",
         "parentTankId": "second-battle-of-el-alamein-domination-2-red-unit-16",
@@ -64150,25 +64112,174 @@
         "endY": 66.29
       },
       {
-        "id": "mu2711b3-mvilcj",
+        "id": "mujb9ety-04boqf",
+        "type": "aimHere",
+        "parentTankId": "second-battle-of-el-alamein-domination-2-red-unit-17",
+        "startX": 17.99,
+        "startY": 92.99,
+        "endX": 75.89,
+        "endY": 59.51
+      },
+      {
+        "id": "mujb9m79-3davoo",
+        "type": "aimHere",
+        "parentTankId": "second-battle-of-el-alamein-domination-2-red-unit-13",
+        "startX": 23.75,
+        "startY": 58.75,
+        "endX": 67.03,
+        "endY": 59.86
+      },
+      {
+        "id": "mujb9pxu-109gda",
+        "type": "aimHere",
+        "parentTankId": "second-battle-of-el-alamein-domination-2-red-unit-11",
+        "startX": 34.79,
+        "startY": 41.53,
+        "endX": 46.44,
+        "endY": 68.9
+      },
+      {
+        "id": "mujb9x00-b7b70j",
+        "type": "aimHere",
+        "parentTankId": "second-battle-of-el-alamein-domination-2-red-unit-09",
+        "startX": 50.62,
+        "startY": 38.61,
+        "endX": 74.41,
+        "endY": 58.64
+      },
+      {
+        "id": "mujba45d-2x4052",
         "type": "aimHere",
         "parentTankId": "second-battle-of-el-alamein-domination-2-red-unit-02",
         "startX": 48.33,
         "startY": 3.54,
-        "endX": 78.06,
-        "endY": 57.17
+        "endX": 79.28,
+        "endY": 92.79
+      },
+      {
+        "id": "mujba8fo-6xbf7m",
+        "type": "aimHere",
+        "parentTankId": "second-battle-of-el-alamein-domination-2-red-unit-05",
+        "startX": 67.64,
+        "startY": 24.72,
+        "endX": 89.01,
+        "endY": 34.84
+      },
+      {
+        "id": "mujbapl8-mk45rd",
+        "type": "aimHere",
+        "parentTankId": "second-battle-of-el-alamein-domination-2-red-unit-13",
+        "startX": 23.75,
+        "startY": 58.75,
+        "endX": 68.16,
+        "endY": 38.58
+      },
+      {
+        "id": "mujbavcj-abchfs",
+        "type": "aimHere",
+        "parentTankId": "second-battle-of-el-alamein-domination-2-red-unit-07",
+        "startX": 39.51,
+        "startY": 35.56,
+        "endX": 61.56,
+        "endY": 66.12
+      },
+      {
+        "id": "mujbcere-p0mco9",
+        "type": "route",
+        "points": [
+          {
+            "x": 40.01,
+            "y": 8.6
+          },
+          {
+            "x": 43.31,
+            "y": 10.51
+          },
+          {
+            "x": 46.7,
+            "y": 12.86
+          },
+          {
+            "x": 49.13,
+            "y": 15.73
+          },
+          {
+            "x": 52.17,
+            "y": 17.03
+          },
+          {
+            "x": 54.6,
+            "y": 18.07
+          },
+          {
+            "x": 56.08,
+            "y": 21.63
+          },
+          {
+            "x": 57.56,
+            "y": 23.11
+          },
+          {
+            "x": 61.9,
+            "y": 24.5
+          },
+          {
+            "x": 66.85,
+            "y": 24.76
+          }
+        ]
+      },
+      {
+        "id": "mujbco0v-bep7n8",
+        "type": "route",
+        "points": [
+          {
+            "x": 36.71,
+            "y": 30.84
+          },
+          {
+            "x": 37.66,
+            "y": 32.58
+          },
+          {
+            "x": 39.14,
+            "y": 35.01
+          }
+        ]
+      },
+      {
+        "id": "mujbcrpv-kdbwmf",
+        "type": "route",
+        "points": [
+          {
+            "x": 56.17,
+            "y": 22.15
+          },
+          {
+            "x": 55.56,
+            "y": 25.37
+          },
+          {
+            "x": 55.65,
+            "y": 27.98
+          },
+          {
+            "x": 56.34,
+            "y": 29.37
+          }
+        ]
+      },
+      {
+        "id": "mujbd0vo-tdw9hy",
+        "type": "aimHere",
+        "parentTankId": "second-battle-of-el-alamein-domination-2-red-unit-08",
+        "startX": 15.21,
+        "startY": 37.92,
+        "endX": 35.58,
+        "endY": 77.41
       }
     ],
     "Second Battle of El Alamein::domination-2|Blue": [
-      {
-        "id": "second-battle-of-el-alamein-domination-2-blue-aim-01",
-        "type": "aimHere",
-        "parentTankId": "second-battle-of-el-alamein-domination-2-blue-unit-19",
-        "startX": 55.35,
-        "startY": 94.03,
-        "endX": 48.46,
-        "endY": 4.99
-      },
       {
         "id": "second-battle-of-el-alamein-domination-2-blue-aim-02",
         "type": "aimHere",
@@ -64177,15 +64288,6 @@
         "startY": 56.32,
         "endX": 68.09,
         "endY": 13.82
-      },
-      {
-        "id": "second-battle-of-el-alamein-domination-2-blue-aim-03",
-        "type": "aimHere",
-        "parentTankId": "second-battle-of-el-alamein-domination-2-blue-unit-01",
-        "startX": 52.08,
-        "startY": 23.19,
-        "endX": 46.69,
-        "endY": 9.82
       },
       {
         "id": "second-battle-of-el-alamein-domination-2-blue-aim-04",
@@ -64206,33 +64308,6 @@
         "endY": 65.77
       },
       {
-        "id": "second-battle-of-el-alamein-domination-2-blue-aim-06",
-        "type": "aimHere",
-        "parentTankId": "second-battle-of-el-alamein-domination-2-blue-unit-16",
-        "startX": 34.44,
-        "startY": 81.25,
-        "endX": 29.49,
-        "endY": 79.16
-      },
-      {
-        "id": "second-battle-of-el-alamein-domination-2-blue-aim-07",
-        "type": "aimHere",
-        "parentTankId": "second-battle-of-el-alamein-domination-2-blue-unit-08",
-        "startX": 65.07,
-        "startY": 49.93,
-        "endX": 68.16,
-        "endY": 42.87
-      },
-      {
-        "id": "second-battle-of-el-alamein-domination-2-blue-aim-08",
-        "type": "aimHere",
-        "parentTankId": "second-battle-of-el-alamein-domination-2-blue-unit-16",
-        "startX": 34.44,
-        "startY": 81.25,
-        "endX": 54.63,
-        "endY": 91.89
-      },
-      {
         "id": "second-battle-of-el-alamein-domination-2-blue-aim-09",
         "type": "aimHere",
         "parentTankId": "second-battle-of-el-alamein-domination-2-blue-unit-17",
@@ -64240,24 +64315,6 @@
         "startY": 85.76,
         "endX": 4.73,
         "endY": 71.53
-      },
-      {
-        "id": "second-battle-of-el-alamein-domination-2-blue-aim-10",
-        "type": "aimHere",
-        "parentTankId": "second-battle-of-el-alamein-domination-2-blue-unit-03",
-        "startX": 91.18,
-        "startY": 36.32,
-        "endX": 77.7,
-        "endY": 27.82
-      },
-      {
-        "id": "second-battle-of-el-alamein-domination-2-blue-aim-11",
-        "type": "aimHere",
-        "parentTankId": "second-battle-of-el-alamein-domination-2-blue-unit-04",
-        "startX": 69.17,
-        "startY": 41.67,
-        "endX": 63.52,
-        "endY": 35.74
       },
       {
         "id": "second-battle-of-el-alamein-domination-2-blue-route-01",
@@ -64396,311 +64453,6 @@
         ]
       },
       {
-        "id": "second-battle-of-el-alamein-domination-2-blue-route-03",
-        "type": "route",
-        "points": [
-          {
-            "x": 92.05,
-            "y": 39.14
-          },
-          {
-            "x": 92.01,
-            "y": 41.9
-          },
-          {
-            "x": 91.49,
-            "y": 44.62
-          },
-          {
-            "x": 90.48,
-            "y": 47.17
-          },
-          {
-            "x": 89,
-            "y": 49.57
-          },
-          {
-            "x": 87.47,
-            "y": 51.91
-          },
-          {
-            "x": 86.05,
-            "y": 54.29
-          },
-          {
-            "x": 84.93,
-            "y": 56.82
-          },
-          {
-            "x": 83.85,
-            "y": 59.33
-          },
-          {
-            "x": 83.3,
-            "y": 60.66
-          }
-        ]
-      },
-      {
-        "id": "second-battle-of-el-alamein-domination-2-blue-route-04",
-        "type": "route",
-        "points": [
-          {
-            "x": 73.22,
-            "y": 76.5
-          },
-          {
-            "x": 71.49,
-            "y": 78.65
-          },
-          {
-            "x": 69.79,
-            "y": 80.8
-          },
-          {
-            "x": 68.03,
-            "y": 82.91
-          },
-          {
-            "x": 66.18,
-            "y": 84.91
-          },
-          {
-            "x": 64.16,
-            "y": 86.78
-          },
-          {
-            "x": 61.79,
-            "y": 88.07
-          },
-          {
-            "x": 59.03,
-            "y": 88.23
-          },
-          {
-            "x": 56.43,
-            "y": 87.55
-          },
-          {
-            "x": 54,
-            "y": 86.55
-          },
-          {
-            "x": 51.51,
-            "y": 85.59
-          },
-          {
-            "x": 49.01,
-            "y": 84.61
-          },
-          {
-            "x": 46.5,
-            "y": 83.61
-          },
-          {
-            "x": 58.31,
-            "y": 92.47
-          },
-          {
-            "x": 59.9,
-            "y": 90.17
-          },
-          {
-            "x": 60.72,
-            "y": 89.05
-          }
-        ]
-      },
-      {
-        "id": "second-battle-of-el-alamein-domination-2-blue-route-05",
-        "type": "route",
-        "points": [
-          {
-            "x": 63.37,
-            "y": 67.08
-          },
-          {
-            "x": 66.15,
-            "y": 67.22
-          },
-          {
-            "x": 68.91,
-            "y": 67.66
-          },
-          {
-            "x": 70.19,
-            "y": 68.14
-          }
-        ]
-      },
-      {
-        "id": "second-battle-of-el-alamein-domination-2-blue-route-06",
-        "type": "route",
-        "points": [
-          {
-            "x": 78.44,
-            "y": 46.88
-          },
-          {
-            "x": 80.2,
-            "y": 49.04
-          },
-          {
-            "x": 82.16,
-            "y": 50.96
-          },
-          {
-            "x": 83.67,
-            "y": 53.32
-          },
-          {
-            "x": 84.65,
-            "y": 55.76
-          }
-        ]
-      },
-      {
-        "id": "second-battle-of-el-alamein-domination-2-blue-route-07",
-        "type": "route",
-        "points": [
-          {
-            "x": 79.53,
-            "y": 67.18
-          },
-          {
-            "x": 76.92,
-            "y": 68.15
-          },
-          {
-            "x": 74.27,
-            "y": 68.85
-          },
-          {
-            "x": 72.88,
-            "y": 68.82
-          }
-        ]
-      },
-      {
-        "id": "second-battle-of-el-alamein-domination-2-blue-route-08",
-        "type": "route",
-        "points": [
-          {
-            "x": 80.06,
-            "y": 68.17
-          },
-          {
-            "x": 78.15,
-            "y": 69.87
-          },
-          {
-            "x": 76.55,
-            "y": 72.12
-          },
-          {
-            "x": 74.9,
-            "y": 74.31
-          }
-        ]
-      },
-      {
-        "id": "second-battle-of-el-alamein-domination-2-blue-route-09",
-        "type": "route",
-        "points": [
-          {
-            "x": 73.44,
-            "y": 55.52
-          },
-          {
-            "x": 72.05,
-            "y": 53.13
-          },
-          {
-            "x": 70.02,
-            "y": 51.21
-          },
-          {
-            "x": 67.52,
-            "y": 50.12
-          }
-        ]
-      },
-      {
-        "id": "second-battle-of-el-alamein-domination-2-blue-route-10",
-        "type": "route",
-        "points": [
-          {
-            "x": 74.83,
-            "y": 57.94
-          },
-          {
-            "x": 76.18,
-            "y": 60.35
-          },
-          {
-            "x": 77.83,
-            "y": 62.58
-          },
-          {
-            "x": 80.09,
-            "y": 64.17
-          }
-        ]
-      },
-      {
-        "id": "second-battle-of-el-alamein-domination-2-blue-route-11",
-        "type": "route",
-        "points": [
-          {
-            "x": 42.5,
-            "y": 57.05
-          },
-          {
-            "x": 42.75,
-            "y": 59.85
-          },
-          {
-            "x": 44.38,
-            "y": 62.05
-          },
-          {
-            "x": 45.28,
-            "y": 63.08
-          }
-        ]
-      },
-      {
-        "id": "second-battle-of-el-alamein-domination-2-blue-route-12",
-        "type": "route",
-        "points": [
-          {
-            "x": 42.82,
-            "y": 55.7
-          },
-          {
-            "x": 42.99,
-            "y": 53.02
-          },
-          {
-            "x": 42.6,
-            "y": 50.31
-          },
-          {
-            "x": 41.01,
-            "y": 48.06
-          },
-          {
-            "x": 39.27,
-            "y": 45.87
-          },
-          {
-            "x": 38.38,
-            "y": 44.81
-          }
-        ],
-        "dangerRoute": true
-      },
-      {
         "id": "second-battle-of-el-alamein-domination-2-blue-route-13",
         "type": "route",
         "points": [
@@ -64744,92 +64496,6 @@
         "dangerRoute": true
       },
       {
-        "id": "second-battle-of-el-alamein-domination-2-blue-route-14",
-        "type": "route",
-        "points": [
-          {
-            "x": 16.27,
-            "y": 50.87
-          },
-          {
-            "x": 16.42,
-            "y": 53.59
-          },
-          {
-            "x": 15.66,
-            "y": 56.11
-          },
-          {
-            "x": 13.68,
-            "y": 58.05
-          },
-          {
-            "x": 11.36,
-            "y": 59.62
-          },
-          {
-            "x": 8.83,
-            "y": 60.79
-          },
-          {
-            "x": 6.2,
-            "y": 62.55
-          },
-          {
-            "x": 5.5,
-            "y": 65.22
-          },
-          {
-            "x": 4.93,
-            "y": 67.95
-          },
-          {
-            "x": 4.58,
-            "y": 70.68
-          },
-          {
-            "x": 6.6,
-            "y": 61.2
-          },
-          {
-            "x": 7.47,
-            "y": 58.54
-          },
-          {
-            "x": 8.3,
-            "y": 55.93
-          },
-          {
-            "x": 9.2,
-            "y": 53.23
-          }
-        ],
-        "dangerRoute": true
-      },
-      {
-        "id": "second-battle-of-el-alamein-domination-2-blue-route-15",
-        "type": "route",
-        "points": [
-          {
-            "x": 39.96,
-            "y": 76.6
-          },
-          {
-            "x": 42.08,
-            "y": 74.86
-          },
-          {
-            "x": 43.99,
-            "y": 72.81
-          },
-          {
-            "x": 44.9,
-            "y": 71.77
-          }
-        ],
-        "dangerRoute": true
-      },
-      {
         "id": "second-battle-of-el-alamein-domination-2-blue-route-16",
         "type": "route",
         "points": [
@@ -64865,56 +64531,6 @@
         "dangerRoute": true
       },
       {
-        "id": "second-battle-of-el-alamein-domination-2-blue-route-17",
-        "type": "route",
-        "points": [
-          {
-            "x": 39.22,
-            "y": 78.93
-          },
-          {
-            "x": 41.48,
-            "y": 80.48
-          },
-          {
-            "x": 43.68,
-            "y": 82.17
-          }
-        ],
-        "dangerRoute": true
-      },
-      {
-        "id": "second-battle-of-el-alamein-domination-2-blue-route-18",
-        "type": "route",
-        "points": [
-          {
-            "x": 72.47,
-            "y": 40.01
-          },
-          {
-            "x": 69.98,
-            "y": 38.77
-          },
-          {
-            "x": 67.33,
-            "y": 37.86
-          },
-          {
-            "x": 64.86,
-            "y": 36.6
-          },
-          {
-            "x": 62.63,
-            "y": 34.93
-          },
-          {
-            "x": 60.71,
-            "y": 32.94
-          }
-        ],
-        "dangerRoute": true
-      },
-      {
         "id": "mu2703yh-hyy30t",
         "type": "aimHere",
         "parentTankId": "second-battle-of-el-alamein-domination-2-blue-unit-07",
@@ -64931,6 +64547,533 @@
         "startY": 50.97,
         "endX": 33.58,
         "endY": 16.42
+      },
+      {
+        "id": "mujazd32-d2ba1o",
+        "type": "aimHere",
+        "parentTankId": "second-battle-of-el-alamein-domination-2-blue-unit-18",
+        "startX": 80.49,
+        "startY": 92.99,
+        "endX": 47.83,
+        "endY": 4
+      },
+      {
+        "id": "mujb01i0-wpc6hh",
+        "type": "aimHere",
+        "parentTankId": "second-battle-of-el-alamein-domination-2-blue-unit-15",
+        "startX": 37.43,
+        "startY": 77.36,
+        "endX": 29.76,
+        "endY": 43.09
+      },
+      {
+        "id": "mujb0o4g-o39j85",
+        "type": "aimHere",
+        "parentTankId": "second-battle-of-el-alamein-domination-2-blue-unit-19",
+        "startX": 55.35,
+        "startY": 94.03,
+        "endX": 24.37,
+        "endY": 76.11
+      },
+      {
+        "id": "mujb0xxa-gktbto",
+        "type": "aimHere",
+        "parentTankId": "second-battle-of-el-alamein-domination-2-blue-unit-14",
+        "startX": 45.97,
+        "startY": 70,
+        "endX": 48.96,
+        "endY": 19.11
+      },
+      {
+        "id": "mujb11q8-4ydh64",
+        "type": "aimHere",
+        "parentTankId": "second-battle-of-el-alamein-domination-2-blue-unit-01",
+        "startX": 52.08,
+        "startY": 23.19,
+        "endX": 36.1,
+        "endY": 15.55
+      },
+      {
+        "id": "mujb18j2-rxkppa",
+        "type": "aimHere",
+        "parentTankId": "second-battle-of-el-alamein-domination-2-blue-unit-13",
+        "startX": 12.92,
+        "startY": 67.78,
+        "endX": 66.77,
+        "endY": 13.21
+      },
+      {
+        "id": "mujb1ob0-j5gf2u",
+        "type": "aimHere",
+        "parentTankId": "second-battle-of-el-alamein-domination-2-blue-unit-06",
+        "startX": 87.64,
+        "startY": 48.12,
+        "endX": 62.08,
+        "endY": 34.58
+      },
+      {
+        "id": "mujb1sxe-mmy5eu",
+        "type": "aimHere",
+        "parentTankId": "second-battle-of-el-alamein-domination-2-blue-unit-04",
+        "startX": 69.17,
+        "startY": 41.67,
+        "endX": 46.26,
+        "endY": 26.76
+      },
+      {
+        "id": "mujb20v2-fv51bv",
+        "type": "aimHere",
+        "parentTankId": "second-battle-of-el-alamein-domination-2-blue-unit-08",
+        "startX": 65.07,
+        "startY": 49.93,
+        "endX": 51.91,
+        "endY": 45.79
+      },
+      {
+        "id": "mujb268i-xa86qj",
+        "type": "aimHere",
+        "parentTankId": "second-battle-of-el-alamein-domination-2-blue-unit-10",
+        "startX": 81.04,
+        "startY": 56.32,
+        "endX": 25.85,
+        "endY": 58.47
+      },
+      {
+        "id": "mujb2g36-4he0yj",
+        "type": "aimHere",
+        "parentTankId": "second-battle-of-el-alamein-domination-2-blue-unit-05",
+        "startX": 36.32,
+        "startY": 42.71,
+        "endX": 31.84,
+        "endY": 45.18
+      },
+      {
+        "id": "mujb2lfy-fg7c3u",
+        "type": "aimHere",
+        "parentTankId": "second-battle-of-el-alamein-domination-2-blue-unit-02",
+        "startX": 59.38,
+        "startY": 30.9,
+        "endX": 49.48,
+        "endY": 47.7
+      },
+      {
+        "id": "mujb3278-297yba",
+        "type": "route",
+        "points": [
+          {
+            "x": 56.26,
+            "y": 94.27
+          },
+          {
+            "x": 58.51,
+            "y": 90.96
+          },
+          {
+            "x": 60.86,
+            "y": 88.27
+          },
+          {
+            "x": 64.6,
+            "y": 86.01
+          },
+          {
+            "x": 68.25,
+            "y": 82.02
+          },
+          {
+            "x": 71.46,
+            "y": 78.19
+          },
+          {
+            "x": 74.85,
+            "y": 72.02
+          },
+          {
+            "x": 77.72,
+            "y": 69.24
+          },
+          {
+            "x": 81.28,
+            "y": 66.55
+          }
+        ]
+      },
+      {
+        "id": "mujb3eve-be0hkx",
+        "type": "route",
+        "points": [
+          {
+            "x": 72.76,
+            "y": 40.49
+          },
+          {
+            "x": 74.24,
+            "y": 42.66
+          },
+          {
+            "x": 75.54,
+            "y": 45.44
+          },
+          {
+            "x": 78.67,
+            "y": 48.05
+          },
+          {
+            "x": 82.32,
+            "y": 50.56
+          },
+          {
+            "x": 83.8,
+            "y": 53.34
+          },
+          {
+            "x": 84.4,
+            "y": 57.43
+          }
+        ]
+      },
+      {
+        "id": "mujb3qpg-xatsp4",
+        "type": "route",
+        "points": [
+          {
+            "x": 59.38,
+            "y": 31.36
+          },
+          {
+            "x": 61.21,
+            "y": 33.97
+          },
+          {
+            "x": 65.12,
+            "y": 37.45
+          },
+          {
+            "x": 68.33,
+            "y": 38.49
+          },
+          {
+            "x": 72.59,
+            "y": 39.88
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "mujb42vm-dkjroe",
+        "type": "route",
+        "points": [
+          {
+            "x": 3.43,
+            "y": 72.72
+          },
+          {
+            "x": 3.17,
+            "y": 68.38
+          },
+          {
+            "x": 5.34,
+            "y": 61.25
+          },
+          {
+            "x": 7.69,
+            "y": 56.47
+          },
+          {
+            "x": 9.34,
+            "y": 51.87
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "mujb46nm-rgh2an",
+        "type": "route",
+        "points": [
+          {
+            "x": 4.56,
+            "y": 65.51
+          },
+          {
+            "x": 9.17,
+            "y": 61.77
+          },
+          {
+            "x": 12.64,
+            "y": 58.64
+          },
+          {
+            "x": 14.81,
+            "y": 55.78
+          },
+          {
+            "x": 15.33,
+            "y": 53.26
+          },
+          {
+            "x": 16.55,
+            "y": 49
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "mujb4ho2-3515wm",
+        "type": "route",
+        "points": [
+          {
+            "x": 37.75,
+            "y": 77.85
+          },
+          {
+            "x": 39.75,
+            "y": 79.67
+          },
+          {
+            "x": 43.31,
+            "y": 83.49
+          },
+          {
+            "x": 44.79,
+            "y": 83.84
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "mujb4n5a-6q7tc8",
+        "type": "route",
+        "points": [
+          {
+            "x": 38.1,
+            "y": 77.24
+          },
+          {
+            "x": 40.44,
+            "y": 76.02
+          },
+          {
+            "x": 43.22,
+            "y": 74.28
+          },
+          {
+            "x": 45.31,
+            "y": 71.85
+          },
+          {
+            "x": 45.66,
+            "y": 70.2
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "mujb4v16-k8sg25",
+        "type": "route",
+        "points": [
+          {
+            "x": 45.22,
+            "y": 83.93
+          },
+          {
+            "x": 48.09,
+            "y": 84.36
+          },
+          {
+            "x": 52.61,
+            "y": 86.01
+          },
+          {
+            "x": 55.65,
+            "y": 87.75
+          },
+          {
+            "x": 59.04,
+            "y": 88.97
+          },
+          {
+            "x": 60.51,
+            "y": 88.71
+          }
+        ]
+      },
+      {
+        "id": "mujb5ak6-3ywitf",
+        "type": "aimHere",
+        "parentTankId": "mujb52p7-2t3tv7",
+        "startX": 61.99,
+        "startY": 66.72,
+        "endX": 39.31,
+        "endY": 23.81
+      },
+      {
+        "id": "mujb5ew0-9pitkw",
+        "type": "aimHere",
+        "parentTankId": "mujb52p7-2t3tv7",
+        "startX": 61.99,
+        "startY": 66.72,
+        "endX": 72.76,
+        "endY": 23.81
+      },
+      {
+        "id": "mujb5jng-g1os8u",
+        "type": "aimHere",
+        "parentTankId": "second-battle-of-el-alamein-domination-2-blue-unit-03",
+        "startX": 91.18,
+        "startY": 36.32,
+        "endX": 66.59,
+        "endY": 20.76
+      },
+      {
+        "id": "mujb5w2s-skmhvb",
+        "type": "route",
+        "points": [
+          {
+            "x": 82.75,
+            "y": 63.68
+          },
+          {
+            "x": 84.14,
+            "y": 59.51
+          },
+          {
+            "x": 84.67,
+            "y": 57.17
+          },
+          {
+            "x": 85.71,
+            "y": 54.21
+          },
+          {
+            "x": 87.53,
+            "y": 51.09
+          },
+          {
+            "x": 89.1,
+            "y": 48.39
+          },
+          {
+            "x": 91.53,
+            "y": 44.83
+          },
+          {
+            "x": 92.92,
+            "y": 41.96
+          },
+          {
+            "x": 92.31,
+            "y": 38.14
+          },
+          {
+            "x": 91.7,
+            "y": 36.58
+          }
+        ]
+      },
+      {
+        "id": "mujb68eg-gjq9kp",
+        "type": "route",
+        "points": [
+          {
+            "x": 36.88,
+            "y": 42.92
+          },
+          {
+            "x": 38.36,
+            "y": 45.7
+          },
+          {
+            "x": 39.75,
+            "y": 48.48
+          },
+          {
+            "x": 41.4,
+            "y": 51.52
+          },
+          {
+            "x": 41.92,
+            "y": 54.47
+          },
+          {
+            "x": 41.75,
+            "y": 56.47
+          },
+          {
+            "x": 40.27,
+            "y": 57.17
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "mujb6gtu-5zgxwv",
+        "type": "route",
+        "points": [
+          {
+            "x": 40.27,
+            "y": 57.25
+          },
+          {
+            "x": 40.36,
+            "y": 59.25
+          },
+          {
+            "x": 43.05,
+            "y": 61.34
+          },
+          {
+            "x": 45.22,
+            "y": 63.94
+          },
+          {
+            "x": 46.7,
+            "y": 67.07
+          },
+          {
+            "x": 46.35,
+            "y": 69.59
+          }
+        ]
+      },
+      {
+        "id": "mujb81oq-la9mfq",
+        "type": "aimHere",
+        "parentTankId": "second-battle-of-el-alamein-domination-2-blue-unit-02",
+        "startX": 59.38,
+        "startY": 30.9,
+        "endX": 44.27,
+        "endY": 10.08
+      },
+      {
+        "id": "mujbdmtv-sl3m03",
+        "type": "route",
+        "points": [
+          {
+            "x": 52.43,
+            "y": 23.81
+          },
+          {
+            "x": 53.82,
+            "y": 25.02
+          },
+          {
+            "x": 54.69,
+            "y": 28.32
+          },
+          {
+            "x": 56.17,
+            "y": 31.54
+          },
+          {
+            "x": 58.17,
+            "y": 33.1
+          },
+          {
+            "x": 60.6,
+            "y": 33.54
+          }
+        ],
+        "dangerRoute": true
       }
     ],
     "Seversk-13::domination-1|Blue": [
@@ -75051,6 +75194,6 @@
     "Darwin Hill::battle-1|Red": [],
     "Sands of Sinai::domination-1|Blue": []
   },
-  "updatedAt": "2026-09-27T01:30:38.688Z",
-  "exportedAt": "2026-09-27T01:30:39.350Z"
+  "updatedAt": "2026-09-27T04:24:11.137Z",
+  "exportedAt": "2026-09-27T07:20:19.956Z"
 }
