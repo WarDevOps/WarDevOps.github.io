@@ -23,10 +23,10 @@
     "Eastern Europe": "2026-09-27",
     "European Province": "2026-09-23",
     "Fields of Normandy": "2026-09-23",
-    "Fields of Poland": "2026-09-15",
+    "Fields of Poland": "2026-09-28",
     "Finland": "2026-09-23",
     "Fire Arc": "2026-09-23",
-    "Flanders": "2026-09-27",
+    "Flanders": "2026-09-29",
     "Frozen Pass": "2026-08-25",
     "Fulda": "2026-09-27",
     "Golden Quarry": "2026-09-27",
@@ -38,10 +38,10 @@
     "Maginot Line": "2026-09-27",
     "Middle East": "2026-09-23",
     "Mozdok": "2026-09-15",
-    "Normandy": "2026-09-04",
+    "Normandy": "2026-09-27",
     "North Holland": "2026-09-15",
     "Poland": "2026-09-15",
-    "Port Novorossiysk": "2026-09-28",
+    "Port Novorossiysk": "2026-09-27",
     "Pradesh": "2026-08-31",
     "Red Desert": "2026-09-15",
     "Sands of Sinai": "2026-09-23",
@@ -82,10 +82,10 @@
     "Eastern Europe": "2026-09-27T13:32:32Z",
     "European Province": "2026-09-23T01:49:25Z",
     "Fields of Normandy": "2026-09-23T02:21:06Z",
-    "Fields of Poland": "2026-09-15T02:54:34Z",
+    "Fields of Poland": "2026-09-28T10:20:20Z",
     "Finland": "2026-09-23T02:44:34Z",
     "Fire Arc": "2026-09-23T03:38:09Z",
-    "Flanders": "2026-09-27T13:08:31Z",
+    "Flanders": "2026-09-28T16:57:03Z",
     "Fulda": "2026-09-27T10:55:04Z",
     "Golden Quarry": "2026-09-27T10:47:09Z",
     "Iberian Castle": "2026-09-23T03:53:21Z",
@@ -96,10 +96,10 @@
     "Maginot Line": "2026-09-27T14:04:32Z",
     "Middle East": "2026-09-23T03:56:31Z",
     "Mozdok": "2026-09-15T03:13:51Z",
-    "Normandy": "2026-09-04T05:44:50Z",
+    "Normandy": "2026-09-27T14:20:41Z",
     "North Holland": "2026-09-14T23:28:36Z",
     "Poland": "2026-09-15T02:55:29Z",
-    "Port Novorossiysk": "2026-09-27T15:43:26Z",
+    "Port Novorossiysk": "2026-09-27T14:28:12Z",
     "Red Desert": "2026-09-15T03:19:40Z",
     "Sands of Sinai": "2026-09-23T06:07:25Z",
     "Second Battle of El Alamein": "2026-09-27T04:24:11Z",
@@ -510,7 +510,7 @@
     },
     "Port Novorossiysk": {
       "variations": {
-        "conquest-3": {
+        "conquest-1": {
           "en": [
             "Port Novorossiysk is a special Conquest-only map built almost entirely from flat urban terrain. The key area is not the capture point itself, but the dense urban sector to its south and southwest.",
             "Controlling this area opens flanking routes that can lead directly toward the enemy spawn while also allowing side shots into the capture point. By contrast, the low hills and coastline near the point provide strong sniper positions, making a direct breakthrough much more difficult."
@@ -13512,14 +13512,14 @@
       {
         "id": "mu1htvgp-z2utlx",
         "type": "tankDestroyer",
-        "x": 10.72,
-        "y": 6.91
+        "x": 20.03,
+        "y": 11.56
       },
       {
         "id": "mu1htwbm-2ppopp",
         "type": "sniper",
-        "x": 10.72,
-        "y": 6.91,
+        "x": 20.03,
+        "y": 11.56,
         "parentTankId": "mu1htvgp-z2utlx"
       },
       {
@@ -13541,6 +13541,45 @@
         "x": 58.25,
         "y": 67.46,
         "parentTankId": "mu1hu8y5-j0pr3n"
+      },
+      {
+        "id": "mul3fexa-anx0dw",
+        "type": "tankDestroyer",
+        "x": 16.81,
+        "y": 74.89
+      },
+      {
+        "id": "mul3fk8m-8p4b7v",
+        "type": "mainBattleTank",
+        "x": 51.39,
+        "y": 68.38
+      },
+      {
+        "id": "mul3fs1u-0bzr0y",
+        "type": "sniper",
+        "x": 51.39,
+        "y": 68.38,
+        "parentTankId": "mul3fk8m-8p4b7v"
+      },
+      {
+        "id": "mul3fvpe-ztqz97",
+        "type": "sniper",
+        "x": 16.81,
+        "y": 74.89,
+        "parentTankId": "mul3fexa-anx0dw"
+      },
+      {
+        "id": "mul3ghj1-ige2eb",
+        "type": "tankDestroyer",
+        "x": 31.75,
+        "y": 52.04
+      },
+      {
+        "id": "mul3h9dg-72076a",
+        "type": "sniper",
+        "x": 31.75,
+        "y": 52.04,
+        "parentTankId": "mul3ghj1-ige2eb"
       }
     ],
     "Fields of Poland::domination-1|Red": [
@@ -13560,8 +13599,8 @@
       {
         "id": "mu1hr8dn-z9bm0j",
         "type": "mainBattleTankRed",
-        "x": 57,
-        "y": 68.61
+        "x": 58.77,
+        "y": 67.25
       },
       {
         "id": "mu1hroyj-tvj97p",
@@ -13592,8 +13631,8 @@
       {
         "id": "mu1ht6d6-9uv3ax",
         "type": "battleLine",
-        "x": 57,
-        "y": 68.61,
+        "x": 58.77,
+        "y": 67.25,
         "parentTankId": "mu1hr8dn-z9bm0j"
       },
       {
@@ -14512,8 +14551,8 @@
       {
         "id": "mujt89d0-c3hfu6",
         "type": "mainBattleTank",
-        "x": 64.16,
-        "y": 52.21
+        "x": 64.51,
+        "y": 52.3
       },
       {
         "id": "mujt8ctt-5leo2f",
@@ -14530,8 +14569,8 @@
       {
         "id": "mujt8ofp-blxodl",
         "type": "highRiskSpot",
-        "x": 64.16,
-        "y": 52.21,
+        "x": 64.51,
+        "y": 52.3,
         "parentTankId": "mujt89d0-c3hfu6"
       },
       {
@@ -14547,18 +14586,83 @@
         "x": 72.38,
         "y": 84.2,
         "parentTankId": "mujt8fc3-oca26t"
+      },
+      {
+        "id": "mukpcfhy-d53rxt",
+        "type": "mainBattleTank",
+        "x": 9.17,
+        "y": 70.2
+      },
+      {
+        "id": "mukpcma1-psbjoe",
+        "type": "mainBattleTank",
+        "x": 32.36,
+        "y": 72.81
+      },
+      {
+        "id": "mukpctgo-al0kbl",
+        "type": "spawnKill",
+        "x": 9.17,
+        "y": 70.2,
+        "parentTankId": "mukpcfhy-d53rxt"
+      },
+      {
+        "id": "mukpcun8-7g9miz",
+        "type": "spawnKill",
+        "x": 32.36,
+        "y": 72.81,
+        "parentTankId": "mukpcma1-psbjoe"
+      },
+      {
+        "id": "mukpejaz-8qbqk8",
+        "type": "tankDestroyer",
+        "x": 96.66,
+        "y": 19.72
+      },
+      {
+        "id": "mukpekjy-qjtjt1",
+        "type": "sniper",
+        "x": 96.66,
+        "y": 19.72,
+        "parentTankId": "mukpejaz-8qbqk8"
+      },
+      {
+        "id": "mul5y44i-rdjhhh",
+        "type": "tankDestroyer",
+        "x": 7.17,
+        "y": 36.06
+      },
+      {
+        "id": "mul5y5iv-9484w9",
+        "type": "sniper",
+        "x": 7.17,
+        "y": 36.06,
+        "parentTankId": "mul5y44i-rdjhhh"
+      },
+      {
+        "id": "mul5yao6-1560zb",
+        "type": "mainBattleTank",
+        "x": 50.61,
+        "y": 53.34
+      },
+      {
+        "id": "mul5ycfh-4ei23m",
+        "type": "highRiskSpot",
+        "x": 50.61,
+        "y": 53.34,
+        "parentTankId": "mul5yao6-1560zb"
       }
     ],
     "Flanders::domination-1|Red": [
       {
         "id": "mujtp2w6-7h0meq",
-        "type": "mainBattleTankRed",
+        "type": "tankDestroyerRed",
         "x": 36.01,
         "y": 64.99
       },
       {
         "id": "mujtpjnu-qt5fz3",
-        "type": "battleLine",
+        "type": "sniper",
         "x": 36.01,
         "y": 64.99,
         "parentTankId": "mujtp2w6-7h0meq"
@@ -14566,67 +14670,171 @@
       {
         "id": "mujtpy4h-m63fqk",
         "type": "mainBattleTankRed",
-        "x": 50.7,
-        "y": 42.4
+        "x": 52.4,
+        "y": 42.86
       },
       {
         "id": "mujtq0fg-odftus",
         "type": "highRiskSpot",
-        "x": 50.7,
-        "y": 42.4,
+        "x": 52.4,
+        "y": 42.86,
         "parentTankId": "mujtpy4h-m63fqk"
       },
       {
         "id": "mujtq6y1-fx8l66",
         "type": "mainBattleTankRed",
-        "x": 78.67,
-        "y": 26.41
+        "x": 92.1,
+        "y": 12.77
       },
       {
         "id": "mujtq8um-lg7ccg",
         "type": "spawnKill",
-        "x": 78.67,
-        "y": 26.41,
+        "x": 92.1,
+        "y": 12.77,
         "parentTankId": "mujtq6y1-fx8l66"
       },
       {
         "id": "mujtqdde-ydq7qe",
         "type": "mainBattleTankRed",
-        "x": 3.43,
-        "y": 48.57
+        "x": 8.53,
+        "y": 50.32
       },
       {
         "id": "mujtqqfo-5nkcmr",
         "type": "battleLine",
-        "x": 3.43,
-        "y": 48.57,
+        "x": 8.53,
+        "y": 50.32,
         "parentTankId": "mujtqdde-ydq7qe"
       },
       {
         "id": "mujtqvr3-7mfy7o",
         "type": "mainBattleTankRed",
-        "x": 4.3,
-        "y": 39.36
+        "x": 2.72,
+        "y": 38.81
       },
       {
         "id": "mujtqwuw-ogpxh0",
         "type": "highRiskSpot",
-        "x": 4.3,
-        "y": 39.36,
+        "x": 2.72,
+        "y": 38.81,
         "parentTankId": "mujtqvr3-7mfy7o"
       },
       {
         "id": "muju3r75-2ubc5i",
         "type": "mainBattleTankRed",
-        "x": 42.79,
-        "y": 20.85
+        "x": 44.06,
+        "y": 21.49
       },
       {
         "id": "muju3tpr-i6na8b",
         "type": "spawnKill",
-        "x": 42.79,
-        "y": 20.85,
+        "x": 44.06,
+        "y": 21.49,
         "parentTankId": "muju3r75-2ubc5i"
+      },
+      {
+        "id": "mukpd05p-g3t69d",
+        "type": "mainBattleTankRed",
+        "x": 38.24,
+        "y": 20.48
+      },
+      {
+        "id": "mukpd1hw-7i7e0a",
+        "type": "spawnKill",
+        "x": 38.24,
+        "y": 20.48,
+        "parentTankId": "mukpd05p-g3t69d"
+      },
+      {
+        "id": "mukpddyh-06z7mf",
+        "type": "tankDestroyerRed",
+        "x": 94.22,
+        "y": 71.59
+      },
+      {
+        "id": "mukpdium-gm3wkh",
+        "type": "mainBattleTankRed",
+        "x": 84.32,
+        "y": 67.59
+      },
+      {
+        "id": "mukpdjw7-bpeook",
+        "type": "mainBattleTankRed",
+        "x": 90.31,
+        "y": 62.12
+      },
+      {
+        "id": "mukpdme0-cm5qug",
+        "type": "battleLine",
+        "x": 90.31,
+        "y": 62.12,
+        "parentTankId": "mukpdjw7-bpeook"
+      },
+      {
+        "id": "mukpdo48-h1q5pk",
+        "type": "battleLine",
+        "x": 84.32,
+        "y": 67.59,
+        "parentTankId": "mukpdium-gm3wkh"
+      },
+      {
+        "id": "mukpdxw4-yta3pj",
+        "type": "sniper",
+        "x": 94.22,
+        "y": 71.59,
+        "parentTankId": "mukpddyh-06z7mf"
+      },
+      {
+        "id": "mulgewno-bc8956",
+        "type": "mainBattleTankRed",
+        "x": 78.95,
+        "y": 58.91
+      },
+      {
+        "id": "mulgf0xu-dlcipz",
+        "type": "highRiskSpot",
+        "x": 78.95,
+        "y": 58.91,
+        "parentTankId": "mulgewno-bc8956"
+      },
+      {
+        "id": "mulgt2ba-ah19r1",
+        "type": "mainBattleTankRed",
+        "x": 1.71,
+        "y": 18.84
+      },
+      {
+        "id": "mulgt4fi-0y6oxy",
+        "type": "spawnKill",
+        "x": 1.71,
+        "y": 18.84,
+        "parentTankId": "mulgt2ba-ah19r1"
+      },
+      {
+        "id": "mulgyl40-cpm9ab",
+        "type": "mainBattleTankRed",
+        "x": 46.21,
+        "y": 41.97
+      },
+      {
+        "id": "mulgymll-x3mnlj",
+        "type": "highRiskSpot",
+        "x": 46.21,
+        "y": 41.97,
+        "parentTankId": "mulgyl40-cpm9ab"
+      },
+      {
+        "id": "mulh72l1-fhhl8n",
+        "type": "mainBattleTankRed",
+        "x": 0.95,
+        "y": 49.05
+      },
+      {
+        "id": "mulh73qj-b0sugh",
+        "type": "battleLine",
+        "x": 0.95,
+        "y": 49.05,
+        "parentTankId": "mulh72l1-fhhl8n"
       }
     ],
     "Frozen Pass::domination-1|Blue": [],
@@ -18200,8 +18408,283 @@
         "parentTankId": "mu23j316-kp1gc2"
       }
     ],
-    "Normandy::domination-1|Red": [],
-    "Normandy::domination-1|Blue": [],
+    "Normandy::domination-1|Red": [
+      {
+        "id": "mujwhigr-329y4a",
+        "type": "mainBattleTankRed",
+        "x": 52,
+        "y": 40.92
+      },
+      {
+        "id": "mujwhjio-jd9yvo",
+        "type": "highRiskSpot",
+        "x": 52,
+        "y": 40.92,
+        "parentTankId": "mujwhigr-329y4a"
+      },
+      {
+        "id": "mujwhr01-tt3cvg",
+        "type": "mainBattleTankRed",
+        "x": 55.56,
+        "y": 56.04
+      },
+      {
+        "id": "mujwhvjz-1bilef",
+        "type": "mainBattleTankRed",
+        "x": 55.99,
+        "y": 39.44
+      },
+      {
+        "id": "mujwhx2q-r3j04p",
+        "type": "tankDestroyerRed",
+        "x": 69.98,
+        "y": 97.57
+      },
+      {
+        "id": "mujwi7l1-09s646",
+        "type": "mainBattleTankRed",
+        "x": 44.87,
+        "y": 97.83
+      },
+      {
+        "id": "mujwi9cj-efa6tp",
+        "type": "highRiskSpot",
+        "x": 44.87,
+        "y": 97.83,
+        "parentTankId": "mujwi7l1-09s646"
+      },
+      {
+        "id": "mujwiau1-gtiwxu",
+        "type": "battleLine",
+        "x": 55.99,
+        "y": 39.44,
+        "parentTankId": "mujwhvjz-1bilef"
+      },
+      {
+        "id": "mujwibsi-7dfmte",
+        "type": "sniper",
+        "x": 69.98,
+        "y": 97.57,
+        "parentTankId": "mujwhx2q-r3j04p"
+      },
+      {
+        "id": "mujwid2u-tok8gc",
+        "type": "battleLine",
+        "x": 55.56,
+        "y": 56.04,
+        "parentTankId": "mujwhr01-tt3cvg"
+      },
+      {
+        "id": "mujwikg3-hn6xgt",
+        "type": "mainBattleTankRed",
+        "x": 36.62,
+        "y": 58.3
+      },
+      {
+        "id": "mujwimk8-4v1smg",
+        "type": "spawnKill",
+        "x": 36.62,
+        "y": 58.3,
+        "parentTankId": "mujwikg3-hn6xgt"
+      },
+      {
+        "id": "mujwitnb-a3wn5y",
+        "type": "mainBattleTankRed",
+        "x": 33.84,
+        "y": 39.1
+      },
+      {
+        "id": "mujwiuye-hplij1",
+        "type": "spawnKill",
+        "x": 33.84,
+        "y": 39.1,
+        "parentTankId": "mujwitnb-a3wn5y"
+      },
+      {
+        "id": "mujwj1jr-seo1fx",
+        "type": "mainBattleTankRed",
+        "x": 25.15,
+        "y": 43.79
+      },
+      {
+        "id": "mujwj3ig-359iis",
+        "type": "spawnKill",
+        "x": 25.15,
+        "y": 43.79,
+        "parentTankId": "mujwj1jr-seo1fx"
+      },
+      {
+        "id": "mujwjeih-ow1p4m",
+        "type": "mainBattleTankRed",
+        "x": 32.88,
+        "y": 93.74
+      },
+      {
+        "id": "mujwjnav-02jwsy",
+        "type": "highRiskSpot",
+        "x": 32.88,
+        "y": 93.74,
+        "parentTankId": "mujwjeih-ow1p4m"
+      },
+      {
+        "id": "mujwkl2t-gztvaz",
+        "type": "tankDestroyerRed",
+        "x": 87.1,
+        "y": 79.24
+      },
+      {
+        "id": "mujwkma9-s520d2",
+        "type": "sniper",
+        "x": 87.1,
+        "y": 79.24,
+        "parentTankId": "mujwkl2t-gztvaz"
+      },
+      {
+        "id": "mujwkzdr-uz9gjp",
+        "type": "mainBattleTankRed",
+        "x": 58.69,
+        "y": 69.94
+      },
+      {
+        "id": "mujwl0ff-ycuvnc",
+        "type": "battleLine",
+        "x": 58.69,
+        "y": 69.94,
+        "parentTankId": "mujwkzdr-uz9gjp"
+      },
+      {
+        "id": "mujwnkux-f8q1r7",
+        "type": "mainBattleTankRed",
+        "x": 49.48,
+        "y": 53.08
+      },
+      {
+        "id": "mujwnmkr-mzyoap",
+        "type": "highRiskSpot",
+        "x": 49.48,
+        "y": 53.08,
+        "parentTankId": "mujwnkux-f8q1r7"
+      }
+    ],
+    "Normandy::domination-1|Blue": [
+      {
+        "id": "mujwg6bt-0s7aih",
+        "type": "mainBattleTank",
+        "x": 45.05,
+        "y": 55.26
+      },
+      {
+        "id": "mujwg82y-84v4qq",
+        "type": "mainBattleTank",
+        "x": 49.83,
+        "y": 64.64
+      },
+      {
+        "id": "mujwgc7o-ee2uaw",
+        "type": "mainBattleTank",
+        "x": 50.17,
+        "y": 40.4
+      },
+      {
+        "id": "mujwgfbb-y2ggq9",
+        "type": "tankDestroyer",
+        "x": 33.23,
+        "y": 97.39
+      },
+      {
+        "id": "mujwgj05-3v4gh3",
+        "type": "tankDestroyer",
+        "x": 26.46,
+        "y": 88.44
+      },
+      {
+        "id": "mujwgwbj-941oj8",
+        "type": "mainBattleTank",
+        "x": 80.23,
+        "y": 44.31
+      },
+      {
+        "id": "mujwgxr6-k6odc9",
+        "type": "spawnKill",
+        "x": 80.23,
+        "y": 44.31,
+        "parentTankId": "mujwgwbj-941oj8"
+      },
+      {
+        "id": "mujwh2ap-2n7vqs",
+        "type": "mainBattleTank",
+        "x": 77.54,
+        "y": 88.36
+      },
+      {
+        "id": "mujwh6ku-bk5dc7",
+        "type": "sniper",
+        "x": 26.46,
+        "y": 88.44,
+        "parentTankId": "mujwgj05-3v4gh3"
+      },
+      {
+        "id": "mujwh82w-65idwo",
+        "type": "sniper",
+        "x": 33.23,
+        "y": 97.39,
+        "parentTankId": "mujwgfbb-y2ggq9"
+      },
+      {
+        "id": "mujwh9t4-0g1fke",
+        "type": "battleLine",
+        "x": 49.83,
+        "y": 64.64,
+        "parentTankId": "mujwg82y-84v4qq"
+      },
+      {
+        "id": "mujwhb06-7wmr6k",
+        "type": "battleLine",
+        "x": 45.05,
+        "y": 55.26,
+        "parentTankId": "mujwg6bt-0s7aih"
+      },
+      {
+        "id": "mujwhdle-nvkq1f",
+        "type": "highRiskSpot",
+        "x": 50.17,
+        "y": 40.4,
+        "parentTankId": "mujwgc7o-ee2uaw"
+      },
+      {
+        "id": "mujwk9gx-saaj8t",
+        "type": "spawnKill",
+        "x": 77.54,
+        "y": 88.36,
+        "parentTankId": "mujwh2ap-2n7vqs"
+      },
+      {
+        "id": "mujwlzyo-d1wi6l",
+        "type": "mainBattleTank",
+        "x": 46.09,
+        "y": 38.49
+      },
+      {
+        "id": "mujwm0u1-exm667",
+        "type": "battleLine",
+        "x": 46.09,
+        "y": 38.49,
+        "parentTankId": "mujwlzyo-d1wi6l"
+      },
+      {
+        "id": "mujwni5p-k1wkec",
+        "type": "mainBattleTank",
+        "x": 50.35,
+        "y": 53.61
+      },
+      {
+        "id": "mujwnoll-2k9h3e",
+        "type": "highRiskSpot",
+        "x": 50.35,
+        "y": 53.61,
+        "parentTankId": "mujwni5p-k1wkec"
+      }
+    ],
     "North Holland::domination-1|Red": [
       {
         "id": "mtim9myz-vzqrin",
@@ -18719,359 +19202,372 @@
         "parentTankId": "mu1hq31f-xn0fn7"
       }
     ],
-    "Port Novorossiysk::conquest-3|Red": [
+    "Port Novorossiysk::conquest-1|Red": [
       {
-        "id": "port-novorossiysk-conquest-3-red-unit-01",
+        "id": "port-novorossiysk-conquest-1-red-unit-01",
         "type": "mainBattleTankRed",
         "x": 20.49,
         "y": 7.5
       },
       {
-        "id": "port-novorossiysk-conquest-3-red-unit-02",
+        "id": "port-novorossiysk-conquest-1-red-unit-02",
         "type": "mainBattleTankRed",
         "x": 39.51,
         "y": 15.62
       },
       {
-        "id": "port-novorossiysk-conquest-3-red-unit-03",
+        "id": "port-novorossiysk-conquest-1-red-unit-03",
         "type": "mainBattleTankRed",
         "x": 37.36,
         "y": 35.97
       },
       {
-        "id": "port-novorossiysk-conquest-3-red-role-01",
+        "id": "port-novorossiysk-conquest-1-red-role-01",
         "type": "highRiskSpot",
         "x": 37.36,
         "y": 35.97,
-        "parentTankId": "port-novorossiysk-conquest-3-red-unit-03"
+        "parentTankId": "port-novorossiysk-conquest-1-red-unit-03"
       },
       {
-        "id": "port-novorossiysk-conquest-3-red-unit-04",
+        "id": "port-novorossiysk-conquest-1-red-unit-04",
         "type": "mainBattleTankRed",
         "x": 12.64,
         "y": 37.64
       },
       {
-        "id": "port-novorossiysk-conquest-3-red-role-02",
+        "id": "port-novorossiysk-conquest-1-red-role-02",
         "type": "highRiskSpot",
         "x": 12.64,
         "y": 37.64,
-        "parentTankId": "port-novorossiysk-conquest-3-red-unit-04"
+        "parentTankId": "port-novorossiysk-conquest-1-red-unit-04"
       },
       {
-        "id": "port-novorossiysk-conquest-3-red-unit-05",
+        "id": "port-novorossiysk-conquest-1-red-unit-05",
         "type": "mainBattleTankRed",
         "x": 21.88,
         "y": 46.53
       },
       {
-        "id": "port-novorossiysk-conquest-3-red-role-03",
+        "id": "port-novorossiysk-conquest-1-red-role-03",
         "type": "highRiskSpot",
         "x": 21.88,
         "y": 46.53,
-        "parentTankId": "port-novorossiysk-conquest-3-red-unit-05"
+        "parentTankId": "port-novorossiysk-conquest-1-red-unit-05"
       },
       {
-        "id": "port-novorossiysk-conquest-3-red-unit-06",
-        "type": "mainBattleTankRed",
+        "id": "port-novorossiysk-conquest-1-red-unit-06",
+        "type": "lightTankRed",
         "x": 51.94,
         "y": 50.83
       },
       {
-        "id": "port-novorossiysk-conquest-3-red-role-04",
+        "id": "port-novorossiysk-conquest-1-red-role-04",
         "type": "highRiskSpot",
         "x": 51.94,
         "y": 50.83,
-        "parentTankId": "port-novorossiysk-conquest-3-red-unit-06"
+        "parentTankId": "port-novorossiysk-conquest-1-red-unit-06"
       },
       {
-        "id": "port-novorossiysk-conquest-3-red-unit-07",
-        "type": "mainBattleTankRed",
+        "id": "port-novorossiysk-conquest-1-red-unit-07",
+        "type": "lightTankRed",
         "x": 40.69,
         "y": 55.21
       },
       {
-        "id": "port-novorossiysk-conquest-3-red-role-05",
-        "type": "battleLine",
+        "id": "port-novorossiysk-conquest-1-red-role-05",
+        "type": "highRiskSpot",
         "x": 40.69,
         "y": 55.21,
-        "parentTankId": "port-novorossiysk-conquest-3-red-unit-07"
+        "parentTankId": "port-novorossiysk-conquest-1-red-unit-07"
       },
       {
-        "id": "port-novorossiysk-conquest-3-red-unit-08",
-        "type": "mainBattleTankRed",
+        "id": "port-novorossiysk-conquest-1-red-unit-08",
+        "type": "tankDestroyerRed",
         "x": 70.83,
         "y": 55.49
       },
       {
-        "id": "port-novorossiysk-conquest-3-red-role-06",
+        "id": "port-novorossiysk-conquest-1-red-role-06",
         "type": "sniper",
         "x": 70.83,
         "y": 55.49,
-        "parentTankId": "port-novorossiysk-conquest-3-red-unit-08"
+        "parentTankId": "port-novorossiysk-conquest-1-red-unit-08"
       },
       {
-        "id": "port-novorossiysk-conquest-3-red-unit-09",
+        "id": "port-novorossiysk-conquest-1-red-unit-09",
         "type": "mainBattleTankRed",
         "x": 55.83,
         "y": 64.86
       },
       {
-        "id": "port-novorossiysk-conquest-3-red-role-07",
+        "id": "port-novorossiysk-conquest-1-red-role-07",
         "type": "battleLine",
         "x": 55.83,
         "y": 64.86,
-        "parentTankId": "port-novorossiysk-conquest-3-red-unit-09"
+        "parentTankId": "port-novorossiysk-conquest-1-red-unit-09"
       },
       {
-        "id": "port-novorossiysk-conquest-3-red-unit-10",
+        "id": "port-novorossiysk-conquest-1-red-unit-10",
         "type": "mainBattleTankRed",
         "x": 45.28,
         "y": 68.47
       },
       {
-        "id": "port-novorossiysk-conquest-3-red-role-08",
-        "type": "highRiskSpot",
+        "id": "port-novorossiysk-conquest-1-red-role-08",
+        "type": "battleLine",
         "x": 45.28,
         "y": 68.47,
-        "parentTankId": "port-novorossiysk-conquest-3-red-unit-10"
+        "parentTankId": "port-novorossiysk-conquest-1-red-unit-10"
       },
       {
-        "id": "port-novorossiysk-conquest-3-red-unit-11",
+        "id": "port-novorossiysk-conquest-1-red-unit-11",
         "type": "mainBattleTankRed",
         "x": 38.33,
         "y": 70
       },
       {
-        "id": "port-novorossiysk-conquest-3-red-role-09",
+        "id": "port-novorossiysk-conquest-1-red-role-09",
         "type": "highRiskSpot",
         "x": 38.33,
         "y": 70,
-        "parentTankId": "port-novorossiysk-conquest-3-red-unit-11"
+        "parentTankId": "port-novorossiysk-conquest-1-red-unit-11"
       },
       {
-        "id": "port-novorossiysk-conquest-3-red-unit-12",
-        "type": "mainBattleTankRed",
+        "id": "port-novorossiysk-conquest-1-red-unit-12",
+        "type": "tankDestroyerRed",
         "x": 58.4,
         "y": 71.67
       },
       {
-        "id": "port-novorossiysk-conquest-3-red-role-10",
+        "id": "port-novorossiysk-conquest-1-red-role-10",
         "type": "sniper",
         "x": 58.4,
         "y": 71.67,
-        "parentTankId": "port-novorossiysk-conquest-3-red-unit-12"
+        "parentTankId": "port-novorossiysk-conquest-1-red-unit-12"
       },
       {
-        "id": "port-novorossiysk-conquest-3-red-unit-13",
-        "type": "mainBattleTankRed",
+        "id": "port-novorossiysk-conquest-1-red-unit-13",
+        "type": "tankDestroyerRed",
         "x": 46.46,
         "y": 77.22
       },
       {
-        "id": "port-novorossiysk-conquest-3-red-role-11",
+        "id": "port-novorossiysk-conquest-1-red-role-11",
         "type": "sniper",
         "x": 46.46,
         "y": 77.22,
-        "parentTankId": "port-novorossiysk-conquest-3-red-unit-13"
+        "parentTankId": "port-novorossiysk-conquest-1-red-unit-13"
       },
       {
         "id": "mttbrp2c-s0m5t8",
         "type": "spawnKill",
         "x": 39.51,
         "y": 15.62,
-        "parentTankId": "port-novorossiysk-conquest-3-red-unit-02"
+        "parentTankId": "port-novorossiysk-conquest-1-red-unit-02"
       },
       {
         "id": "mttbruw2-7jax7b",
         "type": "spawnKill",
         "x": 20.49,
         "y": 7.5,
-        "parentTankId": "port-novorossiysk-conquest-3-red-unit-01"
+        "parentTankId": "port-novorossiysk-conquest-1-red-unit-01"
+      },
+      {
+        "id": "mujwwhvp-lz8puu",
+        "type": "mainBattleTankRed",
+        "x": 25.07,
+        "y": 17.12
+      },
+      {
+        "id": "mujwwjfh-6u0vc5",
+        "type": "spawnKill",
+        "x": 25.07,
+        "y": 17.12,
+        "parentTankId": "mujwwhvp-lz8puu"
       }
     ],
-    "Port Novorossiysk::conquest-3|Blue": [
+    "Port Novorossiysk::conquest-1|Blue": [
       {
-        "id": "port-novorossiysk-conquest-3-blue-unit-01",
+        "id": "port-novorossiysk-conquest-1-blue-unit-01",
         "type": "tankDestroyer",
         "x": 43.89,
         "y": 22.85
       },
       {
-        "id": "port-novorossiysk-conquest-3-blue-role-01",
+        "id": "port-novorossiysk-conquest-1-blue-role-01",
         "type": "sniper",
         "x": 43.89,
         "y": 22.85,
-        "parentTankId": "port-novorossiysk-conquest-3-blue-unit-01"
+        "parentTankId": "port-novorossiysk-conquest-1-blue-unit-01"
       },
       {
-        "id": "port-novorossiysk-conquest-3-blue-unit-02",
+        "id": "port-novorossiysk-conquest-1-blue-unit-02",
         "type": "tankDestroyer",
         "x": 31.6,
         "y": 37.01
       },
       {
-        "id": "port-novorossiysk-conquest-3-blue-role-02",
+        "id": "port-novorossiysk-conquest-1-blue-role-02",
         "type": "sniper",
         "x": 31.6,
         "y": 37.01,
-        "parentTankId": "port-novorossiysk-conquest-3-blue-unit-02"
+        "parentTankId": "port-novorossiysk-conquest-1-blue-unit-02"
       },
       {
-        "id": "port-novorossiysk-conquest-3-blue-unit-03",
+        "id": "port-novorossiysk-conquest-1-blue-unit-03",
         "type": "mainBattleTank",
         "x": 51.6,
         "y": 42.22
       },
       {
-        "id": "port-novorossiysk-conquest-3-blue-unit-04",
+        "id": "port-novorossiysk-conquest-1-blue-unit-04",
         "type": "tankDestroyer",
         "x": 27.36,
         "y": 44.93
       },
       {
-        "id": "port-novorossiysk-conquest-3-blue-role-03",
+        "id": "port-novorossiysk-conquest-1-blue-role-03",
         "type": "sniper",
         "x": 27.36,
         "y": 44.93,
-        "parentTankId": "port-novorossiysk-conquest-3-blue-unit-04"
+        "parentTankId": "port-novorossiysk-conquest-1-blue-unit-04"
       },
       {
-        "id": "port-novorossiysk-conquest-3-blue-unit-05",
+        "id": "port-novorossiysk-conquest-1-blue-unit-05",
         "type": "tankDestroyer",
         "x": 20.35,
         "y": 47.57
       },
       {
-        "id": "port-novorossiysk-conquest-3-blue-role-04",
+        "id": "port-novorossiysk-conquest-1-blue-role-04",
         "type": "sniper",
         "x": 20.35,
         "y": 47.57,
-        "parentTankId": "port-novorossiysk-conquest-3-blue-unit-05"
+        "parentTankId": "port-novorossiysk-conquest-1-blue-unit-05"
       },
       {
-        "id": "port-novorossiysk-conquest-3-blue-unit-06",
+        "id": "port-novorossiysk-conquest-1-blue-unit-06",
         "type": "mainBattleTank",
         "x": 36.94,
         "y": 47.92
       },
       {
-        "id": "port-novorossiysk-conquest-3-blue-role-05",
+        "id": "port-novorossiysk-conquest-1-blue-role-05",
         "type": "battleLine",
         "x": 36.94,
         "y": 47.92,
-        "parentTankId": "port-novorossiysk-conquest-3-blue-unit-06"
+        "parentTankId": "port-novorossiysk-conquest-1-blue-unit-06"
       },
       {
-        "id": "port-novorossiysk-conquest-3-blue-unit-07",
-        "type": "mainBattleTank",
+        "id": "port-novorossiysk-conquest-1-blue-unit-07",
+        "type": "lightTank",
         "x": 50.21,
         "y": 48.82
       },
       {
-        "id": "port-novorossiysk-conquest-3-blue-role-06",
+        "id": "port-novorossiysk-conquest-1-blue-role-06",
         "type": "highRiskSpot",
         "x": 50.21,
         "y": 48.82,
-        "parentTankId": "port-novorossiysk-conquest-3-blue-unit-07"
+        "parentTankId": "port-novorossiysk-conquest-1-blue-unit-07"
       },
       {
-        "id": "port-novorossiysk-conquest-3-blue-unit-08",
+        "id": "port-novorossiysk-conquest-1-blue-unit-08",
         "type": "mainBattleTank",
         "x": 28.33,
         "y": 57.15
       },
       {
-        "id": "port-novorossiysk-conquest-3-blue-role-07",
+        "id": "port-novorossiysk-conquest-1-blue-role-07",
         "type": "highRiskSpot",
         "x": 28.33,
         "y": 57.15,
-        "parentTankId": "port-novorossiysk-conquest-3-blue-unit-08"
+        "parentTankId": "port-novorossiysk-conquest-1-blue-unit-08"
       },
       {
-        "id": "port-novorossiysk-conquest-3-blue-unit-09",
+        "id": "port-novorossiysk-conquest-1-blue-unit-09",
         "type": "mainBattleTank",
         "x": 69.65,
         "y": 57.71
       },
       {
-        "id": "port-novorossiysk-conquest-3-blue-unit-10",
-        "type": "mainBattleTank",
+        "id": "port-novorossiysk-conquest-1-blue-unit-10",
+        "type": "lightTank",
         "x": 43.4,
         "y": 58.33
       },
       {
-        "id": "port-novorossiysk-conquest-3-blue-role-08",
-        "type": "battleLine",
+        "id": "port-novorossiysk-conquest-1-blue-role-08",
+        "type": "highRiskSpot",
         "x": 43.4,
         "y": 58.33,
-        "parentTankId": "port-novorossiysk-conquest-3-blue-unit-10"
+        "parentTankId": "port-novorossiysk-conquest-1-blue-unit-10"
       },
       {
-        "id": "port-novorossiysk-conquest-3-blue-unit-11",
+        "id": "port-novorossiysk-conquest-1-blue-unit-11",
         "type": "mainBattleTank",
         "x": 69.17,
         "y": 71.25
       },
       {
-        "id": "port-novorossiysk-conquest-3-blue-role-09",
+        "id": "port-novorossiysk-conquest-1-blue-role-09",
         "type": "highRiskSpot",
         "x": 69.17,
         "y": 71.25,
-        "parentTankId": "port-novorossiysk-conquest-3-blue-unit-11"
+        "parentTankId": "port-novorossiysk-conquest-1-blue-unit-11"
       },
       {
-        "id": "port-novorossiysk-conquest-3-blue-unit-12",
+        "id": "port-novorossiysk-conquest-1-blue-unit-12",
         "type": "mainBattleTank",
         "x": 46.74,
         "y": 79.58
       },
       {
-        "id": "port-novorossiysk-conquest-3-blue-role-10",
+        "id": "port-novorossiysk-conquest-1-blue-role-10",
         "type": "highRiskSpot",
         "x": 46.74,
         "y": 79.58,
-        "parentTankId": "port-novorossiysk-conquest-3-blue-unit-12"
+        "parentTankId": "port-novorossiysk-conquest-1-blue-unit-12"
       },
       {
-        "id": "port-novorossiysk-conquest-3-blue-unit-13",
+        "id": "port-novorossiysk-conquest-1-blue-unit-13",
         "type": "mainBattleTank",
         "x": 73.33,
         "y": 81.04
       },
       {
-        "id": "port-novorossiysk-conquest-3-blue-unit-14",
+        "id": "port-novorossiysk-conquest-1-blue-unit-14",
         "type": "mainBattleTank",
         "x": 60.56,
         "y": 86.11
       },
       {
-        "id": "port-novorossiysk-conquest-3-blue-role-11",
+        "id": "port-novorossiysk-conquest-1-blue-role-11",
         "type": "highRiskSpot",
         "x": 60.56,
         "y": 86.11,
-        "parentTankId": "port-novorossiysk-conquest-3-blue-unit-14"
+        "parentTankId": "port-novorossiysk-conquest-1-blue-unit-14"
       },
       {
         "id": "mudkoj9b-1v4wm9",
         "type": "spawnKill",
         "x": 51.6,
         "y": 42.22,
-        "parentTankId": "port-novorossiysk-conquest-3-blue-unit-03"
+        "parentTankId": "port-novorossiysk-conquest-1-blue-unit-03"
       },
       {
         "id": "mudkoqnz-6vajja",
         "type": "spawnKill",
         "x": 69.65,
         "y": 57.71,
-        "parentTankId": "port-novorossiysk-conquest-3-blue-unit-09"
+        "parentTankId": "port-novorossiysk-conquest-1-blue-unit-09"
       },
       {
         "id": "mudkoww1-rtzm2m",
         "type": "spawnKill",
         "x": 73.33,
         "y": 81.04,
-        "parentTankId": "port-novorossiysk-conquest-3-blue-unit-13"
+        "parentTankId": "port-novorossiysk-conquest-1-blue-unit-13"
       }
     ],
     "Pradesh::domination-1|Red": [
@@ -53525,15 +54021,6 @@
         "endY": 68.44
       },
       {
-        "id": "mu1htxz5-g0zj5s",
-        "type": "aimHere",
-        "parentTankId": "mu1htvgp-z2utlx",
-        "startX": 10.72,
-        "startY": 6.91,
-        "endX": 58.07,
-        "endY": 7.26
-      },
-      {
         "id": "mu1hu532-7wuwyn",
         "type": "aimHere",
         "parentTankId": "mu1higmq-vgx86g",
@@ -53550,27 +54037,54 @@
         "startY": 67.46,
         "endX": 93.98,
         "endY": 75.26
+      },
+      {
+        "id": "mul3f2oy-mukvm7",
+        "type": "aimHere",
+        "parentTankId": "mu1htvgp-z2utlx",
+        "startX": 20.03,
+        "startY": 11.56,
+        "endX": 49.74,
+        "endY": 3.91
+      },
+      {
+        "id": "mul3fhum-jvwhwv",
+        "type": "aimHere",
+        "parentTankId": "mul3fexa-anx0dw",
+        "startX": 16.81,
+        "startY": 74.89,
+        "endX": 62.34,
+        "endY": 53.61
+      },
+      {
+        "id": "mul3fpkq-vx6dk5",
+        "type": "aimHere",
+        "parentTankId": "mul3fk8m-8p4b7v",
+        "startX": 51.39,
+        "startY": 68.38,
+        "endX": 65.46,
+        "endY": 51.43
+      },
+      {
+        "id": "mul3hfrl-qooe5c",
+        "type": "aimHere",
+        "parentTankId": "mul3ghj1-ige2eb",
+        "startX": 31.75,
+        "startY": 52.04,
+        "endX": 59.73,
+        "endY": 67.68
+      },
+      {
+        "id": "mul3jjr9-1vjzfp",
+        "type": "aimHere",
+        "parentTankId": "mu1htvgp-z2utlx",
+        "startX": 20.03,
+        "startY": 11.56,
+        "endX": 44.87,
+        "endY": 11.38
       }
     ],
     "Fields of Poland::domination-1|Red": [
-      {
-        "id": "mu1hqsjc-yquzsh",
-        "type": "aimHere",
-        "parentTankId": "mu1hctg9-mjahs5",
-        "startX": 33.19,
-        "startY": 52.84,
-        "endX": 10.99,
-        "endY": 74.2
-      },
-      {
-        "id": "mu1hsorz-m8fsl2",
-        "type": "aimHere",
-        "parentTankId": "mu1hsjoz-g4h1yt",
-        "startX": 90.7,
-        "startY": 91.58,
-        "endX": 50.89,
-        "endY": 69.15
-      },
       {
         "id": "mu1ht2b6-cdy830",
         "type": "aimHere",
@@ -53661,6 +54175,42 @@
             "y": 51.71
           }
         ]
+      },
+      {
+        "id": "mul3hnfc-lvqdnr",
+        "type": "aimHere",
+        "parentTankId": "mu1hsjoz-g4h1yt",
+        "startX": 90.7,
+        "startY": 91.58,
+        "endX": 55.47,
+        "endY": 68.29
+      },
+      {
+        "id": "mul3hqc7-d3ctuv",
+        "type": "aimHere",
+        "parentTankId": "mu1hr8dn-z9bm0j",
+        "startX": 58.77,
+        "startY": 67.25,
+        "endX": 34.1,
+        "endY": 53.34
+      },
+      {
+        "id": "mul3ieuv-srg9i5",
+        "type": "aimHere",
+        "parentTankId": "mu1hctg9-mjahs5",
+        "startX": 33.19,
+        "startY": 52.84,
+        "endX": 9.51,
+        "endY": 82.45
+      },
+      {
+        "id": "mul3iht1-mgz1nv",
+        "type": "aimHere",
+        "parentTankId": "mu1hctg9-mjahs5",
+        "startX": 33.19,
+        "startY": 52.84,
+        "endX": 8.3,
+        "endY": 75.33
       }
     ],
     "Finland::domination-1|Red": [
@@ -55811,20 +56361,11 @@
         "endY": 95.07
       },
       {
-        "id": "mujt8xp9-n4pn5q",
-        "type": "aimHere",
-        "parentTankId": "mujt89d0-c3hfu6",
-        "startX": 64.16,
-        "startY": 52.21,
-        "endX": 68.46,
-        "endY": 82.05
-      },
-      {
         "id": "mujt8znv-7uqygb",
         "type": "aimHere",
         "parentTankId": "mujt89d0-c3hfu6",
-        "startX": 64.16,
-        "startY": 52.21,
+        "startX": 64.51,
+        "startY": 52.3,
         "endX": 95.51,
         "endY": 54.49
       },
@@ -55832,8 +56373,8 @@
         "id": "mujt92gh-bw773w",
         "type": "aimHere",
         "parentTankId": "mujt89d0-c3hfu6",
-        "startX": 64.16,
-        "startY": 52.21,
+        "startX": 64.51,
+        "startY": 52.3,
         "endX": 87.04,
         "endY": 67.13
       },
@@ -55850,8 +56391,8 @@
         "id": "mujt9r9x-08dlcl",
         "type": "aimHere",
         "parentTankId": "mujt89d0-c3hfu6",
-        "startX": 64.16,
-        "startY": 52.21,
+        "startX": 64.51,
+        "startY": 52.3,
         "endX": 76.93,
         "endY": 89.57
       },
@@ -55863,6 +56404,33 @@
         "startY": 47.44,
         "endX": 59.64,
         "endY": 55.6
+      },
+      {
+        "id": "mukpenhc-y0wa8v",
+        "type": "aimHere",
+        "parentTankId": "mukpejaz-8qbqk8",
+        "startX": 96.66,
+        "startY": 19.72,
+        "endX": 89.18,
+        "endY": 68.03
+      },
+      {
+        "id": "mukpf2as-036xq0",
+        "type": "aimHere",
+        "parentTankId": "mukpcma1-psbjoe",
+        "startX": 32.36,
+        "startY": 72.81,
+        "endX": 19.24,
+        "endY": 94.44
+      },
+      {
+        "id": "mukpf3z0-5h5ud9",
+        "type": "aimHere",
+        "parentTankId": "mukpcfhy-d53rxt",
+        "startX": 9.17,
+        "startY": 70.2,
+        "endX": 17.42,
+        "endY": 94.79
       }
     ],
     "Flanders::domination-1|Red": [
@@ -55876,67 +56444,139 @@
         "endY": 36.58
       },
       {
-        "id": "mujtpid6-b8f90o",
+        "id": "muju3xxj-fyo7hu",
+        "type": "aimHere",
+        "parentTankId": "muju3r75-2ubc5i",
+        "startX": 44.06,
+        "startY": 21.49,
+        "endX": 70.59,
+        "endY": 9.12
+      },
+      {
+        "id": "mukpd35w-keluzk",
+        "type": "aimHere",
+        "parentTankId": "mukpd05p-g3t69d",
+        "startX": 38.24,
+        "startY": 20.48,
+        "endX": 18.72,
+        "endY": 9.3
+      },
+      {
+        "id": "mukpe81p-ooth23",
+        "type": "aimHere",
+        "parentTankId": "mukpdium-gm3wkh",
+        "startX": 84.32,
+        "startY": 67.59,
+        "endX": 81.89,
+        "endY": 44.57
+      },
+      {
+        "id": "mulgd7ze-2ny4i0",
+        "type": "aimHere",
+        "parentTankId": "mukpdjw7-bpeook",
+        "startX": 90.31,
+        "startY": 62.12,
+        "endX": 70.23,
+        "endY": 43.36
+      },
+      {
+        "id": "mulgdfov-53hkgv",
         "type": "aimHere",
         "parentTankId": "mujtp2w6-7h0meq",
         "startX": 36.01,
         "startY": 64.99,
-        "endX": 51.65,
-        "endY": 52.13
+        "endX": 41.66,
+        "endY": 48.17
       },
       {
-        "id": "mujtq4a0-hajtiq",
+        "id": "mulgt944-nn49ls",
         "type": "aimHere",
-        "parentTankId": "mujtpy4h-m63fqk",
-        "startX": 50.7,
-        "startY": 42.4,
-        "endX": 66.16,
-        "endY": 17.2
+        "parentTankId": "mulgt2ba-ah19r1",
+        "startX": 1.71,
+        "startY": 18.84,
+        "endX": 17.26,
+        "endY": 8.98
       },
       {
-        "id": "mujtqgme-e2npd0",
-        "type": "aimHere",
-        "parentTankId": "mujtqdde-ydq7qe",
-        "startX": 3.43,
-        "startY": 48.57,
-        "endX": 20.81,
-        "endY": 41.18
-      },
-      {
-        "id": "mujtqlik-4nac9l",
-        "type": "aimHere",
-        "parentTankId": "mujtqdde-ydq7qe",
-        "startX": 3.43,
-        "startY": 48.57,
-        "endX": 35.32,
-        "endY": 45.87
-      },
-      {
-        "id": "mujtqyxe-ou362e",
-        "type": "aimHere",
-        "parentTankId": "mujtqvr3-7mfy7o",
-        "startX": 4.3,
-        "startY": 39.36,
-        "endX": 20.72,
-        "endY": 40.23
-      },
-      {
-        "id": "muju3ilb-i4rmyh",
+        "id": "mulgxxka-io8nfb",
         "type": "aimHere",
         "parentTankId": "mujtq6y1-fx8l66",
-        "startX": 78.67,
-        "startY": 26.41,
-        "endX": 77.63,
-        "endY": 14.25
+        "startX": 92.1,
+        "startY": 12.77,
+        "endX": 73.51,
+        "endY": 9.48
       },
       {
-        "id": "muju3xxj-fyo7hu",
+        "id": "mulh7aqp-u0u3px",
         "type": "aimHere",
-        "parentTankId": "muju3r75-2ubc5i",
-        "startX": 42.79,
-        "startY": 20.85,
-        "endX": 70.59,
-        "endY": 9.12
+        "parentTankId": "mulh72l1-fhhl8n",
+        "startX": 0.95,
+        "startY": 49.05,
+        "endX": 2.21,
+        "endY": 24.78
+      },
+      {
+        "id": "mulh825h-ba42eg",
+        "type": "aimHere",
+        "parentTankId": "mulh72l1-fhhl8n",
+        "startX": 0.95,
+        "startY": 49.05,
+        "endX": 14.22,
+        "endY": 31.98
+      },
+      {
+        "id": "mulhmeet-5chfy3",
+        "type": "aimHere",
+        "parentTankId": "mulgewno-bc8956",
+        "startX": 78.95,
+        "startY": 58.91,
+        "endX": 67.32,
+        "endY": 30.21
+      },
+      {
+        "id": "mulhmph9-pksgnl",
+        "type": "aimHere",
+        "parentTankId": "mujtpy4h-m63fqk",
+        "startX": 52.4,
+        "startY": 42.86,
+        "endX": 95.01,
+        "endY": 42.23
+      },
+      {
+        "id": "mulhmvym-m1n4ow",
+        "type": "aimHere",
+        "parentTankId": "mulgyl40-cpm9ab",
+        "startX": 46.21,
+        "startY": 41.97,
+        "endX": 20.8,
+        "endY": 30.09
+      },
+      {
+        "id": "mulhnb3g-2m89o9",
+        "type": "aimHere",
+        "parentTankId": "mukpddyh-06z7mf",
+        "startX": 94.22,
+        "startY": 71.59,
+        "endX": 96.4,
+        "endY": 32.74
+      },
+      {
+        "id": "mulhovn7-8g8cks",
+        "type": "aimHere",
+        "parentTankId": "mujtqdde-ydq7qe",
+        "startX": 8.53,
+        "startY": 50.32,
+        "endX": 30.28,
+        "endY": 44.25
+      },
+      {
+        "id": "mulhppnq-zdqrjq",
+        "type": "aimHere",
+        "parentTankId": "mujtqvr3-7mfy7o",
+        "startX": 2.72,
+        "startY": 38.81,
+        "endX": 27.62,
+        "endY": 42.23
       }
     ],
     "Frozen Pass::domination-1|Blue": [],
@@ -63510,8 +64150,190 @@
         ]
       }
     ],
-    "Normandy::domination-1|Red": [],
-    "Normandy::domination-1|Blue": [],
+    "Normandy::domination-1|Red": [
+      {
+        "id": "mujwipee-pmdvox",
+        "type": "aimHere",
+        "parentTankId": "mujwikg3-hn6xgt",
+        "startX": 36.62,
+        "startY": 58.3,
+        "endX": 8.38,
+        "endY": 50.13
+      },
+      {
+        "id": "mujwixpm-2px29a",
+        "type": "aimHere",
+        "parentTankId": "mujwitnb-a3wn5y",
+        "startX": 33.84,
+        "startY": 39.1,
+        "endX": 6.56,
+        "endY": 46.66
+      },
+      {
+        "id": "mujwj5iy-7k2z3h",
+        "type": "aimHere",
+        "parentTankId": "mujwj1jr-seo1fx",
+        "startX": 25.15,
+        "startY": 43.79,
+        "endX": 8.91,
+        "endY": 69.5
+      },
+      {
+        "id": "mujwjlv6-fmyg2y",
+        "type": "aimHere",
+        "parentTankId": "mujwi7l1-09s646",
+        "startX": 44.87,
+        "startY": 97.83,
+        "endX": 32.28,
+        "endY": 96.87
+      },
+      {
+        "id": "mujwkpiw-xar3s2",
+        "type": "aimHere",
+        "parentTankId": "mujwkl2t-gztvaz",
+        "startX": 87.1,
+        "startY": 79.24,
+        "endX": 14.73,
+        "endY": 80.63
+      },
+      {
+        "id": "mujwkun6-e37hwb",
+        "type": "aimHere",
+        "parentTankId": "mujwhx2q-r3j04p",
+        "startX": 69.98,
+        "startY": 97.57,
+        "endX": 48.7,
+        "endY": 81.06
+      },
+      {
+        "id": "mujwl5ro-e3pmz6",
+        "type": "aimHere",
+        "parentTankId": "mujwhigr-329y4a",
+        "startX": 52,
+        "startY": 40.92,
+        "endX": 30.97,
+        "endY": 54.04
+      },
+      {
+        "id": "mujwl84u-4ritvv",
+        "type": "aimHere",
+        "parentTankId": "mujwhigr-329y4a",
+        "startX": 52,
+        "startY": 40.92,
+        "endX": 31.58,
+        "endY": 39.18
+      },
+      {
+        "id": "mujwnett-wy55or",
+        "type": "aimHere",
+        "parentTankId": "mujwhr01-tt3cvg",
+        "startX": 55.56,
+        "startY": 56.04,
+        "endX": 45.05,
+        "endY": 56.04
+      },
+      {
+        "id": "mujworxn-haq4zk",
+        "type": "aimHere",
+        "parentTankId": "mujwjeih-ow1p4m",
+        "startX": 32.88,
+        "startY": 93.74,
+        "endX": 11.34,
+        "endY": 79.5
+      }
+    ],
+    "Normandy::domination-1|Blue": [
+      {
+        "id": "mujwkdrc-c02b8k",
+        "type": "aimHere",
+        "parentTankId": "mujwh2ap-2n7vqs",
+        "startX": 77.54,
+        "startY": 88.36,
+        "endX": 92.05,
+        "endY": 69.94
+      },
+      {
+        "id": "mujwkfp6-f2mpmc",
+        "type": "aimHere",
+        "parentTankId": "mujwgfbb-y2ggq9",
+        "startX": 33.23,
+        "startY": 97.39,
+        "endX": 72.59,
+        "endY": 96.87
+      },
+      {
+        "id": "mujwlc4d-s7652g",
+        "type": "aimHere",
+        "parentTankId": "mujwgc7o-ee2uaw",
+        "startX": 50.17,
+        "startY": 40.4,
+        "endX": 77.63,
+        "endY": 43.35
+      },
+      {
+        "id": "mujwlg9f-y6n0q8",
+        "type": "aimHere",
+        "parentTankId": "mujwgc7o-ee2uaw",
+        "startX": 50.17,
+        "startY": 40.4,
+        "endX": 64.94,
+        "endY": 57.69
+      },
+      {
+        "id": "mujwlicp-dq29dd",
+        "type": "aimHere",
+        "parentTankId": "mujwgwbj-941oj8",
+        "startX": 80.23,
+        "startY": 44.31,
+        "endX": 92.66,
+        "endY": 48.65
+      },
+      {
+        "id": "mujwll6w-kwjgs1",
+        "type": "aimHere",
+        "parentTankId": "mujwg6bt-0s7aih",
+        "startX": 45.05,
+        "startY": 55.26,
+        "endX": 56.95,
+        "endY": 56.56
+      },
+      {
+        "id": "mujwlpg5-n106pp",
+        "type": "aimHere",
+        "parentTankId": "mujwg82y-84v4qq",
+        "startX": 49.83,
+        "startY": 64.64,
+        "endX": 86.14,
+        "endY": 60.38
+      },
+      {
+        "id": "mujwlrb3-gpvj4n",
+        "type": "aimHere",
+        "parentTankId": "mujwg82y-84v4qq",
+        "startX": 49.83,
+        "startY": 64.64,
+        "endX": 81.36,
+        "endY": 55.78
+      },
+      {
+        "id": "mujwlu6x-j1hipm",
+        "type": "aimHere",
+        "parentTankId": "mujwgj05-3v4gh3",
+        "startX": 26.46,
+        "startY": 88.44,
+        "endX": 82.67,
+        "endY": 85.32
+      },
+      {
+        "id": "mujwnv35-53jftb",
+        "type": "aimHere",
+        "parentTankId": "mujwg82y-84v4qq",
+        "startX": 49.83,
+        "startY": 64.64,
+        "endX": 52.09,
+        "endY": 41.09
+      }
+    ],
     "North Holland::domination-1|Red": [
       {
         "id": "mtim9rqp-rbg61g",
@@ -64726,9 +65548,9 @@
         ]
       }
     ],
-    "Port Novorossiysk::conquest-3|Red": [
+    "Port Novorossiysk::conquest-1|Red": [
       {
-        "id": "port-novorossiysk-conquest-3-red-route-01",
+        "id": "port-novorossiysk-conquest-1-red-route-01",
         "type": "route",
         "points": [
           {
@@ -64758,7 +65580,7 @@
         ]
       },
       {
-        "id": "port-novorossiysk-conquest-3-red-route-02",
+        "id": "port-novorossiysk-conquest-1-red-route-02",
         "type": "route",
         "points": [
           {
@@ -64776,33 +65598,7 @@
         ]
       },
       {
-        "id": "port-novorossiysk-conquest-3-red-route-03",
-        "type": "route",
-        "points": [
-          {
-            "x": 71.28,
-            "y": 62.79
-          },
-          {
-            "x": 69.76,
-            "y": 58.61
-          },
-          {
-            "x": 69.98,
-            "y": 57.26
-          },
-          {
-            "x": 68.67,
-            "y": 54.75
-          },
-          {
-            "x": 68.08,
-            "y": 54.3
-          }
-        ]
-      },
-      {
-        "id": "port-novorossiysk-conquest-3-red-route-04",
+        "id": "port-novorossiysk-conquest-1-red-route-04",
         "type": "route",
         "points": [
           {
@@ -64828,7 +65624,7 @@
         ]
       },
       {
-        "id": "port-novorossiysk-conquest-3-red-route-05",
+        "id": "port-novorossiysk-conquest-1-red-route-05",
         "type": "route",
         "points": [
           {
@@ -64854,7 +65650,7 @@
         ]
       },
       {
-        "id": "port-novorossiysk-conquest-3-red-route-06",
+        "id": "port-novorossiysk-conquest-1-red-route-06",
         "type": "route",
         "points": [
           {
@@ -64869,7 +65665,7 @@
         "dangerRoute": true
       },
       {
-        "id": "port-novorossiysk-conquest-3-red-route-07",
+        "id": "port-novorossiysk-conquest-1-red-route-07",
         "type": "route",
         "points": [
           {
@@ -64892,7 +65688,7 @@
         "dangerRoute": true
       },
       {
-        "id": "port-novorossiysk-conquest-3-red-route-08",
+        "id": "port-novorossiysk-conquest-1-red-route-08",
         "type": "route",
         "points": [
           {
@@ -64911,7 +65707,7 @@
         "dangerRoute": true
       },
       {
-        "id": "port-novorossiysk-conquest-3-red-route-09",
+        "id": "port-novorossiysk-conquest-1-red-route-09",
         "type": "route",
         "points": [
           {
@@ -64938,7 +65734,7 @@
         "dangerRoute": true
       },
       {
-        "id": "port-novorossiysk-conquest-3-red-route-10",
+        "id": "port-novorossiysk-conquest-1-red-route-10",
         "type": "route",
         "points": [
           {
@@ -64959,7 +65755,7 @@
       {
         "id": "mttbqd3w-5nz17w",
         "type": "aimHere",
-        "parentTankId": "port-novorossiysk-conquest-3-red-unit-03",
+        "parentTankId": "port-novorossiysk-conquest-1-red-unit-03",
         "startX": 37.36,
         "startY": 35.97,
         "endX": 29.69,
@@ -64968,7 +65764,7 @@
       {
         "id": "mttbqhyq-c8xp6e",
         "type": "aimHere",
-        "parentTankId": "port-novorossiysk-conquest-3-red-unit-05",
+        "parentTankId": "port-novorossiysk-conquest-1-red-unit-05",
         "startX": 21.88,
         "startY": 46.53,
         "endX": 47.53,
@@ -64977,7 +65773,7 @@
       {
         "id": "mttbqpzm-8612dh",
         "type": "aimHere",
-        "parentTankId": "port-novorossiysk-conquest-3-red-unit-04",
+        "parentTankId": "port-novorossiysk-conquest-1-red-unit-04",
         "startX": 12.64,
         "startY": 37.64,
         "endX": 41.28,
@@ -64986,7 +65782,7 @@
       {
         "id": "mttbqxtw-6sfb86",
         "type": "aimHere",
-        "parentTankId": "port-novorossiysk-conquest-3-red-unit-07",
+        "parentTankId": "port-novorossiysk-conquest-1-red-unit-07",
         "startX": 40.69,
         "startY": 55.21,
         "endX": 51.3,
@@ -64995,7 +65791,7 @@
       {
         "id": "mttbr0gk-695u49",
         "type": "aimHere",
-        "parentTankId": "port-novorossiysk-conquest-3-red-unit-07",
+        "parentTankId": "port-novorossiysk-conquest-1-red-unit-07",
         "startX": 40.69,
         "startY": 55.21,
         "endX": 37.5,
@@ -65004,7 +65800,7 @@
       {
         "id": "mttbr4v8-7eyxpc",
         "type": "aimHere",
-        "parentTankId": "port-novorossiysk-conquest-3-red-unit-08",
+        "parentTankId": "port-novorossiysk-conquest-1-red-unit-08",
         "startX": 70.83,
         "startY": 55.49,
         "endX": 45.83,
@@ -65013,7 +65809,7 @@
       {
         "id": "mttbr7a6-2na6dq",
         "type": "aimHere",
-        "parentTankId": "port-novorossiysk-conquest-3-red-unit-06",
+        "parentTankId": "port-novorossiysk-conquest-1-red-unit-06",
         "startX": 51.94,
         "startY": 50.83,
         "endX": 48.18,
@@ -65022,7 +65818,7 @@
       {
         "id": "mttbr9rs-jeq0yc",
         "type": "aimHere",
-        "parentTankId": "port-novorossiysk-conquest-3-red-unit-09",
+        "parentTankId": "port-novorossiysk-conquest-1-red-unit-09",
         "startX": 55.83,
         "startY": 64.86,
         "endX": 32.81,
@@ -65031,7 +65827,7 @@
       {
         "id": "mttbrbzc-wax09e",
         "type": "aimHere",
-        "parentTankId": "port-novorossiysk-conquest-3-red-unit-12",
+        "parentTankId": "port-novorossiysk-conquest-1-red-unit-12",
         "startX": 58.4,
         "startY": 71.67,
         "endX": 31.64,
@@ -65040,7 +65836,7 @@
       {
         "id": "mttbre98-jfvfvt",
         "type": "aimHere",
-        "parentTankId": "port-novorossiysk-conquest-3-red-unit-11",
+        "parentTankId": "port-novorossiysk-conquest-1-red-unit-11",
         "startX": 38.33,
         "startY": 70,
         "endX": 22.91,
@@ -65049,7 +65845,7 @@
       {
         "id": "mttbrg8q-lu10w9",
         "type": "aimHere",
-        "parentTankId": "port-novorossiysk-conquest-3-red-unit-13",
+        "parentTankId": "port-novorossiysk-conquest-1-red-unit-13",
         "startX": 46.46,
         "startY": 77.22,
         "endX": 21.48,
@@ -65058,25 +65854,16 @@
       {
         "id": "mttbrk18-au9rva",
         "type": "aimHere",
-        "parentTankId": "port-novorossiysk-conquest-3-red-unit-10",
+        "parentTankId": "port-novorossiysk-conquest-1-red-unit-10",
         "startX": 45.28,
         "startY": 68.47,
         "endX": 27.6,
         "endY": 44.78
       },
       {
-        "id": "mttbrr8o-ey6j2v",
-        "type": "aimHere",
-        "parentTankId": "port-novorossiysk-conquest-3-red-unit-01",
-        "startX": 20.49,
-        "startY": 7.5,
-        "endX": 32.94,
-        "endY": 12.75
-      },
-      {
         "id": "mttbrt3e-34kmd8",
         "type": "aimHere",
-        "parentTankId": "port-novorossiysk-conquest-3-red-unit-02",
+        "parentTankId": "port-novorossiysk-conquest-1-red-unit-02",
         "startX": 39.51,
         "startY": 15.62,
         "endX": 33.98,
@@ -65173,11 +65960,51 @@
             "y": 75.15
           }
         ]
+      },
+      {
+        "id": "mujwwmcl-774ybu",
+        "type": "aimHere",
+        "parentTankId": "mujwwhvp-lz8puu",
+        "startX": 25.07,
+        "startY": 17.12,
+        "endX": 36.53,
+        "endY": 11.56
+      },
+      {
+        "id": "mujwwu8l-s6qcm1",
+        "type": "aimHere",
+        "parentTankId": "port-novorossiysk-conquest-1-red-unit-01",
+        "startX": 20.49,
+        "startY": 7.5,
+        "endX": 33.67,
+        "endY": 10.86
+      },
+      {
+        "id": "mujwyftv-9ekeht",
+        "type": "route",
+        "points": [
+          {
+            "x": 71.72,
+            "y": 63.08
+          },
+          {
+            "x": 70.24,
+            "y": 59.43
+          },
+          {
+            "x": 70.24,
+            "y": 57.52
+          },
+          {
+            "x": 70.76,
+            "y": 56.04
+          }
+        ]
       }
     ],
-    "Port Novorossiysk::conquest-3|Blue": [
+    "Port Novorossiysk::conquest-1|Blue": [
       {
-        "id": "port-novorossiysk-conquest-3-blue-route-01",
+        "id": "port-novorossiysk-conquest-1-blue-route-01",
         "type": "route",
         "points": [
           {
@@ -65199,7 +66026,7 @@
         ]
       },
       {
-        "id": "port-novorossiysk-conquest-3-blue-route-02",
+        "id": "port-novorossiysk-conquest-1-blue-route-02",
         "type": "route",
         "points": [
           {
@@ -65221,7 +66048,7 @@
         ]
       },
       {
-        "id": "port-novorossiysk-conquest-3-blue-route-03",
+        "id": "port-novorossiysk-conquest-1-blue-route-03",
         "type": "route",
         "points": [
           {
@@ -65239,7 +66066,7 @@
         ]
       },
       {
-        "id": "port-novorossiysk-conquest-3-blue-route-04",
+        "id": "port-novorossiysk-conquest-1-blue-route-04",
         "type": "route",
         "points": [
           {
@@ -65261,7 +66088,7 @@
         ]
       },
       {
-        "id": "port-novorossiysk-conquest-3-blue-route-05",
+        "id": "port-novorossiysk-conquest-1-blue-route-05",
         "type": "route",
         "points": [
           {
@@ -65279,7 +66106,7 @@
         ]
       },
       {
-        "id": "port-novorossiysk-conquest-3-blue-route-06",
+        "id": "port-novorossiysk-conquest-1-blue-route-06",
         "type": "route",
         "points": [
           {
@@ -65297,7 +66124,7 @@
         ]
       },
       {
-        "id": "port-novorossiysk-conquest-3-blue-route-07",
+        "id": "port-novorossiysk-conquest-1-blue-route-07",
         "type": "route",
         "points": [
           {
@@ -65319,7 +66146,7 @@
         ]
       },
       {
-        "id": "port-novorossiysk-conquest-3-blue-route-08",
+        "id": "port-novorossiysk-conquest-1-blue-route-08",
         "type": "route",
         "points": [
           {
@@ -65333,7 +66160,7 @@
         ]
       },
       {
-        "id": "port-novorossiysk-conquest-3-blue-route-09",
+        "id": "port-novorossiysk-conquest-1-blue-route-09",
         "type": "route",
         "points": [
           {
@@ -65355,7 +66182,7 @@
         ]
       },
       {
-        "id": "port-novorossiysk-conquest-3-blue-route-10",
+        "id": "port-novorossiysk-conquest-1-blue-route-10",
         "type": "route",
         "points": [
           {
@@ -65369,7 +66196,7 @@
         ]
       },
       {
-        "id": "port-novorossiysk-conquest-3-blue-route-11",
+        "id": "port-novorossiysk-conquest-1-blue-route-11",
         "type": "route",
         "points": [
           {
@@ -65388,7 +66215,7 @@
         "dangerRoute": true
       },
       {
-        "id": "port-novorossiysk-conquest-3-blue-route-12",
+        "id": "port-novorossiysk-conquest-1-blue-route-12",
         "type": "route",
         "points": [
           {
@@ -65407,7 +66234,7 @@
         "dangerRoute": true
       },
       {
-        "id": "port-novorossiysk-conquest-3-blue-route-13",
+        "id": "port-novorossiysk-conquest-1-blue-route-13",
         "type": "route",
         "points": [
           {
@@ -65432,7 +66259,7 @@
       {
         "id": "mudknvox-986es0",
         "type": "aimHere",
-        "parentTankId": "port-novorossiysk-conquest-3-blue-unit-10",
+        "parentTankId": "port-novorossiysk-conquest-1-blue-unit-10",
         "startX": 43.4,
         "startY": 58.33,
         "endX": 52.35,
@@ -65441,7 +66268,7 @@
       {
         "id": "mudknzib-ey5d0q",
         "type": "aimHere",
-        "parentTankId": "port-novorossiysk-conquest-3-blue-unit-07",
+        "parentTankId": "port-novorossiysk-conquest-1-blue-unit-07",
         "startX": 50.21,
         "startY": 48.82,
         "endX": 40.44,
@@ -65450,7 +66277,7 @@
       {
         "id": "mudko2bt-a2bmrp",
         "type": "aimHere",
-        "parentTankId": "port-novorossiysk-conquest-3-blue-unit-06",
+        "parentTankId": "port-novorossiysk-conquest-1-blue-unit-06",
         "startX": 36.94,
         "startY": 47.92,
         "endX": 51.48,
@@ -65459,7 +66286,7 @@
       {
         "id": "mudko971-u3bj1y",
         "type": "aimHere",
-        "parentTankId": "port-novorossiysk-conquest-3-blue-unit-06",
+        "parentTankId": "port-novorossiysk-conquest-1-blue-unit-06",
         "startX": 36.94,
         "startY": 47.92,
         "endX": 59.56,
@@ -65468,7 +66295,7 @@
       {
         "id": "mudkofhl-tb0b2k",
         "type": "aimHere",
-        "parentTankId": "port-novorossiysk-conquest-3-blue-unit-02",
+        "parentTankId": "port-novorossiysk-conquest-1-blue-unit-02",
         "startX": 31.6,
         "startY": 37.01,
         "endX": 59.04,
@@ -65477,7 +66304,7 @@
       {
         "id": "mudkoohj-to672a",
         "type": "aimHere",
-        "parentTankId": "port-novorossiysk-conquest-3-blue-unit-03",
+        "parentTankId": "port-novorossiysk-conquest-1-blue-unit-03",
         "startX": 51.6,
         "startY": 42.22,
         "endX": 81.54,
@@ -65486,7 +66313,7 @@
       {
         "id": "mudkovch-sm2jfh",
         "type": "aimHere",
-        "parentTankId": "port-novorossiysk-conquest-3-blue-unit-09",
+        "parentTankId": "port-novorossiysk-conquest-1-blue-unit-09",
         "startX": 69.65,
         "startY": 57.71,
         "endX": 83.1,
@@ -65495,7 +66322,7 @@
       {
         "id": "mudkp0kn-qt6jnu",
         "type": "aimHere",
-        "parentTankId": "port-novorossiysk-conquest-3-blue-unit-13",
+        "parentTankId": "port-novorossiysk-conquest-1-blue-unit-13",
         "startX": 73.33,
         "startY": 81.04,
         "endX": 85.71,
@@ -65504,7 +66331,7 @@
       {
         "id": "mudkp39r-a5pgag",
         "type": "aimHere",
-        "parentTankId": "port-novorossiysk-conquest-3-blue-unit-13",
+        "parentTankId": "port-novorossiysk-conquest-1-blue-unit-13",
         "startX": 73.33,
         "startY": 81.04,
         "endX": 88.05,
@@ -65513,7 +66340,7 @@
       {
         "id": "mudkp7l3-n5xhy3",
         "type": "aimHere",
-        "parentTankId": "port-novorossiysk-conquest-3-blue-unit-14",
+        "parentTankId": "port-novorossiysk-conquest-1-blue-unit-14",
         "startX": 60.56,
         "startY": 86.11,
         "endX": 82.58,
@@ -65522,7 +66349,7 @@
       {
         "id": "mudkpcib-8p0msj",
         "type": "aimHere",
-        "parentTankId": "port-novorossiysk-conquest-3-blue-unit-12",
+        "parentTankId": "port-novorossiysk-conquest-1-blue-unit-12",
         "startX": 46.74,
         "startY": 79.58,
         "endX": 68.59,
@@ -65531,7 +66358,7 @@
       {
         "id": "mudkphiz-8uq8bx",
         "type": "aimHere",
-        "parentTankId": "port-novorossiysk-conquest-3-blue-unit-08",
+        "parentTankId": "port-novorossiysk-conquest-1-blue-unit-08",
         "startX": 28.33,
         "startY": 57.15,
         "endX": 45.74,
@@ -65540,7 +66367,7 @@
       {
         "id": "mudkpmez-8n557z",
         "type": "aimHere",
-        "parentTankId": "port-novorossiysk-conquest-3-blue-unit-05",
+        "parentTankId": "port-novorossiysk-conquest-1-blue-unit-05",
         "startX": 20.35,
         "startY": 47.57,
         "endX": 38.1,
@@ -65549,7 +66376,7 @@
       {
         "id": "mudkqkvz-bg9lwu",
         "type": "aimHere",
-        "parentTankId": "port-novorossiysk-conquest-3-blue-unit-01",
+        "parentTankId": "port-novorossiysk-conquest-1-blue-unit-01",
         "startX": 43.89,
         "startY": 22.85,
         "endX": 70.24,
@@ -65558,7 +66385,7 @@
       {
         "id": "mudkquu5-vy5p96",
         "type": "aimHere",
-        "parentTankId": "port-novorossiysk-conquest-3-blue-unit-01",
+        "parentTankId": "port-novorossiysk-conquest-1-blue-unit-01",
         "startX": 43.89,
         "startY": 22.85,
         "endX": 59.73,
@@ -65647,7 +66474,7 @@
       {
         "id": "mudl39t5-h15buk",
         "type": "aimHere",
-        "parentTankId": "port-novorossiysk-conquest-3-blue-unit-11",
+        "parentTankId": "port-novorossiysk-conquest-1-blue-unit-11",
         "startX": 69.17,
         "startY": 71.25,
         "endX": 84.06,
@@ -65656,7 +66483,7 @@
       {
         "id": "mujkfj63-anc9cn",
         "type": "aimHere",
-        "parentTankId": "port-novorossiysk-conquest-3-blue-unit-04",
+        "parentTankId": "port-novorossiysk-conquest-1-blue-unit-04",
         "startX": 27.36,
         "startY": 44.93,
         "endX": 46.09,
@@ -80040,9 +80867,9 @@
     "Darwin Hill::battle-1|Red": [],
     "Eastern Europe::domination-1|Red": [],
     "Eastern Europe::domination-1|Blue": [],
-    "Sands of Sinai::domination-1|Blue": [],
-    "Maginot Line::domination-2|Blue": []
+    "Maginot Line::domination-2|Blue": [],
+    "Sands of Sinai::domination-1|Blue": []
   },
-  "updatedAt": "2026-09-27T14:04:32.471Z",
-  "exportedAt": "2026-09-27T14:04:42.440Z"
+  "updatedAt": "2026-09-28T16:57:03.014Z",
+  "exportedAt": "2026-09-28T16:57:31.303Z"
 }
