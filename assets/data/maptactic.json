@@ -13,7 +13,7 @@
     "Ardennes": "2026-09-27",
     "Ash River": "2026-09-02",
     "Attica": "2026-09-27",
-    "Battle of Hürtgen Forest": "2026-09-23",
+    "Battle of Hürtgen Forest": "2026-09-29",
     "Berlin": "2026-09-11",
     "Breslau": "2026-09-23",
     "Campania": "2026-09-03",
@@ -64,7 +64,7 @@
     "Abandoned Factory": "2026-09-28T16:58:40Z",
     "Abandoned Town": "2026-09-13T23:30:35Z",
     "Advance to the Rhine": "2026-09-16T02:26:57Z",
-    "Alaska": "2026-09-29T02:53:31Z",
+    "Alaska": "2026-09-29T06:22:03Z",
     "American Desert": "2026-09-22T21:47:17Z",
     "Aral Sea": "2026-09-23T03:09:22Z",
     "Arctic Pier": "2026-09-15T01:05:22Z",
@@ -72,7 +72,7 @@
     "Ardennes": "2026-09-27T08:14:28Z",
     "Ash River": "2026-09-01T16:50:15Z",
     "Attica": "2026-09-27T08:23:04Z",
-    "Battle of Hürtgen Forest": "2026-09-22T18:52:38Z",
+    "Battle of Hürtgen Forest": "2026-09-29T08:28:20Z",
     "Berlin": "2026-09-10T23:37:22Z",
     "Breslau": "2026-09-23T02:55:50Z",
     "Campania": "2026-09-03T01:49:21Z",
@@ -6894,20 +6894,27 @@
       {
         "id": "mt703bzb-0qnuka",
         "type": "lightTank",
-        "x": 53.64,
-        "y": 7.44
+        "x": 62.9,
+        "y": 7.08,
+        "commentImages": [
+          "Battle of Hürtgen Forest/scr_ (35).png",
+          "Battle of Hürtgen Forest/scr_ (36).png"
+        ]
       },
       {
         "id": "mt703dob-64059y",
         "type": "mainBattleTank",
         "x": 45.21,
-        "y": 35.99
+        "y": 35.99,
+        "commentImages": [
+          "Battle of Hürtgen Forest/scr_ (38).png"
+        ]
       },
       {
         "id": "mt703nms-1bwrn4",
         "type": "sniper",
-        "x": 53.64,
-        "y": 7.44,
+        "x": 62.9,
+        "y": 7.08,
         "parentTankId": "mt703bzb-0qnuka"
       },
       {
@@ -6921,7 +6928,10 @@
         "id": "mt703qyf-9ujapw",
         "type": "mainBattleTank",
         "x": 61.08,
-        "y": 85.1
+        "y": 85.1,
+        "commentImages": [
+          "Battle of Hürtgen Forest/scr_ (29).png"
+        ]
       },
       {
         "id": "mt703s6k-s2ilpd",
@@ -6934,7 +6944,12 @@
         "id": "mtiwsyws-67kwui",
         "type": "mainBattleTank",
         "x": 50.53,
-        "y": 59.48
+        "y": 59.48,
+        "commentImages": [
+          "Battle of Hürtgen Forest/scr_ (18).png",
+          "Battle of Hürtgen Forest/scr_ (17).png",
+          "Battle of Hürtgen Forest/scr_ (16).png"
+        ]
       },
       {
         "id": "mtiwt079-qm10xv",
@@ -6965,7 +6980,13 @@
         "id": "mtw654l1-6ar7en",
         "type": "mainBattleTank",
         "x": 52.24,
-        "y": 76.12
+        "y": 76.12,
+        "commentImages": [
+          "Battle of Hürtgen Forest/scr_ (19).png",
+          "Battle of Hürtgen Forest/scr_ (20).png",
+          "Battle of Hürtgen Forest/scr_ (21).png",
+          "Battle of Hürtgen Forest/scr_ (22).png"
+        ]
       },
       {
         "id": "mtw656a8-1okaet",
@@ -6979,40 +7000,201 @@
         "type": "smokeshell",
         "x": 54.57,
         "y": 81.43
+      },
+      {
+        "id": "mumaivgf-qaprri",
+        "type": "mainBattleTank",
+        "x": 17.16,
+        "y": 69.24,
+        "commentImages": [
+          "Battle of Hürtgen Forest/scr_ (28).png"
+        ]
+      },
+      {
+        "id": "mumaixa6-8t7zm5",
+        "type": "spawnKill",
+        "x": 17.16,
+        "y": 69.24,
+        "parentTankId": "mumaivgf-qaprri"
+      },
+      {
+        "id": "mumbablp-fvcpvs",
+        "type": "tankDestroyer",
+        "x": 92.35,
+        "y": 90.14,
+        "commentImages": [
+          "Battle of Hürtgen Forest/scr_ (32).png",
+          "Battle of Hürtgen Forest/scr_ (33).png",
+          "Battle of Hürtgen Forest/scr_ (34).png"
+        ]
+      },
+      {
+        "id": "mumbaecr-2if1zl",
+        "type": "sniper",
+        "x": 92.35,
+        "y": 90.14,
+        "parentTankId": "mumbablp-fvcpvs"
+      },
+      {
+        "id": "mumbb9lg-508v6m",
+        "type": "mainBattleTank",
+        "x": 9.51,
+        "y": 47.7,
+        "commentImages": [
+          "Battle of Hürtgen Forest/scr_ (25).png",
+          "Battle of Hürtgen Forest/scr_ (24).png",
+          "Battle of Hürtgen Forest/scr_ (26).png"
+        ]
+      },
+      {
+        "id": "mumbbd97-k6d02r",
+        "type": "spawnKill",
+        "x": 9.51,
+        "y": 47.7,
+        "parentTankId": "mumbb9lg-508v6m"
+      },
+      {
+        "id": "mumbql06-6utxmc",
+        "type": "mainBattleTank",
+        "x": 45.07,
+        "y": 77.62,
+        "commentImages": [
+          "Battle of Hürtgen Forest/scr_ (23).png"
+        ]
+      },
+      {
+        "id": "mumbqmr1-epkdga",
+        "type": "highRiskSpot",
+        "x": 45.07,
+        "y": 77.62,
+        "parentTankId": "mumbql06-6utxmc"
+      },
+      {
+        "id": "mumcnlk8-g29ch7",
+        "type": "lightTank",
+        "x": 46.46,
+        "y": 10.62,
+        "commentImages": [
+          "Battle of Hürtgen Forest/scr_ (37).png"
+        ]
+      },
+      {
+        "id": "mumcntes-nuhuv4",
+        "type": "sniper",
+        "x": 46.46,
+        "y": 10.62,
+        "parentTankId": "mumcnlk8-g29ch7"
+      },
+      {
+        "id": "mumcr9i5-dfppjy",
+        "type": "lightTank",
+        "x": 31.8,
+        "y": 9.86,
+        "commentImages": [
+          "Battle of Hürtgen Forest/scr_ (39).png"
+        ]
+      },
+      {
+        "id": "mumcrc15-kq4fcu",
+        "type": "sniper",
+        "x": 31.8,
+        "y": 9.86,
+        "parentTankId": "mumcr9i5-dfppjy"
+      },
+      {
+        "id": "mume5eml-w31o8q",
+        "type": "tankDestroyer",
+        "x": 79.11,
+        "y": 50.3,
+        "commentImages": [
+          "Battle of Hürtgen Forest/scr_ (15).png"
+        ]
+      },
+      {
+        "id": "mume5fr7-zsmpex",
+        "type": "sniper",
+        "x": 79.11,
+        "y": 50.3,
+        "parentTankId": "mume5eml-w31o8q"
+      },
+      {
+        "id": "mumelmbk-4n29ss",
+        "type": "mainBattleTank",
+        "x": 56.43,
+        "y": 90.27,
+        "commentImages": [
+          "Battle of Hürtgen Forest/scr_ (30).png"
+        ]
+      },
+      {
+        "id": "mumelnt4-w909mz",
+        "type": "highRiskSpot",
+        "x": 56.43,
+        "y": 90.27,
+        "parentTankId": "mumelmbk-4n29ss"
+      },
+      {
+        "id": "mumemcn8-k1qm0v",
+        "type": "mainBattleTank",
+        "x": 52,
+        "y": 89.83,
+        "commentImages": [
+          "Battle of Hürtgen Forest/scr_ (31).png"
+        ]
+      },
+      {
+        "id": "mumeme1m-y7n2l9",
+        "type": "sniper",
+        "x": 52,
+        "y": 89.83,
+        "parentTankId": "mumemcn8-k1qm0v"
       }
     ],
     "Battle of Hürtgen Forest::domination-1|Red": [
       {
         "id": "mtiwoosv-855c9m",
         "type": "tankDestroyerRed",
-        "x": 52.84,
-        "y": 85.99
+        "x": 51.74,
+        "y": 86.71,
+        "commentImages": [
+          "Battle of Hürtgen Forest/scr_ (11).png",
+          "Battle of Hürtgen Forest/scr_ (12).png",
+          "Battle of Hürtgen Forest/scr_ (9).png"
+        ]
       },
       {
         "id": "mtiwopwj-2n4gzz",
         "type": "sniper",
-        "x": 52.84,
-        "y": 85.99,
+        "x": 51.74,
+        "y": 86.71,
         "parentTankId": "mtiwoosv-855c9m"
       },
       {
         "id": "mtiwr9px-c1wngp",
         "type": "lightTankRed",
-        "x": 48.58,
-        "y": 8.59
+        "x": 56.86,
+        "y": 10.17,
+        "commentImages": [
+          "Battle of Hürtgen Forest/scr_ (5).png"
+        ]
       },
       {
         "id": "mtiwrr0v-da9gv7",
         "type": "sniper",
-        "x": 48.58,
-        "y": 8.59,
+        "x": 56.86,
+        "y": 10.17,
         "parentTankId": "mtiwr9px-c1wngp"
       },
       {
         "id": "mtiwtzbn-gim10t",
         "type": "mainBattleTankRed",
         "x": 51.51,
-        "y": 57.44
+        "y": 57.44,
+        "commentImages": [
+          "Battle of Hürtgen Forest/scr_ (6).png",
+          "Battle of Hürtgen Forest/scr_ (13).png",
+          "Battle of Hürtgen Forest/scr_ (14).png"
+        ]
       },
       {
         "id": "mtiwu2xt-kkvp8w",
@@ -7024,21 +7206,25 @@
       {
         "id": "mtiww34s-qabcul",
         "type": "mainBattleTankRed",
-        "x": 38.83,
-        "y": 65.95
+        "x": 39.51,
+        "y": 66.37,
+        "commentImages": [
+          "Battle of Hürtgen Forest/scr_ (7).png",
+          "Battle of Hürtgen Forest/scr_ (8).png"
+        ]
       },
       {
         "id": "mtiww47q-dvnisu",
         "type": "battleLine",
-        "x": 38.83,
-        "y": 65.95,
+        "x": 39.51,
+        "y": 66.37,
         "parentTankId": "mtiww34s-qabcul"
       },
       {
         "id": "mtw5n7hf-43ghul",
         "type": "smokeshell",
-        "x": 5.5,
-        "y": 34.51
+        "x": 5.78,
+        "y": 32.75
       },
       {
         "id": "mtw5na5b-1waby0",
@@ -7055,15 +7241,116 @@
       {
         "id": "mtw647rt-1ivteb",
         "type": "lightTankRed",
-        "x": 97.86,
-        "y": 15.94
+        "x": 94.66,
+        "y": 16.59,
+        "commentImages": [
+          "Battle of Hürtgen Forest/scr_ (3).png"
+        ]
       },
       {
         "id": "mtw649lc-vccx5w",
         "type": "spawnKill",
-        "x": 97.86,
-        "y": 15.94,
+        "x": 94.66,
+        "y": 16.59,
         "parentTankId": "mtw647rt-1ivteb"
+      },
+      {
+        "id": "mumaiddn-wi73fz",
+        "type": "mainBattleTankRed",
+        "x": 87.88,
+        "y": 57.43,
+        "commentImages": [
+          "Battle of Hürtgen Forest/scr_ (2).png"
+        ]
+      },
+      {
+        "id": "mumaifoe-rt6041",
+        "type": "spawnKill",
+        "x": 87.88,
+        "y": 57.43,
+        "parentTankId": "mumaiddn-wi73fz"
+      },
+      {
+        "id": "mumain2l-mr4mdc",
+        "type": "mainBattleTankRed",
+        "x": 82.49,
+        "y": 37.88,
+        "commentImages": [
+          "Battle of Hürtgen Forest/scr_ (4).png"
+        ]
+      },
+      {
+        "id": "mumaip5m-yz6zyg",
+        "type": "spawnKill",
+        "x": 82.49,
+        "y": 37.88,
+        "parentTankId": "mumain2l-mr4mdc"
+      },
+      {
+        "id": "mumd9nmv-37kxc6",
+        "type": "mainBattleTankRed",
+        "x": 46.96,
+        "y": 11.56,
+        "commentImages": [
+          "Battle of Hürtgen Forest/scr_ (1).png",
+          "Battle of Hürtgen Forest/scr_ (44).png"
+        ]
+      },
+      {
+        "id": "mumd9ouv-cfgvku",
+        "type": "sniper",
+        "x": 46.96,
+        "y": 11.56,
+        "parentTankId": "mumd9nmv-37kxc6"
+      },
+      {
+        "id": "mumesnsk-2zp5oz",
+        "type": "lightTankRed",
+        "x": 6.56,
+        "y": 35.79,
+        "commentImages": [
+          "Battle of Hürtgen Forest/scr_ (40).png"
+        ]
+      },
+      {
+        "id": "mumeswjg-ro1oll",
+        "type": "sniper",
+        "x": 6.56,
+        "y": 35.79,
+        "parentTankId": "mumesnsk-2zp5oz"
+      },
+      {
+        "id": "mumeta0w-e1ocz2",
+        "type": "mainBattleTankRed",
+        "x": 24.63,
+        "y": 11.99,
+        "commentImages": [
+          "Battle of Hürtgen Forest/scr_ (41).png",
+          "Battle of Hürtgen Forest/scr_ (43).png"
+        ]
+      },
+      {
+        "id": "mumetg4o-slhh7v",
+        "type": "sniper",
+        "x": 24.63,
+        "y": 11.99,
+        "parentTankId": "mumeta0w-e1ocz2"
+      },
+      {
+        "id": "mumeu05q-q17osg",
+        "type": "mainBattleTankRed",
+        "x": 26.11,
+        "y": 18.68,
+        "commentImages": [
+          "Battle of Hürtgen Forest/scr_ (42).png"
+        ]
+      },
+      {
+        "id": "mumeuaf9-0p3ka5",
+        "type": "sniper",
+        "x": 26.11,
+        "y": 18.68,
+        "parentTankId": "mumeu05q-q17osg"
       }
     ],
     "Battle of Hürtgen Forest::domination-2|Blue": [
@@ -30944,6 +31231,15 @@
           }
         ],
         "dangerRoute": true
+      },
+      {
+        "id": "mumagyim-9c9wkh",
+        "type": "aimHere",
+        "parentTankId": "msz8yxb5-6o577b",
+        "startX": 46.46,
+        "startY": 52.17,
+        "endX": 54.08,
+        "endY": 44.48
       }
     ],
     "Alaska::domination-1|Blue": [
@@ -38989,15 +39285,6 @@
         "dangerRoute": true
       },
       {
-        "id": "mtiwpg37-iiz9v8",
-        "type": "aimHere",
-        "parentTankId": "mt703qyf-9ujapw",
-        "startX": 61.08,
-        "startY": 85.1,
-        "endX": 48.94,
-        "endY": 66.31
-      },
-      {
         "id": "mtiwpvz9-g1iono",
         "type": "route",
         "points": [
@@ -39108,32 +39395,6 @@
         "dangerRoute": true
       },
       {
-        "id": "mtiwqurl-euiq1o",
-        "type": "route",
-        "points": [
-          {
-            "x": 74.29,
-            "y": 9.21
-          },
-          {
-            "x": 69.24,
-            "y": 8.95
-          },
-          {
-            "x": 66.14,
-            "y": 8.5
-          },
-          {
-            "x": 56.92,
-            "y": 7.88
-          },
-          {
-            "x": 53.64,
-            "y": 7.53
-          }
-        ]
-      },
-      {
         "id": "mtiwt819-utrv7z",
         "type": "aimHere",
         "parentTankId": "mtiwsyws-67kwui",
@@ -39221,51 +39482,6 @@
         "endY": 75.8
       },
       {
-        "id": "mtw5ns82-l7sd1f",
-        "type": "aimHere",
-        "parentTankId": "mt703dob-64059y",
-        "startX": 45.21,
-        "startY": 35.99,
-        "endX": 49.91,
-        "endY": 51.39
-      },
-      {
-        "id": "mtw63utg-qi8zbj",
-        "type": "aimHere",
-        "parentTankId": "mt703bzb-0qnuka",
-        "startX": 53.64,
-        "startY": 7.44,
-        "endX": 8.67,
-        "endY": 57.18
-      },
-      {
-        "id": "mtw64p00-cvaan8",
-        "type": "aimHere",
-        "parentTankId": "mt703dob-64059y",
-        "startX": 45.21,
-        "startY": 35.99,
-        "endX": 33.02,
-        "endY": 52.7
-      },
-      {
-        "id": "mtw65r78-chutel",
-        "type": "aimHere",
-        "parentTankId": "mtw654l1-6ar7en",
-        "startX": 52.24,
-        "startY": 76.12,
-        "endX": 50.09,
-        "endY": 55.41
-      },
-      {
-        "id": "mtw65t7g-2bso0p",
-        "type": "aimHere",
-        "parentTankId": "mtw654l1-6ar7en",
-        "startX": 52.24,
-        "startY": 76.12,
-        "endX": 37.97,
-        "endY": 60.91
-      },
-      {
         "id": "mtw663so-ed9eb6",
         "type": "route",
         "points": [
@@ -39310,6 +39526,208 @@
           }
         ],
         "dangerRoute": true
+      },
+      {
+        "id": "mumaiyx2-xupqor",
+        "type": "aimHere",
+        "parentTankId": "mumaivgf-qaprri",
+        "startX": 17.16,
+        "startY": 69.24,
+        "endX": 8.56,
+        "endY": 62.21
+      },
+      {
+        "id": "mumbbetd-zhucmg",
+        "type": "aimHere",
+        "parentTankId": "mumbb9lg-508v6m",
+        "startX": 9.51,
+        "startY": 47.7,
+        "endX": 6.39,
+        "endY": 61.08
+      },
+      {
+        "id": "mumbjj6s-rbh7wn",
+        "type": "aimHere",
+        "parentTankId": "mtw654l1-6ar7en",
+        "startX": 52.24,
+        "startY": 76.12,
+        "endX": 44.56,
+        "endY": 55.12
+      },
+      {
+        "id": "mumbjli8-ce9zg5",
+        "type": "aimHere",
+        "parentTankId": "mtw654l1-6ar7en",
+        "startX": 52.24,
+        "startY": 76.12,
+        "endX": 26.11,
+        "endY": 59.17
+      },
+      {
+        "id": "mumbqphx-d7jl69",
+        "type": "aimHere",
+        "parentTankId": "mumbql06-6utxmc",
+        "startX": 45.07,
+        "startY": 77.62,
+        "endX": 9.92,
+        "endY": 59.92
+      },
+      {
+        "id": "mumcg736-2j3iol",
+        "type": "aimHere",
+        "parentTankId": "mt703bzb-0qnuka",
+        "startX": 62.9,
+        "startY": 7.08,
+        "endX": 9.04,
+        "endY": 61.06
+      },
+      {
+        "id": "mumcgamu-jyfkkf",
+        "type": "aimHere",
+        "parentTankId": "mt703bzb-0qnuka",
+        "startX": 62.9,
+        "startY": 7.08,
+        "endX": 5.12,
+        "endY": 47.53
+      },
+      {
+        "id": "mumckw5q-ixqlpl",
+        "type": "route",
+        "points": [
+          {
+            "x": 62.9,
+            "y": 7.21
+          },
+          {
+            "x": 67.57,
+            "y": 7.46
+          },
+          {
+            "x": 72.63,
+            "y": 7.84
+          },
+          {
+            "x": 74.4,
+            "y": 8.6
+          }
+        ]
+      },
+      {
+        "id": "mumcns00-y708pa",
+        "type": "aimHere",
+        "parentTankId": "mumcnlk8-g29ch7",
+        "startX": 46.46,
+        "startY": 10.62,
+        "endX": 52.4,
+        "endY": 67.89
+      },
+      {
+        "id": "mumcrfve-20ipd6",
+        "type": "aimHere",
+        "parentTankId": "mumcr9i5-dfppjy",
+        "startX": 31.8,
+        "startY": 9.86,
+        "endX": 12.07,
+        "endY": 61.57
+      },
+      {
+        "id": "mume5uxb-tia1mz",
+        "type": "aimHere",
+        "parentTankId": "mume5eml-w31o8q",
+        "startX": 79.11,
+        "startY": 50.3,
+        "endX": 49.91,
+        "endY": 89.14
+      },
+      {
+        "id": "mume69xj-yjjmst",
+        "type": "aimHere",
+        "parentTankId": "mtiwsyws-67kwui",
+        "startX": 50.53,
+        "startY": 59.48,
+        "endX": 32.45,
+        "endY": 57.25
+      },
+      {
+        "id": "mume6fbr-rh1wyf",
+        "type": "aimHere",
+        "parentTankId": "mtiwsyws-67kwui",
+        "startX": 50.53,
+        "startY": 59.48,
+        "endX": 50.17,
+        "endY": 54.47
+      },
+      {
+        "id": "mume7g75-fisrww",
+        "type": "aimHere",
+        "parentTankId": "mtw654l1-6ar7en",
+        "startX": 52.24,
+        "startY": 76.12,
+        "endX": 49.57,
+        "endY": 89.23
+      },
+      {
+        "id": "mumelapk-xvg109",
+        "type": "aimHere",
+        "parentTankId": "mt703qyf-9ujapw",
+        "startX": 61.08,
+        "startY": 85.1,
+        "endX": 51.48,
+        "endY": 63.86
+      },
+      {
+        "id": "mumelyva-qokewt",
+        "type": "aimHere",
+        "parentTankId": "mumelmbk-4n29ss",
+        "startX": 56.43,
+        "startY": 90.27,
+        "endX": 49.83,
+        "endY": 88.53
+      },
+      {
+        "id": "mumemh7q-2xtlig",
+        "type": "aimHere",
+        "parentTankId": "mumemcn8-k1qm0v",
+        "startX": 52,
+        "startY": 89.83,
+        "endX": 11.6,
+        "endY": 59.17
+      },
+      {
+        "id": "mumen1uk-gh44sa",
+        "type": "aimHere",
+        "parentTankId": "mumbablp-fvcpvs",
+        "startX": 92.35,
+        "startY": 90.14,
+        "endX": 33.15,
+        "endY": 56.91
+      },
+      {
+        "id": "mumen95t-9a9f6e",
+        "type": "aimHere",
+        "parentTankId": "mumbablp-fvcpvs",
+        "startX": 92.35,
+        "startY": 90.14,
+        "endX": 47.91,
+        "endY": 55.17
+      },
+      {
+        "id": "mumenh80-qyce2v",
+        "type": "aimHere",
+        "parentTankId": "mumbablp-fvcpvs",
+        "startX": 92.35,
+        "startY": 90.14,
+        "endX": 50.96,
+        "endY": 89.23
+      },
+      {
+        "id": "mumeof2g-3q1cip",
+        "type": "aimHere",
+        "parentTankId": "mt703dob-64059y",
+        "startX": 45.21,
+        "startY": 35.99,
+        "endX": 41.14,
+        "endY": 48.57
       }
     ],
     "Battle of Hürtgen Forest::domination-1|Red": [
@@ -39349,85 +39767,6 @@
           }
         ],
         "dangerRoute": true
-      },
-      {
-        "id": "mtiwn3mz-r69yy1",
-        "type": "route",
-        "points": [
-          {
-            "x": 7.62,
-            "y": 19.5
-          },
-          {
-            "x": 11.52,
-            "y": 15.15
-          },
-          {
-            "x": 18.53,
-            "y": 11.43
-          },
-          {
-            "x": 25.62,
-            "y": 8.24
-          },
-          {
-            "x": 32.71,
-            "y": 7.53
-          }
-        ]
-      },
-      {
-        "id": "mtiwo4i1-c1y32t",
-        "type": "route",
-        "points": [
-          {
-            "x": 49.82,
-            "y": 7.17
-          },
-          {
-            "x": 56.03,
-            "y": 5.75
-          },
-          {
-            "x": 66.93,
-            "y": 7.7
-          },
-          {
-            "x": 72.34,
-            "y": 9.74
-          },
-          {
-            "x": 80.85,
-            "y": 10.72
-          },
-          {
-            "x": 90.61,
-            "y": 12.31
-          },
-          {
-            "x": 98.14,
-            "y": 15.95
-          }
-        ],
-        "dangerRoute": true
-      },
-      {
-        "id": "mtiwp0x9-luch4b",
-        "type": "aimHere",
-        "parentTankId": "mtiwoosv-855c9m",
-        "startX": 52.84,
-        "startY": 85.99,
-        "endX": 73.05,
-        "endY": 50.79
-      },
-      {
-        "id": "mtiwrooz-geozo7",
-        "type": "aimHere",
-        "parentTankId": "mtiwr9px-c1wngp",
-        "startX": 48.58,
-        "startY": 8.59,
-        "endX": 90.16,
-        "endY": 46.09
       },
       {
         "id": "mtiws9id-z5cezj",
@@ -39488,15 +39827,6 @@
             "y": 87.59
           }
         ]
-      },
-      {
-        "id": "mtiwu7q5-g347z5",
-        "type": "aimHere",
-        "parentTankId": "mtiwtzbn-gim10t",
-        "startX": 51.51,
-        "startY": 57.44,
-        "endX": 59.4,
-        "endY": 56.02
       },
       {
         "id": "mtiwv14w-9e3rg2",
@@ -39606,22 +39936,280 @@
         "dangerRoute": true
       },
       {
-        "id": "mtiwwbn3-otpj7a",
+        "id": "mumaiij8-p8vwxr",
         "type": "aimHere",
-        "parentTankId": "mtiww34s-qabcul",
-        "startX": 38.83,
-        "startY": 65.95,
-        "endX": 60.55,
-        "endY": 64
+        "parentTankId": "mumaiddn-wi73fz",
+        "startX": 87.88,
+        "startY": 57.43,
+        "endX": 93.27,
+        "endY": 45.26
       },
       {
-        "id": "mtw64cms-7foab9",
+        "id": "mumair6n-inize9",
+        "type": "aimHere",
+        "parentTankId": "mumain2l-mr4mdc",
+        "startX": 82.49,
+        "startY": 37.88,
+        "endX": 92.75,
+        "endY": 43.35
+      },
+      {
+        "id": "mumd9srs-8iiu5l",
+        "type": "aimHere",
+        "parentTankId": "mumd9nmv-37kxc6",
+        "startX": 46.96,
+        "startY": 11.56,
+        "endX": 52.09,
+        "endY": 65.42
+      },
+      {
+        "id": "mumdzz2d-2bqyxa",
         "type": "aimHere",
         "parentTankId": "mtw647rt-1ivteb",
-        "startX": 97.86,
-        "startY": 15.94,
-        "endX": 80.88,
-        "endY": 43.84
+        "startX": 94.66,
+        "startY": 16.59,
+        "endX": 88.31,
+        "endY": 46.74
+      },
+      {
+        "id": "mume0xyx-3lt2td",
+        "type": "aimHere",
+        "parentTankId": "mtiwr9px-c1wngp",
+        "startX": 56.86,
+        "startY": 10.17,
+        "endX": 81.54,
+        "endY": 42.75
+      },
+      {
+        "id": "mume1fql-kbu7v4",
+        "type": "aimHere",
+        "parentTankId": "mtiwtzbn-gim10t",
+        "startX": 51.51,
+        "startY": 57.44,
+        "endX": 64.25,
+        "endY": 51.09
+      },
+      {
+        "id": "mume1t2b-ctqymh",
+        "type": "aimHere",
+        "parentTankId": "mtiww34s-qabcul",
+        "startX": 39.51,
+        "startY": 66.37,
+        "endX": 56.43,
+        "endY": 62.38
+      },
+      {
+        "id": "mume2299-devnp2",
+        "type": "aimHere",
+        "parentTankId": "mtiww34s-qabcul",
+        "startX": 39.51,
+        "startY": 66.37,
+        "endX": 63.21,
+        "endY": 66.29
+      },
+      {
+        "id": "mume3ecp-edbg0r",
+        "type": "aimHere",
+        "parentTankId": "mtiwoosv-855c9m",
+        "startX": 51.74,
+        "startY": 86.71,
+        "endX": 66.42,
+        "endY": 52.3
+      },
+      {
+        "id": "mume3psd-bodvjq",
+        "type": "aimHere",
+        "parentTankId": "mtiwoosv-855c9m",
+        "startX": 51.74,
+        "startY": 86.71,
+        "endX": 80.5,
+        "endY": 47.09
+      },
+      {
+        "id": "mume46q7-wvkq1a",
+        "type": "aimHere",
+        "parentTankId": "mtiwtzbn-gim10t",
+        "startX": 51.51,
+        "startY": 57.44,
+        "endX": 67.2,
+        "endY": 55.69
+      },
+      {
+        "id": "mume4tjb-woicc1",
+        "type": "aimHere",
+        "parentTankId": "mtiwtzbn-gim10t",
+        "startX": 51.51,
+        "startY": 57.44,
+        "endX": 86.23,
+        "endY": 88.62
+      },
+      {
+        "id": "mumesuv0-0g1kkt",
+        "type": "aimHere",
+        "parentTankId": "mumesnsk-2zp5oz",
+        "startX": 6.56,
+        "startY": 35.79,
+        "endX": 95.87,
+        "endY": 28.76
+      },
+      {
+        "id": "mumetf06-vd1n40",
+        "type": "aimHere",
+        "parentTankId": "mumeta0w-e1ocz2",
+        "startX": 24.63,
+        "startY": 11.99,
+        "endX": 57.21,
+        "endY": 8.43
+      },
+      {
+        "id": "mumeu4hv-o8q42x",
+        "type": "aimHere",
+        "parentTankId": "mumeu05q-q17osg",
+        "startX": 26.11,
+        "startY": 18.68,
+        "endX": 62.34,
+        "endY": 48.39
+      },
+      {
+        "id": "mumeukvx-djfbk5",
+        "type": "aimHere",
+        "parentTankId": "mumeta0w-e1ocz2",
+        "startX": 24.63,
+        "startY": 11.99,
+        "endX": 71.03,
+        "endY": 38.05
+      },
+      {
+        "id": "mumewq8b-dr5dg1",
+        "type": "route",
+        "points": [
+          {
+            "x": 8.04,
+            "y": 19.72
+          },
+          {
+            "x": 10.99,
+            "y": 18.85
+          },
+          {
+            "x": 16.38,
+            "y": 16.68
+          },
+          {
+            "x": 20.37,
+            "y": 13.64
+          },
+          {
+            "x": 24.2,
+            "y": 12.08
+          }
+        ]
+      },
+      {
+        "id": "mumewyd7-cyswkl",
+        "type": "route",
+        "points": [
+          {
+            "x": 26.11,
+            "y": 11.73
+          },
+          {
+            "x": 32.62,
+            "y": 12.51
+          },
+          {
+            "x": 35.4,
+            "y": 12.6
+          },
+          {
+            "x": 38.18,
+            "y": 13.03
+          },
+          {
+            "x": 41.05,
+            "y": 13.03
+          },
+          {
+            "x": 43.31,
+            "y": 12.51
+          },
+          {
+            "x": 46.18,
+            "y": 11.9
+          },
+          {
+            "x": 49.65,
+            "y": 10.51
+          },
+          {
+            "x": 51.91,
+            "y": 10.17
+          },
+          {
+            "x": 55.04,
+            "y": 9.9
+          },
+          {
+            "x": 56.34,
+            "y": 9.9
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "mumezbqv-c0v04x",
+        "type": "route",
+        "points": [
+          {
+            "x": 58.34,
+            "y": 10.34
+          },
+          {
+            "x": 60.86,
+            "y": 10.17
+          },
+          {
+            "x": 61.73,
+            "y": 9.12
+          },
+          {
+            "x": 64.6,
+            "y": 8.51
+          },
+          {
+            "x": 67.64,
+            "y": 8.34
+          },
+          {
+            "x": 73.37,
+            "y": 8.34
+          },
+          {
+            "x": 79.45,
+            "y": 8.43
+          },
+          {
+            "x": 84.14,
+            "y": 9.56
+          },
+          {
+            "x": 88.31,
+            "y": 9.9
+          },
+          {
+            "x": 92.83,
+            "y": 11.56
+          },
+          {
+            "x": 94.74,
+            "y": 13.12
+          },
+          {
+            "x": 95.09,
+            "y": 15.81
+          }
+        ],
+        "dangerRoute": true
       }
     ],
     "Battle of Hürtgen Forest::domination-2|Blue": [
@@ -82059,6 +82647,6 @@
     "Maginot Line::domination-2|Blue": [],
     "Sands of Sinai::domination-1|Blue": []
   },
-  "updatedAt": "2026-09-29T06:20:07.794Z",
-  "exportedAt": "2026-09-29T06:20:34.281Z"
+  "updatedAt": "2026-09-29T08:28:20.573Z",
+  "exportedAt": "2026-09-29T08:28:38.087Z"
 }

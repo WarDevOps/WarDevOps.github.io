@@ -3,7 +3,7 @@ import { initDiscordMemberCount } from './discord-stats.js';
 import { createVectorEditor } from './vector-editor.js?v=route-selection-20260923';
 import { validateVectorGroups, pruneGroups } from './vector-model.js?v=route-selection-20260923';
 let vectorEditor = null;
-    import { commentImages } from './comment-images.js?v=comment-images-e5696e00de9a';
+    import { commentImages } from './comment-images.js?v=comment-images-5aa470538d31';
     import { defaultMarkerLayout, maps, translations } from './data.js?v=tank-marker-type-20260923';
     import { normalizeTacticalSummary, resolveTacticalSummary, withVariationSummary } from './tactical-summary.js?v=variation-switch-20260914';
     import { acceptUpstreamMap, isMapSyncState, markLayoutAsLocalEdits, markMapEdited, mergeMapLayouts, sourceRevision } from './marker-merge.js?v=mobile-default-layout-20260917';
@@ -2143,10 +2143,17 @@ let vectorEditor = null;
     }
     const workInProgressMaps = new Map();
     const wipStorageKey = "maptactic-wip-overrides";
+    const retiredWipMapsKey = "maptactic-retired-wip-maps-20260929";
     let wipOverrides = {};
     try {
       const saved = JSON.parse(localStorage.getItem(wipStorageKey) || "{}");
       if (saved && typeof saved === "object" && !Array.isArray(saved)) wipOverrides = saved;
+      if (localStorage.getItem(retiredWipMapsKey) !== "1") {
+        delete wipOverrides["darwin-hill"];
+        delete wipOverrides["battle-of-hurtgen-forest"];
+        localStorage.setItem(wipStorageKey, JSON.stringify(wipOverrides));
+        localStorage.setItem(retiredWipMapsKey, "1");
+      }
     } catch (error) { console.warn("WIP preferences could not be loaded.", error); }
     const wipToggle = document.createElement("button");
     wipToggle.type = "button";
