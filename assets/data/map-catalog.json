@@ -46,8 +46,8 @@
       "name": "Abandoned Factory",
       "aliases": "버려진 공장",
       "slug": "abandoned-factory",
-      "updated": "2026-09-14",
-      "updatedAt": "2026-09-13T23:29:02Z",
+      "updated": "2026-09-29",
+      "updatedAt": "2026-09-28T16:58:40Z",
       "br": {
         "min": 1
       },
@@ -162,8 +162,8 @@
       "name": "Alaska",
       "aliases": "알래스카",
       "slug": "alaska",
-      "updated": "2026-09-14",
-      "updatedAt": "2026-09-13T23:26:53Z",
+      "updated": "2026-09-29",
+      "updatedAt": "2026-09-29T06:22:03Z",
       "br": {
         "min": 3.7
       },
@@ -503,8 +503,8 @@
       "name": "Battle of Hürtgen Forest",
       "aliases": "휘르트겐 숲 전투",
       "slug": "battle-of-hurtgen-forest",
-      "updated": "2026-09-23",
-      "updatedAt": "2026-09-22T18:52:38Z",
+      "updated": "2026-09-29",
+      "updatedAt": "2026-09-29T08:28:20Z",
       "br": {
         "min": 4.7
       },
@@ -983,8 +983,8 @@
       "name": "Fields of Poland",
       "aliases": "폴란드의 들판",
       "slug": "fields-of-poland",
-      "updated": "2026-09-15",
-      "updatedAt": "2026-09-15T02:54:34Z",
+      "updated": "2026-09-28",
+      "updatedAt": "2026-09-28T10:20:20Z",
       "br": {
         "min": 4.7
       },
@@ -1086,8 +1086,8 @@
       "name": "Flanders",
       "aliases": "플랑드르",
       "slug": "flanders",
-      "updated": "2026-09-27",
-      "updatedAt": "2026-09-27T13:08:31Z",
+      "updated": "2026-09-29",
+      "updatedAt": "2026-09-29T06:20:07Z",
       "br": {
         "min": 1
       },
@@ -1453,8 +1453,8 @@
       "name": "Normandy",
       "aliases": "노르망디",
       "slug": "normandy",
-      "updated": "2026-09-04",
-      "updatedAt": "2026-09-04T05:44:50Z",
+      "updated": "2026-09-27",
+      "updatedAt": "2026-09-27T14:20:41Z",
       "br": {
         "min": 3.7
       },
@@ -1556,8 +1556,8 @@
       "name": "Port Novorossiysk",
       "aliases": "노보로시스크 항구",
       "slug": "port-novorossiysk",
-      "updated": "2026-09-28",
-      "updatedAt": "2026-09-27T15:43:26Z",
+      "updated": "2026-09-27",
+      "updatedAt": "2026-09-27T14:28:12Z",
       "br": {
         "min": 2.3
       },

@@ -510,7 +510,7 @@
     },
     "Port Novorossiysk": {
       "variations": {
-        "conquest-1": {
+        "conquest-3": {
           "en": [
             "Port Novorossiysk is a special Conquest-only map built almost entirely from flat urban terrain. The key area is not the capture point itself, but the dense urban sector to its south and southwest.",
             "Controlling this area opens flanking routes that can lead directly toward the enemy spawn while also allowing side shots into the capture point. By contrast, the low hills and coastline near the point provide strong sniper positions, making a direct breakthrough much more difficult."
@@ -19663,7 +19663,7 @@
         "parentTankId": "mu1hq31f-xn0fn7"
       }
     ],
-    "Port Novorossiysk::conquest-1|Red": [
+    "Port Novorossiysk::conquest-3|Red": [
       {
         "id": "port-novorossiysk-conquest-1-red-unit-01",
         "type": "mainBattleTankRed",
@@ -19847,7 +19847,7 @@
         "parentTankId": "mujwwhvp-lz8puu"
       }
     ],
-    "Port Novorossiysk::conquest-1|Blue": [
+    "Port Novorossiysk::conquest-3|Blue": [
       {
         "id": "port-novorossiysk-conquest-1-blue-unit-01",
         "type": "tankDestroyer",
@@ -67325,7 +67325,7 @@
         ]
       }
     ],
-    "Port Novorossiysk::conquest-1|Red": [
+    "Port Novorossiysk::conquest-3|Red": [
       {
         "id": "port-novorossiysk-conquest-1-red-route-01",
         "type": "route",
@@ -67779,7 +67779,7 @@
         ]
       }
     ],
-    "Port Novorossiysk::conquest-1|Blue": [
+    "Port Novorossiysk::conquest-3|Blue": [
       {
         "id": "port-novorossiysk-conquest-1-blue-route-01",
         "type": "route",

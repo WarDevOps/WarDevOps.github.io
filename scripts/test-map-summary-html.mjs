@@ -1,11 +1,42 @@
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import test from "node:test";
+import { validatePastedView } from "../assets/js/paste-validation.js";
 import { renderMapRoutePage } from "./generate-map-catalog.mjs";
 
 const rootPage = await readFile(new URL("../index.html", import.meta.url), "utf8");
 const catalog = JSON.parse(await readFile(new URL("../assets/data/map-catalog.json", import.meta.url), "utf8"));
+const markerLayout = JSON.parse(await readFile(new URL("../assets/data/maptactic.json", import.meta.url), "utf8"));
 const baseMap = { ...catalog.maps[0], tacticalSummary: undefined };
+
+test("saved map views and summaries match the catalog", () => {
+  const variations = new Map(catalog.maps.map(map => [map.name, new Set(map.variations.map(variation => variation.id || `${variation.mode}-${variation.number}`))]));
+  const validKeys = new Set([...variations].flatMap(([name, ids]) => [...ids].flatMap(id => ["Red", "Blue"].map(team => `${name}::${id}|${team}`))));
+  for (const section of ["markers", "annotations", "vectorGroups"]) {
+    assert.deepEqual(Object.keys(markerLayout[section] || {}).filter(key => !validKeys.has(key)), [], `${section} contains a removed map view`);
+  }
+  for (const [name, summary] of Object.entries(markerLayout.tacticalSummaries || {})) {
+    assert.ok(variations.has(name), `Unknown summary map: ${name}`);
+    assert.deepEqual(Object.keys(summary.variations || {}).filter(id => !variations.get(name).has(id)), [], `${name} contains a removed summary view`);
+  }
+});
+
+test("paste validates the destination despite retired views in local storage", () => {
+  const key = "Battle of Hürtgen Forest::domination-2|Blue";
+  const candidate = {
+    version: 2,
+    markers: { [key]: [{ id: "copied", x: 50, y: 50 }], "Port Novorossiysk::conquest-1|Blue": [{ id: "old" }] },
+    annotations: { [key]: [] },
+    vectorGroups: {}
+  };
+  const limits = { markers: 5000, annotations: 5000, routePoints: 25000, vectorGroups: 5000, vectorPoints: 50000 };
+  let checked;
+  validatePastedView(candidate, key, layout => { checked = layout; }, limits);
+  assert.deepEqual(Object.keys(checked.markers), [key]);
+  assert.deepEqual(Object.keys(checked.annotations), [key]);
+  assert.deepEqual(Object.keys(candidate.markers), [key, "Port Novorossiysk::conquest-1|Blue"]);
+  assert.throws(() => validatePastedView(candidate, key, () => {}, { ...limits, markers: 1 }), /Too many markers/);
+});
 
 test("every map exposes its base image in initial HTML and consistent preview metadata", () => {
   for (const map of catalog.maps) {

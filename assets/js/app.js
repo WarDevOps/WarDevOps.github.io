@@ -1,7 +1,8 @@
     import { MARKER_LAYOUT_VERSION, backupMarkerLayout, loadMarkerLayout, saveMarkerLayout as saveMarkerLayoutToStorage } from './marker-storage.js?v=replay-vectors-20260915';
 import { initDiscordMemberCount } from './discord-stats.js';
-import { createVectorEditor } from './vector-editor.js?v=route-selection-20260923';
+import { createVectorEditor } from './vector-editor.js?v=paste-validation-20260929-2';
 import { validateVectorGroups, pruneGroups } from './vector-model.js?v=route-selection-20260923';
+import { validatePastedView } from './paste-validation.js';
 let vectorEditor = null;
     import { commentImages } from './comment-images.js?v=comment-images-5aa470538d31';
     import { defaultMarkerLayout, maps, translations } from './data.js?v=tank-marker-type-20260923';
@@ -2500,6 +2501,15 @@ let vectorEditor = null;
       layout.vectorGroups = validateVectorGroups(data.vectorGroups, layout, validMarkerLayoutKeys);
       return layout;
     }
+    function validatePastedMarkerLayout(candidate, key) {
+      validatePastedView(candidate, key, validateImportedMarkerLayout, {
+        markers: MAX_IMPORTED_MARKERS,
+        annotations: MAX_IMPORTED_ANNOTATIONS,
+        routePoints: MAX_IMPORTED_ROUTE_POINTS,
+        vectorGroups: 5000,
+        vectorPoints: 50000
+      });
+    }
     function applyMarkerLayout(importedLayout) {
       const replacement = structuredClone(importedLayout);
       markerLayout.version = replacement.version;
@@ -3208,6 +3218,7 @@ let vectorEditor = null;
       drawing: () => Boolean(state.drawing),
       language: () => state.language,
       validate: validateImportedMarkerLayout,
+      validatePaste: validatePastedMarkerLayout,
       cancelDrawing,
       render: renderMarkers,
       commit: () => persistMarkerLayout("savedLocally", { touchMap: true }),

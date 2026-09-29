@@ -1,8 +1,8 @@
 import {around,ref,entries,bounds,selectionInsideBox,expandSelection,snapshot,restore,transform,deleteSelection,copySelection,appendLayout,fitsTransform} from './vector-model.js?v=route-selection-20260923';
 
 const words={
-  ko:{copy:'복사',paste:'붙여넣기',copied:'선택한 객체를 복사했습니다.',pasteError:'붙여넣을 수 없습니다. 지도 데이터 제한을 확인하세요.',lock:'기존 객체 잠금',undo:'되돌리기',redo:'다시 실행',delete:'선택 삭제',rotate:'선택 회전',resize:'선택 크기 조절',move:'선택 이동',invalid:'JSON을 추가할 수 없습니다. 지도와 파일 형식을 확인하세요.',added:'리플레이를 추가했습니다.'},
-  en:{copy:'Copy',paste:'Paste',copied:'Selection copied.',pasteError:'Cannot paste. Check map data limits.',lock:'Lock existing objects',undo:'Undo',redo:'Redo',delete:'Delete selected',rotate:'Rotate selection',resize:'Resize selection',move:'Move selection',invalid:'Cannot add this JSON. Check the map and file format.',added:'Replay added.'}
+  ko:{copy:'복사',paste:'붙여넣기',copied:'선택한 객체를 복사했습니다.',pasteError:'붙여넣기 실패',lock:'기존 객체 잠금',undo:'되돌리기',redo:'다시 실행',delete:'선택 삭제',rotate:'선택 회전',resize:'선택 크기 조절',move:'선택 이동',invalid:'JSON을 추가할 수 없습니다. 지도와 파일 형식을 확인하세요.',added:'리플레이를 추가했습니다.'},
+  en:{copy:'Copy',paste:'Paste',copied:'Selection copied.',pasteError:'Paste failed',lock:'Lock existing objects',undo:'Undo',redo:'Redo',delete:'Delete selected',rotate:'Rotate selection',resize:'Resize selection',move:'Move selection',invalid:'Cannot add this JSON. Check the map and file format.',added:'Replay added.'}
 };
 export function createVectorEditor(h) {
   let active=false,lock=true,key=null,selected=new Set(),editable=new Set(),known=new Set(),gesture=null,undo=[],redo=[],internal=false;
@@ -45,11 +45,11 @@ export function createVectorEditor(h) {
     try {
       const candidate=structuredClone(h.layout()),before=snapshot(h.layout(),key);
       const added=appendLayout(candidate,key,clipboard.layout,clipboard.key,id);
-      h.validate(candidate);
+      h.validatePaste(candidate,key);
       restore(h.layout(),key,snapshot(candidate,key));
       selected.clear();editable=new Set([...editable,...added]);
       save(before);h.render();announce('');
-    }catch(error){announce(msg().pasteError);}
+    }catch(error){console.error('Vector paste failed.',error);announce(`${msg().pasteError}: ${error?.message||'Unknown error'}`);}
   }
   async function addFile(chosen) {
     const targetKey=h.key(),layout=h.layout();if(!chosen||!targetKey||!h.editing())return;
