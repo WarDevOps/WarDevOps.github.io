@@ -2,6 +2,9 @@
 *.ai
 ~ai-*.tmp
 
+# Raw tactical screenshots stay local; committed/deployed copies use WebP.
+/img/**/[sS][cC][rR]_*.png
+
 # Local tactical-map extraction tools and reviewed coordinates.
 /scripts/import-map-tactics.py
 /scripts/LOCAL_TACTICAL_AUTOMATION.md

@@ -4,7 +4,7 @@ import { createVectorEditor } from './vector-editor.js?v=paste-validation-202609
 import { validateVectorGroups, pruneGroups } from './vector-model.js?v=route-selection-20260923';
 import { validatePastedView } from './paste-validation.js';
 let vectorEditor = null;
-    import { commentImages } from './comment-images.js?v=comment-images-5aa470538d31';
+    import { commentImages } from './comment-images.js?v=comment-images-c11dcd16f7ca';
     import { defaultMarkerLayout, maps, translations } from './data.js?v=tank-marker-type-20260923';
     import { normalizeTacticalSummary, resolveTacticalSummary, withVariationSummary } from './tactical-summary.js?v=variation-switch-20260914';
     import { acceptUpstreamMap, isMapSyncState, markLayoutAsLocalEdits, markMapEdited, mergeMapLayouts, sourceRevision } from './marker-merge.js?v=mobile-default-layout-20260917';
@@ -133,7 +133,7 @@ let vectorEditor = null;
     const MAP_UPDATED_AT_PATTERN = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d{1,3})?Z$/;
     const COMMENT_TEXT_ENCODER = new TextEncoder();
     const COMMENT_IMAGES_BY_ID = new Map();
-    const COMMENT_MEDIA_PATH_PATTERN = /^img\/(?:[^/]+\/)*scr_[^/]+\.(png|gif|mp4)$/i;
+    const COMMENT_MEDIA_PATH_PATTERN = /^img\/(?:[^/]+\/)*scr_[^/]+\.(webp|gif|mp4)$/i;
     commentImages.forEach(image => {
       const pathMatch = typeof image?.path === "string" ? image.path.match(COMMENT_MEDIA_PATH_PATTERN) : null;
       const hasSafePath = Boolean(pathMatch) && !image.path.split("/").some(part => part === "." || part === "..");
@@ -141,6 +141,12 @@ let vectorEditor = null;
       const kind = pathMatch[1].toLowerCase() === "mp4" ? "video" : "image";
       COMMENT_IMAGES_BY_ID.set(image.id, Object.freeze({ id: image.id, path: `/${image.path}`, label: image.label, kind }));
     });
+    function resolveCommentImageId(imageId) {
+      if (typeof imageId !== "string") return null;
+      if (COMMENT_IMAGES_BY_ID.has(imageId)) return imageId;
+      const webpId = imageId.replace(/\.png$/i, ".webp");
+      return webpId !== imageId && COMMENT_IMAGES_BY_ID.has(webpId) ? webpId : null;
+    }
     const COMMENT_IMAGES = Object.freeze([...COMMENT_IMAGES_BY_ID.values()]);
     function webpAssetPath(pngPath) {
       return pngPath.replace(/\.png(?=([?#].*)?$)/i, ".webp");
@@ -834,7 +840,8 @@ let vectorEditor = null;
         ? marker.commentImages
         : (typeof marker.commentImage === "string" ? [marker.commentImage] : []);
       return [...new Set(candidateIds)]
-        .filter(imageId => typeof imageId === "string" && COMMENT_IMAGES_BY_ID.has(imageId))
+        .map(resolveCommentImageId)
+        .filter(Boolean)
         .slice(0, MAX_COMMENT_IMAGES);
     }
     function markerCommentImages(marker) {
@@ -2434,9 +2441,9 @@ let vectorEditor = null;
           const validCommentImages = !hasCommentImages || (isCommentableMarker(marker)
             && Array.isArray(marker.commentImages)
             && marker.commentImages.length <= MAX_COMMENT_IMAGES
-            && marker.commentImages.every(imageId => typeof imageId === "string" && COMMENT_IMAGES_BY_ID.has(imageId))
-            && new Set(marker.commentImages).size === marker.commentImages.length);
-          if (!marker || typeof marker !== "object" || Array.isArray(marker) || typeof marker.id !== "string" || !marker.id || ids.has(marker.id) || !markerTypes.has(marker.type) || !Number.isFinite(marker.x) || !Number.isFinite(marker.y) || marker.x < 0 || marker.x > 100 || marker.y < 0 || marker.y > 100 || (hasParentTankId && (!isRoleMarker(marker) || typeof marker.parentTankId !== "string" || !marker.parentTankId)) || (hasComment && (!isCommentableMarker(marker) || typeof marker.comment !== "string" || commentByteLength(marker.comment) > MAX_MARKER_COMMENT_BYTES)) || (hasCommentEn && (!isCommentableMarker(marker) || typeof marker.commentEn !== "string" || commentByteLength(marker.commentEn) > MAX_MARKER_COMMENT_BYTES)) || (hasCommentKo && (!isCommentableMarker(marker) || typeof marker.commentKo !== "string" || commentByteLength(marker.commentKo) > MAX_MARKER_COMMENT_BYTES)) || (hasCommentImage && (!isCommentableMarker(marker) || typeof marker.commentImage !== "string" || !COMMENT_IMAGES_BY_ID.has(marker.commentImage))) || !validCommentImages || (hasCommentImage && hasCommentImages)) {
+            && marker.commentImages.every(imageId => Boolean(resolveCommentImageId(imageId)))
+            && new Set(marker.commentImages.map(resolveCommentImageId)).size === marker.commentImages.length);
+          if (!marker || typeof marker !== "object" || Array.isArray(marker) || typeof marker.id !== "string" || !marker.id || ids.has(marker.id) || !markerTypes.has(marker.type) || !Number.isFinite(marker.x) || !Number.isFinite(marker.y) || marker.x < 0 || marker.x > 100 || marker.y < 0 || marker.y > 100 || (hasParentTankId && (!isRoleMarker(marker) || typeof marker.parentTankId !== "string" || !marker.parentTankId)) || (hasComment && (!isCommentableMarker(marker) || typeof marker.comment !== "string" || commentByteLength(marker.comment) > MAX_MARKER_COMMENT_BYTES)) || (hasCommentEn && (!isCommentableMarker(marker) || typeof marker.commentEn !== "string" || commentByteLength(marker.commentEn) > MAX_MARKER_COMMENT_BYTES)) || (hasCommentKo && (!isCommentableMarker(marker) || typeof marker.commentKo !== "string" || commentByteLength(marker.commentKo) > MAX_MARKER_COMMENT_BYTES)) || (hasCommentImage && (!isCommentableMarker(marker) || typeof marker.commentImage !== "string" || !resolveCommentImageId(marker.commentImage))) || !validCommentImages || (hasCommentImage && hasCommentImages)) {
             throw new Error("Invalid marker.");
           }
           markerCount += 1;
@@ -2451,10 +2458,11 @@ let vectorEditor = null;
           if (hasComment && marker.comment.trim()) importedMarker.comment = normalizeMarkerComment(marker.comment);
           if (hasCommentEn && marker.commentEn.trim()) importedMarker.commentEn = normalizeMarkerComment(marker.commentEn);
           if (hasCommentKo && marker.commentKo.trim()) importedMarker.commentKo = normalizeMarkerComment(marker.commentKo);
-          if (hasCommentImages && marker.commentImages.length) importedMarker.commentImages = [...marker.commentImages];
+          if (hasCommentImages && marker.commentImages.length) importedMarker.commentImages = marker.commentImages.map(resolveCommentImageId);
           if (hasCommentImage) {
-            if (migrateLegacyCommentImages) importedMarker.commentImages = [marker.commentImage];
-            else importedMarker.commentImage = marker.commentImage;
+            const resolvedImageId = resolveCommentImageId(marker.commentImage);
+            if (migrateLegacyCommentImages) importedMarker.commentImages = [resolvedImageId];
+            else importedMarker.commentImage = resolvedImageId;
           }
           return importedMarker;
         });

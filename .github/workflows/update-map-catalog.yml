@@ -44,11 +44,11 @@ jobs:
         uses: actions/cache@v5
         with:
           path: ${{ runner.temp }}/wardevops-webp-cache
-          key: webp-v1-${{ hashFiles('img/**/*.png') }}
+          key: map-webp-v1-${{ hashFiles('assets/data/map-catalog.json', 'img/**/*.png') }}
           restore-keys: |
-            webp-v1-
+            map-webp-v1-
 
-      - name: Generate optimized WebP assets
+      - name: Generate optimized map WebP assets
         env:
           WEBP_CACHE_DIR: ${{ runner.temp }}/wardevops-webp-cache
         run: node scripts/generate-webp-assets.mjs

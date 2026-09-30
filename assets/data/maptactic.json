@@ -20,7 +20,7 @@
     "Cargo Port": "2026-09-23",
     "Carpathians": "2026-09-23",
     "Darwin Hill": "2026-09-27",
-    "Eastern Europe": "2026-09-27",
+    "Eastern Europe": "2026-09-30",
     "European Province": "2026-09-23",
     "Fields of Normandy": "2026-09-23",
     "Fields of Poland": "2026-09-28",
@@ -38,10 +38,10 @@
     "Maginot Line": "2026-09-27",
     "Middle East": "2026-09-23",
     "Mozdok": "2026-09-15",
-    "Normandy": "2026-09-27",
+    "Normandy": "2026-09-30",
     "North Holland": "2026-09-15",
     "Poland": "2026-09-15",
-    "Port Novorossiysk": "2026-09-27",
+    "Port Novorossiysk": "2026-09-30",
     "Pradesh": "2026-08-31",
     "Red Desert": "2026-09-15",
     "Sands of Sinai": "2026-09-23",
@@ -72,14 +72,14 @@
     "Ardennes": "2026-09-27T08:14:28Z",
     "Ash River": "2026-09-01T16:50:15Z",
     "Attica": "2026-09-27T08:23:04Z",
-    "Battle of Hürtgen Forest": "2026-09-29T08:28:20Z",
+    "Battle of Hürtgen Forest": "2026-09-29T08:30:11Z",
     "Berlin": "2026-09-10T23:37:22Z",
     "Breslau": "2026-09-23T02:55:50Z",
     "Campania": "2026-09-03T01:49:21Z",
     "Cargo Port": "2026-09-23T04:02:44Z",
     "Carpathians": "2026-09-23T01:37:01Z",
     "Darwin Hill": "2026-09-27T01:30:23Z",
-    "Eastern Europe": "2026-09-27T13:32:32Z",
+    "Eastern Europe": "2026-09-30T06:02:26Z",
     "European Province": "2026-09-23T01:49:25Z",
     "Fields of Normandy": "2026-09-23T02:21:06Z",
     "Fields of Poland": "2026-09-28T10:20:20Z",
@@ -96,10 +96,10 @@
     "Maginot Line": "2026-09-27T14:04:32Z",
     "Middle East": "2026-09-23T03:56:31Z",
     "Mozdok": "2026-09-15T03:13:51Z",
-    "Normandy": "2026-09-27T14:20:41Z",
+    "Normandy": "2026-09-30T04:03:48Z",
     "North Holland": "2026-09-14T23:28:36Z",
     "Poland": "2026-09-15T02:55:29Z",
-    "Port Novorossiysk": "2026-09-27T14:28:12Z",
+    "Port Novorossiysk": "2026-09-30T05:34:11Z",
     "Red Desert": "2026-09-15T03:19:40Z",
     "Sands of Sinai": "2026-09-23T06:07:25Z",
     "Second Battle of El Alamein": "2026-09-27T04:24:11Z",
@@ -377,44 +377,7 @@
         "B와 C 거점 사이에 위치한 호수는 겨울 버전에서 얼어붙습니다. 이 경우 얼어붙은 호수를 직접 횡단하여 적의 예상 밖 방향으로 진입하는 위험한 우회 전술을 시도할 수 있습니다."
       ]
     },
-    "Fire Arc": {
-      "en": [
-        "Fire Arc is characterized by a dense urban district concentrated on the elevated ground at the center of the map. Aside from the railway cutting across the middle, the battlefield offers very little effective cover, effectively forcing both teams into long-range engagements around the B capture point.",
-        "The A capture point sits in an exposed basin with virtually no protection, making it impractical for either side to capture. The C capture point is bordered by a small urban area and a single road, but its low elevation leaves it highly vulnerable to fire from the hills around B.",
-        "Consequently, B is the decisive sector of the battlefield: the team that swiftly breaks through and secures its urban district will gain the strategic initiative. As a high-risk alternative, players may attempt to cross the river in the northwest and execute a wide flanking maneuver against the enemy's flank or rear."
-      ],
-      "ko": [
-        "파이어 아크는 맵 중앙의 고지대에 시가지가 밀집된 전장입니다. 중앙을 가로지르는 철로를 제외하면 맵 전역에 실효성 있는 엄폐물이 거의 없어, 양 팀 모두 B 거점 인근에서 장거리 저격전을 벌이는 획일적인 전투 양상을 강요받습니다.",
-        "A 거점은 엄폐물이 전무한 분지에 자리해 양측 모두 사실상 점령을 시도하기 어렵습니다. C 거점에는 소규모 시가지와 도로가 형성되어 있지만, 지대 자체가 낮아 B 거점 일대의 언덕으로부터 손쉽게 견제당합니다.",
-        "따라서 승패를 좌우하는 핵심 지역은 B 거점이며, 이곳의 시가지를 신속하게 돌파해 장악하는 진영이 전투의 주도권을 확보하게 됩니다. 변칙적인 승부수로는 맵 북서쪽의 강을 도하해 적의 측후방으로 우회하는 전술을 고려할 수 있습니다."
-      ]
-    },
-    "Flanders": {
-      "en": [
-        "Flanders is defined by an extensive network of trenches and railway tracks dividing the center of the map, with rolling hills surrounding the area. As a result, hull-down engagements and gradual attrition from elevated positions form the basis of most strategies.",
-        "The trench sector is poorly suited for a direct breakthrough, as most of its cover either fails to conceal a vehicle's turret or consists of destructible walls. Tanks with limited gun depression may instead attempt a high-risk breakthrough through the tunnel between B and C or via the central urban district.",
-        "The C capture point lies in the middle of an exposed athletics stadium, making it difficult for either team to secure early. By contrast, the A and B capture points are enclosed by hills and urban terrain, respectively. Unless actively contested and defended, both can be relinquished to the enemy with alarming speed."
-      ],
-      "ko": [
-        "플랑드르는 맵 중앙을 양분하는 광활한 참호 지대와 철로를 주변의 구릉이 에워싸는 구조로, 능선을 활용한 헐다운 교전과 점진적인 전력 소모가 주된 양상으로 전개됩니다.",
-        "참호 지대의 엄폐물은 대부분 포탑까지 완전히 가려주지 못하거나 사격으로 관통 가능한 구조물이기 때문에, 정면 돌파로로 활용하기에는 부적합합니다. 주포 내림각이 부족한 전차라면 B–C 사이의 터널이나 중앙 시가지를 통해 승부수에 가까운 돌파를 감행할 수 있습니다.",
-        "C 거점은 개활된 육상 경기장 중앙에 자리하고 있어 어느 진영도 선점하기가 쉽지 않습니다. 반면 A와 B 거점은 각각 언덕과 시가지에 둘러싸여 있으므로, 적극적으로 방어하거나 재점령을 시도하지 않으면 순식간에 주도권을 내주게 됩니다."
-      ]
-    },
-    "Normandy": {
-      "en": [
-        "On Normandy, the main boulevard running north to south through the B capture point serves as the decisive axis of engagement. Whichever team gains control of this route is likely to seize the initiative.",
-        "Occupying the bell tower north of the church at B provides commanding control over much of the urban district, while securing the hill between B and C can effectively deny enemy forces access to the town.",
-        "The A capture point lies on the low-lying beach, where the tactical disadvantages of attempting a capture are excessively severe. The C capture point is situated within a basin, frequently resulting in a prolonged standoff as both sides adopt hull-down positions and exchange long-range fire.",
-        "The eastern team, however, can advance across the plains south of C and attempt a wide flanking maneuver—albeit one that carries considerable risk."
-      ],
-      "ko": [
-        "노르망디에서는 B 거점을 중심으로 남북을 잇는 대로가 핵심 교전 지역이며, 이 축선을 장악하는 진영이 전투의 주도권을 확보하게 됩니다.",
-        "B 거점의 교회 북쪽에 위치한 종탑을 선점하면 시가지 대부분을 통제할 수 있으며, B–C 사이의 언덕을 장악하면 적 병력의 시가지 진입로를 효과적으로 봉쇄할 수 있습니다.",
-        "A 거점은 해변의 저지대에 자리해 점령 과정에서 감수해야 할 전술적 불이익이 지나치게 큽니다. C 거점은 분지 지형에 위치하므로, 양측이 능선을 끼고 헐다운 상태로 저격전을 이어가는 교착 양상이 빈번하게 발생합니다.",
-        "다만 동쪽 진영은 C 거점 남쪽의 평야를 따라 진출하여, 상당한 위험을 수반하는 광범위한 우회를 시도할 수 있습니다."
-      ]
-    },
+    "Normandy": {},
     "European Province": {
       "en": [
         "European Province is an expanded version of Eastern Europe. Because of the larger battlefield, engagement distances are longer and the frontline is less densely populated. As a result, the central urban area around point B is considerably easier to break through than on Eastern Europe.",
@@ -668,6 +631,30 @@
         "이 때문에 초반에는 양 팀이 서로에게 유리한 거점을 하나씩 가져가는 형태로 전선이 형성되는 경우가 많으며, 처음부터 상대에게 유리한 거점을 억지로 빼앗으려 하면 불필요한 손실이 발생하기 쉽습니다.",
         "따라서 초반에는 자신의 유리한 거점을 안정적으로 확보한 뒤, 이후 전선의 빈틈을 이용해 돌파하거나 우회하여 나머지 지역의 주도권을 가져가는 방식이 효과적입니다."
       ]
+    },
+    "Fire Arc": {
+      "en": [
+        "Fire Arc is characterized by a dense urban district concentrated on the elevated ground at the center of the map. Aside from the railway cutting across the middle, the battlefield offers very little effective cover, effectively forcing both teams into long-range engagements around the B capture point.",
+        "The A capture point sits in an exposed basin with virtually no protection, making it impractical for either side to capture. The C capture point is bordered by a small urban area and a single road, but its low elevation leaves it highly vulnerable to fire from the hills around B.",
+        "Consequently, B is the decisive sector of the battlefield: the team that swiftly breaks through and secures its urban district will gain the strategic initiative. As a high-risk alternative, players may attempt to cross the river in the northwest and execute a wide flanking maneuver against the enemy's flank or rear."
+      ],
+      "ko": [
+        "파이어 아크는 맵 중앙의 고지대에 시가지가 밀집된 전장입니다. 중앙을 가로지르는 철로를 제외하면 맵 전역에 실효성 있는 엄폐물이 거의 없어, 양 팀 모두 B 거점 인근에서 장거리 저격전을 벌이는 획일적인 전투 양상을 강요받습니다.",
+        "A 거점은 엄폐물이 전무한 분지에 자리해 양측 모두 사실상 점령을 시도하기 어렵습니다. C 거점에는 소규모 시가지와 도로가 형성되어 있지만, 지대 자체가 낮아 B 거점 일대의 언덕으로부터 손쉽게 견제당합니다.",
+        "따라서 승패를 좌우하는 핵심 지역은 B 거점이며, 이곳의 시가지를 신속하게 돌파해 장악하는 진영이 전투의 주도권을 확보하게 됩니다. 변칙적인 승부수로는 맵 북서쪽의 강을 도하해 적의 측후방으로 우회하는 전술을 고려할 수 있습니다."
+      ]
+    },
+    "Flanders": {
+      "en": [
+        "Flanders is defined by an extensive network of trenches and railway tracks dividing the center of the map, with rolling hills surrounding the area. As a result, hull-down engagements and gradual attrition from elevated positions form the basis of most strategies.",
+        "The trench sector is poorly suited for a direct breakthrough, as most of its cover either fails to conceal a vehicle's turret or consists of destructible walls. Tanks with limited gun depression may instead attempt a high-risk breakthrough through the tunnel between B and C or via the central urban district.",
+        "The C capture point lies in the middle of an exposed athletics stadium, making it difficult for either team to secure early. By contrast, the A and B capture points are enclosed by hills and urban terrain, respectively. Unless actively contested and defended, both can be relinquished to the enemy with alarming speed."
+      ],
+      "ko": [
+        "플랑드르는 맵 중앙을 양분하는 광활한 참호 지대와 철로를 주변의 구릉이 에워싸는 구조로, 능선을 활용한 헐다운 교전과 점진적인 전력 소모가 주된 양상으로 전개됩니다.",
+        "참호 지대의 엄폐물은 대부분 포탑까지 완전히 가려주지 못하거나 사격으로 관통 가능한 구조물이기 때문에, 정면 돌파로로 활용하기에는 부적합합니다. 주포 내림각이 부족한 전차라면 B–C 사이의 터널이나 중앙 시가지를 통해 승부수에 가까운 돌파를 감행할 수 있습니다.",
+        "C 거점은 개활된 육상 경기장 중앙에 자리하고 있어 어느 진영도 선점하기가 쉽지 않습니다. 반면 A와 B 거점은 각각 언덕과 시가지에 둘러싸여 있으므로, 적극적으로 방어하거나 재점령을 시도하지 않으면 순식간에 주도권을 내주게 됩니다."
+      ]
     }
   },
   "markers": {
@@ -690,7 +677,7 @@
         "x": 70.56,
         "y": 28.96,
         "commentImages": [
-          "38th Parallel/scr_ (8).png"
+          "38th Parallel/scr_ (8).webp"
         ]
       },
       {
@@ -706,7 +693,7 @@
         "x": 80.28,
         "y": 35.97,
         "commentImages": [
-          "38th Parallel/scr_ (6).png"
+          "38th Parallel/scr_ (6).webp"
         ]
       },
       {
@@ -722,7 +709,7 @@
         "x": 15.14,
         "y": 37.92,
         "commentImages": [
-          "38th Parallel/scr_ (17).png"
+          "38th Parallel/scr_ (17).webp"
         ]
       },
       {
@@ -738,7 +725,7 @@
         "x": 48.54,
         "y": 38.68,
         "commentImages": [
-          "38th Parallel/scr_ (10).png"
+          "38th Parallel/scr_ (10).webp"
         ]
       },
       {
@@ -754,7 +741,7 @@
         "x": 86.39,
         "y": 41.53,
         "commentImages": [
-          "38th Parallel/scr_ (5).png"
+          "38th Parallel/scr_ (5).webp"
         ]
       },
       {
@@ -770,7 +757,7 @@
         "x": 37.85,
         "y": 45.42,
         "commentImages": [
-          "38th Parallel/scr_ (14).png"
+          "38th Parallel/scr_ (14).webp"
         ]
       },
       {
@@ -786,7 +773,7 @@
         "x": 55.49,
         "y": 45.69,
         "commentImages": [
-          "38th Parallel/scr_ (11).png"
+          "38th Parallel/scr_ (11).webp"
         ]
       },
       {
@@ -802,7 +789,7 @@
         "x": 51.67,
         "y": 46.67,
         "commentImages": [
-          "38th Parallel/scr_ (12).png"
+          "38th Parallel/scr_ (12).webp"
         ]
       },
       {
@@ -818,7 +805,7 @@
         "x": 27.36,
         "y": 48.47,
         "commentImages": [
-          "38th Parallel/scr_ (15).png"
+          "38th Parallel/scr_ (15).webp"
         ]
       },
       {
@@ -834,7 +821,7 @@
         "x": 66.53,
         "y": 56.04,
         "commentImages": [
-          "38th Parallel/scr_ (13).png"
+          "38th Parallel/scr_ (13).webp"
         ]
       },
       {
@@ -850,7 +837,7 @@
         "x": 21.11,
         "y": 71.74,
         "commentImages": [
-          "38th Parallel/scr_ (1).png"
+          "38th Parallel/scr_ (1).webp"
         ]
       },
       {
@@ -866,7 +853,7 @@
         "x": 78.47,
         "y": 77.08,
         "commentImages": [
-          "38th Parallel/scr_ (4).png"
+          "38th Parallel/scr_ (4).webp"
         ]
       },
       {
@@ -882,7 +869,7 @@
         "x": 47.5,
         "y": 81.04,
         "commentImages": [
-          "38th Parallel/scr_ (2).png"
+          "38th Parallel/scr_ (2).webp"
         ]
       },
       {
@@ -898,7 +885,7 @@
         "x": 30.23,
         "y": 21.53,
         "commentImages": [
-          "38th Parallel/scr_ (16).png"
+          "38th Parallel/scr_ (16).webp"
         ]
       },
       {
@@ -1170,7 +1157,7 @@
         "x": 15,
         "y": 22.78,
         "commentImages": [
-          "Abandoned Factory/scr_ (27).png"
+          "Abandoned Factory/scr_ (27).webp"
         ]
       },
       {
@@ -1186,8 +1173,8 @@
         "x": 34.58,
         "y": 31.46,
         "commentImages": [
-          "Abandoned Factory/scr_ (23).png",
-          "Abandoned Factory/scr_ (4).png"
+          "Abandoned Factory/scr_ (23).webp",
+          "Abandoned Factory/scr_ (4).webp"
         ]
       },
       {
@@ -1203,7 +1190,7 @@
         "x": 45.18,
         "y": 35.02,
         "commentImages": [
-          "Abandoned Factory/scr_ (22).png"
+          "Abandoned Factory/scr_ (22).webp"
         ]
       },
       {
@@ -1212,7 +1199,7 @@
         "x": 27.99,
         "y": 47.22,
         "commentImages": [
-          "Abandoned Factory/scr_ (24).png"
+          "Abandoned Factory/scr_ (24).webp"
         ]
       },
       {
@@ -1230,7 +1217,7 @@
         "commentEn": "Wall shot",
         "commentKo": "월샷",
         "commentImages": [
-          "Abandoned Factory/scr_ (18).png"
+          "Abandoned Factory/scr_ (18).webp"
         ]
       },
       {
@@ -1247,7 +1234,7 @@
         "y": 53.61,
         "comment": "Wall shot",
         "commentImages": [
-          "Abandoned Factory/scr_ (16).png"
+          "Abandoned Factory/scr_ (16).webp"
         ]
       },
       {
@@ -1263,7 +1250,7 @@
         "x": 93.33,
         "y": 54.72,
         "commentImages": [
-          "Abandoned Factory/scr_ (15).png"
+          "Abandoned Factory/scr_ (15).webp"
         ]
       },
       {
@@ -1281,8 +1268,8 @@
         "commentEn": "Wall shot",
         "commentKo": "월샷",
         "commentImages": [
-          "Abandoned Factory/scr_ (19).png",
-          "Abandoned Factory/scr_ (20).png"
+          "Abandoned Factory/scr_ (19).webp",
+          "Abandoned Factory/scr_ (20).webp"
         ]
       },
       {
@@ -1298,7 +1285,7 @@
         "x": 10.46,
         "y": 57.27,
         "commentImages": [
-          "Abandoned Factory/scr_ (25).png"
+          "Abandoned Factory/scr_ (25).webp"
         ]
       },
       {
@@ -1314,7 +1301,7 @@
         "x": 51.04,
         "y": 60.56,
         "commentImages": [
-          "Abandoned Factory/scr_ (21).png"
+          "Abandoned Factory/scr_ (21).webp"
         ]
       },
       {
@@ -1337,7 +1324,7 @@
         "x": 7.27,
         "y": 54.07,
         "commentImages": [
-          "Abandoned Factory/scr_ (26).png"
+          "Abandoned Factory/scr_ (26).webp"
         ]
       },
       {
@@ -1353,7 +1340,7 @@
         "x": 77.93,
         "y": 45.3,
         "commentImages": [
-          "Abandoned Factory/scr_ (17).png"
+          "Abandoned Factory/scr_ (17).webp"
         ]
       },
       {
@@ -1369,7 +1356,7 @@
         "x": 13.54,
         "y": 17.83,
         "commentImages": [
-          "Abandoned Factory/scr_ (3).png"
+          "Abandoned Factory/scr_ (3).webp"
         ]
       },
       {
@@ -1393,7 +1380,7 @@
         "x": 7.08,
         "y": 28.61,
         "commentImages": [
-          "Abandoned Factory/scr_ (2).png"
+          "Abandoned Factory/scr_ (2).webp"
         ]
       },
       {
@@ -1409,7 +1396,7 @@
         "x": 9.31,
         "y": 40.56,
         "commentImages": [
-          "Abandoned Factory/scr_ (1).png"
+          "Abandoned Factory/scr_ (1).webp"
         ]
       },
       {
@@ -1425,7 +1412,7 @@
         "x": 93.54,
         "y": 41.6,
         "commentImages": [
-          "Abandoned Factory/scr_ (13).png"
+          "Abandoned Factory/scr_ (13).webp"
         ]
       },
       {
@@ -1454,7 +1441,7 @@
         "x": 50.76,
         "y": 46.39,
         "commentImages": [
-          "Abandoned Factory/scr_ (9).png"
+          "Abandoned Factory/scr_ (9).webp"
         ]
       },
       {
@@ -1470,7 +1457,7 @@
         "x": 73.12,
         "y": 46.88,
         "commentImages": [
-          "Abandoned Factory/scr_ (11).png"
+          "Abandoned Factory/scr_ (11).webp"
         ]
       },
       {
@@ -1486,7 +1473,7 @@
         "x": 80.14,
         "y": 47.5,
         "commentImages": [
-          "Abandoned Factory/scr_ (12).png"
+          "Abandoned Factory/scr_ (12).webp"
         ]
       },
       {
@@ -1502,7 +1489,7 @@
         "x": 81.67,
         "y": 57.5,
         "commentImages": [
-          "Abandoned Factory/scr_ (14).png"
+          "Abandoned Factory/scr_ (14).webp"
         ]
       },
       {
@@ -1512,7 +1499,7 @@
         "y": 71.32,
         "comment": "Train Wall shot",
         "commentImages": [
-          "Abandoned Factory/scr_ (7).png"
+          "Abandoned Factory/scr_ (7).webp"
         ]
       },
       {
@@ -1528,7 +1515,7 @@
         "x": 10,
         "y": 73.19,
         "commentImages": [
-          "Abandoned Factory/scr_ (8).png"
+          "Abandoned Factory/scr_ (8).webp"
         ]
       },
       {
@@ -1551,7 +1538,7 @@
         "x": 30.94,
         "y": 69.68,
         "commentImages": [
-          "Abandoned Factory/scr_ (6).png"
+          "Abandoned Factory/scr_ (6).webp"
         ]
       },
       {
@@ -1567,7 +1554,7 @@
         "x": 35.99,
         "y": 63.03,
         "commentImages": [
-          "Abandoned Factory/scr_ (5).png"
+          "Abandoned Factory/scr_ (5).webp"
         ]
       },
       {
@@ -1583,7 +1570,7 @@
         "x": 57.71,
         "y": 58.33,
         "commentImages": [
-          "Abandoned Factory/scr_ (10).png"
+          "Abandoned Factory/scr_ (10).webp"
         ]
       },
       {
@@ -1620,7 +1607,7 @@
         "x": 33.95,
         "y": 82.18,
         "commentImages": [
-          "Abandoned Town/scr_ (5).png"
+          "Abandoned Town/scr_ (5).webp"
         ]
       },
       {
@@ -1630,7 +1617,7 @@
         "y": 83.07,
         "commentKo": "초반에 유용한 저격자리. 도하하는 적들 사격 가능",
         "commentImages": [
-          "Abandoned Town/scr_ (3).png"
+          "Abandoned Town/scr_ (3).webp"
         ]
       },
       {
@@ -1639,7 +1626,7 @@
         "x": 66.67,
         "y": 35.41,
         "commentImages": [
-          "Abandoned Town/scr_ (16).png"
+          "Abandoned Town/scr_ (16).webp"
         ]
       },
       {
@@ -1648,7 +1635,7 @@
         "x": 57.54,
         "y": 45.12,
         "commentImages": [
-          "Abandoned Town/scr_ (17).png"
+          "Abandoned Town/scr_ (17).webp"
         ]
       },
       {
@@ -1657,7 +1644,7 @@
         "x": 62.37,
         "y": 24.47,
         "commentImages": [
-          "Abandoned Town/scr_ (15).png"
+          "Abandoned Town/scr_ (15).webp"
         ]
       },
       {
@@ -1701,7 +1688,7 @@
         "x": 40.78,
         "y": 53.1,
         "commentImages": [
-          "Abandoned Town/scr_ (7).png"
+          "Abandoned Town/scr_ (7).webp"
         ]
       },
       {
@@ -1717,7 +1704,7 @@
         "x": 52.22,
         "y": 41.93,
         "commentImages": [
-          "Abandoned Town/scr_ (18).png"
+          "Abandoned Town/scr_ (18).webp"
         ]
       },
       {
@@ -1733,7 +1720,7 @@
         "x": 55.32,
         "y": 62.23,
         "commentImages": [
-          "Abandoned Town/scr_ (20).png"
+          "Abandoned Town/scr_ (20).webp"
         ]
       },
       {
@@ -1749,7 +1736,7 @@
         "x": 26.42,
         "y": 42.02,
         "commentImages": [
-          "Abandoned Town/scr_ (8).png"
+          "Abandoned Town/scr_ (8).webp"
         ]
       },
       {
@@ -1765,7 +1752,7 @@
         "x": 29.29,
         "y": 68.75,
         "commentImages": [
-          "Abandoned Town/scr_ (6).png"
+          "Abandoned Town/scr_ (6).webp"
         ]
       },
       {
@@ -1781,7 +1768,7 @@
         "x": 32.29,
         "y": 26.03,
         "commentImages": [
-          "Abandoned Town/scr_ (11).png"
+          "Abandoned Town/scr_ (11).webp"
         ]
       },
       {
@@ -1797,7 +1784,7 @@
         "x": 34.11,
         "y": 14.96,
         "commentImages": [
-          "Abandoned Town/scr_ (12).png"
+          "Abandoned Town/scr_ (12).webp"
         ]
       },
       {
@@ -1814,7 +1801,7 @@
         "y": 91.41,
         "commentKo": "시가지가 밀렸을 때 쓸 수 있는 아주 방어적인 자리",
         "commentImages": [
-          "Abandoned Town/scr_ (4).png"
+          "Abandoned Town/scr_ (4).webp"
         ]
       },
       {
@@ -1830,7 +1817,7 @@
         "x": 26.43,
         "y": 49.73,
         "commentImages": [
-          "Abandoned Town/scr_ (9).png"
+          "Abandoned Town/scr_ (9).webp"
         ]
       },
       {
@@ -1885,7 +1872,7 @@
         "x": 44.86,
         "y": 31.82,
         "commentImages": [
-          "Abandoned Town/scr_ (25).png"
+          "Abandoned Town/scr_ (25).webp"
         ]
       },
       {
@@ -1901,7 +1888,7 @@
         "x": 54.26,
         "y": 20.47,
         "commentImages": [
-          "Abandoned Town/scr_ (24).png"
+          "Abandoned Town/scr_ (24).webp"
         ]
       },
       {
@@ -1923,7 +1910,7 @@
         "x": 30.05,
         "y": 43.26,
         "commentImages": [
-          "Abandoned Town/scr_ (26).png"
+          "Abandoned Town/scr_ (26).webp"
         ]
       },
       {
@@ -1964,7 +1951,7 @@
         "x": 35.99,
         "y": 51.24,
         "commentImages": [
-          "Abandoned Town/scr_ (27).png"
+          "Abandoned Town/scr_ (27).webp"
         ]
       },
       {
@@ -1993,7 +1980,7 @@
         "x": 75.53,
         "y": 49.21,
         "commentImages": [
-          "Abandoned Town/scr_ (23).png"
+          "Abandoned Town/scr_ (23).webp"
         ]
       },
       {
@@ -2009,7 +1996,7 @@
         "x": 49.11,
         "y": 84.31,
         "commentImages": [
-          "Abandoned Town/scr_ (2).png"
+          "Abandoned Town/scr_ (2).webp"
         ]
       },
       {
@@ -2025,7 +2012,7 @@
         "x": 71.63,
         "y": 58.95,
         "commentImages": [
-          "Abandoned Town/scr_ (19).png"
+          "Abandoned Town/scr_ (19).webp"
         ]
       },
       {
@@ -2053,8 +2040,8 @@
         "x": 50,
         "y": 58.85,
         "commentImages": [
-          "Abandoned Town/scr_ (22).png",
-          "Abandoned Town/scr_ (21).png"
+          "Abandoned Town/scr_ (22).webp",
+          "Abandoned Town/scr_ (21).webp"
         ]
       },
       {
@@ -2070,7 +2057,7 @@
         "x": 30.47,
         "y": 79.95,
         "commentImages": [
-          "Abandoned Town/scr_ (1).png"
+          "Abandoned Town/scr_ (1).webp"
         ]
       },
       {
@@ -2088,7 +2075,7 @@
         "x": 82.81,
         "y": 62.05,
         "commentImages": [
-          "Advance to the Rhine/scr_ (36).png"
+          "Advance to the Rhine/scr_ (36).webp"
         ]
       },
       {
@@ -2110,8 +2097,8 @@
         "x": 95.22,
         "y": 37.49,
         "commentImages": [
-          "Advance to the Rhine/scr_ (28).png",
-          "Advance to the Rhine/scr_ (29).png"
+          "Advance to the Rhine/scr_ (28).webp",
+          "Advance to the Rhine/scr_ (29).webp"
         ]
       },
       {
@@ -2120,7 +2107,7 @@
         "x": 55.32,
         "y": 54.52,
         "commentImages": [
-          "Advance to the Rhine/scr_ (12).png"
+          "Advance to the Rhine/scr_ (12).webp"
         ]
       },
       {
@@ -2143,8 +2130,8 @@
         "x": 85.82,
         "y": 50.53,
         "commentImages": [
-          "Advance to the Rhine/scr_ (33).png",
-          "Advance to the Rhine/scr_ (34).png"
+          "Advance to the Rhine/scr_ (33).webp",
+          "Advance to the Rhine/scr_ (34).webp"
         ]
       },
       {
@@ -2160,7 +2147,7 @@
         "x": 47.61,
         "y": 65.16,
         "commentImages": [
-          "Advance to the Rhine/scr_ (10).png"
+          "Advance to the Rhine/scr_ (10).webp"
         ]
       },
       {
@@ -2183,7 +2170,7 @@
         "x": 24.55,
         "y": 63.74,
         "commentImages": [
-          "Advance to the Rhine/scr_ (17).png"
+          "Advance to the Rhine/scr_ (17).webp"
         ]
       },
       {
@@ -2199,7 +2186,7 @@
         "x": 35.46,
         "y": 50.08,
         "commentImages": [
-          "Advance to the Rhine/scr_ (15).png"
+          "Advance to the Rhine/scr_ (15).webp"
         ]
       },
       {
@@ -2215,7 +2202,7 @@
         "x": 45.21,
         "y": 58.06,
         "commentImages": [
-          "Advance to the Rhine/scr_ (11).png"
+          "Advance to the Rhine/scr_ (11).webp"
         ]
       },
       {
@@ -2231,7 +2218,7 @@
         "x": 54.35,
         "y": 30.22,
         "commentImages": [
-          "Advance to the Rhine/scr_ (24).png"
+          "Advance to the Rhine/scr_ (24).webp"
         ]
       },
       {
@@ -2247,7 +2234,7 @@
         "x": 81.83,
         "y": 17.81,
         "commentImages": [
-          "Advance to the Rhine/scr_ (25).png"
+          "Advance to the Rhine/scr_ (25).webp"
         ]
       },
       {
@@ -2263,8 +2250,8 @@
         "x": 58.69,
         "y": 44.85,
         "commentImages": [
-          "Advance to the Rhine/scr_ (21).png",
-          "Advance to the Rhine/scr_ (22).png"
+          "Advance to the Rhine/scr_ (21).webp",
+          "Advance to the Rhine/scr_ (22).webp"
         ]
       },
       {
@@ -2280,8 +2267,8 @@
         "x": 86.07,
         "y": 40.62,
         "commentImages": [
-          "Advance to the Rhine/scr_ (30).png",
-          "Advance to the Rhine/scr_ (31).png"
+          "Advance to the Rhine/scr_ (30).webp",
+          "Advance to the Rhine/scr_ (31).webp"
         ]
       },
       {
@@ -2297,7 +2284,7 @@
         "x": 17.7,
         "y": 41.4,
         "commentImages": [
-          "Advance to the Rhine/scr_ (40).png"
+          "Advance to the Rhine/scr_ (40).webp"
         ]
       },
       {
@@ -2313,7 +2300,7 @@
         "x": 25.91,
         "y": 21.86,
         "commentImages": [
-          "Advance to the Rhine/scr_ (1).png"
+          "Advance to the Rhine/scr_ (1).webp"
         ]
       },
       {
@@ -2342,7 +2329,7 @@
         "x": 41.67,
         "y": 39.31,
         "commentImages": [
-          "Advance to the Rhine/scr_ (23).png"
+          "Advance to the Rhine/scr_ (23).webp"
         ]
       },
       {
@@ -2376,7 +2363,7 @@
         "x": 22.39,
         "y": 50.77,
         "commentImages": [
-          "Advance to the Rhine/scr_ (18).png"
+          "Advance to the Rhine/scr_ (18).webp"
         ]
       },
       {
@@ -2400,7 +2387,7 @@
         "x": 99.03,
         "y": 41.4,
         "commentImages": [
-          "Advance to the Rhine/scr_ (27).png"
+          "Advance to the Rhine/scr_ (27).webp"
         ]
       },
       {
@@ -2422,7 +2409,7 @@
         "x": 43.75,
         "y": 66.4,
         "commentImages": [
-          "Advance to the Rhine/scr_ (13).png"
+          "Advance to the Rhine/scr_ (13).webp"
         ]
       },
       {
@@ -2438,7 +2425,7 @@
         "x": 23.49,
         "y": 76.95,
         "commentImages": [
-          "Advance to the Rhine/scr_ (7).png"
+          "Advance to the Rhine/scr_ (7).webp"
         ]
       },
       {
@@ -2454,7 +2441,7 @@
         "x": 91.41,
         "y": 79.16,
         "commentImages": [
-          "Advance to the Rhine/scr_ (37).png"
+          "Advance to the Rhine/scr_ (37).webp"
         ]
       },
       {
@@ -2470,7 +2457,7 @@
         "x": 79.7,
         "y": 95.83,
         "commentImages": [
-          "Advance to the Rhine/scr_ (39).png"
+          "Advance to the Rhine/scr_ (39).webp"
         ]
       },
       {
@@ -2486,7 +2473,7 @@
         "x": 94.77,
         "y": 33.86,
         "commentImages": [
-          "Advance to the Rhine/scr_ (26).png"
+          "Advance to the Rhine/scr_ (26).webp"
         ]
       },
       {
@@ -2502,8 +2489,8 @@
         "x": 55.76,
         "y": 48.75,
         "commentImages": [
-          "Advance to the Rhine/scr_ (19).png",
-          "Advance to the Rhine/scr_ (20).png"
+          "Advance to the Rhine/scr_ (19).webp",
+          "Advance to the Rhine/scr_ (20).webp"
         ]
       },
       {
@@ -2519,7 +2506,7 @@
         "x": 80.08,
         "y": 42.7,
         "commentImages": [
-          "Advance to the Rhine/scr_ (32).png"
+          "Advance to the Rhine/scr_ (32).webp"
         ]
       },
       {
@@ -2541,7 +2528,7 @@
         "x": 22.6,
         "y": 46.36,
         "commentImages": [
-          "Advance to the Rhine/scr_ (5).png"
+          "Advance to the Rhine/scr_ (5).webp"
         ]
       },
       {
@@ -2557,7 +2544,7 @@
         "x": 35.46,
         "y": 46.27,
         "commentImages": [
-          "Advance to the Rhine/scr_ (16).png"
+          "Advance to the Rhine/scr_ (16).webp"
         ]
       },
       {
@@ -2566,7 +2553,7 @@
         "x": 13.38,
         "y": 66.22,
         "commentImages": [
-          "Advance to the Rhine/scr_ (6).png"
+          "Advance to the Rhine/scr_ (6).webp"
         ]
       },
       {
@@ -2582,7 +2569,7 @@
         "x": 36.61,
         "y": 88.21,
         "commentImages": [
-          "Advance to the Rhine/scr_ (8).png"
+          "Advance to the Rhine/scr_ (8).webp"
         ]
       },
       {
@@ -2605,7 +2592,7 @@
         "x": 32.09,
         "y": 56.64,
         "commentImages": [
-          "Advance to the Rhine/scr_ (14).png"
+          "Advance to the Rhine/scr_ (14).webp"
         ]
       },
       {
@@ -2621,7 +2608,7 @@
         "x": 82.89,
         "y": 61.7,
         "commentImages": [
-          "Advance to the Rhine/scr_ (35).png"
+          "Advance to the Rhine/scr_ (35).webp"
         ]
       },
       {
@@ -2637,7 +2624,7 @@
         "x": 55.21,
         "y": 76.56,
         "commentImages": [
-          "Advance to the Rhine/scr_ (9).png"
+          "Advance to the Rhine/scr_ (9).webp"
         ]
       },
       {
@@ -2678,7 +2665,7 @@
         "x": 66.67,
         "y": 95.66,
         "commentImages": [
-          "Advance to the Rhine/scr_ (38).png"
+          "Advance to the Rhine/scr_ (38).webp"
         ]
       },
       {
@@ -2696,7 +2683,7 @@
         "x": 33.67,
         "y": 53.66,
         "commentImages": [
-          "Alaska/scr_ (17).png"
+          "Alaska/scr_ (17).webp"
         ]
       },
       {
@@ -2725,7 +2712,7 @@
         "x": 76.05,
         "y": 54.03,
         "commentImages": [
-          "Alaska/scr_ (1).png"
+          "Alaska/scr_ (1).webp"
         ]
       },
       {
@@ -2741,8 +2728,8 @@
         "x": 69.8,
         "y": 23.95,
         "commentImages": [
-          "Alaska/scr_ (22).png",
-          "Alaska/scr_ (23).png"
+          "Alaska/scr_ (22).webp",
+          "Alaska/scr_ (23).webp"
         ]
       },
       {
@@ -2758,7 +2745,7 @@
         "x": 46.46,
         "y": 52.17,
         "commentImages": [
-          "Alaska/scr_ (15).png"
+          "Alaska/scr_ (15).webp"
         ]
       },
       {
@@ -2774,7 +2761,7 @@
         "x": 47.72,
         "y": 62,
         "commentImages": [
-          "Alaska/scr_ (16).png"
+          "Alaska/scr_ (16).webp"
         ]
       },
       {
@@ -2790,7 +2777,7 @@
         "x": 27.16,
         "y": 47.61,
         "commentImages": [
-          "Alaska/scr_ (6).png"
+          "Alaska/scr_ (6).webp"
         ]
       },
       {
@@ -2799,7 +2786,7 @@
         "x": 14.6,
         "y": 49.2,
         "commentImages": [
-          "Alaska/scr_ (30).png"
+          "Alaska/scr_ (30).webp"
         ]
       },
       {
@@ -2815,7 +2802,7 @@
         "x": 12.66,
         "y": 70.67,
         "commentImages": [
-          "Alaska/scr_ (28).png"
+          "Alaska/scr_ (28).webp"
         ]
       },
       {
@@ -2856,7 +2843,7 @@
         "x": 7.55,
         "y": 73.43,
         "commentImages": [
-          "Alaska/scr_ (29).png"
+          "Alaska/scr_ (29).webp"
         ]
       },
       {
@@ -2872,10 +2859,10 @@
         "x": 23.85,
         "y": 51.15,
         "commentImages": [
-          "Alaska/scr_ (2).png",
-          "Alaska/scr_ (3).png",
-          "Alaska/scr_ (4).png",
-          "Alaska/scr_ (5).png"
+          "Alaska/scr_ (2).webp",
+          "Alaska/scr_ (3).webp",
+          "Alaska/scr_ (4).webp",
+          "Alaska/scr_ (5).webp"
         ]
       },
       {
@@ -2891,7 +2878,7 @@
         "x": 43.1,
         "y": 23.04,
         "commentImages": [
-          "Alaska/scr_ (20).png"
+          "Alaska/scr_ (20).webp"
         ]
       },
       {
@@ -2907,7 +2894,7 @@
         "x": 33.6,
         "y": 36.87,
         "commentImages": [
-          "Alaska/scr_ (18).png"
+          "Alaska/scr_ (18).webp"
         ]
       },
       {
@@ -2923,7 +2910,7 @@
         "x": 59.13,
         "y": 21.98,
         "commentImages": [
-          "Alaska/scr_ (21).png"
+          "Alaska/scr_ (21).webp"
         ]
       },
       {
@@ -2939,7 +2926,7 @@
         "x": 36.08,
         "y": 23.4,
         "commentImages": [
-          "Alaska/scr_ (19).png"
+          "Alaska/scr_ (19).webp"
         ]
       },
       {
@@ -2961,7 +2948,7 @@
         "x": 80.6,
         "y": 93.23,
         "commentImages": [
-          "Alaska/scr_ (27).png"
+          "Alaska/scr_ (27).webp"
         ]
       },
       {
@@ -3011,8 +2998,8 @@
         "x": 40.18,
         "y": 46.35,
         "commentImages": [
-          "Alaska/scr_ (12).png",
-          "Alaska/scr_ (13).png"
+          "Alaska/scr_ (12).webp",
+          "Alaska/scr_ (13).webp"
         ]
       },
       {
@@ -3028,7 +3015,7 @@
         "x": 12.31,
         "y": 47.83,
         "commentImages": [
-          "Alaska/scr_ (31).png"
+          "Alaska/scr_ (31).webp"
         ]
       },
       {
@@ -3044,7 +3031,7 @@
         "x": 10.94,
         "y": 31.85,
         "commentImages": [
-          "Alaska/scr_ (32).png"
+          "Alaska/scr_ (32).webp"
         ]
       },
       {
@@ -3073,7 +3060,7 @@
         "x": 25.18,
         "y": 44.41,
         "commentImages": [
-          "Alaska/scr_ (9).png"
+          "Alaska/scr_ (9).webp"
         ]
       },
       {
@@ -3082,8 +3069,8 @@
         "x": 31.04,
         "y": 44.07,
         "commentImages": [
-          "Alaska/scr_ (7).png",
-          "Alaska/scr_ (8).png"
+          "Alaska/scr_ (7).webp",
+          "Alaska/scr_ (8).webp"
         ]
       },
       {
@@ -3124,7 +3111,7 @@
         "x": 41.32,
         "y": 51.37,
         "commentImages": [
-          "Alaska/scr_ (14).png"
+          "Alaska/scr_ (14).webp"
         ]
       },
       {
@@ -3140,7 +3127,7 @@
         "x": 49.2,
         "y": 61.77,
         "commentImages": [
-          "Alaska/scr_ (36).png"
+          "Alaska/scr_ (36).webp"
         ]
       },
       {
@@ -3156,7 +3143,7 @@
         "x": 39.61,
         "y": 70.22,
         "commentImages": [
-          "Alaska/scr_ (35).png"
+          "Alaska/scr_ (35).webp"
         ]
       },
       {
@@ -3172,7 +3159,7 @@
         "x": 11.58,
         "y": 19,
         "commentImages": [
-          "Alaska/scr_ (33).png"
+          "Alaska/scr_ (33).webp"
         ]
       },
       {
@@ -3188,7 +3175,7 @@
         "x": 31.29,
         "y": 72.87,
         "commentImages": [
-          "Alaska/scr_ (34).png"
+          "Alaska/scr_ (34).webp"
         ]
       },
       {
@@ -3204,8 +3191,8 @@
         "x": 70.71,
         "y": 77.6,
         "commentImages": [
-          "Alaska/scr_ (25).png",
-          "Alaska/scr_ (26).png"
+          "Alaska/scr_ (25).webp",
+          "Alaska/scr_ (26).webp"
         ]
       },
       {
@@ -3227,8 +3214,8 @@
         "x": 32.81,
         "y": 51.43,
         "commentImages": [
-          "Alaska/scr_ (10).png",
-          "Alaska/scr_ (11).png"
+          "Alaska/scr_ (10).webp",
+          "Alaska/scr_ (11).webp"
         ]
       },
       {
@@ -3244,7 +3231,7 @@
         "x": 61.2,
         "y": 78.51,
         "commentImages": [
-          "Alaska/scr_ (37).png"
+          "Alaska/scr_ (37).webp"
         ]
       },
       {
@@ -3260,7 +3247,7 @@
         "x": 76.24,
         "y": 46.54,
         "commentImages": [
-          "Alaska/scr_ (24).png"
+          "Alaska/scr_ (24).webp"
         ]
       },
       {
@@ -3291,7 +3278,7 @@
         "x": 56.47,
         "y": 61.61,
         "commentImages": [
-          "American Desert/scr_ (19).png"
+          "American Desert/scr_ (19).webp"
         ]
       },
       {
@@ -3307,7 +3294,7 @@
         "x": 48.94,
         "y": 64.89,
         "commentImages": [
-          "American Desert/scr_ (20).png"
+          "American Desert/scr_ (20).webp"
         ]
       },
       {
@@ -3323,8 +3310,8 @@
         "x": 54.97,
         "y": 48.4,
         "commentImages": [
-          "American Desert/scr_ (37).png",
-          "American Desert/scr_ (36).png"
+          "American Desert/scr_ (37).webp",
+          "American Desert/scr_ (36).webp"
         ]
       },
       {
@@ -3341,7 +3328,7 @@
         "y": 47.51,
         "comment": "Only the first spawn works.",
         "commentImages": [
-          "American Desert/scr_ (12).png"
+          "American Desert/scr_ (12).webp"
         ]
       },
       {
@@ -3357,7 +3344,7 @@
         "x": 38.74,
         "y": 96.99,
         "commentImages": [
-          "American Desert/scr_ (25).png"
+          "American Desert/scr_ (25).webp"
         ]
       },
       {
@@ -3373,7 +3360,7 @@
         "x": 98.94,
         "y": 42.9,
         "commentImages": [
-          "American Desert/scr_ (13).png"
+          "American Desert/scr_ (13).webp"
         ]
       },
       {
@@ -3390,7 +3377,7 @@
         "y": 39.18,
         "comment": "Can fight while moving in and out of the map boundary, use a tank with good reverse mobility.",
         "commentImages": [
-          "American Desert/scr_ (15).png"
+          "American Desert/scr_ (15).webp"
         ]
       },
       {
@@ -3406,7 +3393,7 @@
         "x": 62.06,
         "y": 13.64,
         "commentImages": [
-          "American Desert/scr_ (1).png"
+          "American Desert/scr_ (1).webp"
         ]
       },
       {
@@ -3422,7 +3409,7 @@
         "x": 24.38,
         "y": 47.42,
         "commentImages": [
-          "American Desert/scr_ (35).png"
+          "American Desert/scr_ (35).webp"
         ]
       },
       {
@@ -3450,8 +3437,8 @@
         "x": 58.08,
         "y": 40.1,
         "commentImages": [
-          "American Desert/scr_ (23).png",
-          "American Desert/scr_ (26).png"
+          "American Desert/scr_ (23).webp",
+          "American Desert/scr_ (26).webp"
         ]
       },
       {
@@ -3476,7 +3463,7 @@
         "x": 33.85,
         "y": 31.37,
         "commentImages": [
-          "American Desert/scr_ (3).png"
+          "American Desert/scr_ (3).webp"
         ]
       },
       {
@@ -3492,7 +3479,7 @@
         "x": 77.22,
         "y": 34.76,
         "commentImages": [
-          "American Desert/scr_ (16).png"
+          "American Desert/scr_ (16).webp"
         ]
       },
       {
@@ -3508,7 +3495,7 @@
         "x": 45.83,
         "y": 97.53,
         "commentImages": [
-          "American Desert/scr_ (24).png"
+          "American Desert/scr_ (24).webp"
         ]
       },
       {
@@ -3536,8 +3523,8 @@
         "x": 23.04,
         "y": 82.16,
         "commentImages": [
-          "American Desert/scr_ (27).png",
-          "American Desert/scr_ (28).png"
+          "American Desert/scr_ (27).webp",
+          "American Desert/scr_ (28).webp"
         ]
       },
       {
@@ -3553,8 +3540,8 @@
         "x": 38.67,
         "y": 50.38,
         "commentImages": [
-          "American Desert/scr_ (29).png",
-          "American Desert/scr_ (30).png"
+          "American Desert/scr_ (29).webp",
+          "American Desert/scr_ (30).webp"
         ]
       },
       {
@@ -3570,8 +3557,8 @@
         "x": 59.64,
         "y": 50.25,
         "commentImages": [
-          "American Desert/scr_ (14).png",
-          "American Desert/scr_ (31).png"
+          "American Desert/scr_ (14).webp",
+          "American Desert/scr_ (31).webp"
         ]
       },
       {
@@ -3589,7 +3576,7 @@
         "x": 46.72,
         "y": 46.45,
         "commentImages": [
-          "American Desert/scr_ (5).png"
+          "American Desert/scr_ (5).webp"
         ]
       },
       {
@@ -3605,7 +3592,7 @@
         "x": 59.13,
         "y": 43.79,
         "commentImages": [
-          "American Desert/scr_ (6).png"
+          "American Desert/scr_ (6).webp"
         ]
       },
       {
@@ -3627,7 +3614,7 @@
         "x": 20.83,
         "y": 64.89,
         "commentImages": [
-          "American Desert/scr_ (22).png"
+          "American Desert/scr_ (22).webp"
         ]
       },
       {
@@ -3643,7 +3630,7 @@
         "x": 33.33,
         "y": 32.93,
         "commentImages": [
-          "American Desert/scr_ (2).png"
+          "American Desert/scr_ (2).webp"
         ]
       },
       {
@@ -3659,7 +3646,7 @@
         "x": 94.41,
         "y": 65.75,
         "commentImages": [
-          "American Desert/scr_ (11).png"
+          "American Desert/scr_ (11).webp"
         ]
       },
       {
@@ -3668,8 +3655,8 @@
         "x": 62.77,
         "y": 52.21,
         "commentImages": [
-          "American Desert/scr_ (33).png",
-          "American Desert/scr_ (34).png"
+          "American Desert/scr_ (33).webp",
+          "American Desert/scr_ (34).webp"
         ]
       },
       {
@@ -3691,7 +3678,7 @@
         "x": 82.81,
         "y": 19.41,
         "commentImages": [
-          "American Desert/scr_ (10).png"
+          "American Desert/scr_ (10).webp"
         ]
       },
       {
@@ -3700,7 +3687,7 @@
         "x": 75.71,
         "y": 27.21,
         "commentImages": [
-          "American Desert/scr_ (9).png"
+          "American Desert/scr_ (9).webp"
         ]
       },
       {
@@ -3723,7 +3710,7 @@
         "x": 25.26,
         "y": 40.1,
         "commentImages": [
-          "American Desert/scr_ (4).png"
+          "American Desert/scr_ (4).webp"
         ]
       },
       {
@@ -3746,8 +3733,8 @@
         "x": 76.57,
         "y": 33.58,
         "commentImages": [
-          "American Desert/scr_ (7).png",
-          "American Desert/scr_ (8).png"
+          "American Desert/scr_ (7).webp",
+          "American Desert/scr_ (8).webp"
         ]
       },
       {
@@ -3784,7 +3771,7 @@
         "x": 53.78,
         "y": 93.62,
         "commentImages": [
-          "American Desert/scr_ (17).png"
+          "American Desert/scr_ (17).webp"
         ]
       },
       {
@@ -3800,7 +3787,7 @@
         "x": 52.08,
         "y": 86.46,
         "commentImages": [
-          "American Desert/scr_ (18).png"
+          "American Desert/scr_ (18).webp"
         ]
       },
       {
@@ -3822,7 +3809,7 @@
         "x": 60.42,
         "y": 13.92,
         "commentImages": [
-          "American Desert/scr_ (32).png"
+          "American Desert/scr_ (32).webp"
         ]
       },
       {
@@ -3872,7 +3859,7 @@
         "x": 64.03,
         "y": 15.68,
         "commentImages": [
-          "Aral Sea/scr_ (20).png"
+          "Aral Sea/scr_ (20).webp"
         ]
       },
       {
@@ -3888,7 +3875,7 @@
         "x": 7.43,
         "y": 22.22,
         "commentImages": [
-          "Aral Sea/scr_ (2).png"
+          "Aral Sea/scr_ (2).webp"
         ]
       },
       {
@@ -3904,7 +3891,7 @@
         "x": 41.11,
         "y": 33.68,
         "commentImages": [
-          "Aral Sea/scr_ (22).png"
+          "Aral Sea/scr_ (22).webp"
         ]
       },
       {
@@ -3913,7 +3900,7 @@
         "x": 51.42,
         "y": 37.76,
         "commentImages": [
-          "Aral Sea/scr_ (21).png"
+          "Aral Sea/scr_ (21).webp"
         ]
       },
       {
@@ -3929,7 +3916,7 @@
         "x": 35.84,
         "y": 60.56,
         "commentImages": [
-          "Aral Sea/scr_ (17).png"
+          "Aral Sea/scr_ (17).webp"
         ]
       },
       {
@@ -3945,7 +3932,7 @@
         "x": 17.76,
         "y": 60.43,
         "commentImages": [
-          "Aral Sea/scr_ (25).png"
+          "Aral Sea/scr_ (25).webp"
         ]
       },
       {
@@ -3961,7 +3948,7 @@
         "x": 33.07,
         "y": 65.51,
         "commentImages": [
-          "Aral Sea/scr_ (26).png"
+          "Aral Sea/scr_ (26).webp"
         ]
       },
       {
@@ -3977,8 +3964,8 @@
         "x": 55.69,
         "y": 75.22,
         "commentImages": [
-          "Aral Sea/scr_ (28).png",
-          "Aral Sea/scr_ (29).png"
+          "Aral Sea/scr_ (28).webp",
+          "Aral Sea/scr_ (29).webp"
         ]
       },
       {
@@ -4001,7 +3988,7 @@
         "x": 22.31,
         "y": 30.59,
         "commentImages": [
-          "Aral Sea/scr_ (1).png"
+          "Aral Sea/scr_ (1).webp"
         ]
       },
       {
@@ -4017,7 +4004,7 @@
         "x": 51.13,
         "y": 48.13,
         "commentImages": [
-          "Aral Sea/scr_ (15).png"
+          "Aral Sea/scr_ (15).webp"
         ]
       },
       {
@@ -4033,8 +4020,8 @@
         "x": 26.02,
         "y": 37.62,
         "commentImages": [
-          "Aral Sea/scr_ (23).png",
-          "Aral Sea/scr_ (24).png"
+          "Aral Sea/scr_ (23).webp",
+          "Aral Sea/scr_ (24).webp"
         ]
       },
       {
@@ -4050,7 +4037,7 @@
         "x": 39.49,
         "y": 54.47,
         "commentImages": [
-          "Aral Sea/scr_ (27).png"
+          "Aral Sea/scr_ (27).webp"
         ]
       },
       {
@@ -4081,7 +4068,7 @@
         "x": 59.99,
         "y": 20.86,
         "commentImages": [
-          "Aral Sea/scr_ (19).png"
+          "Aral Sea/scr_ (19).webp"
         ]
       },
       {
@@ -4097,8 +4084,8 @@
         "x": 20.67,
         "y": 37.55,
         "commentImages": [
-          "Aral Sea/scr_ (3).png",
-          "Aral Sea/scr_ (4).png"
+          "Aral Sea/scr_ (3).webp",
+          "Aral Sea/scr_ (4).webp"
         ]
       },
       {
@@ -4114,7 +4101,7 @@
         "x": 33.12,
         "y": 36.25,
         "commentImages": [
-          "Aral Sea/scr_ (18).png"
+          "Aral Sea/scr_ (18).webp"
         ]
       },
       {
@@ -4130,7 +4117,7 @@
         "x": 11.08,
         "y": 33.68,
         "commentImages": [
-          "Aral Sea/scr_ (5).png"
+          "Aral Sea/scr_ (5).webp"
         ]
       },
       {
@@ -4146,7 +4133,7 @@
         "x": 41.49,
         "y": 43.61,
         "commentImages": [
-          "Aral Sea/scr_ (16).png"
+          "Aral Sea/scr_ (16).webp"
         ]
       },
       {
@@ -4162,8 +4149,8 @@
         "x": 33.89,
         "y": 59.86,
         "commentImages": [
-          "Aral Sea/scr_ (7).png",
-          "Aral Sea/scr_ (8).png"
+          "Aral Sea/scr_ (7).webp",
+          "Aral Sea/scr_ (8).webp"
         ]
       },
       {
@@ -4179,7 +4166,7 @@
         "x": 51.48,
         "y": 47.09,
         "commentImages": [
-          "Aral Sea/scr_ (14).png"
+          "Aral Sea/scr_ (14).webp"
         ]
       },
       {
@@ -4195,7 +4182,7 @@
         "x": 23.67,
         "y": 53.01,
         "commentImages": [
-          "Aral Sea/scr_ (6).png"
+          "Aral Sea/scr_ (6).webp"
         ]
       },
       {
@@ -4211,8 +4198,8 @@
         "x": 27.75,
         "y": 58.15,
         "commentImages": [
-          "Aral Sea/scr_ (9).png",
-          "Aral Sea/scr_ (10).png"
+          "Aral Sea/scr_ (9).webp",
+          "Aral Sea/scr_ (10).webp"
         ]
       },
       {
@@ -4228,7 +4215,7 @@
         "x": 50.96,
         "y": 72.2,
         "commentImages": [
-          "Aral Sea/scr_ (11).png"
+          "Aral Sea/scr_ (11).webp"
         ]
       },
       {
@@ -4244,7 +4231,7 @@
         "x": 59.04,
         "y": 82.36,
         "commentImages": [
-          "Aral Sea/scr_ (12).png"
+          "Aral Sea/scr_ (12).webp"
         ]
       },
       {
@@ -4260,7 +4247,7 @@
         "x": 41.23,
         "y": 71.07,
         "commentImages": [
-          "Aral Sea/scr_ (13).png"
+          "Aral Sea/scr_ (13).webp"
         ]
       },
       {
@@ -4278,7 +4265,7 @@
         "x": 57.89,
         "y": 53.45,
         "commentImages": [
-          "Arctic Pier/scr_ (22).png"
+          "Arctic Pier/scr_ (22).webp"
         ]
       },
       {
@@ -4300,7 +4287,7 @@
         "x": 27.34,
         "y": 42.83,
         "commentImages": [
-          "Arctic Pier/scr_ (8).png"
+          "Arctic Pier/scr_ (8).webp"
         ]
       },
       {
@@ -4316,7 +4303,7 @@
         "x": 23.56,
         "y": 55.07,
         "commentImages": [
-          "Arctic Pier/scr_ (9).png"
+          "Arctic Pier/scr_ (9).webp"
         ]
       },
       {
@@ -4332,7 +4319,7 @@
         "x": 51.69,
         "y": 53.19,
         "commentImages": [
-          "Arctic Pier/scr_ (15).png"
+          "Arctic Pier/scr_ (15).webp"
         ]
       },
       {
@@ -4348,7 +4335,7 @@
         "x": 18.08,
         "y": 66.84,
         "commentImages": [
-          "Arctic Pier/scr_ (3).png"
+          "Arctic Pier/scr_ (3).webp"
         ]
       },
       {
@@ -4364,7 +4351,7 @@
         "x": 13.54,
         "y": 77.6,
         "commentImages": [
-          "Arctic Pier/scr_ (6).png"
+          "Arctic Pier/scr_ (6).webp"
         ]
       },
       {
@@ -4380,8 +4367,8 @@
         "x": 21.81,
         "y": 71.01,
         "commentImages": [
-          "Arctic Pier/scr_ (26).png",
-          "Arctic Pier/scr_ (25).png"
+          "Arctic Pier/scr_ (26).webp",
+          "Arctic Pier/scr_ (25).webp"
         ]
       },
       {
@@ -4397,7 +4384,7 @@
         "x": 94.8,
         "y": 37.23,
         "commentImages": [
-          "Arctic Pier/scr_ (19).png"
+          "Arctic Pier/scr_ (19).webp"
         ]
       },
       {
@@ -4414,7 +4401,7 @@
         "y": 40.42,
         "comment": "점령만 하고 더 들어가진 말것",
         "commentImages": [
-          "Arctic Pier/scr_ (21).png"
+          "Arctic Pier/scr_ (21).webp"
         ]
       },
       {
@@ -4430,8 +4417,8 @@
         "x": 71.23,
         "y": 78.64,
         "commentImages": [
-          "Arctic Pier/scr_ (23).png",
-          "Arctic Pier/scr_ (24).png"
+          "Arctic Pier/scr_ (23).webp",
+          "Arctic Pier/scr_ (24).webp"
         ]
       },
       {
@@ -4447,7 +4434,7 @@
         "x": 18.75,
         "y": 36.97,
         "commentImages": [
-          "Arctic Pier/scr_ (10).png"
+          "Arctic Pier/scr_ (10).webp"
         ]
       },
       {
@@ -4463,7 +4450,7 @@
         "x": 8.33,
         "y": 51.95,
         "commentImages": [
-          "Arctic Pier/scr_ (11).png"
+          "Arctic Pier/scr_ (11).webp"
         ]
       },
       {
@@ -4479,7 +4466,7 @@
         "x": 5.46,
         "y": 73.82,
         "commentImages": [
-          "Arctic Pier/scr_ (12).png"
+          "Arctic Pier/scr_ (12).webp"
         ]
       },
       {
@@ -4510,7 +4497,7 @@
         "x": 64.72,
         "y": 58.85,
         "commentImages": [
-          "Arctic Pier/scr_ (2).png"
+          "Arctic Pier/scr_ (2).webp"
         ]
       },
       {
@@ -4519,7 +4506,7 @@
         "x": 86.33,
         "y": 24.99,
         "commentImages": [
-          "Arctic Pier/scr_ (1).png"
+          "Arctic Pier/scr_ (1).webp"
         ]
       },
       {
@@ -4542,7 +4529,7 @@
         "x": 85.94,
         "y": 44.65,
         "commentImages": [
-          "Arctic Pier/scr_ (20).png"
+          "Arctic Pier/scr_ (20).webp"
         ]
       },
       {
@@ -4551,7 +4538,7 @@
         "x": 43.62,
         "y": 47.16,
         "commentImages": [
-          "Arctic Pier/scr_ (17).png"
+          "Arctic Pier/scr_ (17).webp"
         ]
       },
       {
@@ -4560,7 +4547,7 @@
         "x": 62.32,
         "y": 61.17,
         "commentImages": [
-          "Arctic Pier/scr_ (3).png"
+          "Arctic Pier/scr_ (3).webp"
         ]
       },
       {
@@ -4576,7 +4563,7 @@
         "x": 4.96,
         "y": 75.88,
         "commentImages": [
-          "Arctic Pier/scr_ (13).png"
+          "Arctic Pier/scr_ (13).webp"
         ]
       },
       {
@@ -4592,7 +4579,7 @@
         "x": 22.65,
         "y": 53.25,
         "commentImages": [
-          "Arctic Pier/scr_ (7).png"
+          "Arctic Pier/scr_ (7).webp"
         ]
       },
       {
@@ -4608,7 +4595,7 @@
         "x": 29.25,
         "y": 62.5,
         "commentImages": [
-          "Arctic Pier/scr_ (5).png"
+          "Arctic Pier/scr_ (5).webp"
         ]
       },
       {
@@ -4617,7 +4604,7 @@
         "x": 7.68,
         "y": 66.92,
         "commentImages": [
-          "Arctic Pier/scr_ (14).png"
+          "Arctic Pier/scr_ (14).webp"
         ]
       },
       {
@@ -4654,7 +4641,7 @@
         "x": 68.44,
         "y": 48.84,
         "commentImages": [
-          "Arctic Pier/scr_ (18).png"
+          "Arctic Pier/scr_ (18).webp"
         ]
       },
       {
@@ -4676,7 +4663,7 @@
         "x": 5.98,
         "y": 39.18,
         "commentImages": [
-          "Arctic Pier/scr_ (16).png"
+          "Arctic Pier/scr_ (16).webp"
         ]
       },
       {
@@ -4694,7 +4681,7 @@
         "x": 58.95,
         "y": 12.42,
         "commentImages": [
-          "Arctic Polar Base/scr_ (1).png"
+          "Arctic Polar Base/scr_ (1).webp"
         ]
       },
       {
@@ -4710,7 +4697,7 @@
         "x": 67.2,
         "y": 34.14,
         "commentImages": [
-          "Arctic Polar Base/scr_ (2).png"
+          "Arctic Polar Base/scr_ (2).webp"
         ]
       },
       {
@@ -4780,7 +4767,7 @@
         "x": 64.51,
         "y": 34.06,
         "commentImages": [
-          "Arctic Polar Base/scr_ (3).png"
+          "Arctic Polar Base/scr_ (3).webp"
         ]
       },
       {
@@ -4874,8 +4861,8 @@
         "x": 46.53,
         "y": 52.15,
         "commentImages": [
-          "Ardennes/scr_ (32).png",
-          "Ardennes/scr_ (33).png"
+          "Ardennes/scr_ (32).webp",
+          "Ardennes/scr_ (33).webp"
         ]
       },
       {
@@ -4891,8 +4878,8 @@
         "x": 43.47,
         "y": 57.43,
         "commentImages": [
-          "Ardennes/scr_ (30).png",
-          "Ardennes/scr_ (31).png"
+          "Ardennes/scr_ (30).webp",
+          "Ardennes/scr_ (31).webp"
         ]
       },
       {
@@ -4934,7 +4921,7 @@
         "x": 51.81,
         "y": 70.49,
         "commentImages": [
-          "Ardennes/scr_ (28).png"
+          "Ardennes/scr_ (28).webp"
         ]
       },
       {
@@ -5023,8 +5010,8 @@
         "x": 41.8,
         "y": 87.11,
         "commentImages": [
-          "Ardennes/scr_ (26).png",
-          "Ardennes/scr_ (27).png"
+          "Ardennes/scr_ (26).webp",
+          "Ardennes/scr_ (27).webp"
         ]
       },
       {
@@ -5046,7 +5033,7 @@
         "x": 27.47,
         "y": 93.62,
         "commentImages": [
-          "Ardennes/scr_ (25).png"
+          "Ardennes/scr_ (25).webp"
         ]
       },
       {
@@ -5082,7 +5069,7 @@
         "x": 51.04,
         "y": 51.95,
         "commentImages": [
-          "Ardennes/scr_ (34).png"
+          "Ardennes/scr_ (34).webp"
         ]
       },
       {
@@ -5446,7 +5433,7 @@
         "x": 2.82,
         "y": 18.33,
         "commentImages": [
-          "Ardennes/scr_ (16).png"
+          "Ardennes/scr_ (16).webp"
         ]
       },
       {
@@ -5468,8 +5455,8 @@
         "x": 44.03,
         "y": 25.28,
         "commentImages": [
-          "Ardennes/scr_ (17).png",
-          "Ardennes/scr_ (19).png"
+          "Ardennes/scr_ (17).webp",
+          "Ardennes/scr_ (19).webp"
         ]
       },
       {
@@ -5485,7 +5472,7 @@
         "x": 45.76,
         "y": 30.07,
         "commentImages": [
-          "Ardennes/scr_ (18).png"
+          "Ardennes/scr_ (18).webp"
         ]
       },
       {
@@ -5501,7 +5488,7 @@
         "x": 58.6,
         "y": 36.66,
         "commentImages": [
-          "Ardennes/scr_ (21).png"
+          "Ardennes/scr_ (21).webp"
         ]
       },
       {
@@ -5517,7 +5504,7 @@
         "x": 44.01,
         "y": 43.7,
         "commentImages": [
-          "Ardennes/scr_ (22).png"
+          "Ardennes/scr_ (22).webp"
         ]
       },
       {
@@ -5533,7 +5520,7 @@
         "x": 51.04,
         "y": 41.74,
         "commentImages": [
-          "Ardennes/scr_ (20).png"
+          "Ardennes/scr_ (20).webp"
         ]
       },
       {
@@ -5549,7 +5536,7 @@
         "x": 56.74,
         "y": 52.08,
         "commentImages": [
-          "Ardennes/scr_ (24).png"
+          "Ardennes/scr_ (24).webp"
         ]
       },
       {
@@ -5565,8 +5552,8 @@
         "x": 69.31,
         "y": 52.43,
         "commentImages": [
-          "Ardennes/scr_ (3).png",
-          "Ardennes/scr_ (4).png"
+          "Ardennes/scr_ (3).webp",
+          "Ardennes/scr_ (4).webp"
         ]
       },
       {
@@ -5582,7 +5569,7 @@
         "x": 11.95,
         "y": 59.17,
         "commentImages": [
-          "Ardennes/scr_ (15).png"
+          "Ardennes/scr_ (15).webp"
         ]
       },
       {
@@ -5598,7 +5585,7 @@
         "x": 5.17,
         "y": 62.99,
         "commentImages": [
-          "Ardennes/scr_ (14).png"
+          "Ardennes/scr_ (14).webp"
         ]
       },
       {
@@ -5607,7 +5594,7 @@
         "x": 70.97,
         "y": 65.21,
         "commentImages": [
-          "Ardennes/scr_ (5).png"
+          "Ardennes/scr_ (5).webp"
         ]
       },
       {
@@ -5623,7 +5610,7 @@
         "x": 97.22,
         "y": 82.43,
         "commentImages": [
-          "Ardennes/scr_ (8).png"
+          "Ardennes/scr_ (8).webp"
         ]
       },
       {
@@ -5639,7 +5626,7 @@
         "x": 43.96,
         "y": 88.47,
         "commentImages": [
-          "Ardennes/scr_ (11).png"
+          "Ardennes/scr_ (11).webp"
         ]
       },
       {
@@ -5655,8 +5642,8 @@
         "x": 97.09,
         "y": 89.83,
         "commentImages": [
-          "Ardennes/scr_ (9).png",
-          "Ardennes/scr_ (10).png"
+          "Ardennes/scr_ (9).webp",
+          "Ardennes/scr_ (10).webp"
         ]
       },
       {
@@ -5672,7 +5659,7 @@
         "x": 31.8,
         "y": 98.1,
         "commentImages": [
-          "Ardennes/scr_ (12).png"
+          "Ardennes/scr_ (12).webp"
         ]
       },
       {
@@ -5681,7 +5668,7 @@
         "x": 96.32,
         "y": 97.01,
         "commentImages": [
-          "Ardennes/scr_ (7).png"
+          "Ardennes/scr_ (7).webp"
         ]
       },
       {
@@ -5697,7 +5684,7 @@
         "x": 94.31,
         "y": 40.75,
         "commentImages": [
-          "Ardennes/scr_ (1).png"
+          "Ardennes/scr_ (1).webp"
         ]
       },
       {
@@ -5727,7 +5714,7 @@
         "x": 83.1,
         "y": 49.44,
         "commentImages": [
-          "Ardennes/scr_ (2).png"
+          "Ardennes/scr_ (2).webp"
         ]
       },
       {
@@ -5743,7 +5730,7 @@
         "x": 77.56,
         "y": 82.68,
         "commentImages": [
-          "Ardennes/scr_ (6).png"
+          "Ardennes/scr_ (6).webp"
         ]
       },
       {
@@ -5771,7 +5758,7 @@
         "x": 30.28,
         "y": 62.9,
         "commentImages": [
-          "Ardennes/scr_ (13).png"
+          "Ardennes/scr_ (13).webp"
         ]
       },
       {
@@ -5787,7 +5774,7 @@
         "x": 52.4,
         "y": 49.94,
         "commentImages": [
-          "Ardennes/scr_ (23).png"
+          "Ardennes/scr_ (23).webp"
         ]
       },
       {
@@ -6183,8 +6170,8 @@
         "x": 53.75,
         "y": 16.04,
         "commentImages": [
-          "Attica/scr_ (60).png",
-          "Attica/scr_ (61).png"
+          "Attica/scr_ (60).webp",
+          "Attica/scr_ (61).webp"
         ]
       },
       {
@@ -6206,7 +6193,7 @@
         "x": 56.04,
         "y": 21.04,
         "commentImages": [
-          "Attica/scr_ (1).png"
+          "Attica/scr_ (1).webp"
         ]
       },
       {
@@ -6222,9 +6209,9 @@
         "x": 58.4,
         "y": 21.32,
         "commentImages": [
-          "Attica/scr_ (2).png",
-          "Attica/scr_ (3).png",
-          "Attica/scr_ (4).png"
+          "Attica/scr_ (2).webp",
+          "Attica/scr_ (3).webp",
+          "Attica/scr_ (4).webp"
         ]
       },
       {
@@ -6240,7 +6227,7 @@
         "x": 42.71,
         "y": 29.51,
         "commentImages": [
-          "Attica/scr_ (59).png"
+          "Attica/scr_ (59).webp"
         ]
       },
       {
@@ -6256,8 +6243,8 @@
         "x": 35.07,
         "y": 31.53,
         "commentImages": [
-          "Attica/scr_ (10).png",
-          "Attica/scr_ (11).png"
+          "Attica/scr_ (10).webp",
+          "Attica/scr_ (11).webp"
         ]
       },
       {
@@ -6273,9 +6260,9 @@
         "x": 16.94,
         "y": 32.01,
         "commentImages": [
-          "Attica/scr_ (14).png",
-          "Attica/scr_ (15).png",
-          "Attica/scr_ (16).png"
+          "Attica/scr_ (14).webp",
+          "Attica/scr_ (15).webp",
+          "Attica/scr_ (16).webp"
         ]
       },
       {
@@ -6291,8 +6278,8 @@
         "x": 24.03,
         "y": 33.4,
         "commentImages": [
-          "Attica/scr_ (12).png",
-          "Attica/scr_ (13).png"
+          "Attica/scr_ (12).webp",
+          "Attica/scr_ (13).webp"
         ]
       },
       {
@@ -6309,7 +6296,7 @@
         "y": 40.07,
         "commentEn": "Smoke shell recommended",
         "commentImages": [
-          "Attica/scr_ (58).png"
+          "Attica/scr_ (58).webp"
         ]
       },
       {
@@ -6325,8 +6312,8 @@
         "x": 57.22,
         "y": 41.18,
         "commentImages": [
-          "Attica/scr_ (6).png",
-          "Attica/scr_ (7).png"
+          "Attica/scr_ (6).webp",
+          "Attica/scr_ (7).webp"
         ]
       },
       {
@@ -6343,7 +6330,7 @@
         "y": 42.22,
         "commentEn": "Smoke shell recommended",
         "commentImages": [
-          "Attica/scr_ (57).png"
+          "Attica/scr_ (57).webp"
         ]
       },
       {
@@ -6359,8 +6346,8 @@
         "x": 35.76,
         "y": 44.03,
         "commentImages": [
-          "Attica/scr_ (8).png",
-          "Attica/scr_ (9).png"
+          "Attica/scr_ (8).webp",
+          "Attica/scr_ (9).webp"
         ]
       },
       {
@@ -6377,7 +6364,7 @@
         "y": 45.65,
         "commentEn": "Smoke shell recommended",
         "commentImages": [
-          "Attica/scr_ (56).png"
+          "Attica/scr_ (56).webp"
         ]
       },
       {
@@ -6407,7 +6394,7 @@
         "x": 75.35,
         "y": 61.32,
         "commentImages": [
-          "Attica/scr_ (55).png"
+          "Attica/scr_ (55).webp"
         ]
       },
       {
@@ -6423,8 +6410,8 @@
         "x": 5,
         "y": 62.43,
         "commentImages": [
-          "Attica/scr_ (20).png",
-          "Attica/scr_ (21).png"
+          "Attica/scr_ (20).webp",
+          "Attica/scr_ (21).webp"
         ]
       },
       {
@@ -6440,7 +6427,7 @@
         "x": 44.51,
         "y": 70.76,
         "commentImages": [
-          "Attica/scr_ (53).png"
+          "Attica/scr_ (53).webp"
         ]
       },
       {
@@ -6456,7 +6443,7 @@
         "x": 15.25,
         "y": 73.94,
         "commentImages": [
-          "Attica/scr_ (49).png"
+          "Attica/scr_ (49).webp"
         ]
       },
       {
@@ -6472,7 +6459,7 @@
         "x": 51.88,
         "y": 78.19,
         "commentImages": [
-          "Attica/scr_ (50).png"
+          "Attica/scr_ (50).webp"
         ]
       },
       {
@@ -6488,7 +6475,7 @@
         "x": 62.08,
         "y": 83.19,
         "commentImages": [
-          "Attica/scr_ (52).png"
+          "Attica/scr_ (52).webp"
         ]
       },
       {
@@ -6504,7 +6491,7 @@
         "x": 46.18,
         "y": 83.89,
         "commentImages": [
-          "Attica/scr_ (51).png"
+          "Attica/scr_ (51).webp"
         ]
       },
       {
@@ -6532,7 +6519,7 @@
         "x": 69.24,
         "y": 70.21,
         "commentImages": [
-          "Attica/scr_ (54).png"
+          "Attica/scr_ (54).webp"
         ]
       },
       {
@@ -6550,8 +6537,8 @@
         "x": 56.88,
         "y": 24.44,
         "commentImages": [
-          "Attica/scr_ (33).png",
-          "Attica/scr_ (34).png"
+          "Attica/scr_ (33).webp",
+          "Attica/scr_ (34).webp"
         ]
       },
       {
@@ -6567,7 +6554,7 @@
         "x": 15.49,
         "y": 25.92,
         "commentImages": [
-          "Attica/scr_ (38).png"
+          "Attica/scr_ (38).webp"
         ]
       },
       {
@@ -6583,7 +6570,7 @@
         "x": 36.39,
         "y": 27.99,
         "commentImages": [
-          "Attica/scr_ (39).png"
+          "Attica/scr_ (39).webp"
         ]
       },
       {
@@ -6599,7 +6586,7 @@
         "x": 44.38,
         "y": 30.56,
         "commentImages": [
-          "Attica/scr_ (35).png"
+          "Attica/scr_ (35).webp"
         ]
       },
       {
@@ -6615,7 +6602,7 @@
         "x": 69.29,
         "y": 28.67,
         "commentImages": [
-          "Attica/scr_ (36).png"
+          "Attica/scr_ (36).webp"
         ]
       },
       {
@@ -6631,9 +6618,9 @@
         "x": 4.1,
         "y": 39.51,
         "commentImages": [
-          "Attica/scr_ (17).png",
-          "Attica/scr_ (18).png",
-          "Attica/scr_ (19).png"
+          "Attica/scr_ (17).webp",
+          "Attica/scr_ (18).webp",
+          "Attica/scr_ (19).webp"
         ]
       },
       {
@@ -6664,7 +6651,7 @@
         "y": 50.97,
         "commentEn": "Smoke shell recommended",
         "commentImages": [
-          "Attica/scr_ (32).png"
+          "Attica/scr_ (32).webp"
         ]
       },
       {
@@ -6681,7 +6668,7 @@
         "y": 56.25,
         "commentEn": "Smoke shell recommended",
         "commentImages": [
-          "Attica/scr_ (48).png"
+          "Attica/scr_ (48).webp"
         ]
       },
       {
@@ -6697,7 +6684,7 @@
         "x": 54.37,
         "y": 58.54,
         "commentImages": [
-          "Attica/scr_ (31).png"
+          "Attica/scr_ (31).webp"
         ]
       },
       {
@@ -6713,7 +6700,7 @@
         "x": 47.15,
         "y": 62.92,
         "commentImages": [
-          "Attica/scr_ (28).png"
+          "Attica/scr_ (28).webp"
         ]
       },
       {
@@ -6729,8 +6716,8 @@
         "x": 44.35,
         "y": 65.77,
         "commentImages": [
-          "Attica/scr_ (26).png",
-          "Attica/scr_ (27).png"
+          "Attica/scr_ (26).webp",
+          "Attica/scr_ (27).webp"
         ]
       },
       {
@@ -6746,7 +6733,7 @@
         "x": 24.93,
         "y": 67.71,
         "commentImages": [
-          "Attica/scr_ (41).png"
+          "Attica/scr_ (41).webp"
         ]
       },
       {
@@ -6755,8 +6742,8 @@
         "x": 15.69,
         "y": 69.31,
         "commentImages": [
-          "Attica/scr_ (42).png",
-          "Attica/scr_ (43).png"
+          "Attica/scr_ (42).webp",
+          "Attica/scr_ (43).webp"
         ]
       },
       {
@@ -6772,7 +6759,7 @@
         "x": 34.58,
         "y": 70.07,
         "commentImages": [
-          "Attica/scr_ (40).png"
+          "Attica/scr_ (40).webp"
         ]
       },
       {
@@ -6788,8 +6775,8 @@
         "x": 40.56,
         "y": 72.85,
         "commentImages": [
-          "Attica/scr_ (22).png",
-          "Attica/scr_ (23).png"
+          "Attica/scr_ (22).webp",
+          "Attica/scr_ (23).webp"
         ]
       },
       {
@@ -6805,8 +6792,8 @@
         "x": 43.19,
         "y": 73.33,
         "commentImages": [
-          "Attica/scr_ (24).png",
-          "Attica/scr_ (25).png"
+          "Attica/scr_ (24).webp",
+          "Attica/scr_ (25).webp"
         ]
       },
       {
@@ -6822,7 +6809,7 @@
         "x": 53.04,
         "y": 80.63,
         "commentImages": [
-          "Attica/scr_ (29).png"
+          "Attica/scr_ (29).webp"
         ]
       },
       {
@@ -6883,8 +6870,8 @@
         "x": 35.58,
         "y": 56.39,
         "commentImages": [
-          "Attica/scr_ (46).png",
-          "Attica/scr_ (47).png"
+          "Attica/scr_ (46).webp",
+          "Attica/scr_ (47).webp"
         ]
       },
       {
@@ -6900,7 +6887,7 @@
         "x": 52.43,
         "y": 74.54,
         "commentImages": [
-          "Attica/scr_ (30).png"
+          "Attica/scr_ (30).webp"
         ]
       },
       {
@@ -6916,7 +6903,7 @@
         "x": 71.72,
         "y": 35.53,
         "commentImages": [
-          "Attica/scr_ (37).png"
+          "Attica/scr_ (37).webp"
         ]
       },
       {
@@ -6934,8 +6921,8 @@
         "x": 62.9,
         "y": 7.08,
         "commentImages": [
-          "Battle of Hürtgen Forest/scr_ (35).png",
-          "Battle of Hürtgen Forest/scr_ (36).png"
+          "Battle of Hürtgen Forest/scr_ (35).webp",
+          "Battle of Hürtgen Forest/scr_ (36).webp"
         ]
       },
       {
@@ -6944,7 +6931,7 @@
         "x": 45.21,
         "y": 35.99,
         "commentImages": [
-          "Battle of Hürtgen Forest/scr_ (38).png"
+          "Battle of Hürtgen Forest/scr_ (38).webp"
         ]
       },
       {
@@ -6967,7 +6954,7 @@
         "x": 61.08,
         "y": 85.1,
         "commentImages": [
-          "Battle of Hürtgen Forest/scr_ (29).png"
+          "Battle of Hürtgen Forest/scr_ (29).webp"
         ]
       },
       {
@@ -6983,9 +6970,9 @@
         "x": 50.53,
         "y": 59.48,
         "commentImages": [
-          "Battle of Hürtgen Forest/scr_ (18).png",
-          "Battle of Hürtgen Forest/scr_ (17).png",
-          "Battle of Hürtgen Forest/scr_ (16).png"
+          "Battle of Hürtgen Forest/scr_ (18).webp",
+          "Battle of Hürtgen Forest/scr_ (17).webp",
+          "Battle of Hürtgen Forest/scr_ (16).webp"
         ]
       },
       {
@@ -7019,10 +7006,10 @@
         "x": 52.24,
         "y": 76.12,
         "commentImages": [
-          "Battle of Hürtgen Forest/scr_ (19).png",
-          "Battle of Hürtgen Forest/scr_ (20).png",
-          "Battle of Hürtgen Forest/scr_ (21).png",
-          "Battle of Hürtgen Forest/scr_ (22).png"
+          "Battle of Hürtgen Forest/scr_ (19).webp",
+          "Battle of Hürtgen Forest/scr_ (20).webp",
+          "Battle of Hürtgen Forest/scr_ (21).webp",
+          "Battle of Hürtgen Forest/scr_ (22).webp"
         ]
       },
       {
@@ -7044,7 +7031,7 @@
         "x": 17.16,
         "y": 69.24,
         "commentImages": [
-          "Battle of Hürtgen Forest/scr_ (28).png"
+          "Battle of Hürtgen Forest/scr_ (28).webp"
         ]
       },
       {
@@ -7060,9 +7047,9 @@
         "x": 92.35,
         "y": 90.14,
         "commentImages": [
-          "Battle of Hürtgen Forest/scr_ (32).png",
-          "Battle of Hürtgen Forest/scr_ (33).png",
-          "Battle of Hürtgen Forest/scr_ (34).png"
+          "Battle of Hürtgen Forest/scr_ (32).webp",
+          "Battle of Hürtgen Forest/scr_ (33).webp",
+          "Battle of Hürtgen Forest/scr_ (34).webp"
         ]
       },
       {
@@ -7078,9 +7065,9 @@
         "x": 9.51,
         "y": 47.7,
         "commentImages": [
-          "Battle of Hürtgen Forest/scr_ (25).png",
-          "Battle of Hürtgen Forest/scr_ (24).png",
-          "Battle of Hürtgen Forest/scr_ (26).png"
+          "Battle of Hürtgen Forest/scr_ (25).webp",
+          "Battle of Hürtgen Forest/scr_ (24).webp",
+          "Battle of Hürtgen Forest/scr_ (26).webp"
         ]
       },
       {
@@ -7096,7 +7083,7 @@
         "x": 45.07,
         "y": 77.62,
         "commentImages": [
-          "Battle of Hürtgen Forest/scr_ (23).png"
+          "Battle of Hürtgen Forest/scr_ (23).webp"
         ]
       },
       {
@@ -7112,7 +7099,7 @@
         "x": 46.46,
         "y": 10.62,
         "commentImages": [
-          "Battle of Hürtgen Forest/scr_ (37).png"
+          "Battle of Hürtgen Forest/scr_ (37).webp"
         ]
       },
       {
@@ -7128,7 +7115,7 @@
         "x": 31.8,
         "y": 9.86,
         "commentImages": [
-          "Battle of Hürtgen Forest/scr_ (39).png"
+          "Battle of Hürtgen Forest/scr_ (39).webp"
         ]
       },
       {
@@ -7144,7 +7131,7 @@
         "x": 79.11,
         "y": 50.3,
         "commentImages": [
-          "Battle of Hürtgen Forest/scr_ (15).png"
+          "Battle of Hürtgen Forest/scr_ (15).webp"
         ]
       },
       {
@@ -7160,7 +7147,7 @@
         "x": 56.43,
         "y": 90.27,
         "commentImages": [
-          "Battle of Hürtgen Forest/scr_ (30).png"
+          "Battle of Hürtgen Forest/scr_ (30).webp"
         ]
       },
       {
@@ -7176,7 +7163,7 @@
         "x": 52,
         "y": 89.83,
         "commentImages": [
-          "Battle of Hürtgen Forest/scr_ (31).png"
+          "Battle of Hürtgen Forest/scr_ (31).webp"
         ]
       },
       {
@@ -7194,9 +7181,9 @@
         "x": 51.74,
         "y": 86.71,
         "commentImages": [
-          "Battle of Hürtgen Forest/scr_ (11).png",
-          "Battle of Hürtgen Forest/scr_ (12).png",
-          "Battle of Hürtgen Forest/scr_ (9).png"
+          "Battle of Hürtgen Forest/scr_ (11).webp",
+          "Battle of Hürtgen Forest/scr_ (12).webp",
+          "Battle of Hürtgen Forest/scr_ (9).webp"
         ]
       },
       {
@@ -7212,7 +7199,7 @@
         "x": 56.86,
         "y": 10.17,
         "commentImages": [
-          "Battle of Hürtgen Forest/scr_ (5).png"
+          "Battle of Hürtgen Forest/scr_ (5).webp"
         ]
       },
       {
@@ -7228,9 +7215,9 @@
         "x": 51.51,
         "y": 57.44,
         "commentImages": [
-          "Battle of Hürtgen Forest/scr_ (6).png",
-          "Battle of Hürtgen Forest/scr_ (13).png",
-          "Battle of Hürtgen Forest/scr_ (14).png"
+          "Battle of Hürtgen Forest/scr_ (6).webp",
+          "Battle of Hürtgen Forest/scr_ (13).webp",
+          "Battle of Hürtgen Forest/scr_ (14).webp"
         ]
       },
       {
@@ -7246,8 +7233,8 @@
         "x": 39.51,
         "y": 66.37,
         "commentImages": [
-          "Battle of Hürtgen Forest/scr_ (7).png",
-          "Battle of Hürtgen Forest/scr_ (8).png"
+          "Battle of Hürtgen Forest/scr_ (7).webp",
+          "Battle of Hürtgen Forest/scr_ (8).webp"
         ]
       },
       {
@@ -7281,7 +7268,7 @@
         "x": 94.66,
         "y": 16.59,
         "commentImages": [
-          "Battle of Hürtgen Forest/scr_ (3).png"
+          "Battle of Hürtgen Forest/scr_ (3).webp"
         ]
       },
       {
@@ -7297,7 +7284,7 @@
         "x": 87.88,
         "y": 57.43,
         "commentImages": [
-          "Battle of Hürtgen Forest/scr_ (2).png"
+          "Battle of Hürtgen Forest/scr_ (2).webp"
         ]
       },
       {
@@ -7313,7 +7300,7 @@
         "x": 82.49,
         "y": 37.88,
         "commentImages": [
-          "Battle of Hürtgen Forest/scr_ (4).png"
+          "Battle of Hürtgen Forest/scr_ (4).webp"
         ]
       },
       {
@@ -7329,8 +7316,8 @@
         "x": 46.96,
         "y": 11.56,
         "commentImages": [
-          "Battle of Hürtgen Forest/scr_ (1).png",
-          "Battle of Hürtgen Forest/scr_ (44).png"
+          "Battle of Hürtgen Forest/scr_ (1).webp",
+          "Battle of Hürtgen Forest/scr_ (44).webp"
         ]
       },
       {
@@ -7342,11 +7329,11 @@
       },
       {
         "id": "mumesnsk-2zp5oz",
-        "type": "lightTankRed",
+        "type": "tankDestroyerRed",
         "x": 6.56,
         "y": 35.79,
         "commentImages": [
-          "Battle of Hürtgen Forest/scr_ (40).png"
+          "Battle of Hürtgen Forest/scr_ (40).webp"
         ]
       },
       {
@@ -7362,8 +7349,8 @@
         "x": 24.63,
         "y": 11.99,
         "commentImages": [
-          "Battle of Hürtgen Forest/scr_ (41).png",
-          "Battle of Hürtgen Forest/scr_ (43).png"
+          "Battle of Hürtgen Forest/scr_ (41).webp",
+          "Battle of Hürtgen Forest/scr_ (43).webp"
         ]
       },
       {
@@ -7379,7 +7366,7 @@
         "x": 26.11,
         "y": 18.68,
         "commentImages": [
-          "Battle of Hürtgen Forest/scr_ (42).png"
+          "Battle of Hürtgen Forest/scr_ (42).webp"
         ]
       },
       {
@@ -7391,12 +7378,6 @@
       }
     ],
     "Battle of Hürtgen Forest::domination-2|Blue": [
-      {
-        "id": "mtw67swp-yp6iyq",
-        "type": "mainBattleTank",
-        "x": 61.2,
-        "y": 18.74
-      },
       {
         "id": "mtw68myx-2to0o2",
         "type": "tankDestroyer",
@@ -7422,13 +7403,6 @@
         "x": 61.01,
         "y": 6.99,
         "parentTankId": "mtw6brle-gxykch"
-      },
-      {
-        "id": "mtw6ccpg-jdlasv",
-        "type": "sniper",
-        "x": 61.2,
-        "y": 18.74,
-        "parentTankId": "mtw67swp-yp6iyq"
       },
       {
         "id": "mtw6ch7d-8r5xjg",
@@ -7464,32 +7438,6 @@
     ],
     "Battle of Hürtgen Forest::domination-2|Red": [
       {
-        "id": "mtw67mmp-9vw55z",
-        "type": "mainBattleTankRed",
-        "x": 20.61,
-        "y": 23.13
-      },
-      {
-        "id": "mtw6ga7d-qkovf6",
-        "type": "sniper",
-        "x": 20.61,
-        "y": 23.13,
-        "parentTankId": "mtw67mmp-9vw55z"
-      },
-      {
-        "id": "mu219wkg-suk072",
-        "type": "tankDestroyerRed",
-        "x": 10.3,
-        "y": 40.83
-      },
-      {
-        "id": "mu219y0j-xr3kc6",
-        "type": "sniper",
-        "x": 10.3,
-        "y": 40.83,
-        "parentTankId": "mu219wkg-suk072"
-      },
-      {
         "id": "mu21ee0f-4jc6e3",
         "type": "mainBattleTankRed",
         "x": 70.73,
@@ -7501,19 +7449,6 @@
         "x": 70.73,
         "y": 39.95,
         "parentTankId": "mu21ee0f-4jc6e3"
-      },
-      {
-        "id": "mu21gpkx-f7mlar",
-        "type": "mainBattleTankRed",
-        "x": 80.97,
-        "y": 43.87
-      },
-      {
-        "id": "mu21grbz-ftz6sh",
-        "type": "spawnKill",
-        "x": 80.97,
-        "y": 43.87,
-        "parentTankId": "mu21gpkx-f7mlar"
       }
     ],
     "Battle of Hürtgen Forest::conquest-3|Red": [],
@@ -7740,7 +7675,7 @@
         "x": 45.8,
         "y": 55.03,
         "commentImages": [
-          "Breslau/scr_ (6).png"
+          "Breslau/scr_ (6).webp"
         ]
       },
       {
@@ -7749,8 +7684,8 @@
         "x": 30.13,
         "y": 55.87,
         "commentImages": [
-          "Breslau/scr_ (13).png",
-          "Breslau/scr_ (14).png"
+          "Breslau/scr_ (13).webp",
+          "Breslau/scr_ (14).webp"
         ]
       },
       {
@@ -7773,7 +7708,7 @@
         "x": 86.2,
         "y": 6.89,
         "commentImages": [
-          "Breslau/scr_ (24).png"
+          "Breslau/scr_ (24).webp"
         ]
       },
       {
@@ -7802,7 +7737,7 @@
         "x": 65.21,
         "y": 28.91,
         "commentImages": [
-          "Breslau/scr_ (21).png"
+          "Breslau/scr_ (21).webp"
         ]
       },
       {
@@ -7831,7 +7766,7 @@
         "x": 58.21,
         "y": 80.78,
         "commentImages": [
-          "Breslau/scr_ (8).png"
+          "Breslau/scr_ (8).webp"
         ]
       },
       {
@@ -7847,7 +7782,7 @@
         "x": 10.72,
         "y": 57.09,
         "commentImages": [
-          "Breslau/scr_ (4).png"
+          "Breslau/scr_ (4).webp"
         ]
       },
       {
@@ -7863,7 +7798,7 @@
         "x": 24.72,
         "y": 74.86,
         "commentImages": [
-          "Breslau/scr_ (12).png"
+          "Breslau/scr_ (12).webp"
         ]
       },
       {
@@ -7879,7 +7814,7 @@
         "x": 50.28,
         "y": 57.72,
         "commentImages": [
-          "Breslau/scr_ (5).png"
+          "Breslau/scr_ (5).webp"
         ]
       },
       {
@@ -7908,7 +7843,7 @@
         "x": 66.54,
         "y": 24.86,
         "commentImages": [
-          "Breslau/scr_ (20).png"
+          "Breslau/scr_ (20).webp"
         ]
       },
       {
@@ -7924,7 +7859,7 @@
         "x": 60.16,
         "y": 15.48,
         "commentImages": [
-          "Breslau/scr_ (2).png"
+          "Breslau/scr_ (2).webp"
         ]
       },
       {
@@ -7942,7 +7877,7 @@
         "x": 41.51,
         "y": 62.68,
         "commentImages": [
-          "Breslau/scr_ (15).png"
+          "Breslau/scr_ (15).webp"
         ]
       },
       {
@@ -7952,7 +7887,7 @@
         "y": 59.32,
         "comment": "Wall on the right can be penetrated",
         "commentImages": [
-          "Breslau/scr_ (3).png"
+          "Breslau/scr_ (3).webp"
         ]
       },
       {
@@ -7975,7 +7910,7 @@
         "x": 53.55,
         "y": 57.18,
         "commentImages": [
-          "Breslau/scr_ (7).png"
+          "Breslau/scr_ (7).webp"
         ]
       },
       {
@@ -7991,7 +7926,7 @@
         "x": 35.35,
         "y": 80.04,
         "commentImages": [
-          "Breslau/scr_ (10).png"
+          "Breslau/scr_ (10).webp"
         ]
       },
       {
@@ -8007,7 +7942,7 @@
         "x": 16.85,
         "y": 71.91,
         "commentImages": [
-          "Breslau/scr_ (11).png"
+          "Breslau/scr_ (11).webp"
         ]
       },
       {
@@ -8023,7 +7958,7 @@
         "x": 61.38,
         "y": 16.78,
         "commentImages": [
-          "Breslau/scr_ (22).png"
+          "Breslau/scr_ (22).webp"
         ]
       },
       {
@@ -8039,7 +7974,7 @@
         "x": 20.8,
         "y": 43.46,
         "commentImages": [
-          "Breslau/scr_ (17).png"
+          "Breslau/scr_ (17).webp"
         ]
       },
       {
@@ -8055,7 +7990,7 @@
         "x": 5.69,
         "y": 52.23,
         "commentImages": [
-          "Breslau/scr_ (18).png"
+          "Breslau/scr_ (18).webp"
         ]
       },
       {
@@ -8071,7 +8006,7 @@
         "x": 58.3,
         "y": 42.53,
         "commentImages": [
-          "Breslau/scr_ (19).png"
+          "Breslau/scr_ (19).webp"
         ]
       },
       {
@@ -8087,7 +8022,7 @@
         "x": 35.11,
         "y": 51.12,
         "commentImages": [
-          "Breslau/scr_ (16).png"
+          "Breslau/scr_ (16).webp"
         ]
       },
       {
@@ -8129,7 +8064,7 @@
         "x": 87.77,
         "y": 7.67,
         "commentImages": [
-          "Breslau/scr_ (23).png"
+          "Breslau/scr_ (23).webp"
         ]
       },
       {
@@ -8145,7 +8080,7 @@
         "x": 27.08,
         "y": 11.45,
         "commentImages": [
-          "Breslau/scr_ (1).png"
+          "Breslau/scr_ (1).webp"
         ]
       },
       {
@@ -9717,7 +9652,7 @@
         "x": 10.3,
         "y": 38.58,
         "commentImages": [
-          "Darwin Hill/scr_ (2).png"
+          "Darwin Hill/scr_ (2).webp"
         ]
       },
       {
@@ -9733,7 +9668,7 @@
         "x": 14.64,
         "y": 76.72,
         "commentImages": [
-          "Darwin Hill/scr_ (3).png"
+          "Darwin Hill/scr_ (3).webp"
         ]
       },
       {
@@ -9749,7 +9684,7 @@
         "x": 33.93,
         "y": 75.67,
         "commentImages": [
-          "Darwin Hill/scr_ (4).png"
+          "Darwin Hill/scr_ (4).webp"
         ]
       },
       {
@@ -9765,7 +9700,7 @@
         "x": 61.21,
         "y": 81.84,
         "commentImages": [
-          "Darwin Hill/scr_ (5).png"
+          "Darwin Hill/scr_ (5).webp"
         ]
       },
       {
@@ -9781,7 +9716,7 @@
         "x": 81.02,
         "y": 80.36,
         "commentImages": [
-          "Darwin Hill/scr_ (6).png"
+          "Darwin Hill/scr_ (6).webp"
         ]
       },
       {
@@ -9809,7 +9744,7 @@
         "x": 19.79,
         "y": 28.32,
         "commentImages": [
-          "Darwin Hill/scr_ (15).png"
+          "Darwin Hill/scr_ (15).webp"
         ]
       },
       {
@@ -9825,7 +9760,7 @@
         "x": 49.62,
         "y": 29.58,
         "commentImages": [
-          "Darwin Hill/scr_ (24).png"
+          "Darwin Hill/scr_ (24).webp"
         ]
       },
       {
@@ -9841,7 +9776,7 @@
         "x": 38.63,
         "y": 53.54,
         "commentImages": [
-          "Darwin Hill/scr_ (18).png"
+          "Darwin Hill/scr_ (18).webp"
         ]
       },
       {
@@ -9857,8 +9792,8 @@
         "x": 23.96,
         "y": 41.59,
         "commentImages": [
-          "Darwin Hill/scr_ (16).png",
-          "Darwin Hill/scr_ (17).png"
+          "Darwin Hill/scr_ (16).webp",
+          "Darwin Hill/scr_ (17).webp"
         ]
       },
       {
@@ -9874,7 +9809,7 @@
         "x": 50.13,
         "y": 51.07,
         "commentImages": [
-          "Darwin Hill/scr_ (23).png"
+          "Darwin Hill/scr_ (23).webp"
         ]
       },
       {
@@ -9890,7 +9825,7 @@
         "x": 15.49,
         "y": 49.94,
         "commentImages": [
-          "Darwin Hill/scr_ (30).png"
+          "Darwin Hill/scr_ (30).webp"
         ]
       },
       {
@@ -9912,8 +9847,8 @@
         "x": 31.16,
         "y": 50.7,
         "commentImages": [
-          "Darwin Hill/scr_ (19).png",
-          "Darwin Hill/scr_ (20).png"
+          "Darwin Hill/scr_ (19).webp",
+          "Darwin Hill/scr_ (20).webp"
         ]
       },
       {
@@ -9929,7 +9864,7 @@
         "x": 76.3,
         "y": 47.91,
         "commentImages": [
-          "Darwin Hill/scr_ (46).png"
+          "Darwin Hill/scr_ (46).webp"
         ]
       },
       {
@@ -9945,8 +9880,8 @@
         "x": 61.38,
         "y": 49.18,
         "commentImages": [
-          "Darwin Hill/scr_ (41).png",
-          "Darwin Hill/scr_ (42).png"
+          "Darwin Hill/scr_ (41).webp",
+          "Darwin Hill/scr_ (42).webp"
         ]
       },
       {
@@ -9962,8 +9897,8 @@
         "x": 56.45,
         "y": 22,
         "commentImages": [
-          "Darwin Hill/scr_ (39).png",
-          "Darwin Hill/scr_ (40).png"
+          "Darwin Hill/scr_ (39).webp",
+          "Darwin Hill/scr_ (40).webp"
         ]
       },
       {
@@ -9979,7 +9914,7 @@
         "x": 95.7,
         "y": 45.7,
         "commentImages": [
-          "Darwin Hill/scr_ (44).png"
+          "Darwin Hill/scr_ (44).webp"
         ]
       },
       {
@@ -10001,8 +9936,8 @@
         "x": 84.77,
         "y": 24.65,
         "commentImages": [
-          "Darwin Hill/scr_ (38).png",
-          "Darwin Hill/scr_ (43).png"
+          "Darwin Hill/scr_ (38).webp",
+          "Darwin Hill/scr_ (43).webp"
         ]
       },
       {
@@ -10018,7 +9953,7 @@
         "x": 72.88,
         "y": 15.3,
         "commentImages": [
-          "Darwin Hill/scr_ (37).png"
+          "Darwin Hill/scr_ (37).webp"
         ]
       },
       {
@@ -10036,7 +9971,7 @@
         "x": 9.86,
         "y": 17.38,
         "commentImages": [
-          "Darwin Hill/scr_ (1).png"
+          "Darwin Hill/scr_ (1).webp"
         ]
       },
       {
@@ -10052,8 +9987,8 @@
         "x": 57.04,
         "y": 23.28,
         "commentImages": [
-          "Darwin Hill/scr_ (7).png",
-          "Darwin Hill/scr_ (8).png"
+          "Darwin Hill/scr_ (7).webp",
+          "Darwin Hill/scr_ (8).webp"
         ]
       },
       {
@@ -10069,7 +10004,7 @@
         "x": 40.7,
         "y": 19.46,
         "commentImages": [
-          "Darwin Hill/scr_ (9).png"
+          "Darwin Hill/scr_ (9).webp"
         ]
       },
       {
@@ -10085,8 +10020,8 @@
         "x": 24.2,
         "y": 23.02,
         "commentImages": [
-          "Darwin Hill/scr_ (10).png",
-          "Darwin Hill/scr_ (11).png"
+          "Darwin Hill/scr_ (10).webp",
+          "Darwin Hill/scr_ (11).webp"
         ]
       },
       {
@@ -10114,7 +10049,7 @@
         "x": 52.91,
         "y": 68.77,
         "commentImages": [
-          "Darwin Hill/scr_ (26).png"
+          "Darwin Hill/scr_ (26).webp"
         ]
       },
       {
@@ -10130,8 +10065,8 @@
         "x": 15.23,
         "y": 78.26,
         "commentImages": [
-          "Darwin Hill/scr_ (32).png",
-          "Darwin Hill/scr_ (33).png"
+          "Darwin Hill/scr_ (32).webp",
+          "Darwin Hill/scr_ (33).webp"
         ]
       },
       {
@@ -10147,8 +10082,8 @@
         "x": 47.35,
         "y": 58.28,
         "commentImages": [
-          "Darwin Hill/scr_ (21).png",
-          "Darwin Hill/scr_ (25).png"
+          "Darwin Hill/scr_ (21).webp",
+          "Darwin Hill/scr_ (25).webp"
         ]
       },
       {
@@ -10164,8 +10099,8 @@
         "x": 18.39,
         "y": 53.98,
         "commentImages": [
-          "Darwin Hill/scr_ (28).png",
-          "Darwin Hill/scr_ (29).png"
+          "Darwin Hill/scr_ (28).webp",
+          "Darwin Hill/scr_ (29).webp"
         ]
       },
       {
@@ -10181,7 +10116,7 @@
         "x": 5.25,
         "y": 72.82,
         "commentImages": [
-          "Darwin Hill/scr_ (34).png"
+          "Darwin Hill/scr_ (34).webp"
         ]
       },
       {
@@ -10197,7 +10132,7 @@
         "x": 23.96,
         "y": 71.18,
         "commentImages": [
-          "Darwin Hill/scr_ (27).png"
+          "Darwin Hill/scr_ (27).webp"
         ]
       },
       {
@@ -10213,7 +10148,7 @@
         "x": 10.81,
         "y": 34.77,
         "commentImages": [
-          "Darwin Hill/scr_ (31).png"
+          "Darwin Hill/scr_ (31).webp"
         ]
       },
       {
@@ -10229,8 +10164,8 @@
         "x": 78.73,
         "y": 64.38,
         "commentImages": [
-          "Darwin Hill/scr_ (35).png",
-          "Darwin Hill/scr_ (36).png"
+          "Darwin Hill/scr_ (35).webp",
+          "Darwin Hill/scr_ (36).webp"
         ]
       },
       {
@@ -10246,9 +10181,9 @@
         "x": 64.16,
         "y": 53.86,
         "commentImages": [
-          "Darwin Hill/scr_ (48).png",
-          "Darwin Hill/scr_ (49).png",
-          "Darwin Hill/scr_ (50).png"
+          "Darwin Hill/scr_ (48).webp",
+          "Darwin Hill/scr_ (49).webp",
+          "Darwin Hill/scr_ (50).webp"
         ]
       },
       {
@@ -10264,7 +10199,7 @@
         "x": 96.92,
         "y": 45.53,
         "commentImages": [
-          "Darwin Hill/scr_ (45).png"
+          "Darwin Hill/scr_ (45).webp"
         ]
       },
       {
@@ -10280,8 +10215,8 @@
         "x": 77.18,
         "y": 33.12,
         "commentImages": [
-          "Darwin Hill/scr_ (51).png",
-          "Darwin Hill/scr_ (52).png"
+          "Darwin Hill/scr_ (51).webp",
+          "Darwin Hill/scr_ (52).webp"
         ]
       },
       {
@@ -10297,7 +10232,7 @@
         "x": 63.53,
         "y": 59.8,
         "commentImages": [
-          "Darwin Hill/scr_ (47).png"
+          "Darwin Hill/scr_ (47).webp"
         ]
       },
       {
@@ -10315,7 +10250,7 @@
         "x": 14.64,
         "y": 76.72,
         "commentImages": [
-          "Darwin Hill/scr_ (3).png"
+          "Darwin Hill/scr_ (3).webp"
         ]
       },
       {
@@ -10331,7 +10266,7 @@
         "x": 33.93,
         "y": 75.67,
         "commentImages": [
-          "Darwin Hill/scr_ (4).png"
+          "Darwin Hill/scr_ (4).webp"
         ]
       },
       {
@@ -10353,7 +10288,7 @@
         "x": 52.17,
         "y": 67.51,
         "commentImages": [
-          "Darwin Hill/scr_ (14).png"
+          "Darwin Hill/scr_ (14).webp"
         ]
       },
       {
@@ -10369,7 +10304,7 @@
         "x": 10.3,
         "y": 38.58,
         "commentImages": [
-          "Darwin Hill/scr_ (2).png"
+          "Darwin Hill/scr_ (2).webp"
         ]
       },
       {
@@ -10385,7 +10320,7 @@
         "x": 19.79,
         "y": 28.32,
         "commentImages": [
-          "Darwin Hill/scr_ (15).png"
+          "Darwin Hill/scr_ (15).webp"
         ]
       },
       {
@@ -10401,7 +10336,7 @@
         "x": 49.62,
         "y": 29.58,
         "commentImages": [
-          "Darwin Hill/scr_ (24).png"
+          "Darwin Hill/scr_ (24).webp"
         ]
       },
       {
@@ -10417,7 +10352,7 @@
         "x": 38.63,
         "y": 53.54,
         "commentImages": [
-          "Darwin Hill/scr_ (18).png"
+          "Darwin Hill/scr_ (18).webp"
         ]
       },
       {
@@ -10433,8 +10368,8 @@
         "x": 23.96,
         "y": 41.59,
         "commentImages": [
-          "Darwin Hill/scr_ (16).png",
-          "Darwin Hill/scr_ (17).png"
+          "Darwin Hill/scr_ (16).webp",
+          "Darwin Hill/scr_ (17).webp"
         ]
       },
       {
@@ -10450,7 +10385,7 @@
         "x": 50.13,
         "y": 51.07,
         "commentImages": [
-          "Darwin Hill/scr_ (23).png"
+          "Darwin Hill/scr_ (23).webp"
         ]
       },
       {
@@ -10466,7 +10401,7 @@
         "x": 15.49,
         "y": 49.94,
         "commentImages": [
-          "Darwin Hill/scr_ (30).png"
+          "Darwin Hill/scr_ (30).webp"
         ]
       },
       {
@@ -10488,8 +10423,8 @@
         "x": 31.16,
         "y": 50.7,
         "commentImages": [
-          "Darwin Hill/scr_ (19).png",
-          "Darwin Hill/scr_ (20).png"
+          "Darwin Hill/scr_ (19).webp",
+          "Darwin Hill/scr_ (20).webp"
         ]
       },
       {
@@ -10507,7 +10442,7 @@
         "x": 14.64,
         "y": 76.72,
         "commentImages": [
-          "Darwin Hill/scr_ (3).png"
+          "Darwin Hill/scr_ (3).webp"
         ]
       },
       {
@@ -10523,7 +10458,7 @@
         "x": 33.93,
         "y": 75.67,
         "commentImages": [
-          "Darwin Hill/scr_ (4).png"
+          "Darwin Hill/scr_ (4).webp"
         ]
       },
       {
@@ -10539,7 +10474,7 @@
         "x": 61.21,
         "y": 81.84,
         "commentImages": [
-          "Darwin Hill/scr_ (5).png"
+          "Darwin Hill/scr_ (5).webp"
         ]
       },
       {
@@ -10555,7 +10490,7 @@
         "x": 81.02,
         "y": 80.36,
         "commentImages": [
-          "Darwin Hill/scr_ (6).png"
+          "Darwin Hill/scr_ (6).webp"
         ]
       },
       {
@@ -10583,7 +10518,7 @@
         "x": 10.3,
         "y": 38.58,
         "commentImages": [
-          "Darwin Hill/scr_ (2).png"
+          "Darwin Hill/scr_ (2).webp"
         ]
       },
       {
@@ -10599,7 +10534,7 @@
         "x": 19.79,
         "y": 28.32,
         "commentImages": [
-          "Darwin Hill/scr_ (15).png"
+          "Darwin Hill/scr_ (15).webp"
         ]
       },
       {
@@ -10615,7 +10550,7 @@
         "x": 38.63,
         "y": 53.54,
         "commentImages": [
-          "Darwin Hill/scr_ (18).png"
+          "Darwin Hill/scr_ (18).webp"
         ]
       },
       {
@@ -10631,8 +10566,8 @@
         "x": 23.96,
         "y": 41.59,
         "commentImages": [
-          "Darwin Hill/scr_ (16).png",
-          "Darwin Hill/scr_ (17).png"
+          "Darwin Hill/scr_ (16).webp",
+          "Darwin Hill/scr_ (17).webp"
         ]
       },
       {
@@ -10648,7 +10583,7 @@
         "x": 50.13,
         "y": 51.07,
         "commentImages": [
-          "Darwin Hill/scr_ (23).png"
+          "Darwin Hill/scr_ (23).webp"
         ]
       },
       {
@@ -10664,7 +10599,7 @@
         "x": 15.49,
         "y": 49.94,
         "commentImages": [
-          "Darwin Hill/scr_ (30).png"
+          "Darwin Hill/scr_ (30).webp"
         ]
       },
       {
@@ -10686,8 +10621,8 @@
         "x": 31.16,
         "y": 50.7,
         "commentImages": [
-          "Darwin Hill/scr_ (19).png",
-          "Darwin Hill/scr_ (20).png"
+          "Darwin Hill/scr_ (19).webp",
+          "Darwin Hill/scr_ (20).webp"
         ]
       },
       {
@@ -10703,7 +10638,7 @@
         "x": 49.62,
         "y": 29.58,
         "commentImages": [
-          "Darwin Hill/scr_ (24).png"
+          "Darwin Hill/scr_ (24).webp"
         ]
       },
       {
@@ -10731,7 +10666,7 @@
         "x": 76.3,
         "y": 47.91,
         "commentImages": [
-          "Darwin Hill/scr_ (46).png"
+          "Darwin Hill/scr_ (46).webp"
         ]
       },
       {
@@ -10747,8 +10682,8 @@
         "x": 61.38,
         "y": 49.18,
         "commentImages": [
-          "Darwin Hill/scr_ (41).png",
-          "Darwin Hill/scr_ (42).png"
+          "Darwin Hill/scr_ (41).webp",
+          "Darwin Hill/scr_ (42).webp"
         ]
       },
       {
@@ -10764,8 +10699,8 @@
         "x": 56.45,
         "y": 22,
         "commentImages": [
-          "Darwin Hill/scr_ (39).png",
-          "Darwin Hill/scr_ (40).png"
+          "Darwin Hill/scr_ (39).webp",
+          "Darwin Hill/scr_ (40).webp"
         ]
       },
       {
@@ -10781,7 +10716,7 @@
         "x": 95.7,
         "y": 45.7,
         "commentImages": [
-          "Darwin Hill/scr_ (44).png"
+          "Darwin Hill/scr_ (44).webp"
         ]
       },
       {
@@ -10803,8 +10738,8 @@
         "x": 84.77,
         "y": 24.65,
         "commentImages": [
-          "Darwin Hill/scr_ (38).png",
-          "Darwin Hill/scr_ (43).png"
+          "Darwin Hill/scr_ (38).webp",
+          "Darwin Hill/scr_ (43).webp"
         ]
       },
       {
@@ -10820,7 +10755,7 @@
         "x": 72.88,
         "y": 15.3,
         "commentImages": [
-          "Darwin Hill/scr_ (37).png"
+          "Darwin Hill/scr_ (37).webp"
         ]
       },
       {
@@ -10838,7 +10773,7 @@
         "x": 61.21,
         "y": 81.84,
         "commentImages": [
-          "Darwin Hill/scr_ (5).png"
+          "Darwin Hill/scr_ (5).webp"
         ]
       },
       {
@@ -10854,7 +10789,7 @@
         "x": 81.02,
         "y": 80.36,
         "commentImages": [
-          "Darwin Hill/scr_ (6).png"
+          "Darwin Hill/scr_ (6).webp"
         ]
       },
       {
@@ -10882,7 +10817,7 @@
         "x": 52.17,
         "y": 67.51,
         "commentImages": [
-          "Darwin Hill/scr_ (14).png"
+          "Darwin Hill/scr_ (14).webp"
         ]
       },
       {
@@ -10898,7 +10833,7 @@
         "x": 50.13,
         "y": 51.07,
         "commentImages": [
-          "Darwin Hill/scr_ (23).png"
+          "Darwin Hill/scr_ (23).webp"
         ]
       },
       {
@@ -10914,7 +10849,7 @@
         "x": 49.62,
         "y": 29.58,
         "commentImages": [
-          "Darwin Hill/scr_ (24).png"
+          "Darwin Hill/scr_ (24).webp"
         ]
       },
       {
@@ -10942,7 +10877,7 @@
         "x": 76.3,
         "y": 47.91,
         "commentImages": [
-          "Darwin Hill/scr_ (46).png"
+          "Darwin Hill/scr_ (46).webp"
         ]
       },
       {
@@ -10958,8 +10893,8 @@
         "x": 61.38,
         "y": 49.18,
         "commentImages": [
-          "Darwin Hill/scr_ (41).png",
-          "Darwin Hill/scr_ (42).png"
+          "Darwin Hill/scr_ (41).webp",
+          "Darwin Hill/scr_ (42).webp"
         ]
       },
       {
@@ -10975,8 +10910,8 @@
         "x": 56.45,
         "y": 22,
         "commentImages": [
-          "Darwin Hill/scr_ (39).png",
-          "Darwin Hill/scr_ (40).png"
+          "Darwin Hill/scr_ (39).webp",
+          "Darwin Hill/scr_ (40).webp"
         ]
       },
       {
@@ -10992,7 +10927,7 @@
         "x": 95.7,
         "y": 45.7,
         "commentImages": [
-          "Darwin Hill/scr_ (44).png"
+          "Darwin Hill/scr_ (44).webp"
         ]
       },
       {
@@ -11014,8 +10949,8 @@
         "x": 84.77,
         "y": 24.65,
         "commentImages": [
-          "Darwin Hill/scr_ (38).png",
-          "Darwin Hill/scr_ (43).png"
+          "Darwin Hill/scr_ (38).webp",
+          "Darwin Hill/scr_ (43).webp"
         ]
       },
       {
@@ -11031,7 +10966,7 @@
         "x": 72.88,
         "y": 15.3,
         "commentImages": [
-          "Darwin Hill/scr_ (37).png"
+          "Darwin Hill/scr_ (37).webp"
         ]
       },
       {
@@ -11049,7 +10984,7 @@
         "x": 14.64,
         "y": 76.72,
         "commentImages": [
-          "Darwin Hill/scr_ (3).png"
+          "Darwin Hill/scr_ (3).webp"
         ]
       },
       {
@@ -11065,7 +11000,7 @@
         "x": 33.93,
         "y": 75.67,
         "commentImages": [
-          "Darwin Hill/scr_ (4).png"
+          "Darwin Hill/scr_ (4).webp"
         ]
       },
       {
@@ -11081,7 +11016,7 @@
         "x": 61.21,
         "y": 81.84,
         "commentImages": [
-          "Darwin Hill/scr_ (5).png"
+          "Darwin Hill/scr_ (5).webp"
         ]
       },
       {
@@ -11097,7 +11032,7 @@
         "x": 81.02,
         "y": 80.36,
         "commentImages": [
-          "Darwin Hill/scr_ (6).png"
+          "Darwin Hill/scr_ (6).webp"
         ]
       },
       {
@@ -11125,7 +11060,7 @@
         "x": 10.3,
         "y": 38.58,
         "commentImages": [
-          "Darwin Hill/scr_ (2).png"
+          "Darwin Hill/scr_ (2).webp"
         ]
       },
       {
@@ -11141,7 +11076,7 @@
         "x": 19.79,
         "y": 28.32,
         "commentImages": [
-          "Darwin Hill/scr_ (15).png"
+          "Darwin Hill/scr_ (15).webp"
         ]
       },
       {
@@ -11157,7 +11092,7 @@
         "x": 38.63,
         "y": 53.54,
         "commentImages": [
-          "Darwin Hill/scr_ (18).png"
+          "Darwin Hill/scr_ (18).webp"
         ]
       },
       {
@@ -11173,8 +11108,8 @@
         "x": 23.96,
         "y": 41.59,
         "commentImages": [
-          "Darwin Hill/scr_ (16).png",
-          "Darwin Hill/scr_ (17).png"
+          "Darwin Hill/scr_ (16).webp",
+          "Darwin Hill/scr_ (17).webp"
         ]
       },
       {
@@ -11190,7 +11125,7 @@
         "x": 50.13,
         "y": 51.07,
         "commentImages": [
-          "Darwin Hill/scr_ (23).png"
+          "Darwin Hill/scr_ (23).webp"
         ]
       },
       {
@@ -11206,7 +11141,7 @@
         "x": 15.49,
         "y": 49.94,
         "commentImages": [
-          "Darwin Hill/scr_ (30).png"
+          "Darwin Hill/scr_ (30).webp"
         ]
       },
       {
@@ -11228,8 +11163,8 @@
         "x": 31.16,
         "y": 50.7,
         "commentImages": [
-          "Darwin Hill/scr_ (19).png",
-          "Darwin Hill/scr_ (20).png"
+          "Darwin Hill/scr_ (19).webp",
+          "Darwin Hill/scr_ (20).webp"
         ]
       },
       {
@@ -11245,7 +11180,7 @@
         "x": 49.62,
         "y": 29.58,
         "commentImages": [
-          "Darwin Hill/scr_ (24).png"
+          "Darwin Hill/scr_ (24).webp"
         ]
       },
       {
@@ -11263,7 +11198,7 @@
         "x": 9.86,
         "y": 17.38,
         "commentImages": [
-          "Darwin Hill/scr_ (1).png"
+          "Darwin Hill/scr_ (1).webp"
         ]
       },
       {
@@ -11279,8 +11214,8 @@
         "x": 57.04,
         "y": 23.28,
         "commentImages": [
-          "Darwin Hill/scr_ (7).png",
-          "Darwin Hill/scr_ (8).png"
+          "Darwin Hill/scr_ (7).webp",
+          "Darwin Hill/scr_ (8).webp"
         ]
       },
       {
@@ -11296,7 +11231,7 @@
         "x": 40.7,
         "y": 19.46,
         "commentImages": [
-          "Darwin Hill/scr_ (9).png"
+          "Darwin Hill/scr_ (9).webp"
         ]
       },
       {
@@ -11312,8 +11247,8 @@
         "x": 24.2,
         "y": 23.02,
         "commentImages": [
-          "Darwin Hill/scr_ (10).png",
-          "Darwin Hill/scr_ (11).png"
+          "Darwin Hill/scr_ (10).webp",
+          "Darwin Hill/scr_ (11).webp"
         ]
       },
       {
@@ -11341,7 +11276,7 @@
         "x": 52.91,
         "y": 68.77,
         "commentImages": [
-          "Darwin Hill/scr_ (26).png"
+          "Darwin Hill/scr_ (26).webp"
         ]
       },
       {
@@ -11357,8 +11292,8 @@
         "x": 15.23,
         "y": 78.26,
         "commentImages": [
-          "Darwin Hill/scr_ (32).png",
-          "Darwin Hill/scr_ (33).png"
+          "Darwin Hill/scr_ (32).webp",
+          "Darwin Hill/scr_ (33).webp"
         ]
       },
       {
@@ -11374,8 +11309,8 @@
         "x": 47.35,
         "y": 58.28,
         "commentImages": [
-          "Darwin Hill/scr_ (21).png",
-          "Darwin Hill/scr_ (25).png"
+          "Darwin Hill/scr_ (21).webp",
+          "Darwin Hill/scr_ (25).webp"
         ]
       },
       {
@@ -11391,8 +11326,8 @@
         "x": 18.39,
         "y": 53.98,
         "commentImages": [
-          "Darwin Hill/scr_ (28).png",
-          "Darwin Hill/scr_ (29).png"
+          "Darwin Hill/scr_ (28).webp",
+          "Darwin Hill/scr_ (29).webp"
         ]
       },
       {
@@ -11408,7 +11343,7 @@
         "x": 5.25,
         "y": 72.82,
         "commentImages": [
-          "Darwin Hill/scr_ (34).png"
+          "Darwin Hill/scr_ (34).webp"
         ]
       },
       {
@@ -11424,7 +11359,7 @@
         "x": 23.96,
         "y": 71.18,
         "commentImages": [
-          "Darwin Hill/scr_ (27).png"
+          "Darwin Hill/scr_ (27).webp"
         ]
       },
       {
@@ -11440,7 +11375,7 @@
         "x": 10.81,
         "y": 34.77,
         "commentImages": [
-          "Darwin Hill/scr_ (31).png"
+          "Darwin Hill/scr_ (31).webp"
         ]
       },
       {
@@ -11456,8 +11391,8 @@
         "x": 57.04,
         "y": 23.28,
         "commentImages": [
-          "Darwin Hill/scr_ (7).png",
-          "Darwin Hill/scr_ (8).png"
+          "Darwin Hill/scr_ (7).webp",
+          "Darwin Hill/scr_ (8).webp"
         ]
       },
       {
@@ -11473,7 +11408,7 @@
         "x": 52.91,
         "y": 68.77,
         "commentImages": [
-          "Darwin Hill/scr_ (26).png"
+          "Darwin Hill/scr_ (26).webp"
         ]
       },
       {
@@ -11489,8 +11424,8 @@
         "x": 47.35,
         "y": 58.28,
         "commentImages": [
-          "Darwin Hill/scr_ (21).png",
-          "Darwin Hill/scr_ (25).png"
+          "Darwin Hill/scr_ (21).webp",
+          "Darwin Hill/scr_ (25).webp"
         ]
       },
       {
@@ -11506,8 +11441,8 @@
         "x": 78.73,
         "y": 64.38,
         "commentImages": [
-          "Darwin Hill/scr_ (35).png",
-          "Darwin Hill/scr_ (36).png"
+          "Darwin Hill/scr_ (35).webp",
+          "Darwin Hill/scr_ (36).webp"
         ]
       },
       {
@@ -11523,9 +11458,9 @@
         "x": 64.16,
         "y": 53.86,
         "commentImages": [
-          "Darwin Hill/scr_ (48).png",
-          "Darwin Hill/scr_ (49).png",
-          "Darwin Hill/scr_ (50).png"
+          "Darwin Hill/scr_ (48).webp",
+          "Darwin Hill/scr_ (49).webp",
+          "Darwin Hill/scr_ (50).webp"
         ]
       },
       {
@@ -11541,7 +11476,7 @@
         "x": 96.92,
         "y": 45.53,
         "commentImages": [
-          "Darwin Hill/scr_ (45).png"
+          "Darwin Hill/scr_ (45).webp"
         ]
       },
       {
@@ -11557,8 +11492,8 @@
         "x": 77.18,
         "y": 33.12,
         "commentImages": [
-          "Darwin Hill/scr_ (51).png",
-          "Darwin Hill/scr_ (52).png"
+          "Darwin Hill/scr_ (51).webp",
+          "Darwin Hill/scr_ (52).webp"
         ]
       },
       {
@@ -11574,7 +11509,7 @@
         "x": 63.53,
         "y": 59.8,
         "commentImages": [
-          "Darwin Hill/scr_ (47).png"
+          "Darwin Hill/scr_ (47).webp"
         ]
       },
       {
@@ -11592,7 +11527,7 @@
         "x": 9.86,
         "y": 17.38,
         "commentImages": [
-          "Darwin Hill/scr_ (1).png"
+          "Darwin Hill/scr_ (1).webp"
         ]
       },
       {
@@ -11608,8 +11543,8 @@
         "x": 24.2,
         "y": 23.02,
         "commentImages": [
-          "Darwin Hill/scr_ (10).png",
-          "Darwin Hill/scr_ (11).png"
+          "Darwin Hill/scr_ (10).webp",
+          "Darwin Hill/scr_ (11).webp"
         ]
       },
       {
@@ -11637,7 +11572,7 @@
         "x": 43.92,
         "y": 35.88,
         "commentImages": [
-          "Darwin Hill/scr_ (12).png"
+          "Darwin Hill/scr_ (12).webp"
         ]
       },
       {
@@ -11646,7 +11581,7 @@
         "x": 36.01,
         "y": 34.32,
         "commentImages": [
-          "Darwin Hill/scr_ (13).png"
+          "Darwin Hill/scr_ (13).webp"
         ]
       },
       {
@@ -11669,7 +11604,7 @@
         "x": 52.91,
         "y": 68.77,
         "commentImages": [
-          "Darwin Hill/scr_ (26).png"
+          "Darwin Hill/scr_ (26).webp"
         ]
       },
       {
@@ -11685,8 +11620,8 @@
         "x": 15.23,
         "y": 78.26,
         "commentImages": [
-          "Darwin Hill/scr_ (32).png",
-          "Darwin Hill/scr_ (33).png"
+          "Darwin Hill/scr_ (32).webp",
+          "Darwin Hill/scr_ (33).webp"
         ]
       },
       {
@@ -11702,8 +11637,8 @@
         "x": 47.35,
         "y": 58.28,
         "commentImages": [
-          "Darwin Hill/scr_ (21).png",
-          "Darwin Hill/scr_ (25).png"
+          "Darwin Hill/scr_ (21).webp",
+          "Darwin Hill/scr_ (25).webp"
         ]
       },
       {
@@ -11719,8 +11654,8 @@
         "x": 18.39,
         "y": 53.98,
         "commentImages": [
-          "Darwin Hill/scr_ (28).png",
-          "Darwin Hill/scr_ (29).png"
+          "Darwin Hill/scr_ (28).webp",
+          "Darwin Hill/scr_ (29).webp"
         ]
       },
       {
@@ -11736,7 +11671,7 @@
         "x": 5.25,
         "y": 72.82,
         "commentImages": [
-          "Darwin Hill/scr_ (34).png"
+          "Darwin Hill/scr_ (34).webp"
         ]
       },
       {
@@ -11752,7 +11687,7 @@
         "x": 23.96,
         "y": 71.18,
         "commentImages": [
-          "Darwin Hill/scr_ (27).png"
+          "Darwin Hill/scr_ (27).webp"
         ]
       },
       {
@@ -11768,7 +11703,7 @@
         "x": 10.81,
         "y": 34.77,
         "commentImages": [
-          "Darwin Hill/scr_ (31).png"
+          "Darwin Hill/scr_ (31).webp"
         ]
       },
       {
@@ -11786,7 +11721,7 @@
         "x": 9.86,
         "y": 17.38,
         "commentImages": [
-          "Darwin Hill/scr_ (1).png"
+          "Darwin Hill/scr_ (1).webp"
         ]
       },
       {
@@ -11802,8 +11737,8 @@
         "x": 57.04,
         "y": 23.28,
         "commentImages": [
-          "Darwin Hill/scr_ (7).png",
-          "Darwin Hill/scr_ (8).png"
+          "Darwin Hill/scr_ (7).webp",
+          "Darwin Hill/scr_ (8).webp"
         ]
       },
       {
@@ -11819,7 +11754,7 @@
         "x": 40.7,
         "y": 19.46,
         "commentImages": [
-          "Darwin Hill/scr_ (9).png"
+          "Darwin Hill/scr_ (9).webp"
         ]
       },
       {
@@ -11835,8 +11770,8 @@
         "x": 24.2,
         "y": 23.02,
         "commentImages": [
-          "Darwin Hill/scr_ (10).png",
-          "Darwin Hill/scr_ (11).png"
+          "Darwin Hill/scr_ (10).webp",
+          "Darwin Hill/scr_ (11).webp"
         ]
       },
       {
@@ -11864,7 +11799,7 @@
         "x": 52.91,
         "y": 68.77,
         "commentImages": [
-          "Darwin Hill/scr_ (26).png"
+          "Darwin Hill/scr_ (26).webp"
         ]
       },
       {
@@ -11880,8 +11815,8 @@
         "x": 15.23,
         "y": 78.26,
         "commentImages": [
-          "Darwin Hill/scr_ (32).png",
-          "Darwin Hill/scr_ (33).png"
+          "Darwin Hill/scr_ (32).webp",
+          "Darwin Hill/scr_ (33).webp"
         ]
       },
       {
@@ -11897,8 +11832,8 @@
         "x": 47.35,
         "y": 58.28,
         "commentImages": [
-          "Darwin Hill/scr_ (21).png",
-          "Darwin Hill/scr_ (25).png"
+          "Darwin Hill/scr_ (21).webp",
+          "Darwin Hill/scr_ (25).webp"
         ]
       },
       {
@@ -11914,8 +11849,8 @@
         "x": 18.39,
         "y": 53.98,
         "commentImages": [
-          "Darwin Hill/scr_ (28).png",
-          "Darwin Hill/scr_ (29).png"
+          "Darwin Hill/scr_ (28).webp",
+          "Darwin Hill/scr_ (29).webp"
         ]
       },
       {
@@ -11931,7 +11866,7 @@
         "x": 5.25,
         "y": 72.82,
         "commentImages": [
-          "Darwin Hill/scr_ (34).png"
+          "Darwin Hill/scr_ (34).webp"
         ]
       },
       {
@@ -11947,7 +11882,7 @@
         "x": 23.96,
         "y": 71.18,
         "commentImages": [
-          "Darwin Hill/scr_ (27).png"
+          "Darwin Hill/scr_ (27).webp"
         ]
       },
       {
@@ -11963,7 +11898,7 @@
         "x": 10.81,
         "y": 34.77,
         "commentImages": [
-          "Darwin Hill/scr_ (31).png"
+          "Darwin Hill/scr_ (31).webp"
         ]
       },
       {
@@ -11979,8 +11914,8 @@
         "x": 57.04,
         "y": 23.28,
         "commentImages": [
-          "Darwin Hill/scr_ (7).png",
-          "Darwin Hill/scr_ (8).png"
+          "Darwin Hill/scr_ (7).webp",
+          "Darwin Hill/scr_ (8).webp"
         ]
       },
       {
@@ -11996,7 +11931,7 @@
         "x": 52.91,
         "y": 68.77,
         "commentImages": [
-          "Darwin Hill/scr_ (26).png"
+          "Darwin Hill/scr_ (26).webp"
         ]
       },
       {
@@ -12012,8 +11947,8 @@
         "x": 47.35,
         "y": 58.28,
         "commentImages": [
-          "Darwin Hill/scr_ (21).png",
-          "Darwin Hill/scr_ (25).png"
+          "Darwin Hill/scr_ (21).webp",
+          "Darwin Hill/scr_ (25).webp"
         ]
       },
       {
@@ -12029,8 +11964,8 @@
         "x": 78.73,
         "y": 64.38,
         "commentImages": [
-          "Darwin Hill/scr_ (35).png",
-          "Darwin Hill/scr_ (36).png"
+          "Darwin Hill/scr_ (35).webp",
+          "Darwin Hill/scr_ (36).webp"
         ]
       },
       {
@@ -12046,9 +11981,9 @@
         "x": 64.16,
         "y": 53.86,
         "commentImages": [
-          "Darwin Hill/scr_ (48).png",
-          "Darwin Hill/scr_ (49).png",
-          "Darwin Hill/scr_ (50).png"
+          "Darwin Hill/scr_ (48).webp",
+          "Darwin Hill/scr_ (49).webp",
+          "Darwin Hill/scr_ (50).webp"
         ]
       },
       {
@@ -12064,7 +11999,7 @@
         "x": 96.92,
         "y": 45.53,
         "commentImages": [
-          "Darwin Hill/scr_ (45).png"
+          "Darwin Hill/scr_ (45).webp"
         ]
       },
       {
@@ -12080,8 +12015,8 @@
         "x": 77.18,
         "y": 33.12,
         "commentImages": [
-          "Darwin Hill/scr_ (51).png",
-          "Darwin Hill/scr_ (52).png"
+          "Darwin Hill/scr_ (51).webp",
+          "Darwin Hill/scr_ (52).webp"
         ]
       },
       {
@@ -12097,7 +12032,7 @@
         "x": 63.53,
         "y": 59.8,
         "commentImages": [
-          "Darwin Hill/scr_ (47).png"
+          "Darwin Hill/scr_ (47).webp"
         ]
       },
       {
@@ -12115,8 +12050,8 @@
         "x": 57.04,
         "y": 23.28,
         "commentImages": [
-          "Darwin Hill/scr_ (7).png",
-          "Darwin Hill/scr_ (8).png"
+          "Darwin Hill/scr_ (7).webp",
+          "Darwin Hill/scr_ (8).webp"
         ]
       },
       {
@@ -12144,7 +12079,7 @@
         "x": 43.92,
         "y": 35.88,
         "commentImages": [
-          "Darwin Hill/scr_ (12).png"
+          "Darwin Hill/scr_ (12).webp"
         ]
       },
       {
@@ -12160,7 +12095,7 @@
         "x": 52.91,
         "y": 68.77,
         "commentImages": [
-          "Darwin Hill/scr_ (26).png"
+          "Darwin Hill/scr_ (26).webp"
         ]
       },
       {
@@ -12176,8 +12111,8 @@
         "x": 47.35,
         "y": 58.28,
         "commentImages": [
-          "Darwin Hill/scr_ (21).png",
-          "Darwin Hill/scr_ (25).png"
+          "Darwin Hill/scr_ (21).webp",
+          "Darwin Hill/scr_ (25).webp"
         ]
       },
       {
@@ -12193,8 +12128,8 @@
         "x": 57.04,
         "y": 23.28,
         "commentImages": [
-          "Darwin Hill/scr_ (7).png",
-          "Darwin Hill/scr_ (8).png"
+          "Darwin Hill/scr_ (7).webp",
+          "Darwin Hill/scr_ (8).webp"
         ]
       },
       {
@@ -12210,7 +12145,7 @@
         "x": 52.91,
         "y": 68.77,
         "commentImages": [
-          "Darwin Hill/scr_ (26).png"
+          "Darwin Hill/scr_ (26).webp"
         ]
       },
       {
@@ -12226,8 +12161,8 @@
         "x": 47.35,
         "y": 58.28,
         "commentImages": [
-          "Darwin Hill/scr_ (21).png",
-          "Darwin Hill/scr_ (25).png"
+          "Darwin Hill/scr_ (21).webp",
+          "Darwin Hill/scr_ (25).webp"
         ]
       },
       {
@@ -12243,8 +12178,8 @@
         "x": 78.73,
         "y": 64.38,
         "commentImages": [
-          "Darwin Hill/scr_ (35).png",
-          "Darwin Hill/scr_ (36).png"
+          "Darwin Hill/scr_ (35).webp",
+          "Darwin Hill/scr_ (36).webp"
         ]
       },
       {
@@ -12260,9 +12195,9 @@
         "x": 64.16,
         "y": 53.86,
         "commentImages": [
-          "Darwin Hill/scr_ (48).png",
-          "Darwin Hill/scr_ (49).png",
-          "Darwin Hill/scr_ (50).png"
+          "Darwin Hill/scr_ (48).webp",
+          "Darwin Hill/scr_ (49).webp",
+          "Darwin Hill/scr_ (50).webp"
         ]
       },
       {
@@ -12278,7 +12213,7 @@
         "x": 96.92,
         "y": 45.53,
         "commentImages": [
-          "Darwin Hill/scr_ (45).png"
+          "Darwin Hill/scr_ (45).webp"
         ]
       },
       {
@@ -12294,8 +12229,8 @@
         "x": 77.18,
         "y": 33.12,
         "commentImages": [
-          "Darwin Hill/scr_ (51).png",
-          "Darwin Hill/scr_ (52).png"
+          "Darwin Hill/scr_ (51).webp",
+          "Darwin Hill/scr_ (52).webp"
         ]
       },
       {
@@ -12311,7 +12246,7 @@
         "x": 63.53,
         "y": 59.8,
         "commentImages": [
-          "Darwin Hill/scr_ (47).png"
+          "Darwin Hill/scr_ (47).webp"
         ]
       },
       {
@@ -12454,12 +12389,6 @@
         "parentTankId": "vector-8eedb188-d355-4c85-92a5-ccd22b8b5cc1"
       },
       {
-        "id": "vector-1fd87f80-5294-4649-94c5-0bbd01950e09",
-        "type": "mainBattleTankRed",
-        "x": 20.37,
-        "y": 25.02
-      },
-      {
         "id": "vector-789fb212-1a74-4e62-89f4-2be15ea73310",
         "type": "mainBattleTankRed",
         "x": 38.27,
@@ -12471,39 +12400,6 @@
         "x": 38.27,
         "y": 80.8,
         "parentTankId": "vector-789fb212-1a74-4e62-89f4-2be15ea73310"
-      },
-      {
-        "id": "vector-6fb1d012-4201-4363-a5d1-bf4d2fca6e1e",
-        "type": "spawnKill",
-        "x": 20.37,
-        "y": 25.02,
-        "parentTankId": "vector-1fd87f80-5294-4649-94c5-0bbd01950e09"
-      },
-      {
-        "id": "vector-64436e8f-4ec0-4e7c-9170-7021e67b7f72",
-        "type": "mainBattleTankRed",
-        "x": 32.54,
-        "y": 20.16
-      },
-      {
-        "id": "vector-39aa2ffe-facc-444c-b5fd-d69176b418ee",
-        "type": "highRiskSpot",
-        "x": 32.54,
-        "y": 20.16,
-        "parentTankId": "vector-64436e8f-4ec0-4e7c-9170-7021e67b7f72"
-      },
-      {
-        "id": "vector-dceb2f50-de87-421c-9437-e59314072f51",
-        "type": "mainBattleTankRed",
-        "x": 34.01,
-        "y": 50.13
-      },
-      {
-        "id": "vector-c45a75d0-7349-4455-9662-4881bdacdbb4",
-        "type": "spawnKill",
-        "x": 34.01,
-        "y": 50.13,
-        "parentTankId": "vector-dceb2f50-de87-421c-9437-e59314072f51"
       },
       {
         "id": "vector-9a081635-a80c-46e9-a7df-4ad2efc572aa",
@@ -12623,32 +12519,6 @@
         "x": 48.09,
         "y": 62.73,
         "parentTankId": "vector-0f51d1ef-1173-4a35-aa1b-15ada16210ef"
-      },
-      {
-        "id": "vector-43cde26c-73ba-42d3-b61f-4e8606d12635",
-        "type": "mainBattleTank",
-        "x": 41.49,
-        "y": 9.9
-      },
-      {
-        "id": "vector-5d211293-dfe6-4cb9-85fe-fc6d0a1d69ae",
-        "type": "spawnKill",
-        "x": 41.49,
-        "y": 9.9,
-        "parentTankId": "vector-43cde26c-73ba-42d3-b61f-4e8606d12635"
-      },
-      {
-        "id": "vector-857632ee-1bd8-4cb6-9d73-9a507989c61d",
-        "type": "mainBattleTank",
-        "x": 52.78,
-        "y": 31.62
-      },
-      {
-        "id": "vector-8663afaa-3c70-47e8-8121-710f81bdb4ff",
-        "type": "spawnKill",
-        "x": 52.78,
-        "y": 31.62,
-        "parentTankId": "vector-857632ee-1bd8-4cb6-9d73-9a507989c61d"
       },
       {
         "id": "vector-f1650c3d-3bf9-453d-9505-cdb5cef9600f",
@@ -14904,10 +14774,10 @@
         "x": 64.51,
         "y": 52.3,
         "commentImages": [
-          "Flanders/scr_ (22).png",
-          "Flanders/scr_ (23).png",
-          "Flanders/scr_ (24).png",
-          "Flanders/scr_ (25).png"
+          "Flanders/scr_ (22).webp",
+          "Flanders/scr_ (23).webp",
+          "Flanders/scr_ (24).webp",
+          "Flanders/scr_ (25).webp"
         ]
       },
       {
@@ -14916,9 +14786,9 @@
         "x": 42.35,
         "y": 47.44,
         "commentImages": [
-          "Flanders/scr_ (20).png",
-          "Flanders/scr_ (12).png",
-          "Flanders/scr_ (21).png"
+          "Flanders/scr_ (20).webp",
+          "Flanders/scr_ (12).webp",
+          "Flanders/scr_ (21).webp"
         ]
       },
       {
@@ -14927,7 +14797,7 @@
         "x": 72.38,
         "y": 84.2,
         "commentImages": [
-          "Flanders/scr_ (26).png"
+          "Flanders/scr_ (26).webp"
         ]
       },
       {
@@ -14957,8 +14827,8 @@
         "x": 19.28,
         "y": 75.73,
         "commentImages": [
-          "Flanders/scr_ (28).png",
-          "Flanders/scr_ (29).png"
+          "Flanders/scr_ (28).webp",
+          "Flanders/scr_ (29).webp"
         ]
       },
       {
@@ -14967,7 +14837,7 @@
         "x": 36.85,
         "y": 64.6,
         "commentImages": [
-          "Flanders/scr_ (27).png"
+          "Flanders/scr_ (27).webp"
         ]
       },
       {
@@ -14990,8 +14860,8 @@
         "x": 96.65,
         "y": 25.92,
         "commentImages": [
-          "Flanders/scr_ (35).png",
-          "Flanders/scr_ (36).png"
+          "Flanders/scr_ (35).webp",
+          "Flanders/scr_ (36).webp"
         ]
       },
       {
@@ -15007,8 +14877,8 @@
         "x": 4.36,
         "y": 24.91,
         "commentImages": [
-          "Flanders/scr_ (30).png",
-          "Flanders/scr_ (31).png"
+          "Flanders/scr_ (30).webp",
+          "Flanders/scr_ (31).webp"
         ]
       },
       {
@@ -15024,7 +14894,7 @@
         "x": 6.51,
         "y": 51.96,
         "commentImages": [
-          "Flanders/scr_ (33).png"
+          "Flanders/scr_ (33).webp"
         ]
       },
       {
@@ -15033,7 +14903,7 @@
         "x": 83.25,
         "y": 82.81,
         "commentImages": [
-          "Flanders/scr_ (34).png"
+          "Flanders/scr_ (34).webp"
         ]
       },
       {
@@ -15056,7 +14926,7 @@
         "x": 58.47,
         "y": 50.7,
         "commentImages": [
-          "Flanders/scr_ (37).png"
+          "Flanders/scr_ (37).webp"
         ]
       },
       {
@@ -15072,7 +14942,7 @@
         "x": 22.31,
         "y": 40.96,
         "commentImages": [
-          "Flanders/scr_ (38).png"
+          "Flanders/scr_ (38).webp"
         ]
       },
       {
@@ -15088,7 +14958,7 @@
         "x": 6.91,
         "y": 45.96,
         "commentImages": [
-          "Flanders/scr_ (32).png"
+          "Flanders/scr_ (32).webp"
         ]
       },
       {
@@ -15112,9 +14982,9 @@
         "x": 36.01,
         "y": 64.99,
         "commentImages": [
-          "Flanders/scr_ (1).png",
-          "Flanders/scr_ (2).png",
-          "Flanders/scr_ (3).png"
+          "Flanders/scr_ (1).webp",
+          "Flanders/scr_ (2).webp",
+          "Flanders/scr_ (3).webp"
         ]
       },
       {
@@ -15130,7 +15000,7 @@
         "x": 52.4,
         "y": 42.86,
         "commentImages": [
-          "Flanders/scr_ (8).png"
+          "Flanders/scr_ (8).webp"
         ]
       },
       {
@@ -15146,7 +15016,7 @@
         "x": 92.1,
         "y": 12.77,
         "commentImages": [
-          "Flanders/scr_ (15).png"
+          "Flanders/scr_ (15).webp"
         ]
       },
       {
@@ -15162,7 +15032,7 @@
         "x": 7.52,
         "y": 50.39,
         "commentImages": [
-          "Flanders/scr_ (16).png"
+          "Flanders/scr_ (16).webp"
         ]
       },
       {
@@ -15178,7 +15048,7 @@
         "x": 2.72,
         "y": 38.81,
         "commentImages": [
-          "Flanders/scr_ (19).png"
+          "Flanders/scr_ (19).webp"
         ]
       },
       {
@@ -15194,7 +15064,7 @@
         "x": 44.06,
         "y": 21.49,
         "commentImages": [
-          "Flanders/scr_ (11).png"
+          "Flanders/scr_ (11).webp"
         ]
       },
       {
@@ -15210,7 +15080,7 @@
         "x": 38.24,
         "y": 20.48,
         "commentImages": [
-          "Flanders/scr_ (13).png"
+          "Flanders/scr_ (13).webp"
         ]
       },
       {
@@ -15226,7 +15096,7 @@
         "x": 94.22,
         "y": 71.59,
         "commentImages": [
-          "Flanders/scr_ (5).png"
+          "Flanders/scr_ (5).webp"
         ]
       },
       {
@@ -15235,7 +15105,7 @@
         "x": 84.32,
         "y": 67.59,
         "commentImages": [
-          "Flanders/scr_ (4).png"
+          "Flanders/scr_ (4).webp"
         ]
       },
       {
@@ -15244,7 +15114,7 @@
         "x": 90.31,
         "y": 62.12,
         "commentImages": [
-          "Flanders/scr_ (6).png"
+          "Flanders/scr_ (6).webp"
         ]
       },
       {
@@ -15274,7 +15144,7 @@
         "x": 78.95,
         "y": 58.91,
         "commentImages": [
-          "Flanders/scr_ (7).png"
+          "Flanders/scr_ (7).webp"
         ]
       },
       {
@@ -15290,7 +15160,7 @@
         "x": 1.71,
         "y": 18.84,
         "commentImages": [
-          "Flanders/scr_ (14).png"
+          "Flanders/scr_ (14).webp"
         ]
       },
       {
@@ -15306,8 +15176,8 @@
         "x": 46.21,
         "y": 41.97,
         "commentImages": [
-          "Flanders/scr_ (9).png",
-          "Flanders/scr_ (10).png"
+          "Flanders/scr_ (9).webp",
+          "Flanders/scr_ (10).webp"
         ]
       },
       {
@@ -15323,8 +15193,8 @@
         "x": 0.95,
         "y": 49.05,
         "commentImages": [
-          "Flanders/scr_ (17).png",
-          "Flanders/scr_ (18).png"
+          "Flanders/scr_ (17).webp",
+          "Flanders/scr_ (18).webp"
         ]
       },
       {
@@ -15504,7 +15374,7 @@
         "x": 44.79,
         "y": 64.58,
         "commentImages": [
-          "Golden Quarry/scr_3.png"
+          "Golden Quarry/scr_3.webp"
         ]
       },
       {
@@ -15520,7 +15390,7 @@
         "x": 53.9,
         "y": 69.86,
         "commentImages": [
-          "Golden Quarry/scr_4.png"
+          "Golden Quarry/scr_4.webp"
         ]
       },
       {
@@ -15536,7 +15406,7 @@
         "x": 74.74,
         "y": 63.41,
         "commentImages": [
-          "Golden Quarry/scr_10.png"
+          "Golden Quarry/scr_10.webp"
         ]
       },
       {
@@ -15565,7 +15435,7 @@
         "x": 86.99,
         "y": 46.22,
         "commentImages": [
-          "Golden Quarry/scr_11.png"
+          "Golden Quarry/scr_11.webp"
         ]
       },
       {
@@ -15581,7 +15451,7 @@
         "x": 51.82,
         "y": 37.36,
         "commentImages": [
-          "Golden Quarry/scr_14.png"
+          "Golden Quarry/scr_14.webp"
         ]
       },
       {
@@ -15625,7 +15495,7 @@
         "x": 37.06,
         "y": 56.73,
         "commentImages": [
-          "Golden Quarry/scr_2.png"
+          "Golden Quarry/scr_2.webp"
         ]
       },
       {
@@ -15641,7 +15511,7 @@
         "x": 40.43,
         "y": 67.99,
         "commentImages": [
-          "Golden Quarry/scr_8.png"
+          "Golden Quarry/scr_8.webp"
         ]
       },
       {
@@ -15658,7 +15528,7 @@
         "y": 31.02,
         "comment": "spawn kill",
         "commentImages": [
-          "Golden Quarry/scr_1.png"
+          "Golden Quarry/scr_1.webp"
         ]
       },
       {
@@ -15674,7 +15544,7 @@
         "x": 57.89,
         "y": 65.95,
         "commentImages": [
-          "Golden Quarry/scr_6.png"
+          "Golden Quarry/scr_6.webp"
         ]
       },
       {
@@ -15690,7 +15560,7 @@
         "x": 57.18,
         "y": 68.17,
         "commentImages": [
-          "Golden Quarry/scr_5.png"
+          "Golden Quarry/scr_5.webp"
         ]
       },
       {
@@ -15706,7 +15576,7 @@
         "x": 48.23,
         "y": 82.18,
         "commentImages": [
-          "Golden Quarry/scr_7.png"
+          "Golden Quarry/scr_7.webp"
         ]
       },
       {
@@ -15728,7 +15598,7 @@
         "x": 22.43,
         "y": 62.67,
         "commentImages": [
-          "Golden Quarry/scr_9.png"
+          "Golden Quarry/scr_9.webp"
         ]
       },
       {
@@ -15744,7 +15614,7 @@
         "x": 57.63,
         "y": 20.83,
         "commentImages": [
-          "Golden Quarry/scr_12.png"
+          "Golden Quarry/scr_12.webp"
         ]
       },
       {
@@ -15760,7 +15630,7 @@
         "x": 47.27,
         "y": 56.37,
         "commentImages": [
-          "Golden Quarry/scr_13.png"
+          "Golden Quarry/scr_13.webp"
         ]
       },
       {
@@ -19040,14 +18910,14 @@
       {
         "id": "mujwkzdr-uz9gjp",
         "type": "mainBattleTankRed",
-        "x": 58.69,
-        "y": 69.94
+        "x": 48.18,
+        "y": 63.68
       },
       {
         "id": "mujwl0ff-ycuvnc",
-        "type": "battleLine",
-        "x": 58.69,
-        "y": 69.94,
+        "type": "highRiskSpot",
+        "x": 48.18,
+        "y": 63.68,
         "parentTankId": "mujwkzdr-uz9gjp"
       },
       {
@@ -19130,7 +19000,7 @@
       },
       {
         "id": "mujwh9t4-0g1fke",
-        "type": "battleLine",
+        "type": "highRiskSpot",
         "x": 49.83,
         "y": 64.64,
         "parentTankId": "mujwg82y-84v4qq"
@@ -20068,6 +19938,232 @@
         "parentTankId": "port-novorossiysk-conquest-1-blue-unit-13"
       }
     ],
+    "Port Novorossiysk::conquest-2|Red": [
+      {
+        "id": "munnx7v6-us3xrd",
+        "type": "tankDestroyerRed",
+        "x": 62.77,
+        "y": 29.89
+      },
+      {
+        "id": "munnx98o-xkx9lu",
+        "type": "sniper",
+        "x": 62.77,
+        "y": 29.89,
+        "parentTankId": "munnx7v6-us3xrd"
+      },
+      {
+        "id": "munnxu3m-qd02k1",
+        "type": "mainBattleTankRed",
+        "x": 45.31,
+        "y": 22.15
+      },
+      {
+        "id": "munny1zu-k88q2y",
+        "type": "mainBattleTankRed",
+        "x": 50.78,
+        "y": 29.11
+      },
+      {
+        "id": "munny448-yohxdl",
+        "type": "mainBattleTankRed",
+        "x": 43.83,
+        "y": 28.32
+      },
+      {
+        "id": "munny6dk-imko2u",
+        "type": "mainBattleTankRed",
+        "x": 45.05,
+        "y": 33.19
+      },
+      {
+        "id": "munnyb73-hqekxv",
+        "type": "lightTankRed",
+        "x": 47.48,
+        "y": 52.48
+      },
+      {
+        "id": "munnyfis-dmy6jx",
+        "type": "lightTankRed",
+        "x": 50,
+        "y": 56.21
+      },
+      {
+        "id": "munnyi44-t1e7jk",
+        "type": "lightTankRed",
+        "x": 17.68,
+        "y": 59.86
+      },
+      {
+        "id": "munnym7c-m1jhud",
+        "type": "lightTankRed",
+        "x": 23.15,
+        "y": 57.08
+      },
+      {
+        "id": "munnypts-3rcuko",
+        "type": "mainBattleTankRed",
+        "x": 28.89,
+        "y": 43.96
+      },
+      {
+        "id": "munnyshv-10qr9h",
+        "type": "mainBattleTankRed",
+        "x": 30.63,
+        "y": 27.37
+      },
+      {
+        "id": "munnyz5h-bovt5x",
+        "type": "highRiskSpot",
+        "x": 47.48,
+        "y": 52.48,
+        "parentTankId": "munnyb73-hqekxv"
+      },
+      {
+        "id": "munnz0xo-wazfcx",
+        "type": "battleLine",
+        "x": 50,
+        "y": 56.21,
+        "parentTankId": "munnyfis-dmy6jx"
+      },
+      {
+        "id": "munnz38w-vaunpp",
+        "type": "highRiskSpot",
+        "x": 23.15,
+        "y": 57.08,
+        "parentTankId": "munnym7c-m1jhud"
+      },
+      {
+        "id": "munnz5is-xl6g5g",
+        "type": "highRiskSpot",
+        "x": 17.68,
+        "y": 59.86,
+        "parentTankId": "munnyi44-t1e7jk"
+      },
+      {
+        "id": "munnz870-9359gl",
+        "type": "spawnKill",
+        "x": 28.89,
+        "y": 43.96,
+        "parentTankId": "munnypts-3rcuko"
+      },
+      {
+        "id": "munnzafc-iq8tjf",
+        "type": "highRiskSpot",
+        "x": 30.63,
+        "y": 27.37,
+        "parentTankId": "munnyshv-10qr9h"
+      },
+      {
+        "id": "muno03h5-nnttzj",
+        "type": "highRiskSpot",
+        "x": 43.83,
+        "y": 28.32,
+        "parentTankId": "munny448-yohxdl"
+      },
+      {
+        "id": "muno04tk-jy6s80",
+        "type": "highRiskSpot",
+        "x": 45.05,
+        "y": 33.19,
+        "parentTankId": "munny6dk-imko2u"
+      },
+      {
+        "id": "muno0pkw-k848ds",
+        "type": "highRiskSpot",
+        "x": 45.31,
+        "y": 22.15,
+        "parentTankId": "munnxu3m-qd02k1"
+      },
+      {
+        "id": "muno0rdp-4jq3co",
+        "type": "battleLine",
+        "x": 50.78,
+        "y": 29.11,
+        "parentTankId": "munny1zu-k88q2y"
+      }
+    ],
+    "Port Novorossiysk::conquest-2|Blue": [
+      {
+        "id": "muno39ac-d9je91",
+        "type": "mainBattleTank",
+        "x": 44.01,
+        "y": 52.13
+      },
+      {
+        "id": "muno3boe-5syuab",
+        "type": "mainBattleTank",
+        "x": 39.83,
+        "y": 43.27
+      },
+      {
+        "id": "muno3fk8-vzk1b7",
+        "type": "mainBattleTank",
+        "x": 36.71,
+        "y": 32.41
+      },
+      {
+        "id": "muno3lqg-k715rj",
+        "type": "lightTank",
+        "x": 47.05,
+        "y": 26.24
+      },
+      {
+        "id": "muno3rpu-fghy5k",
+        "type": "lightTank",
+        "x": 64.51,
+        "y": 51.61
+      },
+      {
+        "id": "muno3tdm-1cdjgd",
+        "type": "highRiskSpot",
+        "x": 64.51,
+        "y": 51.61,
+        "parentTankId": "muno3rpu-fghy5k"
+      },
+      {
+        "id": "muno3wce-4r4wnu",
+        "type": "highRiskSpot",
+        "x": 47.05,
+        "y": 26.24,
+        "parentTankId": "muno3lqg-k715rj"
+      },
+      {
+        "id": "muno3zoq-v75ix9",
+        "type": "battleLine",
+        "x": 36.71,
+        "y": 32.41,
+        "parentTankId": "muno3fk8-vzk1b7"
+      },
+      {
+        "id": "muno40zq-74cnlq",
+        "type": "battleLine",
+        "x": 39.83,
+        "y": 43.27,
+        "parentTankId": "muno3boe-5syuab"
+      },
+      {
+        "id": "muno42c7-yybcml",
+        "type": "battleLine",
+        "x": 44.01,
+        "y": 52.13,
+        "parentTankId": "muno39ac-d9je91"
+      },
+      {
+        "id": "muno4yom-8k4tqf",
+        "type": "mainBattleTank",
+        "x": 49.57,
+        "y": 29.45
+      },
+      {
+        "id": "muno50e4-3v64kw",
+        "type": "highRiskSpot",
+        "x": 49.57,
+        "y": 29.45,
+        "parentTankId": "muno4yom-8k4tqf"
+      }
+    ],
+    "Port Novorossiysk::battle-1|Red": [],
     "Pradesh::domination-1|Red": [
       {
         "id": "pradesh-red-unit-01",
@@ -40305,15 +40401,6 @@
         "endY": 41.41
       },
       {
-        "id": "mtw6c0y0-5duono",
-        "type": "aimHere",
-        "parentTankId": "mtw67swp-yp6iyq",
-        "startX": 61.2,
-        "startY": 18.74,
-        "endX": 12.12,
-        "endY": 56.81
-      },
-      {
         "id": "mtw6c9lg-fthj3l",
         "type": "aimHere",
         "parentTankId": "mtw6brle-gxykch",
@@ -40385,33 +40472,6 @@
       }
     ],
     "Battle of Hürtgen Forest::domination-2|Red": [
-      {
-        "id": "mu21a7xv-l62u01",
-        "type": "aimHere",
-        "parentTankId": "mu219wkg-suk072",
-        "startX": 10.3,
-        "startY": 40.83,
-        "endX": 63.02,
-        "endY": 51.45
-      },
-      {
-        "id": "mu21axkv-hl4uol",
-        "type": "aimHere",
-        "parentTankId": "mtw67mmp-9vw55z",
-        "startX": 20.61,
-        "startY": 23.13,
-        "endX": 75.28,
-        "endY": 44.63
-      },
-      {
-        "id": "mu21bmsa-nj6f72",
-        "type": "aimHere",
-        "parentTankId": "mu219wkg-suk072",
-        "startX": 10.3,
-        "startY": 40.83,
-        "endX": 75.41,
-        "endY": 45.26
-      },
       {
         "id": "mu21ctb9-uo2ngg",
         "type": "route",
@@ -40513,15 +40573,6 @@
             "y": 39.95
           }
         ]
-      },
-      {
-        "id": "mu21gtyq-tcuxkb",
-        "type": "aimHere",
-        "parentTankId": "mu21gpkx-f7mlar",
-        "startX": 80.97,
-        "startY": 43.87,
-        "endX": 88.81,
-        "endY": 48.93
       },
       {
         "id": "mu21gy6z-kjozyg",
@@ -51886,15 +51937,6 @@
         "endY": 70.03
       },
       {
-        "id": "vector-e459287f-4bd9-4c3b-aa77-53c6006bf13f",
-        "type": "aimHere",
-        "parentTankId": "vector-1fd87f80-5294-4649-94c5-0bbd01950e09",
-        "startX": 20.37,
-        "startY": 25.02,
-        "endX": 16.99,
-        "endY": 43.96
-      },
-      {
         "id": "vector-0c60c361-ba9e-4a10-bf41-b4b34e778a65",
         "type": "aimHere",
         "parentTankId": "vector-2c849826-8ed5-454c-aa10-80cd7f4af8a1",
@@ -51911,15 +51953,6 @@
         "startY": 43.18,
         "endX": 37.84,
         "endY": 49.87
-      },
-      {
-        "id": "vector-f8ad53a3-7ea7-4a75-b9aa-670a99fac400",
-        "type": "aimHere",
-        "parentTankId": "vector-dceb2f50-de87-421c-9437-e59314072f51",
-        "startX": 34.01,
-        "startY": 50.13,
-        "endX": 15.68,
-        "endY": 47.87
       },
       {
         "id": "vector-bf75aada-2350-4deb-9678-f21507a1337d",
@@ -52039,24 +52072,6 @@
         "startY": 55.95,
         "endX": 56.52,
         "endY": 58.38
-      },
-      {
-        "id": "vector-ad88b9a5-9163-4ca5-8c68-59b4a31a7e45",
-        "type": "aimHere",
-        "parentTankId": "vector-43cde26c-73ba-42d3-b61f-4e8606d12635",
-        "startX": 41.49,
-        "startY": 9.9,
-        "endX": 57.04,
-        "endY": 19.46
-      },
-      {
-        "id": "vector-c1a57df5-5524-437d-b9ae-5f30a3bd15b7",
-        "type": "aimHere",
-        "parentTankId": "vector-857632ee-1bd8-4cb6-9d73-9a507989c61d",
-        "startX": 52.78,
-        "startY": 31.62,
-        "endX": 56.43,
-        "endY": 19.37
       },
       {
         "id": "vector-230e17b1-d0a3-4f61-869f-41116c6e56b3",
@@ -66054,6 +66069,203 @@
         "startY": 93.74,
         "endX": 11.34,
         "endY": 79.5
+      },
+      {
+        "id": "munktf1d-fjvf6b",
+        "type": "aimHere",
+        "parentTankId": "mujwnkux-f8q1r7",
+        "startX": 49.48,
+        "startY": 53.08,
+        "endX": 47.74,
+        "endY": 41.7
+      },
+      {
+        "id": "munktm5f-vzq4tx",
+        "type": "aimHere",
+        "parentTankId": "mujwkzdr-uz9gjp",
+        "startX": 48.18,
+        "startY": 63.68,
+        "endX": 49.65,
+        "endY": 56.13
+      },
+      {
+        "id": "munku4q8-2vl0jv",
+        "type": "route",
+        "points": [
+          {
+            "x": 48.18,
+            "y": 65.07
+          },
+          {
+            "x": 49.3,
+            "y": 67.68
+          },
+          {
+            "x": 51.3,
+            "y": 68.64
+          },
+          {
+            "x": 55.13,
+            "y": 69.5
+          },
+          {
+            "x": 60.08,
+            "y": 69.59
+          },
+          {
+            "x": 61.9,
+            "y": 69.07
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "munkuago-facwjm",
+        "type": "route",
+        "points": [
+          {
+            "x": 47.65,
+            "y": 64.55
+          },
+          {
+            "x": 46.26,
+            "y": 63.51
+          },
+          {
+            "x": 43.05,
+            "y": 61.95
+          },
+          {
+            "x": 39.14,
+            "y": 60.82
+          },
+          {
+            "x": 36.97,
+            "y": 58.47
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "munkugqn-2jptm3",
+        "type": "aimHere",
+        "parentTankId": "mujwkzdr-uz9gjp",
+        "startX": 48.18,
+        "startY": 63.68,
+        "endX": 19.59,
+        "endY": 49.17
+      },
+      {
+        "id": "munkyp7m-fur9nk",
+        "type": "route",
+        "points": [
+          {
+            "x": 45.4,
+            "y": 98.35
+          },
+          {
+            "x": 51.65,
+            "y": 98.18
+          },
+          {
+            "x": 58.6,
+            "y": 98.52
+          },
+          {
+            "x": 64.16,
+            "y": 98.26
+          },
+          {
+            "x": 66.42,
+            "y": 98.35
+          },
+          {
+            "x": 68.68,
+            "y": 98.18
+          },
+          {
+            "x": 70.5,
+            "y": 98.26
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "munkyvgo-3r2r3g",
+        "type": "route",
+        "points": [
+          {
+            "x": 72.33,
+            "y": 97.74
+          },
+          {
+            "x": 75.8,
+            "y": 97.31
+          },
+          {
+            "x": 78.76,
+            "y": 95.57
+          },
+          {
+            "x": 80.32,
+            "y": 93.4
+          },
+          {
+            "x": 82.23,
+            "y": 91.23
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "munkz0lq-3nq6us",
+        "type": "route",
+        "points": [
+          {
+            "x": 82.49,
+            "y": 90.79
+          },
+          {
+            "x": 84.06,
+            "y": 88.01
+          },
+          {
+            "x": 85.19,
+            "y": 85.58
+          },
+          {
+            "x": 86.49,
+            "y": 81.93
+          },
+          {
+            "x": 87.27,
+            "y": 80.8
+          },
+          {
+            "x": 88.31,
+            "y": 79.5
+          },
+          {
+            "x": 90.23,
+            "y": 78.11
+          },
+          {
+            "x": 91.09,
+            "y": 77.06
+          },
+          {
+            "x": 91.88,
+            "y": 75.07
+          },
+          {
+            "x": 92.57,
+            "y": 71.33
+          },
+          {
+            "x": 93.01,
+            "y": 69.24
+          }
+        ]
       }
     ],
     "Normandy::domination-1|Blue": [
@@ -66146,6 +66358,171 @@
         "startY": 64.64,
         "endX": 52.09,
         "endY": 41.09
+      },
+      {
+        "id": "munkv6fc-qxm8m0",
+        "type": "route",
+        "points": [
+          {
+            "x": 35.66,
+            "y": 62.29
+          },
+          {
+            "x": 37.4,
+            "y": 61.86
+          },
+          {
+            "x": 41.57,
+            "y": 61.86
+          },
+          {
+            "x": 44.09,
+            "y": 62.21
+          },
+          {
+            "x": 46.18,
+            "y": 62.9
+          },
+          {
+            "x": 48,
+            "y": 64.03
+          },
+          {
+            "x": 50.09,
+            "y": 64.47
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "munkveos-42lkrt",
+        "type": "route",
+        "points": [
+          {
+            "x": 9.08,
+            "y": 50.22
+          },
+          {
+            "x": 11.77,
+            "y": 51.52
+          },
+          {
+            "x": 15.07,
+            "y": 53
+          },
+          {
+            "x": 19.07,
+            "y": 55.17
+          },
+          {
+            "x": 23.85,
+            "y": 56.99
+          },
+          {
+            "x": 27.58,
+            "y": 58.47
+          },
+          {
+            "x": 29.76,
+            "y": 60.73
+          },
+          {
+            "x": 32.1,
+            "y": 61.86
+          },
+          {
+            "x": 33.41,
+            "y": 62.81
+          },
+          {
+            "x": 34.88,
+            "y": 62.9
+          },
+          {
+            "x": 35.66,
+            "y": 62.55
+          }
+        ]
+      },
+      {
+        "id": "munkvlxm-u00qpb",
+        "type": "route",
+        "points": [
+          {
+            "x": 11.77,
+            "y": 47.26
+          },
+          {
+            "x": 15.42,
+            "y": 47.18
+          },
+          {
+            "x": 25.67,
+            "y": 49.17
+          },
+          {
+            "x": 30.63,
+            "y": 50.39
+          },
+          {
+            "x": 34.36,
+            "y": 51.52
+          },
+          {
+            "x": 36.27,
+            "y": 51.87
+          },
+          {
+            "x": 38.79,
+            "y": 52.74
+          },
+          {
+            "x": 40.7,
+            "y": 54.04
+          },
+          {
+            "x": 42.96,
+            "y": 54.74
+          },
+          {
+            "x": 44.61,
+            "y": 55.26
+          }
+        ]
+      },
+      {
+        "id": "munkvska-ayvhel",
+        "type": "route",
+        "points": [
+          {
+            "x": 27.32,
+            "y": 40.83
+          },
+          {
+            "x": 30.97,
+            "y": 39.97
+          },
+          {
+            "x": 33.23,
+            "y": 39.18
+          },
+          {
+            "x": 37.32,
+            "y": 39.53
+          },
+          {
+            "x": 41.57,
+            "y": 39.97
+          },
+          {
+            "x": 43.48,
+            "y": 39.97
+          },
+          {
+            "x": 45.05,
+            "y": 38.92
+          }
+        ]
       }
     ],
     "North Holland::domination-1|Red": [
@@ -68304,6 +68681,596 @@
         "endY": 71.07
       }
     ],
+    "Port Novorossiysk::conquest-2|Red": [
+      {
+        "id": "munnzele-2qsw7d",
+        "type": "aimHere",
+        "parentTankId": "munnypts-3rcuko",
+        "startX": 28.89,
+        "startY": 43.96,
+        "endX": 10.64,
+        "endY": 43.53
+      },
+      {
+        "id": "munnzhjm-x98dzp",
+        "type": "aimHere",
+        "parentTankId": "munnym7c-m1jhud",
+        "startX": 23.15,
+        "startY": 57.08,
+        "endX": 1.43,
+        "endY": 45.87
+      },
+      {
+        "id": "munnzq4q-p8a7d7",
+        "type": "aimHere",
+        "parentTankId": "munnyshv-10qr9h",
+        "startX": 30.63,
+        "startY": 27.37,
+        "endX": 16.03,
+        "endY": 35.53
+      },
+      {
+        "id": "munnztw0-36nf2h",
+        "type": "aimHere",
+        "parentTankId": "munnyi44-t1e7jk",
+        "startX": 17.68,
+        "startY": 59.86,
+        "endX": 19.07,
+        "endY": 36.32
+      },
+      {
+        "id": "muno01hi-wj8fz9",
+        "type": "aimHere",
+        "parentTankId": "munnyb73-hqekxv",
+        "startX": 47.48,
+        "startY": 52.48,
+        "endX": 41.14,
+        "endY": 39.01
+      },
+      {
+        "id": "muno0w9g-g2c1wg",
+        "type": "aimHere",
+        "parentTankId": "munnx7v6-us3xrd",
+        "startX": 62.77,
+        "startY": 29.89,
+        "endX": 38.36,
+        "endY": 20.5
+      },
+      {
+        "id": "muno11ns-eut46h",
+        "type": "aimHere",
+        "parentTankId": "munnxu3m-qd02k1",
+        "startX": 45.31,
+        "startY": 22.15,
+        "endX": 44.7,
+        "endY": 33.36
+      },
+      {
+        "id": "muno17ic-mrerrf",
+        "type": "aimHere",
+        "parentTankId": "munny1zu-k88q2y",
+        "startX": 50.78,
+        "startY": 29.11,
+        "endX": 42.53,
+        "endY": 41.88
+      },
+      {
+        "id": "muno1b5e-bs56ff",
+        "type": "aimHere",
+        "parentTankId": "munny6dk-imko2u",
+        "startX": 45.05,
+        "startY": 33.19,
+        "endX": 33.58,
+        "endY": 32.58
+      },
+      {
+        "id": "muno1eqq-ns7294",
+        "type": "aimHere",
+        "parentTankId": "munny448-yohxdl",
+        "startX": 43.83,
+        "startY": 28.32,
+        "endX": 38.53,
+        "endY": 42.4
+      },
+      {
+        "id": "muno1ke4-lc3ckk",
+        "type": "aimHere",
+        "parentTankId": "munnyfis-dmy6jx",
+        "startX": 50,
+        "startY": 56.21,
+        "endX": 33.67,
+        "endY": 47.7
+      },
+      {
+        "id": "muno1qcz-hd9cn9",
+        "type": "route",
+        "points": [
+          {
+            "x": 45.66,
+            "y": 22.07
+          },
+          {
+            "x": 49.04,
+            "y": 23.89
+          }
+        ]
+      },
+      {
+        "id": "muno1w20-nixpd0",
+        "type": "route",
+        "points": [
+          {
+            "x": 48.87,
+            "y": 23.81
+          },
+          {
+            "x": 63.03,
+            "y": 30.15
+          },
+          {
+            "x": 72.59,
+            "y": 33.62
+          },
+          {
+            "x": 75.54,
+            "y": 34.06
+          },
+          {
+            "x": 78.67,
+            "y": 33.19
+          },
+          {
+            "x": 81.45,
+            "y": 32.15
+          },
+          {
+            "x": 85.88,
+            "y": 32.32
+          }
+        ]
+      },
+      {
+        "id": "muno2252-cuxmp1",
+        "type": "route",
+        "points": [
+          {
+            "x": 51.13,
+            "y": 29.11
+          },
+          {
+            "x": 62.6,
+            "y": 34.06
+          },
+          {
+            "x": 67.9,
+            "y": 36.14
+          },
+          {
+            "x": 71.11,
+            "y": 33.54
+          }
+        ]
+      },
+      {
+        "id": "muno27i5-vh6fqg",
+        "type": "route",
+        "points": [
+          {
+            "x": 50.43,
+            "y": 56.13
+          },
+          {
+            "x": 59.12,
+            "y": 55.17
+          },
+          {
+            "x": 66.25,
+            "y": 55.43
+          },
+          {
+            "x": 68.51,
+            "y": 56.39
+          },
+          {
+            "x": 71.55,
+            "y": 53.95
+          },
+          {
+            "x": 78.06,
+            "y": 50.83
+          },
+          {
+            "x": 80.41,
+            "y": 47.7
+          },
+          {
+            "x": 87.36,
+            "y": 33.28
+          }
+        ]
+      },
+      {
+        "id": "muno2cne-g86r9e",
+        "type": "route",
+        "points": [
+          {
+            "x": 20.46,
+            "y": 60.03
+          },
+          {
+            "x": 23.68,
+            "y": 60.82
+          },
+          {
+            "x": 28.11,
+            "y": 61.69
+          },
+          {
+            "x": 35.93,
+            "y": 60.99
+          },
+          {
+            "x": 41.92,
+            "y": 58.82
+          },
+          {
+            "x": 47.22,
+            "y": 57.52
+          },
+          {
+            "x": 50.87,
+            "y": 55.69
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "muno2i4j-06o4o7",
+        "type": "route",
+        "points": [
+          {
+            "x": 43.92,
+            "y": 28.15
+          },
+          {
+            "x": 47.83,
+            "y": 23.54
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "muno2ko2-v7g7el",
+        "type": "route",
+        "points": [
+          {
+            "x": 44.96,
+            "y": 32.93
+          },
+          {
+            "x": 50.09,
+            "y": 28.84
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "muno2r3w-hfnqli",
+        "type": "route",
+        "points": [
+          {
+            "x": 30.28,
+            "y": 27.19
+          },
+          {
+            "x": 32.8,
+            "y": 23.81
+          },
+          {
+            "x": 36.1,
+            "y": 22.68
+          },
+          {
+            "x": 38.01,
+            "y": 22.24
+          },
+          {
+            "x": 40.18,
+            "y": 20.5
+          },
+          {
+            "x": 45.13,
+            "y": 21.81
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "muno2w30-g9bo4t",
+        "type": "aimHere",
+        "parentTankId": "munnxu3m-qd02k1",
+        "startX": 45.31,
+        "startY": 22.15,
+        "endX": 42.18,
+        "endY": 23.2
+      }
+    ],
+    "Port Novorossiysk::conquest-2|Blue": [
+      {
+        "id": "muno44no-c2cudx",
+        "type": "aimHere",
+        "parentTankId": "muno39ac-d9je91",
+        "startX": 44.01,
+        "startY": 52.13,
+        "endX": 51.56,
+        "endY": 37.88
+      },
+      {
+        "id": "muno475u-649euk",
+        "type": "aimHere",
+        "parentTankId": "muno3boe-5syuab",
+        "startX": 39.83,
+        "startY": 43.27,
+        "endX": 47.65,
+        "endY": 22.94
+      },
+      {
+        "id": "muno4e04-7gglib",
+        "type": "aimHere",
+        "parentTankId": "muno3fk8-vzk1b7",
+        "startX": 36.71,
+        "startY": 32.41,
+        "endX": 49.3,
+        "endY": 30.84
+      },
+      {
+        "id": "muno4iow-r2pql6",
+        "type": "aimHere",
+        "parentTankId": "muno3lqg-k715rj",
+        "startX": 47.05,
+        "startY": 26.24,
+        "endX": 47.22,
+        "endY": 21.63
+      },
+      {
+        "id": "muno4sou-34qzln",
+        "type": "aimHere",
+        "parentTankId": "muno3boe-5syuab",
+        "startX": 39.83,
+        "startY": 43.27,
+        "endX": 48.09,
+        "endY": 35.79
+      },
+      {
+        "id": "muno5396-8m99fm",
+        "type": "aimHere",
+        "parentTankId": "muno4yom-8k4tqf",
+        "startX": 49.57,
+        "startY": 29.45,
+        "endX": 52.17,
+        "endY": 24.5
+      },
+      {
+        "id": "muno56s4-vxioe9",
+        "type": "aimHere",
+        "parentTankId": "muno4yom-8k4tqf",
+        "startX": 49.57,
+        "startY": 29.45,
+        "endX": 65.2,
+        "endY": 35.27
+      },
+      {
+        "id": "muno5bcu-90rt6t",
+        "type": "aimHere",
+        "parentTankId": "muno3rpu-fghy5k",
+        "startX": 64.51,
+        "startY": 51.61,
+        "endX": 72.15,
+        "endY": 33.8
+      },
+      {
+        "id": "muno5in2-sswwxp",
+        "type": "route",
+        "points": [
+          {
+            "x": 15.77,
+            "y": 54.04
+          },
+          {
+            "x": 18.81,
+            "y": 56.13
+          },
+          {
+            "x": 22.11,
+            "y": 57.43
+          },
+          {
+            "x": 25.15,
+            "y": 60.9
+          }
+        ]
+      },
+      {
+        "id": "muno5omg-q1cg60",
+        "type": "route",
+        "points": [
+          {
+            "x": 25.76,
+            "y": 61.42
+          },
+          {
+            "x": 27.93,
+            "y": 62.55
+          },
+          {
+            "x": 31.15,
+            "y": 62.21
+          },
+          {
+            "x": 38.18,
+            "y": 60.38
+          },
+          {
+            "x": 42.44,
+            "y": 58.12
+          },
+          {
+            "x": 47.65,
+            "y": 55.34
+          },
+          {
+            "x": 51.74,
+            "y": 53.08
+          },
+          {
+            "x": 54,
+            "y": 53.08
+          },
+          {
+            "x": 57.47,
+            "y": 52.82
+          },
+          {
+            "x": 59.38,
+            "y": 51.78
+          },
+          {
+            "x": 61.38,
+            "y": 51.26
+          },
+          {
+            "x": 63.21,
+            "y": 51.69
+          },
+          {
+            "x": 64.86,
+            "y": 51.61
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "muno6069-6o8ip0",
+        "type": "route",
+        "points": [
+          {
+            "x": 10.38,
+            "y": 43.61
+          },
+          {
+            "x": 14.9,
+            "y": 39.53
+          },
+          {
+            "x": 16.9,
+            "y": 35.71
+          },
+          {
+            "x": 20.37,
+            "y": 31.36
+          },
+          {
+            "x": 22.81,
+            "y": 29.71
+          },
+          {
+            "x": 30.19,
+            "y": 26.76
+          },
+          {
+            "x": 34.97,
+            "y": 30.5
+          },
+          {
+            "x": 36.71,
+            "y": 32.32
+          }
+        ]
+      },
+      {
+        "id": "muno68qx-uow0jk",
+        "type": "route",
+        "points": [
+          {
+            "x": 32.19,
+            "y": 28.06
+          },
+          {
+            "x": 35.4,
+            "y": 27.89
+          },
+          {
+            "x": 38.44,
+            "y": 26.06
+          },
+          {
+            "x": 40.88,
+            "y": 27.28
+          },
+          {
+            "x": 42.96,
+            "y": 29.37
+          }
+        ]
+      },
+      {
+        "id": "muno6bpq-7pmnpj",
+        "type": "route",
+        "points": [
+          {
+            "x": 42.62,
+            "y": 29.19
+          },
+          {
+            "x": 47.13,
+            "y": 26.59
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "muno6gow-tm6krg",
+        "type": "route",
+        "points": [
+          {
+            "x": 42.44,
+            "y": 29.37
+          },
+          {
+            "x": 45.4,
+            "y": 31.1
+          },
+          {
+            "x": 47.83,
+            "y": 31.1
+          },
+          {
+            "x": 49.57,
+            "y": 29.45
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "muno6pdq-6mpob2",
+        "type": "aimHere",
+        "parentTankId": "muno3fk8-vzk1b7",
+        "startX": 36.71,
+        "startY": 32.41,
+        "endX": 47.91,
+        "endY": 33.97
+      },
+      {
+        "id": "muno79g4-rt33ww",
+        "type": "aimHere",
+        "parentTankId": "muno39ac-d9je91",
+        "startX": 44.01,
+        "startY": 52.13,
+        "endX": 59.38,
+        "endY": 39.01
+      }
+    ],
+    "Port Novorossiysk::battle-1|Red": [],
     "Pradesh::domination-1|Red": [
       {
         "id": "pradesh-red-aim-04",
@@ -82682,8 +83649,9 @@
     "Eastern Europe::domination-1|Red": [],
     "Eastern Europe::domination-1|Blue": [],
     "Maginot Line::domination-2|Blue": [],
+    "Port Novorossiysk::battle-1|Red": [],
     "Sands of Sinai::domination-1|Blue": []
   },
-  "updatedAt": "2026-09-29T08:28:20.573Z",
-  "exportedAt": "2026-09-29T08:28:38.087Z"
+  "updatedAt": "2026-09-30T06:02:39.492Z",
+  "exportedAt": "2026-09-30T06:02:46.561Z"
 }
