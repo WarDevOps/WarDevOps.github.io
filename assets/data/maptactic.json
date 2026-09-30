@@ -377,7 +377,44 @@
         "B와 C 거점 사이에 위치한 호수는 겨울 버전에서 얼어붙습니다. 이 경우 얼어붙은 호수를 직접 횡단하여 적의 예상 밖 방향으로 진입하는 위험한 우회 전술을 시도할 수 있습니다."
       ]
     },
-    "Normandy": {},
+    "Fire Arc": {
+      "en": [
+        "Fire Arc is characterized by a dense urban district concentrated on the elevated ground at the center of the map. Aside from the railway cutting across the middle, the battlefield offers very little effective cover, effectively forcing both teams into long-range engagements around the B capture point.",
+        "The A capture point sits in an exposed basin with virtually no protection, making it impractical for either side to capture. The C capture point is bordered by a small urban area and a single road, but its low elevation leaves it highly vulnerable to fire from the hills around B.",
+        "Consequently, B is the decisive sector of the battlefield: the team that swiftly breaks through and secures its urban district will gain the strategic initiative. As a high-risk alternative, players may attempt to cross the river in the northwest and execute a wide flanking maneuver against the enemy's flank or rear."
+      ],
+      "ko": [
+        "파이어 아크는 맵 중앙의 고지대에 시가지가 밀집된 전장입니다. 중앙을 가로지르는 철로를 제외하면 맵 전역에 실효성 있는 엄폐물이 거의 없어, 양 팀 모두 B 거점 인근에서 장거리 저격전을 벌이는 획일적인 전투 양상을 강요받습니다.",
+        "A 거점은 엄폐물이 전무한 분지에 자리해 양측 모두 사실상 점령을 시도하기 어렵습니다. C 거점에는 소규모 시가지와 도로가 형성되어 있지만, 지대 자체가 낮아 B 거점 일대의 언덕으로부터 손쉽게 견제당합니다.",
+        "따라서 승패를 좌우하는 핵심 지역은 B 거점이며, 이곳의 시가지를 신속하게 돌파해 장악하는 진영이 전투의 주도권을 확보하게 됩니다. 변칙적인 승부수로는 맵 북서쪽의 강을 도하해 적의 측후방으로 우회하는 전술을 고려할 수 있습니다."
+      ]
+    },
+    "Flanders": {
+      "en": [
+        "Flanders is defined by an extensive network of trenches and railway tracks dividing the center of the map, with rolling hills surrounding the area. As a result, hull-down engagements and gradual attrition from elevated positions form the basis of most strategies.",
+        "The trench sector is poorly suited for a direct breakthrough, as most of its cover either fails to conceal a vehicle's turret or consists of destructible walls. Tanks with limited gun depression may instead attempt a high-risk breakthrough through the tunnel between B and C or via the central urban district.",
+        "The C capture point lies in the middle of an exposed athletics stadium, making it difficult for either team to secure early. By contrast, the A and B capture points are enclosed by hills and urban terrain, respectively. Unless actively contested and defended, both can be relinquished to the enemy with alarming speed."
+      ],
+      "ko": [
+        "플랑드르는 맵 중앙을 양분하는 광활한 참호 지대와 철로를 주변의 구릉이 에워싸는 구조로, 능선을 활용한 헐다운 교전과 점진적인 전력 소모가 주된 양상으로 전개됩니다.",
+        "참호 지대의 엄폐물은 대부분 포탑까지 완전히 가려주지 못하거나 사격으로 관통 가능한 구조물이기 때문에, 정면 돌파로로 활용하기에는 부적합합니다. 주포 내림각이 부족한 전차라면 B–C 사이의 터널이나 중앙 시가지를 통해 승부수에 가까운 돌파를 감행할 수 있습니다.",
+        "C 거점은 개활된 육상 경기장 중앙에 자리하고 있어 어느 진영도 선점하기가 쉽지 않습니다. 반면 A와 B 거점은 각각 언덕과 시가지에 둘러싸여 있으므로, 적극적으로 방어하거나 재점령을 시도하지 않으면 순식간에 주도권을 내주게 됩니다."
+      ]
+    },
+    "Normandy": {
+      "en": [
+        "On Normandy, the main boulevard running north to south through the B capture point serves as the decisive axis of engagement. Whichever team gains control of this route is likely to seize the initiative.",
+        "Occupying the bell tower north of the church at B provides commanding control over much of the urban district, while securing the hill between B and C can effectively deny enemy forces access to the town.",
+        "The A capture point lies on the low-lying beach, where the tactical disadvantages of attempting a capture are excessively severe. The C capture point is situated within a basin, frequently resulting in a prolonged standoff as both sides adopt hull-down positions and exchange long-range fire.",
+        "The eastern team, however, can advance across the plains south of C and attempt a wide flanking maneuver—albeit one that carries considerable risk."
+      ],
+      "ko": [
+        "노르망디에서는 B 거점을 중심으로 남북을 잇는 대로가 핵심 교전 지역이며, 이 축선을 장악하는 진영이 전투의 주도권을 확보하게 됩니다.",
+        "B 거점의 교회 북쪽에 위치한 종탑을 선점하면 시가지 대부분을 통제할 수 있으며, B–C 사이의 언덕을 장악하면 적 병력의 시가지 진입로를 효과적으로 봉쇄할 수 있습니다.",
+        "A 거점은 해변의 저지대에 자리해 점령 과정에서 감수해야 할 전술적 불이익이 지나치게 큽니다. C 거점은 분지 지형에 위치하므로, 양측이 능선을 끼고 헐다운 상태로 저격전을 이어가는 교착 양상이 빈번하게 발생합니다.",
+        "다만 동쪽 진영은 C 거점 남쪽의 평야를 따라 진출하여, 상당한 위험을 수반하는 광범위한 우회를 시도할 수 있습니다."
+      ]
+    },
     "European Province": {
       "en": [
         "European Province is an expanded version of Eastern Europe. Because of the larger battlefield, engagement distances are longer and the frontline is less densely populated. As a result, the central urban area around point B is considerably easier to break through than on Eastern Europe.",
