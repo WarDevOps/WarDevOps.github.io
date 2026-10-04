@@ -667,9 +667,29 @@ export const commentImages = Object.freeze([
     "label": "scr_ (37).webp"
   },
   {
+    "id": "Alaska/scr_ (38).webp",
+    "path": "img/Alaska/scr_ (38).webp",
+    "label": "scr_ (38).webp"
+  },
+  {
+    "id": "Alaska/scr_ (39).webp",
+    "path": "img/Alaska/scr_ (39).webp",
+    "label": "scr_ (39).webp"
+  },
+  {
     "id": "Alaska/scr_ (4).webp",
     "path": "img/Alaska/scr_ (4).webp",
     "label": "scr_ (4).webp"
+  },
+  {
+    "id": "Alaska/scr_ (40).webp",
+    "path": "img/Alaska/scr_ (40).webp",
+    "label": "scr_ (40).webp"
+  },
+  {
+    "id": "Alaska/scr_ (41).webp",
+    "path": "img/Alaska/scr_ (41).webp",
+    "label": "scr_ (41).webp"
   },
   {
     "id": "Alaska/scr_ (5).webp",

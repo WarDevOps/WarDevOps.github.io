@@ -5,11 +5,11 @@
     "Abandoned Factory": "2026-09-29",
     "Abandoned Town": "2026-09-14",
     "Advance to the Rhine": "2026-09-16",
-    "Alaska": "2026-09-29",
+    "Alaska": "2026-10-04",
     "American Desert": "2026-09-23",
-    "Aral Sea": "2026-09-23",
+    "Aral Sea": "2026-10-04",
     "Arctic Pier": "2026-09-15",
-    "Arctic Polar Base": "2026-09-23",
+    "Arctic Polar Base": "2026-10-04",
     "Ardennes": "2026-09-27",
     "Ash River": "2026-09-02",
     "Attica": "2026-09-27",
@@ -19,7 +19,7 @@
     "Campania": "2026-09-03",
     "Cargo Port": "2026-09-23",
     "Carpathians": "2026-09-23",
-    "Darwin Hill": "2026-09-27",
+    "Darwin Hill": "2026-10-04",
     "Eastern Europe": "2026-09-30",
     "European Province": "2026-09-23",
     "Fields of Normandy": "2026-09-23",
@@ -47,13 +47,13 @@
     "Sands of Sinai": "2026-09-23",
     "Second Battle of El Alamein": "2026-09-27",
     "Seversk-13": "2026-09-14",
-    "Sinai": "2026-09-15",
-    "Spaceport": "2026-09-15",
+    "Sinai": "2026-10-03",
+    "Spaceport": "2026-09-30",
     "Stalingrad": "2026-08-25",
     "Sun City": "2026-09-23",
     "Surroundings of Volokolamsk": "2026-09-15",
     "Sweden": "2026-09-27",
-    "Test Site-2271": "2026-09-14",
+    "Test Site-2271": "2026-09-30",
     "Tunisia": "2026-09-17",
     "Vietnam": "2026-09-24",
     "Volokolamsk": "2026-08-31",
@@ -64,11 +64,11 @@
     "Abandoned Factory": "2026-09-28T16:58:40Z",
     "Abandoned Town": "2026-09-13T23:30:35Z",
     "Advance to the Rhine": "2026-09-16T02:26:57Z",
-    "Alaska": "2026-09-29T06:22:03Z",
+    "Alaska": "2026-10-04T09:17:01Z",
     "American Desert": "2026-09-22T21:47:17Z",
-    "Aral Sea": "2026-09-23T03:09:22Z",
+    "Aral Sea": "2026-10-04T08:54:40Z",
     "Arctic Pier": "2026-09-15T01:05:22Z",
-    "Arctic Polar Base": "2026-09-22T20:33:11Z",
+    "Arctic Polar Base": "2026-10-04T09:02:23Z",
     "Ardennes": "2026-09-27T08:14:28Z",
     "Ash River": "2026-09-01T16:50:15Z",
     "Attica": "2026-09-27T08:23:04Z",
@@ -78,7 +78,7 @@
     "Campania": "2026-09-03T01:49:21Z",
     "Cargo Port": "2026-09-23T04:02:44Z",
     "Carpathians": "2026-09-23T01:37:01Z",
-    "Darwin Hill": "2026-09-27T01:30:23Z",
+    "Darwin Hill": "2026-10-04T08:57:00Z",
     "Eastern Europe": "2026-09-30T06:02:26Z",
     "European Province": "2026-09-23T01:49:25Z",
     "Fields of Normandy": "2026-09-23T02:21:06Z",
@@ -104,12 +104,12 @@
     "Sands of Sinai": "2026-09-23T06:07:25Z",
     "Second Battle of El Alamein": "2026-09-27T04:24:11Z",
     "Seversk-13": "2026-09-13T19:59:09Z",
-    "Sinai": "2026-09-15T03:39:06Z",
-    "Spaceport": "2026-09-15T03:04:03Z",
+    "Sinai": "2026-10-03T04:08:19Z",
+    "Spaceport": "2026-09-30T07:51:18Z",
     "Sun City": "2026-09-23T05:11:46Z",
     "Surroundings of Volokolamsk": "2026-09-15T03:51:26Z",
     "Sweden": "2026-09-27T07:49:10Z",
-    "Test Site-2271": "2026-09-13T19:14:47Z",
+    "Test Site-2271": "2026-09-30T07:52:13Z",
     "Tunisia": "2026-09-16T19:37:22Z",
     "Vietnam": "2026-09-24T06:10:00Z",
     "White Rock Fortress": "2026-09-02T04:58:42Z"
@@ -2982,14 +2982,14 @@
       {
         "id": "msz8xuv6-gzzkbr",
         "type": "mainBattleTank",
-        "x": 53.54,
-        "y": 48.63
+        "x": 54.93,
+        "y": 49.68
       },
       {
         "id": "msz8xw8t-qdpsla",
         "type": "highRiskSpot",
-        "x": 53.54,
-        "y": 48.63,
+        "x": 54.93,
+        "y": 49.68,
         "parentTankId": "msz8xuv6-gzzkbr"
       },
       {
@@ -3917,7 +3917,9 @@
         "y": 60.56,
         "commentImages": [
           "Aral Sea/scr_ (17).webp"
-        ]
+        ],
+        "commentEn": "Window shot",
+        "commentKo": "창문으로 사격 가능"
       },
       {
         "id": "aral-sea-red-role-05",
@@ -4134,7 +4136,9 @@
         "y": 43.61,
         "commentImages": [
           "Aral Sea/scr_ (16).webp"
-        ]
+        ],
+        "commentEn": "Window shot",
+        "commentKo": "창문으로 사격 가능"
       },
       {
         "id": "aral-sea-blue-role-08",
@@ -4693,7 +4697,7 @@
       },
       {
         "id": "mud4hqmf-0jf9fw",
-        "type": "mainBattleTank",
+        "type": "lightTank",
         "x": 67.2,
         "y": 34.14,
         "commentImages": [
@@ -4722,13 +4726,13 @@
       },
       {
         "id": "mud4jiwz-g53kfx",
-        "type": "mainBattleTank",
+        "type": "tankDestroyer",
         "x": 14.81,
         "y": 64.12
       },
       {
         "id": "mud4jkqi-31bkcd",
-        "type": "battleLine",
+        "type": "sniper",
         "x": 14.81,
         "y": 64.12,
         "parentTankId": "mud4jiwz-g53kfx"
@@ -4758,6 +4762,45 @@
         "x": 73.89,
         "y": 62.21,
         "parentTankId": "mud4jv8v-c961x0"
+      },
+      {
+        "id": "mutlaemx-qybhc0",
+        "type": "mainBattleTank",
+        "x": 7.9,
+        "y": 74.72
+      },
+      {
+        "id": "mutlafu0-p26eyu",
+        "type": "battleLine",
+        "x": 7.9,
+        "y": 74.72,
+        "parentTankId": "mutlaemx-qybhc0"
+      },
+      {
+        "id": "mutlandc-vbvxis",
+        "type": "lightTank",
+        "x": 45.83,
+        "y": 47.41
+      },
+      {
+        "id": "mutlaor4-b4fmg7",
+        "type": "highRiskSpot",
+        "x": 45.83,
+        "y": 47.41,
+        "parentTankId": "mutlandc-vbvxis"
+      },
+      {
+        "id": "mutld8gp-ym3u9r",
+        "type": "tankDestroyer",
+        "x": 20.04,
+        "y": 31.48
+      },
+      {
+        "id": "mutldasi-zm47mh",
+        "type": "sniper",
+        "x": 20.04,
+        "y": 31.48,
+        "parentTankId": "mutld8gp-ym3u9r"
       }
     ],
     "Arctic Polar Base::domination-1|Red": [
@@ -4776,6 +4819,71 @@
         "x": 64.51,
         "y": 34.06,
         "parentTankId": "mud4ilpb-bece14"
+      },
+      {
+        "id": "mutlbhy2-ngqf08",
+        "type": "mainBattleTankRed",
+        "x": 27.88,
+        "y": 69.79
+      },
+      {
+        "id": "mutlbk2a-7u7ppf",
+        "type": "battleLine",
+        "x": 27.88,
+        "y": 69.79,
+        "parentTankId": "mutlbhy2-ngqf08"
+      },
+      {
+        "id": "mutlbr3i-w1pvs0",
+        "type": "mainBattleTankRed",
+        "x": 27.12,
+        "y": 93.3
+      },
+      {
+        "id": "mutlbz1a-htlu37",
+        "type": "tankDestroyerRed",
+        "x": 87.67,
+        "y": 54.74
+      },
+      {
+        "id": "mutlc3mk-vquik6",
+        "type": "tankDestroyerRed",
+        "x": 54.68,
+        "y": 64.73
+      },
+      {
+        "id": "mutlck96-gpfc5b",
+        "type": "sniper",
+        "x": 87.67,
+        "y": 54.74,
+        "parentTankId": "mutlbz1a-htlu37"
+      },
+      {
+        "id": "mutlclv2-i9zjxb",
+        "type": "sniper",
+        "x": 54.68,
+        "y": 64.73,
+        "parentTankId": "mutlc3mk-vquik6"
+      },
+      {
+        "id": "mutlcn8y-v7v9ti",
+        "type": "battleLine",
+        "x": 27.12,
+        "y": 93.3,
+        "parentTankId": "mutlbr3i-w1pvs0"
+      },
+      {
+        "id": "mutle5o4-05jnt0",
+        "type": "lightTankRed",
+        "x": 27.75,
+        "y": 58.28
+      },
+      {
+        "id": "mutle70w-cqcp7x",
+        "type": "highRiskSpot",
+        "x": 27.75,
+        "y": 58.28,
+        "parentTankId": "mutle5o4-05jnt0"
       }
     ],
     "Ardennes::domination-1|Red": [
@@ -11189,6 +11297,155 @@
         "x": 49.62,
         "y": 29.58,
         "parentTankId": "vector-e2b9de95-c4ce-483b-ac86-dc41eb925d88"
+      },
+      {
+        "id": "vector-b1f81656-688b-4c1a-ba02-30473f13ee75",
+        "type": "mainBattleTank",
+        "x": 61.21,
+        "y": 81.84,
+        "commentImages": [
+          "Darwin Hill/scr_ (5).webp"
+        ]
+      },
+      {
+        "id": "vector-353dfcb2-a665-42a9-8ab8-7c2b9520d9e9",
+        "type": "spawnKill",
+        "x": 61.21,
+        "y": 81.84,
+        "parentTankId": "vector-b1f81656-688b-4c1a-ba02-30473f13ee75"
+      },
+      {
+        "id": "vector-0d055122-78d8-47e5-aec3-c45c6fe1f1b0",
+        "type": "mainBattleTank",
+        "x": 81.02,
+        "y": 80.36,
+        "commentImages": [
+          "Darwin Hill/scr_ (6).webp"
+        ]
+      },
+      {
+        "id": "vector-2e92c718-2ad0-41d2-a576-e958c0deb0f4",
+        "type": "spawnKill",
+        "x": 81.02,
+        "y": 80.36,
+        "parentTankId": "vector-0d055122-78d8-47e5-aec3-c45c6fe1f1b0"
+      },
+      {
+        "id": "vector-3c70d716-129e-4bc2-809e-03138059b2ea",
+        "type": "antiAir",
+        "x": 68.42,
+        "y": 8.51
+      },
+      {
+        "id": "vector-9897c969-b189-40ee-81f2-c4b4bf52d64f",
+        "type": "antiAir",
+        "x": 65.81,
+        "y": 8.34
+      },
+      {
+        "id": "vector-9b331a59-0ede-41be-a8a2-23aee9f65d8a",
+        "type": "mainBattleTank",
+        "x": 76.3,
+        "y": 47.91,
+        "commentImages": [
+          "Darwin Hill/scr_ (46).webp"
+        ]
+      },
+      {
+        "id": "vector-63c2cde4-4de7-4a3a-a4f4-6cee1b607ec9",
+        "type": "battleLine",
+        "x": 76.3,
+        "y": 47.91,
+        "parentTankId": "vector-9b331a59-0ede-41be-a8a2-23aee9f65d8a"
+      },
+      {
+        "id": "vector-a64f3d54-f2a8-4541-86e2-adc412b9576c",
+        "type": "mainBattleTank",
+        "x": 61.38,
+        "y": 49.18,
+        "commentImages": [
+          "Darwin Hill/scr_ (41).webp",
+          "Darwin Hill/scr_ (42).webp"
+        ]
+      },
+      {
+        "id": "vector-5bc8c67b-fc2c-43e4-83a0-dad5c831b6c9",
+        "type": "battleLine",
+        "x": 61.38,
+        "y": 49.18,
+        "parentTankId": "vector-a64f3d54-f2a8-4541-86e2-adc412b9576c"
+      },
+      {
+        "id": "vector-1b9227a3-96da-48ca-8349-b44de7bbcd04",
+        "type": "tankDestroyer",
+        "x": 56.45,
+        "y": 22,
+        "commentImages": [
+          "Darwin Hill/scr_ (39).webp",
+          "Darwin Hill/scr_ (40).webp"
+        ]
+      },
+      {
+        "id": "vector-9d189dde-66b6-4297-a1d6-cb66ba6528a5",
+        "type": "sniper",
+        "x": 56.45,
+        "y": 22,
+        "parentTankId": "vector-1b9227a3-96da-48ca-8349-b44de7bbcd04"
+      },
+      {
+        "id": "vector-464f11a1-81e6-44af-9fb7-ba953bdcc5cb",
+        "type": "lightTank",
+        "x": 95.7,
+        "y": 45.7,
+        "commentImages": [
+          "Darwin Hill/scr_ (44).webp"
+        ]
+      },
+      {
+        "id": "vector-a6d36d13-8147-4ac2-89b2-4a9b488f8421",
+        "type": "highRiskSpot",
+        "x": 95.7,
+        "y": 45.7,
+        "parentTankId": "vector-464f11a1-81e6-44af-9fb7-ba953bdcc5cb"
+      },
+      {
+        "id": "vector-344a498d-5122-4b7a-82eb-44446126a2d8",
+        "type": "smokeshell",
+        "x": 88.18,
+        "y": 39.19
+      },
+      {
+        "id": "vector-368ce361-3653-446b-967c-08a7ac5ec288",
+        "type": "tankDestroyer",
+        "x": 84.77,
+        "y": 24.65,
+        "commentImages": [
+          "Darwin Hill/scr_ (38).webp",
+          "Darwin Hill/scr_ (43).webp"
+        ]
+      },
+      {
+        "id": "vector-69ea319b-c721-4ab9-99f8-da8acc13d39a",
+        "type": "sniper",
+        "x": 84.77,
+        "y": 24.65,
+        "parentTankId": "vector-368ce361-3653-446b-967c-08a7ac5ec288"
+      },
+      {
+        "id": "vector-63eeeede-8759-4ef8-83e7-bfcc17d223be",
+        "type": "tankDestroyer",
+        "x": 72.88,
+        "y": 15.3,
+        "commentImages": [
+          "Darwin Hill/scr_ (37).webp"
+        ]
+      },
+      {
+        "id": "vector-5c2bd41d-fa35-42f5-b55f-f9e5318e0f85",
+        "type": "sniper",
+        "x": 72.88,
+        "y": 15.3,
+        "parentTankId": "vector-63eeeede-8759-4ef8-83e7-bfcc17d223be"
       }
     ],
     "Darwin Hill::battle-1|Red": [
@@ -11384,56 +11641,6 @@
         "x": 10.81,
         "y": 34.77,
         "parentTankId": "vector-4617479d-837a-4dbb-a24f-695863599ba4"
-      },
-      {
-        "id": "vector-d5fdcdf0-b583-4fa1-acf9-fb5ca80c0d21",
-        "type": "mainBattleTankRed",
-        "x": 57.04,
-        "y": 23.28,
-        "commentImages": [
-          "Darwin Hill/scr_ (7).webp",
-          "Darwin Hill/scr_ (8).webp"
-        ]
-      },
-      {
-        "id": "vector-c3824372-6c8a-4c9c-a033-8f1aff22ccf1",
-        "type": "spawnKill",
-        "x": 57.04,
-        "y": 23.28,
-        "parentTankId": "vector-d5fdcdf0-b583-4fa1-acf9-fb5ca80c0d21"
-      },
-      {
-        "id": "vector-03eacbb6-9e5b-450f-98a6-03b046ccb95b",
-        "type": "tankDestroyerRed",
-        "x": 52.91,
-        "y": 68.77,
-        "commentImages": [
-          "Darwin Hill/scr_ (26).webp"
-        ]
-      },
-      {
-        "id": "vector-b9b5e1b0-7ec4-476b-a37a-0ad362c31c8a",
-        "type": "sniper",
-        "x": 52.91,
-        "y": 68.77,
-        "parentTankId": "vector-03eacbb6-9e5b-450f-98a6-03b046ccb95b"
-      },
-      {
-        "id": "vector-979f7c37-430e-4c9f-9e13-2fbdfe501646",
-        "type": "mainBattleTankRed",
-        "x": 47.35,
-        "y": 58.28,
-        "commentImages": [
-          "Darwin Hill/scr_ (21).webp",
-          "Darwin Hill/scr_ (25).webp"
-        ]
-      },
-      {
-        "id": "vector-8c6775db-cded-4e30-85d4-9dfef6a8996b",
-        "type": "battleLine",
-        "x": 47.35,
-        "y": 58.28,
-        "parentTankId": "vector-979f7c37-430e-4c9f-9e13-2fbdfe501646"
       },
       {
         "id": "vector-32bc8542-2863-4591-bb7c-a057ad17be0d",
@@ -22401,14 +22608,14 @@
       {
         "id": "sinai-blue-unit-03",
         "type": "mainBattleTank",
-        "x": 32.22,
-        "y": 37.43
+        "x": 32.43,
+        "y": 38.18
       },
       {
         "id": "sinai-blue-role-01",
         "type": "highRiskSpot",
-        "x": 32.22,
-        "y": 37.43,
+        "x": 32.43,
+        "y": 38.18,
         "parentTankId": "sinai-blue-unit-03"
       },
       {
@@ -22492,14 +22699,14 @@
       {
         "id": "sinai-blue-unit-12",
         "type": "tankDestroyer",
-        "x": 31.18,
-        "y": 72.43
+        "x": 28.97,
+        "y": 74.28
       },
       {
         "id": "sinai-blue-role-10",
         "type": "sniper",
-        "x": 31.18,
-        "y": 72.43,
+        "x": 28.97,
+        "y": 74.28,
         "parentTankId": "sinai-blue-unit-12"
       },
       {
@@ -22530,15 +22737,15 @@
       },
       {
         "id": "mu0858bn-zkc6tk",
-        "type": "mainBattleTank",
-        "x": 44.24,
-        "y": 53.28
+        "type": "tankDestroyer",
+        "x": 43.55,
+        "y": 54.74
       },
       {
         "id": "mu085h9e-jose8n",
-        "type": "battleLine",
-        "x": 44.24,
-        "y": 53.28,
+        "type": "sniper",
+        "x": 43.55,
+        "y": 54.74,
         "parentTankId": "mu0858bn-zkc6tk"
       }
     ],
@@ -22786,14 +22993,14 @@
       {
         "id": "mu08a1yf-nwavo1",
         "type": "mainBattleTank",
-        "x": 10.72,
-        "y": 21.09
+        "x": 9.6,
+        "y": 17.29
       },
       {
         "id": "mu08a4ew-5feo4l",
         "type": "battleLine",
-        "x": 10.72,
-        "y": 21.09,
+        "x": 9.6,
+        "y": 17.29,
         "parentTankId": "mu08a1yf-nwavo1"
       },
       {
@@ -22853,19 +23060,6 @@
         "type": "mainBattleTank",
         "x": 40.78,
         "y": 58.86
-      },
-      {
-        "id": "mu08g5st-bea0k0",
-        "type": "mainBattleTank",
-        "x": 37.23,
-        "y": 36.87
-      },
-      {
-        "id": "mu08g6ua-1hncqk",
-        "type": "highRiskSpot",
-        "x": 37.23,
-        "y": 36.87,
-        "parentTankId": "mu08g5st-bea0k0"
       },
       {
         "id": "mu08grxb-cudcuy",
@@ -31380,19 +31574,10 @@
         "id": "msz8y3jl-x4lhny",
         "type": "aimHere",
         "parentTankId": "msz8xuv6-gzzkbr",
-        "startX": 53.54,
-        "startY": 48.63,
+        "startX": 54.93,
+        "startY": 49.68,
         "endX": 34.93,
         "endY": 50.35
-      },
-      {
-        "id": "msz8ydul-gmkn4a",
-        "type": "aimHere",
-        "parentTankId": "msz8xuv6-gzzkbr",
-        "startX": 53.54,
-        "startY": 48.63,
-        "endX": 51.94,
-        "endY": 65.88
       },
       {
         "id": "msz8yrgh-3gs6nc",
@@ -31522,21 +31707,6 @@
             "y": 33.67
           }
         ]
-      },
-      {
-        "id": "msz9fl54-751b68",
-        "type": "route",
-        "points": [
-          {
-            "x": 53.43,
-            "y": 48.75
-          },
-          {
-            "x": 53.2,
-            "y": 40.87
-          }
-        ],
-        "dangerRoute": true
       },
       {
         "id": "msz9fqte-9bbqsv",
@@ -31821,33 +31991,6 @@
         "endY": 94.06
       },
       {
-        "id": "mum2yoh8-g01plm",
-        "type": "route",
-        "points": [
-          {
-            "x": 53.21,
-            "y": 49.78
-          },
-          {
-            "x": 51.48,
-            "y": 55.69
-          },
-          {
-            "x": 48.96,
-            "y": 58.12
-          },
-          {
-            "x": 48.18,
-            "y": 61.08
-          },
-          {
-            "x": 48.44,
-            "y": 62.03
-          }
-        ],
-        "dangerRoute": true
-      },
-      {
         "id": "mum2yvqw-u23l2w",
         "type": "route",
         "points": [
@@ -31870,6 +32013,44 @@
         "startY": 60.99,
         "endX": 43.57,
         "endY": 62.21
+      },
+      {
+        "id": "mutlvzey-u2yj5o",
+        "type": "route",
+        "points": [
+          {
+            "x": 49.12,
+            "y": 41.09
+          },
+          {
+            "x": 48.99,
+            "y": 57.4
+          },
+          {
+            "x": 48.48,
+            "y": 59.17
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "mutlw81r-m3tqm0",
+        "type": "route",
+        "points": [
+          {
+            "x": 53.41,
+            "y": 41.09
+          },
+          {
+            "x": 54.05,
+            "y": 49.3
+          },
+          {
+            "x": 54.8,
+            "y": 50.06
+          }
+        ],
+        "dangerRoute": true
       }
     ],
     "American Desert::domination-1|Red": [
@@ -49186,6 +49367,278 @@
             "y": 9.86
           }
         ]
+      },
+      {
+        "id": "vector-c41022c5-430d-4f53-9972-8821e9613800",
+        "type": "aimHere",
+        "parentTankId": "vector-b1f81656-688b-4c1a-ba02-30473f13ee75",
+        "startX": 61.21,
+        "startY": 81.84,
+        "endX": 68.59,
+        "endY": 93.83
+      },
+      {
+        "id": "vector-a90b1001-e17c-4391-ba08-2903620d079f",
+        "type": "aimHere",
+        "parentTankId": "vector-0d055122-78d8-47e5-aec3-c45c6fe1f1b0",
+        "startX": 81.02,
+        "startY": 80.36,
+        "endX": 68.68,
+        "endY": 93.48
+      },
+      {
+        "id": "vector-1a8ea4e4-65b4-4917-b2e8-faf0d4aab7cc",
+        "type": "route",
+        "points": [
+          {
+            "x": 61.47,
+            "y": 81.75
+          },
+          {
+            "x": 61.9,
+            "y": 78.45
+          },
+          {
+            "x": 62.34,
+            "y": 76.11
+          },
+          {
+            "x": 62.95,
+            "y": 74.2
+          },
+          {
+            "x": 63.21,
+            "y": 72.2
+          },
+          {
+            "x": 62.34,
+            "y": 68.64
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "vector-94f724f4-dc8b-4fab-b56c-7c7f9c6b93ee",
+        "type": "route",
+        "points": [
+          {
+            "x": 81.1,
+            "y": 80.54
+          },
+          {
+            "x": 84.67,
+            "y": 76.19
+          },
+          {
+            "x": 85.79,
+            "y": 73.24
+          },
+          {
+            "x": 86.75,
+            "y": 70.03
+          },
+          {
+            "x": 88.66,
+            "y": 68.38
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "vector-23d7ef0c-d1e3-4ef3-8d11-7ad95c0120c3",
+        "type": "aimHere",
+        "parentTankId": "vector-9b331a59-0ede-41be-a8a2-23aee9f65d8a",
+        "startX": 76.3,
+        "startY": 47.91,
+        "endX": 80.06,
+        "endY": 64.38
+      },
+      {
+        "id": "vector-bdc415ff-104f-4df2-b890-d35ef83b78d2",
+        "type": "aimHere",
+        "parentTankId": "vector-1b9227a3-96da-48ca-8349-b44de7bbcd04",
+        "startX": 56.45,
+        "startY": 22,
+        "endX": 61.99,
+        "endY": 60.64
+      },
+      {
+        "id": "vector-63c3c7a1-2795-4641-8e8d-2ecd2959ec08",
+        "type": "route",
+        "points": [
+          {
+            "x": 88.14,
+            "y": 36.23
+          },
+          {
+            "x": 91.79,
+            "y": 37.19
+          },
+          {
+            "x": 95.18,
+            "y": 40.75
+          },
+          {
+            "x": 97.09,
+            "y": 41.88
+          },
+          {
+            "x": 97.78,
+            "y": 43.09
+          },
+          {
+            "x": 97.7,
+            "y": 44.66
+          },
+          {
+            "x": 97.09,
+            "y": 45.53
+          },
+          {
+            "x": 95.7,
+            "y": 45.87
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "vector-a60f60fc-cd3a-4547-88fb-ff0b0d2a787e",
+        "type": "aimHere",
+        "parentTankId": "vector-1b9227a3-96da-48ca-8349-b44de7bbcd04",
+        "startX": 56.45,
+        "startY": 22,
+        "endX": 79.71,
+        "endY": 64.73
+      },
+      {
+        "id": "vector-1f8ebd2c-dc8f-4311-9a27-82cf9ebfbc63",
+        "type": "aimHere",
+        "parentTankId": "vector-368ce361-3653-446b-967c-08a7ac5ec288",
+        "startX": 84.77,
+        "startY": 24.65,
+        "endX": 79.58,
+        "endY": 65.36
+      },
+      {
+        "id": "vector-2ae8c9f5-24e9-420e-bf30-08ddde9a6abb",
+        "type": "aimHere",
+        "parentTankId": "vector-63eeeede-8759-4ef8-83e7-bfcc17d223be",
+        "startX": 72.88,
+        "startY": 15.3,
+        "endX": 79.58,
+        "endY": 65.11
+      },
+      {
+        "id": "vector-cf4236e3-5279-4bf3-8a9d-1203dfd7d0bb",
+        "type": "aimHere",
+        "parentTankId": "vector-a64f3d54-f2a8-4541-86e2-adc412b9576c",
+        "startX": 61.38,
+        "startY": 49.18,
+        "endX": 61.25,
+        "endY": 64.48
+      },
+      {
+        "id": "vector-fb7c31e7-9a20-47b7-8ea4-21fd4060e121",
+        "type": "route",
+        "points": [
+          {
+            "x": 61.76,
+            "y": 48.42
+          },
+          {
+            "x": 61.76,
+            "y": 46.02
+          },
+          {
+            "x": 62.64,
+            "y": 43.62
+          },
+          {
+            "x": 63.27,
+            "y": 41.59
+          },
+          {
+            "x": 62.77,
+            "y": 39.44
+          },
+          {
+            "x": 62.01,
+            "y": 37.29
+          },
+          {
+            "x": 61.76,
+            "y": 35.65
+          },
+          {
+            "x": 60.87,
+            "y": 33.12
+          },
+          {
+            "x": 61.13,
+            "y": 25.66
+          },
+          {
+            "x": 61.25,
+            "y": 22.76
+          }
+        ]
+      },
+      {
+        "id": "vector-51880fe7-98af-4159-ac43-9c91349cb734",
+        "type": "route",
+        "points": [
+          {
+            "x": 65.68,
+            "y": 6.95
+          },
+          {
+            "x": 69.85,
+            "y": 6.95
+          },
+          {
+            "x": 71.62,
+            "y": 9.36
+          },
+          {
+            "x": 72.76,
+            "y": 15.17
+          }
+        ]
+      },
+      {
+        "id": "vector-65ead122-d071-40fe-86b8-604599553319",
+        "type": "route",
+        "points": [
+          {
+            "x": 72.5,
+            "y": 11.76
+          },
+          {
+            "x": 77.31,
+            "y": 13.27
+          },
+          {
+            "x": 80.72,
+            "y": 14.79
+          },
+          {
+            "x": 82.87,
+            "y": 18.96
+          },
+          {
+            "x": 85.02,
+            "y": 24.4
+          }
+        ]
+      },
+      {
+        "id": "vector-c2bd8cef-e228-423b-93a8-f4c7fb8252b5",
+        "type": "aimHere",
+        "parentTankId": "vector-464f11a1-81e6-44af-9fb7-ba953bdcc5cb",
+        "startX": 95.7,
+        "startY": 45.7,
+        "endX": 84.64,
+        "endY": 51.33
       }
     ],
     "Darwin Hill::battle-1|Red": [
@@ -49698,24 +50151,6 @@
         ]
       },
       {
-        "id": "vector-c462cf75-9069-433c-9de9-35be0769ff49",
-        "type": "aimHere",
-        "parentTankId": "vector-d5fdcdf0-b583-4fa1-acf9-fb5ca80c0d21",
-        "startX": 57.04,
-        "startY": 23.28,
-        "endX": 63.03,
-        "endY": 8.08
-      },
-      {
-        "id": "vector-0b29fdc7-4a7b-4470-9b0c-8338dc781fc8",
-        "type": "aimHere",
-        "parentTankId": "vector-d5fdcdf0-b583-4fa1-acf9-fb5ca80c0d21",
-        "startX": 57.04,
-        "startY": 23.28,
-        "endX": 74.5,
-        "endY": 10.08
-      },
-      {
         "id": "vector-5ffa1f3b-535d-4525-907a-a6fdcaa05144",
         "type": "route",
         "points": [
@@ -49749,33 +50184,6 @@
           }
         ],
         "dangerRoute": true
-      },
-      {
-        "id": "vector-f74f6cf0-24ea-4bf1-a3f6-92789ec61833",
-        "type": "aimHere",
-        "parentTankId": "vector-03eacbb6-9e5b-450f-98a6-03b046ccb95b",
-        "startX": 52.91,
-        "startY": 68.77,
-        "endX": 47.47,
-        "endY": 31.61
-      },
-      {
-        "id": "vector-dbb91f57-2e90-46f0-b278-08022d38d7fc",
-        "type": "aimHere",
-        "parentTankId": "vector-979f7c37-430e-4c9f-9e13-2fbdfe501646",
-        "startX": 47.35,
-        "startY": 58.28,
-        "endX": 48.99,
-        "endY": 45.01
-      },
-      {
-        "id": "vector-f9b8cd9c-3c38-4829-853c-2d4bbed16923",
-        "type": "aimHere",
-        "parentTankId": "vector-979f7c37-430e-4c9f-9e13-2fbdfe501646",
-        "startX": 47.35,
-        "startY": 58.28,
-        "endX": 34.2,
-        "endY": 49.05
       },
       {
         "id": "vector-723c06fc-4b7a-4127-96fb-55b6800b45a2",
@@ -74700,8 +75108,8 @@
         "id": "mu07z77o-qvw9ht",
         "type": "aimHere",
         "parentTankId": "sinai-blue-unit-03",
-        "startX": 32.22,
-        "startY": 37.43,
+        "startX": 32.43,
+        "startY": 38.18,
         "endX": 73.05,
         "endY": 34.48
       },
@@ -74718,8 +75126,8 @@
         "id": "mu07zvk4-t3hzjg",
         "type": "aimHere",
         "parentTankId": "sinai-blue-unit-12",
-        "startX": 31.18,
-        "startY": 72.43,
+        "startX": 28.97,
+        "startY": 74.28,
         "endX": 14.54,
         "endY": 22.51
       },
@@ -74736,8 +75144,8 @@
         "id": "mu085au0-5tfic5",
         "type": "aimHere",
         "parentTankId": "mu0858bn-zkc6tk",
-        "startX": 44.24,
-        "startY": 53.28,
+        "startX": 43.55,
+        "startY": 54.74,
         "endX": 73.67,
         "endY": 35.45
       },
@@ -74745,8 +75153,8 @@
         "id": "mu085djl-qsrs8a",
         "type": "aimHere",
         "parentTankId": "mu0858bn-zkc6tk",
-        "startX": 44.24,
-        "startY": 53.28,
+        "startX": 43.55,
+        "startY": 54.74,
         "endX": 32.09,
         "endY": 46.18
       },
@@ -74754,8 +75162,8 @@
         "id": "mu0861b3-tn7p32",
         "type": "aimHere",
         "parentTankId": "mu0858bn-zkc6tk",
-        "startX": 44.24,
-        "startY": 53.28,
+        "startX": 43.55,
+        "startY": 54.74,
         "endX": 76.69,
         "endY": 44.68
       },
@@ -74767,6 +75175,15 @@
         "startY": 55.5,
         "endX": 21.98,
         "endY": 24.73
+      },
+      {
+        "id": "murv5epq-djkei9",
+        "type": "aimHere",
+        "parentTankId": "sinai-blue-unit-03",
+        "startX": 32.43,
+        "startY": 38.18,
+        "endX": 59.36,
+        "endY": 21.24
       }
     ],
     "Sinai::domination-1|Red": [
@@ -75342,8 +75759,8 @@
         "id": "mu08dcz8-p7qbn5",
         "type": "aimHere",
         "parentTankId": "mu08a1yf-nwavo1",
-        "startX": 10.72,
-        "startY": 21.09,
+        "startX": 9.6,
+        "startY": 17.29,
         "endX": 23.67,
         "endY": 8.59
       },
@@ -75408,15 +75825,6 @@
         "endY": 45.74
       },
       {
-        "id": "mu08ga16-xdwcnb",
-        "type": "aimHere",
-        "parentTankId": "mu08g5st-bea0k0",
-        "startX": 37.23,
-        "startY": 36.87,
-        "endX": 47.78,
-        "endY": 30.67
-      },
-      {
         "id": "mu08h8n0-xcx1ks",
         "type": "aimHere",
         "parentTankId": "mu08grxb-cudcuy",
@@ -75442,6 +75850,15 @@
         "startY": 39.27,
         "endX": 75.18,
         "endY": 41.48
+      },
+      {
+        "id": "munt3laa-uadf8y",
+        "type": "aimHere",
+        "parentTankId": "mu08drlt-lmgt86",
+        "startX": 50.71,
+        "startY": 50.17,
+        "endX": 60.69,
+        "endY": 44.22
       }
     ],
     "Spaceport::domination-1|Red": [
@@ -78440,24 +78857,6 @@
         "endY": 32.77
       },
       {
-        "id": "test-site-2271-blue-aim-10",
-        "type": "aimHere",
-        "parentTankId": "test-site-2271-blue-unit-09",
-        "startX": 67.5,
-        "startY": 44.51,
-        "endX": 61.63,
-        "endY": 51
-      },
-      {
-        "id": "test-site-2271-blue-aim-11",
-        "type": "aimHere",
-        "parentTankId": "test-site-2271-blue-unit-09",
-        "startX": 67.5,
-        "startY": 44.51,
-        "endX": 73.47,
-        "endY": 38.11
-      },
-      {
         "id": "test-site-2271-blue-aim-12",
         "type": "aimHere",
         "parentTankId": "test-site-2271-blue-unit-10",
@@ -78501,24 +78900,6 @@
         "startY": 55.69,
         "endX": 23.99,
         "endY": 51.18
-      },
-      {
-        "id": "test-site-2271-blue-aim-17",
-        "type": "aimHere",
-        "parentTankId": "test-site-2271-blue-unit-14",
-        "startX": 55.69,
-        "startY": 55.69,
-        "endX": 73.08,
-        "endY": 38.12
-      },
-      {
-        "id": "test-site-2271-blue-aim-18",
-        "type": "aimHere",
-        "parentTankId": "test-site-2271-blue-unit-14",
-        "startX": 55.69,
-        "startY": 55.69,
-        "endX": 71.4,
-        "endY": 41.79
       },
       {
         "id": "test-site-2271-blue-aim-19",
@@ -78953,6 +79334,15 @@
           }
         ],
         "dangerRoute": true
+      },
+      {
+        "id": "munt4rsl-lyje8j",
+        "type": "aimHere",
+        "parentTankId": "test-site-2271-blue-unit-14",
+        "startX": 55.69,
+        "startY": 55.69,
+        "endX": 69.29,
+        "endY": 41.96
       }
     ],
     "Tunisia::domination-1|Red": [
@@ -83652,6 +84042,6 @@
     "Port Novorossiysk::battle-1|Red": [],
     "Sands of Sinai::domination-1|Blue": []
   },
-  "updatedAt": "2026-09-30T06:02:39.492Z",
-  "exportedAt": "2026-09-30T06:02:46.561Z"
+  "updatedAt": "2026-10-04T09:17:08.290Z",
+  "exportedAt": "2026-10-04T09:17:09.250Z"
 }

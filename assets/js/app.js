@@ -4,7 +4,7 @@ import { createVectorEditor } from './vector-editor.js?v=paste-validation-202609
 import { validateVectorGroups, pruneGroups } from './vector-model.js?v=route-selection-20260923';
 import { validatePastedView } from './paste-validation.js';
 let vectorEditor = null;
-    import { commentImages } from './comment-images.js?v=comment-images-c11dcd16f7ca';
+    import { commentImages } from './comment-images.js?v=comment-images-f7412e0b8f19';
     import { defaultMarkerLayout, maps, translations } from './data.js?v=tank-marker-type-20260923';
     import { normalizeTacticalSummary, resolveTacticalSummary, withVariationSummary } from './tactical-summary.js?v=variation-switch-20260914';
     import { acceptUpstreamMap, isMapSyncState, markLayoutAsLocalEdits, markMapEdited, mergeMapLayouts, sourceRevision } from './marker-merge.js?v=mobile-default-layout-20260917';
