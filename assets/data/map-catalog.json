@@ -162,8 +162,8 @@
       "name": "Alaska",
       "aliases": "알래스카",
       "slug": "alaska",
-      "updated": "2026-09-29",
-      "updatedAt": "2026-09-29T06:22:03Z",
+      "updated": "2026-10-04",
+      "updatedAt": "2026-10-04T09:17:01Z",
       "br": {
         "min": 3.7
       },
@@ -239,8 +239,8 @@
       "name": "Aral Sea",
       "aliases": "아랄 해",
       "slug": "aral-sea",
-      "updated": "2026-09-23",
-      "updatedAt": "2026-09-23T03:09:22Z",
+      "updated": "2026-10-04",
+      "updatedAt": "2026-10-04T08:54:40Z",
       "br": {
         "min": 6.7
       },
@@ -314,8 +314,8 @@
       "name": "Arctic Polar Base",
       "aliases": "북극",
       "slug": "arctic-polar-base",
-      "updated": "2026-09-23",
-      "updatedAt": "2026-09-22T20:33:11Z",
+      "updated": "2026-10-04",
+      "updatedAt": "2026-10-04T09:02:23Z",
       "br": {
         "min": 6.7
       },
@@ -504,7 +504,7 @@
       "aliases": "휘르트겐 숲 전투",
       "slug": "battle-of-hurtgen-forest",
       "updated": "2026-09-29",
-      "updatedAt": "2026-09-29T08:28:20Z",
+      "updatedAt": "2026-09-29T08:30:11Z",
       "br": {
         "min": 4.7
       },
@@ -513,13 +513,11 @@
           "domination-1": {
             "en": [
               "The central urban area is the main battlefield in Battle of Hürtgen Forest Domination #1, while the northern mountain is the key strategic variable. Controlling the mountain can create direct pressure on the enemy spawn.",
-              "Losing the northern high ground does not necessarily decide the match because the C-side urban area remains protected from direct mountain fire. Vehicles with strong gun depression can also use the far southern hill to control the approaches to C.",
-              "In contests for both the northern mountain and the far southern hill, the western team holds a positional advantage. It benefits from more abundant cover and shorter approach routes, giving it the upper hand in both the initial race for these positions and the engagements that follow."
+              "Losing the northern high ground does not necessarily decide the match because the C-side urban area remains protected from direct mountain fire. Vehicles with strong gun depression can also use the far southern hill to control the approaches to C."
             ],
             "ko": [
               "휘르트겐 숲 도미네이션 #1의 주 전장은 중앙 시가지이며, 가장 큰 변수는 북쪽 산악 지대입니다. 산악 지대를 장악하면 적 스폰 지역까지 직접 압박할 수 있습니다.",
-              "북쪽 고지를 빼앗기더라도 C 거점 시가지는 산에서 직접 사격하기 어려워 남쪽 공세로 전환할 수 있습니다. 부각이 좋은 전차는 맵 최남단 언덕을 이용해 C 거점 접근로를 통제하는 것도 효과적입니다.",
-              "북쪽 산악 지대와 맵 최남단 언덕을 둘러싼 주도권 경쟁에서는 모두 서쪽 진영이 우세합니다. 서쪽 진영은 활용할 수 있는 엄폐물이 더 풍부할 뿐 아니라 주요 위치까지의 진입로도 짧아, 초반 선점과 후속 교전에서 유리한 조건을 갖습니다."
+              "북쪽 고지를 빼앗기더라도 C 거점 시가지는 산에서 직접 사격하기 어려워 남쪽 공세로 전환할 수 있습니다. 부각이 좋은 전차는 맵 최남단 언덕을 이용해 C 거점 접근로를 통제하는 것도 효과적입니다."
             ]
           },
           "domination-2": {
@@ -750,8 +748,8 @@
       "name": "Darwin Hill",
       "aliases": "다윈 힐",
       "slug": "darwin-hill",
-      "updated": "2026-09-27",
-      "updatedAt": "2026-09-27T01:30:23Z",
+      "updated": "2026-10-04",
+      "updatedAt": "2026-10-04T08:57:00Z",
       "br": {
         "min": 5
       },
@@ -850,8 +848,8 @@
       "name": "Eastern Europe",
       "aliases": "동유럽",
       "slug": "eastern-europe",
-      "updated": "2026-09-27",
-      "updatedAt": "2026-09-27T13:32:32Z",
+      "updated": "2026-09-30",
+      "updatedAt": "2026-09-30T06:02:26Z",
       "br": {
         "min": 1
       },
@@ -946,10 +944,10 @@
       },
       "tacticalSummary": {
         "en": [
-          "노르망디의 들판에서는 B 거점이 가장 중요한 지역입니다. 주요 전선의 우회로 대부분이 B 거점 주변에 집중되어 있으며, 이곳에서 우회에 성공하면 적의 양쪽 스폰 지역을 직접 압박할 수 있습니다.",
-          "A 거점 주변은 구릉지로 이루어져 있어 양측이 지형을 활용한 헐다운 교전을 벌이는 경우가 많고, 장시간 교착 상태가 발생하기 쉽습니다.",
-          "C 거점은 반대로 거의 완전한 평야에 위치해 있어 엄폐물이 부족하며, 정면으로 돌파하기가 매우 어렵습니다.",
-          "결국 A와 C 전선이 교착 상태에 빠져 있는 동안 B 거점 주변에서 먼저 우회에 성공하여 상대 전선을 무너뜨리는 쪽이 경기의 주도권을 가져가는 경우가 많습니다."
+          "On Fields of Normandy, point B is the most strategically important area. Most of the flanking routes around the main fronts converge near B, and a successful maneuver through this sector can place direct pressure on both enemy spawn areas.",
+          "Around point A, rolling terrain encourages both teams to exploit ridgelines in hull-down engagements, often producing prolonged stalemates.",
+          "By contrast, point C lies on almost entirely open ground, offering little cover and making a direct breakthrough exceptionally difficult.",
+          "With the fronts at A and C often deadlocked, the match is usually decided by whichever team first completes a flank around B and uses it to collapse the opposing line."
         ],
         "ko": [
           "노르망디의 들판에서는 B 거점이 가장 중요한 지역입니다. 주요 전선의 우회로 대부분이 B 거점 주변에 집중되어 있으며, 이곳에서 우회에 성공하면 적의 양쪽 스폰 지역을 직접 압박할 수 있습니다.",
@@ -1479,8 +1477,8 @@
       "name": "Normandy",
       "aliases": "노르망디",
       "slug": "normandy",
-      "updated": "2026-09-27",
-      "updatedAt": "2026-09-27T14:20:41Z",
+      "updated": "2026-09-30",
+      "updatedAt": "2026-09-30T04:03:48Z",
       "br": {
         "min": 3.7
       },
@@ -1506,7 +1504,13 @@
           "br": {
             "min": 3.7
           },
-          "sharedImage": "Normandy.png"
+          "sharedImage": "Normandy.png",
+          "overlays": [
+            "c.png",
+            "d.png",
+            "sb.png",
+            "sr.png"
+          ]
         }
       ]
     },
@@ -1596,8 +1600,8 @@
       "name": "Port Novorossiysk",
       "aliases": "노보로시스크 항구",
       "slug": "port-novorossiysk",
-      "updated": "2026-09-27",
-      "updatedAt": "2026-09-27T14:28:12Z",
+      "updated": "2026-09-30",
+      "updatedAt": "2026-09-30T05:34:11Z",
       "br": {
         "min": 2.3
       },
@@ -1628,7 +1632,9 @@
           "overlays": [
             "d.png",
             "db.png",
-            "dr.png"
+            "dr.png",
+            "sb.png",
+            "sr.png"
           ]
         },
         {
@@ -1715,6 +1721,18 @@
       "br": {
         "min": 9.7
       },
+      "tacticalSummary": {
+        "en": [
+          "Red Desert consists almost entirely of low sand dunes with very little effective cover, resulting in exceptionally long engagement distances. It also offers few viable flanking routes or breakthrough corridors, leaving players with little room for tactical maneuver.",
+          "Combat is therefore largely confined to prolonged standoffs across the hills surrounding points A, B, and C. Although the spawn areas are reasonably well protected, once a team loses the key high ground, retaking it is extremely difficult and the remainder of the match often becomes a foregone conclusion.",
+          "With so few tactical options and so little opportunity to reverse the course of a battle, Red Desert is arguably the worst map in War Thunder."
+        ],
+        "ko": [
+          "붉은 사막은 전장 대부분이 낮은 사구로 이루어진 데다 실질적인 엄폐물이 극히 부족하여 교전 거리가 매우 깁니다. 유효한 우회로나 돌파로도 마땅치 않아 전술적 기동의 선택지가 크게 제한됩니다.",
+          "이 때문에 전투는 A, B, C 거점 인근의 언덕을 사이에 둔 장거리 대치로 고착되기 쉽습니다. 스폰 지역은 비교적 안정적으로 방어되어 있지만, 핵심 고지를 한 차례 내주면 탈환이 극도로 어려워 그 상태로 승패가 굳어지는 경우가 많습니다.",
+          "전술적 선택지가 지나치게 제한되고 전세를 뒤집을 여지마저 희박하다는 점에서, 붉은 사막은 워 썬더 최악의 맵이라 해도 과언이 아닙니다."
+        ]
+      },
       "folder": "Red Desert",
       "variations": [
         {
@@ -1723,7 +1741,11 @@
           "br": {
             "min": 9.7
           },
-          "sharedImage": "Red Desert.png"
+          "sharedImage": "Red Desert.png",
+          "overlays": [
+            "sb.png",
+            "sr.png"
+          ]
         }
       ]
     },
@@ -1870,8 +1892,8 @@
       "name": "Sinai",
       "aliases": "시나이",
       "slug": "sinai",
-      "updated": "2026-09-15",
-      "updatedAt": "2026-09-15T03:39:06Z",
+      "updated": "2026-10-03",
+      "updatedAt": "2026-10-03T04:08:19Z",
       "br": {
         "min": 1
       },
@@ -1901,8 +1923,8 @@
       "name": "Spaceport",
       "aliases": "우주공항",
       "slug": "spaceport",
-      "updated": "2026-09-15",
-      "updatedAt": "2026-09-15T03:04:03Z",
+      "updated": "2026-09-30",
+      "updatedAt": "2026-09-30T07:51:18Z",
       "br": {
         "min": 6.7
       },
@@ -1984,6 +2006,16 @@
       "br": {
         "min": 9.7
       },
+      "tacticalSummary": {
+        "en": [
+          "Surroundings of Volokolamsk is dominated by snowfields and taiga forest. Outside the urban area around point A, the side that pushes directly toward a capture point is usually the first to be exposed to long-range fire.",
+          "Each of the three capture points has at least one route that permits an approach under cover, so close-range combat is still possible. However, these approaches all run through hilly terrain, making engagements particularly difficult for vehicles with poor gun depression."
+        ],
+        "ko": [
+          "볼로콜람스크 포위는 전장 전역이 설원과 타이가 숲으로 이루어져 있습니다. A 거점 주변의 시가지를 제외하면 점령지로 곧장 진입하는 측이 먼저 장거리 사격에 노출되는 구조입니다.",
+          "A, B, C 거점에는 모두 엄폐를 유지한 채 접근할 수 있는 경로가 적어도 하나씩 마련되어 있어 근접전이 불가능한 것은 아닙니다. 다만 이러한 접근로는 대부분 구릉지에 형성되어 있으므로, 주포 내림각이 부족한 전차로 교전하기에는 매우 까다롭습니다."
+        ]
+      },
       "folder": "Surroundings of Volokolamsk",
       "variations": [
         {
@@ -2004,6 +2036,18 @@
       "updatedAt": "2026-09-27T07:49:10Z",
       "br": {
         "min": 2.3
+      },
+      "tacticalSummary": {
+        "en": [
+          "Sweden consists almost entirely of dense urban terrain, although the long sightlines along several major boulevards also allow for effective sniping.",
+          "A pair of opposing hills lies near the eastern spawn. Securing the dominant position there makes it relatively easy to fire into the spawn and sustain heavy spawn pressure.",
+          "Because every capture point is enclosed by buildings and can be breached from multiple directions, control of the objectives changes hands frequently and large, chaotic close-range battles are common."
+        ],
+        "ko": [
+          "스웨덴은 전장 대부분이 밀집된 시가지로 이루어져 있지만, 일부 대로에는 긴 사선이 형성되어 있어 장거리 저격전도 가능합니다.",
+          "특히 우측의 동쪽 스폰 앞에는 서로 마주 보는 언덕이 있으며, 이곳의 우세 지점을 장악하면 스폰 지역을 손쉽게 사격하며 강한 압박을 가할 수 있습니다.",
+          "모든 점령지가 건물에 둘러싸여 있고 여러 방향에서 돌파할 수 있으므로 거점의 주인이 빈번하게 바뀌며, 대규모 근접 난전이 끊임없이 이어지는 경우가 많습니다."
+        ]
       },
       "folder": "Sweden",
       "variations": [
@@ -2027,10 +2071,20 @@
       "name": "Test Site-2271",
       "aliases": "2271호 실험시설",
       "slug": "test-site-2271",
-      "updated": "2026-09-14",
-      "updatedAt": "2026-09-13T19:14:47Z",
+      "updated": "2026-09-30",
+      "updatedAt": "2026-09-30T07:52:13Z",
       "br": {
         "min": 2.3
+      },
+      "tacticalSummary": {
+        "en": [
+          "At point A, teams face each other from hills well suited to hull-down positions, turning the sector into a long-range standoff that is extremely difficult to break.",
+          "Points B and C, by contrast, are built around elongated urban corridors that enable rapid flanking breakthroughs. The urban sector around C also incorporates broad open areas between buildings, giving defenders clear fields of fire and making the position comparatively easy to hold."
+        ],
+        "ko": [
+          "A 거점은 헐다운에 적합한 언덕을 사이에 두고 양측이 저격전을 벌이는 지역으로, 대치 구도를 정면에서 돌파하기가 매우 어렵습니다.",
+          "반면 B와 C 거점은 길게 뻗은 시가지 축선을 따라 형성되어 있어 이를 이용한 신속한 우회 돌파가 가능합니다. C 거점의 시가지에는 건물 사이로 넓은 개활지가 섞여 있어 수비 측이 명확한 사선을 확보하기 쉬우며, 방어에도 비교적 유리합니다."
+        ]
       },
       "folder": "Test Site-2271",
       "variations": [
@@ -2180,6 +2234,18 @@
       "br": {
         "min": 1,
         "max": 8.7
+      },
+      "tacticalSummary": {
+        "en": [
+          "On White Rock Fortress, the decisive sectors lie outside the fortress rather than within its walls. The team that wins these outer engagements can naturally envelop the remaining enemy positions.",
+          "The southern team's spawn positions are spread across a broader frontage, making it easier to deploy forces and providing an overall strategic advantage.",
+          "The northern team, however, can reverse this imbalance by breaking through the center of the fortress interior. Once that route is opened, it can rapidly reach and suppress the enemy spawn."
+        ],
+        "ko": [
+          "백암요새의 핵심 지역은 요새 내부가 아니라 외곽에 형성되어 있습니다. 외곽 교전에서 승리한 진영이 자연스럽게 남은 적 병력을 포위하는 구조입니다.",
+          "전반적으로 남쪽 진영은 스폰 지점이 넓게 분산되어 있어 병력을 전개하기 수월하며, 전장 전체의 주도권 경쟁에서도 유리한 조건을 갖습니다.",
+          "반면 북쪽 진영은 요새 내부의 중앙 돌파에 성공할 경우 이러한 열세를 뒤집을 수 있습니다. 중앙 통로가 열리면 적 스폰 지역까지 빠르게 진입하여 강한 압박을 가할 수 있습니다."
+        ]
       },
       "folder": "White Rock Fortress",
       "variations": [

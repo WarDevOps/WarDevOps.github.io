@@ -377,7 +377,20 @@
         "B와 C 거점 사이에 위치한 호수는 겨울 버전에서 얼어붙습니다. 이 경우 얼어붙은 호수를 직접 횡단하여 적의 예상 밖 방향으로 진입하는 위험한 우회 전술을 시도할 수 있습니다."
       ]
     },
-    "Normandy": {},
+    "Normandy": {
+      "en": [
+        "On Normandy, the main boulevard running north to south through the B capture point serves as the decisive axis of engagement. Whichever team gains control of this route is likely to seize the initiative.",
+        "Occupying the bell tower north of the church at B provides commanding control over much of the urban district, while securing the hill between B and C can effectively deny enemy forces access to the town.",
+        "The A capture point lies on the low-lying beach, where the tactical disadvantages of attempting a capture are excessively severe. The C capture point is situated within a basin, frequently resulting in a prolonged standoff as both sides adopt hull-down positions and exchange long-range fire.",
+        "The eastern team, however, can advance across the plains south of C and attempt a wide flanking maneuver—albeit one that carries considerable risk."
+      ],
+      "ko": [
+        "노르망디에서는 B 거점을 중심으로 남북을 잇는 대로가 핵심 교전 지역이며, 이 축선을 장악하는 진영이 전투의 주도권을 확보하게 됩니다.",
+        "B 거점의 교회 북쪽에 위치한 종탑을 선점하면 시가지 대부분을 통제할 수 있으며, B–C 사이의 언덕을 장악하면 적 병력의 시가지 진입로를 효과적으로 봉쇄할 수 있습니다.",
+        "A 거점은 해변의 저지대에 자리해 점령 과정에서 감수해야 할 전술적 불이익이 지나치게 큽니다. C 거점은 분지 지형에 위치하므로, 양측이 능선을 끼고 헐다운 상태로 저격전을 이어가는 교착 양상이 빈번하게 발생합니다.",
+        "다만 동쪽 진영은 C 거점 남쪽의 평야를 따라 진출하여, 상당한 위험을 수반하는 광범위한 우회를 시도할 수 있습니다."
+      ]
+    },
     "European Province": {
       "en": [
         "European Province is an expanded version of Eastern Europe. Because of the larger battlefield, engagement distances are longer and the frontline is less densely populated. As a result, the central urban area around point B is considerably easier to break through than on Eastern Europe.",
@@ -392,10 +405,10 @@
     },
     "Fields of Normandy": {
       "en": [
-        "노르망디의 들판에서는 B 거점이 가장 중요한 지역입니다. 주요 전선의 우회로 대부분이 B 거점 주변에 집중되어 있으며, 이곳에서 우회에 성공하면 적의 양쪽 스폰 지역을 직접 압박할 수 있습니다.",
-        "A 거점 주변은 구릉지로 이루어져 있어 양측이 지형을 활용한 헐다운 교전을 벌이는 경우가 많고, 장시간 교착 상태가 발생하기 쉽습니다.",
-        "C 거점은 반대로 거의 완전한 평야에 위치해 있어 엄폐물이 부족하며, 정면으로 돌파하기가 매우 어렵습니다.",
-        "결국 A와 C 전선이 교착 상태에 빠져 있는 동안 B 거점 주변에서 먼저 우회에 성공하여 상대 전선을 무너뜨리는 쪽이 경기의 주도권을 가져가는 경우가 많습니다."
+        "On Fields of Normandy, point B is the most strategically important area. Most of the flanking routes around the main fronts converge near B, and a successful maneuver through this sector can place direct pressure on both enemy spawn areas.",
+        "Around point A, rolling terrain encourages both teams to exploit ridgelines in hull-down engagements, often producing prolonged stalemates.",
+        "By contrast, point C lies on almost entirely open ground, offering little cover and making a direct breakthrough exceptionally difficult.",
+        "With the fronts at A and C often deadlocked, the match is usually decided by whichever team first completes a flank around B and uses it to collapse the opposing line."
       ],
       "ko": [
         "노르망디의 들판에서는 B 거점이 가장 중요한 지역입니다. 주요 전선의 우회로 대부분이 B 거점 주변에 집중되어 있으며, 이곳에서 우회에 성공하면 적의 양쪽 스폰 지역을 직접 압박할 수 있습니다.",
@@ -654,6 +667,62 @@
         "플랑드르는 맵 중앙을 양분하는 광활한 참호 지대와 철로를 주변의 구릉이 에워싸는 구조로, 능선을 활용한 헐다운 교전과 점진적인 전력 소모가 주된 양상으로 전개됩니다.",
         "참호 지대의 엄폐물은 대부분 포탑까지 완전히 가려주지 못하거나 사격으로 관통 가능한 구조물이기 때문에, 정면 돌파로로 활용하기에는 부적합합니다. 주포 내림각이 부족한 전차라면 B–C 사이의 터널이나 중앙 시가지를 통해 승부수에 가까운 돌파를 감행할 수 있습니다.",
         "C 거점은 개활된 육상 경기장 중앙에 자리하고 있어 어느 진영도 선점하기가 쉽지 않습니다. 반면 A와 B 거점은 각각 언덕과 시가지에 둘러싸여 있으므로, 적극적으로 방어하거나 재점령을 시도하지 않으면 순식간에 주도권을 내주게 됩니다."
+      ]
+    },
+    "Red Desert": {
+      "en": [
+        "Red Desert consists almost entirely of low sand dunes with very little effective cover, resulting in exceptionally long engagement distances. It also offers few viable flanking routes or breakthrough corridors, leaving players with little room for tactical maneuver.",
+        "Combat is therefore largely confined to prolonged standoffs across the hills surrounding points A, B, and C. Although the spawn areas are reasonably well protected, once a team loses the key high ground, retaking it is extremely difficult and the remainder of the match often becomes a foregone conclusion.",
+        "With so few tactical options and so little opportunity to reverse the course of a battle, Red Desert is arguably the worst map in War Thunder."
+      ],
+      "ko": [
+        "붉은 사막은 전장 대부분이 낮은 사구로 이루어진 데다 실질적인 엄폐물이 극히 부족하여 교전 거리가 매우 깁니다. 유효한 우회로나 돌파로도 마땅치 않아 전술적 기동의 선택지가 크게 제한됩니다.",
+        "이 때문에 전투는 A, B, C 거점 인근의 언덕을 사이에 둔 장거리 대치로 고착되기 쉽습니다. 스폰 지역은 비교적 안정적으로 방어되어 있지만, 핵심 고지를 한 차례 내주면 탈환이 극도로 어려워 그 상태로 승패가 굳어지는 경우가 많습니다.",
+        "전술적 선택지가 지나치게 제한되고 전세를 뒤집을 여지마저 희박하다는 점에서, 붉은 사막은 워 썬더 최악의 맵이라 해도 과언이 아닙니다."
+      ]
+    },
+    "Surroundings of Volokolamsk": {
+      "en": [
+        "Surroundings of Volokolamsk is dominated by snowfields and taiga forest. Outside the urban area around point A, the side that pushes directly toward a capture point is usually the first to be exposed to long-range fire.",
+        "Each of the three capture points has at least one route that permits an approach under cover, so close-range combat is still possible. However, these approaches all run through hilly terrain, making engagements particularly difficult for vehicles with poor gun depression."
+      ],
+      "ko": [
+        "볼로콜람스크 포위는 전장 전역이 설원과 타이가 숲으로 이루어져 있습니다. A 거점 주변의 시가지를 제외하면 점령지로 곧장 진입하는 측이 먼저 장거리 사격에 노출되는 구조입니다.",
+        "A, B, C 거점에는 모두 엄폐를 유지한 채 접근할 수 있는 경로가 적어도 하나씩 마련되어 있어 근접전이 불가능한 것은 아닙니다. 다만 이러한 접근로는 대부분 구릉지에 형성되어 있으므로, 주포 내림각이 부족한 전차로 교전하기에는 매우 까다롭습니다."
+      ]
+    },
+    "Sweden": {
+      "en": [
+        "Sweden consists almost entirely of dense urban terrain, although the long sightlines along several major boulevards also allow for effective sniping.",
+        "A pair of opposing hills lies near the eastern spawn. Securing the dominant position there makes it relatively easy to fire into the spawn and sustain heavy spawn pressure.",
+        "Because every capture point is enclosed by buildings and can be breached from multiple directions, control of the objectives changes hands frequently and large, chaotic close-range battles are common."
+      ],
+      "ko": [
+        "스웨덴은 전장 대부분이 밀집된 시가지로 이루어져 있지만, 일부 대로에는 긴 사선이 형성되어 있어 장거리 저격전도 가능합니다.",
+        "특히 우측의 동쪽 스폰 앞에는 서로 마주 보는 언덕이 있으며, 이곳의 우세 지점을 장악하면 스폰 지역을 손쉽게 사격하며 강한 압박을 가할 수 있습니다.",
+        "모든 점령지가 건물에 둘러싸여 있고 여러 방향에서 돌파할 수 있으므로 거점의 주인이 빈번하게 바뀌며, 대규모 근접 난전이 끊임없이 이어지는 경우가 많습니다."
+      ]
+    },
+    "Test Site-2271": {
+      "en": [
+        "At point A, teams face each other from hills well suited to hull-down positions, turning the sector into a long-range standoff that is extremely difficult to break.",
+        "Points B and C, by contrast, are built around elongated urban corridors that enable rapid flanking breakthroughs. The urban sector around C also incorporates broad open areas between buildings, giving defenders clear fields of fire and making the position comparatively easy to hold."
+      ],
+      "ko": [
+        "A 거점은 헐다운에 적합한 언덕을 사이에 두고 양측이 저격전을 벌이는 지역으로, 대치 구도를 정면에서 돌파하기가 매우 어렵습니다.",
+        "반면 B와 C 거점은 길게 뻗은 시가지 축선을 따라 형성되어 있어 이를 이용한 신속한 우회 돌파가 가능합니다. C 거점의 시가지에는 건물 사이로 넓은 개활지가 섞여 있어 수비 측이 명확한 사선을 확보하기 쉬우며, 방어에도 비교적 유리합니다."
+      ]
+    },
+    "White Rock Fortress": {
+      "en": [
+        "On White Rock Fortress, the decisive sectors lie outside the fortress rather than within its walls. The team that wins these outer engagements can naturally envelop the remaining enemy positions.",
+        "The southern team's spawn positions are spread across a broader frontage, making it easier to deploy forces and providing an overall strategic advantage.",
+        "The northern team, however, can reverse this imbalance by breaking through the center of the fortress interior. Once that route is opened, it can rapidly reach and suppress the enemy spawn."
+      ],
+      "ko": [
+        "백암요새의 핵심 지역은 요새 내부가 아니라 외곽에 형성되어 있습니다. 외곽 교전에서 승리한 진영이 자연스럽게 남은 적 병력을 포위하는 구조입니다.",
+        "전반적으로 남쪽 진영은 스폰 지점이 넓게 분산되어 있어 병력을 전개하기 수월하며, 전장 전체의 주도권 경쟁에서도 유리한 조건을 갖습니다.",
+        "반면 북쪽 진영은 요새 내부의 중앙 돌파에 성공할 경우 이러한 열세를 뒤집을 수 있습니다. 중앙 통로가 열리면 적 스폰 지역까지 빠르게 진입하여 강한 압박을 가할 수 있습니다."
       ]
     }
   },
