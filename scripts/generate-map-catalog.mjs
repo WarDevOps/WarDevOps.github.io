@@ -19,37 +19,37 @@ const VARIATION_FOLDER_PATTERN = /^(domination|conquest|battle)\s*#(\d+)$/i;
 const MODE_ORDER = Object.freeze({ domination: 0, conquest: 1, battle: 2 });
 const MAP_UPDATED_AT_PATTERN = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d{1,3})?Z$/;
 const MAP_OVERLAY_FILE_NAMES = new Set([
-  "c.png",
-  "CoreArea.png",
-  "cb.png",
-  "CoreAreaBlue.png",
-  "cr.png",
-  "CoreAreaRed.png",
-  "d.png",
-  "DangerArea.png",
-  "db.png",
-  "DangerAreaBlue.png",
-  "dr.png",
-  "DangerAreaRed.png",
-  "n.png",
-  "NotRecommended.png",
-  "nb.png",
-  "NotRecommendedBlue.png",
-  "nr.png",
-  "NotRecommendedRed.png",
-  "a.png",
-  "AntiAir.png",
-  "AntiAirArea.png",
-  "ab.png",
-  "AntiAirBlue.png",
-  "ar.png",
-  "AntiAirRed.png",
-  "s.png",
-  "SpawnArea.png",
-  "sb.png",
-  "SpawnAreaBlue.png",
-  "sr.png",
-  "SpawnAreaRed.png"
+  "c.webp",
+  "CoreArea.webp",
+  "cb.webp",
+  "CoreAreaBlue.webp",
+  "cr.webp",
+  "CoreAreaRed.webp",
+  "d.webp",
+  "DangerArea.webp",
+  "db.webp",
+  "DangerAreaBlue.webp",
+  "dr.webp",
+  "DangerAreaRed.webp",
+  "n.webp",
+  "NotRecommended.webp",
+  "nb.webp",
+  "NotRecommendedBlue.webp",
+  "nr.webp",
+  "NotRecommendedRed.webp",
+  "a.webp",
+  "AntiAir.webp",
+  "AntiAirArea.webp",
+  "ab.webp",
+  "AntiAirBlue.webp",
+  "ar.webp",
+  "AntiAirRed.webp",
+  "s.webp",
+  "SpawnArea.webp",
+  "sb.webp",
+  "SpawnAreaBlue.webp",
+  "sr.webp",
+  "SpawnAreaRed.webp"
 ]);
 const CHECK_ONLY = process.argv.includes("--check");
 const WATCH_MODE = process.argv.includes("--watch");
@@ -194,13 +194,13 @@ async function syncNewMapSources() {
 }
 
 function findTeamFile(fileNames, team, requireExact) {
-  const exactName = `${team}.png`.toLowerCase();
+  const exactName = `${team}.webp`.toLowerCase();
   const exact = fileNames.find(fileName => fileName.toLowerCase() === exactName);
   if (exact || requireExact) return exact || null;
 
   const candidates = fileNames.filter(fileName => {
     const normalized = fileName.toLowerCase();
-    return normalized.endsWith(".png") && normalized.startsWith(team.toLowerCase());
+    return normalized.endsWith(".webp") && normalized.startsWith(team.toLowerCase());
   });
   return candidates.length === 1 ? candidates[0] : null;
 }
@@ -211,8 +211,8 @@ async function discoverMapImages(relativeFolder, { requireExact = false, failOnP
   const fileNames = entries.filter(entry => entry.isFile()).map(entry => entry.name);
   const pathParts = toPosix(relativeFolder).split("/").filter(Boolean);
   const sharedNames = new Set([
-    `${pathParts.at(-1)}.png`.toLowerCase(),
-    `${pathParts[0]}.png`.toLowerCase()
+    `${pathParts.at(-1)}.webp`.toLowerCase(),
+    `${pathParts[0]}.webp`.toLowerCase()
   ]);
   const sharedImage = fileNames.find(fileName => sharedNames.has(fileName.toLowerCase()));
   const red = findTeamFile(fileNames, "Red", requireExact);
@@ -220,7 +220,7 @@ async function discoverMapImages(relativeFolder, { requireExact = false, failOnP
   if (sharedImage) return { sharedImage };
   if (red && blue) return { teamImages: { Red: red, Blue: blue } };
   if (failOnPartial && Boolean(red) !== Boolean(blue)) {
-    throw new Error(`Both Red and Blue PNG files are required: ${relativeFolder}`);
+    throw new Error(`Both Red and Blue WebP files are required: ${relativeFolder}`);
   }
   return null;
 }
@@ -269,7 +269,7 @@ function compactVariation(variation, rootFolder) {
   if (variation.folder !== rootFolder) result.folder = variation.folder;
   if (variation.sharedImage) {
     result.sharedImage = variation.sharedImage;
-  } else if (variation.teamImages.Red !== "Red.png" || variation.teamImages.Blue !== "Blue.png") {
+  } else if (variation.teamImages.Red !== "Red.webp" || variation.teamImages.Blue !== "Blue.webp") {
     result.teamImages = variation.teamImages;
   }
   if (variation.overlays?.length) result.overlays = variation.overlays;
@@ -426,7 +426,7 @@ function replacePageValue(source, pattern, replacement, label) {
 function mapPreviewUrl(map) {
   const variation = map.variations[0];
   const folder = variation.folder || map.folder;
-  const image = variation.sharedImage || variation.teamImages?.Red || "Red.png";
+  const image = variation.sharedImage || variation.teamImages?.Red || "Red.webp";
   return `https://wardevops.github.io/img/${encodeUrlPath(folder)}/${encodeURIComponent(image)}`;
 }
 
@@ -459,7 +459,7 @@ export function renderMapRoutePage(rootPage, map) {
   }).replace(/</g, "\\u003c");
   let page = rootPage;
   page = replacePageValue(page, /<script type="application\/ld\+json" id="page-image-metadata">[\s\S]*?<\/script>/, `<script type="application/ld+json" id="page-image-metadata">${imageMetadata}</script>`, "primary image metadata");
-  page = replacePageValue(page, /<img\b[^>]*\bid="map-image"[^>]*>/, `<img id="map-image" src="${escapeHtml(imagePath.replace(/\.png$/i, ".webp"))}" data-png-fallback="${escapeHtml(imagePath)}" alt="${escapeHtml(imageAlt)}" decoding="async" fetchpriority="high" loading="eager">`, "initial map image");
+  page = replacePageValue(page, /<img\b[^>]*\bid="map-image"[^>]*>/, `<img id="map-image" src="${escapeHtml(imagePath)}" alt="${escapeHtml(imageAlt)}" decoding="async" fetchpriority="high" loading="eager">`, "initial map image");
   page = page.replace('class="hero home-hero"', 'class="hero map-detail-hero"');
   page = page.replace(/\n\s*<aside class="recent-updates"[\s\S]*?<\/aside>/, "");
   page = replacePageValue(page, /<meta name="description" content="[^"]*">/, `<meta name="description" content="${description}">`, "description");

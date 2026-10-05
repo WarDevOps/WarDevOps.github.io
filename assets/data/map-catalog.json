@@ -32,12 +32,12 @@
           "br": {
             "min": 4.7
           },
-          "sharedImage": "38th Parallel.png",
+          "sharedImage": "38th Parallel.webp",
           "overlays": [
-            "CoreArea.png",
-            "DangerArea.png",
-            "SpawnAreaBlue.png",
-            "SpawnAreaRed.png"
+            "CoreArea.webp",
+            "DangerArea.webp",
+            "SpawnAreaBlue.webp",
+            "SpawnAreaRed.webp"
           ]
         }
       ]
@@ -71,10 +71,10 @@
           "br": {
             "min": 1
           },
-          "sharedImage": "Abandoned Factory.png",
+          "sharedImage": "Abandoned Factory.webp",
           "overlays": [
-            "sb.png",
-            "sr.png"
+            "sb.webp",
+            "sr.webp"
           ]
         }
       ]
@@ -110,10 +110,10 @@
           "br": {
             "min": 3.7
           },
-          "sharedImage": "Abandoned Town.png",
+          "sharedImage": "Abandoned Town.webp",
           "overlays": [
-            "sb.png",
-            "sr.png"
+            "sb.webp",
+            "sr.webp"
           ]
         }
       ]
@@ -149,11 +149,11 @@
           "br": {
             "min": 1
           },
-          "sharedImage": "Advance to the Rhine.png",
+          "sharedImage": "Advance to the Rhine.webp",
           "overlays": [
-            "n.png",
-            "sb.png",
-            "sr.png"
+            "n.webp",
+            "sb.webp",
+            "sr.webp"
           ]
         }
       ]
@@ -163,7 +163,7 @@
       "aliases": "알래스카",
       "slug": "alaska",
       "updated": "2026-10-04",
-      "updatedAt": "2026-10-04T09:17:01Z",
+      "updatedAt": "2026-10-04T10:19:32Z",
       "br": {
         "min": 3.7
       },
@@ -189,11 +189,11 @@
           "br": {
             "min": 3.7
           },
-          "sharedImage": "Alaska.png",
+          "sharedImage": "Alaska.webp",
           "overlays": [
-            "c.png",
-            "sb.png",
-            "sr.png"
+            "c.webp",
+            "sb.webp",
+            "sr.webp"
           ]
         }
       ]
@@ -227,10 +227,10 @@
           "br": {
             "min": 5
           },
-          "sharedImage": "American Desert.png",
+          "sharedImage": "American Desert.webp",
           "overlays": [
-            "sb.png",
-            "sr.png"
+            "sb.webp",
+            "sr.webp"
           ]
         }
       ]
@@ -264,10 +264,10 @@
           "br": {
             "min": 6.7
           },
-          "sharedImage": "Aral Sea.png",
+          "sharedImage": "Aral Sea.webp",
           "overlays": [
-            "sb.png",
-            "sr.png"
+            "sb.webp",
+            "sr.webp"
           ]
         }
       ]
@@ -301,11 +301,11 @@
           "br": {
             "min": 4.7
           },
-          "sharedImage": "Arctic Pier.png",
+          "sharedImage": "Arctic Pier.webp",
           "overlays": [
-            "c.png",
-            "sb.png",
-            "sr.png"
+            "c.webp",
+            "sb.webp",
+            "sr.webp"
           ]
         }
       ]
@@ -339,10 +339,10 @@
           "br": {
             "min": 6.7
           },
-          "sharedImage": "Arctic Polar Base.png",
+          "sharedImage": "Arctic Polar Base.webp",
           "overlays": [
-            "sb.png",
-            "sr.png"
+            "sb.webp",
+            "sr.webp"
           ]
         }
       ]
@@ -388,14 +388,14 @@
           "br": {
             "min": 3.7
           },
-          "sharedImage": "Ardennes.png",
+          "sharedImage": "Ardennes.webp",
           "overlays": [
-            "c.png",
-            "d.png",
-            "db.png",
-            "n.png",
-            "sb.png",
-            "sr.png"
+            "c.webp",
+            "d.webp",
+            "db.webp",
+            "n.webp",
+            "sb.webp",
+            "sr.webp"
           ]
         },
         {
@@ -405,14 +405,14 @@
             "min": 3.7
           },
           "folder": "Ardennes/Domination #2",
-          "sharedImage": "Ardennes.png",
+          "sharedImage": "Ardennes.webp",
           "overlays": [
-            "c.png",
-            "db.png",
-            "dr.png",
-            "n.png",
-            "sb.png",
-            "sr.png"
+            "c.webp",
+            "db.webp",
+            "dr.webp",
+            "n.webp",
+            "sb.webp",
+            "sr.webp"
           ]
         },
         {
@@ -422,10 +422,10 @@
             "min": 3.7
           },
           "folder": "Ardennes/Conquest #1",
-          "sharedImage": "Ardennes.png",
+          "sharedImage": "Ardennes.webp",
           "overlays": [
-            "SpawnAreaBlue.png",
-            "SpawnAreaRed.png"
+            "SpawnAreaBlue.webp",
+            "SpawnAreaRed.webp"
           ]
         }
       ]
@@ -449,7 +449,7 @@
             "min": 1,
             "max": 7.7
           },
-          "sharedImage": "Ash River.png"
+          "sharedImage": "Ash River.webp"
         }
       ]
     },
@@ -486,15 +486,15 @@
           "br": {
             "min": 1
           },
-          "sharedImage": "Attica.png",
+          "sharedImage": "Attica.webp",
           "overlays": [
-            "CoreAreaBlue.png",
-            "CoreAreaRed.png",
-            "DangerArea.png",
-            "DangerAreaBlue.png",
-            "dr.png",
-            "SpawnAreaBlue.png",
-            "SpawnAreaRed.png"
+            "CoreAreaBlue.webp",
+            "CoreAreaRed.webp",
+            "DangerArea.webp",
+            "DangerAreaBlue.webp",
+            "dr.webp",
+            "SpawnAreaBlue.webp",
+            "SpawnAreaRed.webp"
           ]
         }
       ]
@@ -540,7 +540,7 @@
           "br": {
             "min": 4.7
           },
-          "sharedImage": "Battle of Hürtgen Forest.png"
+          "sharedImage": "Battle of Hürtgen Forest.webp"
         },
         {
           "mode": "domination",
@@ -549,7 +549,7 @@
             "min": 4.7
           },
           "folder": "Battle of Hürtgen Forest/Domination #2",
-          "sharedImage": "Battle of Hürtgen Forest.png"
+          "sharedImage": "Battle of Hürtgen Forest.webp"
         },
         {
           "mode": "conquest",
@@ -558,7 +558,7 @@
             "min": 4.7
           },
           "folder": "Battle of Hürtgen Forest/Conquest #3",
-          "sharedImage": "Battle of Hürtgen Forest.png"
+          "sharedImage": "Battle of Hürtgen Forest.webp"
         }
       ]
     },
@@ -581,7 +581,7 @@
             "min": 3.7,
             "max": 6.7
           },
-          "sharedImage": "Berlin.png"
+          "sharedImage": "Berlin.webp"
         }
       ]
     },
@@ -614,7 +614,7 @@
           "br": {
             "min": 6.7
           },
-          "sharedImage": "Breslau.png"
+          "sharedImage": "Breslau.webp"
         }
       ]
     },
@@ -650,8 +650,8 @@
             "min": 3.7
           },
           "overlays": [
-            "CoreArea.png",
-            "DangerArea.png"
+            "CoreArea.webp",
+            "DangerArea.webp"
           ]
         }
       ]
@@ -687,15 +687,15 @@
           "br": {
             "min": 4.7
           },
-          "sharedImage": "Cargo Port.png",
+          "sharedImage": "Cargo Port.webp",
           "overlays": [
-            "c.png",
-            "d.png",
-            "db.png",
-            "dr.png",
-            "n.png",
-            "sb.png",
-            "sr.png"
+            "c.webp",
+            "d.webp",
+            "db.webp",
+            "dr.webp",
+            "n.webp",
+            "sb.webp",
+            "sr.webp"
           ]
         }
       ]
@@ -729,17 +729,17 @@
           "br": {
             "min": 2.3
           },
-          "sharedImage": "Carpathians.png",
+          "sharedImage": "Carpathians.webp",
           "overlays": [
-            "c.png",
-            "d.png",
-            "db.png",
-            "dr.png",
-            "n.png",
-            "nb.png",
-            "nr.png",
-            "sb.png",
-            "sr.png"
+            "c.webp",
+            "d.webp",
+            "db.webp",
+            "dr.webp",
+            "n.webp",
+            "nb.webp",
+            "nr.webp",
+            "sb.webp",
+            "sr.webp"
           ]
         }
       ]
@@ -748,8 +748,8 @@
       "name": "Darwin Hill",
       "aliases": "다윈 힐",
       "slug": "darwin-hill",
-      "updated": "2026-10-04",
-      "updatedAt": "2026-10-04T08:57:00Z",
+      "updated": "2026-10-05",
+      "updatedAt": "2026-10-05T13:44:29Z",
       "br": {
         "min": 5
       },
@@ -773,12 +773,12 @@
           "br": {
             "min": 5
           },
-          "sharedImage": "Darwin Hill.png",
+          "sharedImage": "Darwin Hill.webp",
           "overlays": [
-            "c.png",
-            "nr.png",
-            "sb.png",
-            "sr.png"
+            "c.webp",
+            "nr.webp",
+            "sb.webp",
+            "sr.webp"
           ]
         },
         {
@@ -788,12 +788,12 @@
             "min": 5
           },
           "folder": "Darwin Hill/Conquest #1",
-          "sharedImage": "Darwin Hill.png",
+          "sharedImage": "Darwin Hill.webp",
           "overlays": [
-            "c.png",
-            "n.png",
-            "sb.png",
-            "sr.png"
+            "c.webp",
+            "n.webp",
+            "sb.webp",
+            "sr.webp"
           ]
         },
         {
@@ -803,12 +803,12 @@
             "min": 5
           },
           "folder": "Darwin Hill/Conquest #2",
-          "sharedImage": "Darwin Hill.png",
+          "sharedImage": "Darwin Hill.webp",
           "overlays": [
-            "c.png",
-            "nr.png",
-            "sb.png",
-            "sr.png"
+            "c.webp",
+            "nr.webp",
+            "sb.webp",
+            "sr.webp"
           ]
         },
         {
@@ -818,13 +818,13 @@
             "min": 5
           },
           "folder": "Darwin Hill/Conquest #3",
-          "sharedImage": "Darwin Hill.png",
+          "sharedImage": "Darwin Hill.webp",
           "overlays": [
-            "c.png",
-            "n.png",
-            "nr.png",
-            "sb.png",
-            "sr.png"
+            "c.webp",
+            "n.webp",
+            "nr.webp",
+            "sb.webp",
+            "sr.webp"
           ]
         },
         {
@@ -834,12 +834,12 @@
             "min": 5
           },
           "folder": "Darwin Hill/Battle #1",
-          "sharedImage": "Darwin Hill.png",
+          "sharedImage": "Darwin Hill.webp",
           "overlays": [
-            "c.png",
-            "nr.png",
-            "sb.png",
-            "sr.png"
+            "c.webp",
+            "nr.webp",
+            "sb.webp",
+            "sr.webp"
           ]
         }
       ]
@@ -877,7 +877,7 @@
           "br": {
             "min": 1
           },
-          "sharedImage": "Eastern Europe.png"
+          "sharedImage": "Eastern Europe.webp"
         },
         {
           "mode": "domination",
@@ -886,7 +886,7 @@
             "min": 1
           },
           "folder": "Eastern Europe/Domination #2",
-          "sharedImage": "Eastern Europe.png"
+          "sharedImage": "Eastern Europe.webp"
         }
       ]
     },
@@ -919,16 +919,16 @@
           "br": {
             "min": 6.7
           },
-          "sharedImage": "European Province.png",
+          "sharedImage": "European Province.webp",
           "overlays": [
-            "c.png",
-            "d.png",
-            "dr.png",
-            "n.png",
-            "nb.png",
-            "nr.png",
-            "sb.png",
-            "sr.png"
+            "c.webp",
+            "d.webp",
+            "dr.webp",
+            "n.webp",
+            "nb.webp",
+            "nr.webp",
+            "sb.webp",
+            "sr.webp"
           ]
         }
       ]
@@ -964,17 +964,17 @@
           "br": {
             "min": 2.3
           },
-          "sharedImage": "Fields of Normandy.png",
+          "sharedImage": "Fields of Normandy.webp",
           "overlays": [
-            "c.png",
-            "d.png",
-            "db.png",
-            "dr.png",
-            "n.png",
-            "nb.png",
-            "nr.png",
-            "sb.png",
-            "sr.png"
+            "c.webp",
+            "d.webp",
+            "db.webp",
+            "dr.webp",
+            "n.webp",
+            "nb.webp",
+            "nr.webp",
+            "sb.webp",
+            "sr.webp"
           ]
         }
       ]
@@ -1044,12 +1044,12 @@
           "br": {
             "min": 2.3
           },
-          "sharedImage": "Finland.png",
+          "sharedImage": "Finland.webp",
           "overlays": [
-            "c.png",
-            "d.png",
-            "sb.png",
-            "sr.png"
+            "c.webp",
+            "d.webp",
+            "sb.webp",
+            "sr.webp"
           ]
         }
       ]
@@ -1083,13 +1083,13 @@
           "br": {
             "min": 3.7
           },
-          "sharedImage": "Fire Arc.png",
+          "sharedImage": "Fire Arc.webp",
           "overlays": [
-            "c.png",
-            "d.png",
-            "n.png",
-            "sb.png",
-            "sr.png"
+            "c.webp",
+            "d.webp",
+            "n.webp",
+            "sb.webp",
+            "sr.webp"
           ]
         }
       ]
@@ -1123,7 +1123,7 @@
           "br": {
             "min": 1
           },
-          "sharedImage": "Flanders.png"
+          "sharedImage": "Flanders.webp"
         }
       ]
     },
@@ -1145,7 +1145,7 @@
             "min": 1,
             "max": 7.7
           },
-          "sharedImage": "Frozen Pass.png"
+          "sharedImage": "Frozen Pass.webp"
         }
       ]
     },
@@ -1153,8 +1153,8 @@
       "name": "Fulda",
       "aliases": "풀다",
       "slug": "fulda",
-      "updated": "2026-09-27",
-      "updatedAt": "2026-09-27T10:55:04Z",
+      "updated": "2026-10-05",
+      "updatedAt": "2026-10-05T04:51:32Z",
       "br": {
         "min": 6.7
       },
@@ -1182,7 +1182,7 @@
           "br": {
             "min": 6.7
           },
-          "sharedImage": "Fulda.png"
+          "sharedImage": "Fulda.webp"
         }
       ]
     },
@@ -1213,10 +1213,10 @@
           "br": {
             "min": 2.3
           },
-          "sharedImage": "Golden Quarry.png",
+          "sharedImage": "Golden Quarry.webp",
           "overlays": [
-            "sb.png",
-            "sr.png"
+            "sb.webp",
+            "sr.webp"
           ]
         }
       ]
@@ -1250,13 +1250,13 @@
           "br": {
             "min": 1
           },
-          "sharedImage": "iberian castle.png",
+          "sharedImage": "iberian castle.webp",
           "overlays": [
-            "c.png",
-            "d.png",
-            "n.png",
-            "sb.png",
-            "sr.png"
+            "c.webp",
+            "d.webp",
+            "n.webp",
+            "sb.webp",
+            "sr.webp"
           ]
         }
       ]
@@ -1288,11 +1288,11 @@
           "br": {
             "min": 1
           },
-          "sharedImage": "Japan.png",
+          "sharedImage": "Japan.webp",
           "overlays": [
-            "d.png",
-            "sb.png",
-            "sr.png"
+            "d.webp",
+            "sb.webp",
+            "sr.webp"
           ]
         }
       ]
@@ -1316,7 +1316,7 @@
             "min": 3.7,
             "max": 7.7
           },
-          "sharedImage": "Jungle.png"
+          "sharedImage": "Jungle.webp"
         }
       ]
     },
@@ -1339,7 +1339,7 @@
             "min": 1,
             "max": 7.7
           },
-          "sharedImage": "Karelia.png"
+          "sharedImage": "Karelia.webp"
         }
       ]
     },
@@ -1396,13 +1396,13 @@
           "br": {
             "min": 5
           },
-          "sharedImage": "Maginot Line.png",
+          "sharedImage": "Maginot Line.webp",
           "overlays": [
-            "c.png",
-            "d.png",
-            "dr.png",
-            "sb.png",
-            "sr.png"
+            "c.webp",
+            "d.webp",
+            "dr.webp",
+            "sb.webp",
+            "sr.webp"
           ]
         },
         {
@@ -1412,14 +1412,14 @@
             "min": 5
           },
           "folder": "Maginot Line/Domination #2",
-          "sharedImage": "Maginot Line.png",
+          "sharedImage": "Maginot Line.webp",
           "overlays": [
-            "c.png",
-            "d.png",
-            "db.png",
-            "n.png",
-            "sb.png",
-            "sr.png"
+            "c.webp",
+            "d.webp",
+            "db.webp",
+            "n.webp",
+            "sb.webp",
+            "sr.webp"
           ]
         }
       ]
@@ -1451,7 +1451,7 @@
           "br": {
             "min": 5
           },
-          "sharedImage": "Middle East.png"
+          "sharedImage": "Middle East.webp"
         }
       ]
     },
@@ -1483,8 +1483,8 @@
             "min": 3.7
           },
           "overlays": [
-            "CoreArea.png",
-            "DangerArea.png"
+            "CoreArea.webp",
+            "DangerArea.webp"
           ]
         }
       ]
@@ -1520,12 +1520,12 @@
           "br": {
             "min": 3.7
           },
-          "sharedImage": "Normandy.png",
+          "sharedImage": "Normandy.webp",
           "overlays": [
-            "c.png",
-            "d.png",
-            "sb.png",
-            "sr.png"
+            "c.webp",
+            "d.webp",
+            "sb.webp",
+            "sr.webp"
           ]
         }
       ]
@@ -1557,10 +1557,10 @@
           "br": {
             "min": 1
           },
-          "sharedImage": "North Holland.png",
+          "sharedImage": "North Holland.webp",
           "overlays": [
-            "sb.png",
-            "sr.png"
+            "sb.webp",
+            "sr.webp"
           ]
         },
         {
@@ -1570,10 +1570,10 @@
             "min": 1
           },
           "folder": "North Holland/Domination #2",
-          "sharedImage": "North Holland.png",
+          "sharedImage": "North Holland.webp",
           "overlays": [
-            "sb.png",
-            "sr.png"
+            "sb.webp",
+            "sr.webp"
           ]
         }
       ]
@@ -1644,13 +1644,13 @@
             "min": 2.3
           },
           "folder": "Port Novorossiysk/Conquest #2",
-          "sharedImage": "Port Novorossiysk.png",
+          "sharedImage": "Port Novorossiysk.webp",
           "overlays": [
-            "d.png",
-            "db.png",
-            "dr.png",
-            "sb.png",
-            "sr.png"
+            "d.webp",
+            "db.webp",
+            "dr.webp",
+            "sb.webp",
+            "sr.webp"
           ]
         },
         {
@@ -1660,13 +1660,13 @@
             "min": 2.3
           },
           "folder": "Port Novorossiysk/Conquest #3",
-          "sharedImage": "Port Novorossiysk.png",
+          "sharedImage": "Port Novorossiysk.webp",
           "overlays": [
-            "c.png",
-            "d.png",
-            "n.png",
-            "sb.png",
-            "sr.png"
+            "c.webp",
+            "d.webp",
+            "n.webp",
+            "sb.webp",
+            "sr.webp"
           ]
         },
         {
@@ -1676,13 +1676,13 @@
             "min": 2.3
           },
           "folder": "Port Novorossiysk/Battle #1",
-          "sharedImage": "Port Novorossiysk.png",
+          "sharedImage": "Port Novorossiysk.webp",
           "overlays": [
-            "c.png",
-            "d.png",
-            "n.png",
-            "sb.png",
-            "sr.png"
+            "c.webp",
+            "d.webp",
+            "n.webp",
+            "sb.webp",
+            "sr.webp"
           ]
         }
       ]
@@ -1713,17 +1713,17 @@
           "br": {
             "min": 7.7
           },
-          "sharedImage": "Pradesh.png",
+          "sharedImage": "Pradesh.webp",
           "overlays": [
-            "AntiAirBlue.png",
-            "CoreAreaBlue.png",
-            "CoreAreaRed.png",
-            "DangerAreaBlue.png",
-            "DangerAreaRed.png",
-            "NotRecommendedBlue.png",
-            "NotRecommendedRed.png",
-            "SpawnAreaBlue.png",
-            "SpawnAreaRed.png"
+            "AntiAirBlue.webp",
+            "CoreAreaBlue.webp",
+            "CoreAreaRed.webp",
+            "DangerAreaBlue.webp",
+            "DangerAreaRed.webp",
+            "NotRecommendedBlue.webp",
+            "NotRecommendedRed.webp",
+            "SpawnAreaBlue.webp",
+            "SpawnAreaRed.webp"
           ]
         }
       ]
@@ -1732,8 +1732,8 @@
       "name": "Red Desert",
       "aliases": "붉은 사막",
       "slug": "red-desert",
-      "updated": "2026-09-15",
-      "updatedAt": "2026-09-15T03:19:40Z",
+      "updated": "2026-10-04",
+      "updatedAt": "2026-10-04T09:35:44Z",
       "br": {
         "min": 9.7
       },
@@ -1757,10 +1757,10 @@
           "br": {
             "min": 9.7
           },
-          "sharedImage": "Red Desert.png",
+          "sharedImage": "Red Desert.webp",
           "overlays": [
-            "sb.png",
-            "sr.png"
+            "sb.webp",
+            "sr.webp"
           ]
         }
       ]
@@ -1792,13 +1792,13 @@
           "br": {
             "min": 5
           },
-          "sharedImage": "Sands of Sinai.png",
+          "sharedImage": "Sands of Sinai.webp",
           "overlays": [
-            "CoreArea.png",
-            "DangerArea.png",
-            "NotRecommended.png",
-            "sb.png",
-            "sr.png"
+            "CoreArea.webp",
+            "DangerArea.webp",
+            "NotRecommended.webp",
+            "sb.webp",
+            "sr.webp"
           ]
         }
       ]
@@ -1844,14 +1844,14 @@
           "br": {
             "min": 5
           },
-          "sharedImage": "Second Battle of El Alamein.png",
+          "sharedImage": "Second Battle of El Alamein.webp",
           "overlays": [
-            "CoreArea.png",
-            "DangerArea.png",
-            "dr.png",
-            "NotRecommended.png",
-            "sb.png",
-            "sr.png"
+            "CoreArea.webp",
+            "DangerArea.webp",
+            "dr.webp",
+            "NotRecommended.webp",
+            "sb.webp",
+            "sr.webp"
           ]
         },
         {
@@ -1861,14 +1861,14 @@
             "min": 5
           },
           "folder": "Second Battle of El Alamein/Domination #2",
-          "sharedImage": "Second Battle of El Alamein.png",
+          "sharedImage": "Second Battle of El Alamein.webp",
           "overlays": [
-            "cb.png",
-            "cr.png",
-            "d.png",
-            "n.png",
-            "sb.png",
-            "sr.png"
+            "cb.webp",
+            "cr.webp",
+            "d.webp",
+            "n.webp",
+            "sb.webp",
+            "sr.webp"
           ]
         }
       ]
@@ -1900,7 +1900,7 @@
           "br": {
             "min": 1
           },
-          "sharedImage": "Seversk-13.png"
+          "sharedImage": "Seversk-13.webp"
         }
       ]
     },
@@ -1931,7 +1931,7 @@
           "br": {
             "min": 1
           },
-          "sharedImage": "Sinai.png"
+          "sharedImage": "Sinai.webp"
         }
       ]
     },
@@ -1962,7 +1962,7 @@
           "br": {
             "min": 6.7
           },
-          "sharedImage": "Spaceport.png"
+          "sharedImage": "Spaceport.webp"
         }
       ]
     },
@@ -1984,7 +1984,7 @@
             "min": 2.3,
             "max": 7.7
           },
-          "sharedImage": "Stalingrad.png"
+          "sharedImage": "Stalingrad.webp"
         }
       ]
     },
@@ -2019,10 +2019,10 @@
           "br": {
             "min": 5
           },
-          "sharedImage": "Sun City.png",
+          "sharedImage": "Sun City.webp",
           "overlays": [
-            "sb.png",
-            "sr.png"
+            "sb.webp",
+            "sr.webp"
           ]
         }
       ]
@@ -2054,7 +2054,7 @@
           "br": {
             "min": 9.7
           },
-          "sharedImage": "Surroundings of Volokolamsk.png"
+          "sharedImage": "Surroundings of Volokolamsk.webp"
         }
       ]
     },
@@ -2087,12 +2087,12 @@
           "br": {
             "min": 2.3
           },
-          "sharedImage": "Sweden.png",
+          "sharedImage": "Sweden.webp",
           "overlays": [
-            "c.png",
-            "d.png",
-            "sb.png",
-            "sr.png"
+            "c.webp",
+            "d.webp",
+            "sb.webp",
+            "sr.webp"
           ]
         }
       ]
@@ -2124,14 +2124,14 @@
           "br": {
             "min": 2.3
           },
-          "sharedImage": "Test Site-2271.png",
+          "sharedImage": "Test Site-2271.webp",
           "overlays": [
-            "c.png",
-            "d.png",
-            "db.png",
-            "dr.png",
-            "sb.png",
-            "sr.png"
+            "c.webp",
+            "d.webp",
+            "db.webp",
+            "dr.webp",
+            "sb.webp",
+            "sr.webp"
           ]
         }
       ]
@@ -2179,7 +2179,7 @@
           "br": {
             "min": 4.7
           },
-          "sharedImage": "Tunisia.png"
+          "sharedImage": "Tunisia.webp"
         },
         {
           "mode": "domination",
@@ -2188,7 +2188,7 @@
             "min": 4.7
           },
           "folder": "Tunisia/Domination #2",
-          "sharedImage": "Tunisia.png"
+          "sharedImage": "Tunisia.webp"
         }
       ]
     },
@@ -2233,12 +2233,12 @@
           "br": {
             "min": 5
           },
-          "sharedImage": "Vietnam.png",
+          "sharedImage": "Vietnam.webp",
           "overlays": [
-            "d.png",
-            "n.png",
-            "sb.png",
-            "sr.png"
+            "d.webp",
+            "n.webp",
+            "sb.webp",
+            "sr.webp"
           ]
         },
         {
@@ -2248,13 +2248,13 @@
             "min": 5
           },
           "folder": "Vietnam/Domination #2",
-          "sharedImage": "Vietnam.png",
+          "sharedImage": "Vietnam.webp",
           "overlays": [
-            "d.png",
-            "nb.png",
-            "nr.png",
-            "sb.png",
-            "sr.png"
+            "d.webp",
+            "nb.webp",
+            "nr.webp",
+            "sb.webp",
+            "sr.webp"
           ]
         }
       ]
@@ -2277,7 +2277,7 @@
             "min": 3.7,
             "max": 6.7
           },
-          "sharedImage": "Volokolamsk.png"
+          "sharedImage": "Volokolamsk.webp"
         }
       ]
     },
@@ -2312,16 +2312,16 @@
             "min": 1,
             "max": 8.7
           },
-          "sharedImage": "White Rock Fortress.png",
+          "sharedImage": "White Rock Fortress.webp",
           "overlays": [
-            "CoreAreaBlue.png",
-            "CoreAreaRed.png",
-            "DangerArea.png",
-            "DangerAreaBlue.png",
-            "DangerAreaRed.png",
-            "NotRecommended.png",
-            "SpawnAreaBlue.png",
-            "SpawnAreaRed.png"
+            "CoreAreaBlue.webp",
+            "CoreAreaRed.webp",
+            "DangerArea.webp",
+            "DangerAreaBlue.webp",
+            "DangerAreaRed.webp",
+            "NotRecommended.webp",
+            "SpawnAreaBlue.webp",
+            "SpawnAreaRed.webp"
           ]
         }
       ]

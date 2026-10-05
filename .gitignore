@@ -2,9 +2,6 @@
 *.ai
 ~ai-*.tmp
 
-# Raw tactical screenshots stay local; committed/deployed copies use WebP.
-/img/**/[sS][cC][rR]_*.png
-
 # Local tactical-map extraction tools and reviewed coordinates.
 /scripts/import-map-tactics.py
 /scripts/LOCAL_TACTICAL_AUTOMATION.md
@@ -15,6 +12,7 @@
 *.py
 !/scripts/export-replay-layout.py
 !/scripts/sync-war-thunder-units.py
+!/scripts/convert-png-assets.py
 *.psd
 
 # Internal documentation stays on local machines.
@@ -31,6 +29,7 @@
 !/generate-comment-image-manifest.mjs
 !/scripts/generate-map-catalog.mjs
 !/scripts/test-map-summary-html.mjs
+!/scripts/test-webp-assets.mjs
 /assets/data/ReplayCalibration
-img/Surroundings of Volokolamsk/Surroundings of Volokolamsk v1.png
-img/Volokolamsk/Volokolamsk v1.png
+img/Surroundings of Volokolamsk/Surroundings of Volokolamsk v1.webp
+img/Volokolamsk/Volokolamsk v1.webp

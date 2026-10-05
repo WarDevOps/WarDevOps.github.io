@@ -717,6 +717,11 @@ export const commentImages = Object.freeze([
     "label": "scr_ (9).webp"
   },
   {
+    "id": "Alaska/scr_strike01.mp4",
+    "path": "img/Alaska/scr_strike01.mp4",
+    "label": "scr_strike01.mp4"
+  },
+  {
     "id": "American Desert/scr_ (1).webp",
     "path": "img/American Desert/scr_ (1).webp",
     "label": "scr_ (1).webp"
@@ -2222,6 +2227,11 @@ export const commentImages = Object.freeze([
     "label": "scr_ (52).webp"
   },
   {
+    "id": "Darwin Hill/scr_ (53).webp",
+    "path": "img/Darwin Hill/scr_ (53).webp",
+    "label": "scr_ (53).webp"
+  },
+  {
     "id": "Darwin Hill/scr_ (6).webp",
     "path": "img/Darwin Hill/scr_ (6).webp",
     "label": "scr_ (6).webp"
@@ -2500,5 +2510,110 @@ export const commentImages = Object.freeze([
     "id": "Golden Quarry/scr_9.webp",
     "path": "img/Golden Quarry/scr_9.webp",
     "label": "scr_9.webp"
+  },
+  {
+    "id": "Red Desert/scr_ (1).webp",
+    "path": "img/Red Desert/scr_ (1).webp",
+    "label": "scr_ (1).webp"
+  },
+  {
+    "id": "Red Desert/scr_ (2).webp",
+    "path": "img/Red Desert/scr_ (2).webp",
+    "label": "scr_ (2).webp"
+  },
+  {
+    "id": "Red Desert/scr_ (3).webp",
+    "path": "img/Red Desert/scr_ (3).webp",
+    "label": "scr_ (3).webp"
+  },
+  {
+    "id": "Red Desert/scr_ (4).webp",
+    "path": "img/Red Desert/scr_ (4).webp",
+    "label": "scr_ (4).webp"
+  },
+  {
+    "id": "Red Desert/scr_ (5).webp",
+    "path": "img/Red Desert/scr_ (5).webp",
+    "label": "scr_ (5).webp"
+  },
+  {
+    "id": "Red Desert/scr_ (6).webp",
+    "path": "img/Red Desert/scr_ (6).webp",
+    "label": "scr_ (6).webp"
+  },
+  {
+    "id": "Red Desert/scr_ (7).webp",
+    "path": "img/Red Desert/scr_ (7).webp",
+    "label": "scr_ (7).webp"
+  },
+  {
+    "id": "Red Desert/scr_ (8).webp",
+    "path": "img/Red Desert/scr_ (8).webp",
+    "label": "scr_ (8).webp"
+  },
+  {
+    "id": "Red Desert/scr_ (9).webp",
+    "path": "img/Red Desert/scr_ (9).webp",
+    "label": "scr_ (9).webp"
+  },
+  {
+    "id": "Sinai/scr_ (1).webp",
+    "path": "img/Sinai/scr_ (1).webp",
+    "label": "scr_ (1).webp"
+  },
+  {
+    "id": "Sinai/scr_ (10).webp",
+    "path": "img/Sinai/scr_ (10).webp",
+    "label": "scr_ (10).webp"
+  },
+  {
+    "id": "Sinai/scr_ (11).webp",
+    "path": "img/Sinai/scr_ (11).webp",
+    "label": "scr_ (11).webp"
+  },
+  {
+    "id": "Sinai/scr_ (12).webp",
+    "path": "img/Sinai/scr_ (12).webp",
+    "label": "scr_ (12).webp"
+  },
+  {
+    "id": "Sinai/scr_ (2).webp",
+    "path": "img/Sinai/scr_ (2).webp",
+    "label": "scr_ (2).webp"
+  },
+  {
+    "id": "Sinai/scr_ (3).webp",
+    "path": "img/Sinai/scr_ (3).webp",
+    "label": "scr_ (3).webp"
+  },
+  {
+    "id": "Sinai/scr_ (4).webp",
+    "path": "img/Sinai/scr_ (4).webp",
+    "label": "scr_ (4).webp"
+  },
+  {
+    "id": "Sinai/scr_ (5).webp",
+    "path": "img/Sinai/scr_ (5).webp",
+    "label": "scr_ (5).webp"
+  },
+  {
+    "id": "Sinai/scr_ (6).webp",
+    "path": "img/Sinai/scr_ (6).webp",
+    "label": "scr_ (6).webp"
+  },
+  {
+    "id": "Sinai/scr_ (7).webp",
+    "path": "img/Sinai/scr_ (7).webp",
+    "label": "scr_ (7).webp"
+  },
+  {
+    "id": "Sinai/scr_ (8).webp",
+    "path": "img/Sinai/scr_ (8).webp",
+    "label": "scr_ (8).webp"
+  },
+  {
+    "id": "Sinai/scr_ (9).webp",
+    "path": "img/Sinai/scr_ (9).webp",
+    "label": "scr_ (9).webp"
   }
 ]);

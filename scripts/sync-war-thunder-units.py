@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import argparse
 import concurrent.futures
+import io
 import json
 import os
 import re
@@ -21,6 +22,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 from lxml import html
+from PIL import Image
 
 
 WIKI_ROOT = "https://wiki.warthunder.com"
@@ -70,7 +72,7 @@ def normalize_text(value: str) -> str:
 def fetch_bytes(url: str, retries: int = 4, timeout: int = 45) -> bytes:
     last_error: Exception | None = None
     for attempt in range(retries):
-        request = urllib.request.Request(url, headers={"User-Agent": USER_AGENT, "Accept": "text/html,image/png,*/*"})
+        request = urllib.request.Request(url, headers={"User-Agent": USER_AGENT, "Accept": "text/html,image/webp,image/*,*/*"})
         try:
             with urllib.request.urlopen(request, timeout=timeout) as response:
                 return response.read()
@@ -187,22 +189,29 @@ def include_in_tier_catalog(category: str, wiki_id: str) -> bool:
     return category != "tank" or not wiki_id.endswith("_launcher")
 
 
-def valid_png(path: Path) -> bool:
+def valid_webp(path: Path) -> bool:
     try:
-        return path.is_file() and path.stat().st_size > 100 and path.read_bytes()[:8] == b"\x89PNG\r\n\x1a\n"
+        signature = path.read_bytes()[:12]
+        return path.is_file() and path.stat().st_size > 100 and signature[:4] == b"RIFF" and signature[8:12] == b"WEBP"
     except OSError:
         return False
 
 
-def save_png(url: str, destination: Path) -> None:
-    if valid_png(destination):
+def save_webp(url: str, destination: Path) -> None:
+    if valid_webp(destination):
         return
     data = fetch_bytes(url)
-    if data[:8] != b"\x89PNG\r\n\x1a\n":
-        raise RuntimeError(f"Image is not PNG: {url}")
     destination.parent.mkdir(parents=True, exist_ok=True)
     temporary = destination.with_suffix(destination.suffix + ".download")
-    temporary.write_bytes(data)
+    try:
+        with Image.open(io.BytesIO(data)) as image:
+            image.load()
+            image.save(temporary, format="WEBP", quality=90, method=6)
+        with Image.open(temporary) as converted:
+            converted.verify()
+    except Exception as error:
+        temporary.unlink(missing_ok=True)
+        raise RuntimeError(f"Unable to convert image to WebP: {url}") from error
     os.replace(temporary, destination)
 
 
@@ -233,9 +242,9 @@ def parse_unit(category: str, wiki_id: str, image_root: Path, download_images: b
         )
     if not rank:
         raise RuntimeError(f"Unknown rank {rank_roman!r} for {wiki_id}")
-    file_name = f"{wiki_id}.png"
+    file_name = f"{wiki_id}.webp"
     if download_images:
-        save_png(image_url, image_root / CATEGORIES[category]["folder"] / file_name)
+        save_webp(image_url, image_root / CATEGORIES[category]["folder"] / file_name)
     unit = {
         "wikiId": wiki_id,
         "name": name,

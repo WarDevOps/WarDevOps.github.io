@@ -4,7 +4,7 @@ import { createVectorEditor } from './vector-editor.js?v=paste-validation-202609
 import { validateVectorGroups, pruneGroups } from './vector-model.js?v=route-selection-20260923';
 import { validatePastedView } from './paste-validation.js';
 let vectorEditor = null;
-    import { commentImages } from './comment-images.js?v=comment-images-f7412e0b8f19';
+    import { commentImages } from './comment-images.js?v=comment-images-de33209fa57e';
     import { defaultMarkerLayout, maps, translations } from './data.js?v=tank-marker-type-20260923';
     import { normalizeTacticalSummary, resolveTacticalSummary, withVariationSummary } from './tactical-summary.js?v=variation-switch-20260914';
     import { acceptUpstreamMap, isMapSyncState, markLayoutAsLocalEdits, markMapEdited, mergeMapLayouts, sourceRevision } from './marker-merge.js?v=mobile-default-layout-20260917';
@@ -148,25 +148,6 @@ let vectorEditor = null;
       return webpId !== imageId && COMMENT_IMAGES_BY_ID.has(webpId) ? webpId : null;
     }
     const COMMENT_IMAGES = Object.freeze([...COMMENT_IMAGES_BY_ID.values()]);
-    function webpAssetPath(pngPath) {
-      return pngPath.replace(/\.png(?=([?#].*)?$)/i, ".webp");
-    }
-    function tryPngImageFallback(image) {
-      const pngPath = image.dataset.pngFallback;
-      if (!pngPath || image.dataset.webpFallbackPending !== "true") return false;
-      image.dataset.webpFallbackPending = "false";
-      image.src = pngPath;
-      return true;
-    }
-    function setOptimizedImageSource(image, pngPath) {
-      if (image.dataset.pngFallbackBound !== "true") {
-        image.dataset.pngFallbackBound = "true";
-        image.addEventListener("error", () => tryPngImageFallback(image));
-      }
-      image.dataset.pngFallback = pngPath;
-      image.dataset.webpFallbackPending = "true";
-      image.src = webpAssetPath(pngPath);
-    }
     function setCommentMediaSource(media, item) {
       if (media instanceof HTMLVideoElement) {
         media.pause();
@@ -176,12 +157,6 @@ let vectorEditor = null;
         if (playPromise?.catch) playPromise.catch(() => {});
         return;
       }
-      if (/\.png(?=([?#].*)?$)/i.test(item.path)) {
-        setOptimizedImageSource(media, item.path);
-        return;
-      }
-      media.dataset.pngFallback = "";
-      media.dataset.webpFallbackPending = "false";
       media.src = item.path;
     }
     function createCommentMediaElement(item, { thumbnail = false } = {}) {
@@ -233,21 +208,21 @@ let vectorEditor = null;
     // Every map supports these optional transparent area overlays. Short names are canonical;
     // long names remain as fallbacks for existing map assets. A missing file is ignored.
     const MAP_AREA_OVERLAYS = Object.freeze([
-      { type: "coreArea", files: ["c.png", "CoreArea.png"] },
-      { type: "coreArea", files: ["cb.png", "CoreAreaBlue.png"], team: "Blue" },
-      { type: "coreArea", files: ["cr.png", "CoreAreaRed.png"], team: "Red" },
-      { type: "dangerArea", files: ["d.png", "DangerArea.png"] },
-      { type: "dangerArea", files: ["db.png", "DangerAreaBlue.png"], team: "Blue" },
-      { type: "dangerArea", files: ["dr.png", "DangerAreaRed.png"], team: "Red" },
-      { type: "notRecommended", files: ["n.png", "NotRecommended.png"] },
-      { type: "notRecommended", files: ["nb.png", "NotRecommendedBlue.png"], team: "Blue" },
-      { type: "notRecommended", files: ["nr.png", "NotRecommendedRed.png"], team: "Red" },
-      { type: "antiAirArea", files: ["a.png", "AntiAir.png", "AntiAirArea.png"] },
-      { type: "antiAirArea", files: ["ab.png", "AntiAirBlue.png"], team: "Blue" },
-      { type: "antiAirArea", files: ["ar.png", "AntiAirRed.png"], team: "Red" },
-      { type: "spawnArea", files: ["s.png", "SpawnArea.png"] },
-      { type: "spawnArea", files: ["sb.png", "SpawnAreaBlue.png"], team: "Blue" },
-      { type: "spawnArea", files: ["sr.png", "SpawnAreaRed.png"], team: "Red" }
+      { type: "coreArea", files: ["c.webp", "CoreArea.webp"] },
+      { type: "coreArea", files: ["cb.webp", "CoreAreaBlue.webp"], team: "Blue" },
+      { type: "coreArea", files: ["cr.webp", "CoreAreaRed.webp"], team: "Red" },
+      { type: "dangerArea", files: ["d.webp", "DangerArea.webp"] },
+      { type: "dangerArea", files: ["db.webp", "DangerAreaBlue.webp"], team: "Blue" },
+      { type: "dangerArea", files: ["dr.webp", "DangerAreaRed.webp"], team: "Red" },
+      { type: "notRecommended", files: ["n.webp", "NotRecommended.webp"] },
+      { type: "notRecommended", files: ["nb.webp", "NotRecommendedBlue.webp"], team: "Blue" },
+      { type: "notRecommended", files: ["nr.webp", "NotRecommendedRed.webp"], team: "Red" },
+      { type: "antiAirArea", files: ["a.webp", "AntiAir.webp", "AntiAirArea.webp"] },
+      { type: "antiAirArea", files: ["ab.webp", "AntiAirBlue.webp"], team: "Blue" },
+      { type: "antiAirArea", files: ["ar.webp", "AntiAirRed.webp"], team: "Red" },
+      { type: "spawnArea", files: ["s.webp", "SpawnArea.webp"] },
+      { type: "spawnArea", files: ["sb.webp", "SpawnAreaBlue.webp"], team: "Blue" },
+      { type: "spawnArea", files: ["sr.webp", "SpawnAreaRed.webp"], team: "Red" }
     ]);
     const unavailableMapOverlayFiles = new Set();
     // Larger values render above smaller values. Equal-priority markers keep their placement order.
@@ -299,14 +274,14 @@ let vectorEditor = null;
       "Stalingrad"
     ]);
     const SPECIAL_TANK_ICON_PATHS = Object.freeze({
-      lightTank: "/Legend/lt w b.png",
-      lightTankRed: "/Legend/lt w r.png",
-      mainBattleTank: "/Legend/mbt w b.png",
-      mainBattleTankRed: "/Legend/mbt w r.png",
-      tankDestroyer: "/Legend/td w b.png",
-      tankDestroyerRed: "/Legend/td w r.png",
-      antiAir: "/Legend/aa w b.png",
-      antiAirRed: "/Legend/aa w r.png"
+      lightTank: "/Legend/lt w b.webp",
+      lightTankRed: "/Legend/lt w r.webp",
+      mainBattleTank: "/Legend/mbt w b.webp",
+      mainBattleTankRed: "/Legend/mbt w r.webp",
+      tankDestroyer: "/Legend/td w b.webp",
+      tankDestroyerRed: "/Legend/td w r.webp",
+      antiAir: "/Legend/aa w b.webp",
+      antiAirRed: "/Legend/aa w r.webp"
     });
     // Role markers are attached from a tank marker's context menu, never placed directly.
     const PLACEMENT_DISABLED_MARKER_TYPES = new Set([
@@ -602,7 +577,7 @@ let vectorEditor = null;
       document.querySelector('meta[name="twitter:image"]').setAttribute("content", previewUrl);
     }
     function updateLibraryDocumentMetadata() {
-      updatePrimaryImageMetadata("https://wardevops.github.io/", "https://wardevops.github.io/img/38th%20Parallel/38th%20Parallel.png", "38th Parallel map for War Thunder Ground Battles");
+      updatePrimaryImageMetadata("https://wardevops.github.io/", "https://wardevops.github.io/img/38th%20Parallel/38th%20Parallel.webp", "38th Parallel map for War Thunder Ground Battles");
       $(".hero").classList.remove("map-detail-hero");
       document.title = t("pageTitle");
       pageTitleHeading.textContent = "War Thunder Map Guides & Tactics";
@@ -611,10 +586,10 @@ let vectorEditor = null;
       document.querySelector('meta[property="og:title"]').setAttribute("content", "War Thunder Map Guide & Tactics | WarDevOps");
       document.querySelector('meta[property="og:description"]').setAttribute("content", t("metaDescription"));
       document.querySelector('meta[property="og:url"]').setAttribute("content", "https://wardevops.github.io/");
-      document.querySelector('meta[property="og:image"]').setAttribute("content", "https://wardevops.github.io/img/38th%20Parallel/38th%20Parallel.png");
+      document.querySelector('meta[property="og:image"]').setAttribute("content", "https://wardevops.github.io/img/38th%20Parallel/38th%20Parallel.webp");
       document.querySelector('meta[name="twitter:title"]').setAttribute("content", "War Thunder Map Guide & Tactics | WarDevOps");
       document.querySelector('meta[name="twitter:description"]').setAttribute("content", t("metaDescription"));
-      document.querySelector('meta[name="twitter:image"]').setAttribute("content", "https://wardevops.github.io/img/38th%20Parallel/38th%20Parallel.png");
+      document.querySelector('meta[name="twitter:image"]').setAttribute("content", "https://wardevops.github.io/img/38th%20Parallel/38th%20Parallel.webp");
     }
     function updateSummaryPreview() {
       const button = $("#summary-read-more");
@@ -2200,7 +2175,7 @@ let vectorEditor = null;
         layer = document.createElement("div");
         layer.className = "map-wip-layer";
         const notice = document.createElement("img");
-        notice.src = "/Legend/WIP.png";
+        notice.src = "/Legend/WIP.webp";
         notice.draggable = false;
         layer.append(notice);
         stage.append(layer);
@@ -2571,7 +2546,7 @@ let vectorEditor = null;
     }
 
     function mapPath(map, team) {
-      const image = map.sharedImage || map.teamImages?.[team] || `${team}.png`;
+      const image = map.sharedImage || map.teamImages?.[team] || `${team}.webp`;
       return `/img/${encodeAssetPath(map.folder)}/${encodeURIComponent(image)}`;
     }
     function visibleMaps() {
@@ -2653,7 +2628,7 @@ let vectorEditor = null;
       modalAnnotationLayer.replaceChildren();
       modalMarkerLayer.replaceChildren();
       modalImage.alt = `${mapLabel(state.selected)} ${mapVariationLabel(state.selected)} ${state.team}`;
-      setOptimizedImageSource(modalImage, mapPath(state.selected, state.team));
+      modalImage.src = mapPath(state.selected, state.team);
       $("#modal-title").textContent = `${mapLabel(state.selected)} · ${mapVariationLabel(state.selected)} · ${state.team.toUpperCase()} ${t("teamLabel")}`;
     }
     function selectMap(map, team = state.team, variationId, { historyMode = "replace", syncUrl = true } = {}) {
@@ -2677,7 +2652,7 @@ let vectorEditor = null;
       annotationLayer.replaceChildren();
       imageStatus.textContent = t("loading");
       mapImage.alt = `${mapLabel(state.selected)} ${mapVariationLabel(state.selected)} ${team}`;
-      setOptimizedImageSource(mapImage, mapPath(state.selected, team));
+      mapImage.src = mapPath(state.selected, team);
       if (dialog.open) setModalMapSource();
       renderList();
       if (syncUrl) updateUrl(historyMode);
@@ -3096,7 +3071,6 @@ let vectorEditor = null;
       renderMarkers();
     });
     mapImage.addEventListener("error", () => {
-      if (tryPngImageFallback(mapImage)) return;
       mapStage.classList.add("load-error");
       mapOverlayLayer.replaceChildren();
       annotationLayer.replaceChildren();
@@ -3109,7 +3083,6 @@ let vectorEditor = null;
       renderMarkers();
     });
     modalImage.addEventListener("error", () => {
-      if (tryPngImageFallback(modalImage)) return;
       modalMapCloseLayer.hidden = true;
       modalMapOverlayLayer.replaceChildren();
       modalAnnotationLayer.replaceChildren();

@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://wardevops.github.io/</loc>
-    <lastmod>2026-10-04</lastmod>
+    <lastmod>2026-08-28</lastmod>
   </url>
   <url>
     <loc>https://wardevops.github.io/tier-list/</loc>
@@ -53,12 +53,20 @@
     <lastmod>2026-09-27</lastmod>
   </url>
   <url>
+    <loc>https://wardevops.github.io/maps/ash-river/</loc>
+    <lastmod>2026-09-02</lastmod>
+  </url>
+  <url>
     <loc>https://wardevops.github.io/maps/attica/</loc>
     <lastmod>2026-09-27</lastmod>
   </url>
   <url>
     <loc>https://wardevops.github.io/maps/battle-of-hurtgen-forest/</loc>
     <lastmod>2026-09-29</lastmod>
+  </url>
+  <url>
+    <loc>https://wardevops.github.io/maps/berlin/</loc>
+    <lastmod>2026-09-11</lastmod>
   </url>
   <url>
     <loc>https://wardevops.github.io/maps/breslau/</loc>
@@ -78,7 +86,7 @@
   </url>
   <url>
     <loc>https://wardevops.github.io/maps/darwin-hill/</loc>
-    <lastmod>2026-10-04</lastmod>
+    <lastmod>2026-10-05</lastmod>
   </url>
   <url>
     <loc>https://wardevops.github.io/maps/eastern-europe/</loc>
@@ -109,6 +117,14 @@
     <lastmod>2026-09-29</lastmod>
   </url>
   <url>
+    <loc>https://wardevops.github.io/maps/frozen-pass/</loc>
+    <lastmod>2026-08-25</lastmod>
+  </url>
+  <url>
+    <loc>https://wardevops.github.io/maps/fulda/</loc>
+    <lastmod>2026-10-05</lastmod>
+  </url>
+  <url>
     <loc>https://wardevops.github.io/maps/golden-quarry/</loc>
     <lastmod>2026-09-27</lastmod>
   </url>
@@ -119,6 +135,18 @@
   <url>
     <loc>https://wardevops.github.io/maps/japan/</loc>
     <lastmod>2026-09-23</lastmod>
+  </url>
+  <url>
+    <loc>https://wardevops.github.io/maps/jungle/</loc>
+    <lastmod>2026-09-22</lastmod>
+  </url>
+  <url>
+    <loc>https://wardevops.github.io/maps/karelia/</loc>
+    <lastmod>2026-09-27</lastmod>
+  </url>
+  <url>
+    <loc>https://wardevops.github.io/maps/kuban/</loc>
+    <lastmod>2026-09-27</lastmod>
   </url>
   <url>
     <loc>https://wardevops.github.io/maps/maginot-line/</loc>
@@ -133,6 +161,10 @@
     <lastmod>2026-09-15</lastmod>
   </url>
   <url>
+    <loc>https://wardevops.github.io/maps/normandy/</loc>
+    <lastmod>2026-09-30</lastmod>
+  </url>
+  <url>
     <loc>https://wardevops.github.io/maps/north-holland/</loc>
     <lastmod>2026-09-15</lastmod>
   </url>
@@ -141,8 +173,16 @@
     <lastmod>2026-09-15</lastmod>
   </url>
   <url>
+    <loc>https://wardevops.github.io/maps/port-novorossiysk/</loc>
+    <lastmod>2026-09-30</lastmod>
+  </url>
+  <url>
     <loc>https://wardevops.github.io/maps/pradesh/</loc>
     <lastmod>2026-08-31</lastmod>
+  </url>
+  <url>
+    <loc>https://wardevops.github.io/maps/red-desert/</loc>
+    <lastmod>2026-10-04</lastmod>
   </url>
   <url>
     <loc>https://wardevops.github.io/maps/sands-of-sinai/</loc>
@@ -165,7 +205,39 @@
     <lastmod>2026-09-30</lastmod>
   </url>
   <url>
+    <loc>https://wardevops.github.io/maps/stalingrad/</loc>
+    <lastmod>2026-08-25</lastmod>
+  </url>
+  <url>
+    <loc>https://wardevops.github.io/maps/sun-city/</loc>
+    <lastmod>2026-09-23</lastmod>
+  </url>
+  <url>
+    <loc>https://wardevops.github.io/maps/surroundings-of-volokolamsk/</loc>
+    <lastmod>2026-09-15</lastmod>
+  </url>
+  <url>
+    <loc>https://wardevops.github.io/maps/sweden/</loc>
+    <lastmod>2026-09-27</lastmod>
+  </url>
+  <url>
+    <loc>https://wardevops.github.io/maps/test-site-2271/</loc>
+    <lastmod>2026-09-30</lastmod>
+  </url>
+  <url>
+    <loc>https://wardevops.github.io/maps/tunisia/</loc>
+    <lastmod>2026-09-17</lastmod>
+  </url>
+  <url>
     <loc>https://wardevops.github.io/maps/vietnam/</loc>
     <lastmod>2026-09-24</lastmod>
+  </url>
+  <url>
+    <loc>https://wardevops.github.io/maps/volokolamsk/</loc>
+    <lastmod>2026-08-31</lastmod>
+  </url>
+  <url>
+    <loc>https://wardevops.github.io/maps/white-rock-fortress/</loc>
+    <lastmod>2026-09-02</lastmod>
   </url>
 </urlset>

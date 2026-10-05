@@ -26,20 +26,20 @@ if (tierRoot) {
 
   const UNIT_CLASSES = Object.freeze({
     tank: Object.freeze([
-      { id: "lt", labelKey: "lightTank", icon: "icon/LT.png" },
-      { id: "mbt", labelKey: "mainBattleTank", icon: "icon/MBT.png" },
-      { id: "ht", labelKey: "heavyTank", icon: "icon/HT.png" },
-      { id: "td", labelKey: "tankDestroyer", icon: "icon/TD.png" },
-      { id: "aa", labelKey: "antiAir", icon: "icon/AA.png" }
+      { id: "lt", labelKey: "lightTank", icon: "icon/LT.webp" },
+      { id: "mbt", labelKey: "mainBattleTank", icon: "icon/MBT.webp" },
+      { id: "ht", labelKey: "heavyTank", icon: "icon/HT.webp" },
+      { id: "td", labelKey: "tankDestroyer", icon: "icon/TD.webp" },
+      { id: "aa", labelKey: "antiAir", icon: "icon/AA.webp" }
     ]),
     air: Object.freeze([
-      { id: "fighter", labelKey: "fighter", icon: "icon/Fighter.png" },
-      { id: "bomber", labelKey: "bomber", icon: "icon/Bomber.png" },
-      { id: "striker", labelKey: "striker", icon: "icon/Striker.png" }
+      { id: "fighter", labelKey: "fighter", icon: "icon/Fighter.webp" },
+      { id: "bomber", labelKey: "bomber", icon: "icon/Bomber.webp" },
+      { id: "striker", labelKey: "striker", icon: "icon/Striker.webp" }
     ]),
     heli: Object.freeze([
-      { id: "attack-heli", labelKey: "attackHeli", icon: "icon/Attack Heli.png" },
-      { id: "utility-heli", labelKey: "utilityHeli", icon: "icon/Utillity Heli.png" }
+      { id: "attack-heli", labelKey: "attackHeli", icon: "icon/Attack Heli.webp" },
+      { id: "utility-heli", labelKey: "utilityHeli", icon: "icon/Utillity Heli.webp" }
     ])
   });
 
@@ -230,7 +230,7 @@ if (tierRoot) {
   }
 
   function itemName(file) {
-    return file.replace(/\.png$/i, "");
+    return file.replace(/\.webp$/i, "");
   }
 
   function unitRecord(category, file) {
@@ -703,13 +703,13 @@ if (tierRoot) {
       rowY += rowHeight;
     });
 
-    const blob = await new Promise(resolve => canvas.toBlob(resolve, "image/png"));
-    if (!blob) throw new Error("PNG encoding failed");
+    const blob = await new Promise(resolve => canvas.toBlob(resolve, "image/webp", .92));
+    if (!blob) throw new Error("WebP encoding failed");
     const downloadUrl = URL.createObjectURL(blob);
     const link = document.createElement("a");
     const dateStamp = new Date().toISOString().slice(0, 10).replaceAll("-", "");
     link.href = downloadUrl;
-    link.download = `wardevops-${activeCategory}-tier-list-${dateStamp}.png`;
+    link.download = `wardevops-${activeCategory}-tier-list-${dateStamp}.webp`;
     document.body.append(link);
     link.click();
     link.remove();
