@@ -19,7 +19,7 @@
     "Campania": "2026-09-03",
     "Cargo Port": "2026-09-23",
     "Carpathians": "2026-09-23",
-    "Darwin Hill": "2026-10-05",
+    "Darwin Hill": "2026-10-06",
     "Eastern Europe": "2026-09-30",
     "European Province": "2026-09-23",
     "Fields of Normandy": "2026-09-23",
@@ -43,7 +43,7 @@
     "Poland": "2026-09-15",
     "Port Novorossiysk": "2026-09-30",
     "Pradesh": "2026-08-31",
-    "Red Desert": "2026-10-04",
+    "Red Desert": "2026-10-05",
     "Sands of Sinai": "2026-09-23",
     "Second Battle of El Alamein": "2026-09-27",
     "Seversk-13": "2026-09-14",
@@ -78,7 +78,7 @@
     "Campania": "2026-09-03T01:49:21Z",
     "Cargo Port": "2026-09-23T04:02:44Z",
     "Carpathians": "2026-09-23T01:37:01Z",
-    "Darwin Hill": "2026-10-05T13:44:29Z",
+    "Darwin Hill": "2026-10-05T16:55:26Z",
     "Eastern Europe": "2026-09-30T06:02:26Z",
     "European Province": "2026-09-23T01:49:25Z",
     "Fields of Normandy": "2026-09-23T02:21:06Z",
@@ -100,7 +100,7 @@
     "North Holland": "2026-09-14T23:28:36Z",
     "Poland": "2026-09-15T02:55:29Z",
     "Port Novorossiysk": "2026-09-30T05:34:11Z",
-    "Red Desert": "2026-10-04T09:35:44Z",
+    "Red Desert": "2026-10-05T14:21:54Z",
     "Sands of Sinai": "2026-09-23T06:07:25Z",
     "Second Battle of El Alamein": "2026-09-27T04:24:11Z",
     "Seversk-13": "2026-09-13T19:59:09Z",
@@ -12071,6 +12071,22 @@
         "x": 10.81,
         "y": 34.77,
         "parentTankId": "vector-fc1083e2-9819-48fb-853c-a8f61728b49a"
+      },
+      {
+        "id": "vector-fbabcfa2-52b2-4d2f-b235-77efdbda2efe",
+        "type": "mainBattleTankRed",
+        "x": 40.18,
+        "y": 55.52,
+        "commentImages": [
+          "Darwin Hill/scr_ (53).webp"
+        ]
+      },
+      {
+        "id": "vector-779d4120-2075-4f86-8790-49b6a1eef123",
+        "type": "spawnKill",
+        "x": 40.18,
+        "y": 55.52,
+        "parentTankId": "vector-fbabcfa2-52b2-4d2f-b235-77efdbda2efe"
       }
     ],
     "Darwin Hill::conquest-2|Red": [
@@ -12619,7 +12635,10 @@
         "id": "muvawut2-3ne6fg",
         "type": "mainBattleTankRed",
         "x": 40.18,
-        "y": 55.52
+        "y": 55.52,
+        "commentImages": [
+          "Darwin Hill/scr_ (53).webp"
+        ]
       },
       {
         "id": "muvawwge-rrsnb0",
@@ -20947,7 +20966,14 @@
         "parentTankId": "mtgrop6a-6aqstf"
       }
     ],
-    "Red Desert::domination-1|Blue": [],
+    "Red Desert::domination-1|Blue": [
+      {
+        "id": "muvc95z7-tddeeu",
+        "type": "mainBattleTank",
+        "x": 20.11,
+        "y": 34.58
+      }
+    ],
     "Red Desert::domination-1|Red": [
       {
         "id": "mutmegar-y70il8",
@@ -25517,6 +25543,7 @@
         "parentTankId": "mu07f13l-8n55aq"
       }
     ],
+    "Tunisia::domination-2|Blue": [],
     "Vietnam::domination-1|Red": [
       {
         "id": "vietnam-red-unit-01",
@@ -27155,8 +27182,7 @@
         "x": 32.89,
         "y": 17.37
       }
-    ],
-    "Tunisia::domination-2|Blue": []
+    ]
   },
   "annotations": {
     "38th Parallel::domination-1|Red": [
@@ -51148,6 +51174,15 @@
           }
         ],
         "dangerRoute": true
+      },
+      {
+        "id": "vector-eaa78541-78a7-4401-b75c-be05e8a88324",
+        "type": "aimHere",
+        "parentTankId": "vector-fbabcfa2-52b2-4d2f-b235-77efdbda2efe",
+        "startX": 40.18,
+        "startY": 55.52,
+        "endX": 43.31,
+        "endY": 24.24
       }
     ],
     "Darwin Hill::conquest-2|Red": [
@@ -80763,6 +80798,7 @@
         "endY": 75.33
       }
     ],
+    "Tunisia::domination-2|Blue": [],
     "Vietnam::domination-1|Red": [
       {
         "id": "vietnam-red-aim-01",
@@ -84285,8 +84321,7 @@
           }
         ]
       }
-    ],
-    "Tunisia::domination-2|Blue": []
+    ]
   },
   "vectorGroups": {
     "Alaska::domination-1|Red": [],
@@ -84305,6 +84340,6 @@
     "Port Novorossiysk::battle-1|Red": [],
     "Sands of Sinai::domination-1|Blue": []
   },
-  "updatedAt": "2026-10-05T13:44:29.530Z",
-  "exportedAt": "2026-10-05T13:44:37.137Z"
+  "updatedAt": "2026-10-05T16:55:26.854Z",
+  "exportedAt": "2026-10-05T16:56:31.556Z"
 }
