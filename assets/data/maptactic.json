@@ -28,7 +28,7 @@
     "Fire Arc": "2026-09-23",
     "Flanders": "2026-09-29",
     "Frozen Pass": "2026-08-25",
-    "Fulda": "2026-09-27",
+    "Fulda": "2026-10-05",
     "Golden Quarry": "2026-09-27",
     "Iberian Castle": "2026-09-23",
     "Japan": "2026-09-23",
@@ -86,7 +86,7 @@
     "Finland": "2026-09-23T02:44:34Z",
     "Fire Arc": "2026-09-23T03:38:09Z",
     "Flanders": "2026-09-29T06:20:07Z",
-    "Fulda": "2026-09-27T10:55:04Z",
+    "Fulda": "2026-10-05T04:51:32Z",
     "Golden Quarry": "2026-09-27T10:47:09Z",
     "Iberian Castle": "2026-09-23T03:53:21Z",
     "Japan": "2026-09-23T03:21:06Z",
@@ -667,18 +667,6 @@
         "플랑드르는 맵 중앙을 양분하는 광활한 참호 지대와 철로를 주변의 구릉이 에워싸는 구조로, 능선을 활용한 헐다운 교전과 점진적인 전력 소모가 주된 양상으로 전개됩니다.",
         "참호 지대의 엄폐물은 대부분 포탑까지 완전히 가려주지 못하거나 사격으로 관통 가능한 구조물이기 때문에, 정면 돌파로로 활용하기에는 부적합합니다. 주포 내림각이 부족한 전차라면 B–C 사이의 터널이나 중앙 시가지를 통해 승부수에 가까운 돌파를 감행할 수 있습니다.",
         "C 거점은 개활된 육상 경기장 중앙에 자리하고 있어 어느 진영도 선점하기가 쉽지 않습니다. 반면 A와 B 거점은 각각 언덕과 시가지에 둘러싸여 있으므로, 적극적으로 방어하거나 재점령을 시도하지 않으면 순식간에 주도권을 내주게 됩니다."
-      ]
-    },
-    "Red Desert": {
-      "en": [
-        "Red Desert consists almost entirely of low sand dunes with very little effective cover, resulting in exceptionally long engagement distances. It also offers few viable flanking routes or breakthrough corridors, leaving players with little room for tactical maneuver.",
-        "Combat is therefore largely confined to prolonged standoffs across the hills surrounding points A, B, and C. Although the spawn areas are reasonably well protected, once a team loses the key high ground, retaking it is extremely difficult and the remainder of the match often becomes a foregone conclusion.",
-        "With so few tactical options and so little opportunity to reverse the course of a battle, Red Desert is arguably the worst map in War Thunder."
-      ],
-      "ko": [
-        "붉은 사막은 전장 대부분이 낮은 사구로 이루어진 데다 실질적인 엄폐물이 극히 부족하여 교전 거리가 매우 깁니다. 유효한 우회로나 돌파로도 마땅치 않아 전술적 기동의 선택지가 크게 제한됩니다.",
-        "이 때문에 전투는 A, B, C 거점 인근의 언덕을 사이에 둔 장거리 대치로 고착되기 쉽습니다. 스폰 지역은 비교적 안정적으로 방어되어 있지만, 핵심 고지를 한 차례 내주면 탈환이 극도로 어려워 그 상태로 승패가 굳어지는 경우가 많습니다.",
-        "전술적 선택지가 지나치게 제한되고 전세를 뒤집을 여지마저 희박하다는 점에서, 붉은 사막은 워 썬더 최악의 맵이라 해도 과언이 아닙니다."
       ]
     },
     "Surroundings of Volokolamsk": {
@@ -15575,6 +15563,19 @@
         "x": 6.13,
         "y": 19.2,
         "parentTankId": "mujpcat1-x84w0o"
+      },
+      {
+        "id": "muurvf5z-ddainl",
+        "type": "lightTankRed",
+        "x": 59.73,
+        "y": 55.26
+      },
+      {
+        "id": "muurvlav-3mw4nj",
+        "type": "highRiskSpot",
+        "x": 59.73,
+        "y": 55.26,
+        "parentTankId": "muurvf5z-ddainl"
       }
     ],
     "Fulda::domination-1|Blue": [
@@ -15668,6 +15669,32 @@
         "x": 60.95,
         "y": 45.26,
         "parentTankId": "mu21rqqp-5yzn4p"
+      },
+      {
+        "id": "muurde2x-ayn1oa",
+        "type": "mainBattleTank",
+        "x": 59.99,
+        "y": 58.56
+      },
+      {
+        "id": "muurdfge-740fri",
+        "type": "battleLine",
+        "x": 59.99,
+        "y": 58.56,
+        "parentTankId": "muurde2x-ayn1oa"
+      },
+      {
+        "id": "muurvcdz-o3gzq8",
+        "type": "lightTank",
+        "x": 59.82,
+        "y": 55.26
+      },
+      {
+        "id": "muurvnnf-ahavfc",
+        "type": "highRiskSpot",
+        "x": 59.82,
+        "y": 55.26,
+        "parentTankId": "muurvcdz-o3gzq8"
       }
     ],
     "Golden Quarry::domination-1|Blue": [
@@ -27047,7 +27074,8 @@
         "x": 32.89,
         "y": 17.37
       }
-    ]
+    ],
+    "Tunisia::domination-2|Blue": []
   },
   "annotations": {
     "38th Parallel::domination-1|Red": [
@@ -59063,7 +59091,8 @@
             "x": 54.17,
             "y": 25.16
           }
-        ]
+        ],
+        "dangerRoute": true
       },
       {
         "id": "mu21qn6w-somk8u",
@@ -59094,7 +59123,8 @@
             "x": 67.45,
             "y": 26.3
           }
-        ]
+        ],
+        "dangerRoute": true
       },
       {
         "id": "mu21sd03-x2n716",
@@ -59217,6 +59247,24 @@
         "startY": 53.6,
         "endX": 53.92,
         "endY": 45.13
+      },
+      {
+        "id": "muurd1ei-6p8xg4",
+        "type": "aimHere",
+        "parentTankId": "mu21me3k-e66zj0",
+        "startX": 37.48,
+        "startY": 39.95,
+        "endX": 28.71,
+        "endY": 29.97
+      },
+      {
+        "id": "muurdhd2-5jtcb6",
+        "type": "aimHere",
+        "parentTankId": "muurde2x-ayn1oa",
+        "startX": 59.99,
+        "startY": 58.56,
+        "endX": 70.85,
+        "endY": 65.42
       }
     ],
     "Golden Quarry::domination-1|Blue": [
@@ -84147,9 +84195,11 @@
           }
         ]
       }
-    ]
+    ],
+    "Tunisia::domination-2|Blue": []
   },
   "vectorGroups": {
+    "Alaska::domination-1|Red": [],
     "Arctic Pier::domination-1|Blue": [],
     "Darwin Hill::conquest-1|Red": [],
     "Darwin Hill::conquest-2|Red": [],
@@ -84163,9 +84213,8 @@
     "Eastern Europe::domination-1|Blue": [],
     "Maginot Line::domination-2|Blue": [],
     "Port Novorossiysk::battle-1|Red": [],
-    "Sands of Sinai::domination-1|Blue": [],
-    "Alaska::domination-1|Red": []
+    "Sands of Sinai::domination-1|Blue": []
   },
-  "updatedAt": "2026-10-04T10:19:43.585Z",
-  "exportedAt": "2026-10-04T10:19:45.314Z"
+  "updatedAt": "2026-10-05T04:51:32.092Z",
+  "exportedAt": "2026-10-05T05:08:34.358Z"
 }
