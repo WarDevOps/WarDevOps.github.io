@@ -534,6 +534,7 @@
 
     .site-footer { width: min(1240px, calc(100% - 40px)); padding: 0 0 30px; margin: 0 auto; color: #718079; font-size: .75rem; text-align: center; }
     .footer-community { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 10px; margin-bottom: 18px; }
+    .footer-community[hidden] { display: none; }
     .community-link { display: inline-flex; align-items: center; gap: 8px; padding: 8px 11px; border: 1px solid var(--line); border-radius: 9px; color: var(--ink); font-weight: 750; text-decoration: none; transition: border-color .18s, color .18s; }
     .community-link:hover, .community-link:focus-visible { border-color: var(--accent); color: var(--accent); }
     .community-link img { display: block; object-fit: contain; }
