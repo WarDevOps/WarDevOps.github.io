@@ -1,22 +1,22 @@
 {
   "version": 2,
   "mapUpdated": {
-    "38th Parallel": "2026-09-14",
+    "38th Parallel": "2026-10-07",
     "Abandoned Factory": "2026-09-29",
     "Abandoned Town": "2026-09-14",
     "Advance to the Rhine": "2026-09-16",
     "Alaska": "2026-10-04",
     "American Desert": "2026-09-23",
-    "Aral Sea": "2026-10-04",
+    "Aral Sea": "2026-10-07",
     "Arctic Pier": "2026-09-15",
     "Arctic Polar Base": "2026-10-04",
     "Ardennes": "2026-09-27",
     "Ash River": "2026-09-02",
-    "Attica": "2026-09-27",
+    "Attica": "2026-10-14",
     "Battle of Hürtgen Forest": "2026-09-29",
     "Berlin": "2026-09-11",
     "Breslau": "2026-09-23",
-    "Campania": "2026-09-03",
+    "Campania": "2026-10-09",
     "Cargo Port": "2026-09-23",
     "Carpathians": "2026-09-23",
     "Darwin Hill": "2026-10-06",
@@ -43,7 +43,7 @@
     "Poland": "2026-09-15",
     "Port Novorossiysk": "2026-09-30",
     "Pradesh": "2026-08-31",
-    "Red Desert": "2026-10-05",
+    "Red Desert": "2026-10-14",
     "Sands of Sinai": "2026-09-23",
     "Second Battle of El Alamein": "2026-09-27",
     "Seversk-13": "2026-09-14",
@@ -60,22 +60,22 @@
     "White Rock Fortress": "2026-09-02"
   },
   "mapUpdatedAt": {
-    "38th Parallel": "2026-09-13T22:45:42Z",
+    "38th Parallel": "2026-10-07T06:12:15Z",
     "Abandoned Factory": "2026-09-28T16:58:40Z",
     "Abandoned Town": "2026-09-13T23:30:35Z",
     "Advance to the Rhine": "2026-09-16T02:26:57Z",
     "Alaska": "2026-10-04T10:19:32Z",
     "American Desert": "2026-09-22T21:47:17Z",
-    "Aral Sea": "2026-10-04T08:54:40Z",
+    "Aral Sea": "2026-10-07T06:13:32Z",
     "Arctic Pier": "2026-09-15T01:05:22Z",
     "Arctic Polar Base": "2026-10-04T09:02:23Z",
     "Ardennes": "2026-09-27T08:14:28Z",
     "Ash River": "2026-09-01T16:50:15Z",
-    "Attica": "2026-09-27T08:23:04Z",
+    "Attica": "2026-10-13T23:14:43Z",
     "Battle of Hürtgen Forest": "2026-09-29T08:30:11Z",
     "Berlin": "2026-09-10T23:37:22Z",
     "Breslau": "2026-09-23T02:55:50Z",
-    "Campania": "2026-09-03T01:49:21Z",
+    "Campania": "2026-10-09T12:12:21Z",
     "Cargo Port": "2026-09-23T04:02:44Z",
     "Carpathians": "2026-09-23T01:37:01Z",
     "Darwin Hill": "2026-10-05T16:55:26Z",
@@ -100,7 +100,7 @@
     "North Holland": "2026-09-14T23:28:36Z",
     "Poland": "2026-09-15T02:55:29Z",
     "Port Novorossiysk": "2026-09-30T05:34:11Z",
-    "Red Desert": "2026-10-05T14:21:54Z",
+    "Red Desert": "2026-10-13T23:39:08Z",
     "Sands of Sinai": "2026-09-23T06:07:25Z",
     "Second Battle of El Alamein": "2026-09-27T04:24:11Z",
     "Seversk-13": "2026-09-13T19:59:09Z",
@@ -798,7 +798,7 @@
       },
       {
         "id": "38p-red-mbt-03",
-        "type": "mainBattleTankRed",
+        "type": "tankDestroyerRed",
         "x": 70.56,
         "y": 28.96,
         "commentImages": [
@@ -814,7 +814,7 @@
       },
       {
         "id": "38p-red-mbt-04",
-        "type": "mainBattleTankRed",
+        "type": "tankDestroyerRed",
         "x": 80.28,
         "y": 35.97,
         "commentImages": [
@@ -1206,7 +1206,7 @@
       },
       {
         "id": "38p-blue-mbt-16",
-        "type": "mainBattleTank",
+        "type": "tankDestroyer",
         "x": 50.9,
         "y": 79.44
       },
@@ -1219,7 +1219,7 @@
       },
       {
         "id": "38p-blue-mbt-17",
-        "type": "mainBattleTank",
+        "type": "tankDestroyer",
         "x": 31.18,
         "y": 80.76
       },
@@ -1232,7 +1232,7 @@
       },
       {
         "id": "38p-blue-mbt-18",
-        "type": "mainBattleTank",
+        "type": "tankDestroyer",
         "x": 34.17,
         "y": 80.76
       },
@@ -1245,7 +1245,7 @@
       },
       {
         "id": "38p-blue-mbt-19",
-        "type": "mainBattleTank",
+        "type": "tankDestroyer",
         "x": 75.28,
         "y": 82.92
       },
@@ -4098,7 +4098,7 @@
       },
       {
         "id": "aral-sea-red-unit-14",
-        "type": "mainBattleTankRed",
+        "type": "tankDestroyerRed",
         "x": 33.07,
         "y": 65.51,
         "commentImages": [
@@ -4114,7 +4114,7 @@
       },
       {
         "id": "aral-sea-red-unit-15",
-        "type": "mainBattleTankRed",
+        "type": "tankDestroyerRed",
         "x": 55.69,
         "y": 75.22,
         "commentImages": [
@@ -4218,7 +4218,7 @@
     "Aral Sea::domination-1|Blue": [
       {
         "id": "aral-sea-blue-unit-02",
-        "type": "mainBattleTank",
+        "type": "tankDestroyer",
         "x": 59.99,
         "y": 20.86,
         "commentImages": [
@@ -4251,7 +4251,7 @@
       },
       {
         "id": "aral-sea-blue-unit-06",
-        "type": "mainBattleTank",
+        "type": "tankDestroyer",
         "x": 33.12,
         "y": 36.25,
         "commentImages": [
@@ -8558,6 +8558,19 @@
         "x": 64.45,
         "y": 31.91,
         "parentTankId": "mszabon2-681apd"
+      },
+      {
+        "id": "mv0xdlv2-a1nrxr",
+        "type": "mainBattleTankRed",
+        "x": 70.73,
+        "y": 61.57
+      },
+      {
+        "id": "mv0xdnbh-ajz0dn",
+        "type": "spawnKill",
+        "x": 70.73,
+        "y": 61.57,
+        "parentTankId": "mv0xdlv2-a1nrxr"
       }
     ],
     "Campania::domination-1|Blue": [
@@ -20971,7 +20984,83 @@
         "id": "muvc95z7-tddeeu",
         "type": "mainBattleTank",
         "x": 20.11,
-        "y": 34.58
+        "y": 34.58,
+        "commentImages": [
+          "Red Desert/scr_ (1).webp",
+          "Red Desert/scr_ (2).webp"
+        ]
+      },
+      {
+        "id": "mv7au2uj-lzuerl",
+        "type": "spawnKill",
+        "x": 20.11,
+        "y": 34.58,
+        "parentTankId": "muvc95z7-tddeeu"
+      },
+      {
+        "id": "mv7b4oqn-50kmnd",
+        "type": "mainBattleTank",
+        "x": 5.69,
+        "y": 41.36,
+        "commentImages": [
+          "Red Desert/scr_ (4).webp",
+          "Red Desert/scr_ (5).webp"
+        ]
+      },
+      {
+        "id": "mv7b525u-x7qefd",
+        "type": "sniper",
+        "x": 5.69,
+        "y": 41.36,
+        "parentTankId": "mv7b4oqn-50kmnd"
+      },
+      {
+        "id": "mv7bbffl-rjm2om",
+        "type": "lightTank",
+        "x": 17.25,
+        "y": 42.75,
+        "commentImages": [
+          "Red Desert/scr_ (6).webp"
+        ]
+      },
+      {
+        "id": "mv7bbh4s-wlvzvx",
+        "type": "highRiskSpot",
+        "x": 17.25,
+        "y": 42.75,
+        "parentTankId": "mv7bbffl-rjm2om"
+      },
+      {
+        "id": "mv7bd42c-g4gehi",
+        "type": "tankDestroyer",
+        "x": 90.4,
+        "y": 54.47,
+        "commentImages": [
+          "Red Desert/scr_ (8).webp"
+        ]
+      },
+      {
+        "id": "mv7bi9y5-n98aml",
+        "type": "sniper",
+        "x": 90.4,
+        "y": 54.47,
+        "parentTankId": "mv7bd42c-g4gehi"
+      },
+      {
+        "id": "mv7biq72-in02do",
+        "type": "tankDestroyer",
+        "x": 85.1,
+        "y": 54.74,
+        "commentImages": [
+          "Red Desert/scr_ (9).webp"
+        ]
+      },
+      {
+        "id": "mv7bj43v-ordi31",
+        "type": "sniper",
+        "x": 85.1,
+        "y": 54.74,
+        "parentTankId": "mv7biq72-in02do"
       }
     ],
     "Red Desert::domination-1|Red": [
@@ -20985,7 +21074,10 @@
         "id": "mutmehr4-ptzo6t",
         "type": "mainBattleTankRed",
         "x": 96.4,
-        "y": 56.01
+        "y": 56.01,
+        "commentImages": [
+          "Red Desert/scr_ (7).webp"
+        ]
       },
       {
         "id": "mutmej4a-x9gjsw",
@@ -34130,6 +34222,36 @@
         "startY": 33.68,
         "endX": 17.94,
         "endY": 59.95
+      },
+      {
+        "id": "muxpote6-ta1xnb",
+        "type": "route",
+        "points": [
+          {
+            "x": 89.18,
+            "y": 8.43
+          },
+          {
+            "x": 78.93,
+            "y": 8.77
+          },
+          {
+            "x": 68.77,
+            "y": 11.9
+          },
+          {
+            "x": 62.08,
+            "y": 14.77
+          },
+          {
+            "x": 59.82,
+            "y": 18.07
+          },
+          {
+            "x": 59.73,
+            "y": 20.85
+          }
+        ]
       }
     ],
     "Arctic Pier::domination-1|Blue": [
@@ -39160,6 +39282,24 @@
         "startY": 70.76,
         "endX": 35.14,
         "endY": 76.8
+      },
+      {
+        "id": "mv7at6r4-9fdt73",
+        "type": "route",
+        "points": [
+          {
+            "x": 50.09,
+            "y": 33.71
+          },
+          {
+            "x": 43.83,
+            "y": 31.28
+          },
+          {
+            "x": 43.31,
+            "y": 30.06
+          }
+        ]
       }
     ],
     "Attica::domination-1|Red": [
@@ -43156,6 +43296,15 @@
         "startY": 31.91,
         "endX": 83.25,
         "endY": 23.22
+      },
+      {
+        "id": "mv0xdypj-y1f9k3",
+        "type": "aimHere",
+        "parentTankId": "mv0xdlv2-a1nrxr",
+        "startX": 70.73,
+        "startY": 61.57,
+        "endX": 91.85,
+        "endY": 75.6
       }
     ],
     "Campania::domination-1|Blue": [
@@ -70547,7 +70696,71 @@
         ]
       }
     ],
-    "Red Desert::domination-1|Blue": [],
+    "Red Desert::domination-1|Blue": [
+      {
+        "id": "mv7b3g9h-rbcjgn",
+        "type": "aimHere",
+        "parentTankId": "muvc95z7-tddeeu",
+        "startX": 20.11,
+        "startY": 34.58,
+        "endX": 20.37,
+        "endY": 16.94
+      },
+      {
+        "id": "mv7b43k1-rskcfq",
+        "type": "aimHere",
+        "parentTankId": "muvc95z7-tddeeu",
+        "startX": 20.11,
+        "startY": 34.58,
+        "endX": 15.77,
+        "endY": 13.73
+      },
+      {
+        "id": "mv7b59iw-a03ikf",
+        "type": "aimHere",
+        "parentTankId": "mv7b4oqn-50kmnd",
+        "startX": 5.69,
+        "startY": 41.36,
+        "endX": 20.72,
+        "endY": 17.29
+      },
+      {
+        "id": "mv7b5j6y-1eh6jq",
+        "type": "aimHere",
+        "parentTankId": "mv7b4oqn-50kmnd",
+        "startX": 5.69,
+        "startY": 41.36,
+        "endX": 17.33,
+        "endY": 13.81
+      },
+      {
+        "id": "mv7bca9l-95ar9t",
+        "type": "aimHere",
+        "parentTankId": "mv7bbffl-rjm2om",
+        "startX": 17.25,
+        "startY": 42.75,
+        "endX": 18.11,
+        "endY": 40.31
+      },
+      {
+        "id": "mv7bhiyf-jtcbsq",
+        "type": "aimHere",
+        "parentTankId": "mv7bd42c-g4gehi",
+        "startX": 90.4,
+        "startY": 54.47,
+        "endX": 93.44,
+        "endY": 37.19
+      },
+      {
+        "id": "mv7bj1ib-z7ckjn",
+        "type": "aimHere",
+        "parentTankId": "mv7biq72-in02do",
+        "startX": 85.1,
+        "startY": 54.74,
+        "endX": 77.8,
+        "endY": 41.53
+      }
+    ],
     "Red Desert::domination-1|Red": [
       {
         "id": "mu23nppv-3x4wi1",
@@ -84340,6 +84553,6 @@
     "Port Novorossiysk::battle-1|Red": [],
     "Sands of Sinai::domination-1|Blue": []
   },
-  "updatedAt": "2026-10-05T16:55:26.854Z",
-  "exportedAt": "2026-10-05T16:56:31.556Z"
+  "updatedAt": "2026-10-13T23:39:08.845Z",
+  "exportedAt": "2026-10-13T23:39:13.453Z"
 }
