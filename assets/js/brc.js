@@ -5,7 +5,7 @@ const copy = {
     grb: "GROUND REALISTIC", arb: "AIR REALISTIC", modeLabel: "Battle mode",
     arbNotice: "Compare aircraft within ±1.0 of the selected aircraft’s Air RB. All nations are included.",
     arbEmpty: "No aircraft in this range. Turn off Range only to see all aircraft.",
-    intro: "Hover to compare. Select a vehicle to pin its ±1.0 BR range and open its details.",
+    intro: "Hover to compare. Click a vehicle to lock its ±1.0 BR range, another vehicle to switch, or empty space to unlock.",
     searchLabel: "Find a vehicle", categories: "Vehicle types", tank: "Ground", air: "Aircraft", heli: "Helicopters",
     rangeOnly: "Range only", clear: "Clear selection", comparing: "COMPARING", difference: "BR difference",
     notice: "A ±1.0 BR comparison, not a complete list of possible opponents. Matchmaking uses your lineup’s highest BR; lower-BR vehicles may also appear. All nations are included.",
@@ -24,7 +24,7 @@ const copy = {
     grb: "지상 리얼리스틱", arb: "공중 리얼리스틱", modeLabel: "전투 모드",
     arbNotice: "선택한 항공기의 공중전 BR 기준 ±1.0 범위를 비교합니다. 모든 국가의 항공기를 표시합니다.",
     arbEmpty: "이 범위에 표시할 항공기가 없습니다. ‘범위만 보기’를 해제하면 전체 항공기를 볼 수 있습니다.",
-    intro: "마우스를 올려 비교하고, 장비를 선택해 ±1.0 BR 범위를 고정하거나 설명을 확인하세요.",
+    intro: "마우스를 올려 비교하고, 장비를 클릭해 ±1.0 BR 범위를 고정하세요. 다른 장비를 클릭하면 기준이 바뀌고, 빈 공간을 클릭하면 고정이 풀립니다.",
     searchLabel: "장비 찾기", categories: "장비 종류", tank: "지상", air: "항공", heli: "헬기",
     rangeOnly: "범위만 보기", clear: "선택 해제", comparing: "비교 기준", difference: "BR 차이",
     notice: "선택 장비의 ±1.0 BR 비교표입니다. 실제 매칭은 편성의 최고 BR을 기준으로 하며 더 낮은 BR 장비도 등장할 수 있습니다. 아군·적군을 구분하지 않고 모든 국가를 표시합니다.",
@@ -49,7 +49,7 @@ const t = key => copy[state.language][state.mode === "arb" ? ({ notice: "arbNoti
 const countryName = code => t("countries")[COUNTRIES.indexOf(code)];
 const number = value => value.toFixed(1);
 const ratingLabel = unit => `${state.mode.toUpperCase()} BR ${number(unit.br)}`;
-const active = () => state.hovered || state.focused || state.selected;
+const active = () => state.selected || state.hovered || state.focused;
 
 function element(tag, className, text) {
   const node = document.createElement(tag);
@@ -148,6 +148,22 @@ function paintComparison() {
 function closePopup(restoreFocus = false) {
   popup.hidden = true;
   if (restoreFocus && popupAnchor?.isConnected) popupAnchor.focus({ preventScroll: true });
+}
+
+function clearSelection({ clearSearch = false } = {}) {
+  const old = state.selected;
+  const wasRangeOnly = state.rangeOnly;
+  state.selected = null; state.hovered = null; state.focused = null; state.rangeOnly = false;
+  $("#brc-range-only").checked = false;
+  closePopup();
+  if (wasRangeOnly) renderTable();
+  else {
+    buttons.get(old?.id)?.setAttribute("aria-pressed", "false");
+    paintComparison();
+    $("#brc-status").textContent = rows.length ? "" : t("empty");
+  }
+  if (clearSearch) search.value = "";
+  results.hidden = true;
 }
 
 function positionPopup() {
@@ -278,7 +294,7 @@ async function loadCatalog() {
 }
 
 table.addEventListener("pointermove", event => {
-  if (event.pointerType === "touch") return;
+  if (event.pointerType === "touch" || state.selected) return;
   const button = event.target.closest("[data-unit]");
   const next = button ? state.byId.get(button.dataset.unit) : null;
   if (state.hovered !== next) { state.hovered = next; paintComparison(); }
@@ -287,7 +303,7 @@ table.addEventListener("pointerleave", () => { state.hovered = null; paintCompar
 table.addEventListener("focusin", event => {
   const button = event.target.closest("[data-unit]");
   // Mouse focus must not turn a transient hover into a pinned preview.
-  state.focused = button?.matches(":focus-visible") ? state.byId.get(button.dataset.unit) : null;
+  state.focused = !state.selected && button?.matches(":focus-visible") ? state.byId.get(button.dataset.unit) : null;
   paintComparison();
 });
 table.addEventListener("focusout", () => { state.focused = null; paintComparison(); });
@@ -317,8 +333,7 @@ $("#brc-range-only").addEventListener("change", event => {
   state.rangeOnly = event.target.checked; closePopup(); renderTable(); scroller.scrollTop = 0;
 });
 $("#brc-reset").addEventListener("click", () => {
-  state.selected = null; state.rangeOnly = false; $("#brc-range-only").checked = false;
-  closePopup(); renderTable(); search.value = ""; results.hidden = true;
+  clearSelection({ clearSearch: true });
 });
 search.addEventListener("input", renderSearch);
 search.addEventListener("focus", () => { if (search.value.trim()) renderSearch(); });
@@ -348,9 +363,18 @@ document.addEventListener("keydown", event => {
   else closePopup(true);
 });
 document.addEventListener("pointerdown", event => {
+  if (event.button !== 0) return;
   if (!event.target.closest(".brc-search")) results.hidden = true;
   if (!popup.hidden && !popup.contains(event.target) && !event.target.closest("[data-unit]")) closePopup();
 });
+document.addEventListener("click", event => {
+  if (event.button !== 0 || !state.selected) return;
+  const unit = event.target.closest("[data-unit]");
+  // Vehicle clicks go to selectUnit, which switches the pinned reference directly.
+  if (unit) return;
+  if (event.target.closest(".brc-controls, #brc-mode-tabs, #brc-details, .header-actions, a, button, input, select, textarea, label")) return;
+  clearSelection();
+}, true);
 scroller.addEventListener("scroll", positionPopup, { passive: true });
 window.addEventListener("scroll", positionPopup, { passive: true });
 window.addEventListener("resize", positionPopup);
