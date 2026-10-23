@@ -32,6 +32,10 @@ try {
   await page.waitForFunction(() => !document.querySelector("#brc-search").disabled);
   assert.equal(await page.locator(".brc-unit").count(), total);
   assert.equal(await page.locator("thead th").count(), 11);
+  if (catalog.battleRatingUpdate?.status === "planned") {
+    assert.match(await page.locator("#brc-data-note").textContent(), /planned BR changes/);
+    assert.equal(await page.locator("#brc-data-note a").getAttribute("href"), catalog.battleRatingUpdate.source);
+  }
   await find("Leopard 2K");
   const unit = catalog.categories.tank.units.find(unit => unit.name === "Leopard 2K");
   assert.equal(await selected.textContent(), "Leopard 2K");
@@ -163,12 +167,12 @@ try {
     assert.match(await page.locator("#brc-results").textContent(), /No matching/);
   }
   await find(knownAircraft.name);
-  assert.match(await page.locator("#brc-detail-meta").textContent(), /ARB BR 14.0/);
+  assert.ok((await page.locator("#brc-detail-meta").textContent()).includes(`ARB BR ${knownAircraft.br.toFixed(1)}`));
   assert.equal(await selected.evaluate(node => Number(node.closest("tr").dataset.br)), knownAircraft.br);
   await page.locator("#brc-detail-close").click();
   await page.locator("#brc-range-only").check();
   const arbRows = await page.locator("tbody tr").evaluateAll(rows => rows.map(row => Number(row.dataset.br)));
-  assert.ok(arbRows.length); assert.ok(arbRows.every(br => Math.abs(Math.round(br * 10) - 140) <= 10));
+  assert.ok(arbRows.length); assert.ok(arbRows.every(br => Math.abs(Math.round(br * 10) - Math.round(knownAircraft.br * 10)) <= 10));
   if (process.argv[4]) await page.screenshot({ path: `${process.argv[4]}/brc-arb-desktop.png`, fullPage: true });
   await page.locator("#brc-tab-arb").press("ArrowLeft");
   assert.equal(await page.locator("#brc-tab-grb").getAttribute("aria-selected"), "true");
@@ -194,6 +198,11 @@ try {
   console.log("BRC tabs: ARB aircraft-only table/search, Air RB range, independent selection/filter state, keyboard and mobile passed");
   await page.goto(`${base}/tier-list/`);
   await page.waitForFunction(() => document.querySelector("#tier-br-max").value !== "");
+  if (catalog.battleRatingUpdate?.status === "planned") {
+    assert.ok(await page.locator("#tier-rating-note").isVisible());
+    assert.match(await page.locator("#tier-rating-note").textContent(), /planned BR changes/);
+    assert.equal(await page.locator("#tier-rating-note a").getAttribute("href"), catalog.battleRatingUpdate.source);
+  }
   for (const category of ["tank", "air", "heli"]) {
     await page.locator(`[data-tier-category="${category}"]`).click();
     const max = Math.max(...catalog.categories[category].units.map(unit => unit.br)).toFixed(1);
@@ -212,6 +221,15 @@ try {
     await page.locator(id).fill(value.toFixed(1)); await page.locator(id).press("Enter");
   }
   assert.equal(await page.locator('#tier-card-pool .tier-card[aria-label="F-15E"]').count(), 0);
+  await page.locator('[data-tier-country="DE"]').click();
+  await page.locator('#tier-rank-select').selectOption('7');
+  const su22 = page.locator('#tier-card-pool .tier-card[aria-label="◊Su-22M4"]');
+  assert.equal(await su22.count(), 1);
+  await su22.scrollIntoViewIfNeeded();
+  await page.waitForFunction(() => {
+    const image = document.querySelector('.tier-card[aria-label="◊Su-22M4"] img');
+    return image?.complete && image.naturalWidth > 0;
+  });
   assert.deepEqual(errors, []);
   console.log("Tier List: current category maxima and F-15E exclusively at its Air RB passed");
 } finally { await browser.close(); }

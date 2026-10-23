@@ -13,7 +13,9 @@ test("ARB contains only aircraft using Air RB without changing the shared catalo
   assert.ok(airUnits.every((unit, index) => !index || unit.br >= airUnits[index - 1].br));
   const airF15 = airUnits.find(unit => unit.wikiId === "f_15e");
   const groundF15 = units.find(unit => unit.wikiId === "f_15e");
-  assert.equal(airF15.br, 14); assert.equal(groundF15.br, 12.7);
+  const sourceF15 = catalog.categories.air.units.find(unit => unit.wikiId === "f_15e");
+  assert.equal(airF15.br, sourceF15.br); assert.equal(groundF15.br, sourceF15.brGround);
+  assert.notEqual(airF15.br, groundF15.br);
   assert.equal(searchUnits(airUnits, "Leopard 2K").length, 0);
   assert.equal(searchUnits(airUnits, "AH 64").length, 0);
   assert.equal(JSON.stringify(catalog), before);

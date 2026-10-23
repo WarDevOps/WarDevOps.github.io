@@ -17,6 +17,7 @@ const copy = {
     loading: "Loading vehicles…", error: "Could not load the vehicle catalog. Please try again.", empty: "No vehicles to display. Enable a vehicle type or turn off Range only.",
     vehicles: "vehicles", selected: "Selected", hiddenSelection: "Selected vehicle is hidden by the type filters.",
     shared: "Current Wiki ratings from the shared Tier List catalog. GRB uses Ground RB; ARB uses Air RB.", updated: "BR checked", source: "Source: War Thunder Wiki",
+    planned: "October 2026 planned BR changes applied in advance. Other vehicles retain Wiki ratings. GRB uses Ground RB; ARB uses Air RB.", plannedSource: "Source: planned BR changes", applied: "Applied",
     countries: ["USA", "Germany", "USSR", "Britain", "Japan", "China", "Italy", "France", "Sweden", "Israel"],
   },
   ko: {
@@ -35,6 +36,7 @@ const copy = {
     loading: "장비를 불러오는 중…", error: "장비 목록을 불러오지 못했습니다. 다시 시도해주세요.", empty: "표시할 장비가 없습니다. 장비 종류를 켜거나 ‘범위만 보기’를 해제하세요.",
     vehicles: "대", selected: "선택", hiddenSelection: "선택한 장비가 종류 필터로 숨겨져 있습니다.",
     shared: "티어리스트와 같은 현재 위키 장비 데이터를 공유합니다. GRB는 지상전 BR, ARB는 공중전 BR을 사용합니다.", updated: "BR 확인", source: "출처: War Thunder Wiki",
+    planned: "2026년 10월 예정 BR 변경을 선반영했습니다. 그 외 장비는 위키 값을 유지합니다. GRB는 지상전 BR, ARB는 공중전 BR을 사용합니다.", plannedSource: "출처: 예정 BR 변경표", applied: "반영일",
     countries: ["미국", "독일", "소련", "영국", "일본", "중국", "이탈리아", "프랑스", "스웨덴", "이스라엘"],
   },
 };
@@ -212,10 +214,11 @@ function applyLanguage() {
   $(".brc-legend").setAttribute("aria-label", t("difference"));
   $("#brc-mode-tabs").setAttribute("aria-label", t("modeLabel"));
   if (state.catalog) {
+    const planned = state.catalog.battleRatingUpdate?.status === "planned";
     const date = new Date(state.catalog.battleRatingsUpdatedAt || state.catalog.generatedAt);
     const note = $("#brc-data-note");
-    note.textContent = `${t("shared")} ${t("updated")}: ${Number.isNaN(date.valueOf()) ? "—" : date.toLocaleDateString(state.language, { timeZone: "UTC" })} · `;
-    const source = element("a", "", t("source")); source.href = "https://wiki.warthunder.com"; source.target = "_blank"; source.rel = "noopener noreferrer"; note.append(source);
+    note.textContent = `${t(planned ? "planned" : "shared")} ${t(planned ? "applied" : "updated")}: ${Number.isNaN(date.valueOf()) ? "—" : date.toLocaleDateString(state.language, { timeZone: "UTC" })} · `;
+    const source = element("a", "", t(planned ? "plannedSource" : "source")); source.href = planned ? state.catalog.battleRatingUpdate.source : "https://wiki.warthunder.com"; source.target = "_blank"; source.rel = "noopener noreferrer"; note.append(source);
     const wasOpen = !popup.hidden;
     renderTable();
     popupAnchor = buttons.get(state.selected?.id);
@@ -259,7 +262,7 @@ async function loadCatalog() {
   state.loading = true; state.failed = false; $("#brc-retry").hidden = true; scroller.setAttribute("aria-busy", "true"); applyLanguage();
   try {
     // Deliberately share the Tier List catalog and its BR values; no BRC-specific copy.
-    const response = await fetch(new URL("../data/tier-units.json?v=wiki-current-20261024", import.meta.url));
+    const response = await fetch(new URL("../data/tier-units.json?v=planned-20261024", import.meta.url));
     if (!response.ok) throw new Error(`Catalog HTTP ${response.status}`);
     const catalog = await response.json();
     state.units = readCatalog(catalog, state.mode);

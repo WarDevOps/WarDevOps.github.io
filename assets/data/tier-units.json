@@ -1275,7 +1275,7 @@
           "countryCode": "US",
           "country": "USA",
           "rank": 5,
-          "br": 8.7,
+          "br": 9.0,
           "unitClass": "ht",
           "role": "Heavy tank",
           "source": "https://wiki.warthunder.com/unit/us_t58",
@@ -1288,7 +1288,7 @@
           "countryCode": "US",
           "country": "USA",
           "rank": 6,
-          "br": 8.7,
+          "br": 9.0,
           "unitClass": "lt",
           "role": "Light tank",
           "source": "https://wiki.warthunder.com/unit/us_xm_800t",
@@ -1340,7 +1340,7 @@
           "countryCode": "US",
           "country": "USA",
           "rank": 6,
-          "br": 8.7,
+          "br": 9.0,
           "unitClass": "aa",
           "role": "SPAA",
           "source": "https://wiki.warthunder.com/unit/us_xm246",
@@ -1405,7 +1405,7 @@
           "countryCode": "US",
           "country": "USA",
           "rank": 6,
-          "br": 9.3,
+          "br": 9.7,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/us_mbt_70",
@@ -1418,7 +1418,7 @@
           "countryCode": "US",
           "country": "USA",
           "rank": 6,
-          "br": 9.3,
+          "br": 10.0,
           "unitClass": "aa",
           "role": "SPAA",
           "source": "https://wiki.warthunder.com/unit/us_m247",
@@ -1509,7 +1509,7 @@
           "countryCode": "US",
           "country": "USA",
           "rank": 6,
-          "br": 9.3,
+          "br": 9.7,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/us_merkava_mk_1",
@@ -1522,7 +1522,7 @@
           "countryCode": "US",
           "country": "USA",
           "rank": 6,
-          "br": 9.3,
+          "br": 9.7,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/us_xm1_chrysler",
@@ -1535,7 +1535,7 @@
           "countryCode": "US",
           "country": "USA",
           "rank": 6,
-          "br": 9.7,
+          "br": 10.0,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/us_merkava_mk_2b_late",
@@ -1548,7 +1548,7 @@
           "countryCode": "US",
           "country": "USA",
           "rank": 6,
-          "br": 9.3,
+          "br": 9.7,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/us_xm1_gm",
@@ -1600,7 +1600,7 @@
           "countryCode": "US",
           "country": "USA",
           "rank": 7,
-          "br": 10.7,
+          "br": 11.0,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/us_m1_abrams",
@@ -1639,7 +1639,7 @@
           "countryCode": "US",
           "country": "USA",
           "rank": 7,
-          "br": 10.7,
+          "br": 11.0,
           "unitClass": "lt",
           "role": "Light tank",
           "source": "https://wiki.warthunder.com/unit/us_m10_booker_late",
@@ -1652,7 +1652,7 @@
           "countryCode": "US",
           "country": "USA",
           "rank": 7,
-          "br": 12.0,
+          "br": 12.3,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/us_m1a1_hc_abrams",
@@ -1665,7 +1665,7 @@
           "countryCode": "US",
           "country": "USA",
           "rank": 7,
-          "br": 11.7,
+          "br": 12.0,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/us_m1a1_abrams",
@@ -1678,7 +1678,7 @@
           "countryCode": "US",
           "country": "USA",
           "rank": 7,
-          "br": 11.3,
+          "br": 11.7,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/us_m1_ip_abrams",
@@ -1691,7 +1691,7 @@
           "countryCode": "US",
           "country": "USA",
           "rank": 7,
-          "br": 10.0,
+          "br": 10.3,
           "unitClass": "aa",
           "role": "SPAA",
           "source": "https://wiki.warthunder.com/unit/us_xm_975_roland",
@@ -1704,7 +1704,7 @@
           "countryCode": "US",
           "country": "USA",
           "rank": 7,
-          "br": 12.0,
+          "br": 12.3,
           "unitClass": "lt",
           "role": "Light tank",
           "source": "https://wiki.warthunder.com/unit/us_hstv_l",
@@ -1717,7 +1717,7 @@
           "countryCode": "US",
           "country": "USA",
           "rank": 7,
-          "br": 12.0,
+          "br": 12.3,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/us_m1a2_abrams",
@@ -1743,7 +1743,7 @@
           "countryCode": "US",
           "country": "USA",
           "rank": 7,
-          "br": 10.0,
+          "br": 10.3,
           "unitClass": "lt",
           "role": "Light tank",
           "source": "https://wiki.warthunder.com/unit/us_ccvl",
@@ -1756,7 +1756,7 @@
           "countryCode": "US",
           "country": "USA",
           "rank": 7,
-          "br": 10.7,
+          "br": 11.0,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/us_m1_abrams_kvt",
@@ -1769,7 +1769,7 @@
           "countryCode": "US",
           "country": "USA",
           "rank": 7,
-          "br": 10.0,
+          "br": 10.3,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/us_m60a3_slep",
@@ -1782,7 +1782,7 @@
           "countryCode": "US",
           "country": "USA",
           "rank": 7,
-          "br": 11.7,
+          "br": 12.0,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/us_m1a1_abrams_yt_cup_2019",
@@ -1808,7 +1808,7 @@
           "countryCode": "US",
           "country": "USA",
           "rank": 7,
-          "br": 12.0,
+          "br": 12.3,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/us_m1a1_aim_abrams",
@@ -1821,7 +1821,7 @@
           "countryCode": "US",
           "country": "USA",
           "rank": 7,
-          "br": 12.0,
+          "br": 12.3,
           "unitClass": "lt",
           "role": "Light tank",
           "source": "https://wiki.warthunder.com/unit/us_ags_teledyne",
@@ -1834,7 +1834,7 @@
           "countryCode": "US",
           "country": "USA",
           "rank": 7,
-          "br": 12.0,
+          "br": 12.3,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/us_m1a1_hc_usmc",
@@ -1847,7 +1847,7 @@
           "countryCode": "US",
           "country": "USA",
           "rank": 7,
-          "br": 11.3,
+          "br": 11.7,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/us_merkava_mk_3d",
@@ -1860,7 +1860,7 @@
           "countryCode": "US",
           "country": "USA",
           "rank": 7,
-          "br": 12.0,
+          "br": 12.3,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/us_m1a1_hc_usmc_sm",
@@ -1873,7 +1873,7 @@
           "countryCode": "US",
           "country": "USA",
           "rank": 7,
-          "br": 12.0,
+          "br": 12.3,
           "unitClass": "lt",
           "role": "Light tank",
           "source": "https://wiki.warthunder.com/unit/us_rdf_lt",
@@ -1886,7 +1886,7 @@
           "countryCode": "US",
           "country": "USA",
           "rank": 8,
-          "br": 12.7,
+          "br": 13.3,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/us_m1a2_sep_abrams",
@@ -1899,7 +1899,7 @@
           "countryCode": "US",
           "country": "USA",
           "rank": 8,
-          "br": 12.7,
+          "br": 13.3,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/us_m1a2_sep2_abrams",
@@ -1912,7 +1912,7 @@
           "countryCode": "US",
           "country": "USA",
           "rank": 8,
-          "br": 11.7,
+          "br": 12.0,
           "unitClass": "aa",
           "role": "SPAA",
           "source": "https://wiki.warthunder.com/unit/us_adats_bradley",
@@ -1925,7 +1925,7 @@
           "countryCode": "US",
           "country": "USA",
           "rank": 8,
-          "br": 12.7,
+          "br": 13.3,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/us_m1a2_sep2_abrams_trophy",
@@ -1938,7 +1938,7 @@
           "countryCode": "US",
           "country": "USA",
           "rank": 8,
-          "br": 12.3,
+          "br": 12.7,
           "unitClass": "aa",
           "role": "SPAA",
           "source": "https://wiki.warthunder.com/unit/us_sl_amraam_fcs",
@@ -1951,7 +1951,7 @@
           "countryCode": "US",
           "country": "USA",
           "rank": 8,
-          "br": 12.7,
+          "br": 13.3,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/us_m1a2_sep3_abrams",
@@ -1964,7 +1964,7 @@
           "countryCode": "US",
           "country": "USA",
           "rank": 8,
-          "br": 12.7,
+          "br": 13.0,
           "unitClass": "aa",
           "role": "SPAA",
           "source": "https://wiki.warthunder.com/unit/us_nasams_fcs",
@@ -3459,7 +3459,7 @@
           "countryCode": "DE",
           "country": "Germany",
           "rank": 5,
-          "br": 8.0,
+          "br": 7.7,
           "unitClass": "lt",
           "role": "Light tank",
           "source": "https://wiki.warthunder.com/unit/germ_bmp_1_ddr",
@@ -3719,7 +3719,7 @@
           "countryCode": "DE",
           "country": "Germany",
           "rank": 6,
-          "br": 8.3,
+          "br": 8.7,
           "unitClass": "aa",
           "role": "SPAA",
           "source": "https://wiki.warthunder.com/unit/germ_flakpz_i_gepard",
@@ -3758,7 +3758,7 @@
           "countryCode": "DE",
           "country": "Germany",
           "rank": 6,
-          "br": 9.3,
+          "br": 9.7,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/germ_kpz_70",
@@ -3784,7 +3784,7 @@
           "countryCode": "DE",
           "country": "Germany",
           "rank": 6,
-          "br": 9.7,
+          "br": 10.0,
           "unitClass": "aa",
           "role": "SPAA",
           "source": "https://wiki.warthunder.com/unit/germ_wiesel_2_adwc",
@@ -3797,7 +3797,7 @@
           "countryCode": "DE",
           "country": "Germany",
           "rank": 6,
-          "br": 9.7,
+          "br": 10.0,
           "unitClass": "aa",
           "role": "SPAA",
           "source": "https://wiki.warthunder.com/unit/germ_flakpz_1a2_gepard",
@@ -3823,7 +3823,7 @@
           "countryCode": "DE",
           "country": "Germany",
           "rank": 6,
-          "br": 9.3,
+          "br": 9.7,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/germ_kpz_t72m1",
@@ -3875,7 +3875,7 @@
           "countryCode": "DE",
           "country": "Germany",
           "rank": 6,
-          "br": 9.0,
+          "br": 9.3,
           "unitClass": "lt",
           "role": "Light tank",
           "source": "https://wiki.warthunder.com/unit/germ_th_800_bismark",
@@ -3914,7 +3914,7 @@
           "countryCode": "DE",
           "country": "Germany",
           "rank": 7,
-          "br": 10.0,
+          "br": 10.3,
           "unitClass": "lt",
           "role": "Light tank",
           "source": "https://wiki.warthunder.com/unit/germ_radpanzer_90",
@@ -3940,7 +3940,7 @@
           "countryCode": "DE",
           "country": "Germany",
           "rank": 7,
-          "br": 10.0,
+          "br": 10.3,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/germ_leopard_2k",
@@ -3953,7 +3953,7 @@
           "countryCode": "DE",
           "country": "Germany",
           "rank": 7,
-          "br": 10.7,
+          "br": 11.0,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/germ_leopard_2a4",
@@ -3966,7 +3966,7 @@
           "countryCode": "DE",
           "country": "Germany",
           "rank": 7,
-          "br": 10.0,
+          "br": 10.3,
           "unitClass": "aa",
           "role": "SPAA",
           "source": "https://wiki.warthunder.com/unit/germ_flarakpz_1",
@@ -3979,7 +3979,7 @@
           "countryCode": "DE",
           "country": "Germany",
           "rank": 7,
-          "br": 10.3,
+          "br": 10.7,
           "unitClass": "aa",
           "role": "SPAA",
           "source": "https://wiki.warthunder.com/unit/germ_9a33bm3",
@@ -4031,7 +4031,7 @@
           "countryCode": "DE",
           "country": "Germany",
           "rank": 7,
-          "br": 10.3,
+          "br": 10.7,
           "unitClass": "aa",
           "role": "SPAA",
           "source": "https://wiki.warthunder.com/unit/germ_9a35_m",
@@ -4096,7 +4096,7 @@
           "countryCode": "DE",
           "country": "Germany",
           "rank": 7,
-          "br": 11.0,
+          "br": 11.3,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/germ_leopard_2_pt14",
@@ -4109,7 +4109,7 @@
           "countryCode": "DE",
           "country": "Germany",
           "rank": 7,
-          "br": 12.0,
+          "br": 12.3,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/germ_leopard_2a4m_can",
@@ -4122,7 +4122,7 @@
           "countryCode": "DE",
           "country": "Germany",
           "rank": 7,
-          "br": 10.7,
+          "br": 11.0,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/germ_leopard_2a4_pzbtl_123",
@@ -4135,7 +4135,7 @@
           "countryCode": "DE",
           "country": "Germany",
           "rank": 7,
-          "br": 12.0,
+          "br": 12.3,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/germ_leopard_2a4m_can_sm",
@@ -4161,7 +4161,7 @@
           "countryCode": "DE",
           "country": "Germany",
           "rank": 8,
-          "br": 12.3,
+          "br": 12.7,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/germ_leopard_2a5",
@@ -4174,7 +4174,7 @@
           "countryCode": "DE",
           "country": "Germany",
           "rank": 8,
-          "br": 12.7,
+          "br": 13.0,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/germ_leopard_2a6",
@@ -4187,7 +4187,7 @@
           "countryCode": "DE",
           "country": "Germany",
           "rank": 8,
-          "br": 11.7,
+          "br": 12.0,
           "unitClass": "aa",
           "role": "SPAA",
           "source": "https://wiki.warthunder.com/unit/germ_flarakrad",
@@ -4200,7 +4200,7 @@
           "countryCode": "DE",
           "country": "Germany",
           "rank": 8,
-          "br": 12.7,
+          "br": 13.0,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/germ_leopard_2a5_pso",
@@ -4213,7 +4213,7 @@
           "countryCode": "DE",
           "country": "Germany",
           "rank": 8,
-          "br": 12.7,
+          "br": 13.3,
           "unitClass": "aa",
           "role": "SPAA",
           "source": "https://wiki.warthunder.com/unit/germ_iris_slm_fcs",
@@ -4226,7 +4226,7 @@
           "countryCode": "DE",
           "country": "Germany",
           "rank": 8,
-          "br": 12.7,
+          "br": 13.3,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/germ_leopard_2a7v",
@@ -4239,7 +4239,7 @@
           "countryCode": "DE",
           "country": "Germany",
           "rank": 8,
-          "br": 12.3,
+          "br": 12.7,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/germ_leopard_2pl",
@@ -4252,7 +4252,7 @@
           "countryCode": "DE",
           "country": "Germany",
           "rank": 8,
-          "br": 12.3,
+          "br": 12.7,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/germ_leopard_2a5_yt_cup_2019",
@@ -5799,7 +5799,7 @@
           "countryCode": "RU",
           "country": "USSR",
           "rank": 5,
-          "br": 8.0,
+          "br": 7.7,
           "unitClass": "lt",
           "role": "Light tank",
           "source": "https://wiki.warthunder.com/unit/ussr_bmp_1",
@@ -5812,7 +5812,7 @@
           "countryCode": "RU",
           "country": "USSR",
           "rank": 5,
-          "br": 8.0,
+          "br": 8.3,
           "unitClass": "lt",
           "role": "Light tank",
           "source": "https://wiki.warthunder.com/unit/ussr_object_906",
@@ -5916,7 +5916,7 @@
           "countryCode": "RU",
           "country": "USSR",
           "rank": 5,
-          "br": 8.0,
+          "br": 8.3,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/ussr_to_55",
@@ -5929,7 +5929,7 @@
           "countryCode": "RU",
           "country": "USSR",
           "rank": 5,
-          "br": 8.3,
+          "br": 8.7,
           "unitClass": "lt",
           "role": "Light tank",
           "source": "https://wiki.warthunder.com/unit/ussr_pt_76_57",
@@ -5942,7 +5942,7 @@
           "countryCode": "RU",
           "country": "USSR",
           "rank": 6,
-          "br": 8.3,
+          "br": 8.7,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/ussr_t_55a",
@@ -6137,7 +6137,7 @@
           "countryCode": "RU",
           "country": "USSR",
           "rank": 6,
-          "br": 9.3,
+          "br": 9.7,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/ussr_t_72a",
@@ -6150,7 +6150,7 @@
           "countryCode": "RU",
           "country": "USSR",
           "rank": 6,
-          "br": 9.3,
+          "br": 9.7,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/ussr_t_64a_1971",
@@ -6306,7 +6306,7 @@
           "countryCode": "RU",
           "country": "USSR",
           "rank": 7,
-          "br": 10.7,
+          "br": 11.0,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/ussr_t_80b",
@@ -6345,7 +6345,7 @@
           "countryCode": "RU",
           "country": "USSR",
           "rank": 7,
-          "br": 10.3,
+          "br": 10.7,
           "unitClass": "aa",
           "role": "SPAA",
           "source": "https://wiki.warthunder.com/unit/ussr_9a33bm3",
@@ -6358,7 +6358,7 @@
           "countryCode": "RU",
           "country": "USSR",
           "rank": 7,
-          "br": 10.3,
+          "br": 10.7,
           "unitClass": "aa",
           "role": "SPAA",
           "source": "https://wiki.warthunder.com/unit/ussr_9a35_m2",
@@ -6384,7 +6384,7 @@
           "countryCode": "RU",
           "country": "USSR",
           "rank": 7,
-          "br": 11.7,
+          "br": 12.0,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/ussr_t_80u",
@@ -6397,7 +6397,7 @@
           "countryCode": "RU",
           "country": "USSR",
           "rank": 7,
-          "br": 11.7,
+          "br": 12.0,
           "unitClass": "td",
           "role": "Tank destroyer",
           "source": "https://wiki.warthunder.com/unit/ussr_bmpt",
@@ -6410,7 +6410,7 @@
           "countryCode": "RU",
           "country": "USSR",
           "rank": 7,
-          "br": 11.0,
+          "br": 11.3,
           "unitClass": "aa",
           "role": "SPAA",
           "source": "https://wiki.warthunder.com/unit/ussr_zprk_2s6",
@@ -6436,7 +6436,7 @@
           "countryCode": "RU",
           "country": "USSR",
           "rank": 7,
-          "br": 11.3,
+          "br": 11.7,
           "unitClass": "aa",
           "role": "SPAA",
           "source": "https://wiki.warthunder.com/unit/ussr_tor_m1",
@@ -6488,7 +6488,7 @@
           "countryCode": "RU",
           "country": "USSR",
           "rank": 7,
-          "br": 10.7,
+          "br": 11.0,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/ussr_object_292",
@@ -6501,7 +6501,7 @@
           "countryCode": "RU",
           "country": "USSR",
           "rank": 7,
-          "br": 11.7,
+          "br": 12.0,
           "unitClass": "td",
           "role": "Tank destroyer",
           "source": "https://wiki.warthunder.com/unit/ussr_bmpt_72",
@@ -6553,7 +6553,7 @@
           "countryCode": "RU",
           "country": "USSR",
           "rank": 7,
-          "br": 12.0,
+          "br": 12.3,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/ussr_t_80ue1",
@@ -6566,7 +6566,7 @@
           "countryCode": "RU",
           "country": "USSR",
           "rank": 7,
-          "br": 11.7,
+          "br": 12.0,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/ussr_t_80u_yt_cup_2019",
@@ -6579,7 +6579,7 @@
           "countryCode": "RU",
           "country": "USSR",
           "rank": 7,
-          "br": 12.0,
+          "br": 12.3,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/ussr_t_80ue1_sm",
@@ -6592,7 +6592,7 @@
           "countryCode": "RU",
           "country": "USSR",
           "rank": 7,
-          "br": 11.7,
+          "br": 12.0,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/ussr_t_80um2",
@@ -6605,7 +6605,7 @@
           "countryCode": "RU",
           "country": "USSR",
           "rank": 7,
-          "br": 11.7,
+          "br": 12.0,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/ussr_t_80uk",
@@ -6631,7 +6631,7 @@
           "countryCode": "RU",
           "country": "USSR",
           "rank": 8,
-          "br": 12.7,
+          "br": 13.3,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/ussr_t_80bvm",
@@ -6644,7 +6644,7 @@
           "countryCode": "RU",
           "country": "USSR",
           "rank": 8,
-          "br": 12.0,
+          "br": 12.3,
           "unitClass": "aa",
           "role": "SPAA",
           "source": "https://wiki.warthunder.com/unit/ussr_pantsyr_s1",
@@ -6657,7 +6657,7 @@
           "countryCode": "RU",
           "country": "USSR",
           "rank": 8,
-          "br": 12.7,
+          "br": 13.0,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/ussr_t_90m_2020",
@@ -6683,7 +6683,7 @@
           "countryCode": "RU",
           "country": "USSR",
           "rank": 8,
-          "br": 12.7,
+          "br": 13.3,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/ussr_t_90m_arena_m",
@@ -6696,7 +6696,7 @@
           "countryCode": "RU",
           "country": "USSR",
           "rank": 8,
-          "br": 12.7,
+          "br": 13.3,
           "unitClass": "aa",
           "role": "SPAA",
           "source": "https://wiki.warthunder.com/unit/ussr_pantsyr_sm_sv",
@@ -7840,7 +7840,7 @@
           "countryCode": "UK",
           "country": "Great Britain",
           "rank": 5,
-          "br": 8.3,
+          "br": 8.7,
           "unitClass": "aa",
           "role": "SPAA",
           "source": "https://wiki.warthunder.com/unit/uk_falcon",
@@ -7957,7 +7957,7 @@
           "countryCode": "UK",
           "country": "Great Britain",
           "rank": 6,
-          "br": 8.3,
+          "br": 8.7,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/uk_olifant_mk_1a",
@@ -7983,7 +7983,7 @@
           "countryCode": "UK",
           "country": "Great Britain",
           "rank": 6,
-          "br": 8.3,
+          "br": 8.7,
           "unitClass": "td",
           "role": "Tank destroyer",
           "source": "https://wiki.warthunder.com/unit/uk_ratel_zt3",
@@ -7996,7 +7996,7 @@
           "countryCode": "UK",
           "country": "Great Britain",
           "rank": 6,
-          "br": 8.3,
+          "br": 8.7,
           "unitClass": "aa",
           "role": "SPAA",
           "source": "https://wiki.warthunder.com/unit/uk_chieftain_marksman",
@@ -8035,7 +8035,7 @@
           "countryCode": "UK",
           "country": "Great Britain",
           "rank": 6,
-          "br": 8.7,
+          "br": 9.0,
           "unitClass": "lt",
           "role": "Light tank",
           "source": "https://wiki.warthunder.com/unit/uk_rooikat_76",
@@ -8100,7 +8100,7 @@
           "countryCode": "UK",
           "country": "Great Britain",
           "rank": 6,
-          "br": 9.7,
+          "br": 10.3,
           "unitClass": "aa",
           "role": "SPAA",
           "source": "https://wiki.warthunder.com/unit/uk_tracked_rapier",
@@ -8126,7 +8126,7 @@
           "countryCode": "UK",
           "country": "Great Britain",
           "rank": 6,
-          "br": 9.3,
+          "br": 9.7,
           "unitClass": "lt",
           "role": "Light tank",
           "source": "https://wiki.warthunder.com/unit/uk_vfm_5",
@@ -8139,7 +8139,7 @@
           "countryCode": "UK",
           "country": "Great Britain",
           "rank": 6,
-          "br": 9.3,
+          "br": 9.7,
           "unitClass": "lt",
           "role": "Light tank",
           "source": "https://wiki.warthunder.com/unit/uk_rooikat_mttd",
@@ -8178,7 +8178,7 @@
           "countryCode": "UK",
           "country": "Great Britain",
           "rank": 6,
-          "br": 9.3,
+          "br": 9.7,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/uk_khalid",
@@ -8204,7 +8204,7 @@
           "countryCode": "UK",
           "country": "Great Britain",
           "rank": 6,
-          "br": 9.7,
+          "br": 10.0,
           "unitClass": "lt",
           "role": "Light tank",
           "source": "https://wiki.warthunder.com/unit/uk_rooikat_105_td",
@@ -8217,7 +8217,7 @@
           "countryCode": "UK",
           "country": "Great Britain",
           "rank": 6,
-          "br": 10.0,
+          "br": 10.3,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/uk_shir_2",
@@ -8230,7 +8230,7 @@
           "countryCode": "UK",
           "country": "Great Britain",
           "rank": 7,
-          "br": 10.3,
+          "br": 10.7,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/uk_challenger_1",
@@ -8243,7 +8243,7 @@
           "countryCode": "UK",
           "country": "Great Britain",
           "rank": 7,
-          "br": 10.7,
+          "br": 11.0,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/uk_challenger_mk_3",
@@ -8256,7 +8256,7 @@
           "countryCode": "UK",
           "country": "Great Britain",
           "rank": 7,
-          "br": 10.0,
+          "br": 10.3,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/uk_ttd",
@@ -8295,7 +8295,7 @@
           "countryCode": "UK",
           "country": "Great Britain",
           "rank": 7,
-          "br": 10.3,
+          "br": 10.7,
           "unitClass": "aa",
           "role": "SPAA",
           "source": "https://wiki.warthunder.com/unit/uk_9a33bm2",
@@ -8308,7 +8308,7 @@
           "countryCode": "UK",
           "country": "Great Britain",
           "rank": 7,
-          "br": 10.3,
+          "br": 10.7,
           "unitClass": "lt",
           "role": "Light tank",
           "source": "https://wiki.warthunder.com/unit/uk_ajax",
@@ -8321,7 +8321,7 @@
           "countryCode": "UK",
           "country": "Great Britain",
           "rank": 7,
-          "br": 11.7,
+          "br": 12.0,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/uk_challenger_ii",
@@ -8334,7 +8334,7 @@
           "countryCode": "UK",
           "country": "Great Britain",
           "rank": 7,
-          "br": 11.7,
+          "br": 12.0,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/uk_challenger_2_dorchester",
@@ -8347,7 +8347,7 @@
           "countryCode": "UK",
           "country": "Great Britain",
           "rank": 7,
-          "br": 11.7,
+          "br": 12.0,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/uk_challenger_2_tes",
@@ -8360,7 +8360,7 @@
           "countryCode": "UK",
           "country": "Great Britain",
           "rank": 7,
-          "br": 10.7,
+          "br": 11.0,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/uk_vickers_mk7",
@@ -8373,7 +8373,7 @@
           "countryCode": "UK",
           "country": "Great Britain",
           "rank": 7,
-          "br": 10.3,
+          "br": 10.7,
           "unitClass": "aa",
           "role": "SPAA",
           "source": "https://wiki.warthunder.com/unit/uk_stormer_hvm",
@@ -8386,7 +8386,7 @@
           "countryCode": "UK",
           "country": "Great Britain",
           "rank": 7,
-          "br": 10.3,
+          "br": 10.7,
           "unitClass": "aa",
           "role": "SPAA",
           "source": "https://wiki.warthunder.com/unit/uk_9a35_m",
@@ -8399,7 +8399,7 @@
           "countryCode": "UK",
           "country": "Great Britain",
           "rank": 7,
-          "br": 10.7,
+          "br": 11.0,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/uk_challenger_1_mk_3_gulf",
@@ -8425,7 +8425,7 @@
           "countryCode": "UK",
           "country": "Great Britain",
           "rank": 7,
-          "br": 11.7,
+          "br": 12.0,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/uk_challenger_2_megatron",
@@ -8451,7 +8451,7 @@
           "countryCode": "UK",
           "country": "Great Britain",
           "rank": 7,
-          "br": 11.7,
+          "br": 12.0,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/uk_challenger_2_megatron_sm",
@@ -8464,7 +8464,7 @@
           "countryCode": "UK",
           "country": "Great Britain",
           "rank": 7,
-          "br": 11.7,
+          "br": 12.0,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/uk_challenger_ii_yt_cup_2019",
@@ -8477,7 +8477,7 @@
           "countryCode": "UK",
           "country": "Great Britain",
           "rank": 7,
-          "br": 12.0,
+          "br": 12.3,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/uk_m1a1_aim_abrams",
@@ -8490,7 +8490,7 @@
           "countryCode": "UK",
           "country": "Great Britain",
           "rank": 8,
-          "br": 12.0,
+          "br": 12.3,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/uk_challenger_2_lep",
@@ -8503,7 +8503,7 @@
           "countryCode": "UK",
           "country": "Great Britain",
           "rank": 8,
-          "br": 12.7,
+          "br": 13.3,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/uk_m1a2_sep3_abrams",
@@ -8516,7 +8516,7 @@
           "countryCode": "UK",
           "country": "Great Britain",
           "rank": 8,
-          "br": 11.7,
+          "br": 12.0,
           "unitClass": "aa",
           "role": "SPAA",
           "source": "https://wiki.warthunder.com/unit/uk_adats_m113a3",
@@ -8529,7 +8529,7 @@
           "countryCode": "UK",
           "country": "Great Britain",
           "rank": 8,
-          "br": 12.7,
+          "br": 13.0,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/uk_challenger_2_bn",
@@ -8542,7 +8542,7 @@
           "countryCode": "UK",
           "country": "Great Britain",
           "rank": 8,
-          "br": 12.7,
+          "br": 13.0,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/uk_challenger_2e",
@@ -8555,7 +8555,7 @@
           "countryCode": "UK",
           "country": "Great Britain",
           "rank": 8,
-          "br": 12.7,
+          "br": 13.3,
           "unitClass": "aa",
           "role": "SPAA",
           "source": "https://wiki.warthunder.com/unit/uk_sky_sabre_fcs",
@@ -9244,7 +9244,7 @@
           "countryCode": "JP",
           "country": "Japan",
           "rank": 5,
-          "br": 8.3,
+          "br": 8.7,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/jp_st_b1",
@@ -9257,7 +9257,7 @@
           "countryCode": "JP",
           "country": "Japan",
           "rank": 5,
-          "br": 8.3,
+          "br": 8.7,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/jp_type_74_c",
@@ -9296,7 +9296,7 @@
           "countryCode": "JP",
           "country": "Japan",
           "rank": 5,
-          "br": 8.3,
+          "br": 8.7,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/jp_type_74_red_star",
@@ -9309,7 +9309,7 @@
           "countryCode": "JP",
           "country": "Japan",
           "rank": 6,
-          "br": 9.0,
+          "br": 9.3,
           "unitClass": "lt",
           "role": "Light tank",
           "source": "https://wiki.warthunder.com/unit/jp_type_87_rcv",
@@ -9361,7 +9361,7 @@
           "countryCode": "JP",
           "country": "Japan",
           "rank": 6,
-          "br": 9.3,
+          "br": 9.7,
           "unitClass": "lt",
           "role": "Light tank",
           "source": "https://wiki.warthunder.com/unit/jp_type_16_mcv_prot",
@@ -9374,7 +9374,7 @@
           "countryCode": "JP",
           "country": "Japan",
           "rank": 6,
-          "br": 8.3,
+          "br": 8.7,
           "unitClass": "aa",
           "role": "SPAA",
           "source": "https://wiki.warthunder.com/unit/jp_type_87",
@@ -9413,7 +9413,7 @@
           "countryCode": "JP",
           "country": "Japan",
           "rank": 6,
-          "br": 9.3,
+          "br": 9.7,
           "unitClass": "lt",
           "role": "Light tank",
           "source": "https://wiki.warthunder.com/unit/jp_stingray",
@@ -9439,7 +9439,7 @@
           "countryCode": "JP",
           "country": "Japan",
           "rank": 6,
-          "br": 9.3,
+          "br": 9.7,
           "unitClass": "lt",
           "role": "Light tank",
           "source": "https://wiki.warthunder.com/unit/jp_type_16_mod",
@@ -9465,7 +9465,7 @@
           "countryCode": "JP",
           "country": "Japan",
           "rank": 7,
-          "br": 11.7,
+          "br": 12.0,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/jp_type_90",
@@ -9478,7 +9478,7 @@
           "countryCode": "JP",
           "country": "Japan",
           "rank": 7,
-          "br": 11.7,
+          "br": 12.0,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/jp_type_90b",
@@ -9491,7 +9491,7 @@
           "countryCode": "JP",
           "country": "Japan",
           "rank": 7,
-          "br": 9.7,
+          "br": 10.0,
           "unitClass": "lt",
           "role": "Light tank",
           "source": "https://wiki.warthunder.com/unit/jp_type_16",
@@ -9504,7 +9504,7 @@
           "countryCode": "JP",
           "country": "Japan",
           "rank": 7,
-          "br": 9.3,
+          "br": 9.7,
           "unitClass": "aa",
           "role": "SPAA",
           "source": "https://wiki.warthunder.com/unit/jp_type_93",
@@ -9517,7 +9517,7 @@
           "countryCode": "JP",
           "country": "Japan",
           "rank": 7,
-          "br": 12.0,
+          "br": 12.3,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/jp_type_10_prototype",
@@ -9556,7 +9556,7 @@
           "countryCode": "JP",
           "country": "Japan",
           "rank": 7,
-          "br": 11.7,
+          "br": 12.0,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/jp_type_90b_camo",
@@ -9569,7 +9569,7 @@
           "countryCode": "JP",
           "country": "Japan",
           "rank": 7,
-          "br": 11.7,
+          "br": 12.0,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/jp_type_90b_sm",
@@ -9582,7 +9582,7 @@
           "countryCode": "JP",
           "country": "Japan",
           "rank": 8,
-          "br": 12.7,
+          "br": 13.3,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/jp_leopard_2ri",
@@ -9595,7 +9595,7 @@
           "countryCode": "JP",
           "country": "Japan",
           "rank": 8,
-          "br": 12.7,
+          "br": 13.3,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/jp_type_10",
@@ -9608,7 +9608,7 @@
           "countryCode": "JP",
           "country": "Japan",
           "rank": 8,
-          "br": 12.7,
+          "br": 13.3,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/jp_tkx_prot",
@@ -9634,7 +9634,7 @@
           "countryCode": "JP",
           "country": "Japan",
           "rank": 8,
-          "br": 12.3,
+          "br": 12.7,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/jp_oplot_t",
@@ -10232,7 +10232,7 @@
           "countryCode": "CN",
           "country": "China",
           "rank": 5,
-          "br": 8.0,
+          "br": 7.7,
           "unitClass": "lt",
           "role": "Light tank",
           "source": "https://wiki.warthunder.com/unit/cn_type_86",
@@ -10258,7 +10258,7 @@
           "countryCode": "CN",
           "country": "China",
           "rank": 5,
-          "br": 8.0,
+          "br": 8.7,
           "unitClass": "aa",
           "role": "SPAA",
           "source": "https://wiki.warthunder.com/unit/cn_pgz_88",
@@ -10297,7 +10297,7 @@
           "countryCode": "CN",
           "country": "China",
           "rank": 5,
-          "br": 8.0,
+          "br": 8.3,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/cn_type_69",
@@ -10310,7 +10310,7 @@
           "countryCode": "CN",
           "country": "China",
           "rank": 5,
-          "br": 8.0,
+          "br": 8.3,
           "unitClass": "aa",
           "role": "SPAA",
           "source": "https://wiki.warthunder.com/unit/cn_wz_305",
@@ -10336,7 +10336,7 @@
           "countryCode": "CN",
           "country": "China",
           "rank": 5,
-          "br": 8.0,
+          "br": 8.3,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/cn_ztz_59a",
@@ -10362,7 +10362,7 @@
           "countryCode": "CN",
           "country": "China",
           "rank": 5,
-          "br": 8.3,
+          "br": 8.7,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/cn_type_69_2a",
@@ -10375,7 +10375,7 @@
           "countryCode": "CN",
           "country": "China",
           "rank": 6,
-          "br": 8.3,
+          "br": 8.7,
           "unitClass": "lt",
           "role": "Light tank",
           "source": "https://wiki.warthunder.com/unit/cn_m_41d",
@@ -10388,7 +10388,7 @@
           "countryCode": "CN",
           "country": "China",
           "rank": 6,
-          "br": 8.3,
+          "br": 8.7,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/cn_type_59d",
@@ -10401,7 +10401,7 @@
           "countryCode": "CN",
           "country": "China",
           "rank": 6,
-          "br": 9.3,
+          "br": 10.0,
           "unitClass": "aa",
           "role": "SPAA",
           "source": "https://wiki.warthunder.com/unit/cn_pgz_09",
@@ -10479,7 +10479,7 @@
           "countryCode": "CN",
           "country": "China",
           "rank": 6,
-          "br": 9.3,
+          "br": 9.7,
           "unitClass": "aa",
           "role": "SPAA",
           "source": "https://wiki.warthunder.com/unit/cn_pgz_04a",
@@ -10492,7 +10492,7 @@
           "countryCode": "CN",
           "country": "China",
           "rank": 6,
-          "br": 9.0,
+          "br": 9.3,
           "unitClass": "lt",
           "role": "Light tank",
           "source": "https://wiki.warthunder.com/unit/cn_ptl_02",
@@ -10531,7 +10531,7 @@
           "countryCode": "CN",
           "country": "China",
           "rank": 6,
-          "br": 9.3,
+          "br": 9.7,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/cn_ztz_96",
@@ -10583,7 +10583,7 @@
           "countryCode": "CN",
           "country": "China",
           "rank": 6,
-          "br": 9.0,
+          "br": 9.3,
           "unitClass": "lt",
           "role": "Light tank",
           "source": "https://wiki.warthunder.com/unit/cn_wma_301",
@@ -10596,7 +10596,7 @@
           "countryCode": "CN",
           "country": "China",
           "rank": 6,
-          "br": 9.0,
+          "br": 9.3,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/cn_type_69_2g",
@@ -10726,7 +10726,7 @@
           "countryCode": "CN",
           "country": "China",
           "rank": 7,
-          "br": 10.0,
+          "br": 10.3,
           "unitClass": "lt",
           "role": "Light tank",
           "source": "https://wiki.warthunder.com/unit/cn_qn506",
@@ -10778,7 +10778,7 @@
           "countryCode": "CN",
           "country": "China",
           "rank": 7,
-          "br": 11.7,
+          "br": 12.0,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/cn_ztz_96b",
@@ -10791,7 +10791,7 @@
           "countryCode": "CN",
           "country": "China",
           "rank": 8,
-          "br": 12.3,
+          "br": 12.7,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/cn_vt_4",
@@ -10804,7 +10804,7 @@
           "countryCode": "CN",
           "country": "China",
           "rank": 8,
-          "br": 12.3,
+          "br": 12.7,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/cn_wz_1001",
@@ -10817,7 +10817,7 @@
           "countryCode": "CN",
           "country": "China",
           "rank": 8,
-          "br": 11.3,
+          "br": 11.7,
           "unitClass": "aa",
           "role": "SPAA",
           "source": "https://wiki.warthunder.com/unit/cn_tor_m1",
@@ -10830,7 +10830,7 @@
           "countryCode": "CN",
           "country": "China",
           "rank": 8,
-          "br": 11.7,
+          "br": 12.0,
           "unitClass": "aa",
           "role": "SPAA",
           "source": "https://wiki.warthunder.com/unit/cn_hq_17",
@@ -10843,7 +10843,7 @@
           "countryCode": "CN",
           "country": "China",
           "rank": 8,
-          "br": 12.7,
+          "br": 13.0,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/cn_vt_4b",
@@ -10856,7 +10856,7 @@
           "countryCode": "CN",
           "country": "China",
           "rank": 8,
-          "br": 12.3,
+          "br": 12.7,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/cn_ztz_99a",
@@ -10869,7 +10869,7 @@
           "countryCode": "CN",
           "country": "China",
           "rank": 8,
-          "br": 12.0,
+          "br": 12.3,
           "unitClass": "aa",
           "role": "SPAA",
           "source": "https://wiki.warthunder.com/unit/cn_pgz_625_fb10",
@@ -10882,7 +10882,7 @@
           "countryCode": "CN",
           "country": "China",
           "rank": 8,
-          "br": 12.7,
+          "br": 13.0,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/cn_m1a2t",
@@ -10895,7 +10895,7 @@
           "countryCode": "CN",
           "country": "China",
           "rank": 8,
-          "br": 12.7,
+          "br": 13.3,
           "unitClass": "aa",
           "role": "SPAA",
           "source": "https://wiki.warthunder.com/unit/cn_hq_11",
@@ -10908,7 +10908,7 @@
           "countryCode": "CN",
           "country": "China",
           "rank": 8,
-          "br": 12.3,
+          "br": 12.7,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/cn_oplot_t",
@@ -11779,7 +11779,7 @@
           "countryCode": "IT",
           "country": "Italy",
           "rank": 5,
-          "br": 8.0,
+          "br": 8.3,
           "unitClass": "lt",
           "role": "Light tank",
           "source": "https://wiki.warthunder.com/unit/it_oto_r3_106sr",
@@ -11870,7 +11870,7 @@
           "countryCode": "IT",
           "country": "Italy",
           "rank": 5,
-          "br": 8.0,
+          "br": 8.3,
           "unitClass": "lt",
           "role": "Light tank",
           "source": "https://wiki.warthunder.com/unit/it_aubl_74_60_70m",
@@ -11935,7 +11935,7 @@
           "countryCode": "IT",
           "country": "Italy",
           "rank": 6,
-          "br": 9.3,
+          "br": 9.7,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/it_t_72m1",
@@ -11948,7 +11948,7 @@
           "countryCode": "IT",
           "country": "Italy",
           "rank": 6,
-          "br": 9.3,
+          "br": 9.7,
           "unitClass": "lt",
           "role": "Light tank",
           "source": "https://wiki.warthunder.com/unit/it_b1_centauro",
@@ -11961,7 +11961,7 @@
           "countryCode": "IT",
           "country": "Italy",
           "rank": 6,
-          "br": 9.7,
+          "br": 10.0,
           "unitClass": "lt",
           "role": "Light tank",
           "source": "https://wiki.warthunder.com/unit/it_b1_centauro_romor",
@@ -11987,7 +11987,7 @@
           "countryCode": "IT",
           "country": "Italy",
           "rank": 6,
-          "br": 9.7,
+          "br": 10.0,
           "unitClass": "aa",
           "role": "SPAA",
           "source": "https://wiki.warthunder.com/unit/it_otobreda_sidam_25_mistral",
@@ -12013,7 +12013,7 @@
           "countryCode": "IT",
           "country": "Italy",
           "rank": 6,
-          "br": 9.3,
+          "br": 9.7,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/it_of_40_mtca",
@@ -12039,7 +12039,7 @@
           "countryCode": "IT",
           "country": "Italy",
           "rank": 6,
-          "br": 9.7,
+          "br": 10.0,
           "unitClass": "lt",
           "role": "Light tank",
           "source": "https://wiki.warthunder.com/unit/it_vrcc_centauro",
@@ -12052,7 +12052,7 @@
           "countryCode": "IT",
           "country": "Italy",
           "rank": 7,
-          "br": 11.7,
+          "br": 12.0,
           "unitClass": "lt",
           "role": "Light tank",
           "source": "https://wiki.warthunder.com/unit/it_centauro_mgs_120",
@@ -12078,7 +12078,7 @@
           "countryCode": "IT",
           "country": "Italy",
           "rank": 7,
-          "br": 10.3,
+          "br": 10.7,
           "unitClass": "aa",
           "role": "SPAA",
           "source": "https://wiki.warthunder.com/unit/it_9a33bm3",
@@ -12091,7 +12091,7 @@
           "countryCode": "IT",
           "country": "Italy",
           "rank": 7,
-          "br": 10.3,
+          "br": 10.7,
           "unitClass": "aa",
           "role": "SPAA",
           "source": "https://wiki.warthunder.com/unit/it_9a35_m",
@@ -12130,7 +12130,7 @@
           "countryCode": "IT",
           "country": "Italy",
           "rank": 7,
-          "br": 10.7,
+          "br": 11.0,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/it_leopard_2a4",
@@ -12143,7 +12143,7 @@
           "countryCode": "IT",
           "country": "Italy",
           "rank": 7,
-          "br": 11.7,
+          "br": 12.0,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/it_c1_ariete_pso",
@@ -12156,7 +12156,7 @@
           "countryCode": "IT",
           "country": "Italy",
           "rank": 7,
-          "br": 11.7,
+          "br": 12.0,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/it_c1_ariete",
@@ -12169,7 +12169,7 @@
           "countryCode": "IT",
           "country": "Italy",
           "rank": 7,
-          "br": 11.3,
+          "br": 11.7,
           "unitClass": "aa",
           "role": "SPAA",
           "source": "https://wiki.warthunder.com/unit/it_otomatic",
@@ -12182,7 +12182,7 @@
           "countryCode": "IT",
           "country": "Italy",
           "rank": 7,
-          "br": 11.0,
+          "br": 11.3,
           "unitClass": "lt",
           "role": "Light tank",
           "source": "https://wiki.warthunder.com/unit/it_freccia",
@@ -12208,7 +12208,7 @@
           "countryCode": "IT",
           "country": "Italy",
           "rank": 7,
-          "br": 11.7,
+          "br": 12.0,
           "unitClass": "lt",
           "role": "Light tank",
           "source": "https://wiki.warthunder.com/unit/it_centauro_rgo_120",
@@ -12234,7 +12234,7 @@
           "countryCode": "IT",
           "country": "Italy",
           "rank": 7,
-          "br": 11.7,
+          "br": 12.0,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/it_c1_ariete_certezza",
@@ -12247,7 +12247,7 @@
           "countryCode": "IT",
           "country": "Italy",
           "rank": 8,
-          "br": 12.3,
+          "br": 12.7,
           "unitClass": "lt",
           "role": "Light tank",
           "source": "https://wiki.warthunder.com/unit/it_centauro_2",
@@ -12260,7 +12260,7 @@
           "countryCode": "IT",
           "country": "Italy",
           "rank": 8,
-          "br": 12.3,
+          "br": 12.7,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/it_ariete_amv_pt1",
@@ -12273,7 +12273,7 @@
           "countryCode": "IT",
           "country": "Italy",
           "rank": 8,
-          "br": 12.7,
+          "br": 13.3,
           "unitClass": "aa",
           "role": "SPAA",
           "source": "https://wiki.warthunder.com/unit/it_samp_t_fcs",
@@ -12286,7 +12286,7 @@
           "countryCode": "IT",
           "country": "Italy",
           "rank": 8,
-          "br": 12.7,
+          "br": 13.3,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/it_leopard_2a7_hungary",
@@ -13235,7 +13235,7 @@
           "countryCode": "FR",
           "country": "France",
           "rank": 6,
-          "br": 8.3,
+          "br": 8.7,
           "unitClass": "lt",
           "role": "Light tank",
           "source": "https://wiki.warthunder.com/unit/fr_mars_15",
@@ -13339,7 +13339,7 @@
           "countryCode": "FR",
           "country": "France",
           "rank": 6,
-          "br": 8.3,
+          "br": 8.7,
           "unitClass": "lt",
           "role": "Light tank",
           "source": "https://wiki.warthunder.com/unit/fr_amx_10rc",
@@ -13352,7 +13352,7 @@
           "countryCode": "FR",
           "country": "France",
           "rank": 6,
-          "br": 8.7,
+          "br": 9.0,
           "unitClass": "lt",
           "role": "Light tank",
           "source": "https://wiki.warthunder.com/unit/fr_sk105_a2",
@@ -13378,7 +13378,7 @@
           "countryCode": "FR",
           "country": "France",
           "rank": 6,
-          "br": 9.3,
+          "br": 9.7,
           "unitClass": "aa",
           "role": "SPAA",
           "source": "https://wiki.warthunder.com/unit/fr_vab_santal",
@@ -13404,7 +13404,7 @@
           "countryCode": "FR",
           "country": "France",
           "rank": 6,
-          "br": 9.3,
+          "br": 9.7,
           "unitClass": "lt",
           "role": "Light tank",
           "source": "https://wiki.warthunder.com/unit/fr_vbci",
@@ -13430,7 +13430,7 @@
           "countryCode": "FR",
           "country": "France",
           "rank": 6,
-          "br": 9.7,
+          "br": 10.0,
           "unitClass": "lt",
           "role": "Light tank",
           "source": "https://wiki.warthunder.com/unit/fr_vbci2_mct30",
@@ -13456,7 +13456,7 @@
           "countryCode": "FR",
           "country": "France",
           "rank": 7,
-          "br": 11.0,
+          "br": 11.3,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/fr_msc",
@@ -13469,7 +13469,7 @@
           "countryCode": "FR",
           "country": "France",
           "rank": 7,
-          "br": 10.0,
+          "br": 10.3,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/fr_amx_40",
@@ -13482,7 +13482,7 @@
           "countryCode": "FR",
           "country": "France",
           "rank": 7,
-          "br": 9.7,
+          "br": 10.3,
           "unitClass": "aa",
           "role": "SPAA",
           "source": "https://wiki.warthunder.com/unit/fr_amx_30_roland",
@@ -13495,7 +13495,7 @@
           "countryCode": "FR",
           "country": "France",
           "rank": 7,
-          "br": 11.0,
+          "br": 11.3,
           "unitClass": "lt",
           "role": "Light tank",
           "source": "https://wiki.warthunder.com/unit/fr_jaguar_ebrc",
@@ -13508,7 +13508,7 @@
           "countryCode": "FR",
           "country": "France",
           "rank": 7,
-          "br": 10.7,
+          "br": 11.0,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/fr_leopard_2a4nl",
@@ -13521,7 +13521,7 @@
           "countryCode": "FR",
           "country": "France",
           "rank": 7,
-          "br": 9.7,
+          "br": 10.0,
           "unitClass": "lt",
           "role": "Light tank",
           "source": "https://wiki.warthunder.com/unit/fr_cv_9035_nl",
@@ -13534,7 +13534,7 @@
           "countryCode": "FR",
           "country": "France",
           "rank": 7,
-          "br": 10.7,
+          "br": 11.0,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/fr_leopard_2a4nl_les",
@@ -13547,7 +13547,7 @@
           "countryCode": "FR",
           "country": "France",
           "rank": 8,
-          "br": 12.7,
+          "br": 13.0,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/fr_leclerc_s1",
@@ -13560,7 +13560,7 @@
           "countryCode": "FR",
           "country": "France",
           "rank": 8,
-          "br": 12.7,
+          "br": 13.0,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/fr_leclerc_s2",
@@ -13573,7 +13573,7 @@
           "countryCode": "FR",
           "country": "France",
           "rank": 8,
-          "br": 12.3,
+          "br": 12.7,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/fr_leopard_2a5nl",
@@ -13586,7 +13586,7 @@
           "countryCode": "FR",
           "country": "France",
           "rank": 8,
-          "br": 12.0,
+          "br": 12.3,
           "unitClass": "aa",
           "role": "SPAA",
           "source": "https://wiki.warthunder.com/unit/fr_crotale_ng",
@@ -13599,7 +13599,7 @@
           "countryCode": "FR",
           "country": "France",
           "rank": 8,
-          "br": 12.7,
+          "br": 13.0,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/fr_leclerc_sxxi",
@@ -13612,7 +13612,7 @@
           "countryCode": "FR",
           "country": "France",
           "rank": 8,
-          "br": 12.7,
+          "br": 13.0,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/fr_leopard_2a6nl",
@@ -13625,7 +13625,7 @@
           "countryCode": "FR",
           "country": "France",
           "rank": 8,
-          "br": 12.7,
+          "br": 13.3,
           "unitClass": "aa",
           "role": "SPAA",
           "source": "https://wiki.warthunder.com/unit/fr_samp_t_fcs",
@@ -13638,7 +13638,7 @@
           "countryCode": "FR",
           "country": "France",
           "rank": 8,
-          "br": 12.7,
+          "br": 13.0,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/fr_leclerc_azur",
@@ -14327,7 +14327,7 @@
           "countryCode": "SE",
           "country": "Sweden",
           "rank": 5,
-          "br": 8.0,
+          "br": 8.3,
           "unitClass": "lt",
           "role": "Light tank",
           "source": "https://wiki.warthunder.com/unit/sw_landsverk_ush_405",
@@ -14353,7 +14353,7 @@
           "countryCode": "SE",
           "country": "Sweden",
           "rank": 5,
-          "br": 8.0,
+          "br": 8.3,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/sw_strv_103a",
@@ -14405,7 +14405,7 @@
           "countryCode": "SE",
           "country": "Sweden",
           "rank": 5,
-          "br": 8.0,
+          "br": 8.3,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/sw_strv_103_0",
@@ -14418,7 +14418,7 @@
           "countryCode": "SE",
           "country": "Sweden",
           "rank": 6,
-          "br": 8.7,
+          "br": 9.0,
           "unitClass": "lt",
           "role": "Light tank",
           "source": "https://wiki.warthunder.com/unit/sw_cv_90105",
@@ -14457,7 +14457,7 @@
           "countryCode": "SE",
           "country": "Sweden",
           "rank": 6,
-          "br": 8.7,
+          "br": 9.0,
           "unitClass": "aa",
           "role": "SPAA",
           "source": "https://wiki.warthunder.com/unit/sw_itpsv_90",
@@ -14535,7 +14535,7 @@
           "countryCode": "SE",
           "country": "Sweden",
           "rank": 6,
-          "br": 9.7,
+          "br": 10.0,
           "unitClass": "aa",
           "role": "SPAA",
           "source": "https://wiki.warthunder.com/unit/sw_lvrbv_701",
@@ -14548,7 +14548,7 @@
           "countryCode": "SE",
           "country": "Sweden",
           "rank": 6,
-          "br": 9.3,
+          "br": 9.7,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/sw_t_72m1",
@@ -14574,7 +14574,7 @@
           "countryCode": "SE",
           "country": "Sweden",
           "rank": 6,
-          "br": 9.7,
+          "br": 10.0,
           "unitClass": "lt",
           "role": "Light tank",
           "source": "https://wiki.warthunder.com/unit/sw_strf_90b",
@@ -14613,7 +14613,7 @@
           "countryCode": "SE",
           "country": "Sweden",
           "rank": 6,
-          "br": 9.7,
+          "br": 10.0,
           "unitClass": "lt",
           "role": "Light tank",
           "source": "https://wiki.warthunder.com/unit/sw_cv_9035_dk",
@@ -14626,7 +14626,7 @@
           "countryCode": "SE",
           "country": "Sweden",
           "rank": 7,
-          "br": 10.3,
+          "br": 10.7,
           "unitClass": "lt",
           "role": "Light tank",
           "source": "https://wiki.warthunder.com/unit/sw_strf_90c",
@@ -14639,7 +14639,7 @@
           "countryCode": "SE",
           "country": "Sweden",
           "rank": 7,
-          "br": 10.7,
+          "br": 11.0,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/sw_strv_121",
@@ -14652,7 +14652,7 @@
           "countryCode": "SE",
           "country": "Sweden",
           "rank": 7,
-          "br": 10.3,
+          "br": 10.7,
           "unitClass": "aa",
           "role": "SPAA",
           "source": "https://wiki.warthunder.com/unit/sw_lvkv_90c",
@@ -14665,7 +14665,7 @@
           "countryCode": "SE",
           "country": "Sweden",
           "rank": 7,
-          "br": 10.3,
+          "br": 10.7,
           "unitClass": "aa",
           "role": "SPAA",
           "source": "https://wiki.warthunder.com/unit/sw_asrad_r",
@@ -14691,7 +14691,7 @@
           "countryCode": "SE",
           "country": "Sweden",
           "rank": 7,
-          "br": 10.7,
+          "br": 11.0,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/sw_leopard_2a4_fin",
@@ -14704,7 +14704,7 @@
           "countryCode": "SE",
           "country": "Sweden",
           "rank": 7,
-          "br": 10.3,
+          "br": 10.7,
           "unitClass": "lt",
           "role": "Light tank",
           "source": "https://wiki.warthunder.com/unit/sw_cv_90105_tml",
@@ -14730,7 +14730,7 @@
           "countryCode": "SE",
           "country": "Sweden",
           "rank": 7,
-          "br": 10.7,
+          "br": 11.0,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/sw_strv121b_christian2",
@@ -14743,7 +14743,7 @@
           "countryCode": "SE",
           "country": "Sweden",
           "rank": 8,
-          "br": 12.0,
+          "br": 12.3,
           "unitClass": "lt",
           "role": "Light tank",
           "source": "https://wiki.warthunder.com/unit/sw_cv_90120",
@@ -14756,7 +14756,7 @@
           "countryCode": "SE",
           "country": "Sweden",
           "rank": 8,
-          "br": 12.7,
+          "br": 13.3,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/sw_strv_122",
@@ -14769,7 +14769,7 @@
           "countryCode": "SE",
           "country": "Sweden",
           "rank": 8,
-          "br": 12.7,
+          "br": 13.3,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/sw_strv_122b_plss",
@@ -14782,7 +14782,7 @@
           "countryCode": "SE",
           "country": "Sweden",
           "rank": 8,
-          "br": 12.0,
+          "br": 12.3,
           "unitClass": "aa",
           "role": "SPAA",
           "source": "https://wiki.warthunder.com/unit/sw_crotale_ng",
@@ -14808,7 +14808,7 @@
           "countryCode": "SE",
           "country": "Sweden",
           "rank": 8,
-          "br": 12.7,
+          "br": 13.0,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/sw_leopard_2a6nl",
@@ -14821,7 +14821,7 @@
           "countryCode": "SE",
           "country": "Sweden",
           "rank": 8,
-          "br": 12.7,
+          "br": 13.3,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/sw_strv_122b_plus",
@@ -14834,7 +14834,7 @@
           "countryCode": "SE",
           "country": "Sweden",
           "rank": 8,
-          "br": 12.0,
+          "br": 12.3,
           "unitClass": "aa",
           "role": "SPAA",
           "source": "https://wiki.warthunder.com/unit/sw_eldenhet_98",
@@ -14847,7 +14847,7 @@
           "countryCode": "SE",
           "country": "Sweden",
           "rank": 8,
-          "br": 12.0,
+          "br": 12.3,
           "unitClass": "aa",
           "role": "SPAA",
           "source": "https://wiki.warthunder.com/unit/sw_nomads",
@@ -14860,7 +14860,7 @@
           "countryCode": "SE",
           "country": "Sweden",
           "rank": 8,
-          "br": 12.7,
+          "br": 13.0,
           "unitClass": "aa",
           "role": "SPAA",
           "source": "https://wiki.warthunder.com/unit/sw_nasams_fcs",
@@ -14873,7 +14873,7 @@
           "countryCode": "SE",
           "country": "Sweden",
           "rank": 8,
-          "br": 11.3,
+          "br": 11.7,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/sw_t_80u",
@@ -15211,7 +15211,7 @@
           "countryCode": "IL",
           "country": "Israel",
           "rank": 6,
-          "br": 8.7,
+          "br": 9.0,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/il_magach_6b",
@@ -15224,7 +15224,7 @@
           "countryCode": "IL",
           "country": "Israel",
           "rank": 6,
-          "br": 8.7,
+          "br": 9.0,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/il_magach_6_rocket",
@@ -15315,7 +15315,7 @@
           "countryCode": "IL",
           "country": "Israel",
           "rank": 6,
-          "br": 9.3,
+          "br": 9.7,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/il_merkava_mk_1",
@@ -15354,7 +15354,7 @@
           "countryCode": "IL",
           "country": "Israel",
           "rank": 6,
-          "br": 9.7,
+          "br": 10.0,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/il_merkava_mk_1b",
@@ -15367,7 +15367,7 @@
           "countryCode": "IL",
           "country": "Israel",
           "rank": 6,
-          "br": 9.7,
+          "br": 10.0,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/il_merkava_mk_2b_early",
@@ -15406,7 +15406,7 @@
           "countryCode": "IL",
           "country": "Israel",
           "rank": 6,
-          "br": 10.0,
+          "br": 10.3,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/il_merkava_mk_2d",
@@ -15419,7 +15419,7 @@
           "countryCode": "IL",
           "country": "Israel",
           "rank": 7,
-          "br": 10.0,
+          "br": 10.3,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/il_sabra_mk1",
@@ -15432,7 +15432,7 @@
           "countryCode": "IL",
           "country": "Israel",
           "rank": 7,
-          "br": 11.3,
+          "br": 11.7,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/il_merkava_mk_3b",
@@ -15445,7 +15445,7 @@
           "countryCode": "IL",
           "country": "Israel",
           "rank": 7,
-          "br": 11.3,
+          "br": 11.7,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/il_merkava_mk_3c",
@@ -15484,7 +15484,7 @@
           "countryCode": "IL",
           "country": "Israel",
           "rank": 7,
-          "br": 11.3,
+          "br": 11.7,
           "unitClass": "lt",
           "role": "Light tank",
           "source": "https://wiki.warthunder.com/unit/il_namer_rcws_30",
@@ -15497,7 +15497,7 @@
           "countryCode": "IL",
           "country": "Israel",
           "rank": 7,
-          "br": 11.3,
+          "br": 11.7,
           "unitClass": "lt",
           "role": "Light tank",
           "source": "https://wiki.warthunder.com/unit/il_eitan",
@@ -15510,7 +15510,7 @@
           "countryCode": "IL",
           "country": "Israel",
           "rank": 7,
-          "br": 11.3,
+          "br": 11.7,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/il_merkava_mk_3_raam_segol",
@@ -15523,7 +15523,7 @@
           "countryCode": "IL",
           "country": "Israel",
           "rank": 8,
-          "br": 12.3,
+          "br": 12.7,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/il_merkava_mk_4b",
@@ -15536,7 +15536,7 @@
           "countryCode": "IL",
           "country": "Israel",
           "rank": 8,
-          "br": 12.3,
+          "br": 12.7,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/il_merkava_mk_4_lic",
@@ -15549,7 +15549,7 @@
           "countryCode": "IL",
           "country": "Israel",
           "rank": 8,
-          "br": 12.7,
+          "br": 13.0,
           "unitClass": "aa",
           "role": "SPAA",
           "source": "https://wiki.warthunder.com/unit/il_spyder_aio",
@@ -15562,7 +15562,7 @@
           "countryCode": "IL",
           "country": "Israel",
           "rank": 8,
-          "br": 11.3,
+          "br": 11.7,
           "unitClass": "lt",
           "role": "Light tank",
           "source": "https://wiki.warthunder.com/unit/il_namer_tsrikhon",
@@ -15575,7 +15575,7 @@
           "countryCode": "IL",
           "country": "Israel",
           "rank": 8,
-          "br": 12.7,
+          "br": 13.3,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/il_merkava_mk_4m",
@@ -15601,7 +15601,7 @@
           "countryCode": "DE",
           "country": "Germany",
           "rank": 8,
-          "br": 12.7,
+          "br": 13.3,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/germ_embt",
@@ -15666,7 +15666,7 @@
           "countryCode": "UK",
           "country": "Great Britain",
           "rank": 7,
-          "br": 10.7,
+          "br": 11.0,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/uk_arjun_mk1",
@@ -15705,7 +15705,7 @@
           "countryCode": "CN",
           "country": "China",
           "rank": 8,
-          "br": 12.0,
+          "br": 12.3,
           "unitClass": "aa",
           "role": "SPAA",
           "source": "https://wiki.warthunder.com/unit/cn_fk_2000",
@@ -15744,7 +15744,7 @@
           "countryCode": "FR",
           "country": "France",
           "rank": 8,
-          "br": 12.7,
+          "br": 13.3,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/fr_embt",
@@ -15757,7 +15757,7 @@
           "countryCode": "IL",
           "country": "Israel",
           "rank": 7,
-          "br": 10.3,
+          "br": 10.7,
           "unitClass": "aa",
           "role": "SPAA",
           "source": "https://wiki.warthunder.com/unit/il_9a33bm3",
@@ -15770,7 +15770,7 @@
           "countryCode": "IL",
           "country": "Israel",
           "rank": 7,
-          "br": 11.3,
+          "br": 11.7,
           "unitClass": "aa",
           "role": "SPAA",
           "source": "https://wiki.warthunder.com/unit/il_tor_m1",
@@ -15783,7 +15783,7 @@
           "countryCode": "IL",
           "country": "Israel",
           "rank": 8,
-          "br": 12.7,
+          "br": 13.3,
           "unitClass": "mbt",
           "role": "Medium tank",
           "source": "https://wiki.warthunder.com/unit/il_leopard_2a6_hel",
@@ -16773,7 +16773,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/p-61c_1",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/p-61c_1.png",
-          "brGround": 4.0
+          "brGround": 3.7
         },
         {
           "wikiId": "b-17e",
@@ -16955,7 +16955,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/xp-55",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/xp-55.png",
-          "brGround": 4.7
+          "brGround": 5.0
         },
         {
           "wikiId": "p-61a_1",
@@ -17767,7 +17767,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/f_101c",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/f_101c.png",
-          "brGround": 9.0
+          "brGround": 8.7
         },
         {
           "wikiId": "f-86f-2",
@@ -17790,7 +17790,7 @@
           "countryCode": "US",
           "country": "USA",
           "rank": 6,
-          "br": 9.0,
+          "br": 9.3,
           "unitClass": "fighter",
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/f3h-2",
@@ -17865,7 +17865,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/f-104c",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/f-104c.png",
-          "brGround": 9.3
+          "brGround": 9.0
         },
         {
           "wikiId": "f-100d",
@@ -17893,7 +17893,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/f8u-2",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/f8u-2.png",
-          "brGround": 9.7
+          "brGround": 9.3
         },
         {
           "wikiId": "av_8c",
@@ -17921,7 +17921,7 @@
           "role": "Strike aircraft",
           "source": "https://wiki.warthunder.com/unit/a_4e_early",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/a_4e_early.png",
-          "brGround": 9.3
+          "brGround": 10.0
         },
         {
           "wikiId": "fj_4b_agm_12b",
@@ -17949,7 +17949,7 @@
           "role": "Strike aircraft",
           "source": "https://wiki.warthunder.com/unit/f_117",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/f_117.png",
-          "brGround": 10.0
+          "brGround": 10.3
         },
         {
           "wikiId": "b_52h",
@@ -18005,7 +18005,7 @@
           "role": "Strike aircraft",
           "source": "https://wiki.warthunder.com/unit/a_10a_early",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/a_10a_early.png",
-          "brGround": 10.3
+          "brGround": 11.0
         },
         {
           "wikiId": "f4d_1",
@@ -18019,7 +18019,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/f4d_1",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/f4d_1.png",
-          "brGround": 9.0
+          "brGround": 8.7
         },
         {
           "wikiId": "f_106a_1972",
@@ -18047,7 +18047,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/f-5e",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/f-5e.png",
-          "brGround": 11.3
+          "brGround": 11.7
         },
         {
           "wikiId": "f-4c",
@@ -18061,7 +18061,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/f-4c",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/f-4c.png",
-          "brGround": 9.7
+          "brGround": 10.0
         },
         {
           "wikiId": "f-8e",
@@ -18089,7 +18089,7 @@
           "role": "Strike aircraft",
           "source": "https://wiki.warthunder.com/unit/a_10a_late",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/a_10a_late.png",
-          "brGround": 10.7
+          "brGround": 11.3
         },
         {
           "wikiId": "f-105d",
@@ -18117,7 +18117,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/f-4e",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/f-4e.png",
-          "brGround": 11.3
+          "brGround": 12.0
         },
         {
           "wikiId": "f-4j",
@@ -18145,7 +18145,7 @@
           "role": "Strike aircraft",
           "source": "https://wiki.warthunder.com/unit/a_7d",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/a_7d.png",
-          "brGround": 10.3
+          "brGround": 11.0
         },
         {
           "wikiId": "a_7e",
@@ -18159,7 +18159,7 @@
           "role": "Strike aircraft",
           "source": "https://wiki.warthunder.com/unit/a_7e",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/a_7e.png",
-          "brGround": 10.7
+          "brGround": 11.3
         },
         {
           "wikiId": "f_111a",
@@ -18173,7 +18173,7 @@
           "role": "Strike aircraft",
           "source": "https://wiki.warthunder.com/unit/f_111a",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/f_111a.png",
-          "brGround": 9.7
+          "brGround": 10.0
         },
         {
           "wikiId": "a_10c",
@@ -18187,7 +18187,7 @@
           "role": "Strike aircraft",
           "source": "https://wiki.warthunder.com/unit/a_10c",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/a_10c.png",
-          "brGround": 11.7
+          "brGround": 12.3
         },
         {
           "wikiId": "f_111f",
@@ -18201,7 +18201,7 @@
           "role": "Strike aircraft",
           "source": "https://wiki.warthunder.com/unit/f_111f",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/f_111f.png",
-          "brGround": 11.7
+          "brGround": 12.3
         },
         {
           "wikiId": "f-5c",
@@ -18243,7 +18243,7 @@
           "role": "Strike aircraft",
           "source": "https://wiki.warthunder.com/unit/av_8b_na",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/av_8b_na.png",
-          "brGround": 11.7
+          "brGround": 12.3
         },
         {
           "wikiId": "a_6e_tram",
@@ -18257,7 +18257,7 @@
           "role": "Strike aircraft",
           "source": "https://wiki.warthunder.com/unit/a_6e_tram",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/a_6e_tram.png",
-          "brGround": 11.0
+          "brGround": 11.7
         },
         {
           "wikiId": "f-4s",
@@ -18285,7 +18285,7 @@
           "role": "Strike aircraft",
           "source": "https://wiki.warthunder.com/unit/a_7k",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/a_7k.png",
-          "brGround": 11.0
+          "brGround": 11.3
         },
         {
           "wikiId": "f_16a_block_10",
@@ -18299,7 +18299,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/f_16a_block_10",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/f_16a_block_10.png",
-          "brGround": 12.0
+          "brGround": 12.3
         },
         {
           "wikiId": "f_16a_block_15_adf",
@@ -18308,12 +18308,12 @@
           "countryCode": "US",
           "country": "USA",
           "rank": 8,
-          "br": 13.3,
+          "br": 13.7,
           "unitClass": "fighter",
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/f_16a_block_15_adf",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/f_16a_block_15_adf.png",
-          "brGround": 12.3
+          "brGround": 13.0
         },
         {
           "wikiId": "f_15a",
@@ -18327,7 +18327,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/f_15a",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/f_15a.png",
-          "brGround": 11.7
+          "brGround": 12.0
         },
         {
           "wikiId": "fa_18a",
@@ -18341,7 +18341,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/fa_18a",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/fa_18a.png",
-          "brGround": 12.0
+          "brGround": 12.3
         },
         {
           "wikiId": "fa_18c_late",
@@ -18355,7 +18355,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/fa_18c_late",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/fa_18c_late.png",
-          "brGround": 12.7
+          "brGround": 13.3
         },
         {
           "wikiId": "av_8b_plus",
@@ -18369,7 +18369,7 @@
           "role": "Strike aircraft",
           "source": "https://wiki.warthunder.com/unit/av_8b_plus",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/av_8b_plus.png",
-          "brGround": 12.0
+          "brGround": 12.7
         },
         {
           "wikiId": "f_15e",
@@ -18378,12 +18378,12 @@
           "countryCode": "US",
           "country": "USA",
           "rank": 8,
-          "br": 14.0,
+          "br": 14.3,
           "unitClass": "striker",
           "role": "Strike aircraft",
           "source": "https://wiki.warthunder.com/unit/f_15e",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/f_15e.png",
-          "brGround": 12.7
+          "brGround": 14.0
         },
         {
           "wikiId": "f_16c_block_50",
@@ -18397,7 +18397,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/f_16c_block_50",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/f_16c_block_50.png",
-          "brGround": 12.7
+          "brGround": 13.7
         },
         {
           "wikiId": "f_15c_msip2",
@@ -18406,12 +18406,12 @@
           "countryCode": "US",
           "country": "USA",
           "rank": 8,
-          "br": 13.7,
+          "br": 14.0,
           "unitClass": "fighter",
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/f_15c_msip2",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/f_15c_msip2.png",
-          "brGround": 12.7
+          "brGround": 13.7
         },
         {
           "wikiId": "f_14a_early",
@@ -18439,7 +18439,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/f_14b",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/f_14b.png",
-          "brGround": 11.7
+          "brGround": 12.3
         },
         {
           "wikiId": "f_20a",
@@ -18453,7 +18453,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/f_20a",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/f_20a.png",
-          "brGround": 11.7
+          "brGround": 12.0
         },
         {
           "wikiId": "f_14a_iriaf",
@@ -18481,7 +18481,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/fa_18c_early",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/fa_18c_early.png",
-          "brGround": 12.0
+          "brGround": 12.3
         },
         {
           "wikiId": "f_14d",
@@ -18495,7 +18495,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/f_14d",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/f_14d.png",
-          "brGround": 11.7
+          "brGround": 12.3
         },
         {
           "wikiId": "f_16c_block_52_aesa",
@@ -18509,7 +18509,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/f_16c_block_52_aesa",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/f_16c_block_52_aesa.png",
-          "brGround": 13.0
+          "brGround": 14.0
         },
         {
           "wikiId": "f_15c_golden_eagle",
@@ -18518,12 +18518,12 @@
           "countryCode": "US",
           "country": "USA",
           "rank": 9,
-          "br": 14.3,
+          "br": 15.0,
           "unitClass": "fighter",
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/f_15c_golden_eagle",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/f_15c_golden_eagle.png",
-          "brGround": 13.0
+          "brGround": 14.0
         },
         {
           "wikiId": "fa_18e_block_2",
@@ -18532,12 +18532,12 @@
           "countryCode": "US",
           "country": "USA",
           "rank": 9,
-          "br": 14.3,
+          "br": 14.7,
           "unitClass": "fighter",
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/fa_18e_block_2",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/fa_18e_block_2.png",
-          "brGround": 13.0
+          "brGround": 14.0
         },
         {
           "wikiId": "bf-109b_2",
@@ -18705,7 +18705,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/he_112a_0",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/he_112a_0.png",
-          "brGround": 2.0
+          "brGround": 2.3
         },
         {
           "wikiId": "do_217j_1",
@@ -19055,7 +19055,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/he_112b_0",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/he_112b_0.png",
-          "brGround": 2.0
+          "brGround": 2.3
         },
         {
           "wikiId": "ju-88c-6",
@@ -19265,7 +19265,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/bf-109f-2",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/bf-109f-2.png",
-          "brGround": 3.0
+          "brGround": 3.3
         },
         {
           "wikiId": "fw-190a-1",
@@ -19391,7 +19391,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/he_112b_1",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/he_112b_1.png",
-          "brGround": 2.0
+          "brGround": 2.3
         },
         {
           "wikiId": "fw_189c_0",
@@ -19461,7 +19461,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/he_112b_2",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/he_112b_2.png",
-          "brGround": 2.0
+          "brGround": 2.3
         },
         {
           "wikiId": "yak-1b_luftwaffe",
@@ -19699,7 +19699,7 @@
           "role": "Strike aircraft",
           "source": "https://wiki.warthunder.com/unit/bf-110g-2",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/bf-110g-2.png",
-          "brGround": 3.3
+          "brGround": 3.0
         },
         {
           "wikiId": "bf_110g_4",
@@ -19806,12 +19806,12 @@
           "countryCode": "DE",
           "country": "Germany",
           "rank": 3,
-          "br": 4.3,
+          "br": 4.0,
           "unitClass": "striker",
           "role": "Strike aircraft",
           "source": "https://wiki.warthunder.com/unit/do_335a_1",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/do_335a_1.png",
-          "brGround": 4.0
+          "brGround": 3.7
         },
         {
           "wikiId": "do_335a_0",
@@ -19820,12 +19820,12 @@
           "countryCode": "DE",
           "country": "Germany",
           "rank": 3,
-          "br": 4.7,
+          "br": 4.3,
           "unitClass": "striker",
           "role": "Strike aircraft",
           "source": "https://wiki.warthunder.com/unit/do_335a_0",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/do_335a_0.png",
-          "brGround": 4.3
+          "brGround": 4.0
         },
         {
           "wikiId": "do_217e_2",
@@ -20240,7 +20240,7 @@
           "countryCode": "DE",
           "country": "Germany",
           "rank": 4,
-          "br": 4.7,
+          "br": 5.0,
           "unitClass": "striker",
           "role": "Strike aircraft",
           "source": "https://wiki.warthunder.com/unit/ia_58a_pucara",
@@ -20749,7 +20749,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/hunter_f58_switzerland",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/hunter_f58_switzerland.png",
-          "brGround": 9.7
+          "brGround": 10.3
         },
         {
           "wikiId": "alpha_jet_a_jabog41",
@@ -20805,7 +20805,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/f-104g",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/f-104g.png",
-          "brGround": 9.7
+          "brGround": 9.3
         },
         {
           "wikiId": "mig-21_mf",
@@ -20833,7 +20833,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/mig-21_bis_sau",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/mig-21_bis_sau.png",
-          "brGround": 10.3
+          "brGround": 10.0
         },
         {
           "wikiId": "tornado_ids_de_assta1",
@@ -20847,7 +20847,7 @@
           "role": "Strike aircraft",
           "source": "https://wiki.warthunder.com/unit/tornado_ids_de_assta1",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/tornado_ids_de_assta1.png",
-          "brGround": 11.3
+          "brGround": 11.7
         },
         {
           "wikiId": "su_22um3k",
@@ -20889,7 +20889,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/f-4f_late",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/f-4f_late.png",
-          "brGround": 10.3
+          "brGround": 10.7
         },
         {
           "wikiId": "mig_23mla",
@@ -20931,7 +20931,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/f-5e_switzerland",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/f-5e_switzerland.png",
-          "brGround": 11.3
+          "brGround": 11.7
         },
         {
           "wikiId": "mig-21_bis_lazur",
@@ -20945,7 +20945,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/mig-21_bis_lazur",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/mig-21_bis_lazur.png",
-          "brGround": 10.3
+          "brGround": 10.0
         },
         {
           "wikiId": "f-4f",
@@ -20982,12 +20982,12 @@
           "countryCode": "DE",
           "country": "Germany",
           "rank": 7,
-          "br": 11.0,
+          "br": 10.7,
           "unitClass": "fighter",
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/mig_23mf_germany",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/mig_23mf_germany.png",
-          "brGround": 10.3
+          "brGround": 10.0
         },
         {
           "wikiId": "su_22m4_de_wtd61",
@@ -21001,7 +21001,7 @@
           "role": "Strike aircraft",
           "source": "https://wiki.warthunder.com/unit/su_22m4_de_wtd61",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/su_22m4_de_wtd61.png",
-          "brGround": 11.0
+          "brGround": 11.3
         },
         {
           "wikiId": "f-4f_kws_lv",
@@ -21010,12 +21010,12 @@
           "countryCode": "DE",
           "country": "Germany",
           "rank": 8,
-          "br": 13.0,
+          "br": 13.3,
           "unitClass": "fighter",
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/f-4f_kws_lv",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/f-4f_kws_lv.png",
-          "brGround": 12.0
+          "brGround": 12.3
         },
         {
           "wikiId": "mig_29_9_12_germany",
@@ -21043,7 +21043,7 @@
           "role": "Strike aircraft",
           "source": "https://wiki.warthunder.com/unit/tornado_ids_de_assta3_sle",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/tornado_ids_de_assta3_sle.png",
-          "brGround": 12.3
+          "brGround": 13.0
         },
         {
           "wikiId": "fa_18c_late_switzerland",
@@ -21057,7 +21057,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/fa_18c_late_switzerland",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/fa_18c_late_switzerland.png",
-          "brGround": 12.7
+          "brGround": 13.3
         },
         {
           "wikiId": "mig_29_9_12g",
@@ -21099,7 +21099,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/fa_18c_switzerland",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/fa_18c_switzerland.png",
-          "brGround": 12.0
+          "brGround": 12.3
         },
         {
           "wikiId": "ef_2000_block_10",
@@ -21108,12 +21108,12 @@
           "countryCode": "DE",
           "country": "Germany",
           "rank": 9,
-          "br": 14.3,
+          "br": 14.7,
           "unitClass": "fighter",
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/ef_2000_block_10",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/ef_2000_block_10.png",
-          "brGround": 13.0
+          "brGround": 14.0
         },
         {
           "wikiId": "ef_2000_aesa",
@@ -21122,12 +21122,12 @@
           "countryCode": "DE",
           "country": "Germany",
           "rank": 9,
-          "br": 14.7,
+          "br": 15.0,
           "unitClass": "fighter",
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/ef_2000_aesa",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/ef_2000_aesa.png",
-          "brGround": 13.0
+          "brGround": 14.0
         },
         {
           "wikiId": "i-16_type5",
@@ -21822,7 +21822,7 @@
           "countryCode": "RU",
           "country": "USSR",
           "rank": 2,
-          "br": 2.7,
+          "br": 2.3,
           "unitClass": "striker",
           "role": "Strike aircraft",
           "source": "https://wiki.warthunder.com/unit/il_2_37_1943",
@@ -22275,7 +22275,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/yak-3",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/yak-3.png",
-          "brGround": 4.7
+          "brGround": 5.0
         },
         {
           "wikiId": "yak-9u",
@@ -22541,7 +22541,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/itp_m1",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/itp_m1.png",
-          "brGround": 4.3
+          "brGround": 4.7
         },
         {
           "wikiId": "yak-3_eremin",
@@ -22555,7 +22555,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/yak-3_eremin",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/yak-3_eremin.png",
-          "brGround": 4.7
+          "brGround": 5.0
         },
         {
           "wikiId": "tu-2_early",
@@ -22583,7 +22583,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/yak-3p",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/yak-3p.png",
-          "brGround": 5.3
+          "brGround": 5.7
         },
         {
           "wikiId": "yak-9p",
@@ -22681,7 +22681,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/yak-3u",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/yak-3u.png",
-          "brGround": 6.0
+          "brGround": 6.7
         },
         {
           "wikiId": "yak-9ut",
@@ -22695,7 +22695,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/yak-9ut",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/yak-9ut.png",
-          "brGround": 6.7
+          "brGround": 7.0
         },
         {
           "wikiId": "la-9",
@@ -22919,7 +22919,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/yak-3t",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/yak-3t.png",
-          "brGround": 5.3
+          "brGround": 5.7
         },
         {
           "wikiId": "yak-3_vk107",
@@ -22975,7 +22975,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/yak-15",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/yak-15.png",
-          "brGround": 6.7
+          "brGround": 7.0
         },
         {
           "wikiId": "yak-17",
@@ -22989,7 +22989,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/yak-17",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/yak-17.png",
-          "brGround": 6.7
+          "brGround": 7.0
         },
         {
           "wikiId": "mig-9",
@@ -23297,7 +23297,7 @@
           "role": "Strike aircraft",
           "source": "https://wiki.warthunder.com/unit/yak_130_early",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/yak_130_early.png",
-          "brGround": 9.7
+          "brGround": 10.3
         },
         {
           "wikiId": "yak-28b",
@@ -23423,7 +23423,7 @@
           "role": "Strike aircraft",
           "source": "https://wiki.warthunder.com/unit/j_22m1a",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/j_22m1a.png",
-          "brGround": 11.0
+          "brGround": 11.7
         },
         {
           "wikiId": "mig-21_s",
@@ -23437,7 +23437,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/mig-21_s",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/mig-21_s.png",
-          "brGround": 9.7
+          "brGround": 9.3
         },
         {
           "wikiId": "mig-21_pfm",
@@ -23507,7 +23507,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/mig-21_bis",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/mig-21_bis.png",
-          "brGround": 10.3
+          "brGround": 10.0
         },
         {
           "wikiId": "su_17m2",
@@ -23535,7 +23535,7 @@
           "role": "Strike aircraft",
           "source": "https://wiki.warthunder.com/unit/su_25t",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/su_25t.png",
-          "brGround": 11.3
+          "brGround": 12.0
         },
         {
           "wikiId": "mig_27m",
@@ -23549,7 +23549,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/mig_27m",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/mig_27m.png",
-          "brGround": 11.0
+          "brGround": 11.3
         },
         {
           "wikiId": "mig_27k",
@@ -23563,7 +23563,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/mig_27k",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/mig_27k.png",
-          "brGround": 11.3
+          "brGround": 11.7
         },
         {
           "wikiId": "mig_23m",
@@ -23572,12 +23572,12 @@
           "countryCode": "RU",
           "country": "USSR",
           "rank": 7,
-          "br": 11.0,
+          "br": 10.7,
           "unitClass": "fighter",
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/mig_23m",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/mig_23m.png",
-          "brGround": 10.3
+          "brGround": 10.0
         },
         {
           "wikiId": "mig_23mld",
@@ -23605,7 +23605,7 @@
           "role": "Strike aircraft",
           "source": "https://wiki.warthunder.com/unit/su_17m4",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/su_17m4.png",
-          "brGround": 11.0
+          "brGround": 11.3
         },
         {
           "wikiId": "su_24m",
@@ -23619,7 +23619,7 @@
           "role": "Strike aircraft",
           "source": "https://wiki.warthunder.com/unit/su_24m",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/su_24m.png",
-          "brGround": 11.3
+          "brGround": 11.7
         },
         {
           "wikiId": "su_22m3",
@@ -23647,7 +23647,7 @@
           "role": "Strike aircraft",
           "source": "https://wiki.warthunder.com/unit/su_25_558arz",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/su_25_558arz.png",
-          "brGround": 10.7
+          "brGround": 11.3
         },
         {
           "wikiId": "mig_25pd",
@@ -23675,7 +23675,7 @@
           "role": "Strike aircraft",
           "source": "https://wiki.warthunder.com/unit/su_25tm",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/su_25tm.png",
-          "brGround": 11.7
+          "brGround": 12.3
         },
         {
           "wikiId": "mig_23ml",
@@ -23745,7 +23745,7 @@
           "role": "Strike aircraft",
           "source": "https://wiki.warthunder.com/unit/su_25sm3",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/su_25sm3.png",
-          "brGround": 12.7
+          "brGround": 13.0
         },
         {
           "wikiId": "su_34",
@@ -23754,12 +23754,12 @@
           "countryCode": "RU",
           "country": "USSR",
           "rank": 8,
-          "br": 13.7,
+          "br": 14.0,
           "unitClass": "striker",
           "role": "Strike aircraft",
           "source": "https://wiki.warthunder.com/unit/su_34",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/su_34.png",
-          "brGround": 13.0
+          "brGround": 13.7
         },
         {
           "wikiId": "mig_29kr_9_41r",
@@ -23768,12 +23768,12 @@
           "countryCode": "RU",
           "country": "USSR",
           "rank": 8,
-          "br": 13.7,
+          "br": 14.0,
           "unitClass": "fighter",
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/mig_29kr_9_41r",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/mig_29kr_9_41r.png",
-          "brGround": 12.3
+          "brGround": 13.0
         },
         {
           "wikiId": "mig_29_9_13",
@@ -23796,12 +23796,12 @@
           "countryCode": "RU",
           "country": "USSR",
           "rank": 8,
-          "br": 13.7,
+          "br": 14.0,
           "unitClass": "fighter",
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/su_27sm",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/su_27sm.png",
-          "brGround": 12.7
+          "brGround": 13.3
         },
         {
           "wikiId": "mig_29smt_9_19",
@@ -23810,12 +23810,12 @@
           "countryCode": "RU",
           "country": "USSR",
           "rank": 8,
-          "br": 13.3,
+          "br": 13.7,
           "unitClass": "fighter",
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/mig_29smt_9_19",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/mig_29smt_9_19.png",
-          "brGround": 12.3
+          "brGround": 12.7
         },
         {
           "wikiId": "su_33",
@@ -23838,12 +23838,12 @@
           "countryCode": "RU",
           "country": "USSR",
           "rank": 8,
-          "br": 13.3,
+          "br": 13.7,
           "unitClass": "fighter",
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/su_30mk2v_venezuela",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/su_30mk2v_venezuela.png",
-          "brGround": 12.3
+          "brGround": 13.0
         },
         {
           "wikiId": "mig_29m_9_15",
@@ -23852,12 +23852,12 @@
           "countryCode": "RU",
           "country": "USSR",
           "rank": 8,
-          "br": 13.7,
+          "br": 14.0,
           "unitClass": "fighter",
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/mig_29m_9_15",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/mig_29m_9_15.png",
-          "brGround": 12.3
+          "brGround": 13.0
         },
         {
           "wikiId": "su_30sm",
@@ -23866,12 +23866,12 @@
           "countryCode": "RU",
           "country": "USSR",
           "rank": 9,
-          "br": 14.3,
+          "br": 14.7,
           "unitClass": "fighter",
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/su_30sm",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/su_30sm.png",
-          "brGround": 13.0
+          "brGround": 14.0
         },
         {
           "wikiId": "su_30sm2",
@@ -23880,12 +23880,12 @@
           "countryCode": "RU",
           "country": "USSR",
           "rank": 9,
-          "br": 14.7,
+          "br": 15.0,
           "unitClass": "fighter",
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/su_30sm2",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/su_30sm2.png",
-          "brGround": 13.0
+          "brGround": 14.0
         },
         {
           "wikiId": "fury_mk1",
@@ -24837,7 +24837,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/spitfire_mk5c",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/spitfire_mk5c.png",
-          "brGround": 4.7
+          "brGround": 5.0
         },
         {
           "wikiId": "spitfire_mk5c_notrop",
@@ -24851,7 +24851,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/spitfire_mk5c_notrop",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/spitfire_mk5c_notrop.png",
-          "brGround": 5.3
+          "brGround": 5.7
         },
         {
           "wikiId": "seafire_mk3",
@@ -25061,7 +25061,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/spitfire_mk18e",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/spitfire_mk18e.png",
-          "brGround": 6.0
+          "brGround": 6.7
         },
         {
           "wikiId": "spitfire_ix",
@@ -25089,7 +25089,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/seafire_mk17",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/seafire_mk17.png",
-          "brGround": 5.7
+          "brGround": 6.0
         },
         {
           "wikiId": "seafire_fr47",
@@ -25187,7 +25187,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/spitfire_f24",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/spitfire_f24.png",
-          "brGround": 6.7
+          "brGround": 7.0
         },
         {
           "wikiId": "sea_fury_fb11",
@@ -25705,7 +25705,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/lightning_f6",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/lightning_f6.png",
-          "brGround": 9.0
+          "brGround": 8.7
         },
         {
           "wikiId": "harrier_gr3",
@@ -25733,7 +25733,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/lightning_f53",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/lightning_f53.png",
-          "brGround": 9.0
+          "brGround": 8.7
         },
         {
           "wikiId": "buccaneer_s1",
@@ -25831,7 +25831,7 @@
           "role": "Strike aircraft",
           "source": "https://wiki.warthunder.com/unit/jaguar_gr1a",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/jaguar_gr1a.png",
-          "brGround": 10.3
+          "brGround": 11.0
         },
         {
           "wikiId": "buccaneer_s2b",
@@ -25845,7 +25845,7 @@
           "role": "Strike aircraft",
           "source": "https://wiki.warthunder.com/unit/buccaneer_s2b",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/buccaneer_s2b.png",
-          "brGround": 10.7
+          "brGround": 11.7
         },
         {
           "wikiId": "f-4k",
@@ -25873,7 +25873,7 @@
           "role": "Strike aircraft",
           "source": "https://wiki.warthunder.com/unit/hawk_200",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/hawk_200.png",
-          "brGround": 10.7
+          "brGround": 11.3
         },
         {
           "wikiId": "hawk_200_rda",
@@ -25887,7 +25887,7 @@
           "role": "Strike aircraft",
           "source": "https://wiki.warthunder.com/unit/hawk_200_rda",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/hawk_200_rda.png",
-          "brGround": 10.7
+          "brGround": 11.3
         },
         {
           "wikiId": "f_111c_raaf",
@@ -25901,7 +25901,7 @@
           "role": "Strike aircraft",
           "source": "https://wiki.warthunder.com/unit/f_111c_raaf",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/f_111c_raaf.png",
-          "brGround": 11.3
+          "brGround": 11.7
         },
         {
           "wikiId": "tornado_gr1",
@@ -25915,7 +25915,7 @@
           "role": "Strike aircraft",
           "source": "https://wiki.warthunder.com/unit/tornado_gr1",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/tornado_gr1.png",
-          "brGround": 11.3
+          "brGround": 12.0
         },
         {
           "wikiId": "harrier_frs1",
@@ -25943,7 +25943,7 @@
           "role": "Strike aircraft",
           "source": "https://wiki.warthunder.com/unit/jaguar_is",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/jaguar_is.png",
-          "brGround": 11.0
+          "brGround": 11.7
         },
         {
           "wikiId": "f-4jk",
@@ -25971,7 +25971,7 @@
           "role": "Strike aircraft",
           "source": "https://wiki.warthunder.com/unit/harrier_t10",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/harrier_t10.png",
-          "brGround": 11.7
+          "brGround": 12.3
         },
         {
           "wikiId": "saab_jas39c_south_africa",
@@ -25985,7 +25985,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/saab_jas39c_south_africa",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/saab_jas39c_south_africa.png",
-          "brGround": 12.7
+          "brGround": 13.3
         },
         {
           "wikiId": "tornado_f3_late",
@@ -25994,12 +25994,12 @@
           "countryCode": "UK",
           "country": "Great Britain",
           "rank": 8,
-          "br": 13.0,
+          "br": 13.3,
           "unitClass": "fighter",
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/tornado_f3_late",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/tornado_f3_late.png",
-          "brGround": 12.0
+          "brGround": 12.3
         },
         {
           "wikiId": "fa_18a_raaf",
@@ -26013,7 +26013,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/fa_18a_raaf",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/fa_18a_raaf.png",
-          "brGround": 12.0
+          "brGround": 12.3
         },
         {
           "wikiId": "fa_18a_hug_2_raaf",
@@ -26027,7 +26027,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/fa_18a_hug_2_raaf",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/fa_18a_hug_2_raaf.png",
-          "brGround": 12.7
+          "brGround": 13.3
         },
         {
           "wikiId": "harrier_gr7",
@@ -26041,7 +26041,7 @@
           "role": "Strike aircraft",
           "source": "https://wiki.warthunder.com/unit/harrier_gr7",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/harrier_gr7.png",
-          "brGround": 12.0
+          "brGround": 12.7
         },
         {
           "wikiId": "tornado_gr4",
@@ -26055,7 +26055,7 @@
           "role": "Strike aircraft",
           "source": "https://wiki.warthunder.com/unit/tornado_gr4",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/tornado_gr4.png",
-          "brGround": 12.3
+          "brGround": 13.0
         },
         {
           "wikiId": "sea_harrier_fa2",
@@ -26069,7 +26069,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/sea_harrier_fa2",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/sea_harrier_fa2.png",
-          "brGround": 12.0
+          "brGround": 12.3
         },
         {
           "wikiId": "mig-21_bison",
@@ -26097,7 +26097,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/cf_188a_canada",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/cf_188a_canada.png",
-          "brGround": 12.0
+          "brGround": 12.3
         },
         {
           "wikiId": "ef_2000_fgr4",
@@ -26106,12 +26106,12 @@
           "countryCode": "UK",
           "country": "Great Britain",
           "rank": 9,
-          "br": 14.3,
+          "br": 14.7,
           "unitClass": "fighter",
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/ef_2000_fgr4",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/ef_2000_fgr4.png",
-          "brGround": 13.0
+          "brGround": 14.0
         },
         {
           "wikiId": "fa_18f_block_2_raaf",
@@ -26120,12 +26120,12 @@
           "countryCode": "UK",
           "country": "Great Britain",
           "rank": 9,
-          "br": 14.3,
+          "br": 14.7,
           "unitClass": "fighter",
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/fa_18f_block_2_raaf",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/fa_18f_block_2_raaf.png",
-          "brGround": 13.0
+          "brGround": 14.0
         },
         {
           "wikiId": "ef_2000_typhoon_aesa",
@@ -26134,12 +26134,12 @@
           "countryCode": "UK",
           "country": "Great Britain",
           "rank": 9,
-          "br": 14.7,
+          "br": 15.0,
           "unitClass": "fighter",
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/ef_2000_typhoon_aesa",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/ef_2000_typhoon_aesa.png",
-          "brGround": 13.0
+          "brGround": 14.0
         },
         {
           "wikiId": "f1m2",
@@ -26624,12 +26624,12 @@
           "countryCode": "JP",
           "country": "Japan",
           "rank": 2,
-          "br": 3.3,
+          "br": 3.0,
           "unitClass": "fighter",
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/ki_102_otsu",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/ki_102_otsu.png",
-          "brGround": 3.3
+          "brGround": 3.0
         },
         {
           "wikiId": "d4y1",
@@ -26727,7 +26727,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/a7he1",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/a7he1.png",
-          "brGround": 2.0
+          "brGround": 2.3
         },
         {
           "wikiId": "ki_48_2_otsu",
@@ -26867,7 +26867,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/a6m3_mod22_zero",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/a6m3_mod22_zero.png",
-          "brGround": 4.7
+          "brGround": 5.0
         },
         {
           "wikiId": "a6m3_mod22ko_zero",
@@ -27329,7 +27329,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/n1k2_j",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/n1k2_j.png",
-          "brGround": 6.0
+          "brGround": 6.7
         },
         {
           "wikiId": "n1k2_jko",
@@ -27343,7 +27343,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/n1k2_jko",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/n1k2_jko.png",
-          "brGround": 6.0
+          "brGround": 6.7
         },
         {
           "wikiId": "ki_84_hei",
@@ -27679,7 +27679,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/f-104j",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/f-104j.png",
-          "brGround": 9.7
+          "brGround": 9.3
         },
         {
           "wikiId": "t2",
@@ -27791,7 +27791,7 @@
           "role": "Strike aircraft",
           "source": "https://wiki.warthunder.com/unit/a_7e_thailand",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/a_7e_thailand.png",
-          "brGround": 10.7
+          "brGround": 11.3
         },
         {
           "wikiId": "f-5a_thailand",
@@ -27833,7 +27833,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/f-5t_thailand",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/f-5t_thailand.png",
-          "brGround": 11.3
+          "brGround": 12.0
         },
         {
           "wikiId": "f-5e_fcu_thailand",
@@ -27847,7 +27847,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/f-5e_fcu_thailand",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/f-5e_fcu_thailand.png",
-          "brGround": 11.3
+          "brGround": 12.0
         },
         {
           "wikiId": "f-4ej_adtw",
@@ -27875,7 +27875,7 @@
           "role": "Strike aircraft",
           "source": "https://wiki.warthunder.com/unit/hawk_209_indonesia",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/hawk_209_indonesia.png",
-          "brGround": 10.7
+          "brGround": 11.7
         },
         {
           "wikiId": "f-4ej_kai",
@@ -27903,7 +27903,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/f_16aj",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/f_16aj.png",
-          "brGround": 12.0
+          "brGround": 12.3
         },
         {
           "wikiId": "f-5th_thailand",
@@ -27917,7 +27917,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/f-5th_thailand",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/f-5th_thailand.png",
-          "brGround": 12.0
+          "brGround": 12.7
         },
         {
           "wikiId": "f_16a_block_15_ocu_thailand",
@@ -27931,7 +27931,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/f_16a_block_15_ocu_thailand",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/f_16a_block_15_ocu_thailand.png",
-          "brGround": 12.7
+          "brGround": 13.3
         },
         {
           "wikiId": "mig_29n",
@@ -27940,12 +27940,12 @@
           "countryCode": "JP",
           "country": "Japan",
           "rank": 8,
-          "br": 13.3,
+          "br": 13.7,
           "unitClass": "fighter",
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/mig_29n",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/mig_29n.png",
-          "brGround": 12.0
+          "brGround": 12.3
         },
         {
           "wikiId": "f_15j",
@@ -27968,12 +27968,12 @@
           "countryCode": "JP",
           "country": "Japan",
           "rank": 8,
-          "br": 13.7,
+          "br": 14.0,
           "unitClass": "fighter",
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/f_15j_kai",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/f_15j_kai.png",
-          "brGround": 12.7
+          "brGround": 13.3
         },
         {
           "wikiId": "f_2a",
@@ -27982,12 +27982,12 @@
           "countryCode": "JP",
           "country": "Japan",
           "rank": 8,
-          "br": 13.7,
+          "br": 14.0,
           "unitClass": "fighter",
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/f_2a",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/f_2a.png",
-          "brGround": 12.7
+          "brGround": 13.0
         },
         {
           "wikiId": "saab_jas39c_thailand",
@@ -28001,7 +28001,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/saab_jas39c_thailand",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/saab_jas39c_thailand.png",
-          "brGround": 12.7
+          "brGround": 13.3
         },
         {
           "wikiId": "fa_18d_late_malaysia",
@@ -28015,7 +28015,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/fa_18d_late_malaysia",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/fa_18d_late_malaysia.png",
-          "brGround": 12.7
+          "brGround": 13.3
         },
         {
           "wikiId": "f_2a_adtw",
@@ -28029,7 +28029,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/f_2a_adtw",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/f_2a_adtw.png",
-          "brGround": 12.3
+          "brGround": 12.7
         },
         {
           "wikiId": "su_30mkm",
@@ -28038,12 +28038,12 @@
           "countryCode": "JP",
           "country": "Japan",
           "rank": 9,
-          "br": 14.3,
+          "br": 14.7,
           "unitClass": "fighter",
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/su_30mkm",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/su_30mkm.png",
-          "brGround": 13.0
+          "brGround": 14.0
         },
         {
           "wikiId": "gladiator_mk1_china",
@@ -28939,7 +28939,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/f_6c_pakistan",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/f_6c_pakistan.png",
-          "brGround": 9.3
+          "brGround": 9.0
         },
         {
           "wikiId": "f-104g_china",
@@ -28953,7 +28953,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/f-104g_china",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/f-104g_china.png",
-          "brGround": 9.7
+          "brGround": 9.3
         },
         {
           "wikiId": "j_7e",
@@ -28981,7 +28981,7 @@
           "role": "Strike aircraft",
           "source": "https://wiki.warthunder.com/unit/q_5l",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/q_5l.png",
-          "brGround": 10.3
+          "brGround": 11.0
         },
         {
           "wikiId": "f-5a_china",
@@ -29009,7 +29009,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/f-5e_aidc",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/f-5e_aidc.png",
-          "brGround": 11.3
+          "brGround": 11.7
         },
         {
           "wikiId": "j_8b",
@@ -29046,7 +29046,7 @@
           "countryCode": "CN",
           "country": "China",
           "rank": 7,
-          "br": 10.7,
+          "br": 11.0,
           "unitClass": "striker",
           "role": "Strike aircraft",
           "source": "https://wiki.warthunder.com/unit/a_5c",
@@ -29074,12 +29074,12 @@
           "countryCode": "CN",
           "country": "China",
           "rank": 8,
-          "br": 13.3,
+          "br": 13.7,
           "unitClass": "fighter",
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/f_16a_block_20_mlu",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/f_16a_block_20_mlu.png",
-          "brGround": 12.7
+          "brGround": 13.3
         },
         {
           "wikiId": "j_8f",
@@ -29093,7 +29093,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/j_8f",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/j_8f.png",
-          "brGround": 11.7
+          "brGround": 12.3
         },
         {
           "wikiId": "jh_7a",
@@ -29107,7 +29107,7 @@
           "role": "Strike aircraft",
           "source": "https://wiki.warthunder.com/unit/jh_7a",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/jh_7a.png",
-          "brGround": 12.0
+          "brGround": 12.3
         },
         {
           "wikiId": "j_11",
@@ -29130,12 +29130,12 @@
           "countryCode": "CN",
           "country": "China",
           "rank": 8,
-          "br": 13.3,
+          "br": 13.7,
           "unitClass": "fighter",
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/j_11a",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/j_11a.png",
-          "brGround": 12.7
+          "brGround": 13.0
         },
         {
           "wikiId": "mirage_2000_5ei",
@@ -29149,7 +29149,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/mirage_2000_5ei",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/mirage_2000_5ei.png",
-          "brGround": 12.7
+          "brGround": 13.7
         },
         {
           "wikiId": "j_10a",
@@ -29158,12 +29158,12 @@
           "countryCode": "CN",
           "country": "China",
           "rank": 8,
-          "br": 13.7,
+          "br": 14.0,
           "unitClass": "fighter",
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/j_10a",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/j_10a.png",
-          "brGround": 12.3
+          "brGround": 13.3
         },
         {
           "wikiId": "jh_7a2",
@@ -29177,7 +29177,7 @@
           "role": "Strike aircraft",
           "source": "https://wiki.warthunder.com/unit/jh_7a2",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/jh_7a2.png",
-          "brGround": 12.3
+          "brGround": 13.3
         },
         {
           "wikiId": "j_11b",
@@ -29186,12 +29186,12 @@
           "countryCode": "CN",
           "country": "China",
           "rank": 8,
-          "br": 13.7,
+          "br": 14.0,
           "unitClass": "fighter",
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/j_11b",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/j_11b.png",
-          "brGround": 12.7
+          "brGround": 13.3
         },
         {
           "wikiId": "jh_7a_prototype",
@@ -29205,7 +29205,7 @@
           "role": "Strike aircraft",
           "source": "https://wiki.warthunder.com/unit/jh_7a_prototype",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/jh_7a_prototype.png",
-          "brGround": 12.0
+          "brGround": 12.3
         },
         {
           "wikiId": "su_30mkk",
@@ -29214,12 +29214,12 @@
           "countryCode": "CN",
           "country": "China",
           "rank": 8,
-          "br": 13.3,
+          "br": 13.7,
           "unitClass": "fighter",
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/su_30mkk",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/su_30mkk.png",
-          "brGround": 12.3
+          "brGround": 13.3
         },
         {
           "wikiId": "jf_17",
@@ -29233,7 +29233,7 @@
           "role": "Strike aircraft",
           "source": "https://wiki.warthunder.com/unit/jf_17",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/jf_17.png",
-          "brGround": 12.3
+          "brGround": 13.0
         },
         {
           "wikiId": "f_16a_block_72v_china",
@@ -29247,7 +29247,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/f_16a_block_72v_china",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/f_16a_block_72v_china.png",
-          "brGround": 13.0
+          "brGround": 14.0
         },
         {
           "wikiId": "j_10c",
@@ -29256,12 +29256,12 @@
           "countryCode": "CN",
           "country": "China",
           "rank": 9,
-          "br": 14.3,
+          "br": 14.7,
           "unitClass": "fighter",
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/j_10c",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/j_10c.png",
-          "brGround": 13.0
+          "brGround": 14.0
         },
         {
           "wikiId": "j_15t",
@@ -29270,12 +29270,12 @@
           "countryCode": "CN",
           "country": "China",
           "rank": 9,
-          "br": 14.7,
+          "br": 15.0,
           "unitClass": "fighter",
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/j_15t",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/j_15t.png",
-          "brGround": 13.0
+          "brGround": 14.0
         },
         {
           "wikiId": "ro_44",
@@ -29835,7 +29835,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/he_112b_1_italy",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/he_112b_1_italy.png",
-          "brGround": 2.0
+          "brGround": 2.3
         },
         {
           "wikiId": "iar_81c",
@@ -30054,7 +30054,7 @@
           "countryCode": "IT",
           "country": "Italy",
           "rank": 3,
-          "br": 3.0,
+          "br": 3.3,
           "unitClass": "fighter",
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/iar_81c_db_605",
@@ -30479,7 +30479,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/f-104g_italy",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/f-104g_italy.png",
-          "brGround": 9.7
+          "brGround": 9.3
         },
         {
           "wikiId": "fiat_g91_y",
@@ -30549,7 +30549,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/f-104s",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/f-104s.png",
-          "brGround": 10.0
+          "brGround": 9.7
         },
         {
           "wikiId": "amx",
@@ -30563,7 +30563,7 @@
           "role": "Strike aircraft",
           "source": "https://wiki.warthunder.com/unit/amx",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/amx.png",
-          "brGround": 11.0
+          "brGround": 11.7
         },
         {
           "wikiId": "tornado_ids_it",
@@ -30619,7 +30619,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/mig-21_bis_sau_hungary",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/mig-21_bis_sau_hungary.png",
-          "brGround": 10.3
+          "brGround": 10.0
         },
         {
           "wikiId": "f-104s_asa",
@@ -30661,7 +30661,7 @@
           "role": "Strike aircraft",
           "source": "https://wiki.warthunder.com/unit/tornado_ids_it_mod95",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/tornado_ids_it_mod95.png",
-          "brGround": 11.3
+          "brGround": 11.7
         },
         {
           "wikiId": "tornado_ids_it_ret8",
@@ -30675,7 +30675,7 @@
           "role": "Strike aircraft",
           "source": "https://wiki.warthunder.com/unit/tornado_ids_it_ret8",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/tornado_ids_it_ret8.png",
-          "brGround": 11.7
+          "brGround": 12.3
         },
         {
           "wikiId": "mig_23mf_hungary",
@@ -30684,12 +30684,12 @@
           "countryCode": "IT",
           "country": "Italy",
           "rank": 7,
-          "br": 11.0,
+          "br": 10.7,
           "unitClass": "fighter",
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/mig_23mf_hungary",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/mig_23mf_hungary.png",
-          "brGround": 10.3
+          "brGround": 10.0
         },
         {
           "wikiId": "amx_a_1a_brazil",
@@ -30703,7 +30703,7 @@
           "role": "Strike aircraft",
           "source": "https://wiki.warthunder.com/unit/amx_a_1a_brazil",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/amx_a_1a_brazil.png",
-          "brGround": 11.3
+          "brGround": 11.7
         },
         {
           "wikiId": "f-104s_cb",
@@ -30717,7 +30717,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/f-104s_cb",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/f-104s_cb.png",
-          "brGround": 10.0
+          "brGround": 9.7
         },
         {
           "wikiId": "f_16a_block_15_adf_italy",
@@ -30726,12 +30726,12 @@
           "countryCode": "IT",
           "country": "Italy",
           "rank": 8,
-          "br": 13.3,
+          "br": 13.7,
           "unitClass": "fighter",
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/f_16a_block_15_adf_italy",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/f_16a_block_15_adf_italy.png",
-          "brGround": 12.3
+          "brGround": 13.0
         },
         {
           "wikiId": "m_346fa",
@@ -30745,7 +30745,7 @@
           "role": "Strike aircraft",
           "source": "https://wiki.warthunder.com/unit/m_346fa",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/m_346fa.png",
-          "brGround": 12.3
+          "brGround": 13.0
         },
         {
           "wikiId": "av_8b_plus_italy",
@@ -30759,7 +30759,7 @@
           "role": "Strike aircraft",
           "source": "https://wiki.warthunder.com/unit/av_8b_plus_italy",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/av_8b_plus_italy.png",
-          "brGround": 12.0
+          "brGround": 12.7
         },
         {
           "wikiId": "mig_29_9_12b_hungary",
@@ -30787,7 +30787,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/saab_jas39c_hungary",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/saab_jas39c_hungary.png",
-          "brGround": 12.7
+          "brGround": 13.3
         },
         {
           "wikiId": "mig_29_9_12_sniper",
@@ -30810,12 +30810,12 @@
           "countryCode": "IT",
           "country": "Italy",
           "rank": 9,
-          "br": 14.3,
+          "br": 14.7,
           "unitClass": "fighter",
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/ef_2000a",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/ef_2000a.png",
-          "brGround": 13.0
+          "brGround": 14.0
         },
         {
           "wikiId": "ef_2000a_aesa",
@@ -30824,12 +30824,12 @@
           "countryCode": "IT",
           "country": "Italy",
           "rank": 9,
-          "br": 14.7,
+          "br": 15.0,
           "unitClass": "fighter",
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/ef_2000a_aesa",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/ef_2000a_aesa.png",
-          "brGround": 13.0
+          "brGround": 14.0
         },
         {
           "wikiId": "d_371",
@@ -31011,7 +31011,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/fokker_d21_netherlands",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/fokker_d21_netherlands.png",
-          "brGround": 1.7
+          "brGround": 2.3
         },
         {
           "wikiId": "ms_405c1",
@@ -31319,7 +31319,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/fokker_d23",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/fokker_d23.png",
-          "brGround": 2.7
+          "brGround": 3.0
         },
         {
           "wikiId": "p-40f-5_france_ep",
@@ -31529,7 +31529,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/yak-3_france",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/yak-3_france.png",
-          "brGround": 4.7
+          "brGround": 5.0
         },
         {
           "wikiId": "sb_25j_netherlands",
@@ -32103,7 +32103,7 @@
           "role": "Strike aircraft",
           "source": "https://wiki.warthunder.com/unit/super_etendard_97",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/super_etendard_97.png",
-          "brGround": 11.0
+          "brGround": 11.7
         },
         {
           "wikiId": "mirage_5ba",
@@ -32159,7 +32159,7 @@
           "role": "Strike aircraft",
           "source": "https://wiki.warthunder.com/unit/jaguar_a",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/jaguar_a.png",
-          "brGround": 10.7
+          "brGround": 11.3
         },
         {
           "wikiId": "f-104g_belgium",
@@ -32173,7 +32173,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/f-104g_belgium",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/f-104g_belgium.png",
-          "brGround": 9.7
+          "brGround": 9.3
         },
         {
           "wikiId": "nf_5a_netherlands",
@@ -32229,7 +32229,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/mirage_2000c_s5",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/mirage_2000c_s5.png",
-          "brGround": 11.3
+          "brGround": 11.7
         },
         {
           "wikiId": "mirage_4000",
@@ -32257,7 +32257,7 @@
           "role": "Strike aircraft",
           "source": "https://wiki.warthunder.com/unit/mirage_2000d_r1",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/mirage_2000d_r1.png",
-          "brGround": 11.3
+          "brGround": 12.3
         },
         {
           "wikiId": "f_16a_block_15_belgium",
@@ -32271,7 +32271,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/f_16a_block_15_belgium",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/f_16a_block_15_belgium.png",
-          "brGround": 12.0
+          "brGround": 12.3
         },
         {
           "wikiId": "mirage_2000_5f",
@@ -32285,7 +32285,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/mirage_2000_5f",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/mirage_2000_5f.png",
-          "brGround": 12.7
+          "brGround": 13.7
         },
         {
           "wikiId": "mirage_2000d_rmv",
@@ -32299,7 +32299,7 @@
           "role": "Strike aircraft",
           "source": "https://wiki.warthunder.com/unit/mirage_2000d_rmv",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/mirage_2000d_rmv.png",
-          "brGround": 13.0
+          "brGround": 13.7
         },
         {
           "wikiId": "f_16am_block_15_mlu_belgium",
@@ -32313,7 +32313,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/f_16am_block_15_mlu_belgium",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/f_16am_block_15_mlu_belgium.png",
-          "brGround": 12.7
+          "brGround": 13.3
         },
         {
           "wikiId": "f_16a_block_5_netherlands",
@@ -32327,7 +32327,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/f_16a_block_5_netherlands",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/f_16a_block_5_netherlands.png",
-          "brGround": 12.0
+          "brGround": 12.3
         },
         {
           "wikiId": "mirage_2000c_s4",
@@ -32341,7 +32341,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/mirage_2000c_s4",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/mirage_2000c_s4.png",
-          "brGround": 11.3
+          "brGround": 11.7
         },
         {
           "wikiId": "f_16a_block_15_ocu_belgium",
@@ -32369,7 +32369,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/f_16am_block_20_mlu_netherlands",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/f_16am_block_20_mlu_netherlands.png",
-          "brGround": 12.7
+          "brGround": 13.3
         },
         {
           "wikiId": "rafale_c_f3",
@@ -32378,12 +32378,12 @@
           "countryCode": "FR",
           "country": "France",
           "rank": 9,
-          "br": 14.7,
+          "br": 15.0,
           "unitClass": "fighter",
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/rafale_c_f3",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/rafale_c_f3.png",
-          "brGround": 13.0
+          "brGround": 14.0
         },
         {
           "wikiId": "rafale_m_f3r",
@@ -32392,12 +32392,12 @@
           "countryCode": "FR",
           "country": "France",
           "rank": 9,
-          "br": 14.7,
+          "br": 15.0,
           "unitClass": "fighter",
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/rafale_m_f3r",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/rafale_m_f3r.png",
-          "brGround": 13.0
+          "brGround": 14.0
         },
         {
           "wikiId": "gladiator_j8a",
@@ -32593,7 +32593,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/b_239_finland",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/b_239_finland.png",
-          "brGround": 3.0
+          "brGround": 3.3
         },
         {
           "wikiId": "ffvs_j22_a",
@@ -32691,7 +32691,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/vl_myrsky_2_late",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/vl_myrsky_2_late.png",
-          "brGround": 2.3
+          "brGround": 2.7
         },
         {
           "wikiId": "ffvs_j22_b",
@@ -33153,7 +33153,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/saab_j35a",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/saab_j35a.png",
-          "brGround": 9.3
+          "brGround": 9.0
         },
         {
           "wikiId": "saab_j35d",
@@ -33181,7 +33181,7 @@
           "role": "Strike aircraft",
           "source": "https://wiki.warthunder.com/unit/saab_aj37",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/saab_aj37.png",
-          "brGround": 10.3
+          "brGround": 10.7
         },
         {
           "wikiId": "mig_21_bis_finland",
@@ -33195,7 +33195,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/mig_21_bis_finland",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/mig_21_bis_finland.png",
-          "brGround": 10.3
+          "brGround": 10.0
         },
         {
           "wikiId": "saab_ja37",
@@ -33223,7 +33223,7 @@
           "role": "Strike aircraft",
           "source": "https://wiki.warthunder.com/unit/saab_ajs37",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/saab_ajs37.png",
-          "brGround": 10.7
+          "brGround": 11.7
         },
         {
           "wikiId": "saab_j35xs",
@@ -33251,7 +33251,7 @@
           "role": "Strike aircraft",
           "source": "https://wiki.warthunder.com/unit/saab_ajs37_early",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/saab_ajs37_early.png",
-          "brGround": 10.7
+          "brGround": 11.7
         },
         {
           "wikiId": "saab_f35_wdns",
@@ -33265,7 +33265,7 @@
           "role": "Strike aircraft",
           "source": "https://wiki.warthunder.com/unit/saab_f35_wdns",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/saab_f35_wdns.png",
-          "brGround": 10.3
+          "brGround": 10.0
         },
         {
           "wikiId": "f-5ag_norway",
@@ -33302,12 +33302,12 @@
           "countryCode": "SE",
           "country": "Sweden",
           "rank": 8,
-          "br": 13.0,
+          "br": 13.3,
           "unitClass": "fighter",
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/saab_ja37di",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/saab_ja37di.png",
-          "brGround": 11.7
+          "brGround": 12.7
         },
         {
           "wikiId": "f_16a_block_10_norway",
@@ -33321,7 +33321,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/f_16a_block_10_norway",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/f_16a_block_10_norway.png",
-          "brGround": 12.0
+          "brGround": 12.3
         },
         {
           "wikiId": "fa_18c_finland",
@@ -33335,7 +33335,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/fa_18c_finland",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/fa_18c_finland.png",
-          "brGround": 12.7
+          "brGround": 13.3
         },
         {
           "wikiId": "saab_jas39a",
@@ -33349,7 +33349,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/saab_jas39a",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/saab_jas39a.png",
-          "brGround": 12.0
+          "brGround": 12.3
         },
         {
           "wikiId": "saab_jas39c",
@@ -33363,7 +33363,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/saab_jas39c",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/saab_jas39c.png",
-          "brGround": 12.7
+          "brGround": 13.3
         },
         {
           "wikiId": "f_16am_block_20_mlu_norway",
@@ -33377,7 +33377,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/f_16am_block_20_mlu_norway",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/f_16am_block_20_mlu_norway.png",
-          "brGround": 12.7
+          "brGround": 13.3
         },
         {
           "wikiId": "fa_18c_mlu_2_finland",
@@ -33391,7 +33391,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/fa_18c_mlu_2_finland",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/fa_18c_mlu_2_finland.png",
-          "brGround": 12.7
+          "brGround": 13.3
         },
         {
           "wikiId": "saab_ja37di_f21",
@@ -33400,12 +33400,12 @@
           "countryCode": "SE",
           "country": "Sweden",
           "rank": 8,
-          "br": 13.0,
+          "br": 13.3,
           "unitClass": "fighter",
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/saab_ja37di_f21",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/saab_ja37di_f21.png",
-          "brGround": 11.7
+          "brGround": 12.7
         },
         {
           "wikiId": "saab_jas39d",
@@ -33419,7 +33419,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/saab_jas39d",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/saab_jas39d.png",
-          "brGround": 12.7
+          "brGround": 13.3
         },
         {
           "wikiId": "saab_jas39e",
@@ -33428,12 +33428,12 @@
           "countryCode": "SE",
           "country": "Sweden",
           "rank": 9,
-          "br": 14.3,
+          "br": 14.7,
           "unitClass": "fighter",
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/saab_jas39e",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/saab_jas39e.png",
-          "brGround": 13.0
+          "brGround": 14.0
         },
         {
           "wikiId": "spitfire_mk9c_iaf",
@@ -33447,7 +33447,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/spitfire_mk9c_iaf",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/spitfire_mk9c_iaf.png",
-          "brGround": 4.7
+          "brGround": 5.0
         },
         {
           "wikiId": "s_199",
@@ -33643,7 +33643,7 @@
           "role": "Strike aircraft",
           "source": "https://wiki.warthunder.com/unit/a_4e_early_iaf",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/a_4e_early_iaf.png",
-          "brGround": 9.3
+          "brGround": 10.0
         },
         {
           "wikiId": "so_4050_vautour_2a_israel_iaf",
@@ -33713,7 +33713,7 @@
           "role": "Strike aircraft",
           "source": "https://wiki.warthunder.com/unit/a_4n",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/a_4n.png",
-          "brGround": 10.0
+          "brGround": 10.7
         },
         {
           "wikiId": "f-84f_israel_iaf",
@@ -33741,7 +33741,7 @@
           "role": "Strike aircraft",
           "source": "https://wiki.warthunder.com/unit/a_4e_late_iaf",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/a_4e_late_iaf.png",
-          "brGround": 9.3
+          "brGround": 10.0
         },
         {
           "wikiId": "mirage_3cj",
@@ -33769,7 +33769,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/f-4e_iaf",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/f-4e_iaf.png",
-          "brGround": 11.3
+          "brGround": 12.0
         },
         {
           "wikiId": "nesher",
@@ -33783,7 +33783,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/nesher",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/nesher.png",
-          "brGround": 9.7
+          "brGround": 9.3
         },
         {
           "wikiId": "kfir_c7",
@@ -33806,12 +33806,12 @@
           "countryCode": "IL",
           "country": "Israel",
           "rank": 7,
-          "br": 11.0,
+          "br": 11.3,
           "unitClass": "fighter",
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/kfir_canard",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/kfir_canard.png",
-          "brGround": 10.3
+          "brGround": 10.0
         },
         {
           "wikiId": "kfir_c2",
@@ -33839,7 +33839,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/mig_21_2000_iaf",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/mig_21_2000_iaf.png",
-          "brGround": 11.3
+          "brGround": 11.7
         },
         {
           "wikiId": "f_16a_block_10_iaf",
@@ -33853,7 +33853,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/f_16a_block_10_iaf",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/f_16a_block_10_iaf.png",
-          "brGround": 12.0
+          "brGround": 12.3
         },
         {
           "wikiId": "f-4e_kurnass_2000",
@@ -33867,7 +33867,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/f-4e_kurnass_2000",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/f-4e_kurnass_2000.png",
-          "brGround": 11.7
+          "brGround": 12.7
         },
         {
           "wikiId": "f_15a_iaf",
@@ -33881,7 +33881,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/f_15a_iaf",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/f_15a_iaf.png",
-          "brGround": 11.7
+          "brGround": 12.0
         },
         {
           "wikiId": "f_16d_block_40_barak_2",
@@ -33890,12 +33890,12 @@
           "countryCode": "IL",
           "country": "Israel",
           "rank": 8,
-          "br": 13.3,
+          "br": 13.7,
           "unitClass": "fighter",
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/f_16d_block_40_barak_2",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/f_16d_block_40_barak_2.png",
-          "brGround": 12.7
+          "brGround": 13.3
         },
         {
           "wikiId": "f_16i_sufa",
@@ -33904,12 +33904,12 @@
           "countryCode": "IL",
           "country": "Israel",
           "rank": 8,
-          "br": 13.7,
+          "br": 14.0,
           "unitClass": "fighter",
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/f_16i_sufa",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/f_16i_sufa.png",
-          "brGround": 13.0
+          "brGround": 13.7
         },
         {
           "wikiId": "f_16c_block_40_barak_2",
@@ -33923,7 +33923,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/f_16c_block_40_barak_2",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/f_16c_block_40_barak_2.png",
-          "brGround": 12.7
+          "brGround": 13.7
         },
         {
           "wikiId": "f_15c_baz_msip",
@@ -33932,12 +33932,12 @@
           "countryCode": "IL",
           "country": "Israel",
           "rank": 8,
-          "br": 13.7,
+          "br": 14.0,
           "unitClass": "fighter",
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/f_15c_baz_msip",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/f_15c_baz_msip.png",
-          "brGround": 12.7
+          "brGround": 13.7
         },
         {
           "wikiId": "f_15i_raam",
@@ -33946,12 +33946,12 @@
           "countryCode": "IL",
           "country": "Israel",
           "rank": 8,
-          "br": 14.0,
+          "br": 14.3,
           "unitClass": "striker",
           "role": "Strike aircraft",
           "source": "https://wiki.warthunder.com/unit/f_15i_raam",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/f_15i_raam.png",
-          "brGround": 13.0
+          "brGround": 14.0
         },
         {
           "wikiId": "f_16a_block_10_netz_mod",
@@ -33965,7 +33965,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/f_16a_block_10_netz_mod",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/f_16a_block_10_netz_mod.png",
-          "brGround": 12.0
+          "brGround": 12.3
         },
         {
           "wikiId": "kfir_c10_colombia",
@@ -33974,12 +33974,12 @@
           "countryCode": "IL",
           "country": "Israel",
           "rank": 8,
-          "br": 13.3,
+          "br": 13.7,
           "unitClass": "fighter",
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/kfir_c10_colombia",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/kfir_c10_colombia.png",
-          "brGround": 12.0
+          "brGround": 12.7
         },
         {
           "wikiId": "f_102a_late",
@@ -34007,7 +34007,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/f_14d_vf_11",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/f_14d_vf_11.png",
-          "brGround": 11.7
+          "brGround": 12.3
         },
         {
           "wikiId": "f_16xl",
@@ -34016,12 +34016,12 @@
           "countryCode": "US",
           "country": "USA",
           "rank": 8,
-          "br": 13.0,
+          "br": 13.3,
           "unitClass": "fighter",
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/f_16xl",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/f_16xl.png",
-          "brGround": 12.3
+          "brGround": 13.0
         },
         {
           "wikiId": "arado_234b_2_mt",
@@ -34049,7 +34049,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/mig_35",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/mig_35.png",
-          "brGround": 13.0
+          "brGround": 14.0
         },
         {
           "wikiId": "hawk_t1a_early",
@@ -34086,7 +34086,7 @@
           "countryCode": "UK",
           "country": "Great Britain",
           "rank": 6,
-          "br": 9.0,
+          "br": 9.3,
           "unitClass": "fighter",
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/ca_27_mk32_raaf",
@@ -34128,7 +34128,7 @@
           "countryCode": "JP",
           "country": "Japan",
           "rank": 6,
-          "br": 9.0,
+          "br": 9.3,
           "unitClass": "fighter",
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/ca_27_mk32_malaysia",
@@ -34156,12 +34156,12 @@
           "countryCode": "CN",
           "country": "China",
           "rank": 9,
-          "br": 14.7,
+          "br": 15.0,
           "unitClass": "fighter",
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/j_16",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/j_16.png",
-          "brGround": 13.0
+          "brGround": 14.0
         },
         {
           "wikiId": "se_203",
@@ -34287,7 +34287,7 @@
           "role": "Strike aircraft",
           "source": "https://wiki.warthunder.com/unit/a_7e_greece",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/a_7e_greece.png",
-          "brGround": 10.7
+          "brGround": 11.3
         },
         {
           "wikiId": "f_4e_aup_greece",
@@ -34296,12 +34296,12 @@
           "countryCode": "IL",
           "country": "Israel",
           "rank": 8,
-          "br": 13.0,
+          "br": 13.3,
           "unitClass": "fighter",
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/f_4e_aup_greece",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/f_4e_aup_greece.png",
-          "brGround": 12.3
+          "brGround": 13.3
         },
         {
           "wikiId": "mirage_2000_5eg_mk2_greece",
@@ -34315,7 +34315,7 @@
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/mirage_2000_5eg_mk2_greece",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/mirage_2000_5eg_mk2_greece.png",
-          "brGround": 12.7
+          "brGround": 13.7
         },
         {
           "wikiId": "rafale_eg_greece",
@@ -34324,12 +34324,12 @@
           "countryCode": "IL",
           "country": "Israel",
           "rank": 9,
-          "br": 14.7,
+          "br": 15.0,
           "unitClass": "fighter",
           "role": "Fighter",
           "source": "https://wiki.warthunder.com/unit/rafale_eg_greece",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/rafale_eg_greece.png",
-          "brGround": 13.0
+          "brGround": 14.0
         }
       ]
     },
@@ -34357,7 +34357,7 @@
           "countryCode": "US",
           "country": "USA",
           "rank": 5,
-          "br": 8.3,
+          "br": 9.0,
           "unitClass": "utility-heli",
           "role": "Utility helicopter",
           "source": "https://wiki.warthunder.com/unit/uh_1b",
@@ -34370,7 +34370,7 @@
           "countryCode": "US",
           "country": "USA",
           "rank": 5,
-          "br": 8.7,
+          "br": 9.3,
           "unitClass": "utility-heli",
           "role": "Utility helicopter",
           "source": "https://wiki.warthunder.com/unit/uh_1c",
@@ -34383,7 +34383,7 @@
           "countryCode": "US",
           "country": "USA",
           "rank": 5,
-          "br": 8.0,
+          "br": 8.7,
           "unitClass": "attack-heli",
           "role": "Attack helicopter",
           "source": "https://wiki.warthunder.com/unit/h_34",
@@ -34396,7 +34396,7 @@
           "countryCode": "US",
           "country": "USA",
           "rank": 5,
-          "br": 8.7,
+          "br": 9.3,
           "unitClass": "utility-heli",
           "role": "Utility helicopter",
           "source": "https://wiki.warthunder.com/unit/uh_1c_xm_30",
@@ -34409,7 +34409,7 @@
           "countryCode": "US",
           "country": "USA",
           "rank": 6,
-          "br": 10.3,
+          "br": 10.7,
           "unitClass": "attack-heli",
           "role": "Attack helicopter",
           "source": "https://wiki.warthunder.com/unit/ah_6m",
@@ -34422,7 +34422,7 @@
           "countryCode": "US",
           "country": "USA",
           "rank": 6,
-          "br": 9.7,
+          "br": 10.0,
           "unitClass": "attack-heli",
           "role": "Attack helicopter",
           "source": "https://wiki.warthunder.com/unit/ah_1f",
@@ -34435,7 +34435,7 @@
           "countryCode": "US",
           "country": "USA",
           "rank": 6,
-          "br": 10.3,
+          "br": 11.0,
           "unitClass": "attack-heli",
           "role": "Attack helicopter",
           "source": "https://wiki.warthunder.com/unit/oh_58d",
@@ -34448,7 +34448,7 @@
           "countryCode": "US",
           "country": "USA",
           "rank": 6,
-          "br": 11.3,
+          "br": 11.7,
           "unitClass": "attack-heli",
           "role": "Attack helicopter",
           "source": "https://wiki.warthunder.com/unit/ah_64a",
@@ -34474,7 +34474,7 @@
           "countryCode": "US",
           "country": "USA",
           "rank": 6,
-          "br": 11.3,
+          "br": 11.7,
           "unitClass": "attack-heli",
           "role": "Attack helicopter",
           "source": "https://wiki.warthunder.com/unit/rah_66",
@@ -34487,7 +34487,7 @@
           "countryCode": "US",
           "country": "USA",
           "rank": 6,
-          "br": 9.7,
+          "br": 10.0,
           "unitClass": "attack-heli",
           "role": "Attack helicopter",
           "source": "https://wiki.warthunder.com/unit/ah_56a",
@@ -34500,7 +34500,7 @@
           "countryCode": "US",
           "country": "USA",
           "rank": 6,
-          "br": 11.3,
+          "br": 11.7,
           "unitClass": "attack-heli",
           "role": "Attack helicopter",
           "source": "https://wiki.warthunder.com/unit/ah_64a_greece_usa",
@@ -34513,7 +34513,7 @@
           "countryCode": "US",
           "country": "USA",
           "rank": 6,
-          "br": 11.3,
+          "br": 11.7,
           "unitClass": "attack-heli",
           "role": "Attack helicopter",
           "source": "https://wiki.warthunder.com/unit/yah_64",
@@ -34526,7 +34526,7 @@
           "countryCode": "US",
           "country": "USA",
           "rank": 6,
-          "br": 11.3,
+          "br": 11.7,
           "unitClass": "attack-heli",
           "role": "Attack helicopter",
           "source": "https://wiki.warthunder.com/unit/ah_64a_peten",
@@ -34539,7 +34539,7 @@
           "countryCode": "US",
           "country": "USA",
           "rank": 7,
-          "br": 11.0,
+          "br": 11.3,
           "unitClass": "attack-heli",
           "role": "Attack helicopter",
           "source": "https://wiki.warthunder.com/unit/mh_60l_dap",
@@ -34552,7 +34552,7 @@
           "countryCode": "US",
           "country": "USA",
           "rank": 7,
-          "br": 11.7,
+          "br": 12.0,
           "unitClass": "attack-heli",
           "role": "Attack helicopter",
           "source": "https://wiki.warthunder.com/unit/ah_64d",
@@ -34565,7 +34565,7 @@
           "countryCode": "US",
           "country": "USA",
           "rank": 7,
-          "br": 12.0,
+          "br": 12.3,
           "unitClass": "attack-heli",
           "role": "Attack helicopter",
           "source": "https://wiki.warthunder.com/unit/ah_1z",
@@ -34578,7 +34578,7 @@
           "countryCode": "US",
           "country": "USA",
           "rank": 7,
-          "br": 13.0,
+          "br": 13.3,
           "unitClass": "attack-heli",
           "role": "Attack helicopter",
           "source": "https://wiki.warthunder.com/unit/ah_64e",
@@ -34591,7 +34591,7 @@
           "countryCode": "DE",
           "country": "Germany",
           "rank": 5,
-          "br": 8.3,
+          "br": 9.0,
           "unitClass": "utility-heli",
           "role": "Utility helicopter",
           "source": "https://wiki.warthunder.com/unit/sa_313b",
@@ -34604,7 +34604,7 @@
           "countryCode": "DE",
           "country": "Germany",
           "rank": 5,
-          "br": 8.3,
+          "br": 9.0,
           "unitClass": "utility-heli",
           "role": "Utility helicopter",
           "source": "https://wiki.warthunder.com/unit/uh_1d",
@@ -34630,7 +34630,7 @@
           "countryCode": "DE",
           "country": "Germany",
           "rank": 5,
-          "br": 9.3,
+          "br": 9.7,
           "unitClass": "utility-heli",
           "role": "Utility helicopter",
           "source": "https://wiki.warthunder.com/unit/bo_105cb2",
@@ -34643,7 +34643,7 @@
           "countryCode": "DE",
           "country": "Germany",
           "rank": 6,
-          "br": 9.3,
+          "br": 9.7,
           "unitClass": "utility-heli",
           "role": "Utility helicopter",
           "source": "https://wiki.warthunder.com/unit/bo_105pah1",
@@ -34656,7 +34656,7 @@
           "countryCode": "DE",
           "country": "Germany",
           "rank": 6,
-          "br": 8.7,
+          "br": 9.0,
           "unitClass": "attack-heli",
           "role": "Attack helicopter",
           "source": "https://wiki.warthunder.com/unit/mi_24d_german",
@@ -34669,7 +34669,7 @@
           "countryCode": "DE",
           "country": "Germany",
           "rank": 6,
-          "br": 9.3,
+          "br": 9.7,
           "unitClass": "utility-heli",
           "role": "Utility helicopter",
           "source": "https://wiki.warthunder.com/unit/bo_105pah1_a1",
@@ -34682,7 +34682,7 @@
           "countryCode": "DE",
           "country": "Germany",
           "rank": 6,
-          "br": 9.7,
+          "br": 10.0,
           "unitClass": "attack-heli",
           "role": "Attack helicopter",
           "source": "https://wiki.warthunder.com/unit/mi_24p_german",
@@ -34695,7 +34695,7 @@
           "countryCode": "DE",
           "country": "Germany",
           "rank": 6,
-          "br": 9.7,
+          "br": 10.0,
           "unitClass": "attack-heli",
           "role": "Attack helicopter",
           "source": "https://wiki.warthunder.com/unit/mi_24p_german_hfs80",
@@ -34708,7 +34708,7 @@
           "countryCode": "DE",
           "country": "Germany",
           "rank": 7,
-          "br": 12.7,
+          "br": 13.0,
           "unitClass": "attack-heli",
           "role": "Attack helicopter",
           "source": "https://wiki.warthunder.com/unit/tiger_uht",
@@ -34721,7 +34721,7 @@
           "countryCode": "DE",
           "country": "Germany",
           "rank": 7,
-          "br": 11.0,
+          "br": 11.3,
           "unitClass": "attack-heli",
           "role": "Attack helicopter",
           "source": "https://wiki.warthunder.com/unit/tiger_had_spain",
@@ -34734,7 +34734,7 @@
           "countryCode": "RU",
           "country": "USSR",
           "rank": 5,
-          "br": 8.0,
+          "br": 8.3,
           "unitClass": "attack-heli",
           "role": "Attack helicopter",
           "source": "https://wiki.warthunder.com/unit/mi_4av",
@@ -34747,7 +34747,7 @@
           "countryCode": "RU",
           "country": "USSR",
           "rank": 5,
-          "br": 8.0,
+          "br": 8.3,
           "unitClass": "attack-heli",
           "role": "Attack helicopter",
           "source": "https://wiki.warthunder.com/unit/mi_8tv",
@@ -34760,7 +34760,7 @@
           "countryCode": "RU",
           "country": "USSR",
           "rank": 5,
-          "br": 8.7,
+          "br": 9.0,
           "unitClass": "attack-heli",
           "role": "Attack helicopter",
           "source": "https://wiki.warthunder.com/unit/mi_24a",
@@ -34773,7 +34773,7 @@
           "countryCode": "RU",
           "country": "USSR",
           "rank": 5,
-          "br": 8.7,
+          "br": 9.0,
           "unitClass": "attack-heli",
           "role": "Attack helicopter",
           "source": "https://wiki.warthunder.com/unit/mi_24d",
@@ -34786,7 +34786,7 @@
           "countryCode": "RU",
           "country": "USSR",
           "rank": 6,
-          "br": 9.7,
+          "br": 10.0,
           "unitClass": "attack-heli",
           "role": "Attack helicopter",
           "source": "https://wiki.warthunder.com/unit/mi_24v",
@@ -34799,7 +34799,7 @@
           "countryCode": "RU",
           "country": "USSR",
           "rank": 6,
-          "br": 9.7,
+          "br": 10.0,
           "unitClass": "attack-heli",
           "role": "Attack helicopter",
           "source": "https://wiki.warthunder.com/unit/mi_8amtsh",
@@ -34812,7 +34812,7 @@
           "countryCode": "RU",
           "country": "USSR",
           "rank": 6,
-          "br": 9.7,
+          "br": 10.0,
           "unitClass": "attack-heli",
           "role": "Attack helicopter",
           "source": "https://wiki.warthunder.com/unit/mi_24p",
@@ -34825,7 +34825,7 @@
           "countryCode": "RU",
           "country": "USSR",
           "rank": 6,
-          "br": 10.7,
+          "br": 11.0,
           "unitClass": "attack-heli",
           "role": "Attack helicopter",
           "source": "https://wiki.warthunder.com/unit/mi_35m",
@@ -34838,7 +34838,7 @@
           "countryCode": "RU",
           "country": "USSR",
           "rank": 6,
-          "br": 9.7,
+          "br": 10.0,
           "unitClass": "attack-heli",
           "role": "Attack helicopter",
           "source": "https://wiki.warthunder.com/unit/ka_29",
@@ -34851,7 +34851,7 @@
           "countryCode": "RU",
           "country": "USSR",
           "rank": 6,
-          "br": 11.3,
+          "br": 11.7,
           "unitClass": "attack-heli",
           "role": "Attack helicopter",
           "source": "https://wiki.warthunder.com/unit/ka_50",
@@ -34864,7 +34864,7 @@
           "countryCode": "RU",
           "country": "USSR",
           "rank": 7,
-          "br": 11.0,
+          "br": 11.3,
           "unitClass": "attack-heli",
           "role": "Attack helicopter",
           "source": "https://wiki.warthunder.com/unit/mi_8amtsh_vn",
@@ -34877,7 +34877,7 @@
           "countryCode": "RU",
           "country": "USSR",
           "rank": 7,
-          "br": 11.0,
+          "br": 11.3,
           "unitClass": "attack-heli",
           "role": "Attack helicopter",
           "source": "https://wiki.warthunder.com/unit/mi_28n",
@@ -34890,7 +34890,7 @@
           "countryCode": "RU",
           "country": "USSR",
           "rank": 7,
-          "br": 12.0,
+          "br": 12.3,
           "unitClass": "attack-heli",
           "role": "Attack helicopter",
           "source": "https://wiki.warthunder.com/unit/ka_52",
@@ -34903,7 +34903,7 @@
           "countryCode": "RU",
           "country": "USSR",
           "rank": 7,
-          "br": 13.0,
+          "br": 13.3,
           "unitClass": "attack-heli",
           "role": "Attack helicopter",
           "source": "https://wiki.warthunder.com/unit/mi_28nm",
@@ -34916,7 +34916,7 @@
           "countryCode": "RU",
           "country": "USSR",
           "rank": 7,
-          "br": 11.7,
+          "br": 12.0,
           "unitClass": "attack-heli",
           "role": "Attack helicopter",
           "source": "https://wiki.warthunder.com/unit/mi_35p",
@@ -34929,7 +34929,7 @@
           "countryCode": "UK",
           "country": "Great Britain",
           "rank": 5,
-          "br": 8.3,
+          "br": 9.0,
           "unitClass": "utility-heli",
           "role": "Utility helicopter",
           "source": "https://wiki.warthunder.com/unit/scout_ah_mk1",
@@ -34942,7 +34942,7 @@
           "countryCode": "UK",
           "country": "Great Britain",
           "rank": 5,
-          "br": 9.0,
+          "br": 9.3,
           "unitClass": "utility-heli",
           "role": "Utility helicopter",
           "source": "https://wiki.warthunder.com/unit/wasp_has_mk1",
@@ -34968,7 +34968,7 @@
           "countryCode": "UK",
           "country": "Great Britain",
           "rank": 6,
-          "br": 10.7,
+          "br": 11.3,
           "unitClass": "utility-heli",
           "role": "Utility helicopter",
           "source": "https://wiki.warthunder.com/unit/lynx_ah_mk1",
@@ -34981,7 +34981,7 @@
           "countryCode": "UK",
           "country": "Great Britain",
           "rank": 6,
-          "br": 10.3,
+          "br": 10.7,
           "unitClass": "attack-heli",
           "role": "Attack helicopter",
           "source": "https://wiki.warthunder.com/unit/super_hind_mk3",
@@ -34994,7 +34994,7 @@
           "countryCode": "UK",
           "country": "Great Britain",
           "rank": 6,
-          "br": 10.7,
+          "br": 11.3,
           "unitClass": "utility-heli",
           "role": "Utility helicopter",
           "source": "https://wiki.warthunder.com/unit/g_lynx",
@@ -35007,7 +35007,7 @@
           "countryCode": "UK",
           "country": "Great Britain",
           "rank": 6,
-          "br": 11.7,
+          "br": 12.3,
           "unitClass": "attack-heli",
           "role": "Attack helicopter",
           "source": "https://wiki.warthunder.com/unit/ah_2_rooivalk",
@@ -35020,7 +35020,7 @@
           "countryCode": "UK",
           "country": "Great Britain",
           "rank": 7,
-          "br": 11.7,
+          "br": 12.3,
           "unitClass": "attack-heli",
           "role": "Attack helicopter",
           "source": "https://wiki.warthunder.com/unit/ah_mk1",
@@ -35033,7 +35033,7 @@
           "countryCode": "UK",
           "country": "Great Britain",
           "rank": 7,
-          "br": 13.0,
+          "br": 13.3,
           "unitClass": "attack-heli",
           "role": "Attack helicopter",
           "source": "https://wiki.warthunder.com/unit/ah_64e_britain",
@@ -35059,7 +35059,7 @@
           "countryCode": "JP",
           "country": "Japan",
           "rank": 6,
-          "br": 9.3,
+          "br": 9.7,
           "unitClass": "attack-heli",
           "role": "Attack helicopter",
           "source": "https://wiki.warthunder.com/unit/ah_1s_early",
@@ -35072,7 +35072,7 @@
           "countryCode": "JP",
           "country": "Japan",
           "rank": 6,
-          "br": 9.7,
+          "br": 10.0,
           "unitClass": "attack-heli",
           "role": "Attack helicopter",
           "source": "https://wiki.warthunder.com/unit/ah_1s_late",
@@ -35085,7 +35085,7 @@
           "countryCode": "JP",
           "country": "Japan",
           "rank": 6,
-          "br": 9.7,
+          "br": 10.0,
           "unitClass": "attack-heli",
           "role": "Attack helicopter",
           "source": "https://wiki.warthunder.com/unit/mi_35p_indonesia",
@@ -35098,7 +35098,7 @@
           "countryCode": "JP",
           "country": "Japan",
           "rank": 6,
-          "br": 9.7,
+          "br": 10.0,
           "unitClass": "attack-heli",
           "role": "Attack helicopter",
           "source": "https://wiki.warthunder.com/unit/ah_1s",
@@ -35111,7 +35111,7 @@
           "countryCode": "JP",
           "country": "Japan",
           "rank": 7,
-          "br": 11.3,
+          "br": 11.7,
           "unitClass": "attack-heli",
           "role": "Attack helicopter",
           "source": "https://wiki.warthunder.com/unit/ah_64d_japan",
@@ -35124,7 +35124,7 @@
           "countryCode": "JP",
           "country": "Japan",
           "rank": 7,
-          "br": 13.0,
+          "br": 13.3,
           "unitClass": "attack-heli",
           "role": "Attack helicopter",
           "source": "https://wiki.warthunder.com/unit/ah_64e_indonesia",
@@ -35137,7 +35137,7 @@
           "countryCode": "JP",
           "country": "Japan",
           "rank": 7,
-          "br": 11.3,
+          "br": 11.7,
           "unitClass": "attack-heli",
           "role": "Attack helicopter",
           "source": "https://wiki.warthunder.com/unit/ah_64d_lightweight_japan",
@@ -35150,7 +35150,7 @@
           "countryCode": "CN",
           "country": "China",
           "rank": 5,
-          "br": 9.0,
+          "br": 9.7,
           "unitClass": "attack-heli",
           "role": "Attack helicopter",
           "source": "https://wiki.warthunder.com/unit/z_11wa",
@@ -35163,7 +35163,7 @@
           "countryCode": "CN",
           "country": "China",
           "rank": 5,
-          "br": 9.3,
+          "br": 9.7,
           "unitClass": "utility-heli",
           "role": "Utility helicopter",
           "source": "https://wiki.warthunder.com/unit/sa_342l_china",
@@ -35176,7 +35176,7 @@
           "countryCode": "CN",
           "country": "China",
           "rank": 6,
-          "br": 10.3,
+          "br": 10.7,
           "unitClass": "attack-heli",
           "role": "Attack helicopter",
           "source": "https://wiki.warthunder.com/unit/z_9w",
@@ -35189,7 +35189,7 @@
           "countryCode": "CN",
           "country": "China",
           "rank": 6,
-          "br": 10.3,
+          "br": 11.0,
           "unitClass": "attack-heli",
           "role": "Attack helicopter",
           "source": "https://wiki.warthunder.com/unit/oh_58d_china",
@@ -35202,7 +35202,7 @@
           "countryCode": "CN",
           "country": "China",
           "rank": 6,
-          "br": 11.0,
+          "br": 11.3,
           "unitClass": "attack-heli",
           "role": "Attack helicopter",
           "source": "https://wiki.warthunder.com/unit/z_9wa",
@@ -35228,7 +35228,7 @@
           "countryCode": "CN",
           "country": "China",
           "rank": 6,
-          "br": 11.7,
+          "br": 12.3,
           "unitClass": "attack-heli",
           "role": "Attack helicopter",
           "source": "https://wiki.warthunder.com/unit/z_19",
@@ -35241,7 +35241,7 @@
           "countryCode": "CN",
           "country": "China",
           "rank": 6,
-          "br": 10.7,
+          "br": 11.0,
           "unitClass": "attack-heli",
           "role": "Attack helicopter",
           "source": "https://wiki.warthunder.com/unit/mi_35m_pakistan",
@@ -35254,7 +35254,7 @@
           "countryCode": "CN",
           "country": "China",
           "rank": 6,
-          "br": 11.7,
+          "br": 12.3,
           "unitClass": "attack-heli",
           "role": "Attack helicopter",
           "source": "https://wiki.warthunder.com/unit/z_19e",
@@ -35267,7 +35267,7 @@
           "countryCode": "CN",
           "country": "China",
           "rank": 7,
-          "br": 11.7,
+          "br": 12.3,
           "unitClass": "attack-heli",
           "role": "Attack helicopter",
           "source": "https://wiki.warthunder.com/unit/z_10",
@@ -35280,7 +35280,7 @@
           "countryCode": "CN",
           "country": "China",
           "rank": 7,
-          "br": 13.0,
+          "br": 13.3,
           "unitClass": "attack-heli",
           "role": "Attack helicopter",
           "source": "https://wiki.warthunder.com/unit/ah_64e_china",
@@ -35293,7 +35293,7 @@
           "countryCode": "CN",
           "country": "China",
           "rank": 7,
-          "br": 13.0,
+          "br": 13.3,
           "unitClass": "attack-heli",
           "role": "Attack helicopter",
           "source": "https://wiki.warthunder.com/unit/z_10me",
@@ -35306,7 +35306,7 @@
           "countryCode": "CN",
           "country": "China",
           "rank": 7,
-          "br": 11.7,
+          "br": 12.3,
           "unitClass": "attack-heli",
           "role": "Attack helicopter",
           "source": "https://wiki.warthunder.com/unit/z_10a",
@@ -35332,7 +35332,7 @@
           "countryCode": "IT",
           "country": "Italy",
           "rank": 5,
-          "br": 8.7,
+          "br": 9.0,
           "unitClass": "attack-heli",
           "role": "Attack helicopter",
           "source": "https://wiki.warthunder.com/unit/mi_24d_hungary",
@@ -35345,7 +35345,7 @@
           "countryCode": "IT",
           "country": "Italy",
           "rank": 6,
-          "br": 8.7,
+          "br": 9.0,
           "unitClass": "utility-heli",
           "role": "Utility helicopter",
           "source": "https://wiki.warthunder.com/unit/a_109_eoa2",
@@ -35358,7 +35358,7 @@
           "countryCode": "IT",
           "country": "Italy",
           "rank": 6,
-          "br": 9.7,
+          "br": 10.0,
           "unitClass": "attack-heli",
           "role": "Attack helicopter",
           "source": "https://wiki.warthunder.com/unit/mi_24v_hungary",
@@ -35371,7 +35371,7 @@
           "countryCode": "IT",
           "country": "Italy",
           "rank": 6,
-          "br": 10.7,
+          "br": 11.0,
           "unitClass": "attack-heli",
           "role": "Attack helicopter",
           "source": "https://wiki.warthunder.com/unit/t_129_atak",
@@ -35384,7 +35384,7 @@
           "countryCode": "IT",
           "country": "Italy",
           "rank": 6,
-          "br": 9.7,
+          "br": 10.0,
           "unitClass": "attack-heli",
           "role": "Attack helicopter",
           "source": "https://wiki.warthunder.com/unit/mi_24p_hungary",
@@ -35410,7 +35410,7 @@
           "countryCode": "IT",
           "country": "Italy",
           "rank": 7,
-          "br": 11.0,
+          "br": 11.3,
           "unitClass": "attack-heli",
           "role": "Attack helicopter",
           "source": "https://wiki.warthunder.com/unit/a_129_cbt",
@@ -35423,7 +35423,7 @@
           "countryCode": "IT",
           "country": "Italy",
           "rank": 7,
-          "br": 12.7,
+          "br": 13.0,
           "unitClass": "attack-heli",
           "role": "Attack helicopter",
           "source": "https://wiki.warthunder.com/unit/a_129_d",
@@ -35449,7 +35449,7 @@
           "countryCode": "FR",
           "country": "France",
           "rank": 5,
-          "br": 8.3,
+          "br": 9.0,
           "unitClass": "utility-heli",
           "role": "Utility helicopter",
           "source": "https://wiki.warthunder.com/unit/sa_313b_france",
@@ -35462,7 +35462,7 @@
           "countryCode": "FR",
           "country": "France",
           "rank": 5,
-          "br": 8.3,
+          "br": 9.0,
           "unitClass": "utility-heli",
           "role": "Utility helicopter",
           "source": "https://wiki.warthunder.com/unit/sa_316b",
@@ -35475,7 +35475,7 @@
           "countryCode": "FR",
           "country": "France",
           "rank": 5,
-          "br": 8.3,
+          "br": 9.0,
           "unitClass": "utility-heli",
           "role": "Utility helicopter",
           "source": "https://wiki.warthunder.com/unit/iar_316b",
@@ -35488,7 +35488,7 @@
           "countryCode": "FR",
           "country": "France",
           "rank": 6,
-          "br": 9.0,
+          "br": 9.3,
           "unitClass": "utility-heli",
           "role": "Utility helicopter",
           "source": "https://wiki.warthunder.com/unit/sa_341f",
@@ -35501,7 +35501,7 @@
           "countryCode": "FR",
           "country": "France",
           "rank": 6,
-          "br": 9.7,
+          "br": 10.0,
           "unitClass": "utility-heli",
           "role": "Utility helicopter",
           "source": "https://wiki.warthunder.com/unit/sa_342m",
@@ -35514,7 +35514,7 @@
           "countryCode": "FR",
           "country": "France",
           "rank": 6,
-          "br": 10.0,
+          "br": 10.7,
           "unitClass": "attack-heli",
           "role": "Attack helicopter",
           "source": "https://wiki.warthunder.com/unit/tiger_hap_france",
@@ -35527,7 +35527,7 @@
           "countryCode": "FR",
           "country": "France",
           "rank": 7,
-          "br": 11.0,
+          "br": 11.3,
           "unitClass": "attack-heli",
           "role": "Attack helicopter",
           "source": "https://wiki.warthunder.com/unit/tiger_had_france",
@@ -35540,7 +35540,7 @@
           "countryCode": "FR",
           "country": "France",
           "rank": 7,
-          "br": 12.7,
+          "br": 13.0,
           "unitClass": "attack-heli",
           "role": "Attack helicopter",
           "source": "https://wiki.warthunder.com/unit/tiger_hac_france",
@@ -35553,7 +35553,7 @@
           "countryCode": "FR",
           "country": "France",
           "rank": 7,
-          "br": 13.0,
+          "br": 13.3,
           "unitClass": "attack-heli",
           "role": "Attack helicopter",
           "source": "https://wiki.warthunder.com/unit/ah_64e_netherlands",
@@ -35566,7 +35566,7 @@
           "countryCode": "FR",
           "country": "France",
           "rank": 7,
-          "br": 12.7,
+          "br": 13.0,
           "unitClass": "attack-heli",
           "role": "Attack helicopter",
           "source": "https://wiki.warthunder.com/unit/tiger_had_block2_france",
@@ -35579,7 +35579,7 @@
           "countryCode": "FR",
           "country": "France",
           "rank": 7,
-          "br": 11.3,
+          "br": 11.7,
           "unitClass": "attack-heli",
           "role": "Attack helicopter",
           "source": "https://wiki.warthunder.com/unit/ah_64d_netherlands",
@@ -35605,7 +35605,7 @@
           "countryCode": "SE",
           "country": "Sweden",
           "rank": 5,
-          "br": 8.3,
+          "br": 9.0,
           "unitClass": "utility-heli",
           "role": "Utility helicopter",
           "source": "https://wiki.warthunder.com/unit/hkp2",
@@ -35618,7 +35618,7 @@
           "countryCode": "SE",
           "country": "Sweden",
           "rank": 6,
-          "br": 9.3,
+          "br": 9.7,
           "unitClass": "utility-heli",
           "role": "Utility helicopter",
           "source": "https://wiki.warthunder.com/unit/hkp9a_cb2",
@@ -35631,7 +35631,7 @@
           "countryCode": "SE",
           "country": "Sweden",
           "rank": 6,
-          "br": 9.3,
+          "br": 10.0,
           "unitClass": "utility-heli",
           "role": "Utility helicopter",
           "source": "https://wiki.warthunder.com/unit/hkp9a_cb3_fc",
@@ -35644,7 +35644,7 @@
           "countryCode": "SE",
           "country": "Sweden",
           "rank": 6,
-          "br": 10.7,
+          "br": 11.0,
           "unitClass": "attack-heli",
           "role": "Attack helicopter",
           "source": "https://wiki.warthunder.com/unit/mi_28a_sweden",
@@ -35657,7 +35657,7 @@
           "countryCode": "SE",
           "country": "Sweden",
           "rank": 7,
-          "br": 11.3,
+          "br": 11.7,
           "unitClass": "attack-heli",
           "role": "Attack helicopter",
           "source": "https://wiki.warthunder.com/unit/ahs",
@@ -35683,7 +35683,7 @@
           "countryCode": "IL",
           "country": "Israel",
           "rank": 5,
-          "br": 9.0,
+          "br": 9.3,
           "unitClass": "attack-heli",
           "role": "Attack helicopter",
           "source": "https://wiki.warthunder.com/unit/md_500_tow_late",
@@ -35696,7 +35696,7 @@
           "countryCode": "IL",
           "country": "Israel",
           "rank": 6,
-          "br": 9.0,
+          "br": 9.7,
           "unitClass": "attack-heli",
           "role": "Attack helicopter",
           "source": "https://wiki.warthunder.com/unit/ah_1q_iaf",
@@ -35709,7 +35709,7 @@
           "countryCode": "IL",
           "country": "Israel",
           "rank": 6,
-          "br": 9.7,
+          "br": 10.0,
           "unitClass": "attack-heli",
           "role": "Attack helicopter",
           "source": "https://wiki.warthunder.com/unit/ah_1f_iaf",
@@ -35722,7 +35722,7 @@
           "countryCode": "IL",
           "country": "Israel",
           "rank": 6,
-          "br": 11.3,
+          "br": 11.7,
           "unitClass": "attack-heli",
           "role": "Attack helicopter",
           "source": "https://wiki.warthunder.com/unit/ah_64a_iaf",
@@ -35735,7 +35735,7 @@
           "countryCode": "IL",
           "country": "Israel",
           "rank": 6,
-          "br": 11.3,
+          "br": 11.7,
           "unitClass": "attack-heli",
           "role": "Attack helicopter",
           "source": "https://wiki.warthunder.com/unit/ah_64a_peten_iaf",
@@ -35748,7 +35748,7 @@
           "countryCode": "IL",
           "country": "Israel",
           "rank": 7,
-          "br": 12.7,
+          "br": 13.0,
           "unitClass": "attack-heli",
           "role": "Attack helicopter",
           "source": "https://wiki.warthunder.com/unit/ah_64d_i_saraph",
@@ -35761,7 +35761,7 @@
           "countryCode": "IL",
           "country": "Israel",
           "rank": 7,
-          "br": 12.7,
+          "br": 13.0,
           "unitClass": "attack-heli",
           "role": "Attack helicopter",
           "source": "https://wiki.warthunder.com/unit/ah_60_iaf",
@@ -35774,7 +35774,7 @@
           "countryCode": "DE",
           "country": "Germany",
           "rank": 7,
-          "br": 12.7,
+          "br": 13.0,
           "unitClass": "utility-heli",
           "role": "Utility helicopter",
           "source": "https://wiki.warthunder.com/unit/h145m",
@@ -35787,7 +35787,7 @@
           "countryCode": "UK",
           "country": "Great Britain",
           "rank": 7,
-          "br": 12.3,
+          "br": 12.7,
           "unitClass": "utility-heli",
           "role": "Utility helicopter",
           "source": "https://wiki.warthunder.com/unit/aw_159",
@@ -35798,7 +35798,7 @@
   },
   "battleRatingsUpdatedAt": "2026-10-24",
   "battleRatingSnapshot": {
-    "status": "current",
+    "status": "planned-over-current",
     "source": "https://wiki.warthunder.com",
     "checkedOn": "2026-10-24",
     "fields": {
@@ -35812,5 +35812,33 @@
       "air": "https://wiki.warthunder.com/aviation",
       "heli": "https://wiki.warthunder.com/helicopters"
     }
+  },
+  "battleRatingUpdate": {
+    "source": "https://docs.google.com/spreadsheets/d/e/2PACX-1vTBbCUv1lRwM_7YoWmiYLJkPIMUndL50-9-kIpQu2ctg6GfysVC-IW4YyzDgLaGVvlyYq1bZBhvspD9/pubhtml",
+    "title": "Planned BR Changes — October 2026",
+    "status": "planned",
+    "appliedOn": "2026-10-24",
+    "modes": {
+      "tank.br": "Ground Forces / Realistic / now",
+      "air.br": "Aircraft / Air Realistic / now",
+      "air.brGround": "Aircraft / Ground Realistic and Simulator / now",
+      "heli.br": "Aircraft / helicopter Realistic / now"
+    },
+    "unchangedVehicles": "Retain current Wiki ratings, including dedicated aircraft Ground RB values.",
+    "excluded": [
+      {
+        "sheet": "Aircraft",
+        "row": 146,
+        "name": "Su-22M4 (USSR)",
+        "reason": "Not found in existing catalog; do not substitute Su-22M3."
+      }
+    ],
+    "fieldCounts": {
+      "tank.br": 256,
+      "air.br": 62,
+      "air.brGround": 231,
+      "heli.br": 101
+    },
+    "vehicleCount": 595
   }
 }
