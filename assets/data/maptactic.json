@@ -19,7 +19,7 @@
     "Campania": "2026-10-09",
     "Cargo Port": "2026-09-23",
     "Carpathians": "2026-09-23",
-    "Darwin Hill": "2026-10-06",
+    "Darwin Hill": "2026-10-24",
     "Eastern Europe": "2026-09-30",
     "European Province": "2026-09-23",
     "Fields of Normandy": "2026-09-23",
@@ -78,7 +78,7 @@
     "Campania": "2026-10-09T12:12:21Z",
     "Cargo Port": "2026-09-23T04:02:44Z",
     "Carpathians": "2026-09-23T01:37:01Z",
-    "Darwin Hill": "2026-10-05T16:55:26Z",
+    "Darwin Hill": "2026-10-23T20:25:11Z",
     "Eastern Europe": "2026-09-30T06:02:26Z",
     "European Province": "2026-09-23T01:49:25Z",
     "Fields of Normandy": "2026-09-23T02:21:06Z",
@@ -10235,6 +10235,12 @@
         "x": 72.88,
         "y": 15.3,
         "parentTankId": "muj3e2my-7d8z2r"
+      },
+      {
+        "id": "mvlf5iss-za2116",
+        "type": "smokeshell",
+        "x": 7.4,
+        "y": 45.26
       }
     ],
     "Darwin Hill::domination-1|Red": [
@@ -10514,6 +10520,12 @@
         "x": 63.53,
         "y": 59.8,
         "parentTankId": "muj41h6d-njpa9a"
+      },
+      {
+        "id": "mvlf5o9n-v9yq73",
+        "type": "smokeshell",
+        "x": 6.13,
+        "y": 36.41
       }
     ],
     "Darwin Hill::conquest-1|Blue": [
@@ -84553,6 +84565,6 @@
     "Port Novorossiysk::battle-1|Red": [],
     "Sands of Sinai::domination-1|Blue": []
   },
-  "updatedAt": "2026-10-13T23:39:08.845Z",
-  "exportedAt": "2026-10-13T23:39:13.453Z"
+  "updatedAt": "2026-10-23T20:25:11.198Z",
+  "exportedAt": "2026-10-23T20:26:50.892Z"
 }
