@@ -4,7 +4,7 @@ if (tierRoot) {
   const TIER_ZONES = Object.freeze(["s", "a", "b", "c", "d", "pool"]);
   const STORAGE_KEY = "maptactic-tier-maker-v1";
 
-  const catalogResponse = await fetch(new URL("../data/tier-units.json?v=no-tel-launchers-20260923", import.meta.url));
+  const catalogResponse = await fetch(new URL("../data/tier-units.json?v=wiki-current-20261024", import.meta.url));
   if (!catalogResponse.ok) throw new Error(`Tier catalog request failed: ${catalogResponse.status}`);
   const tierCatalog = await catalogResponse.json();
   if (tierCatalog.battleRatingMode !== "RB") throw new Error("Tier catalog must use Realistic Battles ratings");
@@ -19,9 +19,9 @@ if (tierRoot) {
   ));
 
   const META = Object.freeze({
-    tank: { folder: "Tier/Tank", labelKey: "groundForces", rank: 8, br: { min: "0.0", max: "12.7" } },
-    air: { folder: "Tier/Air", labelKey: "aircraft", rank: 9, br: { min: "0.0", max: "14.7" } },
-    heli: { folder: "Tier/Heli", labelKey: "helicopters", rank: 7, br: { min: "0.0", max: "13.0" } }
+    tank: { folder: "Tier/Tank", labelKey: "groundForces", rank: 8, br: { min: "0.0", max: Math.max(...UNIT_RECORDS.tank.map(unit => unit.br)).toFixed(1) } },
+    air: { folder: "Tier/Air", labelKey: "aircraft", rank: 9, br: { min: "0.0", max: Math.max(...UNIT_RECORDS.air.map(unit => unit.br)).toFixed(1) } },
+    heli: { folder: "Tier/Heli", labelKey: "helicopters", rank: 7, br: { min: "0.0", max: Math.max(...UNIT_RECORDS.heli.map(unit => unit.br)).toFixed(1) } }
   });
 
   const UNIT_CLASSES = Object.freeze({

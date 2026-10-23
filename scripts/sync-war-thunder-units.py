@@ -1,14 +1,15 @@
 #!/usr/bin/env python3
 """Synchronize War Thunder Wiki vehicle metadata and card images.
 
-Only Realistic Battles (RB) battle ratings are stored. The generated catalog is
-written to assets/data/tier-units.json and images are stored by stable Wiki ID.
+Only Realistic Battles (RB) battle ratings are stored. Aircraft use br for Air RB
+and brGround for Ground RB. The shared catalog is assets/data/tier-units.json.
 """
 
 from __future__ import annotations
 
 import argparse
 import concurrent.futures
+import copy
 import io
 import json
 import os
@@ -104,20 +105,6 @@ def card_info_value(document, title: str) -> str:
     return first_text(document, xpath)
 
 
-def realistic_br(document) -> float | None:
-    items = document.xpath("//div[contains(concat(' ', normalize-space(@class), ' '), ' game-unit_br-item ')]")
-    for item in items:
-        mode = first_text(item, ".//div[contains(concat(' ', normalize-space(@class), ' '), ' mode ')]")
-        if mode != "RB":
-            continue
-        value = first_text(item, ".//div[contains(concat(' ', normalize-space(@class), ' '), ' value ')]")
-        try:
-            return float(value)
-        except ValueError:
-            return None
-    return None
-
-
 def rank_value(document) -> tuple[str, int | None]:
     rank_roman = first_text(
         document,
@@ -168,8 +155,69 @@ def infer_unit_class(category: str, role: str) -> str:
     return "other"
 
 
-def list_unit_ids(page: str) -> list[str]:
-    document = fetch_document(f"{WIKI_ROOT}/{page}")
+def wiki_unit_ratings(document, category: str) -> dict[str, dict[str, float]]:
+    """Read the Wiki's own list data; rb is Air RB and trb is Ground RB for aircraft.
+
+    Wiki common.js converts its zero-based BR step using (step / 3 + 1).toFixed(1).
+    Parse JSON only, never execute script content from the downloaded page.
+    """
+    scripts = document.xpath("//script/text()")
+    matches = [re.search(r"window\.WT_UnitList\s*=\s*'(.*?)';", script, re.S) for script in scripts]
+    match = next((match for match in matches if match), None)
+    if not match:
+        raise RuntimeError(f"Missing Wiki unit list for {category}")
+    rows = json.loads(match.group(1))
+    ratings = {}
+    for row in rows:
+        wiki_id, modes = row[0], row[4]
+        # Carrier scout planes, strike drones and separate SAM launchers have no BR.
+        # If one is present in our playable catalog, refresh_catalog_ratings fails below.
+        if modes == []:
+            continue
+        if not isinstance(modes, dict):
+            raise RuntimeError(f"Invalid rating modes for {wiki_id}")
+        if wiki_id in ratings:
+            raise RuntimeError(f"Duplicate Wiki unit: {wiki_id}")
+        fields = {"br": "rb", **({"brGround": "trb"} if category == "air" else {})}
+        values = {}
+        for field, mode in fields.items():
+            step = modes.get(mode)
+            if isinstance(step, bool) or not isinstance(step, int) or step < 0:
+                raise RuntimeError(f"Missing or invalid {mode} for {wiki_id}")
+            values[field] = round(step / 3 + 1, 1)
+        ratings[wiki_id] = values
+    if not ratings:
+        raise RuntimeError(f"Empty Wiki unit list for {category}")
+    return ratings
+
+
+def refresh_catalog_ratings(existing: dict, documents: dict, checked_on: str) -> dict:
+    """Update only current BR fields, preserving all vehicle identities and assets."""
+    if existing.get("battleRatingMode") != "RB":
+        raise RuntimeError("Existing catalog must use RB")
+    updated = copy.deepcopy(existing)
+    for category in CATEGORIES:
+        ratings = wiki_unit_ratings(documents[category], category)
+        for unit in updated["categories"][category]["units"]:
+            if unit["wikiId"] not in ratings:
+                raise RuntimeError(f"Wiki ratings missing for {category}:{unit['wikiId']}")
+            unit.update(ratings[unit["wikiId"]])
+    # A current Wiki refresh supersedes the previously applied planned spreadsheet.
+    updated.pop("battleRatingUpdate", None)
+    updated["battleRatingsUpdatedAt"] = checked_on
+    updated["battleRatingSnapshot"] = {
+        "status": "current",
+        "source": WIKI_ROOT,
+        "checkedOn": checked_on,
+        "fields": {"tank.br": "Ground RB", "air.br": "Air RB", "air.brGround": "Ground RB", "heli.br": "Ground RB"},
+        "categorySources": {key: f"{WIKI_ROOT}/{value['page']}" for key, value in CATEGORIES.items()},
+    }
+    return updated
+
+
+def list_unit_ids(page: str, document=None) -> list[str]:
+    if document is None:
+        document = fetch_document(f"{WIKI_ROOT}/{page}")
     hrefs = document.xpath("//a[contains(concat(' ', normalize-space(@class), ' '), ' wt-tree_item-link ')]/@href")
     if not hrefs:
         hrefs = document.xpath("//a[starts-with(@href, '/unit/')]/@href")
@@ -215,24 +263,22 @@ def save_webp(url: str, destination: Path) -> None:
     os.replace(temporary, destination)
 
 
-def parse_unit(category: str, wiki_id: str, image_root: Path, download_images: bool) -> dict:
+def parse_unit(category: str, wiki_id: str, image_root: Path, download_images: bool, ratings: dict) -> dict:
     source_url = f"{WIKI_ROOT}/unit/{wiki_id}"
     document = fetch_document(source_url)
     name = first_text(document, "//div[contains(concat(' ', normalize-space(@class), ' '), ' game-unit_name ')][1]")
     rank_roman, rank = rank_value(document)
     country = card_info_value(document, "Research country")
     role = card_info_value(document, "Main role")
-    br = realistic_br(document)
+    br = ratings["br"]
     inherited_from = ""
-    if not rank or br is None:
+    if not rank:
         inherited_from = basic_unit_id(document)
         if inherited_from and inherited_from != wiki_id:
             basic_document = fetch_document(f"{WIKI_ROOT}/unit/{inherited_from}")
             inherited_rank_roman, inherited_rank = rank_value(basic_document)
             if not rank:
                 rank_roman, rank = inherited_rank_roman, inherited_rank
-            if br is None:
-                br = realistic_br(basic_document)
     image_url = first_text(document, "//img[contains(concat(' ', normalize-space(@class), ' '), ' game-unit_template-image ')]/@src")
     image_url = image_url or f"https://static.encyclopedia.warthunder.com/images/{wiki_id}.png"
     if not name or not rank_roman or not country or not role or br is None:
@@ -260,6 +306,8 @@ def parse_unit(category: str, wiki_id: str, image_root: Path, download_images: b
     }
     if inherited_from:
         unit["inheritsRankAndBrFrom"] = inherited_from
+    if category == "air":
+        unit["brGround"] = ratings["brGround"]
     return unit
 
 
@@ -291,6 +339,9 @@ def parse_arguments() -> argparse.Namespace:
     parser.add_argument("--metadata-only", action="store_true", help="Do not download images")
     parser.add_argument("--dry-run", action="store_true", help="Parse and report without writing the catalog")
     parser.add_argument("--new-only", action="store_true", help="Append only Wiki units missing from the current catalog")
+    parser.add_argument("--ratings-only", action="store_true", help="Refresh current RB and aircraft GRB for existing vehicles only")
+    parser.add_argument("--ratings-source-dir", type=Path, help="Use saved ground.html, aviation.html and helicopters.html for a ratings-only refresh")
+    parser.add_argument("--ratings-date", help="Date of the ratings snapshot (YYYY-MM-DD)")
     parser.add_argument("--categories", nargs="+", choices=tuple(CATEGORIES), default=list(CATEGORIES))
     return parser.parse_args()
 
@@ -299,6 +350,24 @@ def main() -> int:
     arguments = parse_arguments()
     repo_root = arguments.repo_root.resolve()
     catalog_path = repo_root / "assets" / "data" / "tier-units.json"
+    if arguments.ratings_only:
+        if arguments.new_only or arguments.limit or set(arguments.categories) != set(CATEGORIES):
+            raise RuntimeError("Ratings-only refresh requires all categories, without --new-only or --limit")
+        checked_on = arguments.ratings_date or datetime.now(timezone.utc).date().isoformat()
+        datetime.strptime(checked_on, "%Y-%m-%d")
+        documents = {
+            category: html.fromstring((arguments.ratings_source_dir / f"{meta['page']}.html").read_bytes())
+            if arguments.ratings_source_dir else fetch_document(f"{WIKI_ROOT}/{meta['page']}")
+            for category, meta in CATEGORIES.items()
+        }
+        existing = json.loads(catalog_path.read_text(encoding="utf-8"))
+        refreshed = refresh_catalog_ratings(existing, documents, checked_on)
+        if not arguments.dry_run:
+            temporary = catalog_path.with_suffix(".json.download")
+            temporary.write_text(json.dumps(refreshed, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+            os.replace(temporary, catalog_path)
+        log(f"Verified current Wiki ratings for {sum(len(c['units']) for c in refreshed['categories'].values())} existing vehicles")
+        return 0
     if arguments.new_only:
         existing_catalog = json.loads(catalog_path.read_text(encoding="utf-8"))
         if existing_catalog.get("battleRatingMode") != "RB":
@@ -316,7 +385,9 @@ def main() -> int:
     failures: list[str] = []
     for category in arguments.categories:
         page = CATEGORIES[category]["page"]
-        unit_ids = [wiki_id for wiki_id in list_unit_ids(page) if include_in_tier_catalog(category, wiki_id)]
+        category_document = fetch_document(f"{WIKI_ROOT}/{page}")
+        ratings = wiki_unit_ratings(category_document, category)
+        unit_ids = [wiki_id for wiki_id in list_unit_ids(page, category_document) if include_in_tier_catalog(category, wiki_id)]
         if arguments.new_only:
             existing_ids = {unit["wikiId"] for unit in catalog[category]}
             unit_ids = [wiki_id for wiki_id in unit_ids if wiki_id not in existing_ids]
@@ -328,7 +399,7 @@ def main() -> int:
         results: dict[str, dict] = {}
         with concurrent.futures.ThreadPoolExecutor(max_workers=max(1, arguments.workers)) as executor:
             future_to_id = {
-                executor.submit(parse_unit, category, wiki_id, repo_root / "Tier", not arguments.metadata_only): wiki_id
+                executor.submit(parse_unit, category, wiki_id, repo_root / "Tier", not arguments.metadata_only, ratings[wiki_id]): wiki_id
                 for wiki_id in unit_ids
             }
             for completed, future in enumerate(concurrent.futures.as_completed(future_to_id), start=1):
