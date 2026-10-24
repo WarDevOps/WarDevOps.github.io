@@ -15,7 +15,7 @@
   <meta name="twitter:card" content="summary">
   <title>Battle Range Calculator | WarDevOps</title>
   <link rel="stylesheet" href="/assets/css/site.css?v=tier-restored-20260922">
-  <link rel="stylesheet" href="/assets/css/brc.css?v=detail-image-20261024">
+  <link rel="stylesheet" href="/assets/css/brc.css?v=detail-caption-20261024">
 </head>
 <body>
   <header class="site-header">
@@ -81,7 +81,13 @@
     <button id="brc-detail-close" class="brc-detail-close" type="button" aria-label="Close details">×</button>
     <p class="brc-kicker" data-brc-text="details">VEHICLE DETAILS</p>
     <h2 id="brc-detail-name"></h2><p id="brc-detail-meta"></p>
-    <img id="brc-detail-image" class="brc-detail-image" width="304" height="171" alt="" decoding="async" hidden>
+    <div id="brc-detail-media" class="brc-detail-media" hidden>
+      <img id="brc-detail-image" class="brc-detail-image" width="304" height="171" alt="" decoding="async" hidden>
+      <span class="tier-card-caption" aria-hidden="true">
+        <img id="brc-detail-flag" class="brc-detail-flag" width="25" height="16" alt="">
+        <span id="brc-detail-image-name" class="tier-card-equipment-name"></span>
+      </span>
+    </div>
     <p class="brc-placeholder" data-brc-text="placeholder">Vehicle notes are coming soon.</p>
     <p class="brc-muted" data-brc-text="closeHint">Closing this panel keeps your selected range.</p>
   </section>
@@ -92,7 +98,7 @@
     <p data-page-i18n="copyrightNotice">Unofficial fan project. Not affiliated with or endorsed by Gaijin Entertainment. War Thunder and related game materials belong to their respective rights holders.</p>
   </footer>
   <script type="module" src="/assets/js/tier-page.js?v=20260828"></script>
-  <script type="module" src="/assets/js/brc.js?v=arb-labels-20261024"></script>
+  <script type="module" src="/assets/js/brc.js?v=detail-caption-20261024"></script>
   <script type="module" src="/assets/js/consent-controls.js?v=20260828"></script>
 </body>
 </html>

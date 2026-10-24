@@ -183,6 +183,9 @@ function updatePopup() {
   $("#brc-detail-meta").textContent = `${countryName(state.selected.countryCode)} · ${t(state.selected.category)} · ${ratingLabel(state.selected)}`;
   const image = $("#brc-detail-image");
   const folder = { tank: "Tank", air: "Air", heli: "Heli" }[state.selected.category];
+  $("#brc-detail-media").hidden = false;
+  $("#brc-detail-flag").src = `/icon/flag-${state.selected.countryCode.toLowerCase()}.svg`;
+  $("#brc-detail-image-name").textContent = state.selected.name;
   image.alt = state.selected.name;
   image.hidden = false;
   image.src = `/Tier/${folder}/${encodeURIComponent(state.selected.file)}`;
@@ -364,6 +367,7 @@ $("#brc-detail-close").addEventListener("click", () => closePopup(true));
 $("#brc-detail-image").addEventListener("load", positionPopup);
 $("#brc-detail-image").addEventListener("error", event => {
   event.target.hidden = true;
+  $("#brc-detail-media").hidden = true;
   positionPopup();
 });
 $("#brc-retry").addEventListener("click", loadCatalog);
