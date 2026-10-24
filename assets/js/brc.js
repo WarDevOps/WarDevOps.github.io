@@ -90,7 +90,7 @@ function renderTable() {
         const categoryUnits = countryUnits.filter(unit => unit.category === category);
         if (!categoryUnits.length) continue;
         const section = element("div", "brc-group");
-        section.append(element("span", "brc-group-label", t(category)));
+        if (state.mode === "grb") section.append(element("span", "brc-group-label", t(category)));
         for (const unit of categoryUnits) {
           const button = element("button", "brc-unit", unit.name);
           button.type = "button"; button.dataset.unit = unit.id;
@@ -181,6 +181,11 @@ function updatePopup() {
   if (!state.selected) return;
   $("#brc-detail-name").textContent = state.selected.name;
   $("#brc-detail-meta").textContent = `${countryName(state.selected.countryCode)} · ${t(state.selected.category)} · ${ratingLabel(state.selected)}`;
+  const image = $("#brc-detail-image");
+  const folder = { tank: "Tank", air: "Air", heli: "Heli" }[state.selected.category];
+  image.alt = state.selected.name;
+  image.hidden = false;
+  image.src = `/Tier/${folder}/${encodeURIComponent(state.selected.file)}`;
   positionPopup();
 }
 
@@ -356,6 +361,11 @@ results.addEventListener("keydown", event => {
   }
 });
 $("#brc-detail-close").addEventListener("click", () => closePopup(true));
+$("#brc-detail-image").addEventListener("load", positionPopup);
+$("#brc-detail-image").addEventListener("error", event => {
+  event.target.hidden = true;
+  positionPopup();
+});
 $("#brc-retry").addEventListener("click", loadCatalog);
 document.addEventListener("keydown", event => {
   if (event.key !== "Escape") return;

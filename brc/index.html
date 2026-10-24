@@ -15,7 +15,7 @@
   <meta name="twitter:card" content="summary">
   <title>Battle Range Calculator | WarDevOps</title>
   <link rel="stylesheet" href="/assets/css/site.css?v=tier-restored-20260922">
-  <link rel="stylesheet" href="/assets/css/brc.css?v=battle-tabs-20261024">
+  <link rel="stylesheet" href="/assets/css/brc.css?v=detail-image-20261024">
 </head>
 <body>
   <header class="site-header">
@@ -33,7 +33,7 @@
   <main class="brc-main">
     <section class="brc-intro" aria-labelledby="brc-title">
       <p class="eyebrow" id="brc-mode-eyebrow">WAR THUNDER · GROUND REALISTIC BATTLES</p>
-      <h1 id="brc-title">Battle Range <em>Calculator</em><span class="brc-badge">BRC</span></h1>
+      <h1 id="brc-title">Battle Range <em>Calculator</em><span class="brc-badge">Beta</span></h1>
       <p data-brc-text="intro">Hover to compare. Click a vehicle to lock its ±1.0 BR range, another vehicle to switch, or empty space to unlock.</p>
       <div class="tier-category-switch brc-mode-tabs" id="brc-mode-tabs" role="tablist" aria-label="Battle mode">
         <button class="tier-category-button" id="brc-tab-grb" type="button" role="tab" data-brc-mode="grb" aria-selected="true" aria-controls="brc-workspace" tabindex="0" disabled><span data-brc-text="grb">GROUND REALISTIC</span> <small>GRB</small></button>
@@ -81,6 +81,7 @@
     <button id="brc-detail-close" class="brc-detail-close" type="button" aria-label="Close details">×</button>
     <p class="brc-kicker" data-brc-text="details">VEHICLE DETAILS</p>
     <h2 id="brc-detail-name"></h2><p id="brc-detail-meta"></p>
+    <img id="brc-detail-image" class="brc-detail-image" width="304" height="171" alt="" decoding="async" hidden>
     <p class="brc-placeholder" data-brc-text="placeholder">Vehicle notes are coming soon.</p>
     <p class="brc-muted" data-brc-text="closeHint">Closing this panel keeps your selected range.</p>
   </section>
@@ -91,7 +92,7 @@
     <p data-page-i18n="copyrightNotice">Unofficial fan project. Not affiliated with or endorsed by Gaijin Entertainment. War Thunder and related game materials belong to their respective rights holders.</p>
   </footer>
   <script type="module" src="/assets/js/tier-page.js?v=20260828"></script>
-  <script type="module" src="/assets/js/brc.js?v=pin-switch-20261024"></script>
+  <script type="module" src="/assets/js/brc.js?v=arb-labels-20261024"></script>
   <script type="module" src="/assets/js/consent-controls.js?v=20260828"></script>
 </body>
 </html>
