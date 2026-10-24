@@ -12,7 +12,6 @@
 *.py
 !/scripts/export-replay-layout.py
 !/scripts/sync-war-thunder-units.py
-!/scripts/test-wiki-ratings.py
 !/scripts/convert-png-assets.py
 *.psd
 
@@ -25,14 +24,14 @@
 # Local Codex artifacts archived off the system drive.
 /local-artifacts/
 
+# Local verification scripts stay on this machine. The deployment check below is retained.
+/scripts/test-*
+
 # Keep only MJS entry points required by the Pages build and its checks.
 *.mjs
 !/generate-comment-image-manifest.mjs
 !/scripts/generate-map-catalog.mjs
 !/scripts/test-map-summary-html.mjs
-!/scripts/test-webp-assets.mjs
-!/scripts/test-brc.mjs
-!/scripts/test-brc-browser.mjs
 /assets/data/ReplayCalibration
 img/Surroundings of Volokolamsk/Surroundings of Volokolamsk v1.webp
 img/Volokolamsk/Volokolamsk v1.webp
