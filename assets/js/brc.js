@@ -2,7 +2,7 @@ import { CATEGORIES, COUNTRIES, readCatalog, visibleUnits, searchUnits, rangeCol
 
 const copy = {
   en: {
-    grb: "GROUND REALISTIC", arb: "AIR REALISTIC", modeLabel: "Battle mode",
+    grb: "GROUND REALISTIC", arb: "AIR REALISTIC", modeLabel: "Battle mode", notApplicable: "Not applicable",
     arbNotice: "Compare aircraft within ±1.0 of the selected aircraft’s Air RB. All nations are included.",
     arbEmpty: "No aircraft in this range. Turn off Range only to see all aircraft.",
     intro: "Hover to compare. Click a vehicle to lock its ±1.0 BR range, another vehicle to switch, or empty space to unlock.",
@@ -21,7 +21,7 @@ const copy = {
     countries: ["USA", "Germany", "USSR", "Britain", "Japan", "China", "Italy", "France", "Sweden", "Israel"],
   },
   ko: {
-    grb: "지상 리얼리스틱", arb: "공중 리얼리스틱", modeLabel: "전투 모드",
+    grb: "지상 리얼리스틱", arb: "공중 리얼리스틱", modeLabel: "전투 모드", notApplicable: "해당 없음",
     arbNotice: "선택한 항공기의 공중전 BR 기준 ±1.0 범위를 비교합니다. 모든 국가의 항공기를 표시합니다.",
     arbEmpty: "이 범위에 표시할 항공기가 없습니다. ‘범위만 보기’를 해제하면 전체 항공기를 볼 수 있습니다.",
     intro: "마우스를 올려 비교하고, 장비를 클릭해 ±1.0 BR 범위를 고정하세요. 다른 장비를 클릭하면 기준이 바뀌고, 빈 공간을 클릭하면 고정이 풀립니다.",
@@ -180,7 +180,12 @@ function positionPopup() {
 function updatePopup() {
   if (!state.selected) return;
   $("#brc-detail-name").textContent = state.selected.name;
-  $("#brc-detail-meta").textContent = `${countryName(state.selected.countryCode)} · ${t(state.selected.category)} · ${ratingLabel(state.selected)}`;
+  const unit = state.selected;
+  const groundBr = unit.category === "air" ? unit.brGround : unit.catalogBr;
+  const airBr = unit.category === "air" ? number(unit.catalogBr) : t("notApplicable");
+  const meta = $("#brc-detail-meta");
+  meta.textContent = `${countryName(unit.countryCode)} · ${t(unit.category)}`;
+  meta.append(element("span", "brc-detail-ratings", `GRB BR ${number(groundBr)} · ARB BR ${airBr}`));
   const image = $("#brc-detail-image");
   const folder = { tank: "Tank", air: "Air", heli: "Heli" }[state.selected.category];
   $("#brc-detail-media").hidden = false;

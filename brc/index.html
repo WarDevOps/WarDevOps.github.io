@@ -15,7 +15,7 @@
   <meta name="twitter:card" content="summary">
   <title>Battle Range Calculator | WarDevOps</title>
   <link rel="stylesheet" href="/assets/css/site.css?v=tier-restored-20260922">
-  <link rel="stylesheet" href="/assets/css/brc.css?v=detail-caption-20261024">
+  <link rel="stylesheet" href="/assets/css/brc.css?v=dual-br-20261024">
 </head>
 <body>
   <header class="site-header">
@@ -58,6 +58,9 @@
           <button id="brc-reset" class="brc-secondary" type="button" data-brc-text="clear" disabled>Clear selection</button>
         </div>
       </div>
+      <div id="brc-scroll" class="brc-scroll" tabindex="0" role="region" aria-label="Vehicles by nation and BR" aria-busy="true">
+        <table class="brc-table" id="brc-table"><caption class="brc-sr-only" data-brc-text="tableLabel">Vehicles by nation and battle rating</caption><thead></thead><tbody></tbody></table>
+      </div>
       <div class="brc-comparison">
         <div><span class="brc-kicker" data-brc-text="comparing">COMPARING</span><p id="brc-active"></p><p id="brc-pinned" class="brc-muted"></p></div>
         <div class="brc-legend" aria-label="BR difference">
@@ -70,9 +73,6 @@
       <div class="brc-table-meta"><span id="brc-count"></span><span data-brc-text="scrollHint">Scroll to explore · Nation headers and BR stay visible</span></div>
       <div id="brc-status" role="status" aria-live="polite">Loading vehicles…</div>
       <button id="brc-retry" class="brc-secondary" type="button" data-brc-text="retry" hidden>Try again</button>
-      <div id="brc-scroll" class="brc-scroll" tabindex="0" role="region" aria-label="Vehicles by nation and BR" aria-busy="true">
-        <table class="brc-table" id="brc-table"><caption class="brc-sr-only" data-brc-text="tableLabel">Vehicles by nation and battle rating</caption><thead></thead><tbody></tbody></table>
-      </div>
       <p class="brc-data-note" id="brc-data-note"></p>
       <noscript><p>JavaScript is required to use BRC. BRC를 사용하려면 JavaScript를 활성화해주세요.</p></noscript>
     </section>
@@ -98,7 +98,7 @@
     <p data-page-i18n="copyrightNotice">Unofficial fan project. Not affiliated with or endorsed by Gaijin Entertainment. War Thunder and related game materials belong to their respective rights holders.</p>
   </footer>
   <script type="module" src="/assets/js/tier-page.js?v=20260828"></script>
-  <script type="module" src="/assets/js/brc.js?v=detail-caption-20261024"></script>
+  <script type="module" src="/assets/js/brc.js?v=dual-br-20261024"></script>
   <script type="module" src="/assets/js/consent-controls.js?v=20260828"></script>
 </body>
 </html>
