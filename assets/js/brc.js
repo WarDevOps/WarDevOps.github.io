@@ -2,15 +2,15 @@ import { CATEGORIES, COUNTRIES, readCatalog, visibleUnits, searchUnits, rangeCol
 
 const copy = {
   en: {
-    grb: "GROUND REALISTIC", arb: "AIR REALISTIC", modeLabel: "Battle mode", notApplicable: "Not applicable",
+    grb: "GROUND REALISTIC", arb: "AIR REALISTIC", modeLabel: "Battle mode",
     arbNotice: "Compare aircraft within ±1.0 of the selected aircraft’s Air RB. All nations are included.",
     arbEmpty: "No aircraft in this range. Turn off Range only to see all aircraft.",
-    intro: "Hover to compare. Click a vehicle to lock its ±1.0 BR range, another vehicle to switch, or empty space to unlock.",
+    intro: "Click a vehicle to lock its ±1.0 BR range, another vehicle to switch, or empty space to unlock.",
     searchLabel: "Find a vehicle", categories: "Vehicle types", tank: "Ground", air: "Aircraft", heli: "Helicopters",
     rangeOnly: "Range only", clear: "Clear selection", comparing: "COMPARING", difference: "BR difference",
     notice: "A ±1.0 BR comparison, not a complete list of possible opponents. Matchmaking uses your lineup’s highest BR; lower-BR vehicles may also appear. All nations are included.",
     scrollHint: "Scroll to explore · Nation headers and BR stay visible", details: "VEHICLE DETAILS",
-    placeholder: "Vehicle notes are coming soon.", closeHint: "Closing this panel keeps your selected range.",
+    placeholder: "", closeHint: "Closing this panel keeps your selected range.",
     close: "Close details", tableLabel: "Vehicles by nation and battle rating", retry: "Try again",
     idle: "Hover over or select a vehicle", idleHint: "Select a vehicle to enable Range only.",
     pinned: "Pinned", preview: "Preview", noResults: "No matching vehicles.", results: "results", more: "Showing the first 60. Refine your search for more specific results.",
@@ -21,15 +21,15 @@ const copy = {
     countries: ["USA", "Germany", "USSR", "Britain", "Japan", "China", "Italy", "France", "Sweden", "Israel"],
   },
   ko: {
-    grb: "지상 리얼리스틱", arb: "공중 리얼리스틱", modeLabel: "전투 모드", notApplicable: "해당 없음",
+    grb: "지상 리얼리스틱", arb: "공중 리얼리스틱", modeLabel: "전투 모드",
     arbNotice: "선택한 항공기의 공중전 BR 기준 ±1.0 범위를 비교합니다. 모든 국가의 항공기를 표시합니다.",
     arbEmpty: "이 범위에 표시할 항공기가 없습니다. ‘범위만 보기’를 해제하면 전체 항공기를 볼 수 있습니다.",
-    intro: "마우스를 올려 비교하고, 장비를 클릭해 ±1.0 BR 범위를 고정하세요. 다른 장비를 클릭하면 기준이 바뀌고, 빈 공간을 클릭하면 고정이 풀립니다.",
+    intro: "장비를 클릭해 ±1.0 BR 범위를 고정하세요. 다른 장비를 클릭하면 기준이 바뀌고, 빈 공간을 클릭하면 고정이 풀립니다.",
     searchLabel: "장비 찾기", categories: "장비 종류", tank: "지상", air: "항공", heli: "헬기",
     rangeOnly: "범위만 보기", clear: "선택 해제", comparing: "비교 기준", difference: "BR 차이",
     notice: "선택 장비의 ±1.0 BR 비교표입니다. 실제 매칭은 편성의 최고 BR을 기준으로 하며 더 낮은 BR 장비도 등장할 수 있습니다. 아군·적군을 구분하지 않고 모든 국가를 표시합니다.",
     scrollHint: "스크롤로 탐색 · 국가 헤더와 BR 열 고정", details: "장비 설명",
-    placeholder: "장비 설명을 준비 중입니다.", closeHint: "설명을 닫아도 선택한 범위는 유지됩니다.",
+    placeholder: "", closeHint: "설명을 닫아도 선택한 범위는 유지됩니다.",
     close: "설명 닫기", tableLabel: "국가 및 BR별 장비", retry: "다시 시도",
     idle: "장비에 마우스를 올리거나 선택하세요", idleHint: "장비를 선택하면 ‘범위만 보기’를 사용할 수 있습니다.",
     pinned: "고정", preview: "미리보기", noResults: "일치하는 장비가 없습니다.", results: "개 검색 결과", more: "앞의 60개 결과입니다. 검색어를 더 입력하면 결과를 좁힐 수 있습니다.",
@@ -182,10 +182,10 @@ function updatePopup() {
   $("#brc-detail-name").textContent = state.selected.name;
   const unit = state.selected;
   const groundBr = unit.category === "air" ? unit.brGround : unit.catalogBr;
-  const airBr = unit.category === "air" ? number(unit.catalogBr) : t("notApplicable");
+  const airRating = unit.category === "air" ? ` · ARB BR ${number(unit.catalogBr)}` : "";
   const meta = $("#brc-detail-meta");
   meta.textContent = `${countryName(unit.countryCode)} · ${t(unit.category)}`;
-  meta.append(element("span", "brc-detail-ratings", `GRB BR ${number(groundBr)} · ARB BR ${airBr}`));
+  meta.append(element("span", "brc-detail-ratings", `GRB BR ${number(groundBr)}${airRating}`));
   const image = $("#brc-detail-image");
   const folder = { tank: "Tank", air: "Air", heli: "Heli" }[state.selected.category];
   $("#brc-detail-media").hidden = false;
