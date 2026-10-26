@@ -3,6 +3,7 @@
   { "slug": "surroundings-of-volokolamsk", "color": "black" },
   { "slug": "arctic-polar-base", "color": "black" },
   "ash-river",
+  { "slug": "battle-of-hurtgen-forest", "color": "white", "variations": ["domination-2", "conquest-3"] },
   "eastern-europe",
   "fields-of-poland",
   { "slug": "frozen-pass", "color": "black" },

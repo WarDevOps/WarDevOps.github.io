@@ -2145,7 +2145,9 @@ let vectorEditor = null;
     modalToggleEditor.after(wipToggle);
     function isMapWorkInProgress() {
       const slug = state.selected?.slug;
-      return typeof wipOverrides[slug] === "boolean" ? wipOverrides[slug] : workInProgressMaps.has(slug);
+      if (typeof wipOverrides[slug] === "boolean") return wipOverrides[slug];
+      const config = workInProgressMaps.get(slug);
+      return Boolean(config && (!config.variations || config.variations.includes(state.selected?.variationId)));
     }
     wipToggle.addEventListener("click", () => {
       if (!dialog.open || !state.editMode || !state.selected) return;
@@ -2159,10 +2161,11 @@ let vectorEditor = null;
       .then(entries => {
         if (!Array.isArray(entries) || !entries.every(entry => typeof entry === "string" || (
           entry && typeof entry.slug === "string" && ["white", "black"].includes(entry.color)
+          && (entry.variations === undefined || (Array.isArray(entry.variations) && entry.variations.every(id => typeof id === "string")))
         ))) throw new Error("Invalid WIP configuration");
         entries.forEach(entry => workInProgressMaps.set(
           typeof entry === "string" ? entry : entry.slug,
-          typeof entry === "string" ? "white" : entry.color
+          typeof entry === "string" ? { color: "white" } : entry
         ));
         renderMarkers();
       })
@@ -2181,7 +2184,7 @@ let vectorEditor = null;
         stage.append(layer);
       }
       layer.hidden = !visible;
-      layer.firstElementChild.style.filter = workInProgressMaps.get(state.selected?.slug) === "black" ? "brightness(0)" : "none";
+      layer.firstElementChild.style.filter = workInProgressMaps.get(state.selected?.slug)?.color === "black" ? "brightness(0)" : "none";
       layer.firstElementChild.alt = state.language === "ko" ? "공략 준비 중" : "Tactical guide under construction";
       if (visible) syncMarkerLayer(layer, image, stage);
     }
