@@ -1,4 +1,4 @@
-.brc-main { width: min(1720px, calc(100% - 40px)); }
+.brc-main { width: min(1720px, calc(100% - 40px)); padding-bottom: 72px; }
 .brc-intro { padding: 32px 0 22px; }
 .brc-intro h1 { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 .25em; margin: 0; font-size: clamp(1.7rem, 3vw, 2.8rem); letter-spacing: -.045em; line-height: 1.15; }
 .brc-intro h1 em { color: var(--accent); font-style: normal; }
