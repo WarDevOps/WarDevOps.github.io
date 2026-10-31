@@ -13,8 +13,8 @@ const labels = {
     note: "동시 장착 조합이 아닌 종류 목록입니다. BR은 현재 모드의 항공기 BR을 임시 표시합니다.",
     previous: "이전", next: "다음", retry: "다시 시도", page: "무장 페이지",
     aam: "공대공 미사일", agm: "공대지 미사일", arm: "대레이더 미사일",
-    "guided-bomb": "유도폭탄", "guided-rocket": "유도로켓", Laser: "레이저",
-    "Manual (MCLOS)": "MCLOS", "Semi-Automatic (SACLOS)": "SACLOS", "Beam riding": "빔 유도",
+    "guided-bomb": "유도폭탄", "guided-rocket": "유도로켓", Laser: "Laser",
+    "Manual (MCLOS)": "MCLOS", "Semi-Automatic (SACLOS)": "SACLOS", "Beam riding": "Beam riding",
   },
 };
 const kinds = ["aam", "agm", "guided-bomb", "guided-rocket", "arm"];
