@@ -12,6 +12,7 @@
 *.py
 !/scripts/export-replay-layout.py
 !/scripts/sync-war-thunder-units.py
+!/scripts/sync-aircraft-armaments.py
 !/scripts/convert-png-assets.py
 *.psd
 

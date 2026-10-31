@@ -1,4 +1,5 @@
 import { CATEGORIES, COUNTRIES, readCatalog, visibleUnits, searchUnits, rangeColor, toTenths } from "./brc-model.js?v=battle-tabs-20261024";
+import { createArmamentPanel } from "./brc-armaments.js?v=20261101";
 
 const copy = {
   en: {
@@ -42,6 +43,7 @@ const copy = {
 };
 const $ = selector => document.querySelector(selector);
 const table = $("#brc-table"), scroller = $("#brc-scroll"), search = $("#brc-search"), results = $("#brc-results"), popup = $("#brc-details");
+const armaments = createArmamentPanel({ panel: $("#brc-armaments"), popup, onLayout: positionPopup });
 const state = { language: document.documentElement.lang === "ko" ? "ko" : "en", mode: "grb", units: [], byId: new Map(), categories: new Set(CATEGORIES), selected: null, hovered: null, focused: null, rangeOnly: false, catalog: null, loading: true, failed: false };
 const modeViews = Object.fromEntries(["grb", "arb"].map(mode => [mode, { selectedId: null, rangeOnly: false, query: "", top: 0, left: 0 }]));
 let buttons = new Map(), rows = [], popupAnchor = null;
@@ -179,7 +181,10 @@ function positionPopup() {
 
 function updatePopup() {
   if (!state.selected) return;
-  $("#brc-detail-name").textContent = state.selected.name;
+  const wikiLink = element("a", "", state.selected.name);
+  wikiLink.href = `https://wiki.warthunder.com/unit/${encodeURIComponent(state.selected.wikiId)}`;
+  wikiLink.target = "_blank"; wikiLink.rel = "noopener noreferrer";
+  $("#brc-detail-name").replaceChildren(wikiLink);
   const unit = state.selected;
   const groundBr = unit.category === "air" ? unit.brGround : unit.catalogBr;
   const airRating = unit.category === "air" ? ` · ARB BR ${number(unit.catalogBr)}` : "";
@@ -194,6 +199,7 @@ function updatePopup() {
   image.alt = state.selected.name;
   image.hidden = false;
   image.src = `/Tier/${folder}/${encodeURIComponent(state.selected.file)}`;
+  armaments.show(state.selected, state.mode, state.language);
   positionPopup();
 }
 
@@ -369,10 +375,11 @@ results.addEventListener("keydown", event => {
   }
 });
 $("#brc-detail-close").addEventListener("click", () => closePopup(true));
-$("#brc-detail-image").addEventListener("load", positionPopup);
+$("#brc-detail-image").addEventListener("load", () => { armaments.layout(); positionPopup(); });
 $("#brc-detail-image").addEventListener("error", event => {
   event.target.hidden = true;
   $("#brc-detail-media").hidden = true;
+  armaments.layout();
   positionPopup();
 });
 $("#brc-retry").addEventListener("click", loadCatalog);
@@ -396,6 +403,7 @@ document.addEventListener("click", event => {
 }, true);
 scroller.addEventListener("scroll", positionPopup, { passive: true });
 window.addEventListener("scroll", positionPopup, { passive: true });
-window.addEventListener("resize", positionPopup);
+window.addEventListener("resize", () => { armaments.layout(); positionPopup(); });
+window.visualViewport?.addEventListener("resize", () => { armaments.layout(); positionPopup(); });
 window.addEventListener("maptactic:languagechange", event => { state.language = event.detail.language === "ko" ? "ko" : "en"; applyLanguage(); });
 await loadCatalog();
