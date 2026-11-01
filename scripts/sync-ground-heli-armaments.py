@@ -122,6 +122,17 @@ def collect(unit, category, cache):
                     raise
                 time.sleep(2 ** attempt)
     doc = html.fromstring(content.decode('utf-8'))
+    if category == 'tank' and wiki_id.endswith('_fcs'):
+        launcher_id = wiki_id.removesuffix('_fcs') + '_launcher'
+        links = doc.xpath(f'//a[@href="/unit/{launcher_id}"]')
+        if not links or not any(re.search(r'\(TEL(?:AR)?\)', link.text_content()) for link in links):
+            raise ValueError('Missing matching TEL/TELAR link on TADS Wiki page')
+        weapons, unresolved = collect({'wikiId': launcher_id}, 'tank', cache)
+        missiles = {key: weapon
+            for key, weapon in weapons.items() if weapon.get('missileGuidance') or weapon.get('ammoType') == 'SAM'}
+        if not missiles and not unresolved:
+            raise ValueError('Matching launcher has no confirmed missile ammunition')
+        return missiles, unresolved
     return parse_ground(doc, wiki_id) if category == 'tank' else air.parse_aircraft(doc, wiki_id)
 
 
@@ -155,6 +166,9 @@ def main():
                         raise ValueError(f'Conflicting weapon {key}')
                     data['weapons'].setdefault(key, weapon)
                 entry = {'status': 'partial' if unresolved else 'verified', 'weapons': sorted(weapons)}
+                if category == 'tank' and wiki_id.endswith('_fcs'):
+                    entry['launcherWikiId'] = wiki_id.removesuffix('_fcs') + '_launcher'
+                    entry['armamentSource'] = f'{air.WIKI}/unit/{entry["launcherWikiId"]}'
                 if unresolved:
                     report['unresolved'][wiki_id] = unresolved
             except Exception as error:
