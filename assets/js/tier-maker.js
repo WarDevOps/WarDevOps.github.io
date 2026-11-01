@@ -779,22 +779,6 @@ if (tierRoot) {
 
   function updateLanguage() {
     const currentCopy = copy();
-    const ratingNote = tierRoot.querySelector("#tier-rating-note");
-    if (ratingNote) {
-      const planned = tierCatalog.battleRatingUpdate?.status === "planned";
-      ratingNote.hidden = !planned;
-      if (planned) {
-        const korean = document.documentElement.lang === "ko";
-        ratingNote.textContent = korean
-          ? "2026년 10월 예정 BR 변경을 선반영했습니다. 항공기는 ARB, 지상·헬기는 GRB 기준입니다. "
-          : "October 2026 planned BR changes applied in advance. Aircraft use ARB; ground vehicles and helicopters use GRB. ";
-        const source = document.createElement("a");
-        source.href = tierCatalog.battleRatingUpdate.source;
-        source.target = "_blank"; source.rel = "noopener noreferrer";
-        source.textContent = korean ? "변경표 보기" : "View changes";
-        ratingNote.append(source);
-      }
-    }
     document.querySelectorAll("[data-tier-text]").forEach(element => {
       element.textContent = currentCopy[element.dataset.tierText];
     });

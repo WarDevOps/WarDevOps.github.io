@@ -1,7 +1,7 @@
 import { calculateWeaponBr } from "./brc-ratings.js?v=highest-penalty-20261101";
 const labels = {
   en: {
-    title: "GUIDED WEAPONS", loading: "Loading weapons…", unknown: "Weapon information unverified.",
+    title: "GUIDED WEAPONS", ammunition: "MAIN-GUN AMMUNITION", ammoEmpty: "No main-gun ammunition to display.", loading: "Loading weapons…", unknown: "Weapon information unverified.",
     partial: "Some weapon information is unverified.", empty: "No guided weapons to display in this mode.",
     note: "Each weapon shows that alone. Only the highest selected weapon penalty applies, capped at the aircraft’s mode maximum; quantity is ignored. Availability does not guarantee a valid loadout.",
     previous: "Previous", next: "Next", retry: "Retry", page: "Weapon page",
@@ -11,7 +11,7 @@ const labels = {
     "guided-bomb": "Guided bomb", "guided-rocket": "Guided rocket", Laser: "Laser",
   },
   ko: {
-    title: "유도무기", loading: "무장 불러오는 중…", unknown: "무장 정보 미확인",
+    title: "유도무기", ammunition: "주포 탄약", ammoEmpty: "표시할 주포 탄약 없음", loading: "무장 불러오는 중…", unknown: "무장 정보 미확인",
     partial: "일부 무장 정보 미확인", empty: "표시할 유도무기 없음",
     note: "각 무장은 단독 장착 기준입니다. 선택한 무장 중 가장 높은 페널티 하나만 적용하며, 항공기의 모드별 최대 BR을 넘지 않습니다. 수량은 무관하며 실제 동시 장착 가능 여부는 확인하지 않습니다.",
     previous: "이전", next: "다음", retry: "다시 시도", page: "무장 페이지",
@@ -22,11 +22,11 @@ const labels = {
     "Manual (MCLOS)": "MCLOS", "Semi-Automatic (SACLOS)": "SACLOS", "Beam riding": "Beam riding",
   },
 };
-const kinds = ["aam", "agm", "guided-bomb", "guided-rocket", "arm"];
+const kinds = ["aam", "agm", "guided-bomb", "guided-rocket", "arm", "ammunition"];
 const modes = { arb: new Set(["aam"]), grb: new Set(kinds.filter(kind => kind !== "aam")) };
 
-export function weaponsForAircraft(data, wikiId, mode, rule = null) {
-  const aircraft = data?.aircraft?.[wikiId];
+export function weaponsForAircraft(data, wikiId, mode, rule = null, category = "air") {
+  const aircraft = data?.[category === "tank" ? "ground" : category === "heli" ? "helicopters" : "aircraft"]?.[wikiId];
   if (!aircraft || !["verified", "partial"].includes(aircraft.status) || !Array.isArray(aircraft.weapons)) {
     return { status: "unverified", weapons: [] };
   }
@@ -37,7 +37,9 @@ export function weaponsForAircraft(data, wikiId, mode, rule = null) {
         || typeof weapon.guidance !== "string" || !weapon.guidance) {
       status = "partial"; return [];
     }
-    return modes[mode]?.has(weapon.type) || rule?.penalties[id] > 0 ? [{ ...weapon, id }] : [];
+    const allowed = category === "tank" ? weapon.type === "ammunition"
+      : category === "heli" ? weapon.type !== "ammunition" : weapon.type !== "ammunition" && (modes[mode]?.has(weapon.type) || rule?.penalties[id] > 0);
+    return allowed ? [{ ...weapon, id }] : [];
   }).sort((a, b) => (rule ? calculateWeaponBr({ variableBr: { [mode]: rule } }, mode, [b.id])
     - calculateWeaponBr({ variableBr: { [mode]: rule } }, mode, [a.id]) : 0)
     || kinds.indexOf(a.type) - kinds.indexOf(b.type)
@@ -75,11 +77,18 @@ export function createArmamentPanel({ panel, popup, onLayout, onRatingChange }) 
     if (loading) return;
     loading = true; failed = false; render();
     try {
-      const response = await fetch(new URL("../data/aircraft-armaments.json?v=new-units-20261101", import.meta.url));
-      if (!response.ok) throw new Error(`Armaments HTTP ${response.status}`);
-      const result = await response.json();
-      if (result.schemaVersion !== 1 || !result.aircraft || !result.weapons) throw new Error("Invalid armament catalog");
-      data = result;
+      const [result, extra] = await Promise.all([
+        "../data/aircraft-armaments.json?v=new-units-20261101",
+        "../data/ground-heli-armaments.json?v=20261101",
+      ].map(async path => {
+        const response = await fetch(new URL(path, import.meta.url));
+        if (!response.ok) throw new Error(`Armaments HTTP ${response.status}`);
+        const value = await response.json();
+        if (value.schemaVersion !== 1 || !value.weapons) throw new Error("Invalid armament catalog");
+        return value;
+      }));
+      if (!result.aircraft || !extra.ground || !extra.helicopters) throw new Error("Missing armament categories");
+      data = { ...extra, aircraft: result.aircraft, weapons: { ...extra.weapons, ...result.weapons } };
     } catch (error) {
       console.warn("BRC armaments unavailable", error); failed = true;
     } finally {
@@ -90,8 +99,10 @@ export function createArmamentPanel({ panel, popup, onLayout, onRatingChange }) 
   function row(weapon, copy) {
     const item = node("li", "brc-armament-row"); item.dataset.weapon = weapon.id;
     const icon = node("img", "brc-armament-icon");
-    icon.src = weapon.icon || `/icon/weapon-${weapon.type}.svg`; icon.width = icon.height = 36;
-    icon.alt = copy[weapon.type]; icon.title = copy[weapon.type];
+    if (weapon.icon) icon.src = weapon.icon;
+    else icon.style.visibility = "hidden";
+    icon.width = icon.height = 36;
+    icon.alt = copy[weapon.type] || weapon.ammoType || ""; icon.title = icon.alt;
     const name = node("span", "brc-armament-name", weapon.name);
     const guidance = node("span", "brc-armament-guidance", weapon.guidance.split("+").map(value => copy[value] || value).join(" + "));
     const br = node("span", "brc-armament-br", `BR ${calculateWeaponBr(current.unit, current.mode, [weapon.id]).toFixed(1)}`);
@@ -113,26 +124,27 @@ export function createArmamentPanel({ panel, popup, onLayout, onRatingChange }) 
   }
 
   function render() {
-    panel.hidden = !current || current.unit.category !== "air" || current.unit.wikiPending === true;
+    panel.hidden = !current || current.unit.wikiPending === true;
     if (panel.hidden || popup.hidden) return;
     const copy = labels[current.language] || labels.en;
-    heading.textContent = `${current.mode.toUpperCase()} · ${copy.title}`;
+    const ground = current.unit.category === "tank";
+    heading.textContent = `${current.mode.toUpperCase()} · ${ground ? copy.ammunition : copy.title}`;
     const rule = current.unit.variableBr?.[current.mode];
     note.textContent = rule ? copy.variableNote : copy.note;
     previous.textContent = copy.previous; next.textContent = copy.next;
     nav.setAttribute("aria-label", copy.page); retry.textContent = copy.retry;
     retry.hidden = !failed;
-    const result = weaponsForAircraft(data, current.unit.wikiId, current.mode, rule);
+    const result = weaponsForAircraft(data, current.unit.wikiId, current.mode, rule, current.unit.category);
     const weapons = result.weapons;
     message.textContent = loading ? copy.loading : result.status === "unverified" ? copy.unknown
-      : result.status === "partial" ? copy.partial : !weapons.length ? copy.empty : "";
+      : result.status === "partial" ? copy.partial : !weapons.length ? ground ? copy.ammoEmpty : copy.empty : "";
     message.hidden = !message.textContent;
     summary.hidden = !rule;
     if (rule) {
       summaryText.textContent = `${copy.base} ${rule.base.toFixed(1)} · ${copy.max} ${rule.max.toFixed(1)} · ${copy.selected} BR ${calculateWeaponBr(current.unit, current.mode, chosen()).toFixed(1)}`;
       reset.textContent = copy.reset; reset.disabled = !chosen().size;
     }
-    list.hidden = !weapons.length; note.hidden = !weapons.length; nav.hidden = !weapons.length;
+    list.hidden = !weapons.length; note.hidden = ground || !weapons.length; nav.hidden = !weapons.length;
     list.replaceChildren(...weapons.map(weapon => row(weapon, copy)));
     if (!weapons.length) return;
     // Measure actual wrapped text at the current width. Paginate to fit the
@@ -175,7 +187,7 @@ export function createArmamentPanel({ panel, popup, onLayout, onRatingChange }) 
       key = nextKey; current = { unit, mode, language };
       popup.querySelector(".brc-detail-image")?.style.removeProperty("height");
       render();
-      if (unit.category === "air" && !unit.wikiPending && !data && !loading && !failed) void load();
+      if (!unit.wikiPending && !data && !loading && !failed) void load();
     },
     layout() {
       popup.querySelector(".brc-detail-image")?.style.removeProperty("height");

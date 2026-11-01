@@ -175,8 +175,10 @@ def parse_aircraft(document, wiki_id):
         icon = choose_icon(previous.get("iconSource"), *button.xpath("ancestor::tr[1]//img/@src"))
         if icon:
             weapon["iconSource"] = icon
-        if previous and any(previous[key] != weapon[key] for key in ("name", "type", "guidance", "source")):
+        if previous and any(previous[key] != weapon[key] for key in ("name", "type", "guidance")):
             raise ValueError(f"Conflicting repeated weapon: {name}")
+        if previous and "/collections/weapon/" in previous["source"]:
+            weapon["source"] = previous["source"]
         weapons[weapon_id] = weapon
     return weapons, list({json.dumps(item, sort_keys=True): item for item in unresolved}.values())
 

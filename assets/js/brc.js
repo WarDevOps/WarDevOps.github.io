@@ -1,5 +1,5 @@
 import { CATEGORIES, COUNTRIES, readCatalog, visibleUnits, searchUnits, rangeColor, toTenths } from "./brc-model.js?v=highest-penalty-20261101";
-import { createArmamentPanel } from "./brc-armaments.js?v=weapon-br-sort-20261101";
+import { createArmamentPanel } from "./brc-armaments.js?v=ground-heli-20261101";
 import { validateVariableRatings } from "./brc-ratings.js?v=highest-penalty-20261101";
 
 const copy = {
@@ -18,9 +18,6 @@ const copy = {
     pinned: "Pinned", preview: "Preview", noResults: "No matching vehicles.", results: "results", more: "Showing the first 60. Refine your search for more specific results.",
     loading: "Loading vehicles…", error: "Could not load the vehicle catalog. Please try again.", empty: "No vehicles to display. Enable a vehicle type or turn off Range only.",
     vehicles: "vehicles", selected: "Selected", hiddenSelection: "Selected vehicle is hidden by the type filters.",
-    shared: "Current Wiki ratings from the shared Tier List catalog. GRB uses Ground RB; ARB uses Air RB.", updated: "BR checked", source: "Source: War Thunder Wiki",
-    planned: "October 2026 planned BR changes applied in advance. Other vehicles retain Wiki ratings. GRB uses Ground RB; ARB uses Air RB.", plannedSource: "Source: planned BR changes", applied: "Applied",
-    variable: "Aircraft covered by the variable-BR test use the new base BR in this table. Selecting weapons changes the comparison BR.", variableSource: "Source: variable BR test",
     countries: ["USA", "Germany", "USSR", "Britain", "Japan", "China", "Italy", "France", "Sweden", "Israel"],
   },
   ko: {
@@ -38,9 +35,6 @@ const copy = {
     pinned: "고정", preview: "미리보기", noResults: "일치하는 장비가 없습니다.", results: "개 검색 결과", more: "앞의 60개 결과입니다. 검색어를 더 입력하면 결과를 좁힐 수 있습니다.",
     loading: "장비를 불러오는 중…", error: "장비 목록을 불러오지 못했습니다. 다시 시도해주세요.", empty: "표시할 장비가 없습니다. 장비 종류를 켜거나 ‘범위만 보기’를 해제하세요.",
     vehicles: "대", selected: "선택", hiddenSelection: "선택한 장비가 종류 필터로 숨겨져 있습니다.",
-    shared: "티어리스트와 같은 현재 위키 장비 데이터를 공유합니다. GRB는 지상전 BR, ARB는 공중전 BR을 사용합니다.", updated: "BR 확인", source: "출처: War Thunder Wiki",
-    planned: "2026년 10월 예정 BR 변경을 선반영했습니다. 그 외 장비는 위키 값을 유지합니다. GRB는 지상전 BR, ARB는 공중전 BR을 사용합니다.", plannedSource: "출처: 예정 BR 변경표", applied: "반영일",
-    variable: "가변 BR 테스트 대상 항공기는 표에 새 기본 BR을 사용합니다. 무장을 선택하면 비교 기준 BR이 바뀝니다.", variableSource: "출처: 가변 BR 테스트",
     countries: ["미국", "독일", "소련", "영국", "일본", "중국", "이탈리아", "프랑스", "스웨덴", "이스라엘"],
   },
 };
@@ -266,17 +260,6 @@ function applyLanguage() {
   $(".brc-legend").setAttribute("aria-label", t("difference"));
   $("#brc-mode-tabs").setAttribute("aria-label", t("modeLabel"));
   if (state.catalog) {
-    const planned = state.catalog.battleRatingUpdate?.status === "planned";
-    const date = new Date(state.catalog.battleRatingsUpdatedAt || state.catalog.generatedAt);
-    const note = $("#brc-data-note");
-    note.textContent = `${t(planned ? "planned" : "shared")} ${t(planned ? "applied" : "updated")}: ${Number.isNaN(date.valueOf()) ? "—" : date.toLocaleDateString(state.language, { timeZone: "UTC" })} · `;
-    const source = element("a", "", t(planned ? "plannedSource" : "source")); source.href = planned ? state.catalog.battleRatingUpdate.source : "https://wiki.warthunder.com"; source.target = "_blank"; source.rel = "noopener noreferrer"; note.append(source);
-    if (state.variableRatings) {
-      note.append(document.createElement("br"), document.createTextNode(`${t("variable")} · `));
-      const variableSource = element("a", "", t("variableSource"));
-      variableSource.href = state.variableRatings.source; variableSource.target = "_blank"; variableSource.rel = "noopener noreferrer";
-      note.append(variableSource);
-    }
     const wasOpen = !popup.hidden;
     renderTable();
     popupAnchor = buttons.get(state.selected?.id);
