@@ -79,7 +79,7 @@ export function createArmamentPanel({ panel, popup, onLayout, onRatingChange }) 
     try {
       const [result, extra] = await Promise.all([
         "../data/aircraft-armaments.json?v=new-units-20261101",
-        "../data/ground-heli-armaments.json?v=20261101",
+        "../data/ground-heli-armaments.json?v=missile-guidance-20261101",
       ].map(async path => {
         const response = await fetch(new URL(path, import.meta.url));
         if (!response.ok) throw new Error(`Armaments HTTP ${response.status}`);

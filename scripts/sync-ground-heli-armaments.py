@@ -76,6 +76,8 @@ def parse_ground(document, wiki_id):
                     continue
                 popovers = cells[0].xpath('.//*[@data-feature-popover]/@data-feature-popover')
                 details = html.fromstring(popovers[0]) if popovers else cells[0]
+                guidance_nodes = details.xpath(f'.//*[{air.by_class("game-unit_chars-line")}][*[normalize-space()="Guidance"]]/*[{air.by_class("game-unit_chars-value")}]')
+                missile_guidance = air.text(guidance_nodes[0].text_content()) if guidance_nodes else None
                 sources = details.xpath(f'.//*[{air.by_class("game-unit_b-icon_base")}]//img/@src')
                 icon = air.choose_icon(*sources) or air.choose_icon(*cells[0].xpath(
                     f'.//*[{air.by_class("game-unit_b-icon_base")}]//img/@src'))
@@ -83,8 +85,10 @@ def parse_ground(document, wiki_id):
                 # cannons distinct, while duplicate guns/setups share one entry.
                 gun = re.sub(r'^\d+\s*[x×]\s*', '', title).strip()
                 key = 'ammo-' + hashlib.sha256(f'{gun}|{name}|{kind}'.encode()).hexdigest()[:16]
-                weapons[key] = {'name': name, 'type': 'ammunition', 'guidance': kind,
+                weapons[key] = {'name': name, 'type': 'ammunition', 'guidance': missile_guidance or kind,
                     'ammoType': kind, 'gun': gun, 'source': f'{air.WIKI}/unit/{wiki_id}'}
+                if missile_guidance:
+                    weapons[key]['missileGuidance'] = missile_guidance
                 if icon:
                     weapons[key]['iconSource'] = icon
                 else:

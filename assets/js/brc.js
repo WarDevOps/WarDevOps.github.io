@@ -1,5 +1,5 @@
 import { CATEGORIES, COUNTRIES, readCatalog, visibleUnits, searchUnits, rangeColor, toTenths } from "./brc-model.js?v=highest-penalty-20261101";
-import { createArmamentPanel } from "./brc-armaments.js?v=ground-heli-20261101";
+import { createArmamentPanel } from "./brc-armaments.js?v=missile-guidance-20261101";
 import { validateVariableRatings } from "./brc-ratings.js?v=highest-penalty-20261101";
 
 const copy = {
@@ -44,6 +44,28 @@ const armaments = createArmamentPanel({ panel: $("#brc-armaments"), popup, onLay
 const state = { language: document.documentElement.lang === "ko" ? "ko" : "en", mode: "grb", units: [], byId: new Map(), categories: new Set(CATEGORIES), selected: null, hovered: null, focused: null, rangeOnly: false, catalog: null, loading: true, failed: false };
 const modeViews = Object.fromEntries(["grb", "arb"].map(mode => [mode, { selectedId: null, rangeOnly: false, query: "", top: 0, left: 0 }]));
 let buttons = new Map(), rows = [], popupAnchor = null;
+let popupPosition = null, popupDrag = null;
+
+function updatePositionControls() {
+  const korean = state.language === "ko";
+  const pin = $("#brc-detail-pin");
+  pin.textContent = popupPosition ? (korean ? "고정 해제" : "Unpin") : (korean ? "고정" : "Pin");
+  pin.setAttribute("aria-pressed", String(Boolean(popupPosition)));
+  $("#brc-detail-drag").setAttribute("aria-label", korean
+    ? "설명 창 이동: 드래그하거나 방향키를 사용하세요" : "Move details: drag or use arrow keys");
+}
+
+function movePopup(left, top) {
+  popup.classList.add("is-positioned");
+  const rect = popup.getBoundingClientRect();
+  popupPosition = {
+    left: Math.max(12, Math.min(left, innerWidth - rect.width - 12)),
+    top: Math.max(12, Math.min(top, (window.visualViewport?.height || innerHeight) - rect.height - 12)),
+  };
+  popup.style.left = `${popupPosition.left}px`;
+  popup.style.top = `${popupPosition.top}px`;
+  updatePositionControls();
+}
 const t = key => copy[state.language][state.mode === "arb" ? ({ notice: "arbNotice", empty: "arbEmpty" }[key] || key) : key];
 const countryName = code => t("countries")[COUNTRIES.indexOf(code)];
 const number = value => value.toFixed(1);
@@ -175,7 +197,9 @@ function clearSelection({ clearSearch = false } = {}) {
 }
 
 function positionPopup() {
-  if (popup.hidden || matchMedia("(max-width: 700px)").matches) return;
+  if (popup.hidden) return;
+  if (popupPosition) { movePopup(popupPosition.left, popupPosition.top); return; }
+  if (matchMedia("(max-width: 700px)").matches) return;
   const rect = popup.getBoundingClientRect();
   // Range-only can hide the base-BR row after a large weapon penalty.
   const anchor = popupAnchor?.isConnected ? popupAnchor.getBoundingClientRect()
@@ -256,6 +280,7 @@ function renderSearch() {
 function applyLanguage() {
   document.querySelectorAll("[data-brc-text]").forEach(node => { node.textContent = t(node.dataset.brcText); });
   $("#brc-detail-close").setAttribute("aria-label", t("close"));
+  updatePositionControls();
   scroller.setAttribute("aria-label", t("tableLabel"));
   $(".brc-legend").setAttribute("aria-label", t("difference"));
   $("#brc-mode-tabs").setAttribute("aria-label", t("modeLabel"));
@@ -386,6 +411,44 @@ results.addEventListener("keydown", event => {
   }
 });
 $("#brc-detail-close").addEventListener("click", () => closePopup(true));
+$("#brc-detail-pin").addEventListener("click", () => {
+  if (popupPosition) {
+    popupPosition = null;
+    popup.classList.remove("is-positioned");
+    popup.style.removeProperty("left"); popup.style.removeProperty("top");
+    updatePositionControls(); positionPopup();
+  } else {
+    const rect = popup.getBoundingClientRect(); movePopup(rect.left, rect.top);
+  }
+});
+const dragHandle = $("#brc-detail-drag");
+dragHandle.addEventListener("pointerdown", event => {
+  if (event.button !== 0) return;
+  const rect = popup.getBoundingClientRect();
+  popupDrag = { id: event.pointerId, x: event.clientX, y: event.clientY, left: rect.left, top: rect.top };
+  dragHandle.setPointerCapture(event.pointerId);
+});
+dragHandle.addEventListener("pointermove", event => {
+  if (popupDrag?.id !== event.pointerId) return;
+  const dx = event.clientX - popupDrag.x, dy = event.clientY - popupDrag.y;
+  if (!popupPosition && Math.abs(dx) + Math.abs(dy) < 4) return;
+  movePopup(popupDrag.left + dx, popupDrag.top + dy);
+});
+function endPopupDrag(event) {
+  if (popupDrag?.id !== event.pointerId) return;
+  popupDrag = null;
+  if (dragHandle.hasPointerCapture(event.pointerId)) dragHandle.releasePointerCapture(event.pointerId);
+}
+dragHandle.addEventListener("pointerup", endPopupDrag);
+dragHandle.addEventListener("pointercancel", endPopupDrag);
+dragHandle.addEventListener("lostpointercapture", () => { popupDrag = null; });
+dragHandle.addEventListener("keydown", event => {
+  const delta = { ArrowLeft: [-1, 0], ArrowRight: [1, 0], ArrowUp: [0, -1], ArrowDown: [0, 1] }[event.key];
+  if (!delta) return;
+  event.preventDefault();
+  const rect = popup.getBoundingClientRect(), step = event.shiftKey ? 40 : 10;
+  movePopup(rect.left + delta[0] * step, rect.top + delta[1] * step);
+});
 $("#brc-detail-image").addEventListener("load", () => { armaments.layout(); positionPopup(); });
 $("#brc-detail-image").addEventListener("error", event => {
   event.target.hidden = true;
