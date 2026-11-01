@@ -1,5 +1,6 @@
-import { CATEGORIES, COUNTRIES, readCatalog, visibleUnits, searchUnits, rangeColor, toTenths } from "./brc-model.js?v=battle-tabs-20261024";
-import { createArmamentPanel } from "./brc-armaments.js?v=20261101";
+import { CATEGORIES, COUNTRIES, readCatalog, visibleUnits, searchUnits, rangeColor, toTenths } from "./brc-model.js?v=highest-penalty-20261101";
+import { createArmamentPanel } from "./brc-armaments.js?v=new-units-20261101";
+import { validateVariableRatings } from "./brc-ratings.js?v=highest-penalty-20261101";
 
 const copy = {
   en: {
@@ -19,6 +20,7 @@ const copy = {
     vehicles: "vehicles", selected: "Selected", hiddenSelection: "Selected vehicle is hidden by the type filters.",
     shared: "Current Wiki ratings from the shared Tier List catalog. GRB uses Ground RB; ARB uses Air RB.", updated: "BR checked", source: "Source: War Thunder Wiki",
     planned: "October 2026 planned BR changes applied in advance. Other vehicles retain Wiki ratings. GRB uses Ground RB; ARB uses Air RB.", plannedSource: "Source: planned BR changes", applied: "Applied",
+    variable: "Aircraft covered by the variable-BR test use the new base BR in this table. Selecting weapons changes the comparison BR.", variableSource: "Source: variable BR test",
     countries: ["USA", "Germany", "USSR", "Britain", "Japan", "China", "Italy", "France", "Sweden", "Israel"],
   },
   ko: {
@@ -38,12 +40,13 @@ const copy = {
     vehicles: "대", selected: "선택", hiddenSelection: "선택한 장비가 종류 필터로 숨겨져 있습니다.",
     shared: "티어리스트와 같은 현재 위키 장비 데이터를 공유합니다. GRB는 지상전 BR, ARB는 공중전 BR을 사용합니다.", updated: "BR 확인", source: "출처: War Thunder Wiki",
     planned: "2026년 10월 예정 BR 변경을 선반영했습니다. 그 외 장비는 위키 값을 유지합니다. GRB는 지상전 BR, ARB는 공중전 BR을 사용합니다.", plannedSource: "출처: 예정 BR 변경표", applied: "반영일",
+    variable: "가변 BR 테스트 대상 항공기는 표에 새 기본 BR을 사용합니다. 무장을 선택하면 비교 기준 BR이 바뀝니다.", variableSource: "출처: 가변 BR 테스트",
     countries: ["미국", "독일", "소련", "영국", "일본", "중국", "이탈리아", "프랑스", "스웨덴", "이스라엘"],
   },
 };
 const $ = selector => document.querySelector(selector);
 const table = $("#brc-table"), scroller = $("#brc-scroll"), search = $("#brc-search"), results = $("#brc-results"), popup = $("#brc-details");
-const armaments = createArmamentPanel({ panel: $("#brc-armaments"), popup, onLayout: positionPopup });
+const armaments = createArmamentPanel({ panel: $("#brc-armaments"), popup, onLayout: positionPopup, onRatingChange: updateWeaponComparison });
 const state = { language: document.documentElement.lang === "ko" ? "ko" : "en", mode: "grb", units: [], byId: new Map(), categories: new Set(CATEGORIES), selected: null, hovered: null, focused: null, rangeOnly: false, catalog: null, loading: true, failed: false };
 const modeViews = Object.fromEntries(["grb", "arb"].map(mode => [mode, { selectedId: null, rangeOnly: false, query: "", top: 0, left: 0 }]));
 let buttons = new Map(), rows = [], popupAnchor = null;
@@ -51,7 +54,16 @@ const t = key => copy[state.language][state.mode === "arb" ? ({ notice: "arbNoti
 const countryName = code => t("countries")[COUNTRIES.indexOf(code)];
 const number = value => value.toFixed(1);
 const ratingLabel = unit => `${state.mode.toUpperCase()} BR ${number(unit.br)}`;
-const active = () => state.selected || state.hovered || state.focused;
+const comparisonSelection = () => state.selected ? { ...state.selected, br: armaments.ratingFor(state.selected, state.mode) } : null;
+const active = () => comparisonSelection() || state.hovered || state.focused;
+
+function updateWeaponComparison(id, mode) {
+  if (state.selected?.id !== id || state.mode !== mode) return;
+  if (state.rangeOnly) { renderTable(); popupAnchor = buttons.get(id); }
+  else paintComparison();
+  $("#brc-status").textContent = `${t("selected")}: ${state.selected.name} · ${ratingLabel(comparisonSelection())}`;
+  positionPopup();
+}
 
 function element(tag, className, text) {
   const node = document.createElement(tag);
@@ -63,7 +75,7 @@ function element(tag, className, text) {
 function renderTable() {
   state.hovered = null;
   state.focused = null;
-  const units = visibleUnits(state.units, state.mode === "arb" ? new Set(["air"]) : state.categories, state.selected, state.rangeOnly);
+  const units = visibleUnits(state.units, state.mode === "arb" ? new Set(["air"]) : state.categories, comparisonSelection(), state.rangeOnly);
   const head = element("tr");
   const brHead = element("th", "", "BR"); brHead.scope = "col"; head.append(brHead);
   for (const code of COUNTRIES) {
@@ -141,7 +153,7 @@ function paintComparison() {
     ? `${preview ? t("preview") : t("pinned")} · ${reference.name} · ${ratingLabel(reference)} → ${number(Math.max(1, reference.br - 1))}–${number(reference.br + 1)}`
     : t("idle");
   $("#brc-pinned").textContent = state.selected
-    ? `${t("pinned")}: ${state.selected.name} · ${countryName(state.selected.countryCode)} · ${ratingLabel(state.selected)}${state.mode === "grb" && !state.categories.has(state.selected.category) ? ` · ${t("hiddenSelection")}` : ""}`
+    ? `${t("pinned")}: ${state.selected.name} · ${countryName(state.selected.countryCode)} · ${ratingLabel(comparisonSelection())}${state.mode === "grb" && !state.categories.has(state.selected.category) ? ` · ${t("hiddenSelection")}` : ""}`
     : t("idleHint");
   $("#brc-range-only").disabled = !state.selected;
   $("#brc-reset").disabled = !state.selected;
@@ -169,9 +181,11 @@ function clearSelection({ clearSearch = false } = {}) {
 }
 
 function positionPopup() {
-  if (popup.hidden || !popupAnchor?.isConnected || matchMedia("(max-width: 700px)").matches) return;
-  const anchor = popupAnchor.getBoundingClientRect();
+  if (popup.hidden || matchMedia("(max-width: 700px)").matches) return;
   const rect = popup.getBoundingClientRect();
+  // Range-only can hide the base-BR row after a large weapon penalty.
+  const anchor = popupAnchor?.isConnected ? popupAnchor.getBoundingClientRect()
+    : { left: innerWidth - rect.width - 12, top: innerHeight / 2, bottom: innerHeight / 2 };
   const left = Math.min(innerWidth - rect.width - 12, Math.max(12, anchor.left));
   const below = anchor.bottom + 8;
   const preferredTop = below + rect.height <= innerHeight - 12 ? below : anchor.top - rect.height - 8;
@@ -181,24 +195,27 @@ function positionPopup() {
 
 function updatePopup() {
   if (!state.selected) return;
-  const wikiLink = element("a", "", state.selected.name);
-  wikiLink.href = `https://wiki.warthunder.com/unit/${encodeURIComponent(state.selected.wikiId)}`;
-  wikiLink.target = "_blank"; wikiLink.rel = "noopener noreferrer";
+  const wikiLink = element(state.selected.wikiPending ? "span" : "a", "", state.selected.name);
+  if (!state.selected.wikiPending) {
+    wikiLink.href = `https://wiki.warthunder.com/unit/${encodeURIComponent(state.selected.wikiId)}`;
+    wikiLink.target = "_blank"; wikiLink.rel = "noopener noreferrer";
+  }
   $("#brc-detail-name").replaceChildren(wikiLink);
   const unit = state.selected;
-  const groundBr = unit.category === "air" ? unit.brGround : unit.catalogBr;
-  const airRating = unit.category === "air" ? ` · ARB BR ${number(unit.catalogBr)}` : "";
+  const groundBr = unit.groundBr;
+  const airRating = unit.category === "air" ? ` · ARB BR ${number(unit.airBr)}` : "";
   const meta = $("#brc-detail-meta");
   meta.textContent = `${countryName(unit.countryCode)} · ${t(unit.category)}`;
   meta.append(element("span", "brc-detail-ratings", `GRB BR ${number(groundBr)}${airRating}`));
   const image = $("#brc-detail-image");
   const folder = { tank: "Tank", air: "Air", heli: "Heli" }[state.selected.category];
-  $("#brc-detail-media").hidden = false;
+  $("#brc-detail-media").hidden = unit.imageAvailable === false;
   $("#brc-detail-flag").src = `/icon/flag-${state.selected.countryCode.toLowerCase()}.svg`;
   $("#brc-detail-image-name").textContent = state.selected.name;
   image.alt = state.selected.name;
-  image.hidden = false;
-  image.src = `/Tier/${folder}/${encodeURIComponent(state.selected.file)}`;
+  image.hidden = unit.imageAvailable === false;
+  if (unit.imageAvailable === false) image.removeAttribute("src");
+  else image.src = `/Tier/${folder}/${encodeURIComponent(state.selected.file)}`;
   armaments.show(state.selected, state.mode, state.language);
   positionPopup();
 }
@@ -223,7 +240,7 @@ function selectUnit(unit, fromSearch = false) {
     popupAnchor?.scrollIntoView({ block: "center", inline: "center", behavior: "instant" });
   }
   popup.hidden = false; updatePopup();
-  $("#brc-status").textContent = `${t("selected")}: ${unit.name} · ${ratingLabel(unit)}`;
+  $("#brc-status").textContent = `${t("selected")}: ${unit.name} · ${ratingLabel(comparisonSelection())}`;
   // The non-modal panel can be dismissed by keyboard without trapping table navigation.
   $("#brc-detail-close").focus({ preventScroll: true });
 }
@@ -254,6 +271,12 @@ function applyLanguage() {
     const note = $("#brc-data-note");
     note.textContent = `${t(planned ? "planned" : "shared")} ${t(planned ? "applied" : "updated")}: ${Number.isNaN(date.valueOf()) ? "—" : date.toLocaleDateString(state.language, { timeZone: "UTC" })} · `;
     const source = element("a", "", t(planned ? "plannedSource" : "source")); source.href = planned ? state.catalog.battleRatingUpdate.source : "https://wiki.warthunder.com"; source.target = "_blank"; source.rel = "noopener noreferrer"; note.append(source);
+    if (state.variableRatings) {
+      note.append(document.createElement("br"), document.createTextNode(`${t("variable")} · `));
+      const variableSource = element("a", "", t("variableSource"));
+      variableSource.href = state.variableRatings.source; variableSource.target = "_blank"; variableSource.rel = "noopener noreferrer";
+      note.append(variableSource);
+    }
     const wasOpen = !popup.hidden;
     renderTable();
     popupAnchor = buttons.get(state.selected?.id);
@@ -271,7 +294,7 @@ function switchMode(mode) {
     query: search.value, top: scroller.scrollTop, left: scroller.scrollLeft };
   closePopup(); results.hidden = true;
   state.mode = mode;
-  state.units = readCatalog(state.catalog, mode);
+  state.units = readCatalog(state.catalog, mode, state.variableRatings);
   state.byId = new Map(state.units.map(unit => [unit.id, unit]));
   const view = modeViews[mode];
   state.selected = state.byId.get(view.selectedId) || null;
@@ -297,10 +320,15 @@ async function loadCatalog() {
   state.loading = true; state.failed = false; $("#brc-retry").hidden = true; scroller.setAttribute("aria-busy", "true"); applyLanguage();
   try {
     // Deliberately share the Tier List catalog and its BR values; no BRC-specific copy.
-    const response = await fetch(new URL("../data/tier-units.json?v=planned-20261024", import.meta.url));
-    if (!response.ok) throw new Error(`Catalog HTTP ${response.status}`);
-    const catalog = await response.json();
-    state.units = readCatalog(catalog, state.mode);
+    const [catalog, ratings] = await Promise.all([
+      "../data/tier-units.json?v=new-units-20261101", "../data/brc-variable-br.json?v=20261101",
+    ].map(async path => {
+      const response = await fetch(new URL(path, import.meta.url));
+      if (!response.ok) throw new Error(`Catalog HTTP ${response.status}`);
+      return response.json();
+    }));
+    state.variableRatings = validateVariableRatings(ratings, catalog);
+    state.units = readCatalog(catalog, state.mode, state.variableRatings);
     if (!state.units.length) throw new Error("Empty catalog");
     state.catalog = catalog; state.byId = new Map(state.units.map(unit => [unit.id, unit]));
     search.disabled = false; $("#brc-categories").disabled = false;

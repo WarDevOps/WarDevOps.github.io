@@ -4,7 +4,7 @@ if (tierRoot) {
   const TIER_ZONES = Object.freeze(["s", "a", "b", "c", "d", "pool"]);
   const STORAGE_KEY = "maptactic-tier-maker-v1";
 
-  const catalogResponse = await fetch(new URL("../data/tier-units.json?v=planned-20261024", import.meta.url));
+  const catalogResponse = await fetch(new URL("../data/tier-units.json?v=new-units-20261101", import.meta.url));
   if (!catalogResponse.ok) throw new Error(`Tier catalog request failed: ${catalogResponse.status}`);
   const tierCatalog = await catalogResponse.json();
   if (tierCatalog.battleRatingMode !== "RB") throw new Error("Tier catalog must use Realistic Battles ratings");
@@ -373,12 +373,14 @@ if (tierRoot) {
     card.setAttribute("aria-pressed", String(selectedItemId === id));
     card.classList.toggle("is-selected", selectedItemId === id);
 
-    const image = document.createElement("img");
-    image.src = `${META[activeCategory].folder}/${encodeURIComponent(file)}`;
-    image.alt = name;
-    image.loading = "lazy";
-    image.decoding = "async";
-    card.append(image);
+    if (unitRecord(activeCategory, file)?.imageAvailable !== false) {
+      const image = document.createElement("img");
+      image.src = `${META[activeCategory].folder}/${encodeURIComponent(file)}`;
+      image.alt = name;
+      image.loading = "lazy";
+      image.decoding = "async";
+      card.append(image);
+    }
 
     const caption = document.createElement("span");
     caption.className = "tier-card-caption";
@@ -624,7 +626,9 @@ if (tierRoot) {
     ids.forEach(id => {
       const file = fileForId(id);
       if (!file) return;
-      imageSources.add(`${META[activeCategory].folder}/${encodeURIComponent(file)}`);
+      if (unitRecord(activeCategory, file)?.imageAvailable !== false) {
+        imageSources.add(`${META[activeCategory].folder}/${encodeURIComponent(file)}`);
+      }
       const flag = itemDetails(file).flag;
       if (flag) imageSources.add(flag);
     });

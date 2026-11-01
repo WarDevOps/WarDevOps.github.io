@@ -12,6 +12,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timezone
 import gzip
 import hashlib
+import io
 import json
 from pathlib import Path
 import re
@@ -19,9 +20,63 @@ import time
 import urllib.request
 
 from lxml import html
+from PIL import Image
 
 ROOT = Path(__file__).resolve().parents[1]
 WIKI = "https://wiki.warthunder.com"
+ICON_ROOT = "https://static.encyclopedia.warthunder.com/gui_skin/"
+
+
+def choose_icon(*sources):
+    valid = [url for url in sources if url and re.fullmatch(re.escape(ICON_ROOT) + r"[a-zA-Z0-9_-]+\.png", url)]
+    def score(url):
+        name = url.rsplit("/", 1)[-1]
+        count = re.search(r"_x(\d+)", name)
+        return ("ptb" in name, int(count.group(1)) if count else 2 if "group" in name else 1, len(name), name)
+    return min(valid, key=score) if valid else None
+
+
+def download_icon(url):
+    if choose_icon(url) != url:
+        raise ValueError(f"Unexpected icon URL: {url}")
+    path = ROOT / "icon/weapon-wiki" / url.rsplit("/", 1)[-1]
+    if path.exists():
+        with Image.open(path) as image:
+            image.verify()
+        return
+    for attempt in range(4):
+        try:
+            request = urllib.request.Request(url, headers={"User-Agent": "WarDevOps-Wiki-Sync/1.0 (+https://wardevops.github.io/)"})
+            with urllib.request.urlopen(request, timeout=30) as response:
+                content = response.read()
+            with Image.open(io.BytesIO(content)) as image:
+                if image.format != "PNG":
+                    raise ValueError("Expected PNG icon")
+                image.verify()
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_bytes(content)
+            return
+        except Exception:
+            if attempt == 3:
+                raise
+            time.sleep(2 ** (attempt + 1))
+
+
+def prepare_icons(weapons, workers):
+    # Official Wiki slot icons used as type fallbacks for preset-only aircraft.
+    defaults = {"aam": "missile_type_b_air_to_air.png", "agm": "missile_air_to_uni.png",
+                "guided-bomb": "guided_bomb_green.png", "guided-rocket": "nar_he_small_group_x3.png",
+                "arm": "missile_air_to_uni.png"}
+    for weapon in weapons.values():
+        if not weapon.get("iconSource"):
+            weapon["iconSource"] = ICON_ROOT + defaults[weapon["type"]]
+            weapon["iconGeneric"] = True
+        weapon["icon"] = "/icon/weapon-wiki/" + weapon["iconSource"].rsplit("/", 1)[-1]
+    sources = sorted({weapon["iconSource"] for weapon in weapons.values()})
+    with ThreadPoolExecutor(max_workers=max(1, min(workers, 6))) as executor:
+        for _ in executor.map(download_icon, sources):
+            pass
+    print(f"Downloaded/verified {len(sources)} Wiki icons; {sum(bool(w.get('iconGeneric')) for w in weapons.values())} type fallbacks", flush=True)
 # Wiki tooltip titles below omit the weapon type. Classifications are reviewed
 # against their Wiki collection/unit pages; guidance always comes from the tooltip.
 TYPE_OVERRIDES = {
@@ -116,7 +171,11 @@ def parse_aircraft(document, wiki_id):
         links = details.xpath(".//a[starts-with(@href, '/collections/weapon/')]/@href")
         weapon = {"name": short_name, "type": kind, "guidance": method,
                   "source": WIKI + links[0] if links else f"{WIKI}/unit/{wiki_id}"}
-        if weapon_id in weapons and weapons[weapon_id] != weapon:
+        previous = weapons.get(weapon_id, {})
+        icon = choose_icon(previous.get("iconSource"), *button.xpath("ancestor::tr[1]//img/@src"))
+        if icon:
+            weapon["iconSource"] = icon
+        if previous and any(previous[key] != weapon[key] for key in ("name", "type", "guidance", "source")):
             raise ValueError(f"Conflicting repeated weapon: {name}")
         weapons[weapon_id] = weapon
     return weapons, list({json.dumps(item, sort_keys=True): item for item in unresolved}.values())
@@ -146,6 +205,21 @@ def collect(wiki_id, cache, refresh):
     return parse_aircraft(html.fromstring(content.decode('utf-8')), wiki_id)
 
 
+def apply_test_additions(data, rules):
+    """Retain reviewed test-only availability without claiming it came from Wiki."""
+    additions = {}
+    for wiki_id, weapon_ids in rules.get("additionalWeapons", {}).items():
+        if wiki_id not in data["aircraft"]:
+            continue  # Sample collection may not include this aircraft.
+        for weapon_id in weapon_ids:
+            if weapon_id not in data["weapons"]:
+                raise ValueError(f"Test weapon not collected: {wiki_id}/{weapon_id}")
+        unit = data["aircraft"][wiki_id]
+        unit["weapons"] = sorted(set(unit["weapons"]) | set(weapon_ids))
+        additions[wiki_id] = weapon_ids
+    data["testAdditions"] = {"source": rules["source"], "status": "testing", "aircraft": additions}
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--workers", type=int, default=4)
@@ -158,6 +232,7 @@ def main():
         parser.error("Partial collections require an alternate --output")
     catalog = json.loads((ROOT / "assets/data/tier-units.json").read_text(encoding="utf-8"))
     ids = sorted(unit["wikiId"] for unit in catalog["categories"]["air"]["units"])
+    pending_ids = {unit["wikiId"] for unit in catalog["categories"]["air"]["units"] if unit.get("wikiPending")}
     if args.unit:
         if set(args.unit) - set(ids):
             parser.error("Unknown aircraft ID")
@@ -167,7 +242,7 @@ def main():
     cache.mkdir(parents=True, exist_ok=True)
     results, failures, unresolved = {}, {}, {}
     with ThreadPoolExecutor(max_workers=max(1, min(args.workers, 8))) as executor:
-        futures = {executor.submit(collect, wiki_id, cache, args.refresh): wiki_id for wiki_id in ids}
+        futures = {executor.submit(collect, wiki_id, cache, args.refresh): wiki_id for wiki_id in ids if wiki_id not in pending_ids}
         for i, future in enumerate(as_completed(futures), 1):
             wiki_id = futures[future]
             try:
@@ -188,8 +263,11 @@ def main():
             if previous and any(previous[key] != weapon[key] for key in ("name", "type", "guidance")):
                 conflicts.append({"unit": wiki_id, "weapon": weapon_id, "values": [previous, weapon]})
             else:
-                weapons.setdefault(weapon_id, weapon)
-        aircraft[wiki_id] = {"status": "unverified" if wiki_id in failures else "partial" if wiki_id in unresolved else "verified",
+                shared = weapons.setdefault(weapon_id, weapon.copy())
+                icon = choose_icon(shared.get("iconSource"), weapon.get("iconSource"))
+                if icon:
+                    shared["iconSource"] = icon
+        aircraft[wiki_id] = {"status": "pending-wiki" if wiki_id in pending_ids else "unverified" if wiki_id in failures else "partial" if wiki_id in unresolved else "verified",
                             "weapons": sorted(unit_weapons)}
     report = {"failures": failures, "unresolved": unresolved, "conflicts": conflicts}
     (cache / "report.json").write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
@@ -198,6 +276,10 @@ def main():
     data = {"schemaVersion": 1, "source": WIKI, "checkedAt": now.isoformat(),
             "scope": "All unlockable aircraft guided weapons; availability list, not simultaneous loadouts. Anti-ship-only weapons excluded.",
             "weapons": dict(sorted(weapons.items())), "aircraft": aircraft}
+    rules_path = ROOT / "assets/data/brc-variable-br.json"
+    if rules_path.exists() and not args.unit:
+        apply_test_additions(data, json.loads(rules_path.read_text(encoding="utf-8")))
+    prepare_icons(data["weapons"], args.workers)
     args.output.parent.mkdir(parents=True, exist_ok=True)
     temporary = args.output.with_suffix(".json.tmp")
     temporary.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")

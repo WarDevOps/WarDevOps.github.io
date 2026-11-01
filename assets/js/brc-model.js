@@ -15,7 +15,7 @@ export function rangeColor(br, reference) {
   return `rgb(${from.map((value, i) => Math.round(value + (to[i] - value) * fraction)).join(", ")})`;
 }
 
-export function readCatalog(catalog, mode = "grb") {
+export function readCatalog(catalog, mode = "grb", variableRatings = null) {
   if (!["grb", "arb"].includes(mode)) throw new Error(`Unknown battle mode: ${mode}`);
   if (catalog.battleRatingMode !== "RB") throw new Error("Expected the shared RB catalog");
   const ids = new Set();
@@ -30,8 +30,11 @@ export function readCatalog(catalog, mode = "grb") {
       if (mode === "grb" && category === "air" && (!Number.isFinite(record.brGround) || record.brGround < 1)) {
         throw new Error(`Missing or invalid ground BR: ${id}`);
       }
-      return { ...record, id, category, catalogBr: record.br,
-        br: mode === "grb" && category === "air" ? record.brGround : record.br };
+      const variableBr = variableRatings?.units?.[id];
+      const groundBr = variableBr?.grb?.base ?? (category === "air" ? record.brGround : record.br);
+      const airBr = variableBr?.arb?.base ?? record.br;
+      return { ...record, id, category, catalogBr: record.br, variableBr, groundBr, airBr,
+        br: mode === "grb" ? groundBr : airBr };
     });
   }).sort((a, b) => a.br - b.br || CATEGORIES.indexOf(a.category) - CATEGORIES.indexOf(b.category)
     || a.name.localeCompare(b.name, "en", { numeric: true }) || a.id.localeCompare(b.id));

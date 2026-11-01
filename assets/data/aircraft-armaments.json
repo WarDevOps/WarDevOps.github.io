@@ -1,1682 +1,2242 @@
 {
   "schemaVersion": 1,
   "source": "https://wiki.warthunder.com",
-  "checkedAt": "2026-10-31T15:57:42.216006+00:00",
+  "checkedAt": "2026-11-01T01:40:00.941176+00:00",
   "scope": "All unlockable aircraft guided weapons; availability list, not simultaneous loadouts. Anti-ship-only weapons excluded.",
   "weapons": {
     "w-01e1f67fd8d7c42e": {
       "name": "AGM-12B Bullpup",
       "type": "agm",
       "guidance": "Manual (MCLOS)",
-      "source": "https://wiki.warthunder.com/collections/weapon/agm12_bullpup"
+      "source": "https://wiki.warthunder.com/collections/weapon/agm12_bullpup",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_air_to_uni.png",
+      "icon": "/icon/weapon-wiki/missile_air_to_uni.png"
     },
     "w-02cd9bc64d01b21f": {
       "name": "AGM-130A-12",
       "type": "guided-bomb",
       "guidance": "IR+IOG+GNSS",
-      "source": "https://wiki.warthunder.com/unit/f_111f"
+      "source": "https://wiki.warthunder.com/unit/f_111f",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/guided_bomb_grey.png",
+      "icon": "/icon/weapon-wiki/guided_bomb_grey.png"
     },
     "w-03e0655eee958181": {
       "name": "AIM-26B Falcon",
       "type": "aam",
       "guidance": "SARH",
-      "source": "https://wiki.warthunder.com/unit/f_102a_greece"
+      "source": "https://wiki.warthunder.com/unit/f_102a_greece",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_air_to_air_midrange_special.png",
+      "icon": "/icon/weapon-wiki/missile_air_to_air_midrange_special.png"
     },
     "w-05c54e7581ca3996": {
       "name": "500 kg FAB-500M-62 UMPK",
       "type": "guided-bomb",
       "guidance": "GNSS",
-      "source": "https://wiki.warthunder.com/unit/su_24m"
+      "source": "https://wiki.warthunder.com/unit/su_24m",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/glide_bombs_large.png",
+      "icon": "/icon/weapon-wiki/glide_bombs_large.png"
     },
     "w-06f418147168ebf9": {
       "name": "500 kg KAB-500Kr-M",
       "type": "guided-bomb",
       "guidance": "TV",
-      "source": "https://wiki.warthunder.com/collections/weapon/500kg_kab500"
+      "source": "https://wiki.warthunder.com/collections/weapon/500kg_kab500",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/guided_bomb_yellow.png",
+      "icon": "/icon/weapon-wiki/guided_bomb_yellow.png"
     },
     "w-070fbcef8d116ae9": {
       "name": "1500 kg KAB-1500L",
       "type": "guided-bomb",
       "guidance": "Laser",
-      "source": "https://wiki.warthunder.com/collections/weapon/1500kg_kab1500"
+      "source": "https://wiki.warthunder.com/collections/weapon/1500kg_kab1500",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/guided_bomb_heavy_laser.png",
+      "icon": "/icon/weapon-wiki/guided_bomb_heavy_laser.png"
     },
     "w-071d453c2e0841e1": {
       "name": "AIM-9L Sidewinder",
       "type": "aam",
       "guidance": "IR",
-      "source": "https://wiki.warthunder.com/collections/weapon/aim9l_sidewinder"
+      "source": "https://wiki.warthunder.com/collections/weapon/aim9l_sidewinder",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_type_b_air_to_air.png",
+      "icon": "/icon/weapon-wiki/missile_type_b_air_to_air.png"
     },
     "w-07fed36ea1482d67": {
       "name": "GB3",
       "type": "guided-bomb",
       "guidance": "Laser+IOG+GNSS",
-      "source": "https://wiki.warthunder.com/unit/j_10c"
+      "source": "https://wiki.warthunder.com/unit/j_10c",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/guided_bomb_middle_jdam.png",
+      "icon": "/icon/weapon-wiki/guided_bomb_middle_jdam.png"
     },
     "w-08d2b4fd33121cbe": {
       "name": "AASM 250 HAMMER (SBU 54)",
       "type": "guided-bomb",
       "guidance": "Laser+IOG+GNSS",
-      "source": "https://wiki.warthunder.com/collections/weapon/hammer"
+      "source": "https://wiki.warthunder.com/collections/weapon/hammer",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_air_to_uni_smal.png",
+      "icon": "/icon/weapon-wiki/missile_air_to_uni_smal.png"
     },
     "w-0a11740bdebf806b": {
       "name": "LD-10",
       "type": "arm",
       "guidance": "SARH+IOG",
-      "source": "https://wiki.warthunder.com/collections/weapon/ld_10"
+      "source": "https://wiki.warthunder.com/collections/weapon/ld_10",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/arm_r27_type_s.png",
+      "icon": "/icon/weapon-wiki/arm_r27_type_s.png"
     },
     "w-0a7b15499700bfe7": {
       "name": "R-27ET",
       "type": "aam",
       "guidance": "IR",
-      "source": "https://wiki.warthunder.com/collections/weapon/r27"
+      "source": "https://wiki.warthunder.com/collections/weapon/r27",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_air_to_air_ir_large_special.png",
+      "icon": "/icon/weapon-wiki/missile_air_to_air_ir_large_special.png"
     },
     "w-0afb2b7fc7509bcf": {
       "name": "RB 75T",
       "type": "agm",
       "guidance": "TV",
-      "source": "https://wiki.warthunder.com/unit/saab_aj37"
+      "source": "https://wiki.warthunder.com/unit/saab_aj37",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_air_to_uni_large.png",
+      "icon": "/icon/weapon-wiki/missile_air_to_uni_large.png"
     },
     "w-0c3035423bf7154a": {
       "name": "R-27T",
       "type": "aam",
       "guidance": "IR",
-      "source": "https://wiki.warthunder.com/collections/weapon/r27"
+      "source": "https://wiki.warthunder.com/collections/weapon/r27",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_air_to_air_ir_large_special.png",
+      "icon": "/icon/weapon-wiki/missile_air_to_air_ir_large_special.png"
     },
     "w-0ce99d1724aa9f56": {
       "name": "AGM-65F",
       "type": "agm",
       "guidance": "IR",
-      "source": "https://wiki.warthunder.com/collections/weapon/agm65_maverick"
+      "source": "https://wiki.warthunder.com/collections/weapon/agm65_maverick",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_air_to_uni_smal.png",
+      "icon": "/icon/weapon-wiki/missile_air_to_uni_smal.png"
     },
     "w-0cf99869a8408200": {
       "name": "Kh-59ME",
       "type": "agm",
       "guidance": "TV+IOG",
-      "source": "https://wiki.warthunder.com/collections/weapon/kh_59"
+      "source": "https://wiki.warthunder.com/collections/weapon/kh_59",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/guided_bomb_green_x59.png",
+      "icon": "/icon/weapon-wiki/guided_bomb_green_x59.png"
     },
     "w-0e3b191353598719": {
       "name": "Kh-59M",
       "type": "agm",
       "guidance": "TV+IOG",
-      "source": "https://wiki.warthunder.com/collections/weapon/kh_59"
+      "source": "https://wiki.warthunder.com/collections/weapon/kh_59",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/guided_bomb_green_x59.png",
+      "icon": "/icon/weapon-wiki/guided_bomb_green_x59.png"
     },
     "w-0eae2a1fc33321a2": {
       "name": "AIM-7C Sparrow",
       "type": "aam",
       "guidance": "SARH",
-      "source": "https://wiki.warthunder.com/collections/weapon/aim7_sparrow"
+      "source": "https://wiki.warthunder.com/collections/weapon/aim7_sparrow",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_air_to_air_midrange.png",
+      "icon": "/icon/weapon-wiki/missile_air_to_air_midrange.png"
     },
     "w-0f1f5f79a4126984": {
       "name": "AIM-9C Sidewinder",
       "type": "aam",
       "guidance": "SARH",
-      "source": "https://wiki.warthunder.com/unit/f-8e"
+      "source": "https://wiki.warthunder.com/unit/f-8e",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_type_c_air_to_air.png",
+      "icon": "/icon/weapon-wiki/missile_type_c_air_to_air.png"
     },
     "w-10292b01639f2cf6": {
       "name": "AIM-7D Sparrow",
       "type": "aam",
       "guidance": "SARH",
-      "source": "https://wiki.warthunder.com/collections/weapon/aim7_sparrow"
+      "source": "https://wiki.warthunder.com/collections/weapon/aim7_sparrow",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_air_to_air_special.png",
+      "icon": "/icon/weapon-wiki/missile_air_to_air_special.png"
     },
     "w-1090d7035e2f2f85": {
       "name": "YJ-91A",
       "type": "arm",
       "guidance": "SARH",
-      "source": "https://wiki.warthunder.com/collections/weapon/kh_31p"
+      "source": "https://wiki.warthunder.com/collections/weapon/kh_31p",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/arm_kh31_type_c.png",
+      "icon": "/icon/weapon-wiki/arm_kh31_type_c.png"
     },
     "w-12f547eb4112ff60": {
       "name": "Kh-23M",
       "type": "agm",
       "guidance": "Manual (MCLOS)",
-      "source": "https://wiki.warthunder.com/collections/weapon/kh_23"
+      "source": "https://wiki.warthunder.com/collections/weapon/kh_23",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_air_to_uni.png",
+      "icon": "/icon/weapon-wiki/missile_air_to_uni.png"
     },
     "w-137af5e241e20c85": {
       "name": "AIM-9J Sidewinder",
       "type": "aam",
       "guidance": "IR",
-      "source": "https://wiki.warthunder.com/collections/weapon/aim9j_sidewinder"
+      "source": "https://wiki.warthunder.com/collections/weapon/aim9j_sidewinder",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_air_to_air.png",
+      "icon": "/icon/weapon-wiki/missile_air_to_air.png"
     },
     "w-1393da2930c965fb": {
       "name": "Grom-2",
       "type": "guided-bomb",
       "guidance": "GNSS",
-      "source": "https://wiki.warthunder.com/unit/mig_35"
+      "source": "https://wiki.warthunder.com/unit/mig_35",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/glide_bombs_middle.png",
+      "icon": "/icon/weapon-wiki/glide_bombs_middle.png"
     },
     "w-14f558e875a18cd3": {
       "name": "R-60MK",
       "type": "aam",
       "guidance": "IR",
-      "source": "https://wiki.warthunder.com/collections/weapon/r60m"
+      "source": "https://wiki.warthunder.com/collections/weapon/r60m",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_air_to_air.png",
+      "icon": "/icon/weapon-wiki/missile_air_to_air.png"
     },
     "w-1799101954a5cc36": {
       "name": "AIM-9E Sidewinder",
       "type": "aam",
       "guidance": "IR",
-      "source": "https://wiki.warthunder.com/collections/weapon/aim9e_sidewinder"
+      "source": "https://wiki.warthunder.com/collections/weapon/aim9e_sidewinder",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_air_to_air.png",
+      "icon": "/icon/weapon-wiki/missile_air_to_air.png"
     },
     "w-17b0e02e5eee564e": {
       "name": "AIM-7E Sparrow",
       "type": "aam",
       "guidance": "SARH",
-      "source": "https://wiki.warthunder.com/collections/weapon/aim7_sparrow"
+      "source": "https://wiki.warthunder.com/collections/weapon/aim7_sparrow",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_air_to_air_special.png",
+      "icon": "/icon/weapon-wiki/missile_air_to_air_special.png"
     },
     "w-190deaf43b71944d": {
       "name": "500 kg KAB-500S",
       "type": "guided-bomb",
       "guidance": "GNSS",
-      "source": "https://wiki.warthunder.com/collections/weapon/500kg_kab500"
+      "source": "https://wiki.warthunder.com/collections/weapon/500kg_kab500",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/guided_bomb_large_jdam.png",
+      "icon": "/icon/weapon-wiki/guided_bomb_large_jdam.png"
     },
     "w-1a1aed2ba8ec9ffd": {
       "name": "GB500",
       "type": "guided-bomb",
       "guidance": "Laser",
-      "source": "https://wiki.warthunder.com/unit/j_10a"
+      "source": "https://wiki.warthunder.com/unit/j_10a",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/guided_bomb_large_laser.png",
+      "icon": "/icon/weapon-wiki/guided_bomb_large_laser.png"
     },
     "w-1b3a486e9068b84d": {
       "name": "Skyflash (Dogfight)",
       "type": "aam",
       "guidance": "SARH",
-      "source": "https://wiki.warthunder.com/collections/weapon/skyflash"
+      "source": "https://wiki.warthunder.com/collections/weapon/skyflash",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_air_to_air_midrange_special.png",
+      "icon": "/icon/weapon-wiki/missile_air_to_air_midrange_special.png"
     },
     "w-1d31eec9a03e5b9b": {
       "name": "500 kg UPAB-500B-E",
       "type": "guided-bomb",
       "guidance": "GNSS",
-      "source": "https://wiki.warthunder.com/unit/su_30mkm"
+      "source": "https://wiki.warthunder.com/unit/su_30mkm",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/guided_bomb_large_jdam.png",
+      "icon": "/icon/weapon-wiki/guided_bomb_large_jdam.png"
     },
     "w-1d434506cb66c6e5": {
       "name": "3000 kg FAB-3000 UMPK",
       "type": "guided-bomb",
       "guidance": "GNSS",
-      "source": "https://wiki.warthunder.com/unit/su_34"
+      "source": "https://wiki.warthunder.com/unit/su_34",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/glide_bombs_heavy.png",
+      "icon": "/icon/weapon-wiki/glide_bombs_heavy.png"
     },
     "w-1d48e765e17bc105": {
       "name": "Flz Lwf LL 64/79 FALCO",
       "type": "aam",
       "guidance": "SARH",
-      "source": "https://wiki.warthunder.com/unit/mirage_3s_c70_switzerland"
+      "source": "https://wiki.warthunder.com/unit/mirage_3s_c70_switzerland",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_air_to_air_special.png",
+      "icon": "/icon/weapon-wiki/missile_air_to_air_special.png"
     },
     "w-1f1c12e792f96b94": {
       "name": "RB 74",
       "type": "aam",
       "guidance": "IR",
-      "source": "https://wiki.warthunder.com/collections/weapon/aim9l_sidewinder"
+      "source": "https://wiki.warthunder.com/collections/weapon/aim9l_sidewinder",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_type_b_air_to_air.png",
+      "icon": "/icon/weapon-wiki/missile_type_b_air_to_air.png"
     },
     "w-1f85565971741c83": {
       "name": "KGGB",
       "type": "guided-bomb",
       "guidance": "GNSS",
-      "source": "https://wiki.warthunder.com/unit/f_16a_block_15_ocu_thailand"
+      "source": "https://wiki.warthunder.com/unit/f_16a_block_15_ocu_thailand",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/glide_guided_bomb_middle_jdam.png",
+      "icon": "/icon/weapon-wiki/glide_guided_bomb_middle_jdam.png"
     },
     "w-210c8af22a9f0928": {
       "name": "Flz Lwl LL 97 AMRAAM",
       "type": "aam",
       "guidance": "ARH+IOG+DL",
-      "source": "https://wiki.warthunder.com/collections/weapon/aim120_amraam"
+      "source": "https://wiki.warthunder.com/collections/weapon/aim120_amraam",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_type_f_air_to_air_midrange.png",
+      "icon": "/icon/weapon-wiki/missile_type_f_air_to_air_midrange.png"
     },
     "w-211ee02b450da459": {
       "name": "YJ-91 L111",
       "type": "arm",
       "guidance": "SARH",
-      "source": "https://wiki.warthunder.com/collections/weapon/kh_31p"
+      "source": "https://wiki.warthunder.com/collections/weapon/kh_31p",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/arm_kh31_type_s.png",
+      "icon": "/icon/weapon-wiki/arm_kh31_type_s.png"
     },
     "w-21755d0951748aad": {
       "name": "AGM-45B-3B Shrike",
       "type": "arm",
       "guidance": "SARH",
-      "source": "https://wiki.warthunder.com/collections/weapon/agm_45"
+      "source": "https://wiki.warthunder.com/collections/weapon/agm_45",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/arm_type_b.png",
+      "icon": "/icon/weapon-wiki/arm_type_b.png"
     },
     "w-21ce6721cb2d5c3d": {
       "name": "HOSBO",
       "type": "guided-bomb",
       "guidance": "IR+IOG+GNSS",
-      "source": "https://wiki.warthunder.com/unit/ef_2000_aesa"
+      "source": "https://wiki.warthunder.com/unit/ef_2000_aesa",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/glide_guided_bomb_middle_jdam.png",
+      "icon": "/icon/weapon-wiki/glide_guided_bomb_middle_jdam.png"
     },
     "w-221255fc6241a667": {
       "name": "Red Top",
       "type": "aam",
       "guidance": "IR",
-      "source": "https://wiki.warthunder.com/unit/dh_110_sea_vixen"
+      "source": "https://wiki.warthunder.com/unit/dh_110_sea_vixen",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_type_b_air_to_air.png",
+      "icon": "/icon/weapon-wiki/missile_type_b_air_to_air.png"
     },
     "w-224e663d2683d09e": {
       "name": "500 kg KAB-500LG-E",
       "type": "guided-bomb",
       "guidance": "Laser",
-      "source": "https://wiki.warthunder.com/collections/weapon/500kg_kab500"
+      "source": "https://wiki.warthunder.com/collections/weapon/500kg_kab500",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/guided_bomb_middle_laser.png",
+      "icon": "/icon/weapon-wiki/guided_bomb_middle_laser.png"
     },
     "w-2348d1905ea8e93b": {
       "name": "AAM-3",
       "type": "aam",
       "guidance": "IR",
-      "source": "https://wiki.warthunder.com/unit/f_15j"
+      "source": "https://wiki.warthunder.com/unit/f_15j",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_type_c_air_to_air.png",
+      "icon": "/icon/weapon-wiki/missile_type_c_air_to_air.png"
     },
     "w-239b8edbc98ff3dd": {
       "name": "AIM-9B FGW.2 Sidewinder",
       "type": "aam",
       "guidance": "IR",
-      "source": "https://wiki.warthunder.com/collections/weapon/aim9b_sidewinder"
+      "source": "https://wiki.warthunder.com/collections/weapon/aim9b_sidewinder",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_air_to_air.png",
+      "icon": "/icon/weapon-wiki/missile_air_to_air.png"
     },
     "w-23ecb82d39373db3": {
       "name": "AIM-4G Super Falcon",
       "type": "aam",
       "guidance": "IR",
-      "source": "https://wiki.warthunder.com/collections/weapon/aim_4"
+      "source": "https://wiki.warthunder.com/collections/weapon/aim_4",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_air_to_air_ir_large.png",
+      "icon": "/icon/weapon-wiki/missile_air_to_air_ir_large.png"
     },
     "w-24f223cff9235768": {
       "name": "AGM-45B-6 Shrike",
       "type": "arm",
       "guidance": "SARH",
-      "source": "https://wiki.warthunder.com/collections/weapon/agm_45"
+      "source": "https://wiki.warthunder.com/collections/weapon/agm_45",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/arm_type_s.png",
+      "icon": "/icon/weapon-wiki/arm_type_s.png"
     },
     "w-2576a72a973a5adb": {
       "name": "AIM-54C+ Phoenix",
       "type": "aam",
       "guidance": "ARH+IOG+DL",
-      "source": "https://wiki.warthunder.com/collections/weapon/aim_54"
+      "source": "https://wiki.warthunder.com/collections/weapon/aim_54",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_air_to_air_ir_large_special.png",
+      "icon": "/icon/weapon-wiki/missile_air_to_air_ir_large_special.png"
     },
     "w-2600a6af74f1e718": {
       "name": "R-27R",
       "type": "aam",
       "guidance": "SARH+IOG+DL",
-      "source": "https://wiki.warthunder.com/collections/weapon/r27"
+      "source": "https://wiki.warthunder.com/collections/weapon/r27",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_air_to_air_midrange_special.png",
+      "icon": "/icon/weapon-wiki/missile_air_to_air_midrange_special.png"
     },
     "w-27ed8bd86ead771b": {
       "name": "Ki-148 I-Go Model 1B",
       "type": "agm",
       "guidance": "Manual (MCLOS)",
-      "source": "https://wiki.warthunder.com/unit/ki_48_2_otsu"
+      "source": "https://wiki.warthunder.com/unit/ki_48_2_otsu",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_air_to_uni.png",
+      "iconGeneric": true,
+      "icon": "/icon/weapon-wiki/missile_air_to_uni.png"
     },
     "w-29828e3fa4f0e5ee": {
       "name": "LS-6(IR) 500",
       "type": "guided-bomb",
       "guidance": "IR+IOG+GNSS",
-      "source": "https://wiki.warthunder.com/unit/j_15t"
+      "source": "https://wiki.warthunder.com/unit/j_15t",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/glide_guided_bomb_heavy_middle_jdam.png",
+      "icon": "/icon/weapon-wiki/glide_guided_bomb_heavy_middle_jdam.png"
     },
     "w-2a6d92dcdbd5a8cd": {
       "name": "AIM-9G Sidewinder",
       "type": "aam",
       "guidance": "IR",
-      "source": "https://wiki.warthunder.com/collections/weapon/aim9g_sidewinder"
+      "source": "https://wiki.warthunder.com/collections/weapon/aim9g_sidewinder",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_air_to_air.png",
+      "icon": "/icon/weapon-wiki/missile_air_to_air.png"
     },
     "w-2bbb02ac30e804a0": {
       "name": "GBU-15(V)1/B",
       "type": "guided-bomb",
       "guidance": "TV",
-      "source": "https://wiki.warthunder.com/unit/f-4e"
+      "source": "https://wiki.warthunder.com/unit/f-4e",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/guided_bomb_yellow.png",
+      "icon": "/icon/weapon-wiki/guided_bomb_yellow.png"
     },
     "w-2cbdb973c7d60ca2": {
       "name": "ALARM",
       "type": "arm",
       "guidance": "SARH+IOG",
-      "source": "https://wiki.warthunder.com/unit/tornado_gr4"
+      "source": "https://wiki.warthunder.com/unit/tornado_gr4",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/arm_type_b.png",
+      "icon": "/icon/weapon-wiki/arm_type_b.png"
     },
     "w-2f1ea5d72731f5e9": {
       "name": "GBU-32 JDAM",
       "type": "guided-bomb",
       "guidance": "GNSS",
-      "source": "https://wiki.warthunder.com/collections/weapon/jdam"
+      "source": "https://wiki.warthunder.com/collections/weapon/jdam",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/guided_bomb_large_jdam.png",
+      "icon": "/icon/weapon-wiki/guided_bomb_large_jdam.png"
     },
     "w-2f8a9afb99401777": {
       "name": "BGL-400",
       "type": "guided-bomb",
       "guidance": "Laser",
-      "source": "https://wiki.warthunder.com/unit/jaguar_a"
+      "source": "https://wiki.warthunder.com/unit/jaguar_a",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/guided_bomb_large_laser.png",
+      "icon": "/icon/weapon-wiki/guided_bomb_large_laser.png"
     },
     "w-3008936ab0f9acc6": {
       "name": "Flz Lwf 63/80",
       "type": "aam",
       "guidance": "IR",
-      "source": "https://wiki.warthunder.com/collections/weapon/aim9p_sidewinder"
+      "source": "https://wiki.warthunder.com/collections/weapon/aim9p_sidewinder",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_type_c_air_to_air.png",
+      "icon": "/icon/weapon-wiki/missile_type_c_air_to_air.png"
     },
     "w-31ac72ba7e53d40b": {
       "name": "AGM-65L",
       "type": "agm",
       "guidance": "Laser",
-      "source": "https://wiki.warthunder.com/collections/weapon/agm65_maverick"
+      "source": "https://wiki.warthunder.com/collections/weapon/agm65_maverick",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_air_to_uni_middle.png",
+      "icon": "/icon/weapon-wiki/missile_air_to_uni_middle.png"
     },
     "w-32e4b3f0be557622": {
       "name": "AGM-88C HARM",
       "type": "arm",
       "guidance": "SARH+IOG",
-      "source": "https://wiki.warthunder.com/collections/weapon/agm_88"
+      "source": "https://wiki.warthunder.com/collections/weapon/agm_88",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/arm_type_f.png",
+      "icon": "/icon/weapon-wiki/arm_type_f.png"
     },
     "w-3424bec20dfb59d8": {
       "name": "RB24",
       "type": "aam",
       "guidance": "IR",
-      "source": "https://wiki.warthunder.com/collections/weapon/aim9b_sidewinder"
+      "source": "https://wiki.warthunder.com/collections/weapon/aim9b_sidewinder",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_air_to_air.png",
+      "icon": "/icon/weapon-wiki/missile_air_to_air.png"
     },
     "w-34451145d9129110": {
       "name": "CM-102",
       "type": "arm",
       "guidance": "SARH+IOG",
-      "source": "https://wiki.warthunder.com/collections/weapon/cm_102"
+      "source": "https://wiki.warthunder.com/collections/weapon/cm_102",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/arm_r27_type_b.png",
+      "icon": "/icon/weapon-wiki/arm_r27_type_b.png"
     },
     "w-34689eb10bf530dc": {
       "name": "GB1000",
       "type": "guided-bomb",
       "guidance": "Laser+IOG+GNSS",
-      "source": "https://wiki.warthunder.com/unit/j_10c"
+      "source": "https://wiki.warthunder.com/unit/j_10c",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/guided_bomb_heavy_laser.png",
+      "icon": "/icon/weapon-wiki/guided_bomb_heavy_laser.png"
     },
     "w-34b1acf401bb8938": {
       "name": "R-77",
       "type": "aam",
       "guidance": "ARH+IOG+DL",
-      "source": "https://wiki.warthunder.com/collections/weapon/r_77"
+      "source": "https://wiki.warthunder.com/collections/weapon/r_77",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_type_f_air_to_air_midrange.png",
+      "icon": "/icon/weapon-wiki/missile_type_f_air_to_air_midrange.png"
     },
     "w-370e7bd948caa6c8": {
       "name": "R-23R",
       "type": "aam",
       "guidance": "SARH",
-      "source": "https://wiki.warthunder.com/collections/weapon/r_23"
+      "source": "https://wiki.warthunder.com/collections/weapon/r_23",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_air_to_air_midrange.png",
+      "icon": "/icon/weapon-wiki/missile_air_to_air_midrange.png"
     },
     "w-3720bf9760e03406": {
       "name": "AJ.168",
       "type": "agm",
       "guidance": "TV",
-      "source": "https://wiki.warthunder.com/unit/buccaneer_s2b"
+      "source": "https://wiki.warthunder.com/unit/buccaneer_s2b",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_air_to_uni.png",
+      "icon": "/icon/weapon-wiki/missile_air_to_uni.png"
     },
     "w-3786f074b1e9f107": {
       "name": "500 kg KAB-500Kr-E",
       "type": "guided-bomb",
       "guidance": "TV",
-      "source": "https://wiki.warthunder.com/collections/weapon/500kg_kab500"
+      "source": "https://wiki.warthunder.com/collections/weapon/500kg_kab500",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/guided_bomb_yellow.png",
+      "icon": "/icon/weapon-wiki/guided_bomb_yellow.png"
     },
     "w-39c26aa6e00d0567": {
       "name": "PL-8B",
       "type": "aam",
       "guidance": "IR",
-      "source": "https://wiki.warthunder.com/collections/weapon/python_3"
+      "source": "https://wiki.warthunder.com/collections/weapon/python_3",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_type_b_air_to_air.png",
+      "icon": "/icon/weapon-wiki/missile_type_b_air_to_air.png"
     },
     "w-3a6475c951ba512e": {
       "name": "AIM-54C Phoenix",
       "type": "aam",
       "guidance": "ARH+IOG+DL",
-      "source": "https://wiki.warthunder.com/collections/weapon/aim_54"
+      "source": "https://wiki.warthunder.com/collections/weapon/aim_54",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_air_to_air_ir_large_special.png",
+      "icon": "/icon/weapon-wiki/missile_air_to_air_ir_large_special.png"
     },
     "w-3bac030fd6870501": {
       "name": "AGM-65E",
       "type": "agm",
       "guidance": "Laser",
-      "source": "https://wiki.warthunder.com/collections/weapon/agm65_maverick"
+      "source": "https://wiki.warthunder.com/collections/weapon/agm65_maverick",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_air_to_uni_middle.png",
+      "icon": "/icon/weapon-wiki/missile_air_to_uni_middle.png"
     },
     "w-3db9e47b607077d1": {
       "name": "GBU-8",
       "type": "guided-bomb",
       "guidance": "TV",
-      "source": "https://wiki.warthunder.com/collections/weapon/gbu_8"
+      "source": "https://wiki.warthunder.com/collections/weapon/gbu_8",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/guided_bomb_green.png",
+      "icon": "/icon/weapon-wiki/guided_bomb_green.png"
     },
     "w-3deea2892f76a53c": {
       "name": "R-27ET1",
       "type": "aam",
       "guidance": "IR",
-      "source": "https://wiki.warthunder.com/collections/weapon/r27"
+      "source": "https://wiki.warthunder.com/collections/weapon/r27",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_air_to_air_ir_large_special.png",
+      "icon": "/icon/weapon-wiki/missile_air_to_air_ir_large_special.png"
     },
     "w-3e92282cabc82597": {
       "name": "250 kg KAB-250LG",
       "type": "guided-bomb",
       "guidance": "Laser+IOG+GNSS",
-      "source": "https://wiki.warthunder.com/unit/su_30sm"
+      "source": "https://wiki.warthunder.com/unit/su_30sm",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/guided_bomb_small_laser.png",
+      "icon": "/icon/weapon-wiki/guided_bomb_small_laser.png"
     },
     "w-3f84c6ea1e89ada4": {
       "name": "AIM-9H Sidewinder",
       "type": "aam",
       "guidance": "IR",
-      "source": "https://wiki.warthunder.com/collections/weapon/aim9g_sidewinder"
+      "source": "https://wiki.warthunder.com/collections/weapon/aim9g_sidewinder",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_type_c_air_to_air.png",
+      "icon": "/icon/weapon-wiki/missile_type_c_air_to_air.png"
     },
     "w-4106078b79abd5bb": {
       "name": "Paveway II (Mk.18) 1000 lb",
       "type": "guided-bomb",
       "guidance": "Laser",
-      "source": "https://wiki.warthunder.com/collections/weapon/paveway_ii"
+      "source": "https://wiki.warthunder.com/collections/weapon/paveway_ii",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/guided_bomb_large_laser.png",
+      "icon": "/icon/weapon-wiki/guided_bomb_large_laser.png"
     },
     "w-421dc5abee95d73c": {
       "name": "SALGR M-16D",
       "type": "agm",
       "guidance": "Laser+IOG",
-      "source": "https://wiki.warthunder.com/unit/j_22m1a"
+      "source": "https://wiki.warthunder.com/unit/j_22m1a",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/nar_he_special.png",
+      "icon": "/icon/weapon-wiki/nar_he_special.png"
     },
     "w-42a4c61997216a93": {
       "name": "SRAAM",
       "type": "aam",
       "guidance": "IR",
-      "source": "https://wiki.warthunder.com/unit/harrier_gr1"
+      "source": "https://wiki.warthunder.com/unit/harrier_gr1",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_air_to_air.png",
+      "icon": "/icon/weapon-wiki/missile_air_to_air.png"
     },
     "w-443dc820a8e6799a": {
       "name": "AIM-9L/I Sidewinder",
       "type": "aam",
       "guidance": "IR",
-      "source": "https://wiki.warthunder.com/collections/weapon/aim9li_sidewinder"
+      "source": "https://wiki.warthunder.com/collections/weapon/aim9li_sidewinder",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_type_f_air_to_air.png",
+      "icon": "/icon/weapon-wiki/missile_type_f_air_to_air.png"
     },
     "w-4466f48679867ccb": {
       "name": "GBU-48 Paveway II",
       "type": "guided-bomb",
       "guidance": "Laser+IOG+GNSS",
-      "source": "https://wiki.warthunder.com/collections/weapon/paveway_ii"
+      "source": "https://wiki.warthunder.com/collections/weapon/paveway_ii",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/guided_bomb_large_laser.png",
+      "icon": "/icon/weapon-wiki/guided_bomb_large_laser.png"
     },
     "w-45694751f2ed25c5": {
       "name": "Matra Super 530D",
       "type": "aam",
       "guidance": "SARH",
-      "source": "https://wiki.warthunder.com/collections/weapon/r530"
+      "source": "https://wiki.warthunder.com/collections/weapon/r530",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_air_to_air_midrange_special.png",
+      "icon": "/icon/weapon-wiki/missile_air_to_air_midrange_special.png"
     },
     "w-4599749d472efb7e": {
       "name": "Semi-Active Laser mode Brimstone",
       "type": "agm",
       "guidance": "Laser+IOG",
-      "source": "https://wiki.warthunder.com/collections/weapon/brimstone"
+      "source": "https://wiki.warthunder.com/collections/weapon/brimstone",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_air_to_uni_middle_x3.png",
+      "icon": "/icon/weapon-wiki/missile_air_to_uni_middle_x3.png"
     },
     "w-47063594cfe8fea4": {
       "name": "Kh-58U B",
       "type": "arm",
       "guidance": "SARH",
-      "source": "https://wiki.warthunder.com/collections/weapon/kh_58"
+      "source": "https://wiki.warthunder.com/collections/weapon/kh_58",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/arm_type_b.png",
+      "icon": "/icon/weapon-wiki/arm_type_b.png"
     },
     "w-474460664966ab9e": {
       "name": "AIM-9D Sidewinder",
       "type": "aam",
       "guidance": "IR",
-      "source": "https://wiki.warthunder.com/collections/weapon/aim9d_sidewinder"
+      "source": "https://wiki.warthunder.com/collections/weapon/aim9d_sidewinder",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_air_to_air.png",
+      "icon": "/icon/weapon-wiki/missile_air_to_air.png"
     },
     "w-47cf345a2a33b5fb": {
       "name": "Skyflash SuperTEMP",
       "type": "aam",
       "guidance": "SARH",
-      "source": "https://wiki.warthunder.com/collections/weapon/skyflash"
+      "source": "https://wiki.warthunder.com/collections/weapon/skyflash",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_air_to_air_midrange_group_x4.png",
+      "icon": "/icon/weapon-wiki/missile_air_to_air_midrange_group_x4.png"
     },
     "w-49d0e9ba89c6e009": {
       "name": "GBU-38 JDAM",
       "type": "guided-bomb",
       "guidance": "GNSS",
-      "source": "https://wiki.warthunder.com/collections/weapon/jdam"
+      "source": "https://wiki.warthunder.com/collections/weapon/jdam",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/guided_bomb_small_jdam.png",
+      "icon": "/icon/weapon-wiki/guided_bomb_small_jdam.png"
     },
     "w-49da0659ecb38d9c": {
       "name": "Fire Snake 90A",
       "type": "agm",
       "guidance": "Laser",
-      "source": "https://wiki.warthunder.com/unit/jf_17"
+      "source": "https://wiki.warthunder.com/unit/jf_17",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/nar_he_large.png",
+      "icon": "/icon/weapon-wiki/nar_he_large.png"
     },
     "w-4b7334b4e92c3ca9": {
       "name": "RVV-SD",
       "type": "aam",
       "guidance": "ARH+IOG+DL",
-      "source": "https://wiki.warthunder.com/collections/weapon/r_77"
+      "source": "https://wiki.warthunder.com/collections/weapon/r_77",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_type_f_air_to_air_midrange.png",
+      "icon": "/icon/weapon-wiki/missile_type_f_air_to_air_midrange.png"
     },
     "w-4c8eb14ada72851a": {
       "name": "Kh-29T",
       "type": "agm",
       "guidance": "TV",
-      "source": "https://wiki.warthunder.com/collections/weapon/kh29"
+      "source": "https://wiki.warthunder.com/collections/weapon/kh29",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/guided_bomb_red.png",
+      "icon": "/icon/weapon-wiki/guided_bomb_red.png"
     },
     "w-4d38841828272a4e": {
       "name": "A-91",
       "type": "aam",
       "guidance": "IR",
-      "source": "https://wiki.warthunder.com/collections/weapon/r3_missile"
+      "source": "https://wiki.warthunder.com/collections/weapon/r3_missile",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_air_to_air.png",
+      "icon": "/icon/weapon-wiki/missile_air_to_air.png"
     },
     "w-4dd5010fe430f68f": {
       "name": "R-77-1",
       "type": "aam",
       "guidance": "ARH+IOG+DL",
-      "source": "https://wiki.warthunder.com/collections/weapon/r_77"
+      "source": "https://wiki.warthunder.com/collections/weapon/r_77",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_type_f_air_to_air_midrange.png",
+      "icon": "/icon/weapon-wiki/missile_type_f_air_to_air_midrange.png"
     },
     "w-4e1b9a3fe6e9e1ae": {
       "name": "RB 74(M)",
       "type": "aam",
       "guidance": "IR",
-      "source": "https://wiki.warthunder.com/collections/weapon/aim9li_sidewinder"
+      "source": "https://wiki.warthunder.com/collections/weapon/aim9li_sidewinder",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_type_f_air_to_air.png",
+      "icon": "/icon/weapon-wiki/missile_type_f_air_to_air.png"
     },
     "w-4e2a0764fcd5119e": {
       "name": "500 kg UPAB-500B",
       "type": "guided-bomb",
       "guidance": "GNSS",
-      "source": "https://wiki.warthunder.com/unit/su_30sm"
+      "source": "https://wiki.warthunder.com/unit/su_30sm",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/guided_bomb_large_jdam.png",
+      "icon": "/icon/weapon-wiki/guided_bomb_large_jdam.png"
     },
     "w-4fe25f95f364c07f": {
       "name": "AS-30L Nord",
       "type": "agm",
       "guidance": "Laser+IOG",
-      "source": "https://wiki.warthunder.com/collections/weapon/as_30"
+      "source": "https://wiki.warthunder.com/collections/weapon/as_30",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_air_to_uni.png",
+      "icon": "/icon/weapon-wiki/missile_air_to_uni.png"
     },
     "w-50f24b756af3bf7b": {
       "name": "AGM-88A HARM",
       "type": "arm",
       "guidance": "SARH+IOG",
-      "source": "https://wiki.warthunder.com/collections/weapon/agm_88"
+      "source": "https://wiki.warthunder.com/collections/weapon/agm_88",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/arm_type_s.png",
+      "icon": "/icon/weapon-wiki/arm_type_s.png"
     },
     "w-510434f34e8d63d5": {
       "name": "AS-37 L Martel",
       "type": "arm",
       "guidance": "SARH",
-      "source": "https://wiki.warthunder.com/collections/weapon/as_37"
+      "source": "https://wiki.warthunder.com/collections/weapon/as_37",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/arm_type_b.png",
+      "icon": "/icon/weapon-wiki/arm_type_b.png"
     },
     "w-52dd65f9e41af4ee": {
       "name": "AGR-20A (APKWS II M151)",
       "type": "guided-rocket",
       "guidance": "Laser",
-      "source": "https://wiki.warthunder.com/collections/weapon/apkws_missile"
+      "source": "https://wiki.warthunder.com/collections/weapon/apkws_missile",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/nar_he_small.png",
+      "icon": "/icon/weapon-wiki/nar_he_small.png"
     },
     "w-53195dcce8eafb15": {
       "name": "HS 293 A-1",
       "type": "guided-bomb",
       "guidance": "Manual (MCLOS)",
-      "source": "https://wiki.warthunder.com/unit/he-177a-3"
+      "source": "https://wiki.warthunder.com/unit/he-177a-3",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/guided_missile_air_to_surface.png",
+      "icon": "/icon/weapon-wiki/guided_missile_air_to_surface.png"
     },
     "w-53299cd7834cac06": {
       "name": "LS-6(IR) 250",
       "type": "guided-bomb",
       "guidance": "IR+IOG+GNSS",
-      "source": "https://wiki.warthunder.com/unit/j_10a"
+      "source": "https://wiki.warthunder.com/unit/j_10a",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/glide_guided_bomb_middle_ljdam.png",
+      "icon": "/icon/weapon-wiki/glide_guided_bomb_middle_ljdam.png"
     },
     "w-55155112fd245085": {
       "name": "Delilah (ARM)",
       "type": "arm",
       "guidance": "SARH+IOG",
-      "source": "https://wiki.warthunder.com/unit/f-4e_kurnass_2000"
+      "source": "https://wiki.warthunder.com/unit/f-4e_kurnass_2000",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/guided_bomb_delilah_arm.png",
+      "icon": "/icon/weapon-wiki/guided_bomb_delilah_arm.png"
     },
     "w-5562ec59c80bf827": {
       "name": "GBU-27 Paveway III",
       "type": "guided-bomb",
       "guidance": "Laser",
-      "source": "https://wiki.warthunder.com/collections/weapon/paveway_iii"
+      "source": "https://wiki.warthunder.com/collections/weapon/paveway_iii",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/guided_bomb_heavy_middle_laser.png",
+      "icon": "/icon/weapon-wiki/guided_bomb_heavy_middle_laser.png"
     },
     "w-55795da6b704e5af": {
       "name": "PC 1400 X (Fritz X)",
       "type": "guided-bomb",
       "guidance": "Manual (MCLOS)",
-      "source": "https://wiki.warthunder.com/collections/weapon/fritz_x"
+      "source": "https://wiki.warthunder.com/collections/weapon/fritz_x",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/bombs_guided.png",
+      "icon": "/icon/weapon-wiki/bombs_guided.png"
     },
     "w-575ec887541d3581": {
       "name": "RB 99",
       "type": "aam",
       "guidance": "ARH+IOG+DL",
-      "source": "https://wiki.warthunder.com/collections/weapon/aim120_amraam"
+      "source": "https://wiki.warthunder.com/collections/weapon/aim120_amraam",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_type_f_air_to_air_midrange.png",
+      "icon": "/icon/weapon-wiki/missile_type_f_air_to_air_midrange.png"
     },
     "w-587eeedd6ee0a0fc": {
       "name": "AGM-122 Sidearm",
       "type": "arm",
       "guidance": "SARH",
-      "source": "https://wiki.warthunder.com/collections/weapon/agm_122"
+      "source": "https://wiki.warthunder.com/collections/weapon/agm_122",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/arm_type_f.png",
+      "icon": "/icon/weapon-wiki/arm_type_f.png"
     },
     "w-598696986d775d0d": {
       "name": "GBU-54B LJDAM",
       "type": "guided-bomb",
       "guidance": "Laser+IOG+GNSS",
-      "source": "https://wiki.warthunder.com/collections/weapon/jdam"
+      "source": "https://wiki.warthunder.com/collections/weapon/jdam",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/guided_bomb_small_jdam.png",
+      "icon": "/icon/weapon-wiki/guided_bomb_small_jdam.png"
     },
     "w-59b1ebe5dfc70d21": {
       "name": "Kh-58UShK",
       "type": "arm",
       "guidance": "SARH+IOG",
-      "source": "https://wiki.warthunder.com/collections/weapon/kh_58"
+      "source": "https://wiki.warthunder.com/collections/weapon/kh_58",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/arm_type_c.png",
+      "icon": "/icon/weapon-wiki/arm_type_c.png"
     },
     "w-5a22fcb4b77a3810": {
       "name": "AIM-7M Sparrow",
       "type": "aam",
       "guidance": "SARH",
-      "source": "https://wiki.warthunder.com/collections/weapon/aim7_sparrow"
+      "source": "https://wiki.warthunder.com/collections/weapon/aim7_sparrow",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_type_b_air_to_air_midrange.png",
+      "icon": "/icon/weapon-wiki/missile_type_b_air_to_air_midrange.png"
     },
     "w-5a578210d24ff6f8": {
       "name": "Aspide-1A",
       "type": "aam",
       "guidance": "SARH",
-      "source": "https://wiki.warthunder.com/unit/f-104s_asa"
+      "source": "https://wiki.warthunder.com/unit/f-104s_asa",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_air_to_air_midrange_special.png",
+      "icon": "/icon/weapon-wiki/missile_air_to_air_midrange_special.png"
     },
     "w-5fe4626aae9e229c": {
       "name": "R-24R",
       "type": "aam",
       "guidance": "SARH+IOG",
-      "source": "https://wiki.warthunder.com/unit/mig_23ml"
+      "source": "https://wiki.warthunder.com/unit/mig_23ml",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_air_to_air_midrange_special.png",
+      "icon": "/icon/weapon-wiki/missile_air_to_air_midrange_special.png"
     },
     "w-60ad90504a9f885d": {
       "name": "Flz Lwf LB 82",
       "type": "agm",
       "guidance": "TV",
-      "source": "https://wiki.warthunder.com/collections/weapon/agm65_maverick"
+      "source": "https://wiki.warthunder.com/collections/weapon/agm65_maverick",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_air_to_uni.png",
+      "icon": "/icon/weapon-wiki/missile_air_to_uni.png"
     },
     "w-60bf08b3bfbffd1f": {
       "name": "SPICE 1000",
       "type": "guided-bomb",
       "guidance": "IR+IOG+GNSS",
-      "source": "https://wiki.warthunder.com/collections/weapon/spice"
+      "source": "https://wiki.warthunder.com/collections/weapon/spice",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/guided_bomb_red.png",
+      "icon": "/icon/weapon-wiki/guided_bomb_red.png"
     },
     "w-61a9334ce32a7ccc": {
       "name": "Kh-25MPU",
       "type": "arm",
       "guidance": "SARH+IOG",
-      "source": "https://wiki.warthunder.com/collections/weapon/kh25"
+      "source": "https://wiki.warthunder.com/collections/weapon/kh25",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/arm_type_c.png",
+      "icon": "/icon/weapon-wiki/arm_type_c.png"
     },
     "w-65e13ed075baef72": {
       "name": "AIM-9P Sidewinder",
       "type": "aam",
       "guidance": "IR",
-      "source": "https://wiki.warthunder.com/collections/weapon/aim9p_sidewinder"
+      "source": "https://wiki.warthunder.com/collections/weapon/aim9p_sidewinder",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_air_to_air.png",
+      "icon": "/icon/weapon-wiki/missile_air_to_air.png"
     },
     "w-6705278f3be9b0af": {
       "name": "AIM-54A Phoenix",
       "type": "aam",
       "guidance": "ARH+IOG+DL",
-      "source": "https://wiki.warthunder.com/collections/weapon/aim_54"
+      "source": "https://wiki.warthunder.com/collections/weapon/aim_54",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_air_to_air_ir_large.png",
+      "icon": "/icon/weapon-wiki/missile_air_to_air_ir_large.png"
     },
     "w-677382bf5ad86de5": {
       "name": "Kh-31PD",
       "type": "arm",
       "guidance": "SARH+IOG",
-      "source": "https://wiki.warthunder.com/collections/weapon/kh_31p"
+      "source": "https://wiki.warthunder.com/collections/weapon/kh_31p",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/arm_kh31_type_c.png",
+      "icon": "/icon/weapon-wiki/arm_kh31_type_c.png"
     },
     "w-684dceb2b5d2ca26": {
       "name": "Delilah (IR)",
       "type": "agm",
       "guidance": "IR+IOG+GNSS",
-      "source": "https://wiki.warthunder.com/unit/f-4e_kurnass_2000"
+      "source": "https://wiki.warthunder.com/unit/f-4e_kurnass_2000",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/guided_bomb_green_x59.png",
+      "icon": "/icon/weapon-wiki/guided_bomb_green_x59.png"
     },
     "w-69cec7e700cb0b0c": {
       "name": "AIM-7E-2 Sparrow (Dogfight)",
       "type": "aam",
       "guidance": "SARH",
-      "source": "https://wiki.warthunder.com/collections/weapon/aim7_sparrow"
+      "source": "https://wiki.warthunder.com/collections/weapon/aim7_sparrow",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_air_to_air_special.png",
+      "icon": "/icon/weapon-wiki/missile_air_to_air_special.png"
     },
     "w-6b3ce7ad26f30107": {
       "name": "R-24T",
       "type": "aam",
       "guidance": "IR",
-      "source": "https://wiki.warthunder.com/unit/mig_23ml"
+      "source": "https://wiki.warthunder.com/unit/mig_23ml",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_air_to_air_ir_large_special.png",
+      "icon": "/icon/weapon-wiki/missile_air_to_air_ir_large_special.png"
     },
     "w-6d6fcacb6a582e14": {
       "name": "Kh-27PS",
       "type": "arm",
       "guidance": "SARH",
-      "source": "https://wiki.warthunder.com/collections/weapon/kh_27"
+      "source": "https://wiki.warthunder.com/collections/weapon/kh_27",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/arm_type_c.png",
+      "icon": "/icon/weapon-wiki/arm_type_c.png"
     },
     "w-6d94715fcf3f016b": {
       "name": "AGM-45B-4 Shrike",
       "type": "arm",
       "guidance": "SARH",
-      "source": "https://wiki.warthunder.com/collections/weapon/agm_45"
+      "source": "https://wiki.warthunder.com/collections/weapon/agm_45",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/arm_type_c.png",
+      "icon": "/icon/weapon-wiki/arm_type_c.png"
     },
     "w-6e0d4cdfd692ebcc": {
       "name": "VRVZ-240",
       "type": "agm",
       "guidance": "TV",
-      "source": "https://wiki.warthunder.com/unit/j_22m1a"
+      "source": "https://wiki.warthunder.com/unit/j_22m1a",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_air_to_uni_smal.png",
+      "icon": "/icon/weapon-wiki/missile_air_to_uni_smal.png"
     },
     "w-6e7ae2e60ae2314c": {
       "name": "YJ-91 L113",
       "type": "arm",
       "guidance": "SARH",
-      "source": "https://wiki.warthunder.com/collections/weapon/kh_31p"
+      "source": "https://wiki.warthunder.com/collections/weapon/kh_31p",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/arm_kh31_type_f.png",
+      "icon": "/icon/weapon-wiki/arm_kh31_type_f.png"
     },
     "w-6fb4fe7e16a197e4": {
       "name": "BA-FG-230-Lizard-2",
       "type": "guided-bomb",
       "guidance": "Laser",
-      "source": "https://wiki.warthunder.com/unit/amx_a_1a_brazil"
+      "source": "https://wiki.warthunder.com/unit/amx_a_1a_brazil",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/guided_bomb_middle_laser.png",
+      "icon": "/icon/weapon-wiki/guided_bomb_middle_laser.png"
     },
     "w-704e7af50a1eb9b7": {
       "name": "Shafrir",
       "type": "aam",
       "guidance": "IR",
-      "source": "https://wiki.warthunder.com/unit/md_460_sambad"
+      "source": "https://wiki.warthunder.com/unit/md_460_sambad",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_air_to_air.png",
+      "icon": "/icon/weapon-wiki/missile_air_to_air.png"
     },
     "w-708ce1776c921801": {
       "name": "AGM-88G AARGM-ER",
       "type": "arm",
       "guidance": "SARH+IOG+GNSS",
-      "source": "https://wiki.warthunder.com/collections/weapon/agm_88"
+      "source": "https://wiki.warthunder.com/collections/weapon/agm_88",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/arm_type_c.png",
+      "icon": "/icon/weapon-wiki/arm_type_c.png"
     },
     "w-71072b0bbe98ee66": {
       "name": "GBU-24 Paveway III",
       "type": "guided-bomb",
       "guidance": "Laser",
-      "source": "https://wiki.warthunder.com/collections/weapon/paveway_iii"
+      "source": "https://wiki.warthunder.com/collections/weapon/paveway_iii",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/guided_bomb_heavy_laser.png",
+      "icon": "/icon/weapon-wiki/guided_bomb_heavy_laser.png"
     },
     "w-7389d85fc5640b9d": {
       "name": "AGM-12C Bullpup",
       "type": "agm",
       "guidance": "Manual (MCLOS)",
-      "source": "https://wiki.warthunder.com/collections/weapon/agm12_bullpup"
+      "source": "https://wiki.warthunder.com/collections/weapon/agm12_bullpup",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_air_to_uni_large.png",
+      "icon": "/icon/weapon-wiki/missile_air_to_uni_large.png"
     },
     "w-7542dadd9be99d53": {
       "name": "PL-5B",
       "type": "aam",
       "guidance": "IR",
-      "source": "https://wiki.warthunder.com/collections/weapon/pl_5"
+      "source": "https://wiki.warthunder.com/collections/weapon/pl_5",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_air_to_air.png",
+      "icon": "/icon/weapon-wiki/missile_air_to_air.png"
     },
     "w-75ab73c7d91f966f": {
       "name": "GBU-10 Paveway II",
       "type": "guided-bomb",
       "guidance": "Laser",
-      "source": "https://wiki.warthunder.com/collections/weapon/paveway_ii"
+      "source": "https://wiki.warthunder.com/collections/weapon/paveway_ii",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/guided_bomb_heavy_laser.png",
+      "icon": "/icon/weapon-wiki/guided_bomb_heavy_laser.png"
     },
     "w-75f65f2d8ffc1bcc": {
       "name": "Shafrir 2",
       "type": "aam",
       "guidance": "IR",
-      "source": "https://wiki.warthunder.com/collections/weapon/shafrir_2"
+      "source": "https://wiki.warthunder.com/collections/weapon/shafrir_2",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_air_to_air.png",
+      "icon": "/icon/weapon-wiki/missile_air_to_air.png"
     },
     "w-7a1281338a0c7fe0": {
       "name": "500 kg KAB-500LG",
       "type": "guided-bomb",
       "guidance": "Laser",
-      "source": "https://wiki.warthunder.com/collections/weapon/500kg_kab500"
+      "source": "https://wiki.warthunder.com/collections/weapon/500kg_kab500",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/guided_bomb_large_laser.png",
+      "icon": "/icon/weapon-wiki/guided_bomb_large_laser.png"
     },
     "w-7aad7ee52204461c": {
       "name": "500 kg KAB-500Kr",
       "type": "guided-bomb",
       "guidance": "TV",
-      "source": "https://wiki.warthunder.com/collections/weapon/500kg_kab500"
+      "source": "https://wiki.warthunder.com/collections/weapon/500kg_kab500",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/guided_bomb_yellow.png",
+      "icon": "/icon/weapon-wiki/guided_bomb_yellow.png"
     },
     "w-7c0fee47a8fdd4d9": {
       "name": "PGM 2000/1",
       "type": "guided-bomb",
       "guidance": "Laser+IOG",
-      "source": "https://wiki.warthunder.com/unit/mirage_2000_5f"
+      "source": "https://wiki.warthunder.com/unit/mirage_2000_5f",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/guided_bomb_heavy_jdam.png",
+      "icon": "/icon/weapon-wiki/guided_bomb_heavy_jdam.png"
     },
     "w-7c9003559e706e70": {
       "name": "Enhanced Paveway II 1000 lb",
       "type": "guided-bomb",
       "guidance": "Laser+IOG+GNSS",
-      "source": "https://wiki.warthunder.com/collections/weapon/paveway_ii"
+      "source": "https://wiki.warthunder.com/collections/weapon/paveway_ii",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/guided_bomb_special_laser.png",
+      "icon": "/icon/weapon-wiki/guided_bomb_special_laser.png"
     },
     "w-7d296f761321dfba": {
       "name": "Kh-58UShKE",
       "type": "arm",
       "guidance": "SARH+IOG",
-      "source": "https://wiki.warthunder.com/collections/weapon/kh_58"
+      "source": "https://wiki.warthunder.com/collections/weapon/kh_58",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/arm_type_c.png",
+      "icon": "/icon/weapon-wiki/arm_type_c.png"
     },
     "w-7f045e8382b057d1": {
       "name": "AASM 250 HAMMER (SBU 38)",
       "type": "guided-bomb",
       "guidance": "GNSS",
-      "source": "https://wiki.warthunder.com/collections/weapon/hammer"
+      "source": "https://wiki.warthunder.com/collections/weapon/hammer",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_air_to_uni.png",
+      "icon": "/icon/weapon-wiki/missile_air_to_uni.png"
     },
     "w-7f05fa4b88a242e3": {
       "name": "Firestreak",
       "type": "aam",
       "guidance": "IR",
-      "source": "https://wiki.warthunder.com/collections/weapon/firestreak"
+      "source": "https://wiki.warthunder.com/collections/weapon/firestreak",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_air_to_air.png",
+      "icon": "/icon/weapon-wiki/missile_air_to_air.png"
     },
     "w-7fbe9f3602e04ad4": {
       "name": "AIM-120D AMRAAM",
       "type": "aam",
       "guidance": "ARH+IOG+GNSS+DL",
-      "source": "https://wiki.warthunder.com/collections/weapon/aim120_amraam"
+      "source": "https://wiki.warthunder.com/collections/weapon/aim120_amraam",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_type_b_air_to_air_midrange.png",
+      "icon": "/icon/weapon-wiki/missile_type_b_air_to_air_midrange.png"
     },
     "w-80c1daf1d608f293": {
       "name": "PGM 2000/3",
       "type": "guided-bomb",
       "guidance": "IR+IOG",
-      "source": "https://wiki.warthunder.com/unit/mirage_2000d_rmv"
+      "source": "https://wiki.warthunder.com/unit/mirage_2000d_rmv",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/guided_bomb_grey.png",
+      "icon": "/icon/weapon-wiki/guided_bomb_grey.png"
     },
     "w-8385f1014388e610": {
       "name": "PGM 500/2",
       "type": "guided-bomb",
       "guidance": "TV+IOG",
-      "source": "https://wiki.warthunder.com/unit/mirage_2000_5f"
+      "source": "https://wiki.warthunder.com/unit/mirage_2000_5f",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/guided_bomb_yellow.png",
+      "icon": "/icon/weapon-wiki/guided_bomb_yellow.png"
     },
     "w-84177976ce6abb4c": {
       "name": "GBU-15(V)2/B",
       "type": "guided-bomb",
       "guidance": "IR",
-      "source": "https://wiki.warthunder.com/unit/f_111c_raaf"
+      "source": "https://wiki.warthunder.com/unit/f_111c_raaf",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/guided_bomb_green.png",
+      "icon": "/icon/weapon-wiki/guided_bomb_green.png"
     },
     "w-8420aa4170e0134b": {
       "name": "500 kg KAB-500L",
       "type": "guided-bomb",
       "guidance": "Laser",
-      "source": "https://wiki.warthunder.com/collections/weapon/500kg_kab500"
+      "source": "https://wiki.warthunder.com/collections/weapon/500kg_kab500",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/guided_bomb_large_laser.png",
+      "icon": "/icon/weapon-wiki/guided_bomb_large_laser.png"
     },
     "w-8540fef12e859073": {
       "name": "Kh-31P L-111",
       "type": "arm",
       "guidance": "SARH",
-      "source": "https://wiki.warthunder.com/collections/weapon/kh_31p"
+      "source": "https://wiki.warthunder.com/collections/weapon/kh_31p",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/arm_kh31_type_s.png",
+      "icon": "/icon/weapon-wiki/arm_kh31_type_s.png"
     },
     "w-86f42b708dd09ed6": {
       "name": "Grom-E2",
       "type": "guided-bomb",
       "guidance": "GNSS",
-      "source": "https://wiki.warthunder.com/unit/su_30mkm"
+      "source": "https://wiki.warthunder.com/unit/su_30mkm",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/glide_bombs_middle.png",
+      "icon": "/icon/weapon-wiki/glide_bombs_middle.png"
     },
     "w-87a07ae2f65894f3": {
       "name": "Kosava 3 TM",
       "type": "agm",
       "guidance": "TV+IOG+GNSS",
-      "source": "https://wiki.warthunder.com/unit/j_22m1a"
+      "source": "https://wiki.warthunder.com/unit/j_22m1a",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/glide_guided_bomb_heavy_middle_jdam.png",
+      "icon": "/icon/weapon-wiki/glide_guided_bomb_heavy_middle_jdam.png"
     },
     "w-8adfa10a816195eb": {
       "name": "Kh-29L",
       "type": "agm",
       "guidance": "Laser",
-      "source": "https://wiki.warthunder.com/collections/weapon/kh29"
+      "source": "https://wiki.warthunder.com/collections/weapon/kh29",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_air_to_uni_large.png",
+      "icon": "/icon/weapon-wiki/missile_air_to_uni_large.png"
     },
     "w-8bb0ba97683dac38": {
       "name": "MICA-EM",
       "type": "aam",
       "guidance": "ARH+IOG+DL",
-      "source": "https://wiki.warthunder.com/unit/mirage_2000_5eg_mk2_greece"
+      "source": "https://wiki.warthunder.com/unit/mirage_2000_5eg_mk2_greece",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_type_f_air_to_air_midrange.png",
+      "icon": "/icon/weapon-wiki/missile_type_f_air_to_air_midrange.png"
     },
     "w-8bb3c3efb86741ee": {
       "name": "AIM-9L/I-1 Sidewinder",
       "type": "aam",
       "guidance": "IR",
-      "source": "https://wiki.warthunder.com/collections/weapon/aim9li_sidewinder"
+      "source": "https://wiki.warthunder.com/collections/weapon/aim9li_sidewinder",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_type_b_air_to_air.png",
+      "icon": "/icon/weapon-wiki/missile_type_b_air_to_air.png"
     },
     "w-8cbd9accb9a2eda8": {
       "name": "RB 75",
       "type": "agm",
       "guidance": "TV",
-      "source": "https://wiki.warthunder.com/collections/weapon/agm65_maverick"
+      "source": "https://wiki.warthunder.com/collections/weapon/agm65_maverick",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_air_to_uni.png",
+      "icon": "/icon/weapon-wiki/missile_air_to_uni.png"
     },
     "w-8d2ddc041fc6a107": {
       "name": "Matra R550 Magic 1",
       "type": "aam",
       "guidance": "IR",
-      "source": "https://wiki.warthunder.com/collections/weapon/r550_magic_1"
+      "source": "https://wiki.warthunder.com/collections/weapon/r550_magic_1",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_type_b_air_to_air.png",
+      "icon": "/icon/weapon-wiki/missile_type_b_air_to_air.png"
     },
     "w-8d4018fc2f3bf7ed": {
       "name": "Kh-58U C",
       "type": "arm",
       "guidance": "SARH",
-      "source": "https://wiki.warthunder.com/collections/weapon/kh_58"
+      "source": "https://wiki.warthunder.com/collections/weapon/kh_58",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/arm_type_f.png",
+      "icon": "/icon/weapon-wiki/arm_type_f.png"
     },
     "w-8e1271839a1df89a": {
       "name": "AAM-4",
       "type": "aam",
       "guidance": "ARH+IOG+DL",
-      "source": "https://wiki.warthunder.com/unit/f_15j_kai"
+      "source": "https://wiki.warthunder.com/unit/f_15j_kai",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_type_f_air_to_air_midrange.png",
+      "icon": "/icon/weapon-wiki/missile_type_f_air_to_air_midrange.png"
     },
     "w-8e765660e2d3b731": {
       "name": "R-73",
       "type": "aam",
       "guidance": "IR",
-      "source": "https://wiki.warthunder.com/collections/weapon/r73"
+      "source": "https://wiki.warthunder.com/collections/weapon/r73",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_type_b_air_to_air.png",
+      "icon": "/icon/weapon-wiki/missile_type_b_air_to_air.png"
     },
     "w-8ec74291aea61845": {
       "name": "AA-20 Nord",
       "type": "aam",
       "guidance": "Manual (MCLOS)",
-      "source": "https://wiki.warthunder.com/collections/weapon/aa_20"
+      "source": "https://wiki.warthunder.com/collections/weapon/aa_20",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_air_to_air_midrange.png",
+      "icon": "/icon/weapon-wiki/missile_air_to_air_midrange.png"
     },
     "w-8f008a1bfacdd54a": {
       "name": "AIM-120C-5 AMRAAM",
       "type": "aam",
       "guidance": "ARH+IOG+DL",
-      "source": "https://wiki.warthunder.com/collections/weapon/aim120_amraam"
+      "source": "https://wiki.warthunder.com/collections/weapon/aim120_amraam",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_type_f_air_to_air_midrange.png",
+      "icon": "/icon/weapon-wiki/missile_type_f_air_to_air_midrange.png"
     },
     "w-9056d94b07ae513c": {
       "name": "AIM-120A AMRAAM",
       "type": "aam",
       "guidance": "ARH+IOG+DL",
-      "source": "https://wiki.warthunder.com/collections/weapon/aim120_amraam"
+      "source": "https://wiki.warthunder.com/collections/weapon/aim120_amraam",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_air_to_air_midrange.png",
+      "icon": "/icon/weapon-wiki/missile_air_to_air_midrange.png"
     },
     "w-914d6b23a2d811ee": {
       "name": "PGM 500/3",
       "type": "guided-bomb",
       "guidance": "IR+IOG",
-      "source": "https://wiki.warthunder.com/unit/mirage_2000d_rmv"
+      "source": "https://wiki.warthunder.com/unit/mirage_2000d_rmv",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/guided_bomb_yellow.png",
+      "icon": "/icon/weapon-wiki/guided_bomb_yellow.png"
     },
     "w-91b4b8024b580af2": {
       "name": "AGM-45B-10 Shrike",
       "type": "arm",
       "guidance": "SARH",
-      "source": "https://wiki.warthunder.com/collections/weapon/agm_45"
+      "source": "https://wiki.warthunder.com/collections/weapon/agm_45",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/arm_type_b.png",
+      "icon": "/icon/weapon-wiki/arm_type_b.png"
     },
     "w-91c33c30f392fb94": {
       "name": "9K127 Vikhr",
       "type": "agm",
       "guidance": "Beam riding",
-      "source": "https://wiki.warthunder.com/collections/weapon/9m127"
+      "source": "https://wiki.warthunder.com/collections/weapon/9m127",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/atgm_type1_x8.png",
+      "icon": "/icon/weapon-wiki/atgm_type1_x8.png"
     },
     "w-947abae2679ff026": {
       "name": "AGR-20B (APKWS II M282)",
       "type": "guided-rocket",
       "guidance": "Laser",
-      "source": "https://wiki.warthunder.com/collections/weapon/apkws_missile"
+      "source": "https://wiki.warthunder.com/collections/weapon/apkws_missile",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/nar_small.png",
+      "icon": "/icon/weapon-wiki/nar_small.png"
     },
     "w-9538f279b151fd19": {
       "name": "YJ-91 L112",
       "type": "arm",
       "guidance": "SARH",
-      "source": "https://wiki.warthunder.com/collections/weapon/kh_31p"
+      "source": "https://wiki.warthunder.com/collections/weapon/kh_31p",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/arm_kh31_type_b.png",
+      "icon": "/icon/weapon-wiki/arm_kh31_type_b.png"
     },
     "w-991fd8c79a298edd": {
       "name": "KD-88",
       "type": "agm",
       "guidance": "TV+IOG+GNSS",
-      "source": "https://wiki.warthunder.com/collections/weapon/kd_88"
+      "source": "https://wiki.warthunder.com/collections/weapon/kd_88",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/guided_bomb_green_x59.png",
+      "icon": "/icon/weapon-wiki/guided_bomb_green_x59.png"
     },
     "w-9963965acae798f1": {
       "name": "BA-FG-230-Lizard-3",
       "type": "guided-bomb",
       "guidance": "Laser",
-      "source": "https://wiki.warthunder.com/unit/f-5th_thailand"
+      "source": "https://wiki.warthunder.com/unit/f-5th_thailand",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/guided_bomb_middle_laser.png",
+      "icon": "/icon/weapon-wiki/guided_bomb_middle_laser.png"
     },
     "w-9b3d9e7bcd21078d": {
       "name": "AIM-9P-4 Sidewinder",
       "type": "aam",
       "guidance": "IR",
-      "source": "https://wiki.warthunder.com/collections/weapon/aim9p_sidewinder"
+      "source": "https://wiki.warthunder.com/collections/weapon/aim9p_sidewinder",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_type_b_air_to_air.png",
+      "icon": "/icon/weapon-wiki/missile_type_b_air_to_air.png"
     },
     "w-9c0772354769dee3": {
       "name": "R-27ER",
       "type": "aam",
       "guidance": "SARH+IOG+DL",
-      "source": "https://wiki.warthunder.com/collections/weapon/r27"
+      "source": "https://wiki.warthunder.com/collections/weapon/r27",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_air_to_air_midrange_special.png",
+      "icon": "/icon/weapon-wiki/missile_air_to_air_midrange_special.png"
     },
     "w-9c4315c70fa703a6": {
       "name": "GBU-53 (SDB II)",
       "type": "guided-bomb",
       "guidance": "IR+IOG+GNSS",
-      "source": "https://wiki.warthunder.com/collections/weapon/gbu_53"
+      "source": "https://wiki.warthunder.com/collections/weapon/gbu_53",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/glide_guided_bomb_small_spice.png",
+      "icon": "/icon/weapon-wiki/glide_guided_bomb_small_spice.png"
     },
     "w-9cdaaa0f2ced4e4e": {
       "name": "LS-6 500",
       "type": "guided-bomb",
       "guidance": "GNSS",
-      "source": "https://wiki.warthunder.com/unit/j_10a"
+      "source": "https://wiki.warthunder.com/unit/j_10a",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/glide_bombs_large.png",
+      "icon": "/icon/weapon-wiki/glide_bombs_large.png"
     },
     "w-9df2cf3da432b44a": {
       "name": "Kh-38ML",
       "type": "agm",
       "guidance": "Laser+IOG+GNSS",
-      "source": "https://wiki.warthunder.com/collections/weapon/kh_38"
+      "source": "https://wiki.warthunder.com/collections/weapon/kh_38",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/guided_bomb_green.png",
+      "icon": "/icon/weapon-wiki/guided_bomb_green.png"
     },
     "w-9e7ddca6a9a28130": {
       "name": "R-3R",
       "type": "aam",
       "guidance": "SARH",
-      "source": "https://wiki.warthunder.com/collections/weapon/r3_missile"
+      "source": "https://wiki.warthunder.com/collections/weapon/r3_missile",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_air_to_air_special.png",
+      "icon": "/icon/weapon-wiki/missile_air_to_air_special.png"
     },
     "w-a0377869ddd906e5": {
       "name": "E-24-A1",
       "type": "agm",
       "guidance": "Semi-Automatic (SACLOS)",
-      "source": "https://wiki.warthunder.com/unit/j_22m1a"
+      "source": "https://wiki.warthunder.com/unit/j_22m1a",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/guided_bomb_grey.png",
+      "icon": "/icon/weapon-wiki/guided_bomb_grey.png"
     },
     "w-a147fd449fed8cca": {
       "name": "AIM-7P Sparrow",
       "type": "aam",
       "guidance": "SARH+IOG+DL",
-      "source": "https://wiki.warthunder.com/collections/weapon/aim7_sparrow"
+      "source": "https://wiki.warthunder.com/collections/weapon/aim7_sparrow",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_type_c_air_to_air_midrange.png",
+      "icon": "/icon/weapon-wiki/missile_type_c_air_to_air_midrange.png"
     },
     "w-a19da822e17dd62c": {
       "name": "AGM-154A1 JSOW",
       "type": "guided-bomb",
       "guidance": "GNSS",
-      "source": "https://wiki.warthunder.com/collections/weapon/agm_154"
+      "source": "https://wiki.warthunder.com/collections/weapon/agm_154",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/glide_bomb_default.png",
+      "icon": "/icon/weapon-wiki/glide_bomb_default.png"
     },
     "w-a1f763cc82f741d7": {
       "name": "GB250",
       "type": "guided-bomb",
       "guidance": "Laser+IOG+GNSS",
-      "source": "https://wiki.warthunder.com/unit/j_10a"
+      "source": "https://wiki.warthunder.com/unit/j_10a",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/guided_bomb_middle_laser.png",
+      "icon": "/icon/weapon-wiki/guided_bomb_middle_laser.png"
     },
     "w-a27854a0338f01dd": {
       "name": "R-27T1",
       "type": "aam",
       "guidance": "IR",
-      "source": "https://wiki.warthunder.com/collections/weapon/r27"
+      "source": "https://wiki.warthunder.com/collections/weapon/r27",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_air_to_air_ir_large_special.png",
+      "icon": "/icon/weapon-wiki/missile_air_to_air_ir_large_special.png"
     },
     "w-a341a9a979bd5e58": {
       "name": "Python 3",
       "type": "aam",
       "guidance": "IR",
-      "source": "https://wiki.warthunder.com/collections/weapon/python_3"
+      "source": "https://wiki.warthunder.com/collections/weapon/python_3",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_type_c_air_to_air.png",
+      "icon": "/icon/weapon-wiki/missile_type_c_air_to_air.png"
     },
     "w-a6925ff7fb243897": {
       "name": "GROM-B",
       "type": "agm",
       "guidance": "TV",
-      "source": "https://wiki.warthunder.com/unit/j_22m1a"
+      "source": "https://wiki.warthunder.com/unit/j_22m1a",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_air_to_uni_middle.png",
+      "icon": "/icon/weapon-wiki/missile_air_to_uni_middle.png"
     },
     "w-a7c26eaa744bd9d8": {
       "name": "Flz Lwf LL 63/75 SIWA",
       "type": "aam",
       "guidance": "IR",
-      "source": "https://wiki.warthunder.com/collections/weapon/aim9e_sidewinder"
+      "source": "https://wiki.warthunder.com/collections/weapon/aim9e_sidewinder",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_air_to_air.png",
+      "icon": "/icon/weapon-wiki/missile_air_to_air.png"
     },
     "w-a7e95da9aaa2b99d": {
       "name": "PL-12",
       "type": "aam",
       "guidance": "ARH+IOG+DL",
-      "source": "https://wiki.warthunder.com/collections/weapon/pl_12"
+      "source": "https://wiki.warthunder.com/collections/weapon/pl_12",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_type_b_air_to_air_midrange.png",
+      "icon": "/icon/weapon-wiki/missile_type_b_air_to_air_midrange.png"
     },
     "w-a85bf00d7839aa36": {
       "name": "EGBU-24B Paveway III",
       "type": "guided-bomb",
       "guidance": "Laser+IOG+GNSS",
-      "source": "https://wiki.warthunder.com/collections/weapon/paveway_iii"
+      "source": "https://wiki.warthunder.com/collections/weapon/paveway_iii",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/guided_bomb_heavy_laser.png",
+      "icon": "/icon/weapon-wiki/guided_bomb_heavy_laser.png"
     },
     "w-a8d76a2aff36f9bd": {
       "name": "PL-2",
       "type": "aam",
       "guidance": "IR",
-      "source": "https://wiki.warthunder.com/collections/weapon/r3_missile"
+      "source": "https://wiki.warthunder.com/collections/weapon/r3_missile",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_air_to_air.png",
+      "icon": "/icon/weapon-wiki/missile_air_to_air.png"
     },
     "w-a90184129f175aa9": {
       "name": "FAB-250 PGB",
       "type": "guided-bomb",
       "guidance": "GNSS",
-      "source": "https://wiki.warthunder.com/unit/j_22m1a"
+      "source": "https://wiki.warthunder.com/unit/j_22m1a",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/glide_bombs_middle.png",
+      "icon": "/icon/weapon-wiki/glide_bombs_middle.png"
     },
     "w-a923fba9ef69e1bf": {
       "name": "R-60M",
       "type": "aam",
       "guidance": "IR",
-      "source": "https://wiki.warthunder.com/collections/weapon/r60m"
+      "source": "https://wiki.warthunder.com/collections/weapon/r60m",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_air_to_air.png",
+      "icon": "/icon/weapon-wiki/missile_air_to_air.png"
     },
     "w-aa175a4688eb4ca3": {
       "name": "Sedjeel",
       "type": "aam",
       "guidance": "SARH",
-      "source": "https://wiki.warthunder.com/unit/f_14a_iriaf"
+      "source": "https://wiki.warthunder.com/unit/f_14a_iriaf",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_type_c_air_to_air_midrange.png",
+      "icon": "/icon/weapon-wiki/missile_type_c_air_to_air_midrange.png"
     },
     "w-aae336d26f0eacd4": {
       "name": "PL-5EII",
       "type": "aam",
       "guidance": "IR",
-      "source": "https://wiki.warthunder.com/collections/weapon/pl_5"
+      "source": "https://wiki.warthunder.com/collections/weapon/pl_5",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_type_b_air_to_air.png",
+      "icon": "/icon/weapon-wiki/missile_type_b_air_to_air.png"
     },
     "w-aafa480558c58af2": {
       "name": "AGM-84H",
       "type": "agm",
       "guidance": "IR+IOG+GNSS",
-      "source": "https://wiki.warthunder.com/collections/weapon/agm_84_slam"
+      "source": "https://wiki.warthunder.com/collections/weapon/agm_84_slam",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_air_to_uni_large.png",
+      "icon": "/icon/weapon-wiki/missile_air_to_uni_large.png"
     },
     "w-ac1e5964e370bb45": {
       "name": "AGM-62A Walleye I",
       "type": "guided-bomb",
       "guidance": "TV",
-      "source": "https://wiki.warthunder.com/collections/weapon/agm62_walleye"
+      "source": "https://wiki.warthunder.com/collections/weapon/agm62_walleye",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/guided_bomb_red.png",
+      "icon": "/icon/weapon-wiki/guided_bomb_red.png"
     },
     "w-ad53c0cf0148d64d": {
       "name": "R-40TD",
       "type": "aam",
       "guidance": "IR",
-      "source": "https://wiki.warthunder.com/unit/mig_25pd"
+      "source": "https://wiki.warthunder.com/unit/mig_25pd",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_air_to_air_ir_large.png",
+      "icon": "/icon/weapon-wiki/missile_air_to_air_ir_large.png"
     },
     "w-adb39eef30476e4b": {
       "name": "1500 kg KAB-1500LG",
       "type": "guided-bomb",
       "guidance": "Laser",
-      "source": "https://wiki.warthunder.com/collections/weapon/1500kg_kab1500"
+      "source": "https://wiki.warthunder.com/collections/weapon/1500kg_kab1500",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/guided_bomb_heavy_laser.png",
+      "icon": "/icon/weapon-wiki/guided_bomb_heavy_laser.png"
     },
     "w-afff8222be761dd2": {
       "name": "RB27",
       "type": "aam",
       "guidance": "SARH",
-      "source": "https://wiki.warthunder.com/unit/saab_j35j"
+      "source": "https://wiki.warthunder.com/unit/saab_j35j",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_air_to_air_midrange.png",
+      "icon": "/icon/weapon-wiki/missile_air_to_air_midrange.png"
     },
     "w-b0e72886e5e30f75": {
       "name": "SPICE 250",
       "type": "guided-bomb",
       "guidance": "IR+IOG+GNSS",
-      "source": "https://wiki.warthunder.com/unit/ef_2000_aesa"
+      "source": "https://wiki.warthunder.com/unit/ef_2000_aesa",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/glide_guided_bomb_small_spice_group_x4.png",
+      "icon": "/icon/weapon-wiki/glide_guided_bomb_small_spice_group_x4.png"
     },
     "w-b232a2e95ae754a9": {
       "name": "AGM-65A",
       "type": "agm",
       "guidance": "TV",
-      "source": "https://wiki.warthunder.com/collections/weapon/agm65_maverick"
+      "source": "https://wiki.warthunder.com/collections/weapon/agm65_maverick",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_air_to_uni_x3.png",
+      "icon": "/icon/weapon-wiki/missile_air_to_uni_x3.png"
     },
     "w-b506b4f4690205b4": {
       "name": "Delilah",
       "type": "agm",
       "guidance": "TV+IOG+GNSS",
-      "source": "https://wiki.warthunder.com/unit/f-4e_kurnass_2000"
+      "source": "https://wiki.warthunder.com/unit/f-4e_kurnass_2000",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/guided_bomb_red_x59.png",
+      "icon": "/icon/weapon-wiki/guided_bomb_red_x59.png"
     },
     "w-b99a11212ede4f27": {
       "name": "Paveway II (Mk.13) 1000 lb",
       "type": "guided-bomb",
       "guidance": "Laser",
-      "source": "https://wiki.warthunder.com/collections/weapon/paveway_ii"
+      "source": "https://wiki.warthunder.com/collections/weapon/paveway_ii",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/guided_bomb_large_laser.png",
+      "icon": "/icon/weapon-wiki/guided_bomb_large_laser.png"
     },
     "w-b9a0933ccf196c6d": {
       "name": "AS-37 S Martel",
       "type": "arm",
       "guidance": "SARH",
-      "source": "https://wiki.warthunder.com/collections/weapon/as_37"
+      "source": "https://wiki.warthunder.com/collections/weapon/as_37",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/arm_type_c.png",
+      "icon": "/icon/weapon-wiki/arm_type_c.png"
     },
     "w-ba665621c2721418": {
       "name": "AGM-65B",
       "type": "agm",
       "guidance": "TV",
-      "source": "https://wiki.warthunder.com/collections/weapon/agm65_maverick"
+      "source": "https://wiki.warthunder.com/collections/weapon/agm65_maverick",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_air_to_uni.png",
+      "icon": "/icon/weapon-wiki/missile_air_to_uni.png"
     },
     "w-bad8d4217ca7110c": {
       "name": "GBU-16 Paveway II",
       "type": "guided-bomb",
       "guidance": "Laser",
-      "source": "https://wiki.warthunder.com/collections/weapon/paveway_ii"
+      "source": "https://wiki.warthunder.com/collections/weapon/paveway_ii",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/guided_bomb_large_laser.png",
+      "icon": "/icon/weapon-wiki/guided_bomb_large_laser.png"
     },
     "w-bb21d76357de762e": {
       "name": "AGM-65E2",
       "type": "agm",
       "guidance": "Laser",
-      "source": "https://wiki.warthunder.com/collections/weapon/agm65_maverick"
+      "source": "https://wiki.warthunder.com/collections/weapon/agm65_maverick",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_air_to_uni_smal.png",
+      "icon": "/icon/weapon-wiki/missile_air_to_uni_smal.png"
     },
     "w-bc40415251460841": {
       "name": "Derby",
       "type": "aam",
       "guidance": "ARH+IOG+DL",
-      "source": "https://wiki.warthunder.com/unit/f-5th_thailand"
+      "source": "https://wiki.warthunder.com/unit/f-5th_thailand",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_type_c_air_to_air_midrange.png",
+      "icon": "/icon/weapon-wiki/missile_type_c_air_to_air_midrange.png"
     },
     "w-bdfe2db342fb5c53": {
       "name": "AGM-62A Walleye I ER",
       "type": "guided-bomb",
       "guidance": "TV",
-      "source": "https://wiki.warthunder.com/collections/weapon/agm62_walleye"
+      "source": "https://wiki.warthunder.com/collections/weapon/agm62_walleye",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/guided_bomb_red.png",
+      "icon": "/icon/weapon-wiki/guided_bomb_red.png"
     },
     "w-be26bfa948b3d877": {
       "name": "AIM-9B Sidewinder",
       "type": "aam",
       "guidance": "IR",
-      "source": "https://wiki.warthunder.com/collections/weapon/aim9b_sidewinder"
+      "source": "https://wiki.warthunder.com/collections/weapon/aim9b_sidewinder",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_air_to_air.png",
+      "icon": "/icon/weapon-wiki/missile_air_to_air.png"
     },
     "w-becf7abc299fa7b8": {
       "name": "AGM-123 Skipper",
       "type": "agm",
       "guidance": "Laser",
-      "source": "https://wiki.warthunder.com/unit/a_6e_tram"
+      "source": "https://wiki.warthunder.com/unit/a_6e_tram",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/guided_bomb_large_jdam.png",
+      "icon": "/icon/weapon-wiki/guided_bomb_large_jdam.png"
     },
     "w-bf96786d8d7b9601": {
       "name": "1500 kg KAB-1500Kr",
       "type": "guided-bomb",
       "guidance": "TV",
-      "source": "https://wiki.warthunder.com/collections/weapon/1500kg_kab1500"
+      "source": "https://wiki.warthunder.com/collections/weapon/1500kg_kab1500",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/guided_bomb_grey.png",
+      "icon": "/icon/weapon-wiki/guided_bomb_grey.png"
     },
     "w-bfdd6f6f9e3d38d8": {
       "name": "R-27ER1",
       "type": "aam",
       "guidance": "SARH+IOG+DL",
-      "source": "https://wiki.warthunder.com/collections/weapon/r27"
+      "source": "https://wiki.warthunder.com/collections/weapon/r27",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_air_to_air_midrange_special.png",
+      "icon": "/icon/weapon-wiki/missile_air_to_air_midrange_special.png"
     },
     "w-c1b154c80330a6b3": {
       "name": "Matra R550 Magic 2",
       "type": "aam",
       "guidance": "IR",
-      "source": "https://wiki.warthunder.com/collections/weapon/r550_magic_2"
+      "source": "https://wiki.warthunder.com/collections/weapon/r550_magic_2",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_type_c_air_to_air.png",
+      "icon": "/icon/weapon-wiki/missile_type_c_air_to_air.png"
     },
     "w-c1e7f506b2b1ab31": {
       "name": "BGL-1000",
       "type": "guided-bomb",
       "guidance": "Laser",
-      "source": "https://wiki.warthunder.com/unit/jaguar_a"
+      "source": "https://wiki.warthunder.com/unit/jaguar_a",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/guided_bomb_heavy_laser.png",
+      "icon": "/icon/weapon-wiki/guided_bomb_heavy_laser.png"
     },
     "w-c22a35715ef91669": {
       "name": "AGM-65G",
       "type": "agm",
       "guidance": "IR",
-      "source": "https://wiki.warthunder.com/collections/weapon/agm65_maverick"
+      "source": "https://wiki.warthunder.com/collections/weapon/agm65_maverick",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_air_to_uni_smal.png",
+      "icon": "/icon/weapon-wiki/missile_air_to_uni_smal.png"
     },
     "w-c2415c6374ccfa0a": {
       "name": "PL-12A",
       "type": "aam",
       "guidance": "ARH+IOG+GNSS+DL",
-      "source": "https://wiki.warthunder.com/collections/weapon/pl_12"
+      "source": "https://wiki.warthunder.com/collections/weapon/pl_12",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_type_f_air_to_air_midrange.png",
+      "icon": "/icon/weapon-wiki/missile_type_f_air_to_air_midrange.png"
     },
     "w-c24f907778a5a0a9": {
       "name": "Rb05A",
       "type": "agm",
       "guidance": "Manual (MCLOS)",
-      "source": "https://wiki.warthunder.com/unit/saab_105oe"
+      "source": "https://wiki.warthunder.com/unit/saab_105oe",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_air_to_uni.png",
+      "icon": "/icon/weapon-wiki/missile_air_to_uni.png"
     },
     "w-c2ffb5d43d096208": {
       "name": "Matra R530E",
       "type": "aam",
       "guidance": "IR",
-      "source": "https://wiki.warthunder.com/collections/weapon/r530"
+      "source": "https://wiki.warthunder.com/collections/weapon/r530",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_air_to_air_ir_large.png",
+      "icon": "/icon/weapon-wiki/missile_air_to_air_ir_large.png"
     },
     "w-c32403e05fc3020a": {
       "name": "S-25LD",
       "type": "agm",
       "guidance": "Laser",
-      "source": "https://wiki.warthunder.com/collections/weapon/s_25"
+      "source": "https://wiki.warthunder.com/collections/weapon/s_25",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/rockets_he_large_special_laser.png",
+      "icon": "/icon/weapon-wiki/rockets_he_large_special_laser.png"
     },
     "w-c37133b0458cb4c4": {
       "name": "AIM-120B AMRAAM",
       "type": "aam",
       "guidance": "ARH+IOG+DL",
-      "source": "https://wiki.warthunder.com/collections/weapon/aim120_amraam"
+      "source": "https://wiki.warthunder.com/collections/weapon/aim120_amraam",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_air_to_air_special.png",
+      "icon": "/icon/weapon-wiki/missile_air_to_air_special.png"
     },
     "w-c3ecd962eecd8223": {
       "name": "GROM",
       "type": "agm",
       "guidance": "Semi-Automatic (SACLOS)",
-      "source": "https://wiki.warthunder.com/unit/j_22m1a"
+      "source": "https://wiki.warthunder.com/unit/j_22m1a",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/guided_bomb_yellow.png",
+      "icon": "/icon/weapon-wiki/guided_bomb_yellow.png"
     },
     "w-c6143905ea4b3e31": {
       "name": "Kh-38MTE",
       "type": "agm",
       "guidance": "IR+IOG+GNSS",
-      "source": "https://wiki.warthunder.com/collections/weapon/kh_38"
+      "source": "https://wiki.warthunder.com/collections/weapon/kh_38",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/guided_bomb_grey.png",
+      "icon": "/icon/weapon-wiki/guided_bomb_grey.png"
     },
     "w-c7a6dd8e41e6d6b7": {
       "name": "Flz Lwf 63",
       "type": "aam",
       "guidance": "IR",
-      "source": "https://wiki.warthunder.com/collections/weapon/aim9b_sidewinder"
+      "source": "https://wiki.warthunder.com/collections/weapon/aim9b_sidewinder",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_air_to_air.png",
+      "icon": "/icon/weapon-wiki/missile_air_to_air.png"
     },
     "w-c9f512317c59edb7": {
       "name": "R-23T",
       "type": "aam",
       "guidance": "IR",
-      "source": "https://wiki.warthunder.com/collections/weapon/r_23"
+      "source": "https://wiki.warthunder.com/collections/weapon/r_23",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_air_to_air_ir_large.png",
+      "icon": "/icon/weapon-wiki/missile_air_to_air_ir_large.png"
     },
     "w-ca66bbf4988e06de": {
       "name": "MAA-1 Piranha",
       "type": "aam",
       "guidance": "IR",
-      "source": "https://wiki.warthunder.com/unit/amx_a_1a_brazil"
+      "source": "https://wiki.warthunder.com/unit/amx_a_1a_brazil",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_type_b_air_to_air.png",
+      "icon": "/icon/weapon-wiki/missile_type_b_air_to_air.png"
     },
     "w-cbfb31943f139cb6": {
       "name": "Matra R511",
       "type": "aam",
       "guidance": "SARH",
-      "source": "https://wiki.warthunder.com/unit/mirage_3c"
+      "source": "https://wiki.warthunder.com/unit/mirage_3c",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_type_b_air_to_air_ir_large.png",
+      "icon": "/icon/weapon-wiki/missile_type_b_air_to_air_ir_large.png"
     },
     "w-cc357fb80d24a6a0": {
       "name": "PL-7",
       "type": "aam",
       "guidance": "IR",
-      "source": "https://wiki.warthunder.com/collections/weapon/r550_magic_1"
+      "source": "https://wiki.warthunder.com/collections/weapon/r550_magic_1",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_type_c_air_to_air.png",
+      "icon": "/icon/weapon-wiki/missile_type_c_air_to_air.png"
     },
     "w-cc47de1f6644a02c": {
       "name": "SD-10(A)",
       "type": "aam",
       "guidance": "ARH+IOG+DL",
-      "source": "https://wiki.warthunder.com/collections/weapon/pl_12"
+      "source": "https://wiki.warthunder.com/collections/weapon/pl_12",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_type_b_air_to_air_midrange.png",
+      "icon": "/icon/weapon-wiki/missile_type_b_air_to_air_midrange.png"
     },
     "w-ce945d4d02435a92": {
       "name": "GBU-38(V)2/B JDAM",
       "type": "guided-bomb",
       "guidance": "GNSS",
-      "source": "https://wiki.warthunder.com/collections/weapon/jdam"
+      "source": "https://wiki.warthunder.com/collections/weapon/jdam",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/guided_bomb_middle_jdam.png",
+      "icon": "/icon/weapon-wiki/guided_bomb_middle_jdam.png"
     },
     "w-ce94a951b16417a3": {
       "name": "GBU-22 Paveway III",
       "type": "guided-bomb",
       "guidance": "Laser",
-      "source": "https://wiki.warthunder.com/collections/weapon/paveway_iii"
+      "source": "https://wiki.warthunder.com/collections/weapon/paveway_iii",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/guided_bomb_middle_laser_group_x2.png",
+      "icon": "/icon/weapon-wiki/guided_bomb_middle_laser_group_x2.png"
     },
     "w-cf0b07834b163ce6": {
       "name": "GBU-31 JDAM",
       "type": "guided-bomb",
       "guidance": "GNSS",
-      "source": "https://wiki.warthunder.com/collections/weapon/jdam"
+      "source": "https://wiki.warthunder.com/collections/weapon/jdam",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/guided_bomb_heavy_jdam.png",
+      "icon": "/icon/weapon-wiki/guided_bomb_heavy_jdam.png"
     },
     "w-cf6db52fecf8a93a": {
       "name": "R-13M1",
       "type": "aam",
       "guidance": "IR",
-      "source": "https://wiki.warthunder.com/collections/weapon/r_13m1"
+      "source": "https://wiki.warthunder.com/collections/weapon/r_13m1",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_air_to_air.png",
+      "icon": "/icon/weapon-wiki/missile_air_to_air.png"
     },
     "w-cff6eb8beb4f77da": {
       "name": "RVV-AE",
       "type": "aam",
       "guidance": "ARH+IOG+DL",
-      "source": "https://wiki.warthunder.com/collections/weapon/r_77"
+      "source": "https://wiki.warthunder.com/collections/weapon/r_77",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_type_f_air_to_air_midrange.png",
+      "icon": "/icon/weapon-wiki/missile_type_f_air_to_air_midrange.png"
     },
     "w-d0cb8be8ab8c7d66": {
       "name": "Kh-29TD",
       "type": "agm",
       "guidance": "TV",
-      "source": "https://wiki.warthunder.com/collections/weapon/kh29"
+      "source": "https://wiki.warthunder.com/collections/weapon/kh29",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/guided_bomb_red.png",
+      "icon": "/icon/weapon-wiki/guided_bomb_red.png"
     },
     "w-d17fb67e42644086": {
       "name": "Kh-25",
       "type": "agm",
       "guidance": "Laser",
-      "source": "https://wiki.warthunder.com/collections/weapon/kh25"
+      "source": "https://wiki.warthunder.com/collections/weapon/kh25",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_air_to_uni.png",
+      "icon": "/icon/weapon-wiki/missile_air_to_uni.png"
     },
     "w-d23fbb679e6e441f": {
       "name": "AS-20 Nord",
       "type": "agm",
       "guidance": "Manual (MCLOS)",
-      "source": "https://wiki.warthunder.com/collections/weapon/as_20"
+      "source": "https://wiki.warthunder.com/collections/weapon/as_20",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_air_to_uni.png",
+      "icon": "/icon/weapon-wiki/missile_air_to_uni.png"
     },
     "w-d23ffb31a31cb722": {
       "name": "Matra R530",
       "type": "aam",
       "guidance": "SARH",
-      "source": "https://wiki.warthunder.com/collections/weapon/r530"
+      "source": "https://wiki.warthunder.com/collections/weapon/r530",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_air_to_air_special.png",
+      "icon": "/icon/weapon-wiki/missile_air_to_air_special.png"
     },
     "w-d27c052acbdd5bf8": {
       "name": "Kh-25ML",
       "type": "agm",
       "guidance": "Laser",
-      "source": "https://wiki.warthunder.com/collections/weapon/kh25"
+      "source": "https://wiki.warthunder.com/collections/weapon/kh25",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_air_to_uni_middle.png",
+      "icon": "/icon/weapon-wiki/missile_air_to_uni_middle.png"
     },
     "w-d31b7b54e8b88f74": {
       "name": "KD-88A",
       "type": "agm",
       "guidance": "IR+IOG+GNSS",
-      "source": "https://wiki.warthunder.com/collections/weapon/kd_88"
+      "source": "https://wiki.warthunder.com/collections/weapon/kd_88",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_air_to_uni_smal_x59.png",
+      "icon": "/icon/weapon-wiki/missile_air_to_uni_smal_x59.png"
     },
     "w-d3736e65983a454b": {
       "name": "GBU-15(V)22/B",
       "type": "guided-bomb",
       "guidance": "IR",
-      "source": "https://wiki.warthunder.com/unit/f_15e"
+      "source": "https://wiki.warthunder.com/unit/f_15e",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/guided_bomb_green.png",
+      "icon": "/icon/weapon-wiki/guided_bomb_green.png"
     },
     "w-d47dd8216d8753d6": {
       "name": "R-60",
       "type": "aam",
       "guidance": "IR",
-      "source": "https://wiki.warthunder.com/collections/weapon/r60"
+      "source": "https://wiki.warthunder.com/collections/weapon/r60",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_air_to_air.png",
+      "icon": "/icon/weapon-wiki/missile_air_to_air.png"
     },
     "w-d52b423b858d8443": {
       "name": "Kh-31P L-113",
       "type": "arm",
       "guidance": "SARH",
-      "source": "https://wiki.warthunder.com/collections/weapon/kh_31p"
+      "source": "https://wiki.warthunder.com/collections/weapon/kh_31p",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/arm_kh31_type_f.png",
+      "icon": "/icon/weapon-wiki/arm_kh31_type_f.png"
     },
     "w-d534e6a59ce725e8": {
       "name": "1500 kg UPAB-1500B-E",
       "type": "guided-bomb",
       "guidance": "GNSS",
-      "source": "https://wiki.warthunder.com/unit/su_30mkm"
+      "source": "https://wiki.warthunder.com/unit/su_30mkm",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/guided_bomb_heavy_middle_jdam.png",
+      "icon": "/icon/weapon-wiki/guided_bomb_heavy_middle_jdam.png"
     },
     "w-d53e98e2f28327b6": {
       "name": "PL-8",
       "type": "aam",
       "guidance": "IR",
-      "source": "https://wiki.warthunder.com/collections/weapon/python_3"
+      "source": "https://wiki.warthunder.com/collections/weapon/python_3",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_type_b_air_to_air.png",
+      "icon": "/icon/weapon-wiki/missile_type_b_air_to_air.png"
     },
     "w-d5b9080170adb351": {
       "name": "Matra Super 530F",
       "type": "aam",
       "guidance": "SARH",
-      "source": "https://wiki.warthunder.com/collections/weapon/r530"
+      "source": "https://wiki.warthunder.com/collections/weapon/r530",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_air_to_air_midrange.png",
+      "icon": "/icon/weapon-wiki/missile_air_to_air_midrange.png"
     },
     "w-d5def9b63ac9a707": {
       "name": "GBU-49 Paveway II",
       "type": "guided-bomb",
       "guidance": "Laser+IOG+GNSS",
-      "source": "https://wiki.warthunder.com/collections/weapon/paveway_ii"
+      "source": "https://wiki.warthunder.com/collections/weapon/paveway_ii",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/guided_bomb_middle_jdam.png",
+      "icon": "/icon/weapon-wiki/guided_bomb_middle_jdam.png"
     },
     "w-d7e97a9c998295b3": {
       "name": "Ruhrstahl X-4",
       "type": "aam",
       "guidance": "Manual (MCLOS)",
-      "source": "https://wiki.warthunder.com/unit/fw-190f-8"
+      "source": "https://wiki.warthunder.com/unit/fw-190f-8",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/rockets_he_large.png",
+      "icon": "/icon/weapon-wiki/rockets_he_large.png"
     },
     "w-d86f493095f7696d": {
       "name": "Kh-38MLE",
       "type": "agm",
       "guidance": "Laser+IOG+GNSS",
-      "source": "https://wiki.warthunder.com/collections/weapon/kh_38"
+      "source": "https://wiki.warthunder.com/collections/weapon/kh_38",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/guided_bomb_green.png",
+      "icon": "/icon/weapon-wiki/guided_bomb_green.png"
     },
     "w-d99389ccff7212e0": {
       "name": "GBU-62 LJDAM-ER",
       "type": "guided-bomb",
       "guidance": "Laser+IOG+GNSS",
-      "source": "https://wiki.warthunder.com/collections/weapon/jdam"
+      "source": "https://wiki.warthunder.com/collections/weapon/jdam",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/glide_guided_bomb_middle_jdam.png",
+      "icon": "/icon/weapon-wiki/glide_guided_bomb_middle_jdam.png"
     },
     "w-da1e595729ea1fa3": {
       "name": "AGM-65H",
       "type": "agm",
       "guidance": "TV",
-      "source": "https://wiki.warthunder.com/collections/weapon/agm65_maverick"
+      "source": "https://wiki.warthunder.com/collections/weapon/agm65_maverick",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_air_to_uni_large.png",
+      "icon": "/icon/weapon-wiki/missile_air_to_uni_large.png"
     },
     "w-da3ab896a1081a11": {
       "name": "Kh-58USh",
       "type": "arm",
       "guidance": "SARH+IOG",
-      "source": "https://wiki.warthunder.com/collections/weapon/kh_58"
+      "source": "https://wiki.warthunder.com/collections/weapon/kh_58",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/arm_type_s.png",
+      "icon": "/icon/weapon-wiki/arm_type_s.png"
     },
     "w-dded47203f6e3f32": {
       "name": "PGM 2000/2",
       "type": "guided-bomb",
       "guidance": "TV+IOG",
-      "source": "https://wiki.warthunder.com/unit/mirage_2000_5f"
+      "source": "https://wiki.warthunder.com/unit/mirage_2000_5f",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/guided_bomb_grey.png",
+      "icon": "/icon/weapon-wiki/guided_bomb_grey.png"
     },
     "w-de37c48ff4dc138b": {
       "name": "Kh-66",
       "type": "agm",
       "guidance": "Semi-Automatic (SACLOS)",
-      "source": "https://wiki.warthunder.com/collections/weapon/kh_23"
+      "source": "https://wiki.warthunder.com/collections/weapon/kh_23",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_air_to_uni.png",
+      "icon": "/icon/weapon-wiki/missile_air_to_uni.png"
     },
     "w-deaf9814d57f9eaa": {
       "name": "AIM-9N Sidewinder",
       "type": "aam",
       "guidance": "IR",
-      "source": "https://wiki.warthunder.com/collections/weapon/aim9j_sidewinder"
+      "source": "https://wiki.warthunder.com/collections/weapon/aim9j_sidewinder",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_type_b_air_to_air.png",
+      "icon": "/icon/weapon-wiki/missile_type_b_air_to_air.png"
     },
     "w-dfd09940046db382": {
       "name": "Kh-58U A'",
       "type": "arm",
       "guidance": "SARH",
-      "source": "https://wiki.warthunder.com/collections/weapon/kh_58"
+      "source": "https://wiki.warthunder.com/collections/weapon/kh_58",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/arm_type_s.png",
+      "icon": "/icon/weapon-wiki/arm_type_s.png"
     },
     "w-e2778e6c606a29b0": {
       "name": "250 kg KAB-250LG-E",
       "type": "guided-bomb",
       "guidance": "Laser+IOG+GNSS",
-      "source": "https://wiki.warthunder.com/unit/su_30mkm"
+      "source": "https://wiki.warthunder.com/unit/su_30mkm",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/guided_bomb_small_laser.png",
+      "icon": "/icon/weapon-wiki/guided_bomb_small_laser.png"
     },
     "w-e342bc555c774336": {
       "name": "Kh-38MT",
       "type": "agm",
       "guidance": "IR+IOG+GNSS",
-      "source": "https://wiki.warthunder.com/collections/weapon/kh_38"
+      "source": "https://wiki.warthunder.com/collections/weapon/kh_38",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/guided_bomb_grey.png",
+      "icon": "/icon/weapon-wiki/guided_bomb_grey.png"
     },
     "w-e45314c0ac35d10f": {
       "name": "LS-6 250",
       "type": "guided-bomb",
       "guidance": "GNSS",
-      "source": "https://wiki.warthunder.com/unit/j_10a"
+      "source": "https://wiki.warthunder.com/unit/j_10a",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/glide_bombs_middle.png",
+      "icon": "/icon/weapon-wiki/glide_bombs_middle.png"
     },
     "w-e6da92059a381395": {
       "name": "R-Darter",
       "type": "aam",
       "guidance": "ARH+IOG+DL",
-      "source": "https://wiki.warthunder.com/unit/saab_jas39c_south_africa"
+      "source": "https://wiki.warthunder.com/unit/saab_jas39c_south_africa",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_type_f_air_to_air_midrange.png",
+      "icon": "/icon/weapon-wiki/missile_type_f_air_to_air_midrange.png"
     },
     "w-e6f4320493ce55b5": {
       "name": "SPICE 2000",
       "type": "guided-bomb",
       "guidance": "IR+IOG+GNSS",
-      "source": "https://wiki.warthunder.com/collections/weapon/spice"
+      "source": "https://wiki.warthunder.com/collections/weapon/spice",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/guided_bomb_grey.png",
+      "icon": "/icon/weapon-wiki/guided_bomb_grey.png"
     },
     "w-e759f0ba6e70a557": {
       "name": "AIM-4F Super Falcon",
       "type": "aam",
       "guidance": "SARH",
-      "source": "https://wiki.warthunder.com/collections/weapon/aim_4"
+      "source": "https://wiki.warthunder.com/collections/weapon/aim_4",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_air_to_air_midrange.png",
+      "icon": "/icon/weapon-wiki/missile_air_to_air_midrange.png"
     },
     "w-e7dd58b06e016504": {
       "name": "R-73E",
       "type": "aam",
       "guidance": "IR",
-      "source": "https://wiki.warthunder.com/collections/weapon/r73"
+      "source": "https://wiki.warthunder.com/collections/weapon/r73",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_type_b_air_to_air.png",
+      "icon": "/icon/weapon-wiki/missile_type_b_air_to_air.png"
     },
     "w-e7ea5cd057a8cb24": {
       "name": "Kh-31P L-112",
       "type": "arm",
       "guidance": "SARH",
-      "source": "https://wiki.warthunder.com/collections/weapon/kh_31p"
+      "source": "https://wiki.warthunder.com/collections/weapon/kh_31p",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/arm_kh31_type_b.png",
+      "icon": "/icon/weapon-wiki/arm_kh31_type_b.png"
     },
     "w-e86dc6c2f1914fe7": {
       "name": "Flz Lwl LL 97 AMRAAM 120C-5",
       "type": "aam",
       "guidance": "ARH+IOG+DL",
-      "source": "https://wiki.warthunder.com/collections/weapon/aim120_amraam"
+      "source": "https://wiki.warthunder.com/collections/weapon/aim120_amraam",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_type_s_air_to_air_midrange.png",
+      "icon": "/icon/weapon-wiki/missile_type_s_air_to_air_midrange.png"
     },
     "w-e8bf4276aa3ff59c": {
       "name": "AIM-7F Sparrow",
       "type": "aam",
       "guidance": "SARH",
-      "source": "https://wiki.warthunder.com/collections/weapon/aim7_sparrow"
+      "source": "https://wiki.warthunder.com/collections/weapon/aim7_sparrow",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_air_to_air_special.png",
+      "icon": "/icon/weapon-wiki/missile_air_to_air_special.png"
     },
     "w-e8c7c33ebef7d99d": {
       "name": "S-25L",
       "type": "agm",
       "guidance": "Laser",
-      "source": "https://wiki.warthunder.com/collections/weapon/s_25"
+      "source": "https://wiki.warthunder.com/collections/weapon/s_25",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/rockets_he_large_special_laser.png",
+      "icon": "/icon/weapon-wiki/rockets_he_large_special_laser.png"
     },
     "w-e9208dd8094b0a54": {
       "name": "GBU-12 Paveway II",
       "type": "guided-bomb",
       "guidance": "Laser",
-      "source": "https://wiki.warthunder.com/collections/weapon/paveway_ii"
+      "source": "https://wiki.warthunder.com/collections/weapon/paveway_ii",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/guided_bomb_small_laser.png",
+      "icon": "/icon/weapon-wiki/guided_bomb_small_laser.png"
     },
     "w-eb721d48241060b2": {
       "name": "GBU-62 JDAM-ER",
       "type": "guided-bomb",
       "guidance": "GNSS",
-      "source": "https://wiki.warthunder.com/collections/weapon/jdam"
+      "source": "https://wiki.warthunder.com/collections/weapon/jdam",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/glide_guided_bomb_middle_jdam.png",
+      "icon": "/icon/weapon-wiki/glide_guided_bomb_middle_jdam.png"
     },
     "w-eb8cc80d0a0e4458": {
       "name": "GBU-64 JDAM-ER",
       "type": "guided-bomb",
       "guidance": "GNSS",
-      "source": "https://wiki.warthunder.com/collections/weapon/jdam"
+      "source": "https://wiki.warthunder.com/collections/weapon/jdam",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/glide_guided_bomb_heavy_middle_jdam.png",
+      "icon": "/icon/weapon-wiki/glide_guided_bomb_heavy_middle_jdam.png"
     },
     "w-edea1141434ebc74": {
       "name": "AGM-65D",
       "type": "agm",
       "guidance": "IR",
-      "source": "https://wiki.warthunder.com/collections/weapon/agm65_maverick"
+      "source": "https://wiki.warthunder.com/collections/weapon/agm65_maverick",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_air_to_uni.png",
+      "icon": "/icon/weapon-wiki/missile_air_to_uni.png"
     },
     "w-eed186ebcaf5ff3f": {
       "name": "GBU-39/B (SDB I)",
       "type": "guided-bomb",
       "guidance": "GNSS",
-      "source": "https://wiki.warthunder.com/collections/weapon/gbu_39"
+      "source": "https://wiki.warthunder.com/collections/weapon/gbu_39",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/glide_guided_bomb_small_jdam_group_x4.png",
+      "icon": "/icon/weapon-wiki/glide_guided_bomb_small_jdam_group_x4.png"
     },
     "w-ef0d5734e0aee1cd": {
       "name": "Fireflash",
       "type": "aam",
       "guidance": "Semi-Automatic (SACLOS)",
-      "source": "https://wiki.warthunder.com/unit/swift_f7"
+      "source": "https://wiki.warthunder.com/unit/swift_f7",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_type_b_air_to_air.png",
+      "iconGeneric": true,
+      "icon": "/icon/weapon-wiki/missile_type_b_air_to_air.png"
     },
     "w-efc1d2d148d6eeb2": {
       "name": "R-40RD",
       "type": "aam",
       "guidance": "SARH+IOG",
-      "source": "https://wiki.warthunder.com/unit/mig_25pd"
+      "source": "https://wiki.warthunder.com/unit/mig_25pd",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_air_to_air_midrange.png",
+      "icon": "/icon/weapon-wiki/missile_air_to_air_midrange.png"
     },
     "w-f2508af4ceb25cfe": {
       "name": "PGM 500/1",
       "type": "guided-bomb",
       "guidance": "Laser+IOG",
-      "source": "https://wiki.warthunder.com/unit/mirage_2000_5f"
+      "source": "https://wiki.warthunder.com/unit/mirage_2000_5f",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/guided_bomb_large_jdam.png",
+      "icon": "/icon/weapon-wiki/guided_bomb_large_jdam.png"
     },
     "w-f2a2e1ba61e69fb1": {
       "name": "Kh-29TE",
       "type": "agm",
       "guidance": "TV",
-      "source": "https://wiki.warthunder.com/collections/weapon/kh29"
+      "source": "https://wiki.warthunder.com/collections/weapon/kh29",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/guided_bomb_red.png",
+      "icon": "/icon/weapon-wiki/guided_bomb_red.png"
     },
     "w-f2dc8cb7c40bc2be": {
       "name": "GBU-50 Paveway II",
       "type": "guided-bomb",
       "guidance": "Laser+IOG+GNSS",
-      "source": "https://wiki.warthunder.com/collections/weapon/paveway_ii"
+      "source": "https://wiki.warthunder.com/collections/weapon/paveway_ii",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/guided_bomb_heavy_laser.png",
+      "icon": "/icon/weapon-wiki/guided_bomb_heavy_laser.png"
     },
     "w-f3053f4b69997d44": {
       "name": "AS-37 ARMAT",
       "type": "arm",
       "guidance": "SARH",
-      "source": "https://wiki.warthunder.com/collections/weapon/as_37"
+      "source": "https://wiki.warthunder.com/collections/weapon/as_37",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/arm_type_s.png",
+      "icon": "/icon/weapon-wiki/arm_type_s.png"
     },
     "w-f31ad0740e453dd7": {
       "name": "AGM-45B-9 Shrike",
       "type": "arm",
       "guidance": "SARH",
-      "source": "https://wiki.warthunder.com/collections/weapon/agm_45"
+      "source": "https://wiki.warthunder.com/collections/weapon/agm_45",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/arm_type_s.png",
+      "icon": "/icon/weapon-wiki/arm_type_s.png"
     },
     "w-f3845c82c8f581e1": {
       "name": "AIM-9M Sidewinder",
       "type": "aam",
       "guidance": "IR",
-      "source": "https://wiki.warthunder.com/collections/weapon/aim9m_sidewinder"
+      "source": "https://wiki.warthunder.com/collections/weapon/aim9m_sidewinder",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_type_b_air_to_air.png",
+      "icon": "/icon/weapon-wiki/missile_type_b_air_to_air.png"
     },
     "w-f3d717109e187d80": {
       "name": "RB24J",
       "type": "aam",
       "guidance": "IR",
-      "source": "https://wiki.warthunder.com/collections/weapon/aim9p_sidewinder"
+      "source": "https://wiki.warthunder.com/collections/weapon/aim9p_sidewinder",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_type_b_air_to_air.png",
+      "icon": "/icon/weapon-wiki/missile_type_b_air_to_air.png"
     },
     "w-f56acd04b392d9c8": {
       "name": "AS-37 C Martel",
       "type": "arm",
       "guidance": "SARH",
-      "source": "https://wiki.warthunder.com/collections/weapon/as_37"
+      "source": "https://wiki.warthunder.com/collections/weapon/as_37",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/arm_type_f.png",
+      "icon": "/icon/weapon-wiki/arm_type_f.png"
     },
     "w-f89c70273ecd4672": {
       "name": "AGM-62A Walleye II ER/DL",
       "type": "guided-bomb",
       "guidance": "TV",
-      "source": "https://wiki.warthunder.com/collections/weapon/agm62_walleye"
+      "source": "https://wiki.warthunder.com/collections/weapon/agm62_walleye",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/guided_bomb_red.png",
+      "icon": "/icon/weapon-wiki/guided_bomb_red.png"
     },
     "w-f94cfb8e307364f6": {
       "name": "RB28",
       "type": "aam",
       "guidance": "IR",
-      "source": "https://wiki.warthunder.com/collections/weapon/aim_4"
+      "source": "https://wiki.warthunder.com/collections/weapon/aim_4",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_air_to_air_ir_large.png",
+      "icon": "/icon/weapon-wiki/missile_air_to_air_ir_large.png"
     },
     "w-facdd7439aab0dc0": {
       "name": "R-27R1",
       "type": "aam",
       "guidance": "SARH+IOG+DL",
-      "source": "https://wiki.warthunder.com/collections/weapon/r27"
+      "source": "https://wiki.warthunder.com/collections/weapon/r27",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_type_s_air_to_air_midrange.png",
+      "icon": "/icon/weapon-wiki/missile_type_s_air_to_air_midrange.png"
     },
     "w-fb0004f2f438ef51": {
       "name": "AASM 250 HAMMER (SBU 64)",
       "type": "guided-bomb",
       "guidance": "IR+IOG+GNSS",
-      "source": "https://wiki.warthunder.com/collections/weapon/hammer"
+      "source": "https://wiki.warthunder.com/collections/weapon/hammer",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_air_to_uni_middle.png",
+      "icon": "/icon/weapon-wiki/missile_air_to_uni_middle.png"
     },
     "w-fb1b5a80d463723d": {
       "name": "Fakour-90",
       "type": "aam",
       "guidance": "ARH+IOG+DL",
-      "source": "https://wiki.warthunder.com/unit/f_14a_iriaf"
+      "source": "https://wiki.warthunder.com/unit/f_14a_iriaf",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_type_b_air_to_air_midrange.png",
+      "icon": "/icon/weapon-wiki/missile_type_b_air_to_air_midrange.png"
     },
     "w-fbbca62b69299f2b": {
       "name": "Paveway IV",
       "type": "guided-bomb",
       "guidance": "Laser+IOG+GNSS",
-      "source": "https://wiki.warthunder.com/collections/weapon/paveway_iv"
+      "source": "https://wiki.warthunder.com/collections/weapon/paveway_iv",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/guided_bomb_middle_laser.png",
+      "icon": "/icon/weapon-wiki/guided_bomb_middle_laser.png"
     },
     "w-fbf725dd151d19e5": {
       "name": "AS-30 Nord",
       "type": "agm",
       "guidance": "Manual (MCLOS)",
-      "source": "https://wiki.warthunder.com/collections/weapon/as_30"
+      "source": "https://wiki.warthunder.com/collections/weapon/as_30",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_air_to_uni.png",
+      "icon": "/icon/weapon-wiki/missile_air_to_uni.png"
     },
     "w-fc571130adce3b32": {
       "name": "1500 kg UPAB-1500B",
       "type": "guided-bomb",
       "guidance": "GNSS",
-      "source": "https://wiki.warthunder.com/unit/su_30sm"
+      "source": "https://wiki.warthunder.com/unit/su_30sm",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/guided_bomb_heavy_middle_jdam.png",
+      "icon": "/icon/weapon-wiki/guided_bomb_heavy_middle_jdam.png"
     },
     "w-fd57a410bb9cc27c": {
       "name": "RB71 (Dogfight)",
       "type": "aam",
       "guidance": "SARH",
-      "source": "https://wiki.warthunder.com/collections/weapon/skyflash"
+      "source": "https://wiki.warthunder.com/collections/weapon/skyflash",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_air_to_air_midrange_special.png",
+      "icon": "/icon/weapon-wiki/missile_air_to_air_midrange_special.png"
     },
     "w-fe6f46f67cef9dab": {
       "name": "PL-5C",
       "type": "aam",
       "guidance": "IR",
-      "source": "https://wiki.warthunder.com/collections/weapon/pl_5"
+      "source": "https://wiki.warthunder.com/collections/weapon/pl_5",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_type_b_air_to_air.png",
+      "icon": "/icon/weapon-wiki/missile_type_b_air_to_air.png"
     },
     "w-ff7a484ce67e8b8a": {
       "name": "R-3S",
       "type": "aam",
       "guidance": "IR",
-      "source": "https://wiki.warthunder.com/collections/weapon/r3_missile"
+      "source": "https://wiki.warthunder.com/collections/weapon/r3_missile",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_air_to_air.png",
+      "icon": "/icon/weapon-wiki/missile_air_to_air.png"
     },
     "w-ff8d54f950ae215d": {
       "name": "1500 kg KAB-1500LG-E",
       "type": "guided-bomb",
       "guidance": "Laser",
-      "source": "https://wiki.warthunder.com/collections/weapon/1500kg_kab1500"
+      "source": "https://wiki.warthunder.com/collections/weapon/1500kg_kab1500",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/guided_bomb_heavy_laser.png",
+      "icon": "/icon/weapon-wiki/guided_bomb_heavy_laser.png"
     }
   },
   "aircraft": {
@@ -6526,6 +7086,7 @@
       "weapons": [
         "w-7aad7ee52204461c",
         "w-a27854a0338f01dd",
+        "w-cff6eb8beb4f77da",
         "w-e7dd58b06e016504",
         "w-facdd7439aab0dc0"
       ]
@@ -7968,6 +8529,7 @@
         "w-0afb2b7fc7509bcf",
         "w-1f1c12e792f96b94",
         "w-4e1b9a3fe6e9e1ae",
+        "w-575ec887541d3581",
         "w-71072b0bbe98ee66",
         "w-75ab73c7d91f966f",
         "w-8cbd9accb9a2eda8",
@@ -9461,6 +10023,58 @@
     "z_1007_bis_serie5": {
       "status": "verified",
       "weapons": []
+    },
+    "pending-us-f2a-1-twitch": {
+      "status": "pending-wiki",
+      "weapons": []
+    },
+    "pending-us-fa-18d": {
+      "status": "pending-wiki",
+      "weapons": []
+    },
+    "pending-us-f-15ex": {
+      "status": "pending-wiki",
+      "weapons": []
+    },
+    "pending-ru-su-15tm": {
+      "status": "pending-wiki",
+      "weapons": []
+    },
+    "pending-uk-fulmar-mk-ii": {
+      "status": "pending-wiki",
+      "weapons": []
+    },
+    "pending-jp-b-ch-4": {
+      "status": "pending-wiki",
+      "weapons": []
+    },
+    "pending-jp-b-33": {
+      "status": "pending-wiki",
+      "weapons": []
+    },
+    "pending-cn-q-5d": {
+      "status": "pending-wiki",
+      "weapons": []
+    },
+    "pending-se-jas-39-5": {
+      "status": "pending-wiki",
+      "weapons": []
+    },
+    "pending-il-f-15ia": {
+      "status": "pending-wiki",
+      "weapons": []
+    }
+  },
+  "testAdditions": {
+    "source": "https://arca.live/b/gaijin/187635726",
+    "status": "testing",
+    "aircraft": {
+      "mig-21_bison": [
+        "w-cff6eb8beb4f77da"
+      ],
+      "saab_jas39a": [
+        "w-575ec887541d3581"
+      ]
     }
   }
 }

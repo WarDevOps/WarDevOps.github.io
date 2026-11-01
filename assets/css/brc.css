@@ -67,8 +67,12 @@
 .brc-armaments { margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--line); text-align: left; }
 .brc-armaments [hidden], .brc-armaments[hidden] { display: none !important; }
 .brc-armament-list { list-style: none; margin: 8px 0; padding: 0; }
-.brc-armament-row { display: grid; grid-template-columns: 22px minmax(0, 1fr) minmax(60px, .8fr) max-content; align-items: center; gap: 8px; min-height: 36px; padding: 6px 0; border-bottom: 1px solid var(--line); font-size: .74rem; line-height: 1.35; }
-.brc-armament-icon { width: 22px; height: 22px; }
+.brc-armament-row { display: grid; grid-template-columns: 40px minmax(0, 1fr) minmax(60px, .8fr) max-content; align-items: center; gap: 8px; min-height: 44px; padding: 6px 0; border-bottom: 1px solid var(--line); font-size: .74rem; line-height: 1.35; }
+.brc-armament-toggle { display: grid; place-items: center; width: 40px; height: 40px; padding: 0; border: 1px solid var(--line); border-radius: 4px; background: transparent; cursor: pointer; }
+.brc-armament-toggle[aria-pressed=true] { border-color: var(--accent); background: var(--surface-raised); outline: 1px solid var(--accent); }
+.brc-armament-row.is-selected .brc-armament-name { font-weight: 800; }
+.brc-armament-summary { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px; margin-top: 8px; font-size: .72rem; }
+.brc-armament-icon { width: 36px; height: 36px; object-fit: contain; }
 .brc-armament-name, .brc-armament-guidance { overflow-wrap: anywhere; }
 .brc-armament-guidance { color: var(--muted); font-size: .68rem; }
 .brc-armament-br { font-variant-numeric: tabular-nums; white-space: nowrap; }
