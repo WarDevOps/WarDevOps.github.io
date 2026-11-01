@@ -3,9 +3,9 @@ const labels = {
   en: {
     title: "GUIDED WEAPONS", loading: "Loading weapons…", unknown: "Weapon information unverified.",
     partial: "Some weapon information is unverified.", empty: "No guided weapons to display in this mode.",
-    note: "Available types, not a simultaneous loadout. BR temporarily uses this aircraft’s current mode rating.",
+    note: "Each weapon shows that alone. Only the highest selected weapon penalty applies, capped at the aircraft’s mode maximum; quantity is ignored. Availability does not guarantee a valid loadout.",
     previous: "Previous", next: "Next", retry: "Retry", page: "Weapon page",
-    variableNote: "Test BR: each row shows that weapon alone. Only the highest selected weapon penalty applies, capped at the aircraft’s mode maximum; quantity is ignored. Availability does not guarantee a valid loadout.",
+    variableNote: "Each weapon shows that alone. Only the highest selected weapon penalty applies, capped at the aircraft’s mode maximum; quantity is ignored. Availability does not guarantee a valid loadout.",
     base: "Base", max: "Max", selected: "Selected", reset: "Clear weapons", select: "Select weapon for BR calculation",
     aam: "Air-to-air missile", agm: "Air-to-ground missile", arm: "Anti-radiation missile",
     "guided-bomb": "Guided bomb", "guided-rocket": "Guided rocket", Laser: "Laser",
@@ -13,9 +13,9 @@ const labels = {
   ko: {
     title: "유도무기", loading: "무장 불러오는 중…", unknown: "무장 정보 미확인",
     partial: "일부 무장 정보 미확인", empty: "표시할 유도무기 없음",
-    note: "동시 장착 조합이 아닌 종류 목록입니다. BR은 현재 모드의 항공기 BR을 임시 표시합니다.",
+    note: "각 무장은 단독 장착 기준입니다. 선택한 무장 중 가장 높은 페널티 하나만 적용하며, 항공기의 모드별 최대 BR을 넘지 않습니다. 수량은 무관하며 실제 동시 장착 가능 여부는 확인하지 않습니다.",
     previous: "이전", next: "다음", retry: "다시 시도", page: "무장 페이지",
-    variableNote: "테스트 BR · 각 행은 단독 장착 기준입니다. 선택한 무장 중 가장 높은 페널티 하나만 적용하며, 항공기의 모드별 최대 BR을 넘지 않습니다. 수량은 무관하며 실제 동시 장착 가능 여부는 확인하지 않습니다.",
+    variableNote: "각 무장은 단독 장착 기준입니다. 선택한 무장 중 가장 높은 페널티 하나만 적용하며, 항공기의 모드별 최대 BR을 넘지 않습니다. 수량은 무관하며 실제 동시 장착 가능 여부는 확인하지 않습니다.",
     base: "기본", max: "최대", selected: "선택", reset: "무장 해제", select: "BR 계산에 무장 선택",
     aam: "공대공 미사일", agm: "공대지 미사일", arm: "대레이더 미사일",
     "guided-bomb": "유도폭탄", "guided-rocket": "유도로켓", Laser: "Laser",
@@ -38,7 +38,9 @@ export function weaponsForAircraft(data, wikiId, mode, rule = null) {
       status = "partial"; return [];
     }
     return modes[mode]?.has(weapon.type) || rule?.penalties[id] > 0 ? [{ ...weapon, id }] : [];
-  }).sort((a, b) => kinds.indexOf(a.type) - kinds.indexOf(b.type)
+  }).sort((a, b) => (rule ? calculateWeaponBr({ variableBr: { [mode]: rule } }, mode, [b.id])
+    - calculateWeaponBr({ variableBr: { [mode]: rule } }, mode, [a.id]) : 0)
+    || kinds.indexOf(a.type) - kinds.indexOf(b.type)
     || a.name.localeCompare(b.name, "en", { numeric: true }));
   return { status, weapons };
 }

@@ -1,5 +1,5 @@
 import { CATEGORIES, COUNTRIES, readCatalog, visibleUnits, searchUnits, rangeColor, toTenths } from "./brc-model.js?v=highest-penalty-20261101";
-import { createArmamentPanel } from "./brc-armaments.js?v=new-units-20261101";
+import { createArmamentPanel } from "./brc-armaments.js?v=weapon-br-sort-20261101";
 import { validateVariableRatings } from "./brc-ratings.js?v=highest-penalty-20261101";
 
 const copy = {
