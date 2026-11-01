@@ -79,7 +79,7 @@ export function createArmamentPanel({ panel, popup, onLayout, onRatingChange }) 
     try {
       const [result, extra] = await Promise.all([
         "../data/aircraft-armaments.json?v=new-units-20261101",
-        "../data/ground-heli-armaments.json?v=tads-tel-20261101",
+        "../data/ground-heli-armaments.json?v=belt-icons-20261101",
       ].map(async path => {
         const response = await fetch(new URL(path, import.meta.url));
         if (!response.ok) throw new Error(`Armaments HTTP ${response.status}`);
@@ -98,11 +98,24 @@ export function createArmamentPanel({ panel, popup, onLayout, onRatingChange }) 
 
   function row(weapon, copy) {
     const item = node("li", "brc-armament-row"); item.dataset.weapon = weapon.id;
-    const icon = node("img", "brc-armament-icon");
-    if (weapon.icon) icon.src = weapon.icon;
-    else icon.style.visibility = "hidden";
-    icon.width = icon.height = 36;
-    icon.alt = copy[weapon.type] || weapon.ammoType || ""; icon.title = icon.alt;
+    const belt = weapon.type === "ammunition" && weapon.belt?.length ? weapon.belt : null;
+    const icon = node(belt ? "span" : "img", belt ? "brc-armament-belt" : "brc-armament-icon");
+    if (belt) {
+      item.classList.add("has-belt");
+      icon.style.setProperty("--belt-count", belt.length);
+      icon.setAttribute("role", "img");
+      icon.setAttribute("aria-label", belt.map(round => round.type).join(" / "));
+      icon.append(...belt.map(round => {
+        const image = node("img", ""); image.src = round.icon;
+        image.alt = ""; image.title = round.type; image.width = 24; image.height = 36;
+        return image;
+      }));
+    } else {
+      if (weapon.icon) icon.src = weapon.icon;
+      else icon.style.visibility = "hidden";
+      icon.width = icon.height = 36;
+      icon.alt = copy[weapon.type] || weapon.ammoType || ""; icon.title = icon.alt;
+    }
     const name = node("span", "brc-armament-name", weapon.name);
     const guidance = node("span", "brc-armament-guidance", weapon.guidance.split("+").map(value => copy[value] || value).join(" + "));
     const br = node("span", "brc-armament-br", `BR ${calculateWeaponBr(current.unit, current.mode, [weapon.id]).toFixed(1)}`);

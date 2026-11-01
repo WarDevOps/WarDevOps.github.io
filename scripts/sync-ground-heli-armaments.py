@@ -89,6 +89,20 @@ def parse_ground(document, wiki_id):
                     'ammoType': kind, 'gun': gun, 'source': f'{air.WIKI}/unit/{wiki_id}'}
                 if missile_guidance:
                     weapons[key]['missileGuidance'] = missile_guidance
+                if table.xpath('./thead/tr/th[normalize-space()="Belt"]'):
+                    pattern = [part.strip() for part in kind.split('/')]
+                    belt_sources = [url for url in sources if air.choose_icon(url)]
+                    if len(belt_sources) == 1 and len(set(pattern)) == 1:
+                        belt_sources *= len(pattern)
+                    if belt_sources and len(belt_sources) >= len(pattern):
+                        count = 4 if len(pattern) == 2 else len(belt_sources)
+                        weapons[key]['belt'] = [
+                            {'type': pattern[i % len(pattern)],
+                             'iconSource': belt_sources[i % len(belt_sources)],
+                             'icon': '/icon/weapon-wiki/' + belt_sources[i % len(belt_sources)].rsplit('/', 1)[-1]}
+                            for i in range(count)]
+                    else:
+                        unresolved.append({'weapon': title, 'ammunition': name, 'reason': 'Missing ordered belt icons'})
                 if icon:
                     weapons[key]['iconSource'] = icon
                 else:
@@ -182,6 +196,7 @@ def main():
     guided = {k: w for k, w in data['weapons'].items() if w['type'] != 'ammunition'}
     air.prepare_icons(guided, args.workers)
     icons = sorted({w['iconSource'] for w in data['weapons'].values() if w.get('iconSource')})
+    icons = sorted(set(icons) | {round['iconSource'] for w in data['weapons'].values() for round in w.get('belt', [])})
     with ThreadPoolExecutor(max_workers=6) as executor:
         list(executor.map(air.download_icon, icons))
     for weapon in data['weapons'].values():
