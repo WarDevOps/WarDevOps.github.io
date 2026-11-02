@@ -13,7 +13,7 @@
     "Ardennes": "2026-09-27",
     "Ash River": "2026-09-02",
     "Attica": "2026-10-14",
-    "Battle of Hürtgen Forest": "2026-10-27",
+    "Battle of Hürtgen Forest": "2026-11-03",
     "Berlin": "2026-09-11",
     "Breslau": "2026-11-03",
     "Campania": "2026-10-09",
@@ -72,7 +72,7 @@
     "Ardennes": "2026-09-27T08:14:28Z",
     "Ash River": "2026-09-01T16:50:15Z",
     "Attica": "2026-10-13T23:14:43Z",
-    "Battle of Hürtgen Forest": "2026-10-26T20:44:27Z",
+    "Battle of Hürtgen Forest": "2026-11-02T16:31:20.455Z",
     "Berlin": "2026-09-10T23:37:22Z",
     "Breslau": "2026-11-02T16:20:04Z",
     "Campania": "2026-10-09T12:12:21Z",
@@ -7641,6 +7641,12 @@
     ],
     "Battle of Hürtgen Forest::domination-2|Blue": [
       {
+        "id": "mtw67swp-yp6iyq",
+        "type": "mainBattleTank",
+        "x": 61.2,
+        "y": 18.74
+      },
+      {
         "id": "mtw68myx-2to0o2",
         "type": "tankDestroyer",
         "x": 91.52,
@@ -7665,6 +7671,13 @@
         "x": 61.01,
         "y": 6.99,
         "parentTankId": "mtw6brle-gxykch"
+      },
+      {
+        "id": "mtw6ccpg-jdlasv",
+        "type": "sniper",
+        "x": 61.2,
+        "y": 18.74,
+        "parentTankId": "mtw67swp-yp6iyq"
       },
       {
         "id": "mtw6ch7d-8r5xjg",
@@ -7700,6 +7713,32 @@
     ],
     "Battle of Hürtgen Forest::domination-2|Red": [
       {
+        "id": "mtw67mmp-9vw55z",
+        "type": "mainBattleTankRed",
+        "x": 20.61,
+        "y": 23.13
+      },
+      {
+        "id": "mtw6ga7d-qkovf6",
+        "type": "sniper",
+        "x": 20.61,
+        "y": 23.13,
+        "parentTankId": "mtw67mmp-9vw55z"
+      },
+      {
+        "id": "mu219wkg-suk072",
+        "type": "tankDestroyerRed",
+        "x": 10.3,
+        "y": 40.83
+      },
+      {
+        "id": "mu219y0j-xr3kc6",
+        "type": "sniper",
+        "x": 10.3,
+        "y": 40.83,
+        "parentTankId": "mu219wkg-suk072"
+      },
+      {
         "id": "mu21ee0f-4jc6e3",
         "type": "mainBattleTankRed",
         "x": 70.73,
@@ -7711,6 +7750,19 @@
         "x": 70.73,
         "y": 39.95,
         "parentTankId": "mu21ee0f-4jc6e3"
+      },
+      {
+        "id": "mu21gpkx-f7mlar",
+        "type": "mainBattleTankRed",
+        "x": 80.97,
+        "y": 43.87
+      },
+      {
+        "id": "mu21grbz-ftz6sh",
+        "type": "spawnKill",
+        "x": 80.97,
+        "y": 43.87,
+        "parentTankId": "mu21gpkx-f7mlar"
       }
     ],
     "Battle of Hürtgen Forest::conquest-3|Red": [],
@@ -41324,6 +41376,15 @@
         "endY": 41.41
       },
       {
+        "id": "mtw6c0y0-5duono",
+        "type": "aimHere",
+        "parentTankId": "mtw67swp-yp6iyq",
+        "startX": 61.2,
+        "startY": 18.74,
+        "endX": 12.12,
+        "endY": 56.81
+      },
+      {
         "id": "mtw6c9lg-fthj3l",
         "type": "aimHere",
         "parentTankId": "mtw6brle-gxykch",
@@ -41395,6 +41456,33 @@
       }
     ],
     "Battle of Hürtgen Forest::domination-2|Red": [
+      {
+        "id": "mu21a7xv-l62u01",
+        "type": "aimHere",
+        "parentTankId": "mu219wkg-suk072",
+        "startX": 10.3,
+        "startY": 40.83,
+        "endX": 63.02,
+        "endY": 51.45
+      },
+      {
+        "id": "mu21axkv-hl4uol",
+        "type": "aimHere",
+        "parentTankId": "mtw67mmp-9vw55z",
+        "startX": 20.61,
+        "startY": 23.13,
+        "endX": 75.28,
+        "endY": 44.63
+      },
+      {
+        "id": "mu21bmsa-nj6f72",
+        "type": "aimHere",
+        "parentTankId": "mu219wkg-suk072",
+        "startX": 10.3,
+        "startY": 40.83,
+        "endX": 75.41,
+        "endY": 45.26
+      },
       {
         "id": "mu21ctb9-uo2ngg",
         "type": "route",
@@ -41496,6 +41584,15 @@
             "y": 39.95
           }
         ]
+      },
+      {
+        "id": "mu21gtyq-tcuxkb",
+        "type": "aimHere",
+        "parentTankId": "mu21gpkx-f7mlar",
+        "startX": 80.97,
+        "startY": 43.87,
+        "endX": 88.81,
+        "endY": 48.93
       },
       {
         "id": "mu21gy6z-kjozyg",
@@ -85054,6 +85151,6 @@
     "Port Novorossiysk::battle-1|Red": [],
     "Sands of Sinai::domination-1|Blue": []
   },
-  "updatedAt": "2026-11-02T16:28:41.430Z",
+  "updatedAt": "2026-11-02T16:31:20.455Z",
   "exportedAt": "2026-11-02T16:29:46.997Z"
 }
