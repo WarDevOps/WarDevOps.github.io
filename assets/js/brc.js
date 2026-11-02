@@ -1,5 +1,5 @@
 import { CATEGORIES, COUNTRIES, readCatalog, visibleUnits, searchUnits, rangeColor, toTenths } from "./brc-model.js?v=highest-penalty-20261101";
-import { createArmamentPanel } from "./brc-armaments.js?v=belt-icons-20261101";
+import { createArmamentPanel } from "./brc-armaments.js?v=all-weapon-selection-20261103";
 import { validateVariableRatings } from "./brc-ratings.js?v=highest-penalty-20261101";
 
 const copy = {
@@ -77,7 +77,6 @@ function updateWeaponComparison(id, mode) {
   if (state.selected?.id !== id || state.mode !== mode) return;
   if (state.rangeOnly) { renderTable(); popupAnchor = buttons.get(id); }
   else paintComparison();
-  $("#brc-status").textContent = `${t("selected")}: ${state.selected.name} · ${ratingLabel(comparisonSelection())}`;
   positionPopup();
 }
 
@@ -137,7 +136,6 @@ function renderTable() {
     rows.push({ row, br, delta }); body.append(row);
   }
   table.tBodies[0].replaceChildren(body);
-  $("#brc-count").textContent = `${units.length.toLocaleString(state.language)} ${t("vehicles")}`;
   $("#brc-status").textContent = units.length ? "" : t("empty");
   paintComparison();
 }
@@ -168,9 +166,9 @@ function paintComparison() {
   $("#brc-active").textContent = reference
     ? `${preview ? t("preview") : t("pinned")} · ${reference.name} · ${ratingLabel(reference)} → ${number(Math.max(1, reference.br - 1))}–${number(reference.br + 1)}`
     : t("idle");
-  $("#brc-pinned").textContent = state.selected
-    ? `${t("pinned")}: ${state.selected.name} · ${countryName(state.selected.countryCode)} · ${ratingLabel(comparisonSelection())}${state.mode === "grb" && !state.categories.has(state.selected.category) ? ` · ${t("hiddenSelection")}` : ""}`
-    : t("idleHint");
+  $("#brc-pinned").textContent = t("idleHint");
+  const count = visibleUnits(state.units, state.mode === "arb" ? new Set(["air"]) : state.categories, reference, true).length;
+  $("#brc-count").textContent = `${state.language === "ko" ? "범위 내 장비" : "Vehicles in range"} : ${count.toLocaleString(state.language)} ${t("vehicles")}`;
   $("#brc-range-only").disabled = !state.selected;
   $("#brc-reset").disabled = !state.selected;
 }
@@ -258,7 +256,6 @@ function selectUnit(unit, fromSearch = false) {
     popupAnchor?.scrollIntoView({ block: "center", inline: "center", behavior: "instant" });
   }
   popup.hidden = false; updatePopup();
-  $("#brc-status").textContent = `${t("selected")}: ${unit.name} · ${ratingLabel(comparisonSelection())}`;
   // The non-modal panel can be dismissed by keyboard without trapping table navigation.
   $("#brc-detail-close").focus({ preventScroll: true });
 }

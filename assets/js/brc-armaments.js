@@ -119,7 +119,7 @@ export function createArmamentPanel({ panel, popup, onLayout, onRatingChange }) 
     const name = node("span", "brc-armament-name", weapon.name);
     const guidance = node("span", "brc-armament-guidance", weapon.guidance.split("+").map(value => copy[value] || value).join(" + "));
     const br = node("span", "brc-armament-br", `BR ${calculateWeaponBr(current.unit, current.mode, [weapon.id]).toFixed(1)}`);
-    if (current.unit.variableBr?.[current.mode]) {
+    {
       const toggle = node("button", "brc-armament-toggle"); toggle.type = "button";
       toggle.setAttribute("aria-pressed", String(chosen().has(weapon.id)));
       toggle.setAttribute("aria-label", `${copy.select}: ${weapon.name}`);
@@ -132,7 +132,7 @@ export function createArmamentPanel({ panel, popup, onLayout, onRatingChange }) 
       });
       item.classList.toggle("is-selected", chosen().has(weapon.id));
       item.append(toggle, name, guidance, br);
-    } else item.append(icon, name, guidance, br);
+    }
     return item;
   }
 
@@ -152,11 +152,10 @@ export function createArmamentPanel({ panel, popup, onLayout, onRatingChange }) 
     message.textContent = loading ? copy.loading : result.status === "unverified" ? copy.unknown
       : result.status === "partial" ? copy.partial : !weapons.length ? ground ? copy.ammoEmpty : copy.empty : "";
     message.hidden = !message.textContent;
-    summary.hidden = !rule;
-    if (rule) {
-      summaryText.textContent = `${copy.base} ${rule.base.toFixed(1)} · ${copy.max} ${rule.max.toFixed(1)} · ${copy.selected} BR ${calculateWeaponBr(current.unit, current.mode, chosen()).toFixed(1)}`;
-      reset.textContent = copy.reset; reset.disabled = !chosen().size;
-    }
+    summary.hidden = !weapons.length;
+    const baseBr = calculateWeaponBr(current.unit, current.mode, []);
+    summaryText.textContent = `${copy.base} ${baseBr.toFixed(1)}${rule ? ` · ${copy.max} ${rule.max.toFixed(1)}` : ""} · ${copy.selected} BR ${calculateWeaponBr(current.unit, current.mode, chosen()).toFixed(1)}`;
+    reset.textContent = copy.reset; reset.disabled = !chosen().size;
     list.hidden = !weapons.length; note.hidden = ground || !weapons.length; nav.hidden = !weapons.length;
     list.replaceChildren(...weapons.map(weapon => row(weapon, copy)));
     if (!weapons.length) return;
