@@ -117,7 +117,11 @@ export function createArmamentPanel({ panel, popup, onLayout, onRatingChange }) 
       icon.alt = copy[weapon.type] || weapon.ammoType || ""; icon.title = icon.alt;
     }
     const name = node("span", "brc-armament-name", weapon.name);
-    const guidance = node("span", "brc-armament-guidance", weapon.guidance.split("+").map(value => copy[value] || value).join(" + "));
+    const guidanceValue = weapon.missileGuidance || weapon.guidance;
+    const rounds = guidanceValue.split("/").map(value => value.trim());
+    const description = weapon.type === "ammunition" && rounds.length > 1 && rounds.every(value => value === rounds[0])
+      ? rounds[0] : guidanceValue;
+    const guidance = node("span", "brc-armament-guidance", description.split("+").map(value => copy[value] || value).join(" + "));
     const br = node("span", "brc-armament-br", `BR ${calculateWeaponBr(current.unit, current.mode, [weapon.id]).toFixed(1)}`);
     {
       const toggle = node("button", "brc-armament-toggle"); toggle.type = "button";
