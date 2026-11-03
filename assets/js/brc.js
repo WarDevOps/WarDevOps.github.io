@@ -88,6 +88,7 @@ function element(tag, className, text) {
 }
 
 function renderTable() {
+  const newUnitIds = new Set(state.catalog?.announcedVehicles?.units || []);
   state.hovered = null;
   state.focused = null;
   const units = visibleUnits(state.units, state.mode === "arb" ? new Set(["air"]) : state.categories, comparisonSelection(), state.rangeOnly);
@@ -122,6 +123,7 @@ function renderTable() {
         if (state.mode === "grb") section.append(element("span", "brc-group-label", t(category)));
         for (const unit of categoryUnits) {
           const button = element("button", "brc-unit", unit.name);
+          button.classList.toggle("is-new", newUnitIds.has(unit.wikiId));
           button.type = "button"; button.dataset.unit = unit.id;
           button.setAttribute("aria-pressed", String(state.selected?.id === unit.id));
           button.setAttribute("aria-label", `${unit.name}, ${countryName(unit.countryCode)}, ${t(category)}, ${ratingLabel(unit)}`);

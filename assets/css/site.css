@@ -413,6 +413,8 @@
     .tier-card:active { cursor: grabbing; }
     .tier-card.is-dragging { opacity: .38; }
     .tier-card.is-selected { border-color: var(--accent); box-shadow: 0 0 0 2px var(--accent); }
+    .tier-card.is-new { border-color: #70d9ff; box-shadow: inset 0 0 0 1px #70d9ff; }
+    .tier-card.is-new.is-selected { box-shadow: inset 0 0 0 1px #70d9ff, 0 0 0 2px var(--accent); }
     .tier-card img { display: block; width: 100%; height: 100%; object-fit: cover; pointer-events: none; }
     .tier-card-caption { position: absolute; z-index: 1; top: 0; right: 0; left: 0; display: flex; min-width: 0; height: 25px; padding: 4px 6px; align-items: center; gap: 6px; background: linear-gradient(90deg, rgba(5, 8, 8, .94), rgba(5, 8, 8, .78)); color: #fff; line-height: 1; pointer-events: none; }
     .tier-card .tier-card-flag { width: 25px; height: 16px; flex: 0 0 25px; border: 1px solid rgba(255,255,255,.35); border-radius: 2px; object-fit: cover; box-shadow: 0 1px 3px rgba(0,0,0,.35); }

@@ -7,6 +7,7 @@ if (tierRoot) {
   const catalogResponse = await fetch(new URL("../data/tier-units.json?v=wiki-br-20261102", import.meta.url));
   if (!catalogResponse.ok) throw new Error(`Tier catalog request failed: ${catalogResponse.status}`);
   const tierCatalog = await catalogResponse.json();
+  const NEW_UNIT_IDS = new Set(tierCatalog.announcedVehicles?.units || []);
   if (tierCatalog.battleRatingMode !== "RB") throw new Error("Tier catalog must use Realistic Battles ratings");
   const UNIT_RECORDS = Object.freeze(Object.fromEntries(
     ["tank", "air", "heli"].map(category => [category, Object.freeze(tierCatalog.categories?.[category]?.units || [])])
@@ -366,6 +367,7 @@ if (tierRoot) {
     const card = document.createElement("button");
     card.type = "button";
     card.className = "tier-card";
+    card.classList.toggle("is-new", NEW_UNIT_IDS.has(unitRecord(activeCategory, file)?.wikiId));
     card.dataset.tierItemId = id;
     card.draggable = true;
     card.title = `${name} — ${copy().dragHint}`;
