@@ -78,8 +78,8 @@ export function createArmamentPanel({ panel, popup, onLayout, onRatingChange }) 
     loading = true; failed = false; render();
     try {
       const [result, extra] = await Promise.all([
-        "../data/aircraft-armaments.json?v=new-units-20261101",
-        "../data/ground-heli-armaments.json?v=belt-icons-20261101",
+        "../data/aircraft-armaments.json?v=wiki-additions-20261104",
+        "../data/ground-heli-armaments.json?v=wiki-additions-20261104",
       ].map(async path => {
         const response = await fetch(new URL(path, import.meta.url));
         if (!response.ok) throw new Error(`Armaments HTTP ${response.status}`);

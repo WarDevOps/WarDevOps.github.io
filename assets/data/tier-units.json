@@ -5,7 +5,7 @@
   "categories": {
     "tank": {
       "source": "https://wiki.warthunder.com/ground",
-      "count": 1226,
+      "count": 1228,
       "units": [
         {
           "wikiId": "us_m2a4",
@@ -15992,12 +15992,40 @@
           "imageAvailable": false,
           "announcementSource": "https://arca.live/b/gaijin/187635726",
           "availabilityStatus": "testing"
+        },
+        {
+          "wikiId": "germ_panzerjager_panther_g2",
+          "name": "Jagdpanther G2",
+          "file": "germ_panzerjager_panther_g2.webp",
+          "countryCode": "DE",
+          "country": "Germany",
+          "rank": 4,
+          "br": 6.3,
+          "unitClass": "td",
+          "role": "Tank destroyer",
+          "source": "https://wiki.warthunder.com/unit/germ_panzerjager_panther_g2",
+          "imageSource": "https://static.encyclopedia.warthunder.com/images/germ_panzerjager_panther_g2.png",
+          "isNew": true
+        },
+        {
+          "wikiId": "sw_patria_bmp_3",
+          "name": "AMV (BMP-3)",
+          "file": "sw_patria_bmp_3.webp",
+          "countryCode": "SE",
+          "country": "Sweden",
+          "rank": 6,
+          "br": 9.3,
+          "unitClass": "lt",
+          "role": "Light tank",
+          "source": "https://wiki.warthunder.com/unit/sw_patria_bmp_3",
+          "imageSource": "https://static.encyclopedia.warthunder.com/images/sw_patria_bmp_3.png",
+          "isNew": true
         }
       ]
     },
     "air": {
       "source": "https://wiki.warthunder.com/aviation",
-      "count": 1334,
+      "count": 1336,
       "units": [
         {
           "wikiId": "p-26a_34_m2",
@@ -34725,6 +34753,36 @@
           "announcementSource": "https://arca.live/b/gaijin/187635726",
           "availabilityStatus": "testing",
           "brGround": 14.0
+        },
+        {
+          "wikiId": "bf-109e-3_tl",
+          "name": "◆Bf 109 E-3",
+          "file": "bf-109e-3_tl.webp",
+          "countryCode": "DE",
+          "country": "Germany",
+          "rank": 2,
+          "br": 2.3,
+          "unitClass": "fighter",
+          "role": "Fighter",
+          "source": "https://wiki.warthunder.com/unit/bf-109e-3_tl",
+          "imageSource": "https://static.encyclopedia.warthunder.com/images/bf-109e-3_tl.png",
+          "brGround": 2.3,
+          "isNew": true
+        },
+        {
+          "wikiId": "fw_190a_8_mistel",
+          "name": "Mistel 2",
+          "file": "fw_190a_8_mistel.webp",
+          "countryCode": "DE",
+          "country": "Germany",
+          "rank": 3,
+          "br": 4.0,
+          "unitClass": "bomber",
+          "role": "Bomber",
+          "source": "https://wiki.warthunder.com/unit/fw_190a_8_mistel",
+          "imageSource": "https://static.encyclopedia.warthunder.com/images/fw_190a_8_mistel.png",
+          "brGround": 4.0,
+          "isNew": true
         }
       ]
     },

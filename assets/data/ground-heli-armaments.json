@@ -35357,6 +35357,27 @@
         "ammo-72928969415691fc",
         "ammo-a0402045bd9d28f9"
       ]
+    },
+    "germ_panzerjager_panther_g2": {
+      "status": "verified",
+      "weapons": [
+        "ammo-4c47f5dc819c7b1d",
+        "ammo-5643f6f1c5c5174f",
+        "ammo-912ded518ad68cf6",
+        "ammo-a459c0368b31dfc0"
+      ]
+    },
+    "sw_patria_bmp_3": {
+      "status": "verified",
+      "weapons": [
+        "ammo-04cbe9ee9b2e4b8f",
+        "ammo-39093c7b1ab02855",
+        "ammo-397d438ae7a4a2da",
+        "ammo-4512495c19928200",
+        "ammo-729489175748a00a",
+        "ammo-7a0087989ea6ec42",
+        "ammo-b370a4f8dc25ffa8"
+      ]
     }
   },
   "helicopters": {

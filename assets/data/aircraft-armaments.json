@@ -10063,6 +10063,14 @@
     "pending-il-f-15ia": {
       "status": "pending-wiki",
       "weapons": []
+    },
+    "bf-109e-3_tl": {
+      "status": "verified",
+      "weapons": []
+    },
+    "fw_190a_8_mistel": {
+      "status": "verified",
+      "weapons": []
     }
   },
   "testAdditions": {

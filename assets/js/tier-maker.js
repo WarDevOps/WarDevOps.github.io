@@ -4,7 +4,7 @@ if (tierRoot) {
   const TIER_ZONES = Object.freeze(["s", "a", "b", "c", "d", "pool"]);
   const STORAGE_KEY = "maptactic-tier-maker-v1";
 
-  const catalogResponse = await fetch(new URL("../data/tier-units.json?v=wiki-br-20261102", import.meta.url));
+  const catalogResponse = await fetch(new URL("../data/tier-units.json?v=wiki-additions-20261104", import.meta.url));
   if (!catalogResponse.ok) throw new Error(`Tier catalog request failed: ${catalogResponse.status}`);
   const tierCatalog = await catalogResponse.json();
   const NEW_UNIT_IDS = new Set(tierCatalog.announcedVehicles?.units || []);
@@ -367,7 +367,7 @@ if (tierRoot) {
     const card = document.createElement("button");
     card.type = "button";
     card.className = "tier-card";
-    card.classList.toggle("is-new", NEW_UNIT_IDS.has(unitRecord(activeCategory, file)?.wikiId));
+    card.classList.toggle("is-new", NEW_UNIT_IDS.has(unitRecord(activeCategory, file)?.wikiId) || unitRecord(activeCategory, file)?.isNew === true);
     card.dataset.tierItemId = id;
     card.draggable = true;
     card.title = `${name} — ${copy().dragHint}`;

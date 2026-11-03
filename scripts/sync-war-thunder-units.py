@@ -267,6 +267,7 @@ def parse_unit(category: str, wiki_id: str, image_root: Path, download_images: b
     source_url = f"{WIKI_ROOT}/unit/{wiki_id}"
     document = fetch_document(source_url)
     name = first_text(document, "//div[contains(concat(' ', normalize-space(@class), ' '), ' game-unit_name ')][1]")
+    name = name or first_text(document, "//h1[1]")
     rank_roman, rank = rank_value(document)
     country = card_info_value(document, "Research country")
     role = card_info_value(document, "Main role")

@@ -1,5 +1,5 @@
 import { CATEGORIES, COUNTRIES, readCatalog, visibleUnits, searchUnits, rangeColor, toTenths } from "./brc-model.js?v=highest-penalty-20261101";
-import { createArmamentPanel } from "./brc-armaments.js?v=single-ammo-label-20261103";
+import { createArmamentPanel } from "./brc-armaments.js?v=wiki-additions-20261104";
 import { validateVariableRatings } from "./brc-ratings.js?v=highest-penalty-20261101";
 
 const copy = {
@@ -123,7 +123,7 @@ function renderTable() {
         if (state.mode === "grb") section.append(element("span", "brc-group-label", t(category)));
         for (const unit of categoryUnits) {
           const button = element("button", "brc-unit", unit.name);
-          button.classList.toggle("is-new", newUnitIds.has(unit.wikiId));
+          button.classList.toggle("is-new", newUnitIds.has(unit.wikiId) || unit.isNew === true);
           button.type = "button"; button.dataset.unit = unit.id;
           button.setAttribute("aria-pressed", String(state.selected?.id === unit.id));
           button.setAttribute("aria-label", `${unit.name}, ${countryName(unit.countryCode)}, ${t(category)}, ${ratingLabel(unit)}`);
@@ -328,7 +328,7 @@ async function loadCatalog() {
   try {
     // Deliberately share the Tier List catalog and its BR values; no BRC-specific copy.
     const [catalog, ratings] = await Promise.all([
-      "../data/tier-units.json?v=wiki-br-20261102", "../data/brc-variable-br.json?v=20261101",
+      "../data/tier-units.json?v=wiki-additions-20261104", "../data/brc-variable-br.json?v=20261101",
     ].map(async path => {
       const response = await fetch(new URL(path, import.meta.url));
       if (!response.ok) throw new Error(`Catalog HTTP ${response.status}`);
