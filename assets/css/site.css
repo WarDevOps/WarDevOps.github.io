@@ -197,12 +197,14 @@
     .map-tactical-summary-editor textarea:focus { border-color: var(--accent); box-shadow: 0 0 0 2px rgba(var(--accent-rgb), .11); }
     .map-tactical-summary .map-tactical-summary-editor-status { min-height: 1.2em; color: var(--red); font-size: .7rem; }
     .map-tactical-summary-editor-actions { display: flex; flex-wrap: wrap; gap: 7px; }
-    .map-meta-row { display: flex; margin-top: 13px; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
-    .map-variation-control { display: inline-flex; align-items: center; gap: 8px; }
-    .map-variation-control label { color: var(--muted); font-size: .7rem; font-weight: 800; letter-spacing: .055em; text-transform: uppercase; }
+    .map-meta-row { display: flex; margin-top: 13px; align-items: center; gap: 10px; flex-wrap: nowrap; overflow-x: auto; }
+    .map-variation-control { display: inline-flex; flex: 1 1 auto; min-width: 190px; align-items: center; gap: 8px; }
+    .map-variation-control label { flex-shrink: 0; color: var(--muted); font-size: .7rem; font-weight: 800; letter-spacing: .055em; text-transform: uppercase; white-space: nowrap; }
+    .map-meta-row > .map-battle-rating, .map-meta-row > .map-last-updated { flex-shrink: 0; }
     .viewer-top .map-battle-rating { margin: 0; padding: 6px 9px; border: 1px solid rgba(var(--accent-rgb), .34); border-radius: 999px; color: var(--accent); font-size: .72rem; font-weight: 850; letter-spacing: .035em; line-height: 1; white-space: nowrap; }
     .viewer-top .map-last-updated { margin: 0 0 0 auto; color: var(--muted); font-size: .7rem; font-weight: 750; letter-spacing: .035em; text-align: right; white-space: nowrap; }
     #map-variation, #modal-map-variation { min-width: 150px; padding: 7px 28px 7px 10px; border: 1px solid var(--line); border-radius: 8px; outline: none; background: #111719; color: var(--ink); font: inherit; font-size: .77rem; font-weight: 750; cursor: pointer; }
+    .map-meta-row #map-variation { flex: 1 1 150px; min-width: 80px; max-width: 150px; }
     #map-variation:hover, #map-variation:focus-visible, #modal-map-variation:hover, #modal-map-variation:focus-visible { border-color: #56675f; }
     .copy-link { display: inline-flex; align-items: center; justify-content: center; gap: 7px; min-width: 116px; padding: 8px 10px; border: 1px solid var(--accent); border-radius: 8px; background: rgba(var(--accent-rgb), .08); color: var(--accent); font-size: .75rem; font-weight: 750; cursor: pointer; transition: .18s; }
     .copy-link svg { width: 16px; height: 16px; }
