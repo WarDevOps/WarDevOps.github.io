@@ -51,7 +51,7 @@
     "Spaceport": "2026-11-03",
     "Stalingrad": "2026-08-25",
     "Sun City": "2026-10-27",
-    "Surroundings of Volokolamsk": "2026-09-15",
+    "Surroundings of Volokolamsk": "2026-11-07",
     "Sweden": "2026-09-27",
     "Test Site-2271": "2026-11-07",
     "Tunisia": "2026-09-17",
@@ -109,7 +109,7 @@
     "Sinai": "2026-11-06T22:16:10Z",
     "Spaceport": "2026-11-02T16:28:41Z",
     "Sun City": "2026-10-26T20:55:30Z",
-    "Surroundings of Volokolamsk": "2026-09-15T03:51:26Z",
+    "Surroundings of Volokolamsk": "2026-11-06T22:54:13Z",
     "Sweden": "2026-09-27T07:49:10Z",
     "Test Site-2271": "2026-11-06T22:14:12Z",
     "Tunisia": "2026-09-16T19:37:22Z",
@@ -24464,20 +24464,493 @@
         "parentTankId": "mudnay8k-eiv2qx"
       }
     ],
-    "Surroundings of Volokolamsk::domination-1|Blue": [],
-    "Surroundings of Volokolamsk::domination-1|Red": [
+    "Surroundings of Volokolamsk::domination-1|Blue": [
       {
-        "id": "mu24veoz-axd8ht",
+        "id": "surroundings-of-volokolamsk-ai-blue-unit-01",
         "type": "tankDestroyer",
-        "x": 66.94,
-        "y": 81.16
+        "x": 15.27,
+        "y": 4.16
       },
       {
-        "id": "mu24vgey-bfrh0r",
+        "id": "surroundings-of-volokolamsk-ai-blue-role-01",
         "type": "sniper",
-        "x": 66.94,
-        "y": 81.16,
-        "parentTankId": "mu24veoz-axd8ht"
+        "x": 15.27,
+        "y": 4.16,
+        "parentTankId": "surroundings-of-volokolamsk-ai-blue-unit-01"
+      },
+      {
+        "id": "surroundings-of-volokolamsk-ai-blue-unit-02",
+        "type": "lightTank",
+        "x": 59.55,
+        "y": 5.15
+      },
+      {
+        "id": "surroundings-of-volokolamsk-ai-blue-role-02",
+        "type": "highRiskSpot",
+        "x": 59.55,
+        "y": 5.15,
+        "parentTankId": "surroundings-of-volokolamsk-ai-blue-unit-02"
+      },
+      {
+        "id": "surroundings-of-volokolamsk-ai-blue-unit-04",
+        "type": "mainBattleTank",
+        "x": 42.01,
+        "y": 9.73
+      },
+      {
+        "id": "surroundings-of-volokolamsk-ai-blue-role-04",
+        "type": "battleLine",
+        "x": 42.01,
+        "y": 9.73,
+        "parentTankId": "surroundings-of-volokolamsk-ai-blue-unit-04"
+      },
+      {
+        "id": "surroundings-of-volokolamsk-ai-blue-unit-05",
+        "type": "mainBattleTank",
+        "x": 74.46,
+        "y": 10.93
+      },
+      {
+        "id": "surroundings-of-volokolamsk-ai-blue-role-05",
+        "type": "spawnKill",
+        "x": 74.46,
+        "y": 10.93,
+        "parentTankId": "surroundings-of-volokolamsk-ai-blue-unit-05"
+      },
+      {
+        "id": "surroundings-of-volokolamsk-ai-blue-unit-06",
+        "type": "tankDestroyer",
+        "x": 6.7,
+        "y": 18.65
+      },
+      {
+        "id": "surroundings-of-volokolamsk-ai-blue-role-06",
+        "type": "sniper",
+        "x": 6.7,
+        "y": 18.65,
+        "parentTankId": "surroundings-of-volokolamsk-ai-blue-unit-06"
+      },
+      {
+        "id": "surroundings-of-volokolamsk-ai-blue-unit-07",
+        "type": "mainBattleTank",
+        "x": 44.04,
+        "y": 21.52
+      },
+      {
+        "id": "surroundings-of-volokolamsk-ai-blue-role-07",
+        "type": "battleLine",
+        "x": 44.04,
+        "y": 21.52,
+        "parentTankId": "surroundings-of-volokolamsk-ai-blue-unit-07"
+      },
+      {
+        "id": "surroundings-of-volokolamsk-ai-blue-unit-08",
+        "type": "mainBattleTank",
+        "x": 55.02,
+        "y": 27.87
+      },
+      {
+        "id": "surroundings-of-volokolamsk-ai-blue-role-08",
+        "type": "battleLine",
+        "x": 55.02,
+        "y": 27.87,
+        "parentTankId": "surroundings-of-volokolamsk-ai-blue-unit-08"
+      },
+      {
+        "id": "surroundings-of-volokolamsk-ai-blue-unit-09",
+        "type": "tankDestroyer",
+        "x": 38.41,
+        "y": 39.92
+      },
+      {
+        "id": "surroundings-of-volokolamsk-ai-blue-role-09",
+        "type": "sniper",
+        "x": 38.41,
+        "y": 39.92,
+        "parentTankId": "surroundings-of-volokolamsk-ai-blue-unit-09"
+      },
+      {
+        "id": "surroundings-of-volokolamsk-ai-blue-unit-11",
+        "type": "mainBattleTank",
+        "x": 37.68,
+        "y": 48.66
+      },
+      {
+        "id": "surroundings-of-volokolamsk-ai-blue-role-11",
+        "type": "battleLine",
+        "x": 37.68,
+        "y": 48.66,
+        "parentTankId": "surroundings-of-volokolamsk-ai-blue-unit-11"
+      },
+      {
+        "id": "surroundings-of-volokolamsk-ai-blue-unit-12",
+        "type": "mainBattleTank",
+        "x": 40.54,
+        "y": 55.66
+      },
+      {
+        "id": "surroundings-of-volokolamsk-ai-blue-role-12",
+        "type": "battleLine",
+        "x": 40.54,
+        "y": 55.66,
+        "parentTankId": "surroundings-of-volokolamsk-ai-blue-unit-12"
+      },
+      {
+        "id": "surroundings-of-volokolamsk-ai-blue-unit-15",
+        "type": "tankDestroyer",
+        "x": 27.27,
+        "y": 59.79
+      },
+      {
+        "id": "surroundings-of-volokolamsk-ai-blue-role-15",
+        "type": "sniper",
+        "x": 27.27,
+        "y": 59.79,
+        "parentTankId": "surroundings-of-volokolamsk-ai-blue-unit-15"
+      },
+      {
+        "id": "surroundings-of-volokolamsk-ai-blue-unit-16",
+        "type": "antiAir",
+        "x": 5.61,
+        "y": 61.91
+      },
+      {
+        "id": "surroundings-of-volokolamsk-ai-blue-unit-17",
+        "type": "antiAir",
+        "x": 10.3,
+        "y": 62.05
+      },
+      {
+        "id": "surroundings-of-volokolamsk-ai-blue-unit-18",
+        "type": "tankDestroyer",
+        "x": 46.06,
+        "y": 74.2
+      },
+      {
+        "id": "surroundings-of-volokolamsk-ai-blue-role-18",
+        "type": "sniper",
+        "x": 46.06,
+        "y": 74.2,
+        "parentTankId": "surroundings-of-volokolamsk-ai-blue-unit-18"
+      },
+      {
+        "id": "surroundings-of-volokolamsk-ai-blue-unit-19",
+        "type": "mainBattleTank",
+        "x": 75.31,
+        "y": 76.24
+      },
+      {
+        "id": "surroundings-of-volokolamsk-ai-blue-role-19",
+        "type": "spawnKill",
+        "x": 75.31,
+        "y": 76.24,
+        "parentTankId": "surroundings-of-volokolamsk-ai-blue-unit-19"
+      },
+      {
+        "id": "surroundings-of-volokolamsk-ai-blue-unit-20",
+        "type": "mainBattleTank",
+        "x": 76.07,
+        "y": 79.35
+      },
+      {
+        "id": "surroundings-of-volokolamsk-ai-blue-role-20",
+        "type": "highRiskSpot",
+        "x": 76.07,
+        "y": 79.35,
+        "parentTankId": "surroundings-of-volokolamsk-ai-blue-unit-20"
+      },
+      {
+        "id": "surroundings-of-volokolamsk-ai-blue-unit-21",
+        "type": "tankDestroyer",
+        "x": 4,
+        "y": 86.46
+      },
+      {
+        "id": "surroundings-of-volokolamsk-ai-blue-role-21",
+        "type": "sniper",
+        "x": 4,
+        "y": 86.46,
+        "parentTankId": "surroundings-of-volokolamsk-ai-blue-unit-21"
+      },
+      {
+        "id": "surroundings-of-volokolamsk-ai-blue-unit-22",
+        "type": "mainBattleTank",
+        "x": 69.73,
+        "y": 95.68
+      },
+      {
+        "id": "surroundings-of-volokolamsk-ai-blue-role-22",
+        "type": "battleLine",
+        "x": 69.73,
+        "y": 95.68,
+        "parentTankId": "surroundings-of-volokolamsk-ai-blue-unit-22"
+      }
+    ],
+    "Surroundings of Volokolamsk::domination-1|Red": [
+      {
+        "id": "surroundings-of-volokolamsk-ai-red-unit-01",
+        "type": "mainBattleTankRed",
+        "x": 17.56,
+        "y": 2.7
+      },
+      {
+        "id": "surroundings-of-volokolamsk-ai-red-role-01",
+        "type": "spawnKill",
+        "x": 17.56,
+        "y": 2.7,
+        "parentTankId": "surroundings-of-volokolamsk-ai-red-unit-01"
+      },
+      {
+        "id": "surroundings-of-volokolamsk-ai-red-unit-02",
+        "type": "mainBattleTankRed",
+        "x": 49.88,
+        "y": 7.91
+      },
+      {
+        "id": "surroundings-of-volokolamsk-ai-red-role-02",
+        "type": "highRiskSpot",
+        "x": 49.88,
+        "y": 7.91,
+        "parentTankId": "surroundings-of-volokolamsk-ai-red-unit-02"
+      },
+      {
+        "id": "surroundings-of-volokolamsk-ai-red-unit-03",
+        "type": "tankDestroyerRed",
+        "x": 67.07,
+        "y": 10.57
+      },
+      {
+        "id": "surroundings-of-volokolamsk-ai-red-role-03",
+        "type": "sniper",
+        "x": 67.07,
+        "y": 10.57,
+        "parentTankId": "surroundings-of-volokolamsk-ai-red-unit-03"
+      },
+      {
+        "id": "surroundings-of-volokolamsk-ai-red-unit-04",
+        "type": "mainBattleTankRed",
+        "x": 49.36,
+        "y": 19.08
+      },
+      {
+        "id": "surroundings-of-volokolamsk-ai-red-role-04",
+        "type": "battleLine",
+        "x": 49.36,
+        "y": 19.08,
+        "parentTankId": "surroundings-of-volokolamsk-ai-red-unit-04"
+      },
+      {
+        "id": "surroundings-of-volokolamsk-ai-red-unit-05",
+        "type": "tankDestroyerRed",
+        "x": 73.13,
+        "y": 19.34
+      },
+      {
+        "id": "surroundings-of-volokolamsk-ai-red-role-05",
+        "type": "sniper",
+        "x": 73.13,
+        "y": 19.34,
+        "parentTankId": "surroundings-of-volokolamsk-ai-red-unit-05"
+      },
+      {
+        "id": "surroundings-of-volokolamsk-ai-red-unit-06",
+        "type": "mainBattleTankRed",
+        "x": 52.89,
+        "y": 22.26
+      },
+      {
+        "id": "surroundings-of-volokolamsk-ai-red-role-06",
+        "type": "battleLine",
+        "x": 52.89,
+        "y": 22.26,
+        "parentTankId": "surroundings-of-volokolamsk-ai-red-unit-06"
+      },
+      {
+        "id": "surroundings-of-volokolamsk-ai-red-unit-07",
+        "type": "mainBattleTankRed",
+        "x": 36.77,
+        "y": 34.05
+      },
+      {
+        "id": "surroundings-of-volokolamsk-ai-red-role-07",
+        "type": "battleLine",
+        "x": 36.77,
+        "y": 34.05,
+        "parentTankId": "surroundings-of-volokolamsk-ai-red-unit-07"
+      },
+      {
+        "id": "surroundings-of-volokolamsk-ai-red-unit-08",
+        "type": "mainBattleTankRed",
+        "x": 7.98,
+        "y": 36.86
+      },
+      {
+        "id": "surroundings-of-volokolamsk-ai-red-role-08",
+        "type": "spawnKill",
+        "x": 7.98,
+        "y": 36.86,
+        "parentTankId": "surroundings-of-volokolamsk-ai-red-unit-08"
+      },
+      {
+        "id": "surroundings-of-volokolamsk-ai-red-unit-09",
+        "type": "lightTankRed",
+        "x": 55.43,
+        "y": 37.18
+      },
+      {
+        "id": "surroundings-of-volokolamsk-ai-red-role-09",
+        "type": "highRiskSpot",
+        "x": 55.43,
+        "y": 37.18,
+        "parentTankId": "surroundings-of-volokolamsk-ai-red-unit-09"
+      },
+      {
+        "id": "surroundings-of-volokolamsk-ai-red-unit-10",
+        "type": "tankDestroyerRed",
+        "x": 75.05,
+        "y": 39.21
+      },
+      {
+        "id": "surroundings-of-volokolamsk-ai-red-role-10",
+        "type": "sniper",
+        "x": 75.05,
+        "y": 39.21,
+        "parentTankId": "surroundings-of-volokolamsk-ai-red-unit-10"
+      },
+      {
+        "id": "surroundings-of-volokolamsk-ai-red-unit-11",
+        "type": "antiAirRed",
+        "x": 95.78,
+        "y": 55.96
+      },
+      {
+        "id": "surroundings-of-volokolamsk-ai-red-unit-12",
+        "type": "mainBattleTankRed",
+        "x": 45.24,
+        "y": 57.19
+      },
+      {
+        "id": "surroundings-of-volokolamsk-ai-red-role-12",
+        "type": "battleLine",
+        "x": 45.24,
+        "y": 57.19,
+        "parentTankId": "surroundings-of-volokolamsk-ai-red-unit-12"
+      },
+      {
+        "id": "surroundings-of-volokolamsk-ai-red-unit-13",
+        "type": "antiAirRed",
+        "x": 94.87,
+        "y": 58.73
+      },
+      {
+        "id": "surroundings-of-volokolamsk-ai-red-unit-14",
+        "type": "tankDestroyerRed",
+        "x": 66.03,
+        "y": 65.85
+      },
+      {
+        "id": "surroundings-of-volokolamsk-ai-red-role-14",
+        "type": "sniper",
+        "x": 66.03,
+        "y": 65.85,
+        "parentTankId": "surroundings-of-volokolamsk-ai-red-unit-14"
+      },
+      {
+        "id": "surroundings-of-volokolamsk-ai-red-unit-15",
+        "type": "mainBattleTankRed",
+        "x": 18.55,
+        "y": 67.3
+      },
+      {
+        "id": "surroundings-of-volokolamsk-ai-red-role-15",
+        "type": "spawnKill",
+        "x": 18.55,
+        "y": 67.3,
+        "parentTankId": "surroundings-of-volokolamsk-ai-red-unit-15"
+      },
+      {
+        "id": "surroundings-of-volokolamsk-ai-red-unit-16",
+        "type": "mainBattleTankRed",
+        "x": 28.99,
+        "y": 74.76
+      },
+      {
+        "id": "surroundings-of-volokolamsk-ai-red-role-16",
+        "type": "spawnKill",
+        "x": 28.99,
+        "y": 74.76,
+        "parentTankId": "surroundings-of-volokolamsk-ai-red-unit-16"
+      },
+      {
+        "id": "surroundings-of-volokolamsk-ai-red-unit-17",
+        "type": "mainBattleTankRed",
+        "x": 47.15,
+        "y": 75.86
+      },
+      {
+        "id": "surroundings-of-volokolamsk-ai-red-role-17",
+        "type": "highRiskSpot",
+        "x": 47.15,
+        "y": 75.86,
+        "parentTankId": "surroundings-of-volokolamsk-ai-red-unit-17"
+      },
+      {
+        "id": "surroundings-of-volokolamsk-ai-red-unit-18",
+        "type": "tankDestroyerRed",
+        "x": 93.15,
+        "y": 77.51
+      },
+      {
+        "id": "surroundings-of-volokolamsk-ai-red-role-18",
+        "type": "sniper",
+        "x": 93.15,
+        "y": 77.51,
+        "parentTankId": "surroundings-of-volokolamsk-ai-red-unit-18"
+      },
+      {
+        "id": "surroundings-of-volokolamsk-ai-red-unit-19",
+        "type": "mainBattleTankRed",
+        "x": 95.79,
+        "y": 84.6
+      },
+      {
+        "id": "surroundings-of-volokolamsk-ai-red-role-19",
+        "type": "battleLine",
+        "x": 95.79,
+        "y": 84.6,
+        "parentTankId": "surroundings-of-volokolamsk-ai-red-unit-19"
+      },
+      {
+        "id": "surroundings-of-volokolamsk-ai-red-unit-20",
+        "type": "mainBattleTankRed",
+        "x": 75.99,
+        "y": 94.67
+      },
+      {
+        "id": "surroundings-of-volokolamsk-ai-red-role-20",
+        "type": "battleLine",
+        "x": 75.99,
+        "y": 94.67,
+        "parentTankId": "surroundings-of-volokolamsk-ai-red-unit-20"
+      },
+      {
+        "id": "mw5k4lxu-1woedj",
+        "type": "tankDestroyerRed",
+        "x": 68.42,
+        "y": 81.84
+      },
+      {
+        "id": "mw5k4r9l-cekgm1",
+        "type": "sniper",
+        "x": 68.42,
+        "y": 81.84,
+        "parentTankId": "mw5k4lxu-1woedj"
+      },
+      {
+        "id": "mw5k5emc-iq7219",
+        "type": "smokeshell",
+        "x": 22.2,
+        "y": 5.56
       }
     ],
     "Sweden::domination-1|Blue": [
@@ -78153,23 +78626,706 @@
         "dangerRoute": true
       },
       {
-        "id": "surroundings-of-volokolamsk-blue-route-03",
+        "id": "surroundings-of-volokolamsk-ai-blue-aim-01",
+        "type": "aimHere",
+        "parentTankId": "surroundings-of-volokolamsk-ai-blue-unit-15",
+        "startX": 27.27,
+        "startY": 59.79,
+        "endX": 78.76,
+        "endY": 74.2
+      },
+      {
+        "id": "surroundings-of-volokolamsk-ai-blue-aim-02",
+        "type": "aimHere",
+        "parentTankId": "surroundings-of-volokolamsk-ai-blue-unit-18",
+        "startX": 46.06,
+        "startY": 74.2,
+        "endX": 66.72,
+        "endY": 39.62
+      },
+      {
+        "id": "surroundings-of-volokolamsk-ai-blue-aim-03",
+        "type": "aimHere",
+        "parentTankId": "surroundings-of-volokolamsk-ai-blue-unit-09",
+        "startX": 38.41,
+        "startY": 39.92,
+        "endX": 64.78,
+        "endY": 12.36
+      },
+      {
+        "id": "surroundings-of-volokolamsk-ai-blue-aim-04",
+        "type": "aimHere",
+        "parentTankId": "surroundings-of-volokolamsk-ai-blue-unit-09",
+        "startX": 38.41,
+        "startY": 39.92,
+        "endX": 71.34,
+        "endY": 71.45
+      },
+      {
+        "id": "surroundings-of-volokolamsk-ai-blue-aim-05",
+        "type": "aimHere",
+        "parentTankId": "surroundings-of-volokolamsk-ai-blue-unit-11",
+        "startX": 37.68,
+        "startY": 48.66,
+        "endX": 49.06,
+        "endY": 56.85
+      },
+      {
+        "id": "surroundings-of-volokolamsk-ai-blue-aim-06",
+        "type": "aimHere",
+        "parentTankId": "surroundings-of-volokolamsk-ai-blue-unit-21",
+        "startX": 4,
+        "startY": 86.46,
+        "endX": 94.08,
+        "endY": 83.83
+      },
+      {
+        "id": "surroundings-of-volokolamsk-ai-blue-aim-07",
+        "type": "aimHere",
+        "parentTankId": "surroundings-of-volokolamsk-ai-blue-unit-22",
+        "startX": 69.73,
+        "startY": 95.68,
+        "endX": 79.9,
+        "endY": 93.28
+      },
+      {
+        "id": "surroundings-of-volokolamsk-ai-blue-aim-08",
+        "type": "aimHere",
+        "parentTankId": "surroundings-of-volokolamsk-ai-blue-unit-20",
+        "startX": 76.07,
+        "startY": 79.35,
+        "endX": 94.57,
+        "endY": 80.12
+      },
+      {
+        "id": "surroundings-of-volokolamsk-ai-blue-aim-13",
+        "type": "aimHere",
+        "parentTankId": "surroundings-of-volokolamsk-ai-blue-unit-05",
+        "startX": 74.46,
+        "startY": 10.93,
+        "endX": 84.35,
+        "endY": 12.99
+      },
+      {
+        "id": "surroundings-of-volokolamsk-ai-blue-aim-14",
+        "type": "aimHere",
+        "parentTankId": "surroundings-of-volokolamsk-ai-blue-unit-01",
+        "startX": 15.27,
+        "startY": 4.16,
+        "endX": 65.89,
+        "endY": 18.92
+      },
+      {
+        "id": "surroundings-of-volokolamsk-ai-blue-aim-15",
+        "type": "aimHere",
+        "parentTankId": "surroundings-of-volokolamsk-ai-blue-unit-06",
+        "startX": 6.7,
+        "startY": 18.65,
+        "endX": 52.58,
+        "endY": 17.29
+      },
+      {
+        "id": "mw5kbmze-xj16et",
+        "type": "aimHere",
+        "parentTankId": "surroundings-of-volokolamsk-ai-blue-unit-19",
+        "startX": 75.31,
+        "startY": 76.24,
+        "endX": 87.01,
+        "endY": 71.59
+      },
+      {
+        "id": "mw5khbyd-keru93",
+        "type": "aimHere",
+        "parentTankId": "surroundings-of-volokolamsk-ai-blue-unit-02",
+        "startX": 59.55,
+        "startY": 5.15,
+        "endX": 84.58,
+        "endY": 11.82
+      },
+      {
+        "id": "mw5kjyvx-dfdjw5",
         "type": "route",
         "points": [
           {
-            "x": 36.51,
-            "y": 30.86
+            "x": 9.25,
+            "y": 7.04
           },
           {
-            "x": 39.28,
-            "y": 31.21
+            "x": 15.16,
+            "y": 2.87
+          }
+        ]
+      },
+      {
+        "id": "mw5kk35b-m4tfcc",
+        "type": "route",
+        "points": [
+          {
+            "x": 7.25,
+            "y": 7.91
           },
           {
-            "x": 42.05,
-            "y": 31.5
+            "x": 5.6,
+            "y": 11.29
+          },
+          {
+            "x": 5.17,
+            "y": 14.51
+          },
+          {
+            "x": 5.17,
+            "y": 17.38
+          },
+          {
+            "x": 5.52,
+            "y": 18.07
+          }
+        ]
+      },
+      {
+        "id": "mw5kkbh7-n9z314",
+        "type": "route",
+        "points": [
+          {
+            "x": 7.6,
+            "y": 19.81
+          },
+          {
+            "x": 10.56,
+            "y": 21.29
+          },
+          {
+            "x": 14.12,
+            "y": 22.68
+          },
+          {
+            "x": 18.81,
+            "y": 23.28
+          },
+          {
+            "x": 21.85,
+            "y": 23.81
+          },
+          {
+            "x": 24.37,
+            "y": 24.15
+          },
+          {
+            "x": 26.63,
+            "y": 25.11
+          },
+          {
+            "x": 29.41,
+            "y": 26.5
+          },
+          {
+            "x": 31.84,
+            "y": 27.19
+          },
+          {
+            "x": 34.01,
+            "y": 28.67
+          },
+          {
+            "x": 35.93,
+            "y": 29.97
+          },
+          {
+            "x": 37.66,
+            "y": 29.11
+          },
+          {
+            "x": 39.66,
+            "y": 27.28
+          },
+          {
+            "x": 41.23,
+            "y": 25.37
+          },
+          {
+            "x": 42.79,
+            "y": 23.11
+          },
+          {
+            "x": 43.66,
+            "y": 21.72
+          }
+        ]
+      },
+      {
+        "id": "mw5kkjqt-pzxn9l",
+        "type": "route",
+        "points": [
+          {
+            "x": 14.73,
+            "y": 23.89
+          },
+          {
+            "x": 16.46,
+            "y": 25.72
+          },
+          {
+            "x": 19.07,
+            "y": 28.58
+          },
+          {
+            "x": 20.72,
+            "y": 31.1
+          },
+          {
+            "x": 23.07,
+            "y": 35.01
+          },
+          {
+            "x": 25.24,
+            "y": 37.79
+          },
+          {
+            "x": 26.37,
+            "y": 39.18
+          },
+          {
+            "x": 28.45,
+            "y": 40.75
+          },
+          {
+            "x": 30.19,
+            "y": 42.75
+          },
+          {
+            "x": 31.58,
+            "y": 44.4
+          },
+          {
+            "x": 33.41,
+            "y": 46.13
+          },
+          {
+            "x": 35.14,
+            "y": 47
+          },
+          {
+            "x": 37.23,
+            "y": 48.31
+          }
+        ]
+      },
+      {
+        "id": "mw5kkmlf-xt94r3",
+        "type": "route",
+        "points": [
+          {
+            "x": 35.14,
+            "y": 46.74
+          },
+          {
+            "x": 36.45,
+            "y": 46.13
+          },
+          {
+            "x": 37.92,
+            "y": 44.48
+          },
+          {
+            "x": 38.1,
+            "y": 42.66
+          },
+          {
+            "x": 38.1,
+            "y": 40.66
+          },
+          {
+            "x": 38.62,
+            "y": 39.79
+          }
+        ]
+      },
+      {
+        "id": "mw5kkqbn-65uofi",
+        "type": "route",
+        "points": [
+          {
+            "x": 36.01,
+            "y": 30.23
+          },
+          {
+            "x": 38.53,
+            "y": 30.67
+          },
+          {
+            "x": 42.18,
+            "y": 31.02
+          },
+          {
+            "x": 45.05,
+            "y": 31.02
+          },
+          {
+            "x": 51.56,
+            "y": 30.15
+          },
+          {
+            "x": 52.95,
+            "y": 29.28
+          },
+          {
+            "x": 54.6,
+            "y": 28.41
           }
         ],
         "dangerRoute": true
+      },
+      {
+        "id": "mw5kkzgf-mtgoby",
+        "type": "route",
+        "points": [
+          {
+            "x": 9.34,
+            "y": 8.25
+          },
+          {
+            "x": 11.69,
+            "y": 9.38
+          },
+          {
+            "x": 16.46,
+            "y": 11.21
+          },
+          {
+            "x": 21.68,
+            "y": 12.51
+          },
+          {
+            "x": 26.37,
+            "y": 12.51
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "mw5kl4op-8zgifv",
+        "type": "route",
+        "points": [
+          {
+            "x": 26.72,
+            "y": 12.95
+          },
+          {
+            "x": 28.19,
+            "y": 13.99
+          },
+          {
+            "x": 30.45,
+            "y": 16.07
+          },
+          {
+            "x": 32.62,
+            "y": 18.51
+          },
+          {
+            "x": 35.58,
+            "y": 18.94
+          },
+          {
+            "x": 40.53,
+            "y": 19.55
+          },
+          {
+            "x": 42.96,
+            "y": 20.33
+          },
+          {
+            "x": 43.92,
+            "y": 21.2
+          }
+        ]
+      },
+      {
+        "id": "mw5kl7pd-7qeuyw",
+        "type": "route",
+        "points": [
+          {
+            "x": 25.93,
+            "y": 11.99
+          },
+          {
+            "x": 27.67,
+            "y": 10.77
+          },
+          {
+            "x": 30.54,
+            "y": 9.38
+          },
+          {
+            "x": 36.27,
+            "y": 8.51
+          },
+          {
+            "x": 39.66,
+            "y": 8.86
+          },
+          {
+            "x": 41.75,
+            "y": 9.64
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "mw5klaa7-wu589r",
+        "type": "aimHere",
+        "parentTankId": "surroundings-of-volokolamsk-ai-blue-unit-04",
+        "startX": 42.01,
+        "startY": 9.73,
+        "endX": 50.52,
+        "endY": 12.34
+      },
+      {
+        "id": "mw5klj0t-qahdmt",
+        "type": "route",
+        "points": [
+          {
+            "x": 6.91,
+            "y": 77.24
+          },
+          {
+            "x": 3.87,
+            "y": 85.66
+          }
+        ]
+      },
+      {
+        "id": "mw5kln27-a56v6e",
+        "type": "route",
+        "points": [
+          {
+            "x": 8.99,
+            "y": 76.28
+          },
+          {
+            "x": 14.99,
+            "y": 73.68
+          },
+          {
+            "x": 20.81,
+            "y": 72.81
+          },
+          {
+            "x": 26.37,
+            "y": 72.81
+          },
+          {
+            "x": 30.45,
+            "y": 73.68
+          },
+          {
+            "x": 36.19,
+            "y": 74.28
+          }
+        ]
+      },
+      {
+        "id": "mw5klwq9-0acakw",
+        "type": "route",
+        "points": [
+          {
+            "x": 8.12,
+            "y": 77.93
+          },
+          {
+            "x": 10.12,
+            "y": 81.32
+          },
+          {
+            "x": 13.86,
+            "y": 83.75
+          },
+          {
+            "x": 18.29,
+            "y": 86.62
+          },
+          {
+            "x": 23.15,
+            "y": 88.62
+          },
+          {
+            "x": 30.89,
+            "y": 91.49
+          },
+          {
+            "x": 39.66,
+            "y": 93.4
+          },
+          {
+            "x": 49.3,
+            "y": 94.96
+          },
+          {
+            "x": 55.82,
+            "y": 95.05
+          },
+          {
+            "x": 62.86,
+            "y": 95.05
+          },
+          {
+            "x": 69.55,
+            "y": 95.66
+          }
+        ]
+      },
+      {
+        "id": "mw5kmfp7-jshmxz",
+        "type": "route",
+        "points": [
+          {
+            "x": 15.68,
+            "y": 2.78
+          },
+          {
+            "x": 19.33,
+            "y": 2.43
+          },
+          {
+            "x": 28.71,
+            "y": 2.35
+          },
+          {
+            "x": 36.88,
+            "y": 2.69
+          },
+          {
+            "x": 43.57,
+            "y": 3.56
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "mw5kmlwj-3h89op",
+        "type": "route",
+        "points": [
+          {
+            "x": 57.04,
+            "y": 11.47
+          },
+          {
+            "x": 62.08,
+            "y": 10.25
+          },
+          {
+            "x": 64.77,
+            "y": 10.69
+          },
+          {
+            "x": 68.07,
+            "y": 11.03
+          },
+          {
+            "x": 73.02,
+            "y": 10.95
+          },
+          {
+            "x": 73.89,
+            "y": 10.77
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "mw5kmwe5-x2g5mg",
+        "type": "route",
+        "points": [
+          {
+            "x": 19.77,
+            "y": 65.51
+          },
+          {
+            "x": 20.03,
+            "y": 61.34
+          },
+          {
+            "x": 21.07,
+            "y": 59.51
+          },
+          {
+            "x": 22.55,
+            "y": 57.86
+          },
+          {
+            "x": 25.07,
+            "y": 56.39
+          },
+          {
+            "x": 28.02,
+            "y": 55.52
+          },
+          {
+            "x": 33.15,
+            "y": 54.82
+          },
+          {
+            "x": 37.49,
+            "y": 54.74
+          },
+          {
+            "x": 39.83,
+            "y": 55.52
+          }
+        ]
+      },
+      {
+        "id": "mw5kmyll-qrwioh",
+        "type": "aimHere",
+        "parentTankId": "surroundings-of-volokolamsk-ai-blue-unit-12",
+        "startX": 40.54,
+        "startY": 55.66,
+        "endX": 49.83,
+        "endY": 59.51
+      },
+      {
+        "id": "mw5kn6q7-97krjn",
+        "type": "route",
+        "points": [
+          {
+            "x": 8.91,
+            "y": 75.85
+          },
+          {
+            "x": 12.12,
+            "y": 73.24
+          },
+          {
+            "x": 16.38,
+            "y": 70.2
+          },
+          {
+            "x": 19.07,
+            "y": 66.99
+          },
+          {
+            "x": 19.68,
+            "y": 65.94
+          }
+        ]
+      },
+      {
+        "id": "mw5kn9sz-yp8t69",
+        "type": "route",
+        "points": [
+          {
+            "x": 23.07,
+            "y": 58.21
+          },
+          {
+            "x": 24.37,
+            "y": 58.73
+          },
+          {
+            "x": 26.46,
+            "y": 59.43
+          }
+        ]
       }
     ],
     "Surroundings of Volokolamsk::domination-1|Red": [
@@ -78410,13 +79566,482 @@
         ]
       },
       {
-        "id": "mu24xcbg-itfskq",
+        "id": "surroundings-of-volokolamsk-ai-red-aim-01",
         "type": "aimHere",
-        "parentTankId": "mu24veoz-axd8ht",
-        "startX": 66.94,
-        "startY": 81.16,
-        "endX": 25.73,
-        "endY": 87.48
+        "parentTankId": "surroundings-of-volokolamsk-ai-red-unit-17",
+        "startX": 47.15,
+        "startY": 75.86,
+        "endX": 41.15,
+        "endY": 57.63
+      },
+      {
+        "id": "surroundings-of-volokolamsk-ai-red-aim-02",
+        "type": "aimHere",
+        "parentTankId": "surroundings-of-volokolamsk-ai-red-unit-12",
+        "startX": 45.24,
+        "startY": 57.19,
+        "endX": 41.91,
+        "endY": 55.7
+      },
+      {
+        "id": "surroundings-of-volokolamsk-ai-red-aim-03",
+        "type": "aimHere",
+        "parentTankId": "surroundings-of-volokolamsk-ai-red-unit-04",
+        "startX": 49.36,
+        "startY": 19.08,
+        "endX": 44.23,
+        "endY": 20.77
+      },
+      {
+        "id": "surroundings-of-volokolamsk-ai-red-aim-04",
+        "type": "aimHere",
+        "parentTankId": "surroundings-of-volokolamsk-ai-red-unit-18",
+        "startX": 93.15,
+        "startY": 77.51,
+        "endX": 43.92,
+        "endY": 90.7
+      },
+      {
+        "id": "surroundings-of-volokolamsk-ai-red-aim-05",
+        "type": "aimHere",
+        "parentTankId": "surroundings-of-volokolamsk-ai-red-unit-19",
+        "startX": 95.79,
+        "startY": 84.6,
+        "endX": 30.16,
+        "endY": 86.66
+      },
+      {
+        "id": "surroundings-of-volokolamsk-ai-red-aim-06",
+        "type": "aimHere",
+        "parentTankId": "surroundings-of-volokolamsk-ai-red-unit-14",
+        "startX": 66.03,
+        "startY": 65.85,
+        "endX": 30.91,
+        "endY": 60.57
+      },
+      {
+        "id": "surroundings-of-volokolamsk-ai-red-aim-07",
+        "type": "aimHere",
+        "parentTankId": "surroundings-of-volokolamsk-ai-red-unit-14",
+        "startX": 66.03,
+        "startY": 65.85,
+        "endX": 45.48,
+        "endY": 75.78
+      },
+      {
+        "id": "surroundings-of-volokolamsk-ai-red-aim-08",
+        "type": "aimHere",
+        "parentTankId": "surroundings-of-volokolamsk-ai-red-unit-10",
+        "startX": 75.05,
+        "startY": 39.21,
+        "endX": 44.94,
+        "endY": 75.44
+      },
+      {
+        "id": "surroundings-of-volokolamsk-ai-red-aim-09",
+        "type": "aimHere",
+        "parentTankId": "surroundings-of-volokolamsk-ai-red-unit-02",
+        "startX": 49.88,
+        "startY": 7.91,
+        "endX": 28.41,
+        "endY": 12.07
+      },
+      {
+        "id": "surroundings-of-volokolamsk-ai-red-aim-10",
+        "type": "aimHere",
+        "parentTankId": "surroundings-of-volokolamsk-ai-red-unit-05",
+        "startX": 73.13,
+        "startY": 19.34,
+        "endX": 29.46,
+        "endY": 12.69
+      },
+      {
+        "id": "surroundings-of-volokolamsk-ai-red-aim-11",
+        "type": "aimHere",
+        "parentTankId": "surroundings-of-volokolamsk-ai-red-unit-03",
+        "startX": 67.07,
+        "startY": 10.57,
+        "endX": 17.11,
+        "endY": 5.05
+      },
+      {
+        "id": "surroundings-of-volokolamsk-ai-red-aim-12",
+        "type": "aimHere",
+        "parentTankId": "surroundings-of-volokolamsk-ai-red-unit-01",
+        "startX": 17.56,
+        "startY": 2.7,
+        "endX": 9.85,
+        "endY": 6.2
+      },
+      {
+        "id": "surroundings-of-volokolamsk-ai-red-aim-13",
+        "type": "aimHere",
+        "parentTankId": "surroundings-of-volokolamsk-ai-red-unit-07",
+        "startX": 36.77,
+        "startY": 34.05,
+        "endX": 14.14,
+        "endY": 13.28
+      },
+      {
+        "id": "surroundings-of-volokolamsk-ai-red-aim-14",
+        "type": "aimHere",
+        "parentTankId": "surroundings-of-volokolamsk-ai-red-unit-06",
+        "startX": 52.89,
+        "startY": 22.26,
+        "endX": 16.34,
+        "endY": 7.31
+      },
+      {
+        "id": "surroundings-of-volokolamsk-ai-red-aim-15",
+        "type": "aimHere",
+        "parentTankId": "surroundings-of-volokolamsk-ai-red-unit-06",
+        "startX": 52.89,
+        "startY": 22.26,
+        "endX": 6.09,
+        "endY": 19.78
+      },
+      {
+        "id": "surroundings-of-volokolamsk-ai-red-aim-16",
+        "type": "aimHere",
+        "parentTankId": "surroundings-of-volokolamsk-ai-red-unit-16",
+        "startX": 28.99,
+        "startY": 74.76,
+        "endX": 11.83,
+        "endY": 77.47
+      },
+      {
+        "id": "surroundings-of-volokolamsk-ai-red-aim-17",
+        "type": "aimHere",
+        "parentTankId": "surroundings-of-volokolamsk-ai-red-unit-15",
+        "startX": 18.55,
+        "startY": 67.3,
+        "endX": 9.62,
+        "endY": 75.09
+      },
+      {
+        "id": "surroundings-of-volokolamsk-ai-red-aim-18",
+        "type": "aimHere",
+        "parentTankId": "surroundings-of-volokolamsk-ai-red-unit-08",
+        "startX": 7.98,
+        "startY": 36.86,
+        "endX": 6.09,
+        "endY": 10.57
+      },
+      {
+        "id": "surroundings-of-volokolamsk-ai-red-aim-19",
+        "type": "aimHere",
+        "parentTankId": "surroundings-of-volokolamsk-ai-red-unit-09",
+        "startX": 55.43,
+        "startY": 37.18,
+        "endX": 41.56,
+        "endY": 53.81
+      },
+      {
+        "id": "surroundings-of-volokolamsk-ai-red-aim-20",
+        "type": "aimHere",
+        "parentTankId": "surroundings-of-volokolamsk-ai-red-unit-18",
+        "startX": 93.15,
+        "startY": 77.51,
+        "endX": 30.91,
+        "endY": 61.09
+      },
+      {
+        "id": "surroundings-of-volokolamsk-ai-red-aim-21",
+        "type": "aimHere",
+        "parentTankId": "surroundings-of-volokolamsk-ai-red-unit-20",
+        "startX": 75.99,
+        "startY": 94.67,
+        "endX": 67.79,
+        "endY": 95.72
+      },
+      {
+        "id": "mw5k4ojt-3hsn5u",
+        "type": "aimHere",
+        "parentTankId": "mw5k4lxu-1woedj",
+        "startX": 68.42,
+        "startY": 81.84,
+        "endX": 31.15,
+        "endY": 89.75
+      },
+      {
+        "id": "mw5khwkv-ubesqs",
+        "type": "route",
+        "points": [
+          {
+            "x": 66.94,
+            "y": 65.77
+          },
+          {
+            "x": 71.46,
+            "y": 66.46
+          },
+          {
+            "x": 76.67,
+            "y": 68.03
+          },
+          {
+            "x": 80.67,
+            "y": 69.85
+          },
+          {
+            "x": 86.84,
+            "y": 71.33
+          }
+        ]
+      },
+      {
+        "id": "mw5ki867-7kwe55",
+        "type": "route",
+        "points": [
+          {
+            "x": 76.15,
+            "y": 95.13
+          },
+          {
+            "x": 81.45,
+            "y": 93.74
+          },
+          {
+            "x": 87.01,
+            "y": 91.92
+          },
+          {
+            "x": 92.14,
+            "y": 89.14
+          },
+          {
+            "x": 94.14,
+            "y": 87.49
+          },
+          {
+            "x": 95.53,
+            "y": 84.97
+          },
+          {
+            "x": 96.39,
+            "y": 81.23
+          },
+          {
+            "x": 96.05,
+            "y": 78.19
+          },
+          {
+            "x": 95.61,
+            "y": 75.5
+          },
+          {
+            "x": 93.35,
+            "y": 73.33
+          },
+          {
+            "x": 90.23,
+            "y": 72.2
+          },
+          {
+            "x": 89.62,
+            "y": 72.11
+          }
+        ]
+      },
+      {
+        "id": "mw5kicb1-c03lw4",
+        "type": "route",
+        "points": [
+          {
+            "x": 81.71,
+            "y": 75.67
+          },
+          {
+            "x": 83.54,
+            "y": 73.94
+          },
+          {
+            "x": 86.66,
+            "y": 72.28
+          }
+        ]
+      },
+      {
+        "id": "mw5kik67-fmqehj",
+        "type": "route",
+        "points": [
+          {
+            "x": 76.67,
+            "y": 67.07
+          },
+          {
+            "x": 75.8,
+            "y": 62.29
+          },
+          {
+            "x": 75.72,
+            "y": 58.12
+          },
+          {
+            "x": 76.15,
+            "y": 54.56
+          },
+          {
+            "x": 77.19,
+            "y": 50.13
+          },
+          {
+            "x": 77.19,
+            "y": 46.39
+          },
+          {
+            "x": 76.67,
+            "y": 42.66
+          },
+          {
+            "x": 75.98,
+            "y": 40.14
+          }
+        ]
+      },
+      {
+        "id": "mw5kiqqn-fitj75",
+        "type": "route",
+        "points": [
+          {
+            "x": 61.12,
+            "y": 26.85
+          },
+          {
+            "x": 66.33,
+            "y": 22.85
+          },
+          {
+            "x": 71.2,
+            "y": 20.59
+          },
+          {
+            "x": 72.94,
+            "y": 19.46
+          },
+          {
+            "x": 79.37,
+            "y": 16.94
+          },
+          {
+            "x": 83.97,
+            "y": 14.77
+          }
+        ]
+      },
+      {
+        "id": "mw5kived-m91pdm",
+        "type": "route",
+        "points": [
+          {
+            "x": 51.04,
+            "y": 7.56
+          },
+          {
+            "x": 55.21,
+            "y": 6.95
+          },
+          {
+            "x": 62.16,
+            "y": 6.17
+          },
+          {
+            "x": 67.64,
+            "y": 6.43
+          },
+          {
+            "x": 76.15,
+            "y": 6.78
+          },
+          {
+            "x": 79.8,
+            "y": 8.43
+          },
+          {
+            "x": 82.41,
+            "y": 10.86
+          },
+          {
+            "x": 84.32,
+            "y": 13.21
+          }
+        ]
+      },
+      {
+        "id": "mw5kj1gn-nfibe0",
+        "type": "route",
+        "points": [
+          {
+            "x": 50.09,
+            "y": 18.68
+          },
+          {
+            "x": 52.95,
+            "y": 16.68
+          },
+          {
+            "x": 58.51,
+            "y": 14.86
+          },
+          {
+            "x": 66.85,
+            "y": 13.73
+          },
+          {
+            "x": 73.54,
+            "y": 12.95
+          },
+          {
+            "x": 81.36,
+            "y": 12.95
+          },
+          {
+            "x": 85.53,
+            "y": 13.9
+          }
+        ]
+      },
+      {
+        "id": "mw5kjdme-zbnalh",
+        "type": "route",
+        "points": [
+          {
+            "x": 45.66,
+            "y": 57.6
+          },
+          {
+            "x": 48.44,
+            "y": 58.21
+          },
+          {
+            "x": 51.74,
+            "y": 59.6
+          },
+          {
+            "x": 55.21,
+            "y": 59.51
+          },
+          {
+            "x": 60.17,
+            "y": 59.69
+          },
+          {
+            "x": 63.55,
+            "y": 60.82
+          },
+          {
+            "x": 67.55,
+            "y": 60.73
+          },
+          {
+            "x": 72.24,
+            "y": 60.82
+          },
+          {
+            "x": 75.63,
+            "y": 62.29
+          }
+        ]
       }
     ],
     "Sweden::domination-1|Blue": [
@@ -86117,6 +87742,6 @@
     "Sands of Sinai::domination-1|Blue": [],
     "Vietnam::domination-1|Red": []
   },
-  "updatedAt": "2026-11-06T22:27:36.514Z",
-  "exportedAt": "2026-11-06T22:28:34.129Z"
+  "updatedAt": "2026-11-06T22:54:13.860Z",
+  "exportedAt": "2026-11-06T23:12:30.602Z"
 }
