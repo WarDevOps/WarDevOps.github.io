@@ -5,12 +5,12 @@ import { validateVariableRatings } from "./brc-ratings.js?v=highest-penalty-2026
 const copy = {
   en: {
     grb: "GROUND REALISTIC", arb: "AIR REALISTIC", modeLabel: "Battle mode",
-    arbNotice: "Compare aircraft within ±1.0 of the selected aircraft’s Air RB. All nations are included.",
+    arbNotice: "Compare aircraft within ±1.0 of the selected aircraft’s Air RB. All nations are included. New vehicles have blue borders; vehicles with variable BR have purple borders.",
     arbEmpty: "No aircraft in this range. Turn off Range only to see all aircraft.",
     intro: "Click a vehicle to lock its ±1.0 BR range, another vehicle to switch, or empty space to unlock.",
     searchLabel: "Find a vehicle", categories: "Vehicle types", tank: "Ground", air: "Aircraft", heli: "Helicopters",
     rangeOnly: "Range only", clear: "Clear selection", comparing: "COMPARING", difference: "BR difference",
-    notice: "A ±1.0 BR comparison, not a complete list of possible opponents. Matchmaking uses your lineup’s highest BR; lower-BR vehicles may also appear. All nations are included.",
+    notice: "A ±1.0 BR comparison, not a complete list of possible opponents. Matchmaking uses your lineup’s highest BR; lower-BR vehicles may also appear. All nations are included. New vehicles have blue borders; vehicles with variable BR have purple borders.",
     scrollHint: "Scroll to explore · Nation headers and BR stay visible", details: "VEHICLE DETAILS",
     placeholder: "", closeHint: "Closing this panel keeps your selected range.",
     close: "Close details", tableLabel: "Vehicles by nation and battle rating", retry: "Try again",
@@ -22,12 +22,12 @@ const copy = {
   },
   ko: {
     grb: "지상 리얼리스틱", arb: "공중 리얼리스틱", modeLabel: "전투 모드",
-    arbNotice: "선택한 항공기의 공중전 BR 기준 ±1.0 범위를 비교합니다. 모든 국가의 항공기를 표시합니다.",
+    arbNotice: "선택한 항공기의 공중전 BR 기준 ±1.0 범위를 비교합니다. 모든 국가의 항공기를 표시합니다. 최신 장비는 파란색 테두리, 가변 BR 적용 장비는 보라색 테두리로 표시합니다.",
     arbEmpty: "이 범위에 표시할 항공기가 없습니다. ‘범위만 보기’를 해제하면 전체 항공기를 볼 수 있습니다.",
     intro: "장비를 클릭해 ±1.0 BR 범위를 고정하세요. 다른 장비를 클릭하면 기준이 바뀌고, 빈 공간을 클릭하면 고정이 풀립니다.",
     searchLabel: "장비 찾기", categories: "장비 종류", tank: "지상", air: "항공", heli: "헬기",
     rangeOnly: "범위만 보기", clear: "선택 해제", comparing: "비교 기준", difference: "BR 차이",
-    notice: "선택 장비의 ±1.0 BR 비교표입니다. 실제 매칭은 편성의 최고 BR을 기준으로 하며 더 낮은 BR 장비도 등장할 수 있습니다. 아군·적군을 구분하지 않고 모든 국가를 표시합니다.",
+    notice: "선택 장비의 ±1.0 BR 비교표입니다. 실제 매칭은 편성의 최고 BR을 기준으로 하며 더 낮은 BR 장비도 등장할 수 있습니다. 아군·적군을 구분하지 않고 모든 국가를 표시합니다. 최신 장비는 파란색 테두리, 가변 BR 적용 장비는 보라색 테두리로 표시합니다.",
     scrollHint: "스크롤로 탐색 · 국가 헤더와 BR 열 고정", details: "장비 설명",
     placeholder: "", closeHint: "설명을 닫아도 선택한 범위는 유지됩니다.",
     close: "설명 닫기", tableLabel: "국가 및 BR별 장비", retry: "다시 시도",
@@ -124,6 +124,9 @@ function renderTable() {
         for (const unit of categoryUnits) {
           const button = element("button", "brc-unit", unit.name);
           button.classList.toggle("is-new", newUnitIds.has(unit.wikiId) || unit.isNew === true);
+          const variableRule = unit.variableBr?.[state.mode];
+          button.classList.toggle("has-variable-br", Boolean(variableRule && variableRule.max > variableRule.base
+            && Object.values(variableRule.penalties).some(penalty => penalty > 0)));
           button.type = "button"; button.dataset.unit = unit.id;
           button.setAttribute("aria-pressed", String(state.selected?.id === unit.id));
           button.setAttribute("aria-label", `${unit.name}, ${countryName(unit.countryCode)}, ${t(category)}, ${ratingLabel(unit)}`);
