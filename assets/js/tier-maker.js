@@ -4,7 +4,7 @@ if (tierRoot) {
   const TIER_ZONES = Object.freeze(["s", "a", "b", "c", "d", "pool"]);
   const STORAGE_KEY = "maptactic-tier-maker-v1";
 
-  const catalogResponse = await fetch(new URL("../data/tier-units.json?v=wiki-additions-20261104", import.meta.url));
+  const catalogResponse = await fetch(new URL("../data/tier-units.json?v=highlight-refresh-20261108", import.meta.url));
   if (!catalogResponse.ok) throw new Error(`Tier catalog request failed: ${catalogResponse.status}`);
   const tierCatalog = await catalogResponse.json();
   const NEW_UNIT_IDS = new Set(tierCatalog.announcedVehicles?.units || []);
@@ -377,7 +377,7 @@ if (tierRoot) {
 
     if (unitRecord(activeCategory, file)?.imageAvailable !== false) {
       const image = document.createElement("img");
-      image.src = `${META[activeCategory].folder}/${encodeURIComponent(file)}`;
+      image.src = `${META[activeCategory].folder}/${encodeURIComponent(file)}?v=${encodeURIComponent(tierCatalog.updatedAt || "current")}`;
       image.alt = name;
       image.loading = "lazy";
       image.decoding = "async";
@@ -629,7 +629,7 @@ if (tierRoot) {
       const file = fileForId(id);
       if (!file) return;
       if (unitRecord(activeCategory, file)?.imageAvailable !== false) {
-        imageSources.add(`${META[activeCategory].folder}/${encodeURIComponent(file)}`);
+        imageSources.add(`${META[activeCategory].folder}/${encodeURIComponent(file)}?v=${encodeURIComponent(tierCatalog.updatedAt || "current")}`);
       }
       const flag = itemDetails(file).flag;
       if (flag) imageSources.add(flag);
@@ -667,7 +667,7 @@ if (tierRoot) {
         const line = Math.floor(cardIndex / cardsPerLine);
         const x = labelWidth + padding + column * (cardWidth + gap);
         const y = rowY + padding + line * (cardHeight + gap);
-        const unitSource = `${META[activeCategory].folder}/${encodeURIComponent(file)}`;
+        const unitSource = `${META[activeCategory].folder}/${encodeURIComponent(file)}?v=${encodeURIComponent(tierCatalog.updatedAt || "current")}`;
         const unitImage = images.get(unitSource);
 
         context.fillStyle = "#252d34";

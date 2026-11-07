@@ -1,5 +1,5 @@
 import { CATEGORIES, COUNTRIES, readCatalog, visibleUnits, searchUnits, rangeColor, toTenths } from "./brc-model.js?v=highest-penalty-20261101";
-import { createArmamentPanel } from "./brc-armaments.js?v=wiki-additions-20261104";
+import { createArmamentPanel } from "./brc-armaments.js?v=highlight-refresh-20261108";
 import { validateVariableRatings } from "./brc-ratings.js?v=highest-penalty-20261101";
 
 const copy = {
@@ -236,7 +236,7 @@ function updatePopup() {
   image.alt = state.selected.name;
   image.hidden = unit.imageAvailable === false;
   if (unit.imageAvailable === false) image.removeAttribute("src");
-  else image.src = `/Tier/${folder}/${encodeURIComponent(state.selected.file)}`;
+  else image.src = `/Tier/${folder}/${encodeURIComponent(state.selected.file)}?v=${encodeURIComponent(state.catalog.updatedAt || "current")}`;
   armaments.show(state.selected, state.mode, state.language);
   positionPopup();
 }
@@ -337,7 +337,7 @@ async function loadCatalog() {
   try {
     // Deliberately share the Tier List catalog and its BR values; no BRC-specific copy.
     const [catalog, ratings] = await Promise.all([
-      "../data/tier-units.json?v=data-updated-20261108", "../data/brc-variable-br.json?v=20261101",
+      "../data/tier-units.json?v=highlight-refresh-20261108", "../data/brc-variable-br.json?v=20261101",
     ].map(async path => {
       const response = await fetch(new URL(path, import.meta.url));
       if (!response.ok) throw new Error(`Catalog HTTP ${response.status}`);
