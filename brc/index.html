@@ -15,7 +15,7 @@
   <meta name="twitter:card" content="summary">
   <title>Battle-rating Range Calculator | WarDevOps</title>
   <link rel="stylesheet" href="/assets/css/site.css?v=vehicle-placeholder-20261108">
-  <link rel="stylesheet" href="/assets/css/brc.css?v=data-updated-20261108">
+  <link rel="stylesheet" href="/assets/css/brc.css?v=data-updated-controls-20261108">
 </head>
 <body>
   <header class="site-header">
@@ -36,7 +36,6 @@
     <section class="brc-intro" aria-labelledby="brc-title">
       <div class="brc-intro-meta">
         <p class="eyebrow" id="brc-mode-eyebrow">WAR THUNDER · GROUND REALISTIC BATTLES</p>
-        <p class="brc-data-updated" id="brc-data-updated" hidden><span data-brc-text="dataUpdated">Data updated</span>: <time id="brc-data-updated-date"></time></p>
       </div>
       <h1 id="brc-title">Battle-rating Range <em>Calculator</em><span class="brc-badge">Beta</span></h1>
       <p data-brc-text="intro">Click a vehicle to lock its ±1.0 BR range, another vehicle to switch, or empty space to unlock.</p>
@@ -59,6 +58,7 @@
           <label><input type="checkbox" value="heli" checked><span data-brc-text="heli">Helicopters</span></label>
         </fieldset>
         <div class="brc-range-controls">
+          <p class="brc-data-updated" id="brc-data-updated" hidden><span data-brc-text="dataUpdated">Data updated</span>: <time id="brc-data-updated-date"></time></p>
           <label><input id="brc-range-only" type="checkbox" disabled><span data-brc-text="rangeOnly">Range only</span></label>
           <button id="brc-reset" class="brc-secondary" type="button" data-brc-text="clear" disabled>Clear selection</button>
         </div>
