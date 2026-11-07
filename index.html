@@ -52,7 +52,7 @@
   </script>
   <title>War Thunder Map Guide &amp; Tactics | WarDevOps</title>
 
-  <link rel="stylesheet" href="/assets/css/site.css?v=comment-navigation-visible-20261108">
+  <link rel="stylesheet" href="/assets/css/site.css?v=modal-display-controls-20261108">
 </head>
 <body>
   <header class="site-header">
@@ -279,7 +279,7 @@
         <div class="marker-tools" aria-label="Marker editor" data-i18n-aria="markerTools">
           <button class="marker-tool" id="toggle-editor" type="button" aria-pressed="false" data-i18n="editMarkers">Edit Map</button>
           <button class="marker-tool" id="save-marker-layout" type="button" data-editor-action data-i18n="saveLocally" hidden>Save Locally</button>
-          <button class="marker-tool" id="export-marker-layout" type="button" data-editor-action data-i18n="exportJson" hidden>Export JSON</button>
+          <button class="marker-tool" id="export-marker-layout" type="button" data-editor-action data-i18n="exportJson" title="Export JSON (Ctrl+S)" aria-keyshortcuts="Control+S Meta+S" hidden>Export JSON</button>
           <button class="marker-tool" id="import-marker-layout" type="button" data-editor-action data-i18n="importJson" hidden>Import JSON</button>
 
           <span class="marker-status" id="marker-status" role="status" aria-live="polite"></span>
@@ -329,12 +329,14 @@
           <button class="team-button red" type="button" data-team="Red" aria-pressed="true">RED</button>
           <button class="team-button blue" type="button" data-team="Blue" aria-pressed="false">BLUE</button>
         </div>
+        <button class="theme-toggle" id="modal-theme-toggle" type="button" aria-pressed="false" aria-label="Switch color theme">LIGHT</button>
+        <button class="marker-tool marker-color-toggle" id="modal-marker-color-toggle" type="button" aria-pressed="false">WHITE ICONS</button>
         <button class="close-modal" type="button" aria-label="Close enlarged view" data-i18n-aria="closeEnlargedView">✕</button>
       </div>
     </div>
     <div class="modal-marker-tools" aria-label="Marker editor" data-i18n-aria="markerTools">
       <button class="marker-tool" id="modal-save-marker-layout" type="button" data-editor-action data-i18n="saveLocally" hidden>Save Locally</button>
-      <button class="marker-tool" id="modal-export-marker-layout" type="button" data-editor-action data-i18n="exportJson" hidden>Export JSON</button>
+      <button class="marker-tool" id="modal-export-marker-layout" type="button" data-editor-action data-i18n="exportJson" title="Export JSON (Ctrl+S)" aria-keyshortcuts="Control+S Meta+S" hidden>Export JSON</button>
       <button class="marker-tool" id="modal-import-marker-layout" type="button" data-editor-action data-i18n="importJson" hidden>Import JSON</button>
       <span class="modal-marker-status" id="modal-marker-status" role="status" aria-live="polite"></span>
       <div class="map-sync-alert" id="modal-map-sync-alert" role="status" hidden>
@@ -410,7 +412,7 @@
 
   <input id="marker-layout-import-file" type="file" accept="application/json,.json" hidden>
 
-  <script type="module" src="/assets/js/app.js?v=comment-images-de33209fa57e"></script>
+  <script type="module" src="/assets/js/app.js?v=modal-display-controls-20261108"></script>
   <script type="module" src="/assets/js/consent-controls.js?v=20260828"></script>
 </body>
 </html>

@@ -1,11 +1,11 @@
     import { MARKER_LAYOUT_VERSION, backupMarkerLayout, loadMarkerLayout, saveMarkerLayout as saveMarkerLayoutToStorage } from './marker-storage.js?v=replay-vectors-20260915';
 import { initDiscordMemberCount } from './discord-stats.js';
-import { createVectorEditor } from './vector-editor.js?v=paste-validation-20260929-2';
+import { createVectorEditor } from './vector-editor.js?v=editor-shortcuts-20261108';
 import { validateVectorGroups, pruneGroups } from './vector-model.js?v=route-selection-20260923';
 import { validatePastedView } from './paste-validation.js';
 let vectorEditor = null;
     import { commentImages } from './comment-images.js?v=comment-images-de33209fa57e';
-    import { defaultMarkerLayout, maps, translations } from './data.js?v=tank-marker-type-20260923';
+    import { defaultMarkerLayout, maps, translations } from './data.js?v=modal-display-controls-20261108';
     import { normalizeTacticalSummary, resolveTacticalSummary, withVariationSummary } from './tactical-summary.js?v=variation-switch-20260914';
     import { acceptUpstreamMap, isMapSyncState, markLayoutAsLocalEdits, markMapEdited, mergeMapLayouts, sourceRevision } from './marker-merge.js?v=mobile-default-layout-20260917';
 
@@ -87,7 +87,9 @@ let vectorEditor = null;
     const annotationOpacitySlider = $("#annotation-opacity-slider");
     const annotationOpacityValue = $("#annotation-opacity-value");
     const languageButtons = document.querySelectorAll(".language-button");
-    const themeToggle = $("#theme-toggle");
+    const themeToggles = document.querySelectorAll(".theme-toggle");
+    const markerColorToggle = $("#modal-marker-color-toggle");
+    const markerStyleOverrides = new Map();
     const workspace = $(".workspace");
     const mapViewer = $(".map-viewer");
     const mapOverlayLayer = $("#map-overlay-layer");
@@ -542,9 +544,11 @@ let vectorEditor = null;
       document.body.classList.toggle("light-theme", isLight);
       document.documentElement.style.colorScheme = isLight ? "light" : "dark";
       document.querySelector('meta[name="theme-color"]').setAttribute("content", isLight ? "#edf2ed" : "#111719");
-      themeToggle.setAttribute("aria-pressed", String(isLight));
-      themeToggle.textContent = t(isLight ? "darkTheme" : "lightTheme");
-      themeToggle.setAttribute("aria-label", t(isLight ? "switchToDarkTheme" : "switchToLightTheme"));
+      themeToggles.forEach(button => {
+        button.setAttribute("aria-pressed", String(isLight));
+        button.textContent = t(isLight ? "darkTheme" : "lightTheme");
+        button.setAttribute("aria-label", t(isLight ? "switchToDarkTheme" : "switchToLightTheme"));
+      });
     }
     function updatePrimaryImageMetadata(url, imageUrl, caption) {
       const metadata = document.getElementById("page-image-metadata");
@@ -775,7 +779,22 @@ let vectorEditor = null;
       return Boolean(marker && ROLE_MARKER_TYPES.has(marker.type));
     }
     function usesSpecialMarkerStyle() {
-      return Boolean(state.selected && SPECIAL_MARKER_MAP_NAMES.has(state.selected.name));
+      if (!state.selected) return false;
+      return markerStyleOverrides.get(state.selected.name) ?? SPECIAL_MARKER_MAP_NAMES.has(state.selected.name);
+    }
+    function updateMarkerColorToggle() {
+      const darkIcons = usesSpecialMarkerStyle();
+      markerColorToggle.disabled = !state.selected;
+      markerColorToggle.textContent = t(darkIcons ? "showWhiteIcons" : "showBlackIcons");
+      markerColorToggle.setAttribute("aria-label", t(darkIcons ? "showWhiteIcons" : "showBlackIcons"));
+      markerColorToggle.setAttribute("aria-pressed", String(!darkIcons));
+    }
+    function toggleMarkerColor() {
+      if (!state.selected) return;
+      markerStyleOverrides.set(state.selected.name, !usesSpecialMarkerStyle());
+      hideMarkerContextMenu();
+      hideAnnotationContextMenu();
+      renderMarkers();
     }
     function markerIconPath(marker, fallbackPath) {
       return usesSpecialMarkerStyle() && isTankMarker(marker)
@@ -2189,6 +2208,7 @@ let vectorEditor = null;
       if (visible) syncMarkerLayer(layer, image, stage);
     }
     function renderMarkers() {
+      updateMarkerColorToggle();
       wipToggle.hidden = !dialog.open || !state.editMode;
       wipToggle.textContent = state.language === "ko" ? "공사 중 표시" : "WIP overlay";
       wipToggle.setAttribute("aria-pressed", String(isMapWorkInProgress()));
@@ -2990,7 +3010,8 @@ let vectorEditor = null;
     copyLink.addEventListener("click", copyCurrentMapLink);
     document.querySelectorAll(".team-button").forEach(button => button.addEventListener("click", () => setTeam(button.dataset.team)));
     languageButtons.forEach(button => button.addEventListener("click", () => setLanguage(button.dataset.language)));
-    themeToggle.addEventListener("click", () => setTheme(state.theme === "dark" ? "light" : "dark"));
+    themeToggles.forEach(button => button.addEventListener("click", () => setTheme(state.theme === "dark" ? "light" : "dark")));
+    markerColorToggle.addEventListener("click", toggleMarkerColor);
     $("#summary-read-more").addEventListener("click", () => {
       const button = $("#summary-read-more");
       button.setAttribute("aria-expanded", String(button.getAttribute("aria-expanded") !== "true"));
@@ -3206,6 +3227,7 @@ let vectorEditor = null;
       cancelDrawing,
       render: renderMarkers,
       commit: () => persistMarkerLayout("savedLocally", { touchMap: true }),
+      export: exportMarkerLayoutData,
       visible: (kind, value) => kind === "m" ? !isMarkerHidden(value) : !hiddenAnnotations.has(annotationIdentity(value)) && !hiddenMarkerTypes.has(markerTypeIdentity(value.type)),
       toolbars: [document.querySelector(".modal-marker-tools")],
       surfaces: [{ stage: modalMapStage, layer: modalMarkerLayer }]

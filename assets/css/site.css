@@ -509,7 +509,8 @@
     dialog[open] { display: grid; grid-template-rows: auto auto minmax(0, 1fr); }
     dialog::backdrop { background: rgba(4, 7, 6, .82); backdrop-filter: blur(4px); }
     .modal-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 13px 16px; border-bottom: 1px solid var(--line); background: var(--surface); }
-    .modal-toolbar-actions { display: flex; align-items: center; gap: 8px; }
+    .modal-toolbar-actions { display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-end; gap: 8px; }
+    .modal-toolbar-actions > button { flex-shrink: 0; white-space: nowrap; }
     .modal-variation-control { display: inline-flex; align-items: center; gap: 7px; }
     .modal-variation-control label { color: var(--muted); font-size: .65rem; font-weight: 800; letter-spacing: .05em; text-transform: uppercase; white-space: nowrap; }
     #modal-map-variation { min-width: 132px; padding-block: 7px; }

@@ -6,7 +6,7 @@ const words={
 };
 export function createVectorEditor(h) {
   let active=false,lock=true,key=null,selected=new Set(),editable=new Set(),known=new Set(),gesture=null,undo=[],redo=[],internal=false;
-  let frame=0,reading=false,clipboard=null;
+  let frame=0,reading=false,clipboard=null,committed=null;
   const bars=[], surfaces=[];
   const msg=()=>words[h.language()==='ko'?'ko':'en'];
   const id=()=>`vector-${crypto.randomUUID()}`;
@@ -76,6 +76,8 @@ export function createVectorEditor(h) {
     const buttons={};
     for(const action of ['undo','redo','copy','paste','delete']) {
       const button=document.createElement('button');button.type='button';button.className='marker-tool';button.dataset.vectorAction=action;
+      if(action==='undo')button.setAttribute('aria-keyshortcuts','Control+Z Meta+Z');
+      if(action==='redo')button.setAttribute('aria-keyshortcuts','Control+Shift+Z Meta+Shift+Z Control+Y Meta+Y');
       button.addEventListener('click',()=>action==='delete'?removeSelected():action==='copy'?copySelected():action==='paste'?pasteSelected():history(action==='undo'));
       buttons[action]=button;panel.append(button);
     }
@@ -153,7 +155,7 @@ export function createVectorEditor(h) {
   function refresh() {
     if(reading)return;reading=true;
     const next=h.key();
-    if(key!==next){key=next;selected.clear();editable.clear();known=new Set(entries(h.layout(),key).map(({kind,value})=>ref(kind,value.id)));undo=[];redo=[];gesture=null;}
+    if(key!==next){key=next;selected.clear();editable.clear();known=new Set(entries(h.layout(),key).map(({kind,value})=>ref(kind,value.id)));undo=[];redo=[];gesture=null;committed=snapshot(h.layout(),key);}
     active=h.editing()&&!h.drawing();
     if(!h.editing())selected.clear();
     selected=expandSelection(h.layout(),key,selected);
@@ -162,6 +164,7 @@ export function createVectorEditor(h) {
       bar.panel.hidden=!h.editing()||!key;
       for(const [action,button] of Object.entries(bar.buttons)) {
         button.textContent=w[action];button.disabled=!key||!!gesture||(['delete','copy'].includes(action)&&!selected.size)||(action==='paste'&&!clipboard)||(action==='undo'&&!undo.length)||(action==='redo'&&!redo.length);
+        if(action==='undo'||action==='redo')button.title=`${w[action]} (${action==='undo'?'Ctrl+Z':'Ctrl+Shift+Z'})`;
       }
       bar.checkbox.checked=lock;bar.lockText.textContent=w.lock;
     }
@@ -185,7 +188,13 @@ export function createVectorEditor(h) {
     reading=false;
   }
   document.addEventListener('keydown',event=>{
-    if(!h.editing()||!active||event.target.closest('input,textarea,select,[contenteditable="true"]'))return;
+    if(!h.editing()||event.altKey)return;
+    if((event.ctrlKey||event.metaKey)&&event.key.toLowerCase()==='s'&&!event.shiftKey){
+      event.preventDefault();event.stopImmediatePropagation();
+      if(!event.repeat)h.export();
+      return;
+    }
+    if(!active||event.target.closest('input,textarea,select,[contenteditable="true"]'))return;
     if((event.ctrlKey||event.metaKey)&&['c','v'].includes(event.key.toLowerCase())&&!gesture) {
       if(event.key.toLowerCase()==='c'?!selected.size:!clipboard)return;
       event.preventDefault();event.stopImmediatePropagation();
@@ -203,8 +212,16 @@ export function createVectorEditor(h) {
   new ResizeObserver(refresh).observe(h.surfaces[0].stage);
   refresh();
   return {refresh,addFile,onExternalCommit(){
+    if(key!==h.key())refresh();
+    const next=snapshot(h.layout(),key);
     const current=new Set(entries(h.layout(),key).map(({kind,value})=>ref(kind,value.id)));
-    if(!internal){undo=[];redo=[];for(const r of current)if(!known.has(r))editable.add(r);}
-    known=current;
+    if(!internal){
+      // Legacy marker edits commit after mutation; retain their last saved state.
+      if(key&&committed&&JSON.stringify(committed)!==JSON.stringify(next)){
+        undo.push(committed);if(undo.length>16)undo.shift();redo=[];
+      }
+      for(const r of current)if(!known.has(r))editable.add(r);
+    }
+    known=current;committed=next;
   },isActive:()=>active&&h.editing()};
 }
