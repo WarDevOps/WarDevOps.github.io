@@ -470,10 +470,12 @@ document.addEventListener("keydown", event => {
 document.addEventListener("pointerdown", event => {
   if (event.button !== 0) return;
   if (!event.target.closest(".brc-search")) results.hidden = true;
-  if (!popup.hidden && !popup.contains(event.target) && !event.target.closest("[data-unit]")) closePopup();
+  if (!popupPosition && !popup.hidden && !popup.contains(event.target) && !event.target.closest("[data-unit]")) closePopup();
 });
 document.addEventListener("click", event => {
   if (event.button !== 0 || !state.selected) return;
+  // A pinned details panel keeps its comparison when clicking outside it.
+  if (popupPosition && !popup.hidden) return;
   const unit = event.target.closest("[data-unit]");
   // Vehicle clicks go to selectUnit, which switches the pinned reference directly.
   if (unit) return;
