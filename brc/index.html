@@ -15,7 +15,7 @@
   <meta name="twitter:card" content="summary">
   <title>Battle-rating Range Calculator | WarDevOps</title>
   <link rel="stylesheet" href="/assets/css/site.css?v=light-modal-panels-20261108">
-  <link rel="stylesheet" href="/assets/css/brc.css?v=variable-br-border-20261107">
+  <link rel="stylesheet" href="/assets/css/brc.css?v=data-updated-20261108">
 </head>
 <body>
   <header class="site-header">
@@ -34,7 +34,10 @@
   </header>
   <main class="brc-main">
     <section class="brc-intro" aria-labelledby="brc-title">
-      <p class="eyebrow" id="brc-mode-eyebrow">WAR THUNDER · GROUND REALISTIC BATTLES</p>
+      <div class="brc-intro-meta">
+        <p class="eyebrow" id="brc-mode-eyebrow">WAR THUNDER · GROUND REALISTIC BATTLES</p>
+        <p class="brc-data-updated" id="brc-data-updated" hidden><span data-brc-text="dataUpdated">Data updated</span>: <time id="brc-data-updated-date"></time></p>
+      </div>
       <h1 id="brc-title">Battle-rating Range <em>Calculator</em><span class="brc-badge">Beta</span></h1>
       <p data-brc-text="intro">Click a vehicle to lock its ±1.0 BR range, another vehicle to switch, or empty space to unlock.</p>
       <div class="tier-category-switch brc-mode-tabs" id="brc-mode-tabs" role="tablist" aria-label="Battle mode">
@@ -117,7 +120,7 @@
     <p data-page-i18n="copyrightNotice">Unofficial fan project. Not affiliated with or endorsed by Gaijin Entertainment. War Thunder and related game materials belong to their respective rights holders.</p>
   </footer>
   <script type="module" src="/assets/js/tier-page.js?v=20260828"></script>
-  <script type="module" src="/assets/js/brc.js?v=border-guide-20261107"></script>
+  <script type="module" src="/assets/js/brc.js?v=data-updated-20261108"></script>
   <script type="module" src="/assets/js/consent-controls.js?v=20260828"></script>
 </body>
 </html>

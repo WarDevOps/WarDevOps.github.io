@@ -205,6 +205,7 @@ def refresh_catalog_ratings(existing: dict, documents: dict, checked_on: str) ->
     # A current Wiki refresh supersedes the previously applied planned spreadsheet.
     updated.pop("battleRatingUpdate", None)
     updated["battleRatingsUpdatedAt"] = checked_on
+    updated["updatedAt"] = checked_on
     updated["battleRatingSnapshot"] = {
         "status": "current",
         "source": WIKI_ROOT,
@@ -313,10 +314,12 @@ def parse_unit(category: str, wiki_id: str, image_root: Path, download_images: b
 
 
 def write_catalog(path: Path, categories: dict[str, list[dict]]) -> None:
+    updated_at = datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z")
     payload = {
         "source": WIKI_ROOT,
         "battleRatingMode": "RB",
-        "generatedAt": datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z"),
+        "generatedAt": updated_at,
+        "updatedAt": updated_at,
         "categories": {
             category: {
                 "source": f"{WIKI_ROOT}/{CATEGORIES[category]['page']}",

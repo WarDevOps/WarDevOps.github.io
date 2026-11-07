@@ -4,7 +4,7 @@ import { validateVariableRatings } from "./brc-ratings.js?v=highest-penalty-2026
 
 const copy = {
   en: {
-    grb: "GROUND REALISTIC", arb: "AIR REALISTIC", modeLabel: "Battle mode",
+    grb: "GROUND REALISTIC", arb: "AIR REALISTIC", modeLabel: "Battle mode", dataUpdated: "Data updated",
     arbNotice: "Compare aircraft within ±1.0 of the selected aircraft’s Air RB. All nations are included. New vehicles have blue borders; vehicles with variable BR have purple borders.",
     arbEmpty: "No aircraft in this range. Turn off Range only to see all aircraft.",
     intro: "Click a vehicle to lock its ±1.0 BR range, another vehicle to switch, or empty space to unlock.",
@@ -21,7 +21,7 @@ const copy = {
     countries: ["USA", "Germany", "USSR", "Britain", "Japan", "China", "Italy", "France", "Sweden", "Israel"],
   },
   ko: {
-    grb: "지상 리얼리스틱", arb: "공중 리얼리스틱", modeLabel: "전투 모드",
+    grb: "지상 리얼리스틱", arb: "공중 리얼리스틱", modeLabel: "전투 모드", dataUpdated: "데이터 업데이트",
     arbNotice: "선택한 항공기의 공중전 BR 기준 ±1.0 범위를 비교합니다. 모든 국가의 항공기를 표시합니다. 최신 장비는 파란색 테두리, 가변 BR 적용 장비는 보라색 테두리로 표시합니다.",
     arbEmpty: "이 범위에 표시할 항공기가 없습니다. ‘범위만 보기’를 해제하면 전체 항공기를 볼 수 있습니다.",
     intro: "장비를 클릭해 ±1.0 BR 범위를 고정하세요. 다른 장비를 클릭하면 기준이 바뀌고, 빈 공간을 클릭하면 고정이 풀립니다.",
@@ -281,6 +281,12 @@ function renderSearch() {
 
 function applyLanguage() {
   document.querySelectorAll("[data-brc-text]").forEach(node => { node.textContent = t(node.dataset.brcText); });
+  const updated = state.catalog?.updatedAt || state.catalog?.battleRatingsUpdatedAt || state.catalog?.generatedAt;
+  const date = typeof updated === "string" ? updated.slice(0, 10) : "";
+  const hasDate = /^\d{4}-\d{2}-\d{2}$/.test(date) && Number.isFinite(Date.parse(date));
+  $("#brc-data-updated").hidden = !hasDate;
+  $("#brc-data-updated-date").textContent = hasDate ? date : "";
+  $("#brc-data-updated-date").dateTime = hasDate ? date : "";
   $("#brc-detail-close").setAttribute("aria-label", t("close"));
   updatePositionControls();
   scroller.setAttribute("aria-label", t("tableLabel"));
@@ -331,7 +337,7 @@ async function loadCatalog() {
   try {
     // Deliberately share the Tier List catalog and its BR values; no BRC-specific copy.
     const [catalog, ratings] = await Promise.all([
-      "../data/tier-units.json?v=wiki-additions-20261104", "../data/brc-variable-br.json?v=20261101",
+      "../data/tier-units.json?v=data-updated-20261108", "../data/brc-variable-br.json?v=20261101",
     ].map(async path => {
       const response = await fetch(new URL(path, import.meta.url));
       if (!response.ok) throw new Error(`Catalog HTTP ${response.status}`);
