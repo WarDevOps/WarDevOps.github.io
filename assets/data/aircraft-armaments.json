@@ -970,8 +970,8 @@
       "type": "guided-bomb",
       "guidance": "Laser",
       "source": "https://wiki.warthunder.com/collections/weapon/paveway_iii",
-      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/guided_bomb_heavy_laser.png",
-      "icon": "/icon/weapon-wiki/guided_bomb_heavy_laser.png"
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/guided_bomb_heavy_middle_laser.png",
+      "icon": "/icon/weapon-wiki/guided_bomb_heavy_middle_laser.png"
     },
     "w-7389d85fc5640b9d": {
       "name": "AGM-12C Bullpup",
@@ -994,8 +994,8 @@
       "type": "guided-bomb",
       "guidance": "Laser",
       "source": "https://wiki.warthunder.com/collections/weapon/paveway_ii",
-      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/guided_bomb_heavy_laser.png",
-      "icon": "/icon/weapon-wiki/guided_bomb_heavy_laser.png"
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/guided_bomb_heavy_middle_laser.png",
+      "icon": "/icon/weapon-wiki/guided_bomb_heavy_middle_laser.png"
     },
     "w-75f65f2d8ffc1bcc": {
       "name": "Shafrir 2",
@@ -2026,8 +2026,8 @@
       "type": "guided-bomb",
       "guidance": "Laser",
       "source": "https://wiki.warthunder.com/collections/weapon/paveway_ii",
-      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/guided_bomb_small_laser.png",
-      "icon": "/icon/weapon-wiki/guided_bomb_small_laser.png"
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/guided_bomb_middle_laser.png",
+      "icon": "/icon/weapon-wiki/guided_bomb_middle_laser.png"
     },
     "w-eb721d48241060b2": {
       "name": "GBU-62 JDAM-ER",
@@ -2163,8 +2163,8 @@
       "type": "aam",
       "guidance": "SARH+IOG+DL",
       "source": "https://wiki.warthunder.com/collections/weapon/r27",
-      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_type_s_air_to_air_midrange.png",
-      "icon": "/icon/weapon-wiki/missile_type_s_air_to_air_midrange.png"
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_air_to_air_midrange_special.png",
+      "icon": "/icon/weapon-wiki/missile_air_to_air_midrange_special.png"
     },
     "w-fb0004f2f438ef51": {
       "name": "AASM 250 HAMMER (SBU 64)",
@@ -6044,7 +6044,8 @@
         "w-a90184129f175aa9",
         "w-ba665621c2721418",
         "w-c3ecd962eecd8223"
-      ]
+      ],
+      "checkedOn": "2026-11-08"
     },
     "j_7_mk2": {
       "status": "verified",
@@ -7089,7 +7090,8 @@
         "w-cff6eb8beb4f77da",
         "w-e7dd58b06e016504",
         "w-facdd7439aab0dc0"
-      ]
+      ],
+      "checkedOn": "2026-11-08"
     },
     "mig-21_f13": {
       "status": "verified",
@@ -8536,7 +8538,8 @@
         "w-bad8d4217ca7110c",
         "w-e9208dd8094b0a54",
         "w-fd57a410bb9cc27c"
-      ]
+      ],
+      "checkedOn": "2026-11-08"
     },
     "saab_jas39c": {
       "status": "verified",
@@ -9242,7 +9245,8 @@
         "w-da3ab896a1081a11",
         "w-e342bc555c774336",
         "w-f2a2e1ba61e69fb1"
-      ]
+      ],
+      "checkedOn": "2026-11-08"
     },
     "su_25t": {
       "status": "verified",
@@ -10066,11 +10070,13 @@
     },
     "bf-109e-3_tl": {
       "status": "verified",
-      "weapons": []
+      "weapons": [],
+      "checkedOn": "2026-11-08"
     },
     "fw_190a_8_mistel": {
       "status": "verified",
-      "weapons": []
+      "weapons": [],
+      "checkedOn": "2026-11-08"
     }
   },
   "testAdditions": {

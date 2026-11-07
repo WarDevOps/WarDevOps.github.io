@@ -2,7 +2,7 @@
   "source": "https://wiki.warthunder.com",
   "battleRatingMode": "RB",
   "generatedAt": "2026-09-22T02:55:51Z",
-  "updatedAt": "2026-11-04",
+  "updatedAt": "2026-11-08",
   "categories": {
     "tank": {
       "source": "https://wiki.warthunder.com/ground",
@@ -36290,7 +36290,7 @@
     "sourceFormat": "User-supplied article text",
     "status": "testing",
     "addedOn": "2026-11-01",
-    "wikiCheckedOn": "2026-11-01",
+    "wikiCheckedOn": "2026-11-08",
     "excluded": [
       "naval",
       "nuke",

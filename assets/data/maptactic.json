@@ -3,7 +3,7 @@
   "mapUpdated": {
     "38th Parallel": "2026-10-07",
     "Abandoned Factory": "2026-09-29",
-    "Abandoned Town": "2026-09-14",
+    "Abandoned Town": "2026-11-08",
     "Advance to the Rhine": "2026-09-16",
     "Alaska": "2026-10-04",
     "American Desert": "2026-09-23",
@@ -62,7 +62,7 @@
   "mapUpdatedAt": {
     "38th Parallel": "2026-10-07T06:12:15Z",
     "Abandoned Factory": "2026-09-28T16:58:40Z",
-    "Abandoned Town": "2026-09-13T23:30:35Z",
+    "Abandoned Town": "2026-11-07T21:44:29Z",
     "Advance to the Rhine": "2026-09-16T02:26:57Z",
     "Alaska": "2026-10-04T10:19:32Z",
     "American Desert": "2026-09-22T21:47:17Z",
@@ -1740,7 +1740,7 @@
       },
       {
         "id": "mt8be5xa-ubg1l7",
-        "type": "mainBattleTank",
+        "type": "tankDestroyer",
         "x": 55.05,
         "y": 83.07,
         "commentKo": "초반에 유용한 저격자리. 도하하는 적들 사격 가능",
@@ -1759,7 +1759,7 @@
       },
       {
         "id": "mt8beb0o-td9awi",
-        "type": "mainBattleTank",
+        "type": "tankDestroyer",
         "x": 57.54,
         "y": 45.12,
         "commentImages": [
@@ -1812,7 +1812,7 @@
       },
       {
         "id": "mt8bmx6g-l8yzvf",
-        "type": "mainBattleTank",
+        "type": "lightTank",
         "x": 40.78,
         "y": 53.1,
         "commentImages": [
@@ -1876,7 +1876,7 @@
       },
       {
         "id": "mt8dmu5h-04y1a5",
-        "type": "mainBattleTank",
+        "type": "lightTank",
         "x": 29.29,
         "y": 68.75,
         "commentImages": [
@@ -1924,7 +1924,7 @@
       },
       {
         "id": "mt8dos6s-hezrxr",
-        "type": "mainBattleTank",
+        "type": "tankDestroyer",
         "x": 44.79,
         "y": 91.41,
         "commentKo": "시가지가 밀렸을 때 쓸 수 있는 아주 방어적인 자리",
@@ -2034,7 +2034,7 @@
       },
       {
         "id": "mt8bmod8-0hd6yi",
-        "type": "mainBattleTankRed",
+        "type": "tankDestroyerRed",
         "x": 30.05,
         "y": 43.26,
         "commentImages": [
@@ -2181,7 +2181,7 @@
       },
       {
         "id": "mtk35za0-066iyg",
-        "type": "mainBattleTankRed",
+        "type": "lightTankRed",
         "x": 30.47,
         "y": 79.95,
         "commentImages": [
@@ -89433,6 +89433,6 @@
     "Sands of Sinai::domination-1|Blue": [],
     "Vietnam::domination-1|Red": []
   },
-  "updatedAt": "2026-11-07T21:42:11.677Z",
-  "exportedAt": "2026-11-07T21:42:26.204Z"
+  "updatedAt": "2026-11-07T21:44:29.877Z",
+  "exportedAt": "2026-11-07T21:48:29.010Z"
 }
