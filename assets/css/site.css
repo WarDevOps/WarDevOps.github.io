@@ -481,7 +481,8 @@
     body.light-theme #map-search, body.light-theme .map-index, body.light-theme .map-viewer { background: rgba(255,255,255,.82); }
     body.light-theme #map-search::placeholder { color: #738078; }
     body.light-theme .map-stage, body.light-theme dialog, body.light-theme .modal-workspace, body.light-theme .modal-map-stage { background: #f7faf7; }
-    body.light-theme .legend-panel { background: rgba(248,251,248,.94); }
+    body.light-theme .legend-panel, body.light-theme .modal-legend-region { background: rgba(248,251,248,.94); }
+    body.light-theme .modal-marker-tools { background: var(--surface); }
     body.light-theme .legend-item { color: var(--ink); }
     body.light-theme .legend-group:has(> summary[data-i18n="legendTactical"]) .legend-icon img:not([src$="/SmokeShell.webp"]):not([src$="/ArtilleryStrike64.webp"]) { filter: brightness(0); }
     body.light-theme .annotation-opacity-heading { color: var(--ink); }
