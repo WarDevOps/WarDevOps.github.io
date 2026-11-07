@@ -423,6 +423,10 @@
     .tier-card.is-new { border-color: #70d9ff; box-shadow: inset 0 0 0 1px #70d9ff; }
     .tier-card.is-new.is-selected { box-shadow: inset 0 0 0 1px #70d9ff, 0 0 0 2px var(--accent); }
     .tier-card img { display: block; width: 100%; height: 100%; object-fit: cover; pointer-events: none; }
+    .vehicle-image-pending { position: absolute; inset: 25px 0 0; display: grid; place-items: center; padding: 6px; pointer-events: none; text-align: center; }
+    .vehicle-image-pending[hidden] { display: none; }
+    .vehicle-image-pending > span { padding: 5px 8px; border-radius: 4px; background: rgba(5, 8, 8, .8); color: #fff; font-size: .7rem; line-height: 1.4; text-shadow: 0 1px 2px #000; }
+    .tier-card .vehicle-image-pending > span { padding: 4px 5px; font-size: .6rem; }
     .tier-card-caption { position: absolute; z-index: 1; top: 0; right: 0; left: 0; display: flex; min-width: 0; height: 25px; padding: 4px 6px; align-items: center; gap: 6px; background: linear-gradient(90deg, rgba(5, 8, 8, .94), rgba(5, 8, 8, .78)); color: #fff; line-height: 1; pointer-events: none; }
     .tier-card .tier-card-flag { width: 25px; height: 16px; flex: 0 0 25px; border: 1px solid rgba(255,255,255,.35); border-radius: 2px; object-fit: cover; box-shadow: 0 1px 3px rgba(0,0,0,.35); }
     .tier-card-country-code { flex: 0 0 auto; color: var(--accent); font-size: .62rem; font-weight: 900; }
@@ -590,6 +594,8 @@
       .tier-label { font-size: 1rem; }
       .tier-card { width: 112px; height: 71px; flex-basis: 112px; }
       .tier-card-caption { height: 21px; padding: 3px 4px; gap: 4px; }
+      .tier-card .vehicle-image-pending { top: 21px; padding: 3px; }
+      .tier-card .vehicle-image-pending > span { font-size: .55rem; }
       .tier-card .tier-card-flag { width: 21px; height: 14px; flex-basis: 21px; }
       .tier-card-equipment-name { font-size: .58rem; }
       .tier-card-pool { min-height: 168px; }

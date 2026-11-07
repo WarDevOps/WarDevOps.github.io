@@ -1,6 +1,7 @@
 import { CATEGORIES, COUNTRIES, readCatalog, visibleUnits, searchUnits, rangeColor, toTenths } from "./brc-model.js?v=highest-penalty-20261101";
 import { createArmamentPanel } from "./brc-armaments.js?v=highlight-refresh-20261108";
 import { validateVariableRatings } from "./brc-ratings.js?v=highest-penalty-20261101";
+import { setVehicleImage, imagePendingText } from "./vehicle-images.js?v=20261108";
 
 const copy = {
   en: {
@@ -12,7 +13,7 @@ const copy = {
     rangeOnly: "Range only", clear: "Clear selection", comparing: "COMPARING", difference: "BR difference",
     notice: "A ±1.0 BR comparison, not a complete list of possible opponents. Matchmaking uses your lineup’s highest BR; lower-BR vehicles may also appear. All nations are included. New vehicles have blue borders; vehicles with variable BR have purple borders.",
     scrollHint: "Scroll to explore · Nation headers and BR stay visible", details: "VEHICLE DETAILS",
-    placeholder: "", closeHint: "Closing this panel keeps your selected range.",
+    placeholder: "", closeHint: "Closing this panel keeps your selected range.", customBrVehicle: "Custom BR vehicle",
     close: "Close details", tableLabel: "Vehicles by nation and battle rating", retry: "Try again",
     idle: "Hover over or select a vehicle", idleHint: "Select a vehicle to enable Range only.",
     pinned: "Pinned", preview: "Preview", noResults: "No matching vehicles.", results: "results", more: "Showing the first 60. Refine your search for more specific results.",
@@ -29,7 +30,7 @@ const copy = {
     rangeOnly: "범위만 보기", clear: "선택 해제", comparing: "비교 기준", difference: "BR 차이",
     notice: "선택 장비의 ±1.0 BR 비교표입니다. 실제 매칭은 편성의 최고 BR을 기준으로 하며 더 낮은 BR 장비도 등장할 수 있습니다. 아군·적군을 구분하지 않고 모든 국가를 표시합니다. 최신 장비는 파란색 테두리, 가변 BR 적용 장비는 보라색 테두리로 표시합니다.",
     scrollHint: "스크롤로 탐색 · 국가 헤더와 BR 열 고정", details: "장비 설명",
-    placeholder: "", closeHint: "설명을 닫아도 선택한 범위는 유지됩니다.",
+    placeholder: "", closeHint: "설명을 닫아도 선택한 범위는 유지됩니다.", customBrVehicle: "커스텀 BR 장비",
     close: "설명 닫기", tableLabel: "국가 및 BR별 장비", retry: "다시 시도",
     idle: "장비에 마우스를 올리거나 선택하세요", idleHint: "장비를 선택하면 ‘범위만 보기’를 사용할 수 있습니다.",
     pinned: "고정", preview: "미리보기", noResults: "일치하는 장비가 없습니다.", results: "개 검색 결과", more: "앞의 60개 결과입니다. 검색어를 더 입력하면 결과를 좁힐 수 있습니다.",
@@ -72,6 +73,10 @@ const number = value => value.toFixed(1);
 const ratingLabel = unit => `${state.mode.toUpperCase()} BR ${number(unit.br)}`;
 const comparisonSelection = () => state.selected ? { ...state.selected, br: armaments.ratingFor(state.selected, state.mode) } : null;
 const active = () => comparisonSelection() || state.hovered || state.focused;
+const hasCustomBr = unit => {
+  const rule = unit.variableBr?.[state.mode];
+  return Boolean(rule && rule.max > rule.base && Object.values(rule.penalties).some(penalty => penalty > 0));
+};
 
 function updateWeaponComparison(id, mode) {
   if (state.selected?.id !== id || state.mode !== mode) return;
@@ -124,9 +129,7 @@ function renderTable() {
         for (const unit of categoryUnits) {
           const button = element("button", "brc-unit", unit.name);
           button.classList.toggle("is-new", newUnitIds.has(unit.wikiId) || unit.isNew === true);
-          const variableRule = unit.variableBr?.[state.mode];
-          button.classList.toggle("has-variable-br", Boolean(variableRule && variableRule.max > variableRule.base
-            && Object.values(variableRule.penalties).some(penalty => penalty > 0)));
+          button.classList.toggle("has-variable-br", hasCustomBr(unit));
           button.type = "button"; button.dataset.unit = unit.id;
           button.setAttribute("aria-pressed", String(state.selected?.id === unit.id));
           button.setAttribute("aria-label", `${unit.name}, ${countryName(unit.countryCode)}, ${t(category)}, ${ratingLabel(unit)}`);
@@ -227,16 +230,16 @@ function updatePopup() {
   const airRating = unit.category === "air" ? ` · ARB BR ${number(unit.airBr)}` : "";
   const meta = $("#brc-detail-meta");
   meta.textContent = `${countryName(unit.countryCode)} · ${t(unit.category)}`;
-  meta.append(element("span", "brc-detail-ratings", `GRB BR ${number(groundBr)}${airRating}`));
+  meta.append(element("span", "brc-detail-ratings", hasCustomBr(unit)
+    ? t("customBrVehicle") : `GRB BR ${number(groundBr)}${airRating}`));
   const image = $("#brc-detail-image");
-  const folder = { tank: "Tank", air: "Air", heli: "Heli" }[state.selected.category];
-  $("#brc-detail-media").hidden = unit.imageAvailable === false;
+  $("#brc-detail-media").hidden = false;
   $("#brc-detail-flag").src = `/icon/flag-${state.selected.countryCode.toLowerCase()}.svg`;
   $("#brc-detail-image-name").textContent = state.selected.name;
   image.alt = state.selected.name;
-  image.hidden = unit.imageAvailable === false;
-  if (unit.imageAvailable === false) image.removeAttribute("src");
-  else image.src = `/Tier/${folder}/${encodeURIComponent(state.selected.file)}?v=${encodeURIComponent(state.catalog.updatedAt || "current")}`;
+  const overlay = $("#brc-detail-image-pending");
+  overlay.firstElementChild.textContent = imagePendingText(state.language);
+  setVehicleImage(image, overlay, unit, unit.category, state.catalog.updatedAt || "current", positionPopup);
   armaments.show(state.selected, state.mode, state.language);
   positionPopup();
 }
@@ -458,12 +461,6 @@ dragHandle.addEventListener("keydown", event => {
   movePopup(rect.left + delta[0] * step, rect.top + delta[1] * step);
 });
 $("#brc-detail-image").addEventListener("load", () => { armaments.layout(); positionPopup(); });
-$("#brc-detail-image").addEventListener("error", event => {
-  event.target.hidden = true;
-  $("#brc-detail-media").hidden = true;
-  armaments.layout();
-  positionPopup();
-});
 $("#brc-retry").addEventListener("click", loadCatalog);
 document.addEventListener("keydown", event => {
   if (event.key !== "Escape") return;

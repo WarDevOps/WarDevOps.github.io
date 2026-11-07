@@ -1,3 +1,5 @@
+import { placeholderImage, vehicleImageSource, setVehicleImage, imagePendingText } from "./vehicle-images.js?v=20261108";
+
 const tierRoot = document.querySelector("#tier-content-view");
 
 if (tierRoot) {
@@ -375,14 +377,17 @@ if (tierRoot) {
     card.setAttribute("aria-pressed", String(selectedItemId === id));
     card.classList.toggle("is-selected", selectedItemId === id);
 
-    if (unitRecord(activeCategory, file)?.imageAvailable !== false) {
-      const image = document.createElement("img");
-      image.src = `${META[activeCategory].folder}/${encodeURIComponent(file)}?v=${encodeURIComponent(tierCatalog.updatedAt || "current")}`;
-      image.alt = name;
-      image.loading = "lazy";
-      image.decoding = "async";
-      card.append(image);
-    }
+    const image = document.createElement("img");
+    image.alt = name;
+    image.loading = "lazy";
+    image.decoding = "async";
+    const pending = document.createElement("span");
+    pending.className = "vehicle-image-pending";
+    const pendingLabel = document.createElement("span");
+    pendingLabel.textContent = imagePendingText(language());
+    pending.append(pendingLabel);
+    setVehicleImage(image, pending, unitRecord(activeCategory, file), activeCategory, tierCatalog.updatedAt || "current");
+    card.append(image, pending);
 
     const caption = document.createElement("span");
     caption.className = "tier-card-caption";
@@ -624,13 +629,12 @@ if (tierRoot) {
     context.scale(pixelRatio, pixelRatio);
 
     const ids = exportZones.flatMap(zone => layouts[activeCategory][zone]);
-    const imageSources = new Set();
+    const placeholderSource = placeholderImage(activeCategory);
+    const imageSources = new Set([placeholderSource]);
     ids.forEach(id => {
       const file = fileForId(id);
       if (!file) return;
-      if (unitRecord(activeCategory, file)?.imageAvailable !== false) {
-        imageSources.add(`${META[activeCategory].folder}/${encodeURIComponent(file)}?v=${encodeURIComponent(tierCatalog.updatedAt || "current")}`);
-      }
+      imageSources.add(vehicleImageSource(unitRecord(activeCategory, file), activeCategory, tierCatalog.updatedAt || "current"));
       const flag = itemDetails(file).flag;
       if (flag) imageSources.add(flag);
     });
@@ -667,12 +671,25 @@ if (tierRoot) {
         const line = Math.floor(cardIndex / cardsPerLine);
         const x = labelWidth + padding + column * (cardWidth + gap);
         const y = rowY + padding + line * (cardHeight + gap);
-        const unitSource = `${META[activeCategory].folder}/${encodeURIComponent(file)}?v=${encodeURIComponent(tierCatalog.updatedAt || "current")}`;
-        const unitImage = images.get(unitSource);
+        const unitSource = vehicleImageSource(unitRecord(activeCategory, file), activeCategory, tierCatalog.updatedAt || "current");
+        const isPlaceholder = unitSource === placeholderSource || !images.get(unitSource);
+        const unitImage = images.get(unitSource) || images.get(placeholderSource);
 
         context.fillStyle = "#252d34";
         context.fillRect(x, y, cardWidth, cardHeight);
         if (unitImage) drawImageCover(context, unitImage, x, y, cardWidth, cardHeight);
+        if (isPlaceholder) {
+          const label = imagePendingText(language());
+          context.font = "500 11px Arial, sans-serif";
+          const labelWidth = Math.min(cardWidth - 8, context.measureText(label).width + 12);
+          const centerY = y + 25 + (cardHeight - 25) / 2;
+          context.fillStyle = "rgba(5, 8, 8, .8)";
+          context.fillRect(x + (cardWidth - labelWidth) / 2, centerY - 12, labelWidth, 24);
+          context.fillStyle = "#fff";
+          context.textAlign = "center";
+          context.textBaseline = "middle";
+          context.fillText(label, x + cardWidth / 2, centerY, cardWidth - 16);
+        }
         context.strokeStyle = "#39463f";
         context.lineWidth = 1;
         context.strokeRect(x + .5, y + .5, cardWidth - 1, cardHeight - 1);
