@@ -298,9 +298,10 @@
         <img src="/icon/Reddit_Small.svg" alt="" width="22" height="22">
         <span>r/Warthunder</span>
       </a>
-      <a class="community-link" href="https://discord.gg/6hscsyf4Z" target="_blank" rel="noopener noreferrer" aria-label="Join my discord">
+      <a class="community-link" href="https://discord.gg/6hscsyf4Z" target="_blank" rel="noopener noreferrer" aria-label="Join my Discord">
         <img src="/icon/Discord_Small.webp" alt="" width="22" height="22">
-        <span>Join my discord</span>
+        <span>Join my Discord</span>
+        <span class="member-count" id="discord-member-count" aria-live="polite">— / 256</span>
       </a>
       <a class="community-link" href="https://www.youtube.com/@Nari-d7g" target="_blank" rel="noopener noreferrer" aria-label="Visit Nari on YouTube">
         <img src="/icon/Youtube_Small.svg" alt="" width="22" height="22">
@@ -329,7 +330,6 @@
           <button class="team-button blue" type="button" data-team="Blue" aria-pressed="false">BLUE</button>
         </div>
         <button class="theme-toggle" id="modal-theme-toggle" type="button" aria-pressed="false" aria-label="Switch color theme">LIGHT</button>
-        <button class="marker-tool marker-color-toggle" id="modal-marker-color-toggle" type="button" aria-pressed="false">WHITE ICONS</button>
         <button class="close-modal" type="button" aria-label="Close enlarged view" data-i18n-aria="closeEnlargedView">✕</button>
       </div>
     </div>
@@ -400,6 +400,7 @@
         <p class="modal-legend-note" data-i18n="modalLegendHint">Click an icon to hide or restore that marker type.</p>
         <div class="modal-legend-list" id="modal-legend-list"></div>
         <div class="modal-legend-actions">
+          <button class="marker-tool marker-color-toggle" id="modal-marker-color-toggle" type="button" aria-pressed="false">WHITE ICONS</button>
           <button class="marker-tool" id="modal-toggle-editor" type="button" aria-pressed="false" data-i18n="editMarkers">Edit Map</button>
           <button class="marker-tool" id="modal-reset-hidden-markers" type="button" data-i18n="resetHidden">Reset Hidden</button>
           <button class="marker-tool danger" id="modal-reset-all-markers" type="button" data-i18n="resetAllMarkers">Reset All Markers</button>
