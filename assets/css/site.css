@@ -526,6 +526,8 @@
     .modal-workspace { display: grid; grid-template-columns: minmax(0, 1fr) minmax(220px, 290px); min-height: 0; background: #0d1111; overflow: hidden; }
     .modal-legend-region { grid-column: 2; grid-row: 1; min-width: 0; padding: 12px 10px; overflow: auto; border-left: 1px solid var(--line); background: rgba(13,19,18,.36); }
     .modal-legend-note { margin: 0 0 6px; color: var(--muted); font-size: .7rem; }
+    .modal-legend-controls { position: sticky; top: 0; z-index: 4; margin-bottom: 8px; border-radius: 8px; background: var(--surface); }
+    .modal-legend-controls .marker-tool { width: 100%; }
     .modal-legend-list { display: grid; gap: 2px; margin: 0; padding: 0; list-style: none; }
     .modal-legend-list .legend-group summary { padding: 8px 5px; font-size: .65rem; }
     .modal-legend-list .legend-list { padding-bottom: 5px; }

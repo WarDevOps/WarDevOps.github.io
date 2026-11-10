@@ -88,7 +88,7 @@ let vectorEditor = null;
     const annotationOpacityValue = $("#annotation-opacity-value");
     const languageButtons = document.querySelectorAll(".language-button");
     const themeToggles = document.querySelectorAll(".theme-toggle");
-    const markerColorToggle = $("#modal-marker-color-toggle");
+    const markerColorToggles = document.querySelectorAll(".marker-color-toggle");
     const markerStyleOverrides = new Map();
     const workspace = $(".workspace");
     const mapViewer = $(".map-viewer");
@@ -784,10 +784,12 @@ let vectorEditor = null;
     }
     function updateMarkerColorToggle() {
       const darkIcons = usesSpecialMarkerStyle();
-      markerColorToggle.disabled = !state.selected;
-      markerColorToggle.textContent = t(darkIcons ? "showWhiteIcons" : "showBlackIcons");
-      markerColorToggle.setAttribute("aria-label", t(darkIcons ? "showWhiteIcons" : "showBlackIcons"));
-      markerColorToggle.setAttribute("aria-pressed", String(!darkIcons));
+      markerColorToggles.forEach(button => {
+        button.disabled = !state.selected;
+        button.textContent = t(darkIcons ? "showWhiteIcons" : "showBlackIcons");
+        button.setAttribute("aria-label", t(darkIcons ? "showWhiteIcons" : "showBlackIcons"));
+        button.setAttribute("aria-pressed", String(!darkIcons));
+      });
     }
     function toggleMarkerColor() {
       if (!state.selected) return;
@@ -3011,7 +3013,7 @@ let vectorEditor = null;
     document.querySelectorAll(".team-button").forEach(button => button.addEventListener("click", () => setTeam(button.dataset.team)));
     languageButtons.forEach(button => button.addEventListener("click", () => setLanguage(button.dataset.language)));
     themeToggles.forEach(button => button.addEventListener("click", () => setTheme(state.theme === "dark" ? "light" : "dark")));
-    markerColorToggle.addEventListener("click", toggleMarkerColor);
+    markerColorToggles.forEach(button => button.addEventListener("click", toggleMarkerColor));
     $("#summary-read-more").addEventListener("click", () => {
       const button = $("#summary-read-more");
       button.setAttribute("aria-expanded", String(button.getAttribute("aria-expanded") !== "true"));

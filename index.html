@@ -52,7 +52,7 @@
   </script>
   <title>War Thunder Map Guide &amp; Tactics | WarDevOps</title>
 
-  <link rel="stylesheet" href="/assets/css/site.css?v=carousel-arrow-center-20261108">
+  <link rel="stylesheet" href="/assets/css/site.css?v=legend-icon-controls-20261110">
 </head>
 <body>
   <header class="site-header">
@@ -219,6 +219,7 @@
           <aside class="legend-panel" aria-label="Map legend" data-i18n-aria="mapLegend">
             <h3 class="legend-heading" data-i18n="mapLegend">Map Legend</h3>
             <div class="legend-actions">
+              <button class="marker-tool marker-color-toggle" id="marker-color-toggle" type="button" aria-pressed="false">WHITE ICONS</button>
               <button class="marker-tool" id="reset-hidden-markers" type="button" data-i18n="resetHidden">Reset Hidden</button>
           <div class="marker-danger-actions" data-editor-action data-mobile-reset-action hidden>
             <button class="marker-tool danger" id="reset-all-markers" type="button" data-editor-action data-mobile-reset-action hidden data-i18n="resetAllMarkers">Reset All Markers</button>
@@ -397,10 +398,12 @@
         </div>
       </div>
       <aside class="modal-legend-region" aria-label="Map Legend" data-i18n-aria="mapLegend">
+        <div class="modal-legend-controls">
+          <button class="marker-tool marker-color-toggle" id="modal-marker-color-toggle" type="button" aria-pressed="false">WHITE ICONS</button>
+        </div>
         <p class="modal-legend-note" data-i18n="modalLegendHint">Click an icon to hide or restore that marker type.</p>
         <div class="modal-legend-list" id="modal-legend-list"></div>
         <div class="modal-legend-actions">
-          <button class="marker-tool marker-color-toggle" id="modal-marker-color-toggle" type="button" aria-pressed="false">WHITE ICONS</button>
           <button class="marker-tool" id="modal-toggle-editor" type="button" aria-pressed="false" data-i18n="editMarkers">Edit Map</button>
           <button class="marker-tool" id="modal-reset-hidden-markers" type="button" data-i18n="resetHidden">Reset Hidden</button>
           <button class="marker-tool danger" id="modal-reset-all-markers" type="button" data-i18n="resetAllMarkers">Reset All Markers</button>
@@ -412,7 +415,7 @@
 
   <input id="marker-layout-import-file" type="file" accept="application/json,.json" hidden>
 
-  <script type="module" src="/assets/js/app.js?v=modal-display-controls-20261108"></script>
+  <script type="module" src="/assets/js/app.js?v=legend-icon-controls-20261110"></script>
   <script type="module" src="/assets/js/consent-controls.js?v=20260828"></script>
 </body>
 </html>

@@ -5,8 +5,8 @@
       "name": "38th Parallel",
       "aliases": "38선",
       "slug": "38th-parallel",
-      "updated": "2026-09-14",
-      "updatedAt": "2026-09-13T22:45:42Z",
+      "updated": "2026-11-08",
+      "updatedAt": "2026-11-07T22:43:25Z",
       "br": {
         "min": 4.7
       },
@@ -83,8 +83,8 @@
       "name": "Abandoned Town",
       "aliases": "버려진 소도시",
       "slug": "abandoned-town",
-      "updated": "2026-09-14",
-      "updatedAt": "2026-09-13T23:30:35Z",
+      "updated": "2026-11-08",
+      "updatedAt": "2026-11-07T21:44:29Z",
       "br": {
         "min": 3.7
       },
@@ -122,8 +122,8 @@
       "name": "Advance to the Rhine",
       "aliases": "라인 강 진격",
       "slug": "advance-to-the-rhine",
-      "updated": "2026-09-16",
-      "updatedAt": "2026-09-16T02:26:57Z",
+      "updated": "2026-11-08",
+      "updatedAt": "2026-11-07T22:44:53Z",
       "br": {
         "min": 1
       },
@@ -239,8 +239,8 @@
       "name": "Aral Sea",
       "aliases": "아랄 해",
       "slug": "aral-sea",
-      "updated": "2026-10-04",
-      "updatedAt": "2026-10-04T08:54:40Z",
+      "updated": "2026-10-07",
+      "updatedAt": "2026-10-07T06:13:32Z",
       "br": {
         "min": 6.7
       },
@@ -314,8 +314,8 @@
       "name": "Arctic Polar Base",
       "aliases": "북극",
       "slug": "arctic-polar-base",
-      "updated": "2026-10-04",
-      "updatedAt": "2026-10-04T09:02:23Z",
+      "updated": "2026-11-08",
+      "updatedAt": "2026-11-08T13:31:33Z",
       "br": {
         "min": 6.7
       },
@@ -471,8 +471,8 @@
       "name": "Attica",
       "aliases": "아티카",
       "slug": "attica",
-      "updated": "2026-09-27",
-      "updatedAt": "2026-09-27T08:23:04Z",
+      "updated": "2026-11-08",
+      "updatedAt": "2026-11-07T22:39:36Z",
       "br": {
         "min": 1
       },
@@ -613,8 +613,8 @@
       "name": "Breslau",
       "aliases": "브레슬라우",
       "slug": "breslau",
-      "updated": "2026-09-23",
-      "updatedAt": "2026-09-23T02:55:50Z",
+      "updated": "2026-11-08",
+      "updatedAt": "2026-11-07T22:42:01Z",
       "br": {
         "min": 6.7
       },
@@ -646,8 +646,8 @@
       "name": "Campania",
       "aliases": "캄파니아",
       "slug": "campania",
-      "updated": "2026-09-03",
-      "updatedAt": "2026-09-03T01:49:21Z",
+      "updated": "2026-10-09",
+      "updatedAt": "2026-10-09T12:12:21Z",
       "br": {
         "min": 3.7
       },
@@ -772,8 +772,8 @@
       "name": "Darwin Hill",
       "aliases": "다윈 힐",
       "slug": "darwin-hill",
-      "updated": "2026-10-05",
-      "updatedAt": "2026-10-05T13:44:29Z",
+      "updated": "2026-10-27",
+      "updatedAt": "2026-10-26T20:42:28Z",
       "br": {
         "min": 5
       },
@@ -872,8 +872,8 @@
       "name": "Eastern Europe",
       "aliases": "동유럽",
       "slug": "eastern-europe",
-      "updated": "2026-09-30",
-      "updatedAt": "2026-09-30T06:02:26Z",
+      "updated": "2026-11-10",
+      "updatedAt": "2026-11-10T00:12:02Z",
       "br": {
         "min": 1
       },
@@ -901,7 +901,11 @@
           "br": {
             "min": 1
           },
-          "sharedImage": "Eastern Europe.webp"
+          "sharedImage": "Eastern Europe.webp",
+          "overlays": [
+            "sb.webp",
+            "sr.webp"
+          ]
         },
         {
           "mode": "domination",
@@ -910,7 +914,11 @@
             "min": 1
           },
           "folder": "Eastern Europe/Domination #2",
-          "sharedImage": "Eastern Europe.webp"
+          "sharedImage": "Eastern Europe.webp",
+          "overlays": [
+            "sb.webp",
+            "sr.webp"
+          ]
         }
       ]
     },
@@ -918,8 +926,8 @@
       "name": "European Province",
       "aliases": "유럽 지방",
       "slug": "european-province",
-      "updated": "2026-09-23",
-      "updatedAt": "2026-09-23T01:49:25Z",
+      "updated": "2026-10-27",
+      "updatedAt": "2026-10-26T21:05:00Z",
       "br": {
         "min": 6.7
       },
@@ -1007,8 +1015,8 @@
       "name": "Fields of Poland",
       "aliases": "폴란드의 들판",
       "slug": "fields-of-poland",
-      "updated": "2026-09-28",
-      "updatedAt": "2026-09-28T10:20:20Z",
+      "updated": "2026-10-27",
+      "updatedAt": "2026-10-26T21:01:49Z",
       "br": {
         "min": 4.7
       },
@@ -1041,8 +1049,8 @@
       "name": "Finland",
       "aliases": "핀란드",
       "slug": "finland",
-      "updated": "2026-09-23",
-      "updatedAt": "2026-09-23T02:44:34Z",
+      "updated": "2026-11-03",
+      "updatedAt": "2026-11-02T16:19:29Z",
       "br": {
         "min": 2.3
       },
@@ -1082,8 +1090,8 @@
       "name": "Fire Arc",
       "aliases": "파이어 아크",
       "slug": "fire-arc",
-      "updated": "2026-09-23",
-      "updatedAt": "2026-09-23T03:38:09Z",
+      "updated": "2026-10-27",
+      "updatedAt": "2026-10-26T20:46:03Z",
       "br": {
         "min": 3.7
       },
@@ -1155,7 +1163,8 @@
       "name": "Frozen Pass",
       "aliases": "얼어붙은 산길",
       "slug": "frozen-pass",
-      "updated": "2026-08-25",
+      "updated": "2026-11-03",
+      "updatedAt": "2026-11-02T16:23:06Z",
       "br": {
         "min": 1,
         "max": 7.7
@@ -1177,8 +1186,8 @@
       "name": "Fulda",
       "aliases": "풀다",
       "slug": "fulda",
-      "updated": "2026-10-05",
-      "updatedAt": "2026-10-05T04:51:32Z",
+      "updated": "2026-11-03",
+      "updatedAt": "2026-11-02T16:23:52Z",
       "br": {
         "min": 6.7
       },
@@ -1214,8 +1223,8 @@
       "name": "Golden Quarry",
       "aliases": "금광 지대",
       "slug": "golden-quarry",
-      "updated": "2026-09-27",
-      "updatedAt": "2026-09-27T10:47:09Z",
+      "updated": "2026-11-03",
+      "updatedAt": "2026-11-02T16:24:19Z",
       "br": {
         "min": 2.3
       },
@@ -1289,8 +1298,8 @@
       "name": "Japan",
       "aliases": "일본",
       "slug": "japan",
-      "updated": "2026-09-23",
-      "updatedAt": "2026-09-23T03:21:06Z",
+      "updated": "2026-11-03",
+      "updatedAt": "2026-11-02T16:24:55Z",
       "br": {
         "min": 1
       },
@@ -1325,8 +1334,8 @@
       "name": "Jungle",
       "aliases": "정글",
       "slug": "jungle",
-      "updated": "2026-09-22",
-      "updatedAt": "2026-09-22T06:01:21Z",
+      "updated": "2026-10-27",
+      "updatedAt": "2026-10-26T21:01:04Z",
       "br": {
         "min": 3.7,
         "max": 7.7
@@ -1537,8 +1546,8 @@
       "name": "Normandy",
       "aliases": "노르망디",
       "slug": "normandy",
-      "updated": "2026-09-30",
-      "updatedAt": "2026-09-30T04:03:48Z",
+      "updated": "2026-11-07",
+      "updatedAt": "2026-11-06T22:18:19Z",
       "br": {
         "min": 3.7
       },
@@ -1787,7 +1796,8 @@
       "name": "Pradesh",
       "aliases": "프라데시",
       "slug": "pradesh",
-      "updated": "2026-08-31",
+      "updated": "2026-11-08",
+      "updatedAt": "2026-11-07T22:51:16Z",
       "br": {
         "min": 7.7
       },
@@ -1828,8 +1838,8 @@
       "name": "Red Desert",
       "aliases": "붉은 사막",
       "slug": "red-desert",
-      "updated": "2026-10-04",
-      "updatedAt": "2026-10-04T09:35:44Z",
+      "updated": "2026-10-14",
+      "updatedAt": "2026-10-13T23:39:08Z",
       "br": {
         "min": 9.7
       },
@@ -1865,8 +1875,8 @@
       "name": "Sands of Sinai",
       "aliases": "시나이의 모래사장",
       "slug": "sands-of-sinai",
-      "updated": "2026-09-23",
-      "updatedAt": "2026-09-23T06:07:25Z",
+      "updated": "2026-11-08",
+      "updatedAt": "2026-11-07T21:26:32Z",
       "br": {
         "min": 5
       },
@@ -1903,8 +1913,8 @@
       "name": "Second Battle of El Alamein",
       "aliases": "엘 알라메인",
       "slug": "second-battle-of-el-alamein",
-      "updated": "2026-09-27",
-      "updatedAt": "2026-09-27T04:24:11Z",
+      "updated": "2026-11-08",
+      "updatedAt": "2026-11-08T13:41:26Z",
       "br": {
         "min": 5
       },
@@ -1973,8 +1983,8 @@
       "name": "Seversk-13",
       "aliases": "세베르스크-13",
       "slug": "seversk-13",
-      "updated": "2026-09-14",
-      "updatedAt": "2026-09-13T19:59:09Z",
+      "updated": "2026-11-08",
+      "updatedAt": "2026-11-07T21:27:03Z",
       "br": {
         "min": 1
       },
@@ -2004,8 +2014,8 @@
       "name": "Sinai",
       "aliases": "시나이",
       "slug": "sinai",
-      "updated": "2026-10-03",
-      "updatedAt": "2026-10-03T04:08:19Z",
+      "updated": "2026-11-08",
+      "updatedAt": "2026-11-07T21:28:59Z",
       "br": {
         "min": 1
       },
@@ -2035,8 +2045,8 @@
       "name": "Spaceport",
       "aliases": "우주공항",
       "slug": "spaceport",
-      "updated": "2026-09-30",
-      "updatedAt": "2026-09-30T07:51:18Z",
+      "updated": "2026-11-10",
+      "updatedAt": "2026-11-09T17:16:55Z",
       "br": {
         "min": 6.7
       },
@@ -2066,7 +2076,8 @@
       "name": "Stalingrad",
       "aliases": "스탈린그라드",
       "slug": "stalingrad",
-      "updated": "2026-08-25",
+      "updated": "2026-11-08",
+      "updatedAt": "2026-11-07T21:42:11Z",
       "br": {
         "min": 2.3,
         "max": 7.7
@@ -2088,8 +2099,8 @@
       "name": "Sun City",
       "aliases": "선 시티",
       "slug": "sun-city",
-      "updated": "2026-09-23",
-      "updatedAt": "2026-09-23T05:11:46Z",
+      "updated": "2026-10-27",
+      "updatedAt": "2026-10-26T20:55:30Z",
       "br": {
         "min": 5
       },
@@ -2127,8 +2138,8 @@
       "name": "Surroundings of Volokolamsk",
       "aliases": "볼로콜람스크 포위",
       "slug": "surroundings-of-volokolamsk",
-      "updated": "2026-09-15",
-      "updatedAt": "2026-09-15T03:51:26Z",
+      "updated": "2026-11-08",
+      "updatedAt": "2026-11-07T21:24:39Z",
       "br": {
         "min": 9.7
       },
@@ -2150,7 +2161,14 @@
           "br": {
             "min": 9.7
           },
-          "sharedImage": "Surroundings of Volokolamsk.webp"
+          "sharedImage": "Surroundings of Volokolamsk.webp",
+          "overlays": [
+            "db.webp",
+            "dr.webp",
+            "nr.webp",
+            "sb.webp",
+            "sr.webp"
+          ]
         }
       ]
     },
@@ -2197,8 +2215,8 @@
       "name": "Test Site-2271",
       "aliases": "2271호 실험시설",
       "slug": "test-site-2271",
-      "updated": "2026-09-30",
-      "updatedAt": "2026-09-30T07:52:13Z",
+      "updated": "2026-11-07",
+      "updatedAt": "2026-11-06T22:14:12Z",
       "br": {
         "min": 2.3
       },
@@ -2296,8 +2314,8 @@
       "name": "Vietnam",
       "aliases": "베트남",
       "slug": "vietnam",
-      "updated": "2026-09-24",
-      "updatedAt": "2026-09-24T06:10:00Z",
+      "updated": "2026-11-07",
+      "updatedAt": "2026-11-06T22:12:45Z",
       "br": {
         "min": 5
       },
@@ -2385,8 +2403,8 @@
       "name": "White Rock Fortress",
       "aliases": "백암요새",
       "slug": "white-rock-fortress",
-      "updated": "2026-09-02",
-      "updatedAt": "2026-09-02T04:58:42Z",
+      "updated": "2026-10-27",
+      "updatedAt": "2026-10-26T20:59:04Z",
       "br": {
         "min": 1,
         "max": 8.7
