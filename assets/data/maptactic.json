@@ -109,7 +109,7 @@
     "Sinai": "2026-11-07T21:28:59Z",
     "Spaceport": "2026-11-09T17:16:55Z",
     "Stalingrad": "2026-11-07T21:42:11Z",
-    "Sun City": "2026-11-11T18:25:06Z",
+    "Sun City": "2026-11-11T18:37:21Z",
     "Surroundings of Volokolamsk": "2026-11-07T21:24:39Z",
     "Sweden": "2026-09-27T07:49:10Z",
     "Test Site-2271": "2026-11-06T22:14:12Z",
@@ -24502,7 +24502,6 @@
         "x": 46.84,
         "y": 34.13,
         "commentImages": [
-          "Sun City/scr_ (10).webp",
           "Sun City/scr_ (11).webp"
         ]
       },
@@ -24829,7 +24828,7 @@
       },
       {
         "id": "sun-city-blue-unit-06",
-        "type": "mainBattleTank",
+        "type": "lightTank",
         "x": 54.17,
         "y": 67.82
       },
@@ -91237,6 +91236,6 @@
     "Sands of Sinai::domination-1|Blue": [],
     "Vietnam::domination-1|Red": []
   },
-  "updatedAt": "2026-11-11T18:33:49.897Z",
-  "exportedAt": "2026-11-11T18:34:05.582Z"
+  "updatedAt": "2026-11-11T18:37:21.885Z",
+  "exportedAt": "2026-11-11T18:37:23.445Z"
 }
