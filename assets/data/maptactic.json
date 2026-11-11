@@ -55,7 +55,7 @@
     "Sweden": "2026-09-27",
     "Test Site-2271": "2026-11-07",
     "Tunisia": "2026-11-09",
-    "Vietnam": "2026-11-07",
+    "Vietnam": "2026-11-12",
     "Volokolamsk": "2026-08-31",
     "White Rock Fortress": "2026-10-27"
   },
@@ -65,7 +65,7 @@
     "Abandoned Town": "2026-11-07T21:44:29Z",
     "Advance to the Rhine": "2026-11-07T22:44:53Z",
     "Alaska": "2026-10-04T10:19:32Z",
-    "American Desert": "2026-11-11T18:33:49Z",
+    "American Desert": "2026-11-11T19:04:01Z",
     "Aral Sea": "2026-10-07T06:13:32Z",
     "Arctic Pier": "2026-09-15T01:05:22Z",
     "Arctic Polar Base": "2026-11-08T13:31:33Z",
@@ -114,7 +114,7 @@
     "Sweden": "2026-09-27T07:49:10Z",
     "Test Site-2271": "2026-11-06T22:14:12Z",
     "Tunisia": "2026-11-09T03:19:19Z",
-    "Vietnam": "2026-11-06T22:12:45Z",
+    "Vietnam": "2026-11-11T19:13:01Z",
     "White Rock Fortress": "2026-10-26T20:59:04Z"
   },
   "tacticalSummaries": {
@@ -3564,10 +3564,10 @@
         "type": "tankDestroyerRed",
         "x": 77.49,
         "y": 47.51,
+        "commentEn": "Only the first spawn works.",
         "commentImages": [
           "American Desert/scr_  (13).webp"
-        ],
-        "commentEn": "Only the first spawn works."
+        ]
       },
       {
         "id": "mtiemnap-fvezd4",
@@ -3613,10 +3613,10 @@
         "type": "lightTankRed",
         "x": 98.05,
         "y": 39.18,
+        "commentEn": "Can fight while moving in and out of the map boundary, use a tank with good reverse mobility.",
         "commentImages": [
           "American Desert/scr_  (16).webp"
-        ],
-        "commentEn": "Can fight while moving in and out of the map boundary, use a tank with good reverse mobility."
+        ]
       },
       {
         "id": "mtierdd9-p3pwc4",
@@ -3652,7 +3652,7 @@
       },
       {
         "id": "mtif90q9-z2xs9v",
-        "type": "spawnKill",
+        "type": "highRiskSpot",
         "x": 23.32,
         "y": 44.88,
         "parentTankId": "mtif8yiu-367cvp"
@@ -4018,7 +4018,7 @@
       },
       {
         "id": "mu1ejm99-bloedf",
-        "type": "mainBattleTank",
+        "type": "lightTank",
         "x": 35.68,
         "y": 63.41
       },
@@ -27576,7 +27576,7 @@
       },
       {
         "id": "vietnam-domination-2-blue-unit-05",
-        "type": "mainBattleTankRed",
+        "type": "lightTankRed",
         "x": 36.67,
         "y": 16.32
       },
@@ -27715,19 +27715,6 @@
         "x": 76.53,
         "y": 72.85,
         "parentTankId": "vietnam-domination-2-blue-unit-22"
-      },
-      {
-        "id": "vietnam-domination-2-blue-unit-23",
-        "type": "mainBattleTankRed",
-        "x": 54.1,
-        "y": 74.58
-      },
-      {
-        "id": "vietnam-domination-2-blue-role-16",
-        "type": "highRiskSpot",
-        "x": 54.1,
-        "y": 74.58,
-        "parentTankId": "vietnam-domination-2-blue-unit-23"
       },
       {
         "id": "vietnam-domination-2-blue-unit-24",
@@ -27991,7 +27978,7 @@
       },
       {
         "id": "vietnam-domination-2-red-unit-17",
-        "type": "mainBattleTank",
+        "type": "lightTank",
         "x": 70.97,
         "y": 72.36
       },
@@ -87300,24 +87287,6 @@
         "endY": 90.61610290131863
       },
       {
-        "id": "vector-0fc1360b-1eea-4720-a2e1-e71a9cb9ca5a",
-        "type": "route",
-        "points": [
-          {
-            "x": 52.163733508683485,
-            "y": 66.90730467418565
-          },
-          {
-            "x": 54.131112642753166,
-            "y": 63.49885165210314
-          },
-          {
-            "x": 57.213757655371936,
-            "y": 61.44375497702399
-          }
-        ]
-      },
-      {
         "id": "vector-33a32ee6-6a57-4272-8ab1-ce8007f3293f",
         "type": "route",
         "points": [
@@ -88580,15 +88549,6 @@
         "endY": 66.99
       },
       {
-        "id": "vietnam-domination-2-blue-aim-15",
-        "type": "aimHere",
-        "parentTankId": "vietnam-domination-2-blue-unit-23",
-        "startX": 54.1,
-        "startY": 74.58,
-        "endX": 47.24,
-        "endY": 81.07
-      },
-      {
         "id": "vietnam-domination-2-blue-aim-16",
         "type": "aimHere",
         "parentTankId": "vietnam-domination-2-blue-unit-24",
@@ -88704,24 +88664,6 @@
           {
             "x": 52.5,
             "y": 18.73
-          }
-        ]
-      },
-      {
-        "id": "vietnam-domination-2-blue-route-04",
-        "type": "route",
-        "points": [
-          {
-            "x": 59.71,
-            "y": 73.51
-          },
-          {
-            "x": 61.28,
-            "y": 70.79
-          },
-          {
-            "x": 63.74,
-            "y": 69.15
           }
         ]
       },
@@ -91236,6 +91178,6 @@
     "Sands of Sinai::domination-1|Blue": [],
     "Vietnam::domination-1|Red": []
   },
-  "updatedAt": "2026-11-11T18:37:21.885Z",
-  "exportedAt": "2026-11-11T18:37:23.445Z"
+  "updatedAt": "2026-11-11T19:13:01.101Z",
+  "exportedAt": "2026-11-11T19:17:33.831Z"
 }
