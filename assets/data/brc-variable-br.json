@@ -5,25 +5,228 @@
   "reviewedOn": "2026-11-01",
   "notes": "User-supplied test changes. Only the highest selected weapon penalty applies, capped per mode; quantities do not affect BR. Penalties are integer BR steps (three steps = 1.0). Nuke, killstreak and naval entries excluded. Aircraft phase only.",
   "additionalWeapons": {
-    "mig-21_bison": ["w-cff6eb8beb4f77da"],
-    "saab_jas39a": ["w-575ec887541d3581"]
+    "mig-21_bison": [
+      "w-cff6eb8beb4f77da"
+    ],
+    "saab_jas39a": [
+      "w-575ec887541d3581"
+    ]
   },
   "units": {
     "air:j_22m1a": {
-      "arb": { "base": 9.0, "max": 11.3, "penalties": { "w-a0377869ddd906e5": 4, "w-c3ecd962eecd8223": 4, "w-a90184129f175aa9": 4, "w-ba665621c2721418": 6, "w-a6925ff7fb243897": 6, "w-421dc5abee95d73c": 6, "w-6e0d4cdfd692ebcc": 6, "w-87a07ae2f65894f3": 7 } },
-      "grb": { "base": 9.3, "max": 11.7, "penalties": { "w-a0377869ddd906e5": 4, "w-c3ecd962eecd8223": 4, "w-a90184129f175aa9": 4, "w-ba665621c2721418": 6, "w-a6925ff7fb243897": 6, "w-421dc5abee95d73c": 6, "w-6e0d4cdfd692ebcc": 6, "w-87a07ae2f65894f3": 7 } }
+      "arb": {
+        "base": 9,
+        "max": 11.3,
+        "penalties": {
+          "w-a0377869ddd906e5": 4,
+          "w-c3ecd962eecd8223": 4,
+          "w-a90184129f175aa9": 4,
+          "w-ba665621c2721418": 6,
+          "w-a6925ff7fb243897": 6,
+          "w-421dc5abee95d73c": 6,
+          "w-6e0d4cdfd692ebcc": 6,
+          "w-87a07ae2f65894f3": 7
+        }
+      },
+      "grb": {
+        "base": 9.3,
+        "max": 11.7,
+        "penalties": {
+          "w-a0377869ddd906e5": 4,
+          "w-c3ecd962eecd8223": 4,
+          "w-a90184129f175aa9": 4,
+          "w-ba665621c2721418": 6,
+          "w-a6925ff7fb243897": 6,
+          "w-421dc5abee95d73c": 6,
+          "w-6e0d4cdfd692ebcc": 6,
+          "w-87a07ae2f65894f3": 7
+        }
+      }
     },
     "air:su_25sm3": {
-      "arb": { "base": 10.7, "max": 11.7, "penalties": { "w-9df2cf3da432b44a": 3, "w-e342bc555c774336": 3 } },
-      "grb": { "base": 12.0, "max": 13.0, "penalties": { "w-9df2cf3da432b44a": 3, "w-e342bc555c774336": 3 } }
+      "arb": {
+        "base": 10.7,
+        "max": 11.7,
+        "penalties": {
+          "w-9df2cf3da432b44a": 3,
+          "w-e342bc555c774336": 3
+        }
+      },
+      "grb": {
+        "base": 12,
+        "max": 13,
+        "penalties": {
+          "w-9df2cf3da432b44a": 3,
+          "w-e342bc555c774336": 3
+        }
+      }
     },
     "air:mig-21_bison": {
-      "arb": { "base": 12.3, "max": 13.3, "penalties": { "w-cff6eb8beb4f77da": 3 } },
-      "grb": { "base": 11.7, "max": 12.7, "penalties": { "w-cff6eb8beb4f77da": 3 } }
+      "arb": {
+        "base": 12.3,
+        "max": 13.3,
+        "penalties": {
+          "w-cff6eb8beb4f77da": 3
+        }
+      },
+      "grb": {
+        "base": 11.7,
+        "max": 12.7,
+        "penalties": {
+          "w-cff6eb8beb4f77da": 3
+        }
+      }
     },
     "air:saab_jas39a": {
-      "arb": { "base": 13.0, "max": 13.7, "penalties": { "w-575ec887541d3581": 2 } },
-      "grb": { "base": 12.3, "max": 13.0, "penalties": { "w-575ec887541d3581": 2 } }
+      "arb": {
+        "base": 13,
+        "max": 13.7,
+        "penalties": {
+          "w-575ec887541d3581": 2
+        }
+      },
+      "grb": {
+        "base": 12.3,
+        "max": 13,
+        "penalties": {
+          "w-575ec887541d3581": 2
+        }
+      }
+    }
+  },
+  "applicability": {
+    "source": "https://forum.warthunder.com/t/war-thunder-eagles-shadow-changelog/364110/1",
+    "checkedOn": "2026-11-12",
+    "notes": "Official Custom Battle Ratings applicability. Highlighting is independent of whether per-weapon calculation rules have been entered. F3H-2 is listed for Air Battles only.",
+    "units": {
+      "air:j_22m1a": [
+        "arb",
+        "grb"
+      ],
+      "air:su_25sm3": [
+        "arb",
+        "grb"
+      ],
+      "air:mig-21_bison": [
+        "arb",
+        "grb"
+      ],
+      "air:yak_141": [
+        "arb",
+        "grb"
+      ],
+      "air:su_25tm": [
+        "arb",
+        "grb"
+      ],
+      "air:saab_jas39a": [
+        "arb",
+        "grb"
+      ],
+      "air:a_10a_early": [
+        "arb",
+        "grb"
+      ],
+      "air:saab_f35_wdns": [
+        "arb",
+        "grb"
+      ],
+      "air:buccaneer_s2b": [
+        "arb",
+        "grb"
+      ],
+      "air:f-5e_switzerland": [
+        "arb",
+        "grb"
+      ],
+      "air:f_2a_adtw": [
+        "arb",
+        "grb"
+      ],
+      "air:f3h-2": [
+        "arb"
+      ],
+      "heli:ah_60_iaf": [
+        "grb"
+      ],
+      "heli:ah_64d_i_saraph": [
+        "grb"
+      ],
+      "heli:tiger_had_france": [
+        "grb"
+      ],
+      "heli:tiger_hac_france": [
+        "grb"
+      ],
+      "heli:tiger_had_block2_france": [
+        "grb"
+      ],
+      "heli:a_129_a": [
+        "grb"
+      ],
+      "heli:a_129_cbt": [
+        "grb"
+      ],
+      "heli:a_129_d": [
+        "grb"
+      ],
+      "heli:z_9w": [
+        "grb"
+      ],
+      "heli:z_9wa": [
+        "grb"
+      ],
+      "heli:ah_1w": [
+        "grb"
+      ],
+      "heli:ah_1w_china": [
+        "grb"
+      ],
+      "heli:z_19": [
+        "grb"
+      ],
+      "heli:z_19e": [
+        "grb"
+      ],
+      "heli:z_10me": [
+        "grb"
+      ],
+      "heli:ah_64e_britain": [
+        "grb"
+      ],
+      "heli:lynx_ah_mk1": [
+        "grb"
+      ],
+      "heli:g_lynx": [
+        "grb"
+      ],
+      "heli:aw_159": [
+        "grb"
+      ],
+      "heli:mi_35p": [
+        "grb"
+      ],
+      "heli:mi_28nm": [
+        "grb"
+      ],
+      "heli:h145m": [
+        "grb"
+      ],
+      "heli:tiger_uht": [
+        "grb"
+      ],
+      "heli:ah_64e": [
+        "grb"
+      ],
+      "heli:ah_64e_indonesia": [
+        "grb"
+      ],
+      "heli:ah_64e_china": [
+        "grb"
+      ],
+      "heli:ah_64e_netherlands": [
+        "grb"
+      ]
     }
   }
 }

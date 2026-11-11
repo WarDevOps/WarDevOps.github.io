@@ -35,7 +35,8 @@ export function readCatalog(catalog, mode = "grb", variableRatings = null) {
       const variableBr = variableRatings?.units?.[id];
       const groundBr = variableBr?.grb?.base ?? (category === "air" ? record.brGround : record.br);
       const airBr = variableBr?.arb?.base ?? record.br;
-      return { ...record, id, category, catalogBr: record.br, variableBr, groundBr, airBr,
+      return { ...record, id, category, catalogBr: record.br, variableBr,
+        variableBrModes: variableRatings?.applicability?.units?.[id] || [], groundBr, airBr,
         br: mode === "grb" ? groundBr : airBr };
     });
   }).sort((a, b) => a.br - b.br || CATEGORIES.indexOf(a.category) - CATEGORIES.indexOf(b.category)
