@@ -722,189 +722,99 @@ export const commentImages = Object.freeze([
     "label": "scr_strike01.mp4"
   },
   {
-    "id": "American Desert/scr_ (1).webp",
-    "path": "img/American Desert/scr_ (1).webp",
-    "label": "scr_ (1).webp"
+    "id": "American Desert/scr_  (1).webp",
+    "path": "img/American Desert/scr_  (1).webp",
+    "label": "scr_  (1).webp"
   },
   {
-    "id": "American Desert/scr_ (10).webp",
-    "path": "img/American Desert/scr_ (10).webp",
-    "label": "scr_ (10).webp"
+    "id": "American Desert/scr_  (10).webp",
+    "path": "img/American Desert/scr_  (10).webp",
+    "label": "scr_  (10).webp"
   },
   {
-    "id": "American Desert/scr_ (11).webp",
-    "path": "img/American Desert/scr_ (11).webp",
-    "label": "scr_ (11).webp"
+    "id": "American Desert/scr_  (11).webp",
+    "path": "img/American Desert/scr_  (11).webp",
+    "label": "scr_  (11).webp"
   },
   {
-    "id": "American Desert/scr_ (12).webp",
-    "path": "img/American Desert/scr_ (12).webp",
-    "label": "scr_ (12).webp"
+    "id": "American Desert/scr_  (12).webp",
+    "path": "img/American Desert/scr_  (12).webp",
+    "label": "scr_  (12).webp"
   },
   {
-    "id": "American Desert/scr_ (13).webp",
-    "path": "img/American Desert/scr_ (13).webp",
-    "label": "scr_ (13).webp"
+    "id": "American Desert/scr_  (13).webp",
+    "path": "img/American Desert/scr_  (13).webp",
+    "label": "scr_  (13).webp"
   },
   {
-    "id": "American Desert/scr_ (14).webp",
-    "path": "img/American Desert/scr_ (14).webp",
-    "label": "scr_ (14).webp"
+    "id": "American Desert/scr_  (14).webp",
+    "path": "img/American Desert/scr_  (14).webp",
+    "label": "scr_  (14).webp"
   },
   {
-    "id": "American Desert/scr_ (15).webp",
-    "path": "img/American Desert/scr_ (15).webp",
-    "label": "scr_ (15).webp"
+    "id": "American Desert/scr_  (15).webp",
+    "path": "img/American Desert/scr_  (15).webp",
+    "label": "scr_  (15).webp"
   },
   {
-    "id": "American Desert/scr_ (16).webp",
-    "path": "img/American Desert/scr_ (16).webp",
-    "label": "scr_ (16).webp"
+    "id": "American Desert/scr_  (16).webp",
+    "path": "img/American Desert/scr_  (16).webp",
+    "label": "scr_  (16).webp"
   },
   {
-    "id": "American Desert/scr_ (17).webp",
-    "path": "img/American Desert/scr_ (17).webp",
-    "label": "scr_ (17).webp"
+    "id": "American Desert/scr_  (17).webp",
+    "path": "img/American Desert/scr_  (17).webp",
+    "label": "scr_  (17).webp"
   },
   {
-    "id": "American Desert/scr_ (18).webp",
-    "path": "img/American Desert/scr_ (18).webp",
-    "label": "scr_ (18).webp"
+    "id": "American Desert/scr_  (18).webp",
+    "path": "img/American Desert/scr_  (18).webp",
+    "label": "scr_  (18).webp"
   },
   {
-    "id": "American Desert/scr_ (19).webp",
-    "path": "img/American Desert/scr_ (19).webp",
-    "label": "scr_ (19).webp"
+    "id": "American Desert/scr_  (19).webp",
+    "path": "img/American Desert/scr_  (19).webp",
+    "label": "scr_  (19).webp"
   },
   {
-    "id": "American Desert/scr_ (2).webp",
-    "path": "img/American Desert/scr_ (2).webp",
-    "label": "scr_ (2).webp"
+    "id": "American Desert/scr_  (2).webp",
+    "path": "img/American Desert/scr_  (2).webp",
+    "label": "scr_  (2).webp"
   },
   {
-    "id": "American Desert/scr_ (20).webp",
-    "path": "img/American Desert/scr_ (20).webp",
-    "label": "scr_ (20).webp"
+    "id": "American Desert/scr_  (3).webp",
+    "path": "img/American Desert/scr_  (3).webp",
+    "label": "scr_  (3).webp"
   },
   {
-    "id": "American Desert/scr_ (21).webp",
-    "path": "img/American Desert/scr_ (21).webp",
-    "label": "scr_ (21).webp"
+    "id": "American Desert/scr_  (4).webp",
+    "path": "img/American Desert/scr_  (4).webp",
+    "label": "scr_  (4).webp"
   },
   {
-    "id": "American Desert/scr_ (22).webp",
-    "path": "img/American Desert/scr_ (22).webp",
-    "label": "scr_ (22).webp"
+    "id": "American Desert/scr_  (5).webp",
+    "path": "img/American Desert/scr_  (5).webp",
+    "label": "scr_  (5).webp"
   },
   {
-    "id": "American Desert/scr_ (23).webp",
-    "path": "img/American Desert/scr_ (23).webp",
-    "label": "scr_ (23).webp"
+    "id": "American Desert/scr_  (6).webp",
+    "path": "img/American Desert/scr_  (6).webp",
+    "label": "scr_  (6).webp"
   },
   {
-    "id": "American Desert/scr_ (24).webp",
-    "path": "img/American Desert/scr_ (24).webp",
-    "label": "scr_ (24).webp"
+    "id": "American Desert/scr_  (7).webp",
+    "path": "img/American Desert/scr_  (7).webp",
+    "label": "scr_  (7).webp"
   },
   {
-    "id": "American Desert/scr_ (25).webp",
-    "path": "img/American Desert/scr_ (25).webp",
-    "label": "scr_ (25).webp"
+    "id": "American Desert/scr_  (8).webp",
+    "path": "img/American Desert/scr_  (8).webp",
+    "label": "scr_  (8).webp"
   },
   {
-    "id": "American Desert/scr_ (26).webp",
-    "path": "img/American Desert/scr_ (26).webp",
-    "label": "scr_ (26).webp"
-  },
-  {
-    "id": "American Desert/scr_ (27).webp",
-    "path": "img/American Desert/scr_ (27).webp",
-    "label": "scr_ (27).webp"
-  },
-  {
-    "id": "American Desert/scr_ (28).webp",
-    "path": "img/American Desert/scr_ (28).webp",
-    "label": "scr_ (28).webp"
-  },
-  {
-    "id": "American Desert/scr_ (29).webp",
-    "path": "img/American Desert/scr_ (29).webp",
-    "label": "scr_ (29).webp"
-  },
-  {
-    "id": "American Desert/scr_ (3).webp",
-    "path": "img/American Desert/scr_ (3).webp",
-    "label": "scr_ (3).webp"
-  },
-  {
-    "id": "American Desert/scr_ (30).webp",
-    "path": "img/American Desert/scr_ (30).webp",
-    "label": "scr_ (30).webp"
-  },
-  {
-    "id": "American Desert/scr_ (31).webp",
-    "path": "img/American Desert/scr_ (31).webp",
-    "label": "scr_ (31).webp"
-  },
-  {
-    "id": "American Desert/scr_ (32).webp",
-    "path": "img/American Desert/scr_ (32).webp",
-    "label": "scr_ (32).webp"
-  },
-  {
-    "id": "American Desert/scr_ (33).webp",
-    "path": "img/American Desert/scr_ (33).webp",
-    "label": "scr_ (33).webp"
-  },
-  {
-    "id": "American Desert/scr_ (34).webp",
-    "path": "img/American Desert/scr_ (34).webp",
-    "label": "scr_ (34).webp"
-  },
-  {
-    "id": "American Desert/scr_ (35).webp",
-    "path": "img/American Desert/scr_ (35).webp",
-    "label": "scr_ (35).webp"
-  },
-  {
-    "id": "American Desert/scr_ (36).webp",
-    "path": "img/American Desert/scr_ (36).webp",
-    "label": "scr_ (36).webp"
-  },
-  {
-    "id": "American Desert/scr_ (37).webp",
-    "path": "img/American Desert/scr_ (37).webp",
-    "label": "scr_ (37).webp"
-  },
-  {
-    "id": "American Desert/scr_ (4).webp",
-    "path": "img/American Desert/scr_ (4).webp",
-    "label": "scr_ (4).webp"
-  },
-  {
-    "id": "American Desert/scr_ (5).webp",
-    "path": "img/American Desert/scr_ (5).webp",
-    "label": "scr_ (5).webp"
-  },
-  {
-    "id": "American Desert/scr_ (6).webp",
-    "path": "img/American Desert/scr_ (6).webp",
-    "label": "scr_ (6).webp"
-  },
-  {
-    "id": "American Desert/scr_ (7).webp",
-    "path": "img/American Desert/scr_ (7).webp",
-    "label": "scr_ (7).webp"
-  },
-  {
-    "id": "American Desert/scr_ (8).webp",
-    "path": "img/American Desert/scr_ (8).webp",
-    "label": "scr_ (8).webp"
-  },
-  {
-    "id": "American Desert/scr_ (9).webp",
-    "path": "img/American Desert/scr_ (9).webp",
-    "label": "scr_ (9).webp"
+    "id": "American Desert/scr_  (9).webp",
+    "path": "img/American Desert/scr_  (9).webp",
+    "label": "scr_  (9).webp"
   },
   {
     "id": "American Desert/scr_strike01.mp4",
@@ -2252,6 +2162,156 @@ export const commentImages = Object.freeze([
     "label": "scr_ (9).webp"
   },
   {
+    "id": "Eastern Europe/scr_ (1).webp",
+    "path": "img/Eastern Europe/scr_ (1).webp",
+    "label": "scr_ (1).webp"
+  },
+  {
+    "id": "Eastern Europe/scr_ (10).webp",
+    "path": "img/Eastern Europe/scr_ (10).webp",
+    "label": "scr_ (10).webp"
+  },
+  {
+    "id": "Eastern Europe/scr_ (11).webp",
+    "path": "img/Eastern Europe/scr_ (11).webp",
+    "label": "scr_ (11).webp"
+  },
+  {
+    "id": "Eastern Europe/scr_ (12).webp",
+    "path": "img/Eastern Europe/scr_ (12).webp",
+    "label": "scr_ (12).webp"
+  },
+  {
+    "id": "Eastern Europe/scr_ (13).webp",
+    "path": "img/Eastern Europe/scr_ (13).webp",
+    "label": "scr_ (13).webp"
+  },
+  {
+    "id": "Eastern Europe/scr_ (14).webp",
+    "path": "img/Eastern Europe/scr_ (14).webp",
+    "label": "scr_ (14).webp"
+  },
+  {
+    "id": "Eastern Europe/scr_ (15).webp",
+    "path": "img/Eastern Europe/scr_ (15).webp",
+    "label": "scr_ (15).webp"
+  },
+  {
+    "id": "Eastern Europe/scr_ (16).webp",
+    "path": "img/Eastern Europe/scr_ (16).webp",
+    "label": "scr_ (16).webp"
+  },
+  {
+    "id": "Eastern Europe/scr_ (17).webp",
+    "path": "img/Eastern Europe/scr_ (17).webp",
+    "label": "scr_ (17).webp"
+  },
+  {
+    "id": "Eastern Europe/scr_ (18).webp",
+    "path": "img/Eastern Europe/scr_ (18).webp",
+    "label": "scr_ (18).webp"
+  },
+  {
+    "id": "Eastern Europe/scr_ (19).webp",
+    "path": "img/Eastern Europe/scr_ (19).webp",
+    "label": "scr_ (19).webp"
+  },
+  {
+    "id": "Eastern Europe/scr_ (20).webp",
+    "path": "img/Eastern Europe/scr_ (20).webp",
+    "label": "scr_ (20).webp"
+  },
+  {
+    "id": "Eastern Europe/scr_ (21).webp",
+    "path": "img/Eastern Europe/scr_ (21).webp",
+    "label": "scr_ (21).webp"
+  },
+  {
+    "id": "Eastern Europe/scr_ (22).webp",
+    "path": "img/Eastern Europe/scr_ (22).webp",
+    "label": "scr_ (22).webp"
+  },
+  {
+    "id": "Eastern Europe/scr_ (23).webp",
+    "path": "img/Eastern Europe/scr_ (23).webp",
+    "label": "scr_ (23).webp"
+  },
+  {
+    "id": "Eastern Europe/scr_ (24).webp",
+    "path": "img/Eastern Europe/scr_ (24).webp",
+    "label": "scr_ (24).webp"
+  },
+  {
+    "id": "Eastern Europe/scr_ (25).webp",
+    "path": "img/Eastern Europe/scr_ (25).webp",
+    "label": "scr_ (25).webp"
+  },
+  {
+    "id": "Eastern Europe/scr_ (26).webp",
+    "path": "img/Eastern Europe/scr_ (26).webp",
+    "label": "scr_ (26).webp"
+  },
+  {
+    "id": "Eastern Europe/scr_ (27).webp",
+    "path": "img/Eastern Europe/scr_ (27).webp",
+    "label": "scr_ (27).webp"
+  },
+  {
+    "id": "Eastern Europe/scr_ (28).webp",
+    "path": "img/Eastern Europe/scr_ (28).webp",
+    "label": "scr_ (28).webp"
+  },
+  {
+    "id": "Eastern Europe/scr_ (29).webp",
+    "path": "img/Eastern Europe/scr_ (29).webp",
+    "label": "scr_ (29).webp"
+  },
+  {
+    "id": "Eastern Europe/scr_ (30).webp",
+    "path": "img/Eastern Europe/scr_ (30).webp",
+    "label": "scr_ (30).webp"
+  },
+  {
+    "id": "Eastern Europe/scr_ (31).webp",
+    "path": "img/Eastern Europe/scr_ (31).webp",
+    "label": "scr_ (31).webp"
+  },
+  {
+    "id": "Eastern Europe/scr_ (32).webp",
+    "path": "img/Eastern Europe/scr_ (32).webp",
+    "label": "scr_ (32).webp"
+  },
+  {
+    "id": "Eastern Europe/scr_ (4).webp",
+    "path": "img/Eastern Europe/scr_ (4).webp",
+    "label": "scr_ (4).webp"
+  },
+  {
+    "id": "Eastern Europe/scr_ (5).webp",
+    "path": "img/Eastern Europe/scr_ (5).webp",
+    "label": "scr_ (5).webp"
+  },
+  {
+    "id": "Eastern Europe/scr_ (6).webp",
+    "path": "img/Eastern Europe/scr_ (6).webp",
+    "label": "scr_ (6).webp"
+  },
+  {
+    "id": "Eastern Europe/scr_ (7).webp",
+    "path": "img/Eastern Europe/scr_ (7).webp",
+    "label": "scr_ (7).webp"
+  },
+  {
+    "id": "Eastern Europe/scr_ (8).webp",
+    "path": "img/Eastern Europe/scr_ (8).webp",
+    "label": "scr_ (8).webp"
+  },
+  {
+    "id": "Eastern Europe/scr_ (9).webp",
+    "path": "img/Eastern Europe/scr_ (9).webp",
+    "label": "scr_ (9).webp"
+  },
+  {
     "id": "Flanders/scr_ (1).webp",
     "path": "img/Flanders/scr_ (1).webp",
     "label": "scr_ (1).webp"
@@ -2522,11 +2582,6 @@ export const commentImages = Object.freeze([
     "label": "scr_ (2).webp"
   },
   {
-    "id": "Red Desert/scr_ (3).webp",
-    "path": "img/Red Desert/scr_ (3).webp",
-    "label": "scr_ (3).webp"
-  },
-  {
     "id": "Red Desert/scr_ (4).webp",
     "path": "img/Red Desert/scr_ (4).webp",
     "label": "scr_ (4).webp"
@@ -2615,5 +2670,220 @@ export const commentImages = Object.freeze([
     "id": "Sinai/scr_ (9).webp",
     "path": "img/Sinai/scr_ (9).webp",
     "label": "scr_ (9).webp"
+  },
+  {
+    "id": "Sun City/scr_ (1).webp",
+    "path": "img/Sun City/scr_ (1).webp",
+    "label": "scr_ (1).webp"
+  },
+  {
+    "id": "Sun City/scr_ (10).webp",
+    "path": "img/Sun City/scr_ (10).webp",
+    "label": "scr_ (10).webp"
+  },
+  {
+    "id": "Sun City/scr_ (11).webp",
+    "path": "img/Sun City/scr_ (11).webp",
+    "label": "scr_ (11).webp"
+  },
+  {
+    "id": "Sun City/scr_ (12).webp",
+    "path": "img/Sun City/scr_ (12).webp",
+    "label": "scr_ (12).webp"
+  },
+  {
+    "id": "Sun City/scr_ (13).webp",
+    "path": "img/Sun City/scr_ (13).webp",
+    "label": "scr_ (13).webp"
+  },
+  {
+    "id": "Sun City/scr_ (14).webp",
+    "path": "img/Sun City/scr_ (14).webp",
+    "label": "scr_ (14).webp"
+  },
+  {
+    "id": "Sun City/scr_ (15).webp",
+    "path": "img/Sun City/scr_ (15).webp",
+    "label": "scr_ (15).webp"
+  },
+  {
+    "id": "Sun City/scr_ (16).webp",
+    "path": "img/Sun City/scr_ (16).webp",
+    "label": "scr_ (16).webp"
+  },
+  {
+    "id": "Sun City/scr_ (17).webp",
+    "path": "img/Sun City/scr_ (17).webp",
+    "label": "scr_ (17).webp"
+  },
+  {
+    "id": "Sun City/scr_ (18).webp",
+    "path": "img/Sun City/scr_ (18).webp",
+    "label": "scr_ (18).webp"
+  },
+  {
+    "id": "Sun City/scr_ (19).webp",
+    "path": "img/Sun City/scr_ (19).webp",
+    "label": "scr_ (19).webp"
+  },
+  {
+    "id": "Sun City/scr_ (2).webp",
+    "path": "img/Sun City/scr_ (2).webp",
+    "label": "scr_ (2).webp"
+  },
+  {
+    "id": "Sun City/scr_ (20).webp",
+    "path": "img/Sun City/scr_ (20).webp",
+    "label": "scr_ (20).webp"
+  },
+  {
+    "id": "Sun City/scr_ (21).webp",
+    "path": "img/Sun City/scr_ (21).webp",
+    "label": "scr_ (21).webp"
+  },
+  {
+    "id": "Sun City/scr_ (22).webp",
+    "path": "img/Sun City/scr_ (22).webp",
+    "label": "scr_ (22).webp"
+  },
+  {
+    "id": "Sun City/scr_ (23).webp",
+    "path": "img/Sun City/scr_ (23).webp",
+    "label": "scr_ (23).webp"
+  },
+  {
+    "id": "Sun City/scr_ (24).webp",
+    "path": "img/Sun City/scr_ (24).webp",
+    "label": "scr_ (24).webp"
+  },
+  {
+    "id": "Sun City/scr_ (25).webp",
+    "path": "img/Sun City/scr_ (25).webp",
+    "label": "scr_ (25).webp"
+  },
+  {
+    "id": "Sun City/scr_ (26).webp",
+    "path": "img/Sun City/scr_ (26).webp",
+    "label": "scr_ (26).webp"
+  },
+  {
+    "id": "Sun City/scr_ (27).webp",
+    "path": "img/Sun City/scr_ (27).webp",
+    "label": "scr_ (27).webp"
+  },
+  {
+    "id": "Sun City/scr_ (28).webp",
+    "path": "img/Sun City/scr_ (28).webp",
+    "label": "scr_ (28).webp"
+  },
+  {
+    "id": "Sun City/scr_ (29).webp",
+    "path": "img/Sun City/scr_ (29).webp",
+    "label": "scr_ (29).webp"
+  },
+  {
+    "id": "Sun City/scr_ (3).webp",
+    "path": "img/Sun City/scr_ (3).webp",
+    "label": "scr_ (3).webp"
+  },
+  {
+    "id": "Sun City/scr_ (30).webp",
+    "path": "img/Sun City/scr_ (30).webp",
+    "label": "scr_ (30).webp"
+  },
+  {
+    "id": "Sun City/scr_ (31).webp",
+    "path": "img/Sun City/scr_ (31).webp",
+    "label": "scr_ (31).webp"
+  },
+  {
+    "id": "Sun City/scr_ (32).webp",
+    "path": "img/Sun City/scr_ (32).webp",
+    "label": "scr_ (32).webp"
+  },
+  {
+    "id": "Sun City/scr_ (33).webp",
+    "path": "img/Sun City/scr_ (33).webp",
+    "label": "scr_ (33).webp"
+  },
+  {
+    "id": "Sun City/scr_ (34).webp",
+    "path": "img/Sun City/scr_ (34).webp",
+    "label": "scr_ (34).webp"
+  },
+  {
+    "id": "Sun City/scr_ (35).webp",
+    "path": "img/Sun City/scr_ (35).webp",
+    "label": "scr_ (35).webp"
+  },
+  {
+    "id": "Sun City/scr_ (36).webp",
+    "path": "img/Sun City/scr_ (36).webp",
+    "label": "scr_ (36).webp"
+  },
+  {
+    "id": "Sun City/scr_ (37).webp",
+    "path": "img/Sun City/scr_ (37).webp",
+    "label": "scr_ (37).webp"
+  },
+  {
+    "id": "Sun City/scr_ (38).webp",
+    "path": "img/Sun City/scr_ (38).webp",
+    "label": "scr_ (38).webp"
+  },
+  {
+    "id": "Sun City/scr_ (39).webp",
+    "path": "img/Sun City/scr_ (39).webp",
+    "label": "scr_ (39).webp"
+  },
+  {
+    "id": "Sun City/scr_ (4).webp",
+    "path": "img/Sun City/scr_ (4).webp",
+    "label": "scr_ (4).webp"
+  },
+  {
+    "id": "Sun City/scr_ (40).webp",
+    "path": "img/Sun City/scr_ (40).webp",
+    "label": "scr_ (40).webp"
+  },
+  {
+    "id": "Sun City/scr_ (41).webp",
+    "path": "img/Sun City/scr_ (41).webp",
+    "label": "scr_ (41).webp"
+  },
+  {
+    "id": "Sun City/scr_ (42).webp",
+    "path": "img/Sun City/scr_ (42).webp",
+    "label": "scr_ (42).webp"
+  },
+  {
+    "id": "Sun City/scr_ (43).webp",
+    "path": "img/Sun City/scr_ (43).webp",
+    "label": "scr_ (43).webp"
+  },
+  {
+    "id": "Sun City/scr_ (44).webp",
+    "path": "img/Sun City/scr_ (44).webp",
+    "label": "scr_ (44).webp"
+  },
+  {
+    "id": "Sun City/scr_ (5).webp",
+    "path": "img/Sun City/scr_ (5).webp",
+    "label": "scr_ (5).webp"
+  },
+  {
+    "id": "Sun City/scr_ (6).webp",
+    "path": "img/Sun City/scr_ (6).webp",
+    "label": "scr_ (6).webp"
+  },
+  {
+    "id": "Sun City/scr_ (7).webp",
+    "path": "img/Sun City/scr_ (7).webp",
+    "label": "scr_ (7).webp"
+  },
+  {
+    "id": "Sun City/scr_ (8).webp",
+    "path": "img/Sun City/scr_ (8).webp",
+    "label": "scr_ (8).webp"
   }
 ]);

@@ -6,7 +6,7 @@
     "Abandoned Town": "2026-11-08",
     "Advance to the Rhine": "2026-11-08",
     "Alaska": "2026-10-04",
-    "American Desert": "2026-09-23",
+    "American Desert": "2026-11-12",
     "Aral Sea": "2026-10-07",
     "Arctic Pier": "2026-09-15",
     "Arctic Polar Base": "2026-11-08",
@@ -50,7 +50,7 @@
     "Sinai": "2026-11-08",
     "Spaceport": "2026-11-10",
     "Stalingrad": "2026-11-08",
-    "Sun City": "2026-10-27",
+    "Sun City": "2026-11-11",
     "Surroundings of Volokolamsk": "2026-11-08",
     "Sweden": "2026-09-27",
     "Test Site-2271": "2026-11-07",
@@ -65,7 +65,7 @@
     "Abandoned Town": "2026-11-07T21:44:29Z",
     "Advance to the Rhine": "2026-11-07T22:44:53Z",
     "Alaska": "2026-10-04T10:19:32Z",
-    "American Desert": "2026-09-22T21:47:17Z",
+    "American Desert": "2026-11-11T16:45:29Z",
     "Aral Sea": "2026-10-07T06:13:32Z",
     "Arctic Pier": "2026-09-15T01:05:22Z",
     "Arctic Polar Base": "2026-11-08T13:31:33Z",
@@ -109,7 +109,7 @@
     "Sinai": "2026-11-07T21:28:59Z",
     "Spaceport": "2026-11-09T17:16:55Z",
     "Stalingrad": "2026-11-07T21:42:11Z",
-    "Sun City": "2026-10-26T20:55:30Z",
+    "Sun City": "2026-11-11T14:55:40Z",
     "Surroundings of Volokolamsk": "2026-11-07T21:24:39Z",
     "Sweden": "2026-09-27T07:49:10Z",
     "Test Site-2271": "2026-11-06T22:14:12Z",
@@ -3560,23 +3560,6 @@
         "parentTankId": "mtiek8ok-5gao3n"
       },
       {
-        "id": "mtiem5v4-wg1j4m",
-        "type": "mainBattleTankRed",
-        "x": 54.97,
-        "y": 48.4,
-        "commentImages": [
-          "American Desert/scr_ (37).webp",
-          "American Desert/scr_ (36).webp"
-        ]
-      },
-      {
-        "id": "mtiem6vd-w6r9cb",
-        "type": "highRiskSpot",
-        "x": 54.97,
-        "y": 48.4,
-        "parentTankId": "mtiem5v4-wg1j4m"
-      },
-      {
         "id": "mtiema7g-3h3q8n",
         "type": "tankDestroyerRed",
         "x": 77.49,
@@ -3711,22 +3694,6 @@
         "commentImages": [
           "American Desert/scr_strike01.mp4"
         ]
-      },
-      {
-        "id": "mtxozmvw-xf5syz",
-        "type": "mainBattleTankRed",
-        "x": 33.85,
-        "y": 31.37,
-        "commentImages": [
-          "American Desert/scr_ (3).webp"
-        ]
-      },
-      {
-        "id": "mtxozolw-zt7ry6",
-        "type": "spawnKill",
-        "x": 33.85,
-        "y": 31.37,
-        "parentTankId": "mtxozmvw-xf5syz"
       },
       {
         "id": "mtxpz1ot-i2htrq",
@@ -4057,22 +4024,6 @@
         "type": "smokeshell",
         "x": 25.39,
         "y": 57.03
-      },
-      {
-        "id": "mtxrrejc-r9unpi",
-        "type": "tankDestroyer",
-        "x": 60.42,
-        "y": 13.92,
-        "commentImages": [
-          "American Desert/scr_ (32).webp"
-        ]
-      },
-      {
-        "id": "mtxrrg2y-crqb2g",
-        "type": "sniper",
-        "x": 60.42,
-        "y": 13.92,
-        "parentTankId": "mtxrrejc-r9unpi"
       },
       {
         "id": "mu1ej18e-dqwh8r",
@@ -24563,19 +24514,6 @@
         "y": 30.69
       },
       {
-        "id": "sun-city-red-unit-02",
-        "type": "lightTankRed",
-        "x": 88.39,
-        "y": 20.21
-      },
-      {
-        "id": "sun-city-red-role-01",
-        "type": "highRiskSpot",
-        "x": 88.39,
-        "y": 20.21,
-        "parentTankId": "sun-city-red-unit-02"
-      },
-      {
         "id": "sun-city-red-unit-04",
         "type": "mainBattleTankRed",
         "x": 50.56,
@@ -24750,19 +24688,6 @@
         "x": 60.03,
         "y": 50.77,
         "parentTankId": "mu1ghh8c-1qwd22"
-      },
-      {
-        "id": "mudnb146-fup4c4",
-        "type": "mainBattleTankRed",
-        "x": 46.61,
-        "y": 65.51
-      },
-      {
-        "id": "mudnb2fw-uukl8o",
-        "type": "battleLine",
-        "x": 46.61,
-        "y": 65.51,
-        "parentTankId": "mudnb146-fup4c4"
       }
     ],
     "Sun City::domination-1|Blue": [
@@ -24909,19 +24834,6 @@
         "y": 65.07
       },
       {
-        "id": "sun-city-blue-unit-14",
-        "type": "lightTank",
-        "x": 87.68,
-        "y": 79.52
-      },
-      {
-        "id": "sun-city-blue-role-12",
-        "type": "spawnKill",
-        "x": 87.68,
-        "y": 79.52,
-        "parentTankId": "sun-city-blue-unit-14"
-      },
-      {
         "id": "mu08nfa2-xebrxy",
         "type": "spawnKill",
         "x": 6.73,
@@ -24960,19 +24872,6 @@
         "x": 29.7,
         "y": 52.3,
         "parentTankId": "mu08ri4v-e9f3hq"
-      },
-      {
-        "id": "mudnay8k-eiv2qx",
-        "type": "mainBattleTank",
-        "x": 45.66,
-        "y": 33.01
-      },
-      {
-        "id": "mudnb9k5-6vy3dp",
-        "type": "battleLine",
-        "x": 45.66,
-        "y": 33.01,
-        "parentTankId": "mudnay8k-eiv2qx"
       }
     ],
     "Surroundings of Volokolamsk::domination-1|Blue": [
@@ -33969,24 +33868,6 @@
         "endY": 57
       },
       {
-        "id": "mtier38b-qh50qn",
-        "type": "aimHere",
-        "parentTankId": "mtiem5v4-wg1j4m",
-        "startX": 54.97,
-        "startY": 48.4,
-        "endX": 43.97,
-        "endY": 53.45
-      },
-      {
-        "id": "mtier5or-jjwwwl",
-        "type": "aimHere",
-        "parentTankId": "mtiem5v4-wg1j4m",
-        "startX": 54.97,
-        "startY": 48.4,
-        "endX": 56.03,
-        "endY": 23.04
-      },
-      {
         "id": "mtierk49-8klvl7",
         "type": "route",
         "points": [
@@ -34121,51 +34002,6 @@
           {
             "x": 58.47,
             "y": 39.05
-          }
-        ],
-        "dangerRoute": true
-      },
-      {
-        "id": "mtxozu5r-p5qnql",
-        "type": "aimHere",
-        "parentTankId": "mtxozmvw-xf5syz",
-        "startX": 33.85,
-        "startY": 31.37,
-        "endX": 31.25,
-        "endY": 20.82
-      },
-      {
-        "id": "mtxozwpk-02v7lh",
-        "type": "aimHere",
-        "parentTankId": "mtxozmvw-xf5syz",
-        "startX": 33.85,
-        "startY": 31.37,
-        "endX": 23.83,
-        "endY": 26.03
-      },
-      {
-        "id": "mtxp5lti-2pft6x",
-        "type": "route",
-        "points": [
-          {
-            "x": 39.84,
-            "y": 44.91
-          },
-          {
-            "x": 39.32,
-            "y": 42.57
-          },
-          {
-            "x": 38.93,
-            "y": 39.31
-          },
-          {
-            "x": 35.29,
-            "y": 36.97
-          },
-          {
-            "x": 33.98,
-            "y": 32.15
           }
         ],
         "dangerRoute": true
@@ -34344,15 +34180,6 @@
         "startY": 40.1,
         "endX": 37.89,
         "endY": 39.57
-      },
-      {
-        "id": "mtxvzfa6-bx5fzk",
-        "type": "aimHere",
-        "parentTankId": "mtxrfanu-vhdm2q",
-        "startX": 38.67,
-        "startY": 50.38,
-        "endX": 32.45,
-        "endY": 9.92
       },
       {
         "id": "mu0gkjyx-ep8gsn",
@@ -34911,15 +34738,6 @@
         "startY": 64.89,
         "endX": 45.96,
         "endY": 95.31
-      },
-      {
-        "id": "mtxrrqqa-9j9pdc",
-        "type": "aimHere",
-        "parentTankId": "mtxrrejc-r9unpi",
-        "startX": 60.42,
-        "startY": 13.92,
-        "endX": 95.84,
-        "endY": 42.18
       },
       {
         "id": "mtxxvpbw-l4o8j9",
@@ -81529,15 +81347,6 @@
         "endY": 35.72
       },
       {
-        "id": "mu08qp9u-03fdmr",
-        "type": "aimHere",
-        "parentTankId": "sun-city-red-unit-05",
-        "startX": 76.46,
-        "startY": 44.86,
-        "endX": 54.52,
-        "endY": 40.42
-      },
-      {
         "id": "mu08qwl9-bnb4j9",
         "type": "aimHere",
         "parentTankId": "mu08qqvl-785scg",
@@ -81637,15 +81446,6 @@
         "endY": 20.29
       },
       {
-        "id": "mu08vi6q-lb1jqo",
-        "type": "aimHere",
-        "parentTankId": "sun-city-red-unit-02",
-        "startX": 88.39,
-        "startY": 20.21,
-        "endX": 56.56,
-        "endY": 19.23
-      },
-      {
         "id": "mu1ggog3-qx82lj",
         "type": "aimHere",
         "parentTankId": "sun-city-red-unit-01",
@@ -81690,24 +81490,6 @@
         "startY": 50.77,
         "endX": 53.78,
         "endY": 35.28
-      },
-      {
-        "id": "mudnb4mw-26h8mw",
-        "type": "aimHere",
-        "parentTankId": "mudnb146-fup4c4",
-        "startX": 46.61,
-        "startY": 65.51,
-        "endX": 44.79,
-        "endY": 34.84
-      },
-      {
-        "id": "mvpqj56v-hb5brp",
-        "type": "aimHere",
-        "parentTankId": "sun-city-red-unit-02",
-        "startX": 88.39,
-        "startY": 20.21,
-        "endX": 77.37,
-        "endY": 11.38
       },
       {
         "id": "mvpqjp6w-7vnlbs",
@@ -81762,6 +81544,15 @@
           }
         ],
         "dangerRoute": true
+      },
+      {
+        "id": "mwc8h1qb-1qm923",
+        "type": "aimHere",
+        "parentTankId": "sun-city-red-unit-05",
+        "startX": 76.46,
+        "startY": 44.86,
+        "endX": 64.54,
+        "endY": 38.56
       }
     ],
     "Sun City::domination-1|Blue": [
@@ -81905,24 +81696,6 @@
           }
         ],
         "dangerRoute": true
-      },
-      {
-        "id": "mu08vkic-av6x9x",
-        "type": "aimHere",
-        "parentTankId": "sun-city-blue-unit-14",
-        "startX": 87.68,
-        "startY": 79.52,
-        "endX": 67.91,
-        "endY": 85.46
-      },
-      {
-        "id": "mudnb7vk-n29w63",
-        "type": "aimHere",
-        "parentTankId": "mudnay8k-eiv2qx",
-        "startX": 45.66,
-        "startY": 33.01,
-        "endX": 44.18,
-        "endY": 64.55
       },
       {
         "id": "mudnbglr-0druz0",
@@ -91164,6 +90937,6 @@
     "Sands of Sinai::domination-1|Blue": [],
     "Vietnam::domination-1|Red": []
   },
-  "updatedAt": "2026-11-10T00:12:02.051Z",
-  "exportedAt": "2026-11-10T00:13:02.951Z"
+  "updatedAt": "2026-11-11T16:45:29.386Z",
+  "exportedAt": "2026-11-11T17:57:06.819Z"
 }
