@@ -9,6 +9,17 @@ export function calculateWeaponBr(unit, mode, weaponIds = []) {
   return stepBr(Math.min(brStep(rule.max), brStep(rule.base) + penalty));
 }
 
+// The highest single penalty wins, so a reachable BR needs at most one weapon.
+// Return null for gaps between reachable values rather than inventing loadouts.
+export function weaponSelectionForBr(unit, mode, target) {
+  if (calculateWeaponBr(unit, mode) === target) return [];
+  const rule = unit.variableBr?.[mode];
+  for (const id of Object.keys(rule?.penalties || {}).sort()) {
+    if (calculateWeaponBr(unit, mode, [id]) === target) return [id];
+  }
+  return null;
+}
+
 export function validateVariableRatings(data, catalog) {
   if (data?.schemaVersion !== 1 || !data.units || !data.additionalWeapons) throw new Error("Invalid variable BR data");
   const ids = new Set(Object.entries(catalog.categories).flatMap(([category, { units }]) => units.map(u => `${category}:${u.wikiId}`)));

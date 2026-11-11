@@ -16,7 +16,7 @@
       "name": "AGM-130A-12",
       "type": "guided-bomb",
       "guidance": "IR+IOG+GNSS",
-      "source": "https://wiki.warthunder.com/unit/f_111f",
+      "source": "https://wiki.warthunder.com/unit/f_15ia",
       "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/guided_bomb_grey.png",
       "icon": "/icon/weapon-wiki/guided_bomb_grey.png"
     },
@@ -96,7 +96,7 @@
       "name": "RB 75T",
       "type": "agm",
       "guidance": "TV",
-      "source": "https://wiki.warthunder.com/unit/saab_aj37",
+      "source": "https://wiki.warthunder.com/unit/saab_jas39_pre_serie",
       "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_air_to_uni_large.png",
       "icon": "/icon/weapon-wiki/missile_air_to_uni_large.png"
     },
@@ -328,7 +328,7 @@
       "name": "AAM-3",
       "type": "aam",
       "guidance": "IR",
-      "source": "https://wiki.warthunder.com/unit/f_15j",
+      "source": "https://wiki.warthunder.com/unit/f_2a_adtw",
       "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_type_c_air_to_air.png",
       "icon": "/icon/weapon-wiki/missile_type_c_air_to_air.png"
     },
@@ -650,8 +650,8 @@
       "type": "guided-bomb",
       "guidance": "GNSS",
       "source": "https://wiki.warthunder.com/collections/weapon/jdam",
-      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/guided_bomb_small_jdam.png",
-      "icon": "/icon/weapon-wiki/guided_bomb_small_jdam.png"
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/guided_bomb_middle_jdam.png",
+      "icon": "/icon/weapon-wiki/guided_bomb_middle_jdam.png"
     },
     "w-49da0659ecb38d9c": {
       "name": "Fire Snake 90A",
@@ -738,8 +738,8 @@
       "type": "guided-rocket",
       "guidance": "Laser",
       "source": "https://wiki.warthunder.com/collections/weapon/apkws_missile",
-      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/nar_he_small.png",
-      "icon": "/icon/weapon-wiki/nar_he_small.png"
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/nar_he_small_group_x3.png",
+      "icon": "/icon/weapon-wiki/nar_he_small_group_x3.png"
     },
     "w-53195dcce8eafb15": {
       "name": "HS 293 A-1",
@@ -802,8 +802,8 @@
       "type": "guided-bomb",
       "guidance": "Laser+IOG+GNSS",
       "source": "https://wiki.warthunder.com/collections/weapon/jdam",
-      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/guided_bomb_small_jdam.png",
-      "icon": "/icon/weapon-wiki/guided_bomb_small_jdam.png"
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/guided_bomb_middle_ljdam.png",
+      "icon": "/icon/weapon-wiki/guided_bomb_middle_ljdam.png"
     },
     "w-59b1ebe5dfc70d21": {
       "name": "Kh-58UShK",
@@ -850,8 +850,8 @@
       "type": "guided-bomb",
       "guidance": "IR+IOG+GNSS",
       "source": "https://wiki.warthunder.com/collections/weapon/spice",
-      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/guided_bomb_red.png",
-      "icon": "/icon/weapon-wiki/guided_bomb_red.png"
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/glide_guided_bomb_heavy_middle_jdam.png",
+      "icon": "/icon/weapon-wiki/glide_guided_bomb_heavy_middle_jdam.png"
     },
     "w-61a9334ce32a7ccc": {
       "name": "Kh-25MPU",
@@ -994,8 +994,8 @@
       "type": "guided-bomb",
       "guidance": "Laser",
       "source": "https://wiki.warthunder.com/collections/weapon/paveway_ii",
-      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/guided_bomb_heavy_middle_laser.png",
-      "icon": "/icon/weapon-wiki/guided_bomb_heavy_middle_laser.png"
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/guided_bomb_small_laser.png",
+      "icon": "/icon/weapon-wiki/guided_bomb_small_laser.png"
     },
     "w-75f65f2d8ffc1bcc": {
       "name": "Shafrir 2",
@@ -1066,8 +1066,8 @@
       "type": "aam",
       "guidance": "ARH+IOG+GNSS+DL",
       "source": "https://wiki.warthunder.com/collections/weapon/aim120_amraam",
-      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_type_b_air_to_air_midrange.png",
-      "icon": "/icon/weapon-wiki/missile_type_b_air_to_air_midrange.png"
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_type_s_air_to_air_midrange.png",
+      "icon": "/icon/weapon-wiki/missile_type_s_air_to_air_midrange.png"
     },
     "w-80c1daf1d608f293": {
       "name": "PGM 2000/3",
@@ -1177,7 +1177,7 @@
       "name": "AAM-4",
       "type": "aam",
       "guidance": "ARH+IOG+DL",
-      "source": "https://wiki.warthunder.com/unit/f_15j_kai",
+      "source": "https://wiki.warthunder.com/unit/f_2a_adtw",
       "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_type_f_air_to_air_midrange.png",
       "icon": "/icon/weapon-wiki/missile_type_f_air_to_air_midrange.png"
     },
@@ -1242,8 +1242,8 @@
       "type": "guided-rocket",
       "guidance": "Laser",
       "source": "https://wiki.warthunder.com/collections/weapon/apkws_missile",
-      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/nar_small.png",
-      "icon": "/icon/weapon-wiki/nar_small.png"
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/nar_small_group_3.png",
+      "icon": "/icon/weapon-wiki/nar_small_group_3.png"
     },
     "w-9538f279b151fd19": {
       "name": "YJ-91 L112",
@@ -1290,8 +1290,8 @@
       "type": "guided-bomb",
       "guidance": "IR+IOG+GNSS",
       "source": "https://wiki.warthunder.com/collections/weapon/gbu_53",
-      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/glide_guided_bomb_small_spice.png",
-      "icon": "/icon/weapon-wiki/glide_guided_bomb_small_spice.png"
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/glide_guided_bomb_small_spice_group_x4.png",
+      "icon": "/icon/weapon-wiki/glide_guided_bomb_small_spice_group_x4.png"
     },
     "w-9cdaaa0f2ced4e4e": {
       "name": "LS-6 500",
@@ -1394,8 +1394,8 @@
       "type": "guided-bomb",
       "guidance": "Laser+IOG+GNSS",
       "source": "https://wiki.warthunder.com/collections/weapon/paveway_iii",
-      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/guided_bomb_heavy_laser.png",
-      "icon": "/icon/weapon-wiki/guided_bomb_heavy_laser.png"
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/guided_bomb_heavy_middle_laser.png",
+      "icon": "/icon/weapon-wiki/guided_bomb_heavy_middle_laser.png"
     },
     "w-a8d76a2aff36f9bd": {
       "name": "PL-2",
@@ -1481,7 +1481,7 @@
       "name": "SPICE 250",
       "type": "guided-bomb",
       "guidance": "IR+IOG+GNSS",
-      "source": "https://wiki.warthunder.com/unit/ef_2000_aesa",
+      "source": "https://wiki.warthunder.com/unit/f_15ia",
       "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/glide_guided_bomb_small_spice_group_x4.png",
       "icon": "/icon/weapon-wiki/glide_guided_bomb_small_spice_group_x4.png"
     },
@@ -1545,7 +1545,7 @@
       "name": "Derby",
       "type": "aam",
       "guidance": "ARH+IOG+DL",
-      "source": "https://wiki.warthunder.com/unit/f-5th_thailand",
+      "source": "https://wiki.warthunder.com/unit/f_15ia",
       "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_type_c_air_to_air_midrange.png",
       "icon": "/icon/weapon-wiki/missile_type_c_air_to_air_midrange.png"
     },
@@ -1650,8 +1650,8 @@
       "type": "aam",
       "guidance": "ARH+IOG+DL",
       "source": "https://wiki.warthunder.com/collections/weapon/aim120_amraam",
-      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_air_to_air_special.png",
-      "icon": "/icon/weapon-wiki/missile_air_to_air_special.png"
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_air_to_air_midrange_special.png",
+      "icon": "/icon/weapon-wiki/missile_air_to_air_midrange_special.png"
     },
     "w-c3ecd962eecd8223": {
       "name": "GROM",
@@ -1738,8 +1738,8 @@
       "type": "guided-bomb",
       "guidance": "GNSS",
       "source": "https://wiki.warthunder.com/collections/weapon/jdam",
-      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/guided_bomb_heavy_jdam.png",
-      "icon": "/icon/weapon-wiki/guided_bomb_heavy_jdam.png"
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/guided_bomb_heavy_middle_jdam.png",
+      "icon": "/icon/weapon-wiki/guided_bomb_heavy_middle_jdam.png"
     },
     "w-cf6db52fecf8a93a": {
       "name": "R-13M1",
@@ -1809,7 +1809,7 @@
       "name": "GBU-15(V)22/B",
       "type": "guided-bomb",
       "guidance": "IR",
-      "source": "https://wiki.warthunder.com/unit/f_15e",
+      "source": "https://wiki.warthunder.com/unit/f_15ia",
       "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/guided_bomb_green.png",
       "icon": "/icon/weapon-wiki/guided_bomb_green.png"
     },
@@ -1858,8 +1858,8 @@
       "type": "guided-bomb",
       "guidance": "Laser+IOG+GNSS",
       "source": "https://wiki.warthunder.com/collections/weapon/paveway_ii",
-      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/guided_bomb_middle_jdam.png",
-      "icon": "/icon/weapon-wiki/guided_bomb_middle_jdam.png"
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/guided_bomb_middle_laser.png",
+      "icon": "/icon/weapon-wiki/guided_bomb_middle_laser.png"
     },
     "w-d7e97a9c998295b3": {
       "name": "Ruhrstahl X-4",
@@ -1882,8 +1882,8 @@
       "type": "guided-bomb",
       "guidance": "Laser+IOG+GNSS",
       "source": "https://wiki.warthunder.com/collections/weapon/jdam",
-      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/glide_guided_bomb_middle_jdam.png",
-      "icon": "/icon/weapon-wiki/glide_guided_bomb_middle_jdam.png"
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/glide_guided_bomb_middle_ljdam.png",
+      "icon": "/icon/weapon-wiki/glide_guided_bomb_middle_ljdam.png"
     },
     "w-da1e595729ea1fa3": {
       "name": "AGM-65H",
@@ -2099,8 +2099,8 @@
       "type": "guided-bomb",
       "guidance": "Laser+IOG+GNSS",
       "source": "https://wiki.warthunder.com/collections/weapon/paveway_ii",
-      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/guided_bomb_heavy_laser.png",
-      "icon": "/icon/weapon-wiki/guided_bomb_heavy_laser.png"
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/guided_bomb_small_laser.png",
+      "icon": "/icon/weapon-wiki/guided_bomb_small_laser.png"
     },
     "w-f3053f4b69997d44": {
       "name": "AS-37 ARMAT",
@@ -2123,8 +2123,8 @@
       "type": "aam",
       "guidance": "IR",
       "source": "https://wiki.warthunder.com/collections/weapon/aim9m_sidewinder",
-      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_type_b_air_to_air.png",
-      "icon": "/icon/weapon-wiki/missile_type_b_air_to_air.png"
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_type_f_air_to_air.png",
+      "icon": "/icon/weapon-wiki/missile_type_f_air_to_air.png"
     },
     "w-f3d717109e187d80": {
       "name": "RB24J",
@@ -2147,8 +2147,8 @@
       "type": "guided-bomb",
       "guidance": "TV",
       "source": "https://wiki.warthunder.com/collections/weapon/agm62_walleye",
-      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/guided_bomb_red.png",
-      "icon": "/icon/weapon-wiki/guided_bomb_red.png"
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/guided_bomb_grey.png",
+      "icon": "/icon/weapon-wiki/guided_bomb_grey.png"
     },
     "w-f94cfb8e307364f6": {
       "name": "RB28",
@@ -2237,6 +2237,38 @@
       "source": "https://wiki.warthunder.com/collections/weapon/1500kg_kab1500",
       "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/guided_bomb_heavy_laser.png",
       "icon": "/icon/weapon-wiki/guided_bomb_heavy_laser.png"
+    },
+    "w-af3a2e1b2739650a": {
+      "name": "Paveway II",
+      "type": "guided-bomb",
+      "guidance": "Laser",
+      "source": "https://wiki.warthunder.com/collections/weapon/paveway_ii",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/guided_bomb_large_laser.png",
+      "icon": "/icon/weapon-wiki/guided_bomb_large_laser.png"
+    },
+    "w-639a5597d8f2a4b5": {
+      "name": "GCS-1 (Type I)",
+      "type": "guided-bomb",
+      "guidance": "IR",
+      "source": "https://wiki.warthunder.com/unit/f_2a_adtw",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/guided_bomb_middle_laser_group_x3.png",
+      "icon": "/icon/weapon-wiki/guided_bomb_middle_laser_group_x3.png"
+    },
+    "w-a2ec64f526b95d15": {
+      "name": "R-98MR",
+      "type": "aam",
+      "guidance": "SARH",
+      "source": "https://wiki.warthunder.com/unit/su_15tm",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_air_to_air_midrange.png",
+      "icon": "/icon/weapon-wiki/missile_air_to_air_midrange.png"
+    },
+    "w-5710a7672c7207f2": {
+      "name": "R-98MT",
+      "type": "aam",
+      "guidance": "IR",
+      "source": "https://wiki.warthunder.com/unit/su_15tm",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_air_to_air_ir_large.png",
+      "icon": "/icon/weapon-wiki/missile_air_to_air_ir_large.png"
     }
   },
   "aircraft": {
@@ -2346,7 +2378,8 @@
         "w-071d453c2e0841e1",
         "w-3db9e47b607077d1",
         "w-ba665621c2721418"
-      ]
+      ],
+      "checkedAt": "2026-11-11T19:24:44Z"
     },
     "a_10a_late": {
       "status": "verified",
@@ -3037,10 +3070,11 @@
         "w-2a6d92dcdbd5a8cd",
         "w-3720bf9760e03406",
         "w-510434f34e8d63d5",
-        "w-b99a11212ede4f27",
+        "w-af3a2e1b2739650a",
         "w-b9a0933ccf196c6d",
         "w-f56acd04b392d9c8"
-      ]
+      ],
+      "checkedAt": "2026-11-11T19:24:44Z"
     },
     "bv-138c-1": {
       "status": "verified",
@@ -3980,7 +4014,8 @@
       "weapons": [
         "w-0eae2a1fc33321a2",
         "w-be26bfa948b3d877"
-      ]
+      ],
+      "checkedAt": "2026-11-11T19:24:44Z"
     },
     "f4d_1": {
       "status": "verified",
@@ -4743,11 +4778,14 @@
         "w-2348d1905ea8e93b",
         "w-49d0e9ba89c6e009",
         "w-5a22fcb4b77a3810",
+        "w-639a5597d8f2a4b5",
+        "w-8e1271839a1df89a",
         "w-cf0b07834b163ce6",
         "w-eb721d48241060b2",
         "w-eb8cc80d0a0e4458",
         "w-f3845c82c8f581e1"
-      ]
+      ],
+      "checkedAt": "2026-11-11T19:24:44Z"
     },
     "f_47n_25_re_china": {
       "status": "verified",
@@ -5439,11 +5477,13 @@
     },
     "hawk_t1a": {
       "status": "verified",
-      "weapons": []
+      "weapons": [],
+      "checkedAt": "2026-11-11T19:24:44Z"
     },
     "hawk_t1a_early": {
       "status": "verified",
-      "weapons": []
+      "weapons": [],
+      "checkedAt": "2026-11-11T19:24:44Z"
     },
     "he-111h-16_winter": {
       "status": "verified",
@@ -6045,7 +6085,7 @@
         "w-ba665621c2721418",
         "w-c3ecd962eecd8223"
       ],
-      "checkedOn": "2026-11-08"
+      "checkedAt": "2026-11-11T19:24:44Z"
     },
     "j_7_mk2": {
       "status": "verified",
@@ -7709,11 +7749,13 @@
     },
     "n1k2_j": {
       "status": "verified",
-      "weapons": []
+      "weapons": [],
+      "checkedAt": "2026-11-11T19:24:44Z"
     },
     "n1k2_jko": {
       "status": "verified",
-      "weapons": []
+      "weapons": [],
+      "checkedAt": "2026-11-11T19:24:44Z"
     },
     "nc_223_3": {
       "status": "verified",
@@ -8426,7 +8468,8 @@
       "weapons": [
         "w-be26bfa948b3d877",
         "w-deaf9814d57f9eaa"
-      ]
+      ],
+      "checkedAt": "2026-11-11T19:24:44Z"
     },
     "saab_j21a_1": {
       "status": "verified",
@@ -8984,7 +9027,8 @@
     },
     "spitfire_mk18e": {
       "status": "verified",
-      "weapons": []
+      "weapons": [],
+      "checkedAt": "2026-11-11T19:24:44Z"
     },
     "spitfire_mk5b": {
       "status": "verified",
@@ -9246,7 +9290,7 @@
         "w-e342bc555c774336",
         "w-f2a2e1ba61e69fb1"
       ],
-      "checkedOn": "2026-11-08"
+      "checkedAt": "2026-11-11T19:24:44Z"
     },
     "su_25t": {
       "status": "verified",
@@ -9268,6 +9312,10 @@
     "su_25tm": {
       "status": "verified",
       "weapons": [
+        "w-0a7b15499700bfe7",
+        "w-0c3035423bf7154a",
+        "w-2600a6af74f1e718",
+        "w-34b1acf401bb8938",
         "w-47063594cfe8fea4",
         "w-61a9334ce32a7ccc",
         "w-7aad7ee52204461c",
@@ -9276,15 +9324,17 @@
         "w-8d4018fc2f3bf7ed",
         "w-8e765660e2d3b731",
         "w-91c33c30f392fb94",
+        "w-9c0772354769dee3",
         "w-a923fba9ef69e1bf",
+        "w-c32403e05fc3020a",
         "w-d17fb67e42644086",
         "w-d27c052acbdd5bf8",
         "w-d52b423b858d8443",
         "w-dfd09940046db382",
         "w-e7ea5cd057a8cb24",
-        "w-e8c7c33ebef7d99d",
         "w-f2a2e1ba61e69fb1"
-      ]
+      ],
+      "checkedAt": "2026-11-11T19:24:44Z"
     },
     "su_27": {
       "status": "verified",
@@ -9941,7 +9991,8 @@
     },
     "yak-3u": {
       "status": "verified",
-      "weapons": []
+      "weapons": [],
+      "checkedAt": "2026-11-11T19:24:44Z"
     },
     "yak-4": {
       "status": "verified",
@@ -10032,42 +10083,6 @@
       "status": "pending-wiki",
       "weapons": []
     },
-    "pending-us-fa-18d": {
-      "status": "pending-wiki",
-      "weapons": []
-    },
-    "pending-us-f-15ex": {
-      "status": "pending-wiki",
-      "weapons": []
-    },
-    "pending-ru-su-15tm": {
-      "status": "pending-wiki",
-      "weapons": []
-    },
-    "pending-uk-fulmar-mk-ii": {
-      "status": "pending-wiki",
-      "weapons": []
-    },
-    "pending-jp-b-ch-4": {
-      "status": "pending-wiki",
-      "weapons": []
-    },
-    "pending-jp-b-33": {
-      "status": "pending-wiki",
-      "weapons": []
-    },
-    "pending-cn-q-5d": {
-      "status": "pending-wiki",
-      "weapons": []
-    },
-    "pending-se-jas-39-5": {
-      "status": "pending-wiki",
-      "weapons": []
-    },
-    "pending-il-f-15ia": {
-      "status": "pending-wiki",
-      "weapons": []
-    },
     "bf-109e-3_tl": {
       "status": "verified",
       "weapons": [],
@@ -10077,6 +10092,157 @@
       "status": "verified",
       "weapons": [],
       "checkedOn": "2026-11-08"
+    },
+    "fa_18d_late": {
+      "status": "verified",
+      "weapons": [
+        "w-0ce99d1724aa9f56",
+        "w-2f1ea5d72731f5e9",
+        "w-3bac030fd6870501",
+        "w-50f24b756af3bf7b",
+        "w-52dd65f9e41af4ee",
+        "w-598696986d775d0d",
+        "w-75ab73c7d91f966f",
+        "w-947abae2679ff026",
+        "w-a147fd449fed8cca",
+        "w-a19da822e17dd62c",
+        "w-a85bf00d7839aa36",
+        "w-aafa480558c58af2",
+        "w-bad8d4217ca7110c",
+        "w-c37133b0458cb4c4",
+        "w-ce945d4d02435a92",
+        "w-cf0b07834b163ce6",
+        "w-d99389ccff7212e0",
+        "w-e9208dd8094b0a54",
+        "w-eb8cc80d0a0e4458",
+        "w-f3845c82c8f581e1",
+        "w-f89c70273ecd4672"
+      ],
+      "checkedAt": "2026-11-11T19:24:44Z"
+    },
+    "f_15ex": {
+      "status": "verified",
+      "weapons": [
+        "w-02cd9bc64d01b21f",
+        "w-2f1ea5d72731f5e9",
+        "w-32e4b3f0be557622",
+        "w-49d0e9ba89c6e009",
+        "w-52dd65f9e41af4ee",
+        "w-598696986d775d0d",
+        "w-75ab73c7d91f966f",
+        "w-7fbe9f3602e04ad4",
+        "w-8f008a1bfacdd54a",
+        "w-947abae2679ff026",
+        "w-9c4315c70fa703a6",
+        "w-a19da822e17dd62c",
+        "w-a85bf00d7839aa36",
+        "w-aafa480558c58af2",
+        "w-c22a35715ef91669",
+        "w-c37133b0458cb4c4",
+        "w-cf0b07834b163ce6",
+        "w-d3736e65983a454b",
+        "w-d5def9b63ac9a707",
+        "w-d99389ccff7212e0",
+        "w-e9208dd8094b0a54",
+        "w-eb721d48241060b2",
+        "w-eb8cc80d0a0e4458",
+        "w-edea1141434ebc74",
+        "w-eed186ebcaf5ff3f",
+        "w-f2dc8cb7c40bc2be",
+        "w-f3845c82c8f581e1"
+      ],
+      "checkedAt": "2026-11-11T19:24:44Z"
+    },
+    "fokker_d7": {
+      "status": "verified",
+      "weapons": [],
+      "checkedAt": "2026-11-11T19:24:44Z"
+    },
+    "su_15tm": {
+      "status": "verified",
+      "weapons": [
+        "w-5710a7672c7207f2",
+        "w-a2ec64f526b95d15",
+        "w-d47dd8216d8753d6"
+      ],
+      "checkedAt": "2026-11-11T19:24:44Z"
+    },
+    "fulmar_mk2": {
+      "status": "verified",
+      "weapons": [],
+      "checkedAt": "2026-11-11T19:24:44Z"
+    },
+    "spad_13": {
+      "status": "verified",
+      "weapons": [],
+      "checkedAt": "2026-11-11T19:24:44Z"
+    },
+    "firefly_mk1_thailand": {
+      "status": "verified",
+      "weapons": [],
+      "checkedAt": "2026-11-11T19:24:44Z"
+    },
+    "b_33_indonesia": {
+      "status": "verified",
+      "weapons": [],
+      "checkedAt": "2026-11-11T19:24:44Z"
+    },
+    "q_5d": {
+      "status": "verified",
+      "weapons": [],
+      "checkedAt": "2026-11-11T19:24:44Z"
+    },
+    "saab_jas39_pre_serie": {
+      "status": "verified",
+      "weapons": [
+        "w-0afb2b7fc7509bcf",
+        "w-1f1c12e792f96b94",
+        "w-4e1b9a3fe6e9e1ae",
+        "w-575ec887541d3581",
+        "w-71072b0bbe98ee66",
+        "w-75ab73c7d91f966f",
+        "w-8cbd9accb9a2eda8",
+        "w-bad8d4217ca7110c",
+        "w-e9208dd8094b0a54",
+        "w-fd57a410bb9cc27c"
+      ],
+      "checkedAt": "2026-11-11T19:24:44Z"
+    },
+    "f_15ia": {
+      "status": "verified",
+      "weapons": [
+        "w-02cd9bc64d01b21f",
+        "w-2f1ea5d72731f5e9",
+        "w-32e4b3f0be557622",
+        "w-49d0e9ba89c6e009",
+        "w-52dd65f9e41af4ee",
+        "w-598696986d775d0d",
+        "w-60bf08b3bfbffd1f",
+        "w-75ab73c7d91f966f",
+        "w-7fbe9f3602e04ad4",
+        "w-8f008a1bfacdd54a",
+        "w-947abae2679ff026",
+        "w-a19da822e17dd62c",
+        "w-a85bf00d7839aa36",
+        "w-aafa480558c58af2",
+        "w-b0e72886e5e30f75",
+        "w-bc40415251460841",
+        "w-c22a35715ef91669",
+        "w-c37133b0458cb4c4",
+        "w-cf0b07834b163ce6",
+        "w-d3736e65983a454b",
+        "w-d5def9b63ac9a707",
+        "w-d99389ccff7212e0",
+        "w-e6f4320493ce55b5",
+        "w-e9208dd8094b0a54",
+        "w-eb721d48241060b2",
+        "w-eb8cc80d0a0e4458",
+        "w-edea1141434ebc74",
+        "w-eed186ebcaf5ff3f",
+        "w-f2dc8cb7c40bc2be",
+        "w-f3845c82c8f581e1"
+      ],
+      "checkedAt": "2026-11-11T19:24:44Z"
     }
   },
   "testAdditions": {
@@ -10090,5 +10256,6 @@
         "w-575ec887541d3581"
       ]
     }
-  }
+  },
+  "lastPartialRefreshAt": "2026-11-11T19:24:44Z"
 }

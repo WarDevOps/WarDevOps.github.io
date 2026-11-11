@@ -1,3 +1,5 @@
+import { weaponSelectionForBr } from "./brc-ratings.js?v=br-search-20261112";
+
 export const CATEGORIES = ["tank", "air", "heli"];
 export const COUNTRIES = ["US", "DE", "RU", "UK", "JP", "CN", "IT", "FR", "SE", "IL"];
 
@@ -49,4 +51,19 @@ export function searchUnits(units, query) {
   const needle = normalize(query);
   if (!needle) return [];
   return units.filter(unit => normalize(unit.name).includes(needle));
+}
+
+export function parseBrQuery(query) {
+  const text = query.normalize("NFKC").trim();
+  if (!/^(?:BR\s*)?\d{1,2}(?:\.\d?)?$/i.test(text)) return null;
+  const br = Number(text.replace(/^BR\s*/i, ""));
+  return Number.isFinite(br) && br >= 1 ? br : null;
+}
+
+export function unitsAtBr(units, mode, target) {
+  return units.flatMap(unit => {
+    const weapons = weaponSelectionForBr(unit, mode, target);
+    return weapons === null ? [] : [{ ...unit, baseBr: unit.br, br: target, searchWeaponIds: weapons }];
+  }).sort((a, b) => CATEGORIES.indexOf(a.category) - CATEGORIES.indexOf(b.category)
+    || a.name.localeCompare(b.name, "en", { numeric: true }) || a.id.localeCompare(b.id));
 }

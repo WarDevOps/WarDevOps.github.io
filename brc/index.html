@@ -15,7 +15,7 @@
   <meta name="twitter:card" content="summary">
   <title>Battle-rating Range Calculator | WarDevOps</title>
   <link rel="stylesheet" href="/assets/css/site.css?v=legend-icon-controls-20261110">
-  <link rel="stylesheet" href="/assets/css/brc.css?v=static-description-20261109">
+  <link rel="stylesheet" href="/assets/css/brc.css?v=br-search-20261112">
 </head>
 <body>
   <header class="site-header">
@@ -52,8 +52,9 @@
     <section class="brc-workspace" id="brc-workspace" role="tabpanel" aria-labelledby="brc-tab-grb">
       <div class="brc-controls">
         <div class="brc-search">
-          <label for="brc-search" data-brc-text="searchLabel">Find a vehicle</label>
-          <input id="brc-search" type="search" autocomplete="off" spellcheck="false" aria-controls="brc-results" placeholder="Leopard 2K, M1A1, AH-64…" disabled>
+          <label for="brc-search" data-brc-text="searchLabel">Find a vehicle or BR</label>
+          <input id="brc-search" type="search" autocomplete="off" spellcheck="false" aria-controls="brc-results brc-table" aria-describedby="brc-br-search-hint" placeholder="13.3, Leopard 2K, M1A1…" disabled>
+          <p id="brc-br-search-hint" class="brc-muted" role="status" hidden></p>
           <div id="brc-results" class="brc-results" hidden></div>
         </div>
         <fieldset class="brc-categories" id="brc-categories" disabled>
@@ -126,7 +127,7 @@
     <p data-page-i18n="copyrightNotice">Unofficial fan project. Not affiliated with or endorsed by Gaijin Entertainment. War Thunder and related game materials belong to their respective rights holders.</p>
   </footer>
   <script type="module" src="/assets/js/tier-page.js?v=20260828"></script>
-  <script type="module" src="/assets/js/brc.js?v=border-description-20261110"></script>
+  <script type="module" src="/assets/js/brc.js?v=wiki-refresh-20261112"></script>
   <script type="module" src="/assets/js/consent-controls.js?v=20260828"></script>
 </body>
 </html>

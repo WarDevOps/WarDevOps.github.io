@@ -1,4 +1,4 @@
-import { calculateWeaponBr } from "./brc-ratings.js?v=highest-penalty-20261101";
+import { calculateWeaponBr, weaponSelectionForBr } from "./brc-ratings.js?v=br-search-20261112";
 const labels = {
   en: {
     title: "GUIDED WEAPONS", ammunition: "MAIN-GUN AMMUNITION", ammoEmpty: "No main-gun ammunition to display.", loading: "Loading weapons…", unknown: "Weapon information unverified.",
@@ -78,8 +78,8 @@ export function createArmamentPanel({ panel, popup, onLayout, onRatingChange }) 
     loading = true; failed = false; render();
     try {
       const [result, extra] = await Promise.all([
-        "../data/aircraft-armaments.json?v=highlight-refresh-20261108",
-        "../data/ground-heli-armaments.json?v=highlight-refresh-20261108",
+        "../data/aircraft-armaments.json?v=wiki-refresh-20261112",
+        "../data/ground-heli-armaments.json?v=wiki-refresh-20261112",
       ].map(async path => {
         const response = await fetch(new URL(path, import.meta.url));
         if (!response.ok) throw new Error(`Armaments HTTP ${response.status}`);
@@ -194,6 +194,12 @@ export function createArmamentPanel({ panel, popup, onLayout, onRatingChange }) 
   }
   reset.addEventListener("click", () => { selections.delete(key); render(); publishRating(); onLayout(); });
   return {
+    selectForBr(unit, mode, target) {
+      const weapons = weaponSelectionForBr(unit, mode, target);
+      if (weapons === null) return false;
+      selections.set(`${unit.id}:${mode}`, new Set(weapons));
+      return true;
+    },
     ratingFor(unit, mode) {
       return calculateWeaponBr(unit, mode, selections.get(`${unit.id}:${mode}`) || []);
     },

@@ -1,6 +1,6 @@
-import { CATEGORIES, COUNTRIES, readCatalog, visibleUnits, searchUnits, rangeColor, toTenths } from "./brc-model.js?v=highest-penalty-20261101";
-import { createArmamentPanel } from "./brc-armaments.js?v=highlight-refresh-20261108";
-import { validateVariableRatings } from "./brc-ratings.js?v=highest-penalty-20261101";
+import { CATEGORIES, COUNTRIES, readCatalog, visibleUnits, searchUnits, rangeColor, toTenths, parseBrQuery, unitsAtBr } from "./brc-model.js?v=br-search-20261112";
+import { createArmamentPanel } from "./brc-armaments.js?v=wiki-refresh-20261112";
+import { validateVariableRatings } from "./brc-ratings.js?v=br-search-20261112";
 import { setVehicleImage, imagePendingText } from "./vehicle-images.js?v=20261108";
 
 const copy = {
@@ -12,7 +12,7 @@ const copy = {
     usage: "Hover over a vehicle to see its range in color, or click to view its details and weapons and calculate weapon-dependent BR for Custom BR vehicles.",
     matchmaking: "Use search and filters to find vehicles. Actual matchmaking uses your lineup’s highest BR, so vehicles below the displayed range may also appear in battle.",
     borderLegend: "New vehicles have blue borders; vehicles with variable BR have purple borders.",
-    searchLabel: "Find a vehicle", categories: "Vehicle types", tank: "Ground", air: "Aircraft", heli: "Helicopters",
+    searchLabel: "Find a vehicle or BR", brSearchHint: "Includes vehicles that reach this BR with weapons equipped. Clear the search to see all BRs.", weaponBr: "With weapon", brEmpty: "No vehicles available at this BR with the current filters.", categories: "Vehicle types", tank: "Ground", air: "Aircraft", heli: "Helicopters",
     rangeOnly: "Range only", clear: "Clear selection", comparing: "COMPARING", difference: "BR difference",
     notice: "A ±1.0 BR comparison, not a complete list of possible opponents. Matchmaking uses your lineup’s highest BR; lower-BR vehicles may also appear. All nations are included. New vehicles have blue borders; vehicles with variable BR have purple borders.",
     scrollHint: "Scroll to explore · Nation headers and BR stay visible", details: "VEHICLE DETAILS",
@@ -32,7 +32,7 @@ const copy = {
     usage: "장비에 마우스를 올리면 비교 범위를 색상으로 확인할 수 있으며, 클릭하면 장비 설명과 무장을 확인하고 커스텀 BR 장비의 무장별 BR을 계산할 수 있습니다.",
     matchmaking: "검색과 필터로 원하는 장비를 찾아보세요. 실제 매칭은 편성의 최고 BR을 기준으로 하므로, 표시 범위보다 낮은 BR 장비도 전투에 등장할 수 있습니다.",
     borderLegend: "최신 장비는 파란색 테두리, 가변 BR 적용 장비는 보라색 테두리로 표시합니다.",
-    searchLabel: "장비 찾기", categories: "장비 종류", tank: "지상", air: "항공", heli: "헬기",
+    searchLabel: "장비 또는 BR 찾기", brSearchHint: "무장 장착 시 해당 BR이 되는 장비를 포함합니다. 검색어를 지우면 전체 BR을 표시합니다.", weaponBr: "무장 장착 시", brEmpty: "현재 필터에서 해당 BR에 표시할 장비가 없습니다.", categories: "장비 종류", tank: "지상", air: "항공", heli: "헬기",
     rangeOnly: "범위만 보기", clear: "선택 해제", comparing: "비교 기준", difference: "BR 차이",
     notice: "선택 장비의 ±1.0 BR 비교표입니다. 실제 매칭은 편성의 최고 BR을 기준으로 하며 더 낮은 BR 장비도 등장할 수 있습니다. 아군·적군을 구분하지 않고 모든 국가를 표시합니다. 최신 장비는 파란색 테두리, 가변 BR 적용 장비는 보라색 테두리로 표시합니다.",
     scrollHint: "스크롤로 탐색 · 국가 헤더와 BR 열 고정", details: "장비 설명",
@@ -52,6 +52,7 @@ const state = { language: document.documentElement.lang === "ko" ? "ko" : "en", 
 const modeViews = Object.fromEntries(["grb", "arb"].map(mode => [mode, { selectedId: null, rangeOnly: false, query: "", top: 0, left: 0 }]));
 let buttons = new Map(), rows = [], popupAnchor = null;
 let popupPosition = null, popupDrag = null;
+let brQuery = null, displayedById = new Map(), displayedUnits = [];
 
 function updatePositionControls() {
   const korean = state.language === "ko";
@@ -102,7 +103,14 @@ function renderTable() {
   const newUnitIds = new Set(state.catalog?.announcedVehicles?.units || []);
   state.hovered = null;
   state.focused = null;
-  const units = visibleUnits(state.units, state.mode === "arb" ? new Set(["air"]) : state.categories, comparisonSelection(), state.rangeOnly);
+  brQuery = parseBrQuery(search.value);
+  const candidates = brQuery === null ? state.units : unitsAtBr(state.units, state.mode, brQuery);
+  const units = visibleUnits(candidates, state.mode === "arb" ? new Set(["air"]) : state.categories, comparisonSelection(), state.rangeOnly && brQuery === null);
+  displayedUnits = units;
+  displayedById = new Map(units.map(unit => [unit.id, unit]));
+  const hint = $("#brc-br-search-hint");
+  hint.hidden = brQuery === null;
+  hint.textContent = brQuery === null ? "" : `BR ${number(brQuery)} · ${t("brSearchHint")}`;
   const head = element("tr");
   const brHead = element("th", "", "BR"); brHead.scope = "col"; head.append(brHead);
   for (const code of COUNTRIES) {
@@ -134,6 +142,9 @@ function renderTable() {
         if (state.mode === "grb") section.append(element("span", "brc-group-label", t(category)));
         for (const unit of categoryUnits) {
           const button = element("button", "brc-unit", unit.name);
+          if (unit.searchWeaponIds?.length) {
+            button.append(element("small", "brc-search-br", `${t("weaponBr")} · ${number(unit.baseBr)} → ${number(unit.br)}`));
+          }
           button.classList.toggle("is-new", newUnitIds.has(unit.wikiId) || unit.isNew === true);
           button.classList.toggle("has-variable-br", hasCustomBr(unit));
           button.type = "button"; button.dataset.unit = unit.id;
@@ -150,7 +161,7 @@ function renderTable() {
     rows.push({ row, br, delta }); body.append(row);
   }
   table.tBodies[0].replaceChildren(body);
-  $("#brc-status").textContent = units.length ? "" : t("empty");
+  $("#brc-status").textContent = units.length ? "" : t(brQuery === null ? "empty" : "brEmpty");
   paintComparison();
 }
 
@@ -181,10 +192,10 @@ function paintComparison() {
     ? `${preview ? t("preview") : t("pinned")} · ${reference.name} · ${ratingLabel(reference)} → ${number(Math.max(1, reference.br - 1))}–${number(reference.br + 1)}`
     : t("idle");
   $("#brc-pinned").textContent = t("idleHint");
-  const count = visibleUnits(state.units, state.mode === "arb" ? new Set(["air"]) : state.categories, reference, true).length;
+  const count = visibleUnits(brQuery === null ? state.units : displayedUnits, state.mode === "arb" ? new Set(["air"]) : state.categories, reference, true).length;
   $("#brc-count").textContent = `${state.language === "ko" ? "범위 내 장비" : "Vehicles in range"} : ${count.toLocaleString(state.language)} ${t("vehicles")}`;
-  $("#brc-range-only").disabled = !state.selected;
-  $("#brc-reset").disabled = !state.selected;
+  $("#brc-range-only").disabled = !state.selected || brQuery !== null;
+  $("#brc-reset").disabled = !state.selected && brQuery === null;
 }
 
 function closePopup(restoreFocus = false) {
@@ -197,14 +208,14 @@ function clearSelection({ clearSearch = false } = {}) {
   const wasRangeOnly = state.rangeOnly;
   state.selected = null; state.hovered = null; state.focused = null; state.rangeOnly = false;
   $("#brc-range-only").checked = false;
+  if (clearSearch) search.value = "";
   closePopup();
-  if (wasRangeOnly) renderTable();
+  if (wasRangeOnly || brQuery !== null) renderTable();
   else {
     buttons.get(old?.id)?.setAttribute("aria-pressed", "false");
     paintComparison();
     $("#brc-status").textContent = rows.length ? "" : t("empty");
   }
-  if (clearSearch) search.value = "";
   results.hidden = true;
 }
 
@@ -251,6 +262,9 @@ function updatePopup() {
 }
 
 function selectUnit(unit, fromSearch = false) {
+  if (!unit) return;
+  if (fromSearch) search.value = unit.name;
+  else if (brQuery !== null) armaments.selectForBr(unit, state.mode, brQuery);
   const old = state.selected;
   state.selected = unit; state.hovered = null; state.focused = null;
   if (fromSearch && state.mode === "grb" && !state.categories.has(unit.category)) {
@@ -266,7 +280,6 @@ function selectUnit(unit, fromSearch = false) {
   popupAnchor = buttons.get(unit.id);
   results.hidden = true;
   if (fromSearch) {
-    search.value = unit.name;
     popupAnchor?.scrollIntoView({ block: "center", inline: "center", behavior: "instant" });
   }
   popup.hidden = false; updatePopup();
@@ -276,6 +289,15 @@ function selectUnit(unit, fromSearch = false) {
 
 function renderSearch() {
   results.replaceChildren();
+  const previousBr = brQuery;
+  brQuery = parseBrQuery(search.value);
+  if (brQuery !== null || previousBr !== null) {
+    renderTable();
+    popupAnchor = buttons.get(state.selected?.id);
+    positionPopup();
+    scroller.scrollTop = 0;
+  }
+  if (brQuery !== null) { results.hidden = true; return; }
   if (!search.value.trim()) { results.hidden = true; return; }
   const matches = searchUnits(state.units, search.value);
   results.append(element("p", "", matches.length ? `${matches.length} ${t("results")}` : t("noResults")));
@@ -326,7 +348,7 @@ function switchMode(mode) {
   state.rangeOnly = Boolean(state.selected && view.rangeOnly);
   state.hovered = null; state.focused = null;
   search.value = view.query;
-  search.placeholder = mode === "arb" ? "F-15E, A-10A, Spitfire…" : "Leopard 2K, M1A1, AH-64…";
+  search.placeholder = mode === "arb" ? "13.3, F-15E, A-10A…" : "13.3, Leopard 2K, M1A1…";
   $("#brc-range-only").checked = state.rangeOnly;
   $("#brc-categories").hidden = mode === "arb";
   $("#brc-categories").disabled = mode === "arb";
@@ -346,7 +368,7 @@ async function loadCatalog() {
   try {
     // Deliberately share the Tier List catalog and its BR values; no BRC-specific copy.
     const [catalog, ratings] = await Promise.all([
-      "../data/tier-units.json?v=highlight-refresh-20261108", "../data/brc-variable-br.json?v=20261101",
+      "../data/tier-units.json?v=wiki-refresh-20261112", "../data/brc-variable-br.json?v=20261101",
     ].map(async path => {
       const response = await fetch(new URL(path, import.meta.url));
       if (!response.ok) throw new Error(`Catalog HTTP ${response.status}`);
@@ -368,14 +390,14 @@ async function loadCatalog() {
 table.addEventListener("pointermove", event => {
   if (event.pointerType === "touch" || state.selected) return;
   const button = event.target.closest("[data-unit]");
-  const next = button ? state.byId.get(button.dataset.unit) : null;
+  const next = button ? displayedById.get(button.dataset.unit) : null;
   if (state.hovered !== next) { state.hovered = next; paintComparison(); }
 });
 table.addEventListener("pointerleave", () => { state.hovered = null; paintComparison(); });
 table.addEventListener("focusin", event => {
   const button = event.target.closest("[data-unit]");
   // Mouse focus must not turn a transient hover into a pinned preview.
-  state.focused = !state.selected && button?.matches(":focus-visible") ? state.byId.get(button.dataset.unit) : null;
+  state.focused = !state.selected && button?.matches(":focus-visible") ? displayedById.get(button.dataset.unit) : null;
   paintComparison();
 });
 table.addEventListener("focusout", () => { state.focused = null; paintComparison(); });

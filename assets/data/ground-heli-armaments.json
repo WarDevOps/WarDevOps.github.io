@@ -2220,7 +2220,7 @@
       "guidance": "API-T/HEI-T",
       "ammoType": "API-T/HEI-T",
       "gun": "35 mm Oerlikon KDA cannon",
-      "source": "https://wiki.warthunder.com/unit/us_xm246",
+      "source": "https://wiki.warthunder.com/unit/fr_prtl",
       "belt": [
         {
           "type": "API-T",
@@ -2252,7 +2252,7 @@
       "guidance": "HEI-T/HEI-T/HEI-T/API-T",
       "ammoType": "HEI-T/HEI-T/HEI-T/API-T",
       "gun": "35 mm Oerlikon KDA cannon",
-      "source": "https://wiki.warthunder.com/unit/us_xm246",
+      "source": "https://wiki.warthunder.com/unit/fr_prtl",
       "belt": [
         {
           "type": "HEI-T",
@@ -2284,7 +2284,7 @@
       "guidance": "API-T/API-T/API-T/HEI-T",
       "ammoType": "API-T/API-T/API-T/HEI-T",
       "gun": "35 mm Oerlikon KDA cannon",
-      "source": "https://wiki.warthunder.com/unit/us_xm246",
+      "source": "https://wiki.warthunder.com/unit/fr_prtl",
       "belt": [
         {
           "type": "API-T",
@@ -2347,7 +2347,7 @@
       "guidance": "HEATFS",
       "ammoType": "HEATFS",
       "gun": "105 mm LRF cannon",
-      "source": "https://wiki.warthunder.com/unit/us_stingray",
+      "source": "https://wiki.warthunder.com/unit/us_stingray_2",
       "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/heat_fs_tank.png",
       "icon": "/icon/weapon-wiki/heat_fs_tank.png"
     },
@@ -2357,7 +2357,7 @@
       "guidance": "HESH",
       "ammoType": "HESH",
       "gun": "105 mm LRF cannon",
-      "source": "https://wiki.warthunder.com/unit/us_stingray",
+      "source": "https://wiki.warthunder.com/unit/us_stingray_2",
       "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/hesh_tank.png",
       "icon": "/icon/weapon-wiki/hesh_tank.png"
     },
@@ -2367,7 +2367,7 @@
       "guidance": "APFSDS",
       "ammoType": "APFSDS",
       "gun": "105 mm LRF cannon",
-      "source": "https://wiki.warthunder.com/unit/us_stingray",
+      "source": "https://wiki.warthunder.com/unit/us_stingray_2",
       "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/apdsfs_tank.png",
       "icon": "/icon/weapon-wiki/apdsfs_tank.png"
     },
@@ -2377,7 +2377,7 @@
       "guidance": "APFSDS",
       "ammoType": "APFSDS",
       "gun": "105 mm LRF cannon",
-      "source": "https://wiki.warthunder.com/unit/us_stingray",
+      "source": "https://wiki.warthunder.com/unit/us_stingray_2",
       "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/apdsfs_tank.png",
       "icon": "/icon/weapon-wiki/apdsfs_tank.png"
     },
@@ -3732,7 +3732,7 @@
       "guidance": "API-T/HEFI-T/HEFI-T/HEFI-T",
       "ammoType": "API-T/HEFI-T/HEFI-T/HEFI-T",
       "gun": "20 mm FlaK38 cannon",
-      "source": "https://wiki.warthunder.com/unit/germ_flakpanzer_i_ausf_a",
+      "source": "https://wiki.warthunder.com/unit/it_lancia_flak38",
       "belt": [
         {
           "type": "API-T",
@@ -3764,7 +3764,7 @@
       "guidance": "HEFI-T",
       "ammoType": "HEFI-T",
       "gun": "20 mm FlaK38 cannon",
-      "source": "https://wiki.warthunder.com/unit/germ_flakpanzer_i_ausf_a",
+      "source": "https://wiki.warthunder.com/unit/it_lancia_flak38",
       "belt": [
         {
           "type": "HEFI-T",
@@ -3796,7 +3796,7 @@
       "guidance": "API-T",
       "ammoType": "API-T",
       "gun": "20 mm FlaK38 cannon",
-      "source": "https://wiki.warthunder.com/unit/germ_flakpanzer_i_ausf_a",
+      "source": "https://wiki.warthunder.com/unit/it_lancia_flak38",
       "belt": [
         {
           "type": "API-T",
@@ -7136,7 +7136,7 @@
       "guidance": "APDS",
       "ammoType": "APDS",
       "gun": "35 mm Oerlikon KDA cannon",
-      "source": "https://wiki.warthunder.com/unit/germ_flakpz_i_gepard",
+      "source": "https://wiki.warthunder.com/unit/fr_prtl",
       "belt": [
         {
           "type": "APDS",
@@ -7862,7 +7862,7 @@
       "guidance": "APHEBC",
       "ammoType": "APHEBC",
       "gun": "45 mm 20-K cannon",
-      "source": "https://wiki.warthunder.com/unit/ussr_bt_5",
+      "source": "https://wiki.warthunder.com/unit/ussr_bt_7_m_816",
       "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/aphebc_tank.png",
       "icon": "/icon/weapon-wiki/aphebc_tank.png"
     },
@@ -7872,7 +7872,7 @@
       "guidance": "APBC",
       "ammoType": "APBC",
       "gun": "45 mm 20-K cannon",
-      "source": "https://wiki.warthunder.com/unit/ussr_bt_5",
+      "source": "https://wiki.warthunder.com/unit/ussr_bt_7_m_816",
       "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/apbc_tank.png",
       "icon": "/icon/weapon-wiki/apbc_tank.png"
     },
@@ -7882,7 +7882,7 @@
       "guidance": "HEATFS",
       "ammoType": "HEATFS",
       "gun": "120 mm Rh120 L/55 A1 cannon",
-      "source": "https://wiki.warthunder.com/unit/germ_leopard_2a7v",
+      "source": "https://wiki.warthunder.com/unit/sw_leopard_2a8no",
       "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/heat_fs_tank.png",
       "icon": "/icon/weapon-wiki/heat_fs_tank.png"
     },
@@ -7892,7 +7892,7 @@
       "guidance": "APFSDS",
       "ammoType": "APFSDS",
       "gun": "120 mm Rh120 L/55 A1 cannon",
-      "source": "https://wiki.warthunder.com/unit/germ_leopard_2a7v",
+      "source": "https://wiki.warthunder.com/unit/sw_leopard_2a8no",
       "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/apdsfs_tank.png",
       "icon": "/icon/weapon-wiki/apdsfs_tank.png"
     },
@@ -7902,7 +7902,7 @@
       "guidance": "HE-TF",
       "ammoType": "HE-TF",
       "gun": "120 mm Rh120 L/55 A1 cannon",
-      "source": "https://wiki.warthunder.com/unit/germ_leopard_2a7v",
+      "source": "https://wiki.warthunder.com/unit/sw_leopard_2a8no",
       "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/he_frag_dist_fuse_ship.png",
       "icon": "/icon/weapon-wiki/he_frag_dist_fuse_ship.png"
     },
@@ -7912,7 +7912,7 @@
       "guidance": "APFSDS",
       "ammoType": "APFSDS",
       "gun": "120 mm Rh120 L/55 A1 cannon",
-      "source": "https://wiki.warthunder.com/unit/germ_leopard_2a7v",
+      "source": "https://wiki.warthunder.com/unit/sw_leopard_2a8no",
       "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/apdsfs_tank.png",
       "icon": "/icon/weapon-wiki/apdsfs_tank.png"
     },
@@ -10463,7 +10463,7 @@
       "guidance": "APDS/APDS/APDS/APDS/HEF-T",
       "ammoType": "APDS/APDS/APDS/APDS/HEF-T",
       "gun": "30 mm 2A72 automatic cannon",
-      "source": "https://wiki.warthunder.com/unit/ussr_btr_80a",
+      "source": "https://wiki.warthunder.com/unit/jp_bmp_3f",
       "belt": [
         {
           "type": "APDS",
@@ -10500,7 +10500,7 @@
       "guidance": "HEF-I/HEF-I/HEF-I/AP-T",
       "ammoType": "HEF-I/HEF-I/HEF-I/AP-T",
       "gun": "30 mm 2A72 automatic cannon",
-      "source": "https://wiki.warthunder.com/unit/ussr_btr_80a",
+      "source": "https://wiki.warthunder.com/unit/jp_bmp_3f",
       "belt": [
         {
           "type": "HEF-I",
@@ -10532,7 +10532,7 @@
       "guidance": "AP-T/AP-T/AP-T/HEF-T",
       "ammoType": "AP-T/AP-T/AP-T/HEF-T",
       "gun": "30 mm 2A72 automatic cannon",
-      "source": "https://wiki.warthunder.com/unit/ussr_btr_80a",
+      "source": "https://wiki.warthunder.com/unit/jp_bmp_3f",
       "belt": [
         {
           "type": "AP-T",
@@ -11475,7 +11475,7 @@
       "guidance": "AP-T/HEF-I",
       "ammoType": "AP-T/HEF-I",
       "gun": "30 mm 2A42 automatic cannon",
-      "source": "https://wiki.warthunder.com/unit/ussr_bmp_2",
+      "source": "https://wiki.warthunder.com/unit/ussr_btr_90_2004",
       "belt": [
         {
           "type": "AP-T",
@@ -11507,7 +11507,7 @@
       "guidance": "HEF-I/HEF-I/HEF-I/AP-T",
       "ammoType": "HEF-I/HEF-I/HEF-I/AP-T",
       "gun": "30 mm 2A42 automatic cannon",
-      "source": "https://wiki.warthunder.com/unit/ussr_bmp_2",
+      "source": "https://wiki.warthunder.com/unit/ussr_btr_90_2004",
       "belt": [
         {
           "type": "HEF-I",
@@ -11539,7 +11539,7 @@
       "guidance": "AP-T/AP-T/AP-T/HEF-T",
       "ammoType": "AP-T/AP-T/AP-T/HEF-T",
       "gun": "30 mm 2A42 automatic cannon",
-      "source": "https://wiki.warthunder.com/unit/ussr_bmp_2",
+      "source": "https://wiki.warthunder.com/unit/ussr_btr_90_2004",
       "belt": [
         {
           "type": "AP-T",
@@ -11571,7 +11571,7 @@
       "guidance": "APDS/APDS/APDS/APDS/HEF-T",
       "ammoType": "APDS/APDS/APDS/APDS/HEF-T",
       "gun": "30 mm 2A42 automatic cannon",
-      "source": "https://wiki.warthunder.com/unit/ussr_bmp_2",
+      "source": "https://wiki.warthunder.com/unit/ussr_btr_90_2004",
       "belt": [
         {
           "type": "APDS",
@@ -11815,7 +11815,7 @@
       "guidance": "Beam riding",
       "ammoType": "ATGM (tandem)",
       "gun": "9M133 anti-tank guided missile",
-      "source": "https://wiki.warthunder.com/unit/ussr_btr_82at",
+      "source": "https://wiki.warthunder.com/unit/ussr_btr_90_2004",
       "missileGuidance": "Beam riding",
       "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/atgm_tandem.png",
       "icon": "/icon/weapon-wiki/atgm_tandem.png"
@@ -11826,7 +11826,7 @@
       "guidance": "HE",
       "ammoType": "HE",
       "gun": "100 mm 2A70 cannon",
-      "source": "https://wiki.warthunder.com/unit/ussr_bmp_3",
+      "source": "https://wiki.warthunder.com/unit/jp_bmp_3f",
       "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/he_frag_tank.png",
       "icon": "/icon/weapon-wiki/he_frag_tank.png"
     },
@@ -11836,7 +11836,7 @@
       "guidance": "HE",
       "ammoType": "HE",
       "gun": "100 mm 2A70 cannon",
-      "source": "https://wiki.warthunder.com/unit/ussr_bmp_3",
+      "source": "https://wiki.warthunder.com/unit/jp_bmp_3f",
       "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/he_frag_tank.png",
       "icon": "/icon/weapon-wiki/he_frag_tank.png"
     },
@@ -11846,7 +11846,7 @@
       "guidance": "Beam riding",
       "ammoType": "ATGM",
       "gun": "100 mm 2A70 cannon",
-      "source": "https://wiki.warthunder.com/unit/ussr_bmp_3",
+      "source": "https://wiki.warthunder.com/unit/jp_bmp_3f",
       "missileGuidance": "Beam riding",
       "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/atgm.png",
       "icon": "/icon/weapon-wiki/atgm.png"
@@ -11857,7 +11857,7 @@
       "guidance": "Beam riding",
       "ammoType": "ATGM (tandem)",
       "gun": "100 mm 2A70 cannon",
-      "source": "https://wiki.warthunder.com/unit/ussr_bmp_3",
+      "source": "https://wiki.warthunder.com/unit/jp_bmp_3f",
       "missileGuidance": "Beam riding",
       "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/atgm_tandem.png",
       "icon": "/icon/weapon-wiki/atgm_tandem.png"
@@ -12492,7 +12492,7 @@
       "guidance": "VOG",
       "ammoType": "VOG",
       "gun": "30 mm AG-30M automatic grenade launcher",
-      "source": "https://wiki.warthunder.com/unit/ussr_bmpt",
+      "source": "https://wiki.warthunder.com/unit/ussr_btr_90_2004",
       "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/vog_ship.png",
       "icon": "/icon/weapon-wiki/vog_ship.png"
     },
@@ -12768,7 +12768,7 @@
       "guidance": "Beam riding",
       "ammoType": "ATGM-VT",
       "gun": "9M133 anti-tank guided missile",
-      "source": "https://wiki.warthunder.com/unit/ussr_bmp_2m",
+      "source": "https://wiki.warthunder.com/unit/ussr_btr_90_2004",
       "missileGuidance": "Beam riding",
       "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/atgm_vt_fuze.png",
       "icon": "/icon/weapon-wiki/atgm_vt_fuze.png"
@@ -12779,7 +12779,7 @@
       "guidance": "APFSDS/APFSDS/APFSDS",
       "ammoType": "APFSDS/APFSDS/APFSDS",
       "gun": "30 mm 2A42 automatic cannon",
-      "source": "https://wiki.warthunder.com/unit/ussr_bmp_2m",
+      "source": "https://wiki.warthunder.com/unit/ussr_btr_90_2004",
       "belt": [
         {
           "type": "APFSDS",
@@ -14752,7 +14752,7 @@
       "guidance": "HEATFS",
       "ammoType": "HEATFS",
       "gun": "105 mm GT-8 cannon",
-      "source": "https://wiki.warthunder.com/unit/uk_olifant_mk_2",
+      "source": "https://wiki.warthunder.com/unit/uk_olifant_optimering",
       "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/heat_fs_tank.png",
       "icon": "/icon/weapon-wiki/heat_fs_tank.png"
     },
@@ -18282,7 +18282,7 @@
       "guidance": "HE",
       "ammoType": "HE",
       "gun": "100 mm ZPL04 cannon",
-      "source": "https://wiki.warthunder.com/unit/cn_zbd_04a",
+      "source": "https://wiki.warthunder.com/unit/cn_zbd_04",
       "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/he_frag_tank.png",
       "icon": "/icon/weapon-wiki/he_frag_tank.png"
     },
@@ -18292,7 +18292,7 @@
       "guidance": "HE",
       "ammoType": "HE",
       "gun": "100 mm ZPL04 cannon",
-      "source": "https://wiki.warthunder.com/unit/cn_zbd_04a",
+      "source": "https://wiki.warthunder.com/unit/cn_zbd_04",
       "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/he_frag_tank.png",
       "icon": "/icon/weapon-wiki/he_frag_tank.png"
     },
@@ -18302,7 +18302,7 @@
       "guidance": "Beam riding",
       "ammoType": "ATGM (tandem)",
       "gun": "100 mm ZPL04 cannon",
-      "source": "https://wiki.warthunder.com/unit/cn_zbd_04a",
+      "source": "https://wiki.warthunder.com/unit/cn_zbd_04",
       "missileGuidance": "Beam riding",
       "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/atgm_tandem.png",
       "icon": "/icon/weapon-wiki/atgm_tandem.png"
@@ -18458,7 +18458,7 @@
       "guidance": "APDS/HEF-I/APDS/HEF-I",
       "ammoType": "APDS/HEF-I/APDS/HEF-I",
       "gun": "30 mm ZPZ02 cannon",
-      "source": "https://wiki.warthunder.com/unit/cn_qn506",
+      "source": "https://wiki.warthunder.com/unit/cn_zbd_04",
       "belt": [
         {
           "type": "APDS",
@@ -18490,7 +18490,7 @@
       "guidance": "HEF-I/APDS/HEF-I/HEF-I",
       "ammoType": "HEF-I/APDS/HEF-I/HEF-I",
       "gun": "30 mm ZPZ02 cannon",
-      "source": "https://wiki.warthunder.com/unit/cn_qn506",
+      "source": "https://wiki.warthunder.com/unit/cn_zbd_04",
       "belt": [
         {
           "type": "HEF-I",
@@ -18522,7 +18522,7 @@
       "guidance": "APDS/APDS/APDS/APDS",
       "ammoType": "APDS/APDS/APDS/APDS",
       "gun": "30 mm ZPZ02 cannon",
-      "source": "https://wiki.warthunder.com/unit/cn_qn506",
+      "source": "https://wiki.warthunder.com/unit/cn_zbd_04",
       "belt": [
         {
           "type": "APDS",
@@ -19226,7 +19226,7 @@
       "guidance": "APHEBC",
       "ammoType": "APHEBC",
       "gun": "40 mm 37/42M cannon",
-      "source": "https://wiki.warthunder.com/unit/it_toldi_ii_a",
+      "source": "https://wiki.warthunder.com/unit/it_v_4_straussler",
       "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/aphebc_tank.png",
       "icon": "/icon/weapon-wiki/aphebc_tank.png"
     },
@@ -19236,7 +19236,7 @@
       "guidance": "HE",
       "ammoType": "HE",
       "gun": "40 mm 37/42M cannon",
-      "source": "https://wiki.warthunder.com/unit/it_toldi_ii_a",
+      "source": "https://wiki.warthunder.com/unit/it_v_4_straussler",
       "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/he_frag_tank.png",
       "icon": "/icon/weapon-wiki/he_frag_tank.png"
     },
@@ -19246,7 +19246,7 @@
       "guidance": "APBC",
       "ammoType": "APBC",
       "gun": "40 mm 37/42M cannon",
-      "source": "https://wiki.warthunder.com/unit/it_toldi_ii_a",
+      "source": "https://wiki.warthunder.com/unit/it_v_4_straussler",
       "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/apbc_tank.png",
       "icon": "/icon/weapon-wiki/apbc_tank.png"
     },
@@ -22069,7 +22069,7 @@
       "guidance": "AP-T/HEFI-T/HEFI-T",
       "ammoType": "AP-T/HEFI-T/HEFI-T",
       "gun": "20 mm lvakan m/40B cannon",
-      "source": "https://wiki.warthunder.com/unit/sw_pvlvv_fm42",
+      "source": "https://wiki.warthunder.com/unit/sw_pv_m39",
       "belt": [
         {
           "type": "AP-T",
@@ -22096,7 +22096,7 @@
       "guidance": "HEFI-T",
       "ammoType": "HEFI-T",
       "gun": "20 mm lvakan m/40B cannon",
-      "source": "https://wiki.warthunder.com/unit/sw_pvlvv_fm42",
+      "source": "https://wiki.warthunder.com/unit/sw_pv_m39",
       "belt": [
         {
           "type": "HEFI-T",
@@ -22128,7 +22128,7 @@
       "guidance": "AP-T",
       "ammoType": "AP-T",
       "gun": "20 mm lvakan m/40B cannon",
-      "source": "https://wiki.warthunder.com/unit/sw_pvlvv_fm42",
+      "source": "https://wiki.warthunder.com/unit/sw_pv_m39",
       "belt": [
         {
           "type": "AP-T",
@@ -24254,8 +24254,8 @@
       "type": "agm",
       "guidance": "Semi-Automatic (SACLOS)",
       "source": "https://wiki.warthunder.com/collections/weapon/tow_atgm",
-      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/atgm_type_tow_x3.png",
-      "icon": "/icon/weapon-wiki/atgm_type_tow_x3.png"
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/atgm_type2_x2.png",
+      "icon": "/icon/weapon-wiki/atgm_type2_x2.png"
     },
     "w-01e1f67fd8d7c42e": {
       "name": "AGM-12B Bullpup",
@@ -24295,8 +24295,8 @@
       "type": "agm",
       "guidance": "Laser+IOG",
       "source": "https://wiki.warthunder.com/collections/weapon/agm_114_hellfire",
-      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/atgm_type_helfire_x2_late.png",
-      "icon": "/icon/weapon-wiki/atgm_type_helfire_x2_late.png"
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/atgm_type_helfire_x2.png",
+      "icon": "/icon/weapon-wiki/atgm_type_helfire_x2.png"
     },
     "w-5b446df1800039b6": {
       "name": "BGM-71D TOW-2",
@@ -24367,9 +24367,9 @@
       "name": "Spike NLOS",
       "type": "agm",
       "guidance": "IR",
-      "source": "https://wiki.warthunder.com/unit/ah_64e",
-      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/atgm_type_spike_er_x2.png",
-      "icon": "/icon/weapon-wiki/atgm_type_spike_er_x2.png"
+      "source": "https://wiki.warthunder.com/unit/aw_249_pre_serie",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/atgm_type_spike_x2.png",
+      "icon": "/icon/weapon-wiki/atgm_type_spike_x2.png"
     },
     "w-2768362f0d39ec24": {
       "name": "HOT-1",
@@ -24456,8 +24456,8 @@
       "type": "aam",
       "guidance": "IR",
       "source": "https://wiki.warthunder.com/collections/weapon/9m39",
-      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_air_to_air_group.png",
-      "icon": "/icon/weapon-wiki/missile_air_to_air_group.png"
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_air_to_air_group_x4.png",
+      "icon": "/icon/weapon-wiki/missile_air_to_air_group_x4.png"
     },
     "w-91c33c30f392fb94": {
       "name": "9K127 Vikhr",
@@ -24488,8 +24488,8 @@
       "type": "agm",
       "guidance": "Beam riding",
       "source": "https://wiki.warthunder.com/collections/weapon/9m120",
-      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/atgm_type2_x2_late.png",
-      "icon": "/icon/weapon-wiki/atgm_type2_x2_late.png"
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/atgm_type1_x4.png",
+      "icon": "/icon/weapon-wiki/atgm_type1_x4.png"
     },
     "w-fc8a0dd848d619e8": {
       "name": "9M336 Verba",
@@ -24569,16 +24569,16 @@
       "type": "agm",
       "guidance": "Semi-Automatic (SACLOS)",
       "source": "https://wiki.warthunder.com/collections/weapon/hj8",
-      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_air_to_uni_large_group.png",
-      "icon": "/icon/weapon-wiki/missile_air_to_uni_large_group.png"
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_air_to_uni_group_x4.png",
+      "icon": "/icon/weapon-wiki/missile_air_to_uni_group_x4.png"
     },
     "w-d6b9f1ee548f8967": {
       "name": "TY-90",
       "type": "aam",
       "guidance": "IR",
-      "source": "https://wiki.warthunder.com/unit/z_9w",
-      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_air_to_air_group.png",
-      "icon": "/icon/weapon-wiki/missile_air_to_air_group.png"
+      "source": "https://wiki.warthunder.com/unit/z_19e",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_air_to_air_group_x4.png",
+      "icon": "/icon/weapon-wiki/missile_air_to_air_group_x4.png"
     },
     "w-275758ad3284afc4": {
       "name": "HJ-8H",
@@ -24656,7 +24656,7 @@
       "name": "Spike ER",
       "type": "agm",
       "guidance": "IR",
-      "source": "https://wiki.warthunder.com/collections/weapon/spike",
+      "source": "https://wiki.warthunder.com/unit/aw_249_pre_serie",
       "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/atgm_type_spike_x2.png",
       "icon": "/icon/weapon-wiki/atgm_type_spike_x2.png"
     },
@@ -24735,54 +24735,46 @@
       "source": "https://wiki.warthunder.com/unit/h145m",
       "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/nar_smoke_large.png",
       "icon": "/icon/weapon-wiki/nar_smoke_large.png"
+    },
+    "w-ba2ae136e2c9ef06": {
+      "name": "Spike ER (MITL)",
+      "type": "agm",
+      "guidance": "IR",
+      "source": "https://wiki.warthunder.com/collections/weapon/spike",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/atgm_type_spike_er_mitl_x2.png",
+      "icon": "/icon/weapon-wiki/atgm_type_spike_er_mitl_x2.png"
+    },
+    "w-001c19366e352d68": {
+      "name": "Spike NLOS (MITL)",
+      "type": "agm",
+      "guidance": "IR",
+      "source": "https://wiki.warthunder.com/unit/aw_159",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/atgm_type_spike_nlos_mitl_x2.png",
+      "icon": "/icon/weapon-wiki/atgm_type_spike_nlos_mitl_x2.png"
+    },
+    "ammo-8c105942d49e331e": {
+      "name": "FS Mk.3",
+      "type": "ammunition",
+      "guidance": "APFSDS",
+      "ammoType": "APFSDS",
+      "gun": "105 mm GT-8 cannon",
+      "source": "https://wiki.warthunder.com/unit/uk_olifant_optimering",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/apdsfs_tank.png",
+      "icon": "/icon/weapon-wiki/apdsfs_tank.png"
+    },
+    "ammo-d695c85b994f2031": {
+      "name": "FS Mk.1",
+      "type": "ammunition",
+      "guidance": "APFSDS",
+      "ammoType": "APFSDS",
+      "gun": "105 mm GT-8 cannon",
+      "source": "https://wiki.warthunder.com/unit/uk_olifant_optimering",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/apdsfs_tank.png",
+      "icon": "/icon/weapon-wiki/apdsfs_tank.png"
     }
   },
   "ground": {
     "pending-us-m3a1-twitch": {
-      "status": "pending-wiki",
-      "weapons": []
-    },
-    "pending-us-stingray-ii": {
-      "status": "pending-wiki",
-      "weapons": []
-    },
-    "pending-de-leopard-2-a8": {
-      "status": "pending-wiki",
-      "weapons": []
-    },
-    "pending-ru-btr-90": {
-      "status": "pending-wiki",
-      "weapons": []
-    },
-    "pending-uk-olifant-mk-1b": {
-      "status": "pending-wiki",
-      "weapons": []
-    },
-    "pending-jp-bmp-3f": {
-      "status": "pending-wiki",
-      "weapons": []
-    },
-    "pending-cn-zbd04": {
-      "status": "pending-wiki",
-      "weapons": []
-    },
-    "pending-it-v-4": {
-      "status": "pending-wiki",
-      "weapons": []
-    },
-    "pending-it-3ro-flak-38": {
-      "status": "pending-wiki",
-      "weapons": []
-    },
-    "pending-fr-prtl-cheetah": {
-      "status": "pending-wiki",
-      "weapons": []
-    },
-    "pending-se-pb-m39": {
-      "status": "pending-wiki",
-      "weapons": []
-    },
-    "pending-se-leopard-2-a8-no": {
       "status": "pending-wiki",
       "weapons": []
     },
@@ -35380,13 +35372,132 @@
         "ammo-b370a4f8dc25ffa8"
       ],
       "checkedOn": "2026-11-08"
+    },
+    "us_stingray_2": {
+      "status": "verified",
+      "weapons": [
+        "ammo-88d22654f49b21ae",
+        "ammo-a0cf105034287bd2",
+        "ammo-b8e7bd3d92a727bb",
+        "ammo-cc9ec143de853e9d"
+      ],
+      "checkedAt": "2026-11-11T19:24:44Z"
+    },
+    "germ_leopard_2a8": {
+      "status": "verified",
+      "weapons": [
+        "ammo-514ad1577b4a4e7c",
+        "ammo-852d1c30a41a73a8",
+        "ammo-be44718255588e9c",
+        "ammo-f52979b045174974"
+      ],
+      "checkedAt": "2026-11-11T19:24:44Z"
+    },
+    "ussr_bt_7_m_816": {
+      "status": "verified",
+      "weapons": [
+        "ammo-a814af6e0c366cd5",
+        "ammo-bad20f863d880e35"
+      ],
+      "checkedAt": "2026-11-11T19:24:44Z"
+    },
+    "ussr_btr_90_2004": {
+      "status": "verified",
+      "weapons": [
+        "ammo-1444c1341d126250",
+        "ammo-35d80ca3ea2bbb83",
+        "ammo-554166f7b03206ad",
+        "ammo-9e3afa646df33fdc",
+        "ammo-b62fca82ace73c54",
+        "ammo-c3307d99bc8498a3",
+        "ammo-d9ec9d7488d67b8b",
+        "ammo-f786562462de4f64"
+      ],
+      "checkedAt": "2026-11-11T19:24:44Z"
+    },
+    "uk_olifant_optimering": {
+      "status": "verified",
+      "weapons": [
+        "ammo-8c105942d49e331e",
+        "ammo-d695c85b994f2031",
+        "ammo-e0121c87df82a3e5"
+      ],
+      "checkedAt": "2026-11-11T19:24:44Z"
+    },
+    "jp_bmp_3f": {
+      "status": "verified",
+      "weapons": [
+        "ammo-04cbe9ee9b2e4b8f",
+        "ammo-39093c7b1ab02855",
+        "ammo-397d438ae7a4a2da",
+        "ammo-4512495c19928200",
+        "ammo-729489175748a00a",
+        "ammo-7a0087989ea6ec42",
+        "ammo-b370a4f8dc25ffa8"
+      ],
+      "checkedAt": "2026-11-11T19:24:44Z"
+    },
+    "cn_zbd_04": {
+      "status": "verified",
+      "weapons": [
+        "ammo-531e8af7b4d1ee69",
+        "ammo-5913801201670c81",
+        "ammo-6fca405b81b88e66",
+        "ammo-722fc9e7834ce3fe",
+        "ammo-b72feae97140193d",
+        "ammo-bd1385c7dc8a1bc6"
+      ],
+      "checkedAt": "2026-11-11T19:24:44Z"
+    },
+    "it_v_4_straussler": {
+      "status": "verified",
+      "weapons": [
+        "ammo-47a99696d3fd7176",
+        "ammo-7950eff4e9cf6d9f",
+        "ammo-c4cb4668fadcbd48"
+      ],
+      "checkedAt": "2026-11-11T19:24:44Z"
+    },
+    "it_lancia_flak38": {
+      "status": "verified",
+      "weapons": [
+        "ammo-59ffc145a6a60b3d",
+        "ammo-85afc1ac1dcd9034",
+        "ammo-b841bf61ad33d488"
+      ],
+      "checkedAt": "2026-11-11T19:24:44Z"
+    },
+    "fr_prtl": {
+      "status": "verified",
+      "weapons": [
+        "ammo-4b5c6ada9a9bb474",
+        "ammo-5bfb6bd3b08f6175",
+        "ammo-99ec432ecf6d8e7d",
+        "ammo-ce08d888be546996"
+      ],
+      "checkedAt": "2026-11-11T19:24:44Z"
+    },
+    "sw_pv_m39": {
+      "status": "verified",
+      "weapons": [
+        "ammo-06c8eec22559f50a",
+        "ammo-7049b25f8ff7a1d5",
+        "ammo-9ca68f73bfb87b90"
+      ],
+      "checkedAt": "2026-11-11T19:24:44Z"
+    },
+    "sw_leopard_2a8no": {
+      "status": "verified",
+      "weapons": [
+        "ammo-514ad1577b4a4e7c",
+        "ammo-852d1c30a41a73a8",
+        "ammo-be44718255588e9c",
+        "ammo-f52979b045174974"
+      ],
+      "checkedAt": "2026-11-11T19:24:44Z"
     }
   },
   "helicopters": {
-    "pending-it-ah-249a": {
-      "status": "pending-wiki",
-      "weapons": []
-    },
     "ah_1g": {
       "status": "verified",
       "weapons": []
@@ -35503,7 +35614,8 @@
         "w-5b446df1800039b6",
         "w-64b1c1b8b956ec09",
         "w-947abae2679ff026"
-      ]
+      ],
+      "checkedAt": "2026-11-11T19:24:44Z"
     },
     "ah_64d": {
       "status": "verified",
@@ -35614,7 +35726,8 @@
         "w-947abae2679ff026",
         "w-a5f6715ffc5bd82e",
         "w-c0587f15256d2a6b"
-      ]
+      ],
+      "checkedAt": "2026-11-11T19:24:44Z"
     },
     "mi_24p_german": {
       "status": "verified",
@@ -35730,7 +35843,8 @@
         "w-0e1cc42abc816096",
         "w-91c33c30f392fb94",
         "w-d24f04949b53dc4b"
-      ]
+      ],
+      "checkedAt": "2026-11-11T19:24:44Z"
     },
     "ah_2_rooivalk": {
       "status": "verified",
@@ -35745,7 +35859,8 @@
         "w-5b446df1800039b6",
         "w-64b1c1b8b956ec09",
         "w-a5f6715ffc5bd82e"
-      ]
+      ],
+      "checkedAt": "2026-11-11T19:24:44Z"
     },
     "lynx_ah_mk1": {
       "status": "verified",
@@ -35753,7 +35868,8 @@
         "w-5b446df1800039b6",
         "w-64b1c1b8b956ec09",
         "w-a5f6715ffc5bd82e"
-      ]
+      ],
+      "checkedAt": "2026-11-11T19:24:44Z"
     },
     "super_hind_mk3": {
       "status": "verified",
@@ -35879,7 +35995,8 @@
         "w-6e5df67be892f7c2",
         "w-a150e2d241c3d61f",
         "w-d6b9f1ee548f8967"
-      ]
+      ],
+      "checkedAt": "2026-11-11T19:24:44Z"
     },
     "z_9wa": {
       "status": "verified",
@@ -35888,21 +36005,24 @@
         "w-6c4095889095ec3b",
         "w-a150e2d241c3d61f",
         "w-d6b9f1ee548f8967"
-      ]
+      ],
+      "checkedAt": "2026-11-11T19:24:44Z"
     },
     "z_19": {
       "status": "verified",
       "weapons": [
         "w-6c4095889095ec3b",
         "w-d6b9f1ee548f8967"
-      ]
+      ],
+      "checkedAt": "2026-11-11T19:24:44Z"
     },
     "z_19e": {
       "status": "verified",
       "weapons": [
         "w-193e21898c0bd99d",
         "w-d6b9f1ee548f8967"
-      ]
+      ],
+      "checkedAt": "2026-11-11T19:24:44Z"
     },
     "z_10": {
       "status": "verified",
@@ -35925,7 +36045,8 @@
         "w-5b446df1800039b6",
         "w-64b1c1b8b956ec09",
         "w-947abae2679ff026"
-      ]
+      ],
+      "checkedAt": "2026-11-11T19:24:44Z"
     },
     "mi_35m_pakistan": {
       "status": "verified",
@@ -36023,7 +36144,8 @@
         "w-5b446df1800039b6",
         "w-64b1c1b8b956ec09",
         "w-f42f0270f35132f2"
-      ]
+      ],
+      "checkedAt": "2026-11-11T19:24:44Z"
     },
     "mi_24p_hungary": {
       "status": "verified",
@@ -36040,7 +36162,8 @@
         "w-64b1c1b8b956ec09",
         "w-a25d363488f4ff96",
         "w-a5f6715ffc5bd82e"
-      ]
+      ],
+      "checkedAt": "2026-11-11T19:24:44Z"
     },
     "sa_341f": {
       "status": "verified",
@@ -36054,10 +36177,13 @@
       "status": "verified",
       "weapons": [
         "w-09dce8ab03f09ea6",
+        "w-15bf1ac188f97cd5",
         "w-64b1c1b8b956ec09",
         "w-a25d363488f4ff96",
-        "w-a5f6715ffc5bd82e"
-      ]
+        "w-a5f6715ffc5bd82e",
+        "w-ba2ae136e2c9ef06"
+      ],
+      "checkedAt": "2026-11-11T19:24:44Z"
     },
     "sa_342m": {
       "status": "verified",
@@ -36094,7 +36220,8 @@
         "w-a5f6715ffc5bd82e",
         "w-a8ec4c45ff0b107e",
         "w-c0587f15256d2a6b"
-      ]
+      ],
+      "checkedAt": "2026-11-11T19:24:44Z"
     },
     "tiger_had_france": {
       "status": "verified",
@@ -36103,7 +36230,8 @@
         "w-a5f6715ffc5bd82e",
         "w-b785e443db120426",
         "w-c0587f15256d2a6b"
-      ]
+      ],
+      "checkedAt": "2026-11-11T19:24:44Z"
     },
     "ah_64d_netherlands": {
       "status": "verified",
@@ -36210,18 +36338,23 @@
     "aw_159": {
       "status": "verified",
       "weapons": [
+        "w-001c19366e352d68",
         "w-15bf1ac188f97cd5",
         "w-9132a75e07c27908"
-      ]
+      ],
+      "checkedAt": "2026-11-11T19:24:44Z"
     },
     "ah_60_iaf": {
       "status": "verified",
       "weapons": [
         "w-09dce8ab03f09ea6",
+        "w-15bf1ac188f97cd5",
         "w-a5f6715ffc5bd82e",
         "w-ae986dc821bbff33",
-        "w-b785e443db120426"
-      ]
+        "w-b785e443db120426",
+        "w-ba2ae136e2c9ef06"
+      ],
+      "checkedAt": "2026-11-11T19:24:44Z"
     },
     "h145m": {
       "status": "verified",
@@ -36229,6 +36362,17 @@
         "w-09dce8ab03f09ea6",
         "w-b0603bc1d8ce63b1"
       ]
+    },
+    "aw_249_pre_serie": {
+      "status": "verified",
+      "weapons": [
+        "w-09dce8ab03f09ea6",
+        "w-15bf1ac188f97cd5",
+        "w-a5f6715ffc5bd82e",
+        "w-ba2ae136e2c9ef06"
+      ],
+      "checkedAt": "2026-11-11T19:24:44Z"
     }
-  }
+  },
+  "lastPartialRefreshAt": "2026-11-11T19:24:44Z"
 }
