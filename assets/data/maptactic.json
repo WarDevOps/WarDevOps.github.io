@@ -65,7 +65,7 @@
     "Abandoned Town": "2026-11-07T21:44:29Z",
     "Advance to the Rhine": "2026-11-07T22:44:53Z",
     "Alaska": "2026-10-04T10:19:32Z",
-    "American Desert": "2026-11-11T16:45:29Z",
+    "American Desert": "2026-11-11T18:33:49Z",
     "Aral Sea": "2026-10-07T06:13:32Z",
     "Arctic Pier": "2026-09-15T01:05:22Z",
     "Arctic Polar Base": "2026-11-08T13:31:33Z",
@@ -3531,7 +3531,10 @@
         "id": "mtiehovs-49uxlu",
         "type": "tankDestroyerRed",
         "x": 56.47,
-        "y": 61.61
+        "y": 61.61,
+        "commentImages": [
+          "American Desert/scr_  (2).webp"
+        ]
       },
       {
         "id": "mtiehv3z-n6aalr",
@@ -3542,9 +3545,12 @@
       },
       {
         "id": "mtiek8ok-5gao3n",
-        "type": "mainBattleTankRed",
+        "type": "tankDestroyerRed",
         "x": 48.94,
-        "y": 64.89
+        "y": 64.89,
+        "commentImages": [
+          "American Desert/scr_  (3).webp"
+        ]
       },
       {
         "id": "mtiekhpd-40qo7f",
@@ -3558,7 +3564,10 @@
         "type": "tankDestroyerRed",
         "x": 77.49,
         "y": 47.51,
-        "comment": "Only the first spawn works."
+        "commentImages": [
+          "American Desert/scr_  (13).webp"
+        ],
+        "commentEn": "Only the first spawn works."
       },
       {
         "id": "mtiemnap-fvezd4",
@@ -3571,7 +3580,10 @@
         "id": "mtiems6e-p0zo6n",
         "type": "tankDestroyerRed",
         "x": 38.74,
-        "y": 96.99
+        "y": 96.99,
+        "commentImages": [
+          "American Desert/scr_  (4).webp"
+        ]
       },
       {
         "id": "mtiemtaz-stof9y",
@@ -3582,23 +3594,29 @@
       },
       {
         "id": "mtiengwy-tmkm2c",
-        "type": "mainBattleTankRed",
-        "x": 98.94,
-        "y": 42.9
+        "type": "lightTankRed",
+        "x": 97.79,
+        "y": 43.24,
+        "commentImages": [
+          "American Desert/scr_  (15).webp"
+        ]
       },
       {
         "id": "mtieni1j-ukycmm",
         "type": "highRiskSpot",
-        "x": 98.94,
-        "y": 42.9,
+        "x": 97.79,
+        "y": 43.24,
         "parentTankId": "mtiengwy-tmkm2c"
       },
       {
         "id": "mtierbzo-czikjv",
-        "type": "mainBattleTankRed",
+        "type": "lightTankRed",
         "x": 98.05,
         "y": 39.18,
-        "comment": "Can fight while moving in and out of the map boundary, use a tank with good reverse mobility."
+        "commentImages": [
+          "American Desert/scr_  (16).webp"
+        ],
+        "commentEn": "Can fight while moving in and out of the map boundary, use a tank with good reverse mobility."
       },
       {
         "id": "mtierdd9-p3pwc4",
@@ -3610,27 +3628,33 @@
       {
         "id": "mtieusf6-enymwv",
         "type": "mainBattleTankRed",
-        "x": 62.06,
-        "y": 13.64
+        "x": 57.46,
+        "y": 12.77,
+        "commentImages": [
+          "American Desert/scr_  (9).webp"
+        ]
       },
       {
         "id": "mtieuu7l-5dxhv6",
         "type": "spawnKill",
-        "x": 62.06,
-        "y": 13.64,
+        "x": 57.46,
+        "y": 12.77,
         "parentTankId": "mtieusf6-enymwv"
       },
       {
         "id": "mtif8yiu-367cvp",
         "type": "mainBattleTankRed",
-        "x": 24.38,
-        "y": 47.42
+        "x": 23.32,
+        "y": 44.88,
+        "commentImages": [
+          "American Desert/scr_  (7).webp"
+        ]
       },
       {
         "id": "mtif90q9-z2xs9v",
         "type": "spawnKill",
-        "x": 24.38,
-        "y": 47.42,
+        "x": 23.32,
+        "y": 44.88,
         "parentTankId": "mtif8yiu-367cvp"
       },
       {
@@ -3648,14 +3672,18 @@
       {
         "id": "mtxlz9ks-ffpiva",
         "type": "mainBattleTankRed",
-        "x": 58.08,
-        "y": 40.1
+        "x": 58.34,
+        "y": 39.19,
+        "commentImages": [
+          "American Desert/scr_  (10).webp",
+          "American Desert/scr_  (11).webp"
+        ]
       },
       {
         "id": "mtxlzcff-3c8z3p",
         "type": "highRiskSpot",
-        "x": 58.08,
-        "y": 40.1,
+        "x": 58.34,
+        "y": 39.19,
         "parentTankId": "mtxlz9ks-ffpiva"
       },
       {
@@ -3671,7 +3699,10 @@
         "id": "mtxpz1ot-i2htrq",
         "type": "mainBattleTankRed",
         "x": 77.22,
-        "y": 34.76
+        "y": 34.76,
+        "commentImages": [
+          "American Desert/scr_  (14).webp"
+        ]
       },
       {
         "id": "mtxpze7z-xq6hg4",
@@ -3684,7 +3715,10 @@
         "id": "mtxr48mm-3yew5s",
         "type": "tankDestroyerRed",
         "x": 45.83,
-        "y": 97.53
+        "y": 97.53,
+        "commentImages": [
+          "American Desert/scr_  (5).webp"
+        ]
       },
       {
         "id": "mtxr4av9-szgbwg",
@@ -3707,9 +3741,12 @@
       },
       {
         "id": "mtxrbhxh-wx90dy",
-        "type": "mainBattleTankRed",
+        "type": "lightTankRed",
         "x": 23.04,
-        "y": 82.16
+        "y": 82.16,
+        "commentImages": [
+          "American Desert/scr_  (6).webp"
+        ]
       },
       {
         "id": "mtxrbm0w-i87rsa",
@@ -3722,7 +3759,10 @@
         "id": "mtxrfanu-vhdm2q",
         "type": "mainBattleTankRed",
         "x": 38.67,
-        "y": 50.38
+        "y": 50.38,
+        "commentImages": [
+          "American Desert/scr_  (17).webp"
+        ]
       },
       {
         "id": "mtxrg37r-8feva6",
@@ -3734,15 +3774,34 @@
       {
         "id": "mtxrknas-1bjs0a",
         "type": "mainBattleTankRed",
-        "x": 59.64,
-        "y": 50.25
+        "x": 59.99,
+        "y": 50.32,
+        "commentImages": [
+          "American Desert/scr_  (12).webp"
+        ]
       },
       {
         "id": "mtxrkofy-qit6pz",
         "type": "battleLine",
-        "x": 59.64,
-        "y": 50.25,
+        "x": 59.99,
+        "y": 50.32,
         "parentTankId": "mtxrknas-1bjs0a"
+      },
+      {
+        "id": "mwcgdukg-gufmll",
+        "type": "mainBattleTankRed",
+        "x": 36.22,
+        "y": 26.8,
+        "commentImages": [
+          "American Desert/scr_  (8).webp"
+        ]
+      },
+      {
+        "id": "mwcgdwxn-sb429g",
+        "type": "spawnKill",
+        "x": 36.22,
+        "y": 26.8,
+        "parentTankId": "mwcgdukg-gufmll"
       }
     ],
     "American Desert::domination-1|Blue": [
@@ -3833,7 +3892,10 @@
         "id": "mtif0up4-rgvajt",
         "type": "tankDestroyer",
         "x": 82.81,
-        "y": 19.41
+        "y": 19.41,
+        "commentImages": [
+          "American Desert/scr_  (1).webp"
+        ]
       },
       {
         "id": "mtif0yyw-dkjvuc",
@@ -33910,8 +33972,8 @@
         "id": "mtieo2pf-heimbi",
         "type": "aimHere",
         "parentTankId": "mtiengwy-tmkm2c",
-        "startX": 98.94,
-        "startY": 42.9,
+        "startX": 97.79,
+        "startY": 43.24,
         "endX": 75.8,
         "endY": 25.61
       },
@@ -33981,15 +34043,6 @@
         "dangerRoute": true
       },
       {
-        "id": "mtieuwp7-4oqc3z",
-        "type": "aimHere",
-        "parentTankId": "mtieusf6-enymwv",
-        "startX": 62.06,
-        "startY": 13.64,
-        "endX": 46.81,
-        "endY": 11.43
-      },
-      {
         "id": "mtif6zqp-2deecu",
         "type": "route",
         "points": [
@@ -34028,24 +34081,6 @@
         "dangerRoute": true
       },
       {
-        "id": "mtif9ch5-5c58zz",
-        "type": "aimHere",
-        "parentTankId": "mtif8yiu-367cvp",
-        "startX": 24.38,
-        "startY": 47.42,
-        "endX": 21.72,
-        "endY": 24.99
-      },
-      {
-        "id": "mtifnbz3-3xfhh2",
-        "type": "aimHere",
-        "parentTankId": "mtierbzo-czikjv",
-        "startX": 98.05,
-        "startY": 39.18,
-        "endX": 79.7,
-        "endY": 14.53
-      },
-      {
         "id": "mtifo94n-e6y7wi",
         "type": "route",
         "points": [
@@ -34063,15 +34098,6 @@
           }
         ],
         "dangerRoute": true
-      },
-      {
-        "id": "mtxlzjj7-jod7b3",
-        "type": "aimHere",
-        "parentTankId": "mtxlz9ks-ffpiva",
-        "startX": 58.08,
-        "startY": 40.1,
-        "endX": 72.4,
-        "endY": 16.26
       },
       {
         "id": "mtxm0mai-v1fn4q",
@@ -34261,19 +34287,10 @@
         "id": "mtxrkw2z-7o4qof",
         "type": "aimHere",
         "parentTankId": "mtxrknas-1bjs0a",
-        "startX": 59.64,
-        "startY": 50.25,
+        "startX": 59.99,
+        "startY": 50.32,
         "endX": 43.88,
         "endY": 49.86
-      },
-      {
-        "id": "mtxrlqen-pt4zzh",
-        "type": "aimHere",
-        "parentTankId": "mtxlz9ks-ffpiva",
-        "startX": 58.08,
-        "startY": 40.1,
-        "endX": 37.89,
-        "endY": 39.57
       },
       {
         "id": "mu0gkjyx-ep8gsn",
@@ -34322,6 +34339,69 @@
             "y": 50.48
           }
         ]
+      },
+      {
+        "id": "mwcgaqbh-3ob5e2",
+        "type": "aimHere",
+        "parentTankId": "mtieusf6-enymwv",
+        "startX": 57.46,
+        "startY": 12.77,
+        "endX": 38.37,
+        "endY": 8.85
+      },
+      {
+        "id": "mwcgcn0j-lyd3k2",
+        "type": "aimHere",
+        "parentTankId": "mtxrbhxh-wx90dy",
+        "startX": 23.04,
+        "startY": 82.16,
+        "endX": 19.15,
+        "endY": 33.25
+      },
+      {
+        "id": "mwcgde4j-ryf22t",
+        "type": "aimHere",
+        "parentTankId": "mtif8yiu-367cvp",
+        "startX": 23.32,
+        "startY": 44.88,
+        "endX": 23.2,
+        "endY": 22.76
+      },
+      {
+        "id": "mwcge549-ctwg07",
+        "type": "aimHere",
+        "parentTankId": "mwcgdukg-gufmll",
+        "startX": 36.22,
+        "startY": 26.8,
+        "endX": 25.98,
+        "endY": 18.84
+      },
+      {
+        "id": "mwcgf5e8-jyr37e",
+        "type": "aimHere",
+        "parentTankId": "mtxlz9ks-ffpiva",
+        "startX": 58.34,
+        "startY": 39.19,
+        "endX": 62.77,
+        "endY": 11.38
+      },
+      {
+        "id": "mwcgfpq8-d6t3f5",
+        "type": "aimHere",
+        "parentTankId": "mtxlz9ks-ffpiva",
+        "startX": 58.34,
+        "startY": 39.19,
+        "endX": 33.69,
+        "endY": 38.43
+      },
+      {
+        "id": "mwcgh9pi-n7n9cz",
+        "type": "aimHere",
+        "parentTankId": "mtierbzo-czikjv",
+        "startX": 98.05,
+        "startY": 39.18,
+        "endX": 75.16,
+        "endY": 12.77
       }
     ],
     "American Desert::domination-1|Blue": [
@@ -34507,15 +34587,6 @@
             "y": 26.77
           }
         ]
-      },
-      {
-        "id": "mtif1bp5-7q5l06",
-        "type": "aimHere",
-        "parentTankId": "mtif0up4-rgvajt",
-        "startX": 82.81,
-        "startY": 19.41,
-        "endX": 97.26,
-        "endY": 45.3
       },
       {
         "id": "mtif1ggl-77t07h",
@@ -34923,6 +34994,15 @@
             "y": 78.9
           }
         ]
+      },
+      {
+        "id": "mwcgika3-pox24g",
+        "type": "aimHere",
+        "parentTankId": "mtif0up4-rgvajt",
+        "startX": 82.81,
+        "startY": 19.41,
+        "endX": 95.89,
+        "endY": 48.04
       }
     ],
     "Aral Sea::domination-1|Red": [
@@ -91157,6 +91237,6 @@
     "Sands of Sinai::domination-1|Blue": [],
     "Vietnam::domination-1|Red": []
   },
-  "updatedAt": "2026-11-11T18:25:06.599Z",
-  "exportedAt": "2026-11-11T18:25:44.481Z"
+  "updatedAt": "2026-11-11T18:33:49.897Z",
+  "exportedAt": "2026-11-11T18:34:05.582Z"
 }
