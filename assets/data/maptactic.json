@@ -50,7 +50,7 @@
     "Sinai": "2026-11-08",
     "Spaceport": "2026-11-10",
     "Stalingrad": "2026-11-08",
-    "Sun City": "2026-11-11",
+    "Sun City": "2026-11-12",
     "Surroundings of Volokolamsk": "2026-11-08",
     "Sweden": "2026-09-27",
     "Test Site-2271": "2026-11-07",
@@ -109,7 +109,7 @@
     "Sinai": "2026-11-07T21:28:59Z",
     "Spaceport": "2026-11-09T17:16:55Z",
     "Stalingrad": "2026-11-07T21:42:11Z",
-    "Sun City": "2026-11-11T14:55:40Z",
+    "Sun City": "2026-11-11T18:25:06Z",
     "Surroundings of Volokolamsk": "2026-11-07T21:24:39Z",
     "Sweden": "2026-09-27T07:49:10Z",
     "Test Site-2271": "2026-11-06T22:14:12Z",
@@ -3531,10 +3531,7 @@
         "id": "mtiehovs-49uxlu",
         "type": "tankDestroyerRed",
         "x": 56.47,
-        "y": 61.61,
-        "commentImages": [
-          "American Desert/scr_ (19).webp"
-        ]
+        "y": 61.61
       },
       {
         "id": "mtiehv3z-n6aalr",
@@ -3547,10 +3544,7 @@
         "id": "mtiek8ok-5gao3n",
         "type": "mainBattleTankRed",
         "x": 48.94,
-        "y": 64.89,
-        "commentImages": [
-          "American Desert/scr_ (20).webp"
-        ]
+        "y": 64.89
       },
       {
         "id": "mtiekhpd-40qo7f",
@@ -3564,10 +3558,7 @@
         "type": "tankDestroyerRed",
         "x": 77.49,
         "y": 47.51,
-        "comment": "Only the first spawn works.",
-        "commentImages": [
-          "American Desert/scr_ (12).webp"
-        ]
+        "comment": "Only the first spawn works."
       },
       {
         "id": "mtiemnap-fvezd4",
@@ -3580,10 +3571,7 @@
         "id": "mtiems6e-p0zo6n",
         "type": "tankDestroyerRed",
         "x": 38.74,
-        "y": 96.99,
-        "commentImages": [
-          "American Desert/scr_ (25).webp"
-        ]
+        "y": 96.99
       },
       {
         "id": "mtiemtaz-stof9y",
@@ -3596,10 +3584,7 @@
         "id": "mtiengwy-tmkm2c",
         "type": "mainBattleTankRed",
         "x": 98.94,
-        "y": 42.9,
-        "commentImages": [
-          "American Desert/scr_ (13).webp"
-        ]
+        "y": 42.9
       },
       {
         "id": "mtieni1j-ukycmm",
@@ -3613,10 +3598,7 @@
         "type": "mainBattleTankRed",
         "x": 98.05,
         "y": 39.18,
-        "comment": "Can fight while moving in and out of the map boundary, use a tank with good reverse mobility.",
-        "commentImages": [
-          "American Desert/scr_ (15).webp"
-        ]
+        "comment": "Can fight while moving in and out of the map boundary, use a tank with good reverse mobility."
       },
       {
         "id": "mtierdd9-p3pwc4",
@@ -3629,10 +3611,7 @@
         "id": "mtieusf6-enymwv",
         "type": "mainBattleTankRed",
         "x": 62.06,
-        "y": 13.64,
-        "commentImages": [
-          "American Desert/scr_ (1).webp"
-        ]
+        "y": 13.64
       },
       {
         "id": "mtieuu7l-5dxhv6",
@@ -3645,10 +3624,7 @@
         "id": "mtif8yiu-367cvp",
         "type": "mainBattleTankRed",
         "x": 24.38,
-        "y": 47.42,
-        "commentImages": [
-          "American Desert/scr_ (35).webp"
-        ]
+        "y": 47.42
       },
       {
         "id": "mtif90q9-z2xs9v",
@@ -3673,11 +3649,7 @@
         "id": "mtxlz9ks-ffpiva",
         "type": "mainBattleTankRed",
         "x": 58.08,
-        "y": 40.1,
-        "commentImages": [
-          "American Desert/scr_ (23).webp",
-          "American Desert/scr_ (26).webp"
-        ]
+        "y": 40.1
       },
       {
         "id": "mtxlzcff-3c8z3p",
@@ -3699,10 +3671,7 @@
         "id": "mtxpz1ot-i2htrq",
         "type": "mainBattleTankRed",
         "x": 77.22,
-        "y": 34.76,
-        "commentImages": [
-          "American Desert/scr_ (16).webp"
-        ]
+        "y": 34.76
       },
       {
         "id": "mtxpze7z-xq6hg4",
@@ -3715,10 +3684,7 @@
         "id": "mtxr48mm-3yew5s",
         "type": "tankDestroyerRed",
         "x": 45.83,
-        "y": 97.53,
-        "commentImages": [
-          "American Desert/scr_ (24).webp"
-        ]
+        "y": 97.53
       },
       {
         "id": "mtxr4av9-szgbwg",
@@ -3743,11 +3709,7 @@
         "id": "mtxrbhxh-wx90dy",
         "type": "mainBattleTankRed",
         "x": 23.04,
-        "y": 82.16,
-        "commentImages": [
-          "American Desert/scr_ (27).webp",
-          "American Desert/scr_ (28).webp"
-        ]
+        "y": 82.16
       },
       {
         "id": "mtxrbm0w-i87rsa",
@@ -3760,11 +3722,7 @@
         "id": "mtxrfanu-vhdm2q",
         "type": "mainBattleTankRed",
         "x": 38.67,
-        "y": 50.38,
-        "commentImages": [
-          "American Desert/scr_ (29).webp",
-          "American Desert/scr_ (30).webp"
-        ]
+        "y": 50.38
       },
       {
         "id": "mtxrg37r-8feva6",
@@ -3777,11 +3735,7 @@
         "id": "mtxrknas-1bjs0a",
         "type": "mainBattleTankRed",
         "x": 59.64,
-        "y": 50.25,
-        "commentImages": [
-          "American Desert/scr_ (14).webp",
-          "American Desert/scr_ (31).webp"
-        ]
+        "y": 50.25
       },
       {
         "id": "mtxrkofy-qit6pz",
@@ -3796,10 +3750,7 @@
         "id": "mtiedut0-j2dilp",
         "type": "mainBattleTank",
         "x": 46.72,
-        "y": 46.45,
-        "commentImages": [
-          "American Desert/scr_ (5).webp"
-        ]
+        "y": 46.45
       },
       {
         "id": "mtieegk9-yqyxiu",
@@ -3812,10 +3763,7 @@
         "id": "mtieeq46-hw4ggd",
         "type": "mainBattleTank",
         "x": 59.13,
-        "y": 43.79,
-        "commentImages": [
-          "American Desert/scr_ (6).webp"
-        ]
+        "y": 43.79
       },
       {
         "id": "mtiefkwr-zegbkz",
@@ -3834,10 +3782,7 @@
         "id": "mtiekzna-s3t8fb",
         "type": "mainBattleTank",
         "x": 20.83,
-        "y": 64.89,
-        "commentImages": [
-          "American Desert/scr_ (22).webp"
-        ]
+        "y": 64.89
       },
       {
         "id": "mtielamn-02p6dl",
@@ -3850,10 +3795,7 @@
         "id": "mtiewrxq-9dxyvl",
         "type": "tankDestroyer",
         "x": 33.33,
-        "y": 32.93,
-        "commentImages": [
-          "American Desert/scr_ (2).webp"
-        ]
+        "y": 32.93
       },
       {
         "id": "mtiewszv-l5j2a7",
@@ -3866,20 +3808,13 @@
         "id": "mtiexoze-757po0",
         "type": "mainBattleTank",
         "x": 94.41,
-        "y": 65.75,
-        "commentImages": [
-          "American Desert/scr_ (11).webp"
-        ]
+        "y": 65.75
       },
       {
         "id": "mtiexvf8-ricksd",
         "type": "mainBattleTank",
         "x": 62.77,
-        "y": 52.21,
-        "commentImages": [
-          "American Desert/scr_ (33).webp",
-          "American Desert/scr_ (34).webp"
-        ]
+        "y": 52.21
       },
       {
         "id": "mtiexwaz-uzubrw",
@@ -3898,19 +3833,13 @@
         "id": "mtif0up4-rgvajt",
         "type": "tankDestroyer",
         "x": 82.81,
-        "y": 19.41,
-        "commentImages": [
-          "American Desert/scr_ (10).webp"
-        ]
+        "y": 19.41
       },
       {
         "id": "mtif0yyw-dkjvuc",
         "type": "mainBattleTank",
         "x": 75.71,
-        "y": 27.21,
-        "commentImages": [
-          "American Desert/scr_ (9).webp"
-        ]
+        "y": 27.21
       },
       {
         "id": "mtif1htp-torcc3",
@@ -3930,10 +3859,7 @@
         "id": "mtif2naa-lmdcx8",
         "type": "tankDestroyer",
         "x": 25.26,
-        "y": 40.1,
-        "commentImages": [
-          "American Desert/scr_ (4).webp"
-        ]
+        "y": 40.1
       },
       {
         "id": "mtif2ogn-lzodhd",
@@ -3953,11 +3879,7 @@
         "id": "mtift5he-sloqt0",
         "type": "mainBattleTank",
         "x": 76.57,
-        "y": 33.58,
-        "commentImages": [
-          "American Desert/scr_ (7).webp",
-          "American Desert/scr_ (8).webp"
-        ]
+        "y": 33.58
       },
       {
         "id": "mtiftd1v-3wtsdl",
@@ -3991,10 +3913,7 @@
         "id": "mtxqg6wx-kscdwb",
         "type": "mainBattleTank",
         "x": 53.78,
-        "y": 93.62,
-        "commentImages": [
-          "American Desert/scr_ (17).webp"
-        ]
+        "y": 93.62
       },
       {
         "id": "mtxqg9d0-df9rrt",
@@ -4007,10 +3926,7 @@
         "id": "mtxqrv55-2bg18y",
         "type": "mainBattleTank",
         "x": 52.08,
-        "y": 86.46,
-        "commentImages": [
-          "American Desert/scr_ (18).webp"
-        ]
+        "y": 86.46
       },
       {
         "id": "mtxqryoj-s37mpq",
@@ -24511,26 +24427,38 @@
         "id": "sun-city-red-unit-01",
         "type": "mainBattleTankRed",
         "x": 10.9,
-        "y": 30.69
+        "y": 30.69,
+        "commentImages": [
+          "Sun City/scr_ (13).webp",
+          "Sun City/scr_ (14).webp",
+          "Sun City/scr_ (15).webp"
+        ]
       },
       {
         "id": "sun-city-red-unit-04",
         "type": "mainBattleTankRed",
-        "x": 50.56,
-        "y": 33.82
+        "x": 46.84,
+        "y": 34.13,
+        "commentImages": [
+          "Sun City/scr_ (10).webp",
+          "Sun City/scr_ (11).webp"
+        ]
       },
       {
         "id": "sun-city-red-role-03",
         "type": "spawnKill",
-        "x": 50.56,
-        "y": 33.82,
+        "x": 46.84,
+        "y": 34.13,
         "parentTankId": "sun-city-red-unit-04"
       },
       {
         "id": "sun-city-red-unit-05",
         "type": "mainBattleTankRed",
         "x": 76.46,
-        "y": 44.86
+        "y": 44.86,
+        "commentImages": [
+          "Sun City/scr_ (7).webp"
+        ]
       },
       {
         "id": "sun-city-red-role-04",
@@ -24541,48 +24469,60 @@
       },
       {
         "id": "sun-city-red-unit-06",
-        "type": "mainBattleTankRed",
-        "x": 29.24,
-        "y": 45
+        "type": "lightTankRed",
+        "x": 27.75,
+        "y": 45.76,
+        "commentImages": [
+          "Sun City/scr_ (19).webp"
+        ]
       },
       {
         "id": "sun-city-red-role-05",
         "type": "highRiskSpot",
-        "x": 29.24,
-        "y": 45,
+        "x": 27.75,
+        "y": 45.76,
         "parentTankId": "sun-city-red-unit-06"
       },
       {
         "id": "sun-city-red-unit-07",
         "type": "mainBattleTankRed",
-        "x": 6.18,
-        "y": 47.71
+        "x": 6.13,
+        "y": 48.8,
+        "commentImages": [
+          "Sun City/scr_ (21).webp"
+        ]
       },
       {
         "id": "sun-city-red-role-06",
         "type": "highRiskSpot",
-        "x": 6.18,
-        "y": 47.71,
+        "x": 6.13,
+        "y": 48.8,
         "parentTankId": "sun-city-red-unit-07"
       },
       {
         "id": "sun-city-red-unit-08",
         "type": "mainBattleTankRed",
-        "x": 22.01,
-        "y": 52.57
+        "x": 20.8,
+        "y": 55.63,
+        "commentImages": [
+          "Sun City/scr_ (20).webp"
+        ]
       },
       {
         "id": "sun-city-red-role-07",
         "type": "battleLine",
-        "x": 22.01,
-        "y": 52.57,
+        "x": 20.8,
+        "y": 55.63,
         "parentTankId": "sun-city-red-unit-08"
       },
       {
         "id": "sun-city-red-unit-09",
         "type": "mainBattleTankRed",
         "x": 69.03,
-        "y": 54.1
+        "y": 54.1,
+        "commentImages": [
+          "Sun City/scr_ (43).webp"
+        ]
       },
       {
         "id": "sun-city-red-role-08",
@@ -24595,7 +24535,11 @@
         "id": "sun-city-red-unit-10",
         "type": "mainBattleTankRed",
         "x": 34.38,
-        "y": 56.04
+        "y": 56.04,
+        "commentImages": [
+          "Sun City/scr_ (23).webp",
+          "Sun City/scr_ (22).webp"
+        ]
       },
       {
         "id": "sun-city-red-role-09",
@@ -24608,7 +24552,10 @@
         "id": "sun-city-red-unit-11",
         "type": "tankDestroyerRed",
         "x": 30.49,
-        "y": 63.61
+        "y": 63.61,
+        "commentImages": [
+          "Sun City/scr_ (2).webp"
+        ]
       },
       {
         "id": "sun-city-red-role-10",
@@ -24620,40 +24567,50 @@
       {
         "id": "sun-city-red-unit-12",
         "type": "tankDestroyerRed",
-        "x": 1.67,
-        "y": 70.49
+        "x": 4.36,
+        "y": 73.96,
+        "commentImages": [
+          "Sun City/scr_ (25).webp"
+        ]
       },
       {
         "id": "sun-city-red-role-11",
         "type": "sniper",
-        "x": 1.67,
-        "y": 70.49,
+        "x": 4.36,
+        "y": 73.96,
         "parentTankId": "sun-city-red-unit-12"
       },
       {
         "id": "sun-city-red-unit-13",
         "type": "tankDestroyerRed",
-        "x": 82.92,
-        "y": 70.76
+        "x": 83,
+        "y": 77.88,
+        "commentImages": [
+          "Sun City/scr_ (26).webp"
+        ]
       },
       {
         "id": "sun-city-red-role-12",
         "type": "sniper",
-        "x": 82.92,
-        "y": 70.76,
+        "x": 83,
+        "y": 77.88,
         "parentTankId": "sun-city-red-unit-13"
       },
       {
         "id": "mu08qqvl-785scg",
         "type": "lightTankRed",
-        "x": 61.17,
-        "y": 40.77
+        "x": 59.36,
+        "y": 40.96,
+        "commentImages": [
+          "Sun City/scr_ (5).webp",
+          "Sun City/scr_ (6).webp"
+        ]
       },
       {
         "id": "mu08qryy-7tfrep",
         "type": "highRiskSpot",
-        "x": 61.17,
-        "y": 40.77,
+        "x": 59.36,
+        "y": 40.96,
         "parentTankId": "mu08qqvl-785scg"
       },
       {
@@ -24666,21 +24623,28 @@
       {
         "id": "mu08uahb-mj94gr",
         "type": "mainBattleTankRed",
-        "x": 21.01,
-        "y": 40.95
+        "x": 20.16,
+        "y": 42.23,
+        "commentImages": [
+          "Sun City/scr_ (18).webp"
+        ]
       },
       {
         "id": "mu08ubco-ey4o8u",
         "type": "highRiskSpot",
-        "x": 21.01,
-        "y": 40.95,
+        "x": 20.16,
+        "y": 42.23,
         "parentTankId": "mu08uahb-mj94gr"
       },
       {
         "id": "mu1ghh8c-1qwd22",
         "type": "lightTankRed",
         "x": 60.03,
-        "y": 50.77
+        "y": 50.77,
+        "commentImages": [
+          "Sun City/scr_ (3).webp",
+          "Sun City/scr_ (4).webp"
+        ]
       },
       {
         "id": "mu1ghjtu-6hi5h1",
@@ -24688,6 +24652,38 @@
         "x": 60.03,
         "y": 50.77,
         "parentTankId": "mu1ghh8c-1qwd22"
+      },
+      {
+        "id": "mwcfshi5-2blkft",
+        "type": "lightTankRed",
+        "x": 87.42,
+        "y": 26.8,
+        "commentImages": [
+          "Sun City/scr_ (8).webp"
+        ]
+      },
+      {
+        "id": "mwcfsuex-719aeb",
+        "type": "highRiskSpot",
+        "x": 87.42,
+        "y": 26.8,
+        "parentTankId": "mwcfshi5-2blkft"
+      },
+      {
+        "id": "mwcfuhah-v2aebr",
+        "type": "mainBattleTankRed",
+        "x": 53.41,
+        "y": 33.75,
+        "commentImages": [
+          "Sun City/scr_ (12).webp"
+        ]
+      },
+      {
+        "id": "mwcfujid-rknrmn",
+        "type": "spawnKill",
+        "x": 53.41,
+        "y": 33.75,
+        "parentTankId": "mwcfuhah-v2aebr"
       }
     ],
     "Sun City::domination-1|Blue": [
@@ -24706,22 +24702,28 @@
       },
       {
         "id": "sun-city-blue-unit-02",
-        "type": "tankDestroyer",
-        "x": 1.94,
-        "y": 35.07
+        "type": "mainBattleTank",
+        "x": 1.45,
+        "y": 39.44,
+        "commentImages": [
+          "Sun City/scr_ (41).webp"
+        ]
       },
       {
         "id": "sun-city-blue-role-02",
-        "type": "sniper",
-        "x": 1.94,
-        "y": 35.07,
+        "type": "highRiskSpot",
+        "x": 1.45,
+        "y": 39.44,
         "parentTankId": "sun-city-blue-unit-02"
       },
       {
         "id": "sun-city-blue-unit-03",
         "type": "mainBattleTank",
         "x": 77.22,
-        "y": 35.14
+        "y": 35.14,
+        "commentImages": [
+          "Sun City/scr_ (27).webp"
+        ]
       },
       {
         "id": "sun-city-blue-role-03",
@@ -24734,7 +24736,11 @@
         "id": "sun-city-blue-unit-04",
         "type": "tankDestroyer",
         "x": 30.49,
-        "y": 35.42
+        "y": 35.42,
+        "commentImages": [
+          "Sun City/scr_ (35).webp",
+          "Sun City/scr_ (36).webp"
+        ]
       },
       {
         "id": "sun-city-blue-role-04",
@@ -24746,14 +24752,17 @@
       {
         "id": "sun-city-blue-unit-05",
         "type": "mainBattleTank",
-        "x": 66.46,
-        "y": 37.15
+        "x": 67.07,
+        "y": 36.66,
+        "commentImages": [
+          "Sun City/scr_ (42).webp"
+        ]
       },
       {
         "id": "sun-city-blue-role-05",
         "type": "battleLine",
-        "x": 66.46,
-        "y": 37.15,
+        "x": 67.07,
+        "y": 36.66,
         "parentTankId": "sun-city-blue-unit-05"
       },
       {
@@ -24773,7 +24782,10 @@
         "id": "sun-city-blue-unit-07",
         "type": "mainBattleTank",
         "x": 34.31,
-        "y": 42.9
+        "y": 42.9,
+        "commentImages": [
+          "Sun City/scr_ (40).webp"
+        ]
       },
       {
         "id": "sun-city-blue-role-07",
@@ -24785,14 +24797,17 @@
       {
         "id": "sun-city-blue-unit-08",
         "type": "mainBattleTank",
-        "x": 22.01,
-        "y": 43.96
+        "x": 21.05,
+        "y": 40.96,
+        "commentImages": [
+          "Sun City/scr_ (37).webp"
+        ]
       },
       {
         "id": "sun-city-blue-role-08",
         "type": "battleLine",
-        "x": 22.01,
-        "y": 43.96,
+        "x": 21.05,
+        "y": 40.96,
         "parentTankId": "sun-city-blue-unit-08"
       },
       {
@@ -24811,33 +24826,42 @@
       {
         "id": "sun-city-blue-unit-10",
         "type": "mainBattleTank",
-        "x": 50.98,
-        "y": 64.27
+        "x": 48.86,
+        "y": 64.22,
+        "commentImages": [
+          "Sun City/scr_ (30).webp"
+        ]
       },
       {
         "id": "sun-city-blue-role-10",
         "type": "spawnKill",
-        "x": 50.98,
-        "y": 64.27,
+        "x": 48.86,
+        "y": 64.22,
         "parentTankId": "sun-city-blue-unit-10"
       },
       {
         "id": "sun-city-blue-unit-11",
         "type": "mainBattleTank",
-        "x": 6.73,
-        "y": 58.06
+        "x": 5.25,
+        "y": 61.69,
+        "commentImages": [
+          "Sun City/scr_ (38).webp"
+        ]
       },
       {
         "id": "sun-city-blue-unit-12",
         "type": "mainBattleTank",
         "x": 75.35,
-        "y": 65.07
+        "y": 65.07,
+        "commentImages": [
+          "Sun City/scr_ (29).webp"
+        ]
       },
       {
         "id": "mu08nfa2-xebrxy",
-        "type": "spawnKill",
-        "x": 6.73,
-        "y": 58.06,
+        "type": "highRiskSpot",
+        "x": 5.25,
+        "y": 61.69,
         "parentTankId": "sun-city-blue-unit-11"
       },
       {
@@ -24851,7 +24875,10 @@
         "id": "mu08qd9z-jegn0u",
         "type": "mainBattleTank",
         "x": 76.24,
-        "y": 45.83
+        "y": 45.83,
+        "commentImages": [
+          "Sun City/scr_ (28).webp"
+        ]
       },
       {
         "id": "mu08qexs-31z0k8",
@@ -24862,9 +24889,12 @@
       },
       {
         "id": "mu08ri4v-e9f3hq",
-        "type": "mainBattleTank",
+        "type": "lightTank",
         "x": 29.7,
-        "y": 52.3
+        "y": 52.3,
+        "commentImages": [
+          "Sun City/scr_ (39).webp"
+        ]
       },
       {
         "id": "mu08rj0i-j9lj5z",
@@ -24872,6 +24902,70 @@
         "x": 29.7,
         "y": 52.3,
         "parentTankId": "mu08ri4v-e9f3hq"
+      },
+      {
+        "id": "mwcg1yr1-mmelpa",
+        "type": "mainBattleTank",
+        "x": 57.33,
+        "y": 64.1,
+        "commentImages": [
+          "Sun City/scr_ (31).webp"
+        ]
+      },
+      {
+        "id": "mwcg206t-8jpnnr",
+        "type": "highRiskSpot",
+        "x": 57.33,
+        "y": 64.1,
+        "parentTankId": "mwcg1yr1-mmelpa"
+      },
+      {
+        "id": "mwcg2gbk-lpcoat",
+        "type": "tankDestroyer",
+        "x": 42.67,
+        "y": 42.86,
+        "commentImages": [
+          "Sun City/scr_ (32).webp"
+        ]
+      },
+      {
+        "id": "mwcg2haf-z9w1zu",
+        "type": "sniper",
+        "x": 42.67,
+        "y": 42.86,
+        "parentTankId": "mwcg2gbk-lpcoat"
+      },
+      {
+        "id": "mwcg2tpf-qijvd8",
+        "type": "lightTank",
+        "x": 40.77,
+        "y": 47.91,
+        "commentImages": [
+          "Sun City/scr_ (33).webp"
+        ]
+      },
+      {
+        "id": "mwcg2w4k-czavra",
+        "type": "battleLine",
+        "x": 40.77,
+        "y": 47.91,
+        "parentTankId": "mwcg2tpf-qijvd8"
+      },
+      {
+        "id": "mwcg39rg-2iigtp",
+        "type": "tankDestroyer",
+        "x": 56.7,
+        "y": 32.49,
+        "commentImages": [
+          "Sun City/scr_ (34).webp"
+        ]
+      },
+      {
+        "id": "mwcg3bbd-95bpcb",
+        "type": "sniper",
+        "x": 56.7,
+        "y": 32.49,
+        "parentTankId": "mwcg39rg-2iigtp"
       }
     ],
     "Surroundings of Volokolamsk::domination-1|Blue": [
@@ -81320,20 +81414,11 @@
     ],
     "Sun City::domination-1|Red": [
       {
-        "id": "mu08q1ic-ua8zic",
-        "type": "aimHere",
-        "parentTankId": "sun-city-red-unit-04",
-        "startX": 50.56,
-        "startY": 33.82,
-        "endX": 36.44,
-        "endY": 12.23
-      },
-      {
         "id": "mu08q53c-284w7a",
         "type": "aimHere",
         "parentTankId": "sun-city-red-unit-04",
-        "startX": 50.56,
-        "startY": 33.82,
+        "startX": 46.84,
+        "startY": 34.13,
         "endX": 54.43,
         "endY": 17.37
       },
@@ -81350,8 +81435,8 @@
         "id": "mu08qwl9-bnb4j9",
         "type": "aimHere",
         "parentTankId": "mu08qqvl-785scg",
-        "startX": 61.17,
-        "startY": 40.77,
+        "startX": 59.36,
+        "startY": 40.96,
         "endX": 26.51,
         "endY": 41.57
       },
@@ -81377,8 +81462,8 @@
         "id": "mu08rd3m-bhqltx",
         "type": "aimHere",
         "parentTankId": "sun-city-red-unit-06",
-        "startX": 29.24,
-        "startY": 45,
+        "startX": 27.75,
+        "startY": 45.76,
         "endX": 47.52,
         "endY": 36.61
       },
@@ -81401,58 +81486,22 @@
         "endY": 33.95
       },
       {
-        "id": "mu08t17w-0caxv2",
-        "type": "aimHere",
-        "parentTankId": "sun-city-red-unit-07",
-        "startX": 6.18,
-        "startY": 47.71,
-        "endX": 24.38,
-        "endY": 43.08
-      },
-      {
         "id": "mu08t352-znkan0",
         "type": "aimHere",
         "parentTankId": "sun-city-red-unit-08",
-        "startX": 22.01,
-        "startY": 52.57,
+        "startX": 20.8,
+        "startY": 55.63,
         "endX": 19.5,
         "endY": 40.51
-      },
-      {
-        "id": "mu08t6qa-lal00a",
-        "type": "aimHere",
-        "parentTankId": "sun-city-red-unit-12",
-        "startX": 1.67,
-        "startY": 70.49,
-        "endX": 2.04,
-        "endY": 36.43
       },
       {
         "id": "mu08uipd-ossx9d",
         "type": "aimHere",
         "parentTankId": "mu08uahb-mj94gr",
-        "startX": 21.01,
-        "startY": 40.95,
+        "startX": 20.16,
+        "startY": 42.23,
         "endX": 34.84,
         "endY": 32.09
-      },
-      {
-        "id": "mu08v5ko-5oenyp",
-        "type": "aimHere",
-        "parentTankId": "sun-city-red-unit-13",
-        "startX": 82.92,
-        "startY": 70.76,
-        "endX": 83.34,
-        "endY": 20.29
-      },
-      {
-        "id": "mu1ggog3-qx82lj",
-        "type": "aimHere",
-        "parentTankId": "sun-city-red-unit-01",
-        "startX": 10.9,
-        "startY": 30.69,
-        "endX": 35.16,
-        "endY": 34.24
       },
       {
         "id": "mu1ggu86-0pe223",
@@ -81481,15 +81530,6 @@
         "startY": 50.77,
         "endX": 78.91,
         "endY": 46.61
-      },
-      {
-        "id": "mu1gi0vd-zivkb5",
-        "type": "aimHere",
-        "parentTankId": "mu1ghh8c-1qwd22",
-        "startX": 60.03,
-        "startY": 50.77,
-        "endX": 53.78,
-        "endY": 35.28
       },
       {
         "id": "mvpqjp6w-7vnlbs",
@@ -81553,18 +81593,103 @@
         "startY": 44.86,
         "endX": 64.54,
         "endY": 38.56
+      },
+      {
+        "id": "mwcfrj9p-v7fyy7",
+        "type": "aimHere",
+        "parentTankId": "mu1ghh8c-1qwd22",
+        "startX": 60.03,
+        "startY": 50.77,
+        "endX": 46.08,
+        "endY": 20.61
+      },
+      {
+        "id": "mwcfspsn-jkflkx",
+        "type": "aimHere",
+        "parentTankId": "mwcfshi5-2blkft",
+        "startX": 87.42,
+        "startY": 26.8,
+        "endX": 39.89,
+        "endY": 26.55
+      },
+      {
+        "id": "mwcft5pk-2puffd",
+        "type": "route",
+        "points": [
+          {
+            "x": 89.06,
+            "y": 78.38
+          },
+          {
+            "x": 89.32,
+            "y": 68.02
+          },
+          {
+            "x": 89.44,
+            "y": 52.59
+          },
+          {
+            "x": 89.06,
+            "y": 34.39
+          },
+          {
+            "x": 89.06,
+            "y": 28.7
+          },
+          {
+            "x": 87.93,
+            "y": 26.8
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "mwcfupa7-dmp3h5",
+        "type": "aimHere",
+        "parentTankId": "mwcfuhah-v2aebr",
+        "startX": 53.41,
+        "startY": 33.75,
+        "endX": 33.82,
+        "endY": 11.5
+      },
+      {
+        "id": "mwcfwmzb-pnqw1l",
+        "type": "aimHere",
+        "parentTankId": "sun-city-red-unit-01",
+        "startX": 10.9,
+        "startY": 30.69,
+        "endX": 30.4,
+        "endY": 25.92
+      },
+      {
+        "id": "mwcfypin-0s1udi",
+        "type": "aimHere",
+        "parentTankId": "sun-city-red-unit-07",
+        "startX": 6.13,
+        "startY": 48.8,
+        "endX": 28.38,
+        "endY": 36.92
+      },
+      {
+        "id": "mwcfztpx-7sw1l9",
+        "type": "aimHere",
+        "parentTankId": "sun-city-red-unit-12",
+        "startX": 4.36,
+        "startY": 73.96,
+        "endX": 3.22,
+        "endY": 39.32
+      },
+      {
+        "id": "mwcg0f7t-0w88xw",
+        "type": "aimHere",
+        "parentTankId": "sun-city-red-unit-13",
+        "startX": 83,
+        "startY": 77.88,
+        "endX": 83.88,
+        "endY": 25.54
       }
     ],
     "Sun City::domination-1|Blue": [
-      {
-        "id": "mu08na16-0vvayf",
-        "type": "aimHere",
-        "parentTankId": "sun-city-blue-unit-10",
-        "startX": 50.98,
-        "startY": 64.27,
-        "endX": 58.87,
-        "endY": 85.81
-      },
       {
         "id": "mu08nl95-igiacj",
         "type": "aimHere",
@@ -81605,19 +81730,10 @@
         "id": "mu08o0om-s9jkov",
         "type": "aimHere",
         "parentTankId": "sun-city-blue-unit-08",
-        "startX": 22.01,
-        "startY": 43.96,
+        "startX": 21.05,
+        "startY": 40.96,
         "endX": 19.5,
         "endY": 56.38
-      },
-      {
-        "id": "mu08o7cm-5o69gs",
-        "type": "aimHere",
-        "parentTankId": "sun-city-blue-unit-02",
-        "startX": 1.94,
-        "startY": 35.07,
-        "endX": 2.04,
-        "endY": 78.37
       },
       {
         "id": "mu08ob76-7rtths",
@@ -81632,28 +81748,10 @@
         "id": "mu08p6zh-7gp3xs",
         "type": "aimHere",
         "parentTankId": "sun-city-blue-unit-11",
-        "startX": 6.73,
-        "startY": 58.06,
+        "startX": 5.25,
+        "startY": 61.69,
         "endX": 27.21,
         "endY": 79.43
-      },
-      {
-        "id": "mu08phsi-ndh08r",
-        "type": "aimHere",
-        "parentTankId": "sun-city-blue-unit-10",
-        "startX": 50.98,
-        "startY": 64.27,
-        "endX": 21.27,
-        "endY": 63.91
-      },
-      {
-        "id": "mu08qibg-3s4x0n",
-        "type": "aimHere",
-        "parentTankId": "sun-city-blue-unit-05",
-        "startX": 66.46,
-        "startY": 37.15,
-        "endX": 69.06,
-        "endY": 53.72
       },
       {
         "id": "mu08rtxe-vz7m4j",
@@ -81705,6 +81803,128 @@
         "startY": 67.82,
         "endX": 57.38,
         "endY": 80.97
+      },
+      {
+        "id": "mwcg17xl-ubbmki",
+        "type": "aimHere",
+        "parentTankId": "mu08qd9z-jegn0u",
+        "startX": 76.24,
+        "startY": 45.83,
+        "endX": 67.45,
+        "endY": 51.07
+      },
+      {
+        "id": "mwcg1qxr-q3zdmt",
+        "type": "aimHere",
+        "parentTankId": "sun-city-blue-unit-10",
+        "startX": 48.86,
+        "startY": 64.22,
+        "endX": 66.69,
+        "endY": 88.87
+      },
+      {
+        "id": "mwcg253x-sr5fxa",
+        "type": "aimHere",
+        "parentTankId": "mwcg1yr1-mmelpa",
+        "startX": 57.33,
+        "startY": 64.1,
+        "endX": 23.2,
+        "endY": 64.6
+      },
+      {
+        "id": "mwcg2ljx-i6uw00",
+        "type": "aimHere",
+        "parentTankId": "mwcg2gbk-lpcoat",
+        "startX": 42.67,
+        "startY": 42.86,
+        "endX": 46.71,
+        "endY": 65.61
+      },
+      {
+        "id": "mwcg30o8-zhfo2u",
+        "type": "aimHere",
+        "parentTankId": "mwcg2tpf-qijvd8",
+        "startX": 40.77,
+        "startY": 47.91,
+        "endX": 49.62,
+        "endY": 65.61
+      },
+      {
+        "id": "mwcg3g6d-ktmyxk",
+        "type": "aimHere",
+        "parentTankId": "mwcg39rg-2iigtp",
+        "startX": 56.7,
+        "startY": 32.49,
+        "endX": 55.69,
+        "endY": 64.73
+      },
+      {
+        "id": "mwcg6aox-dhwy7y",
+        "type": "aimHere",
+        "parentTankId": "sun-city-blue-unit-02",
+        "startX": 1.45,
+        "startY": 39.44,
+        "endX": 3.6,
+        "endY": 65.99
+      },
+      {
+        "id": "mwcg6igc-7v1zac",
+        "type": "route",
+        "points": [
+          {
+            "x": 1.96,
+            "y": 39.82
+          },
+          {
+            "x": 4.36,
+            "y": 37.67
+          },
+          {
+            "x": 7.02,
+            "y": 37.67
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "mwcg6rqk-mak5sc",
+        "type": "route",
+        "points": [
+          {
+            "x": 3.6,
+            "y": 44.75
+          },
+          {
+            "x": 4.24,
+            "y": 47.28
+          },
+          {
+            "x": 5.25,
+            "y": 55.63
+          },
+          {
+            "x": 5.12,
+            "y": 61.19
+          }
+        ]
+      },
+      {
+        "id": "mwcg7cpb-liym5h",
+        "type": "aimHere",
+        "parentTankId": "sun-city-blue-unit-05",
+        "startX": 67.07,
+        "startY": 36.66,
+        "endX": 67.95,
+        "endY": 53.48
+      },
+      {
+        "id": "mwcg7iq1-sfti4o",
+        "type": "aimHere",
+        "parentTankId": "sun-city-blue-unit-05",
+        "startX": 67.07,
+        "startY": 36.66,
+        "endX": 60.49,
+        "endY": 52.72
       }
     ],
     "Surroundings of Volokolamsk::domination-1|Blue": [
@@ -90937,6 +91157,6 @@
     "Sands of Sinai::domination-1|Blue": [],
     "Vietnam::domination-1|Red": []
   },
-  "updatedAt": "2026-11-11T16:45:29.386Z",
-  "exportedAt": "2026-11-11T17:57:06.819Z"
+  "updatedAt": "2026-11-11T18:25:06.599Z",
+  "exportedAt": "2026-11-11T18:25:44.481Z"
 }
