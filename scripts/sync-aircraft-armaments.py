@@ -36,12 +36,18 @@ def choose_icon(*sources):
     return min(valid, key=score) if valid else None
 
 
+def local_icon_name(url):
+    return Path(url.rsplit("/", 1)[-1]).with_suffix(".webp").name
+
+
 def download_icon(url):
     if choose_icon(url) != url:
         raise ValueError(f"Unexpected icon URL: {url}")
-    path = ROOT / "icon/weapon-wiki" / url.rsplit("/", 1)[-1]
+    path = ROOT / "icon/weapon-wiki" / local_icon_name(url)
     if path.exists():
         with Image.open(path) as image:
+            if image.format != "WEBP":
+                raise ValueError("Expected local WebP icon")
             image.verify()
         return
     for attempt in range(4):
@@ -52,9 +58,11 @@ def download_icon(url):
             with Image.open(io.BytesIO(content)) as image:
                 if image.format != "PNG":
                     raise ValueError("Expected PNG icon")
-                image.verify()
+                image.load()
+                output = io.BytesIO()
+                image.save(output, format="WEBP", lossless=True, exact=True, method=4)
             path.parent.mkdir(parents=True, exist_ok=True)
-            path.write_bytes(content)
+            path.write_bytes(output.getvalue())
             return
         except Exception:
             if attempt == 3:
@@ -71,7 +79,7 @@ def prepare_icons(weapons, workers):
         if not weapon.get("iconSource"):
             weapon["iconSource"] = ICON_ROOT + defaults[weapon["type"]]
             weapon["iconGeneric"] = True
-        weapon["icon"] = "/icon/weapon-wiki/" + weapon["iconSource"].rsplit("/", 1)[-1]
+        weapon["icon"] = "/icon/weapon-wiki/" + local_icon_name(weapon["iconSource"])
     sources = sorted({weapon["iconSource"] for weapon in weapons.values()})
     with ThreadPoolExecutor(max_workers=max(1, min(workers, 6))) as executor:
         for _ in executor.map(download_icon, sources):

@@ -1,7 +1,7 @@
 const placeholders = {
-  tank: "/Tier/Tank/Placeholder_Ground.png",
-  air: "/Tier/Air/Placeholder_Air.png",
-  heli: "/Tier/Heli/Placeholder_Heli.png",
+  tank: "/Tier/Tank/Placeholder_Ground.webp",
+  air: "/Tier/Air/Placeholder_Air.webp",
+  heli: "/Tier/Heli/Placeholder_Heli.webp",
 };
 const folders = { tank: "Tank", air: "Air", heli: "Heli" };
 

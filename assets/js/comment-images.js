@@ -767,16 +767,6 @@ export const commentImages = Object.freeze([
     "label": "scr_  (17).webp"
   },
   {
-    "id": "American Desert/scr_  (18).webp",
-    "path": "img/American Desert/scr_  (18).webp",
-    "label": "scr_  (18).webp"
-  },
-  {
-    "id": "American Desert/scr_  (19).webp",
-    "path": "img/American Desert/scr_  (19).webp",
-    "label": "scr_  (19).webp"
-  },
-  {
     "id": "American Desert/scr_  (2).webp",
     "path": "img/American Desert/scr_  (2).webp",
     "label": "scr_  (2).webp"
@@ -2672,16 +2662,6 @@ export const commentImages = Object.freeze([
     "label": "scr_ (9).webp"
   },
   {
-    "id": "Sun City/scr_ (1).webp",
-    "path": "img/Sun City/scr_ (1).webp",
-    "label": "scr_ (1).webp"
-  },
-  {
-    "id": "Sun City/scr_ (10).webp",
-    "path": "img/Sun City/scr_ (10).webp",
-    "label": "scr_ (10).webp"
-  },
-  {
     "id": "Sun City/scr_ (11).webp",
     "path": "img/Sun City/scr_ (11).webp",
     "label": "scr_ (11).webp"
@@ -2705,16 +2685,6 @@ export const commentImages = Object.freeze([
     "id": "Sun City/scr_ (15).webp",
     "path": "img/Sun City/scr_ (15).webp",
     "label": "scr_ (15).webp"
-  },
-  {
-    "id": "Sun City/scr_ (16).webp",
-    "path": "img/Sun City/scr_ (16).webp",
-    "label": "scr_ (16).webp"
-  },
-  {
-    "id": "Sun City/scr_ (17).webp",
-    "path": "img/Sun City/scr_ (17).webp",
-    "label": "scr_ (17).webp"
   },
   {
     "id": "Sun City/scr_ (18).webp",
@@ -2750,11 +2720,6 @@ export const commentImages = Object.freeze([
     "id": "Sun City/scr_ (23).webp",
     "path": "img/Sun City/scr_ (23).webp",
     "label": "scr_ (23).webp"
-  },
-  {
-    "id": "Sun City/scr_ (24).webp",
-    "path": "img/Sun City/scr_ (24).webp",
-    "label": "scr_ (24).webp"
   },
   {
     "id": "Sun City/scr_ (25).webp",
@@ -2860,11 +2825,6 @@ export const commentImages = Object.freeze([
     "id": "Sun City/scr_ (43).webp",
     "path": "img/Sun City/scr_ (43).webp",
     "label": "scr_ (43).webp"
-  },
-  {
-    "id": "Sun City/scr_ (44).webp",
-    "path": "img/Sun City/scr_ (44).webp",
-    "label": "scr_ (44).webp"
   },
   {
     "id": "Sun City/scr_ (5).webp",

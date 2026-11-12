@@ -1,7 +1,7 @@
 import { CATEGORIES, COUNTRIES, readCatalog, visibleUnits, searchUnits, rangeColor, toTenths, parseBrQuery, unitsAtBr } from "./brc-model.js?v=variable-highlight-20261112";
-import { createArmamentPanel } from "./brc-armaments.js?v=mitl-rules-20261112";
+import { createArmamentPanel } from "./brc-armaments.js?v=webp-assets-20261112";
 import { validateVariableRatings, hasVariableBr } from "./brc-ratings.js?v=variable-highlight-20261112";
-import { setVehicleImage, imagePendingText } from "./vehicle-images.js?v=20261108";
+import { setVehicleImage, imagePendingText } from "./vehicle-images.js?v=webp-assets-20261112";
 
 const copy = {
   en: {

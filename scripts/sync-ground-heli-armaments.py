@@ -99,7 +99,7 @@ def parse_ground(document, wiki_id):
                         weapons[key]['belt'] = [
                             {'type': pattern[i % len(pattern)],
                              'iconSource': belt_sources[i % len(belt_sources)],
-                             'icon': '/icon/weapon-wiki/' + belt_sources[i % len(belt_sources)].rsplit('/', 1)[-1]}
+                             'icon': '/icon/weapon-wiki/' + air.local_icon_name(belt_sources[i % len(belt_sources)])}
                             for i in range(count)]
                     else:
                         unresolved.append({'weapon': title, 'ammunition': name, 'reason': 'Missing ordered belt icons'})
@@ -201,7 +201,7 @@ def main():
         list(executor.map(air.download_icon, icons))
     for weapon in data['weapons'].values():
         if weapon.get('iconSource'):
-            weapon['icon'] = '/icon/weapon-wiki/' + weapon['iconSource'].rsplit('/', 1)[-1]
+            weapon['icon'] = '/icon/weapon-wiki/' + air.local_icon_name(weapon['iconSource'])
     (cache / 'report.json').write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
     output = ROOT / 'assets/data/ground-heli-armaments.json'
     temporary = output.with_suffix('.json.tmp')
