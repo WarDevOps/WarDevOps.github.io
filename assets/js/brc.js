@@ -1,5 +1,5 @@
 import { CATEGORIES, COUNTRIES, readCatalog, visibleUnits, searchUnits, rangeColor, toTenths, parseBrQuery, unitsAtBr } from "./brc-model.js?v=variable-highlight-20261112";
-import { createArmamentPanel } from "./brc-armaments.js?v=wiki-refresh-20261112";
+import { createArmamentPanel } from "./brc-armaments.js?v=mitl-rules-20261112";
 import { validateVariableRatings, hasVariableBr } from "./brc-ratings.js?v=variable-highlight-20261112";
 import { setVehicleImage, imagePendingText } from "./vehicle-images.js?v=20261108";
 
@@ -369,7 +369,7 @@ async function loadCatalog() {
   try {
     // Deliberately share the Tier List catalog and its BR values; no BRC-specific copy.
     const [catalog, ratings] = await Promise.all([
-      "../data/tier-units.json?v=wiki-refresh-20261112", "../data/brc-variable-br.json?v=variable-highlight-20261112",
+      "../data/tier-units.json?v=wiki-refresh-20261112", "../data/brc-variable-br.json?v=mitl-rules-20261112",
     ].map(async path => {
       const response = await fetch(new URL(path, import.meta.url));
       if (!response.ok) throw new Error(`Catalog HTTP ${response.status}`);

@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "status": "testing",
-  "source": "https://arca.live/b/gaijin/187635726",
-  "reviewedOn": "2026-11-01",
-  "notes": "User-supplied test changes. Only the highest selected weapon penalty applies, capped per mode; quantities do not affect BR. Penalties are integer BR steps (three steps = 1.0). Nuke, killstreak and naval entries excluded. Aircraft phase only.",
+  "status": "current",
+  "source": "https://warthunder.com/en/game/changelog/current/1915",
+  "reviewedOn": "2026-11-12",
+  "notes": "Official Eagle's Shadow custom BR weapon thresholds. Highest selected penalty wins, capped per mode. Penalties use integer BR steps. Only the listed mode is affected. Existing reviewed J-22 weapon aliases are retained.",
   "additionalWeapons": {
     "mig-21_bison": [
       "w-cff6eb8beb4f77da"
@@ -92,12 +92,434 @@
           "w-575ec887541d3581": 2
         }
       }
+    },
+    "heli:ah_60_iaf": {
+      "grb": {
+        "base": 11.3,
+        "max": 13.7,
+        "penalties": {
+          "w-09dce8ab03f09ea6": 5,
+          "w-ba2ae136e2c9ef06": 7
+        }
+      }
+    },
+    "heli:ah_64d_i_saraph": {
+      "grb": {
+        "base": 13.0,
+        "max": 13.7,
+        "penalties": {
+          "w-001c19366e352d68": 2
+        }
+      }
+    },
+    "heli:tiger_had_france": {
+      "grb": {
+        "base": 10.7,
+        "max": 11.3,
+        "penalties": {
+          "w-b785e443db120426": 2
+        }
+      }
+    },
+    "heli:tiger_hac_france": {
+      "grb": {
+        "base": 10.7,
+        "max": 13,
+        "penalties": {
+          "w-a8ec4c45ff0b107e": 7
+        }
+      }
+    },
+    "heli:tiger_had_block2_france": {
+      "grb": {
+        "base": 13.0,
+        "max": 13.7,
+        "penalties": {
+          "w-ba2ae136e2c9ef06": 2
+        }
+      }
+    },
+    "heli:a_129_a": {
+      "grb": {
+        "base": 10.3,
+        "max": 11,
+        "penalties": {
+          "w-64b1c1b8b956ec09": 2
+        }
+      }
+    },
+    "heli:a_129_cbt": {
+      "grb": {
+        "base": 10.3,
+        "max": 11.3,
+        "penalties": {
+          "w-64b1c1b8b956ec09": 3
+        }
+      }
+    },
+    "heli:a_129_d": {
+      "grb": {
+        "base": 11.3,
+        "max": 13.7,
+        "penalties": {
+          "w-09dce8ab03f09ea6": 5,
+          "w-ba2ae136e2c9ef06": 7
+        }
+      }
+    },
+    "heli:z_9w": {
+      "grb": {
+        "base": 9.7,
+        "max": 10.7,
+        "penalties": {
+          "w-d6b9f1ee548f8967": 3
+        }
+      }
+    },
+    "heli:z_9wa": {
+      "grb": {
+        "base": 10.3,
+        "max": 11.3,
+        "penalties": {
+          "w-d6b9f1ee548f8967": 2,
+          "w-6c4095889095ec3b": 3
+        }
+      }
+    },
+    "heli:ah_1w": {
+      "grb": {
+        "base": 10.3,
+        "max": 11,
+        "penalties": {
+          "w-071d453c2e0841e1": 2,
+          "w-52dd65f9e41af4ee": 2,
+          "w-64b1c1b8b956ec09": 2,
+          "w-947abae2679ff026": 2
+        }
+      }
+    },
+    "heli:ah_1w_china": {
+      "grb": {
+        "base": 10.3,
+        "max": 11,
+        "penalties": {
+          "w-071d453c2e0841e1": 2,
+          "w-52dd65f9e41af4ee": 2,
+          "w-64b1c1b8b956ec09": 2,
+          "w-947abae2679ff026": 2
+        }
+      }
+    },
+    "heli:z_19": {
+      "grb": {
+        "base": 11.0,
+        "max": 12.3,
+        "penalties": {
+          "w-d6b9f1ee548f8967": 4
+        }
+      }
+    },
+    "heli:z_19e": {
+      "grb": {
+        "base": 11.0,
+        "max": 12.3,
+        "penalties": {
+          "w-d6b9f1ee548f8967": 4
+        }
+      }
+    },
+    "heli:z_10me": {
+      "grb": {
+        "base": 13.3,
+        "max": 13.7,
+        "penalties": {
+          "w-e587205dc88ddbab": 1
+        }
+      }
+    },
+    "heli:lynx_ah_mk1": {
+      "grb": {
+        "base": 10.3,
+        "max": 11.3,
+        "penalties": {
+          "w-a5f6715ffc5bd82e": 1,
+          "w-64b1c1b8b956ec09": 3
+        }
+      }
+    },
+    "heli:g_lynx": {
+      "grb": {
+        "base": 10.3,
+        "max": 11.3,
+        "penalties": {
+          "w-a5f6715ffc5bd82e": 1,
+          "w-64b1c1b8b956ec09": 3
+        }
+      }
+    },
+    "heli:aw_159": {
+      "grb": {
+        "base": 12.0,
+        "max": 13.7,
+        "penalties": {
+          "w-15bf1ac188f97cd5": 2,
+          "w-001c19366e352d68": 5
+        }
+      }
+    },
+    "heli:mi_35p": {
+      "grb": {
+        "base": 11.3,
+        "max": 12,
+        "penalties": {
+          "w-91c33c30f392fb94": 2
+        }
+      }
+    },
+    "heli:mi_28nm": {
+      "grb": {
+        "base": 13.3,
+        "max": 13.7,
+        "penalties": {
+          "w-681d46c9aab303c3": 1
+        }
+      }
+    },
+    "heli:h145m": {
+      "grb": {
+        "base": 13.0,
+        "max": 13.7,
+        "penalties": {
+          "w-ba2ae136e2c9ef06": 2
+        }
+      }
+    },
+    "heli:tiger_uht": {
+      "grb": {
+        "base": 10.7,
+        "max": 13,
+        "penalties": {
+          "w-03ebf33dc4fb37bf": 7
+        }
+      }
+    },
+    "heli:ah_64e": {
+      "grb": {
+        "base": 13.3,
+        "max": 13.7,
+        "penalties": {
+          "w-001c19366e352d68": 1
+        }
+      }
+    },
+    "heli:ah_64e_britain": {
+      "grb": {
+        "base": 13.3,
+        "max": 13.7,
+        "penalties": {
+          "w-001c19366e352d68": 1
+        }
+      }
+    },
+    "heli:ah_64e_china": {
+      "grb": {
+        "base": 13.3,
+        "max": 13.7,
+        "penalties": {
+          "w-001c19366e352d68": 1
+        }
+      }
+    },
+    "heli:ah_64e_netherlands": {
+      "grb": {
+        "base": 13.3,
+        "max": 13.7,
+        "penalties": {
+          "w-001c19366e352d68": 1
+        }
+      }
+    },
+    "heli:ah_64e_indonesia": {
+      "grb": {
+        "base": 13.3,
+        "max": 13.7,
+        "penalties": {
+          "w-001c19366e352d68": 1
+        }
+      }
+    },
+    "air:yak_141": {
+      "arb": {
+        "base": 12.7,
+        "max": 13.3,
+        "penalties": {
+          "w-34b1acf401bb8938": 2
+        }
+      },
+      "grb": {
+        "base": 11.7,
+        "max": 12.3,
+        "penalties": {
+          "w-34b1acf401bb8938": 2
+        }
+      }
+    },
+    "air:su_25tm": {
+      "arb": {
+        "base": 11.3,
+        "max": 12.7,
+        "penalties": {
+          "w-0a7b15499700bfe7": 1,
+          "w-0c3035423bf7154a": 1,
+          "w-2600a6af74f1e718": 1,
+          "w-47063594cfe8fea4": 1,
+          "w-61a9334ce32a7ccc": 1,
+          "w-8540fef12e859073": 1,
+          "w-8d4018fc2f3bf7ed": 1,
+          "w-9c0772354769dee3": 1,
+          "w-d52b423b858d8443": 1,
+          "w-dfd09940046db382": 1,
+          "w-e7ea5cd057a8cb24": 1,
+          "w-34b1acf401bb8938": 4
+        }
+      },
+      "grb": {
+        "base": 11.7,
+        "max": 13,
+        "penalties": {
+          "w-0a7b15499700bfe7": 1,
+          "w-0c3035423bf7154a": 1,
+          "w-2600a6af74f1e718": 1,
+          "w-47063594cfe8fea4": 1,
+          "w-61a9334ce32a7ccc": 1,
+          "w-8540fef12e859073": 1,
+          "w-8d4018fc2f3bf7ed": 1,
+          "w-9c0772354769dee3": 1,
+          "w-d52b423b858d8443": 1,
+          "w-dfd09940046db382": 1,
+          "w-e7ea5cd057a8cb24": 1,
+          "w-34b1acf401bb8938": 4
+        }
+      }
+    },
+    "air:a_10a_early": {
+      "arb": {
+        "base": 9.0,
+        "max": 10.3,
+        "penalties": {
+          "w-071d453c2e0841e1": 4,
+          "w-3db9e47b607077d1": 4,
+          "w-ba665621c2721418": 4
+        }
+      },
+      "grb": {
+        "base": 9.7,
+        "max": 11,
+        "penalties": {
+          "w-071d453c2e0841e1": 4,
+          "w-3db9e47b607077d1": 4,
+          "w-ba665621c2721418": 4
+        }
+      }
+    },
+    "air:saab_f35_wdns": {
+      "arb": {
+        "base": 9.7,
+        "max": 10.3,
+        "penalties": {
+          "w-deaf9814d57f9eaa": 2
+        }
+      },
+      "grb": {
+        "base": 9.3,
+        "max": 10,
+        "penalties": {
+          "w-deaf9814d57f9eaa": 2
+        }
+      }
+    },
+    "air:buccaneer_s2b": {
+      "arb": {
+        "base": 9.7,
+        "max": 10.3,
+        "penalties": {
+          "w-071d453c2e0841e1": 2,
+          "w-3720bf9760e03406": 2,
+          "w-510434f34e8d63d5": 2,
+          "w-b9a0933ccf196c6d": 2,
+          "w-f56acd04b392d9c8": 2
+        }
+      },
+      "grb": {
+        "base": 11.0,
+        "max": 11.7,
+        "penalties": {
+          "w-071d453c2e0841e1": 2,
+          "w-3720bf9760e03406": 2,
+          "w-510434f34e8d63d5": 2,
+          "w-b9a0933ccf196c6d": 2,
+          "w-f56acd04b392d9c8": 2
+        }
+      }
+    },
+    "air:f-5e_switzerland": {
+      "arb": {
+        "base": 11.0,
+        "max": 11.7,
+        "penalties": {
+          "w-bf44510c1d8a271c": 1,
+          "w-c22a35715ef91669": 2,
+          "w-edea1141434ebc74": 2
+        }
+      },
+      "grb": {
+        "base": 11.7,
+        "max": 12.3,
+        "penalties": {
+          "w-bf44510c1d8a271c": 1,
+          "w-c22a35715ef91669": 2,
+          "w-edea1141434ebc74": 2
+        }
+      }
+    },
+    "air:f_2a_adtw": {
+      "arb": {
+        "base": 13.0,
+        "max": 14,
+        "penalties": {
+          "w-49d0e9ba89c6e009": 2,
+          "w-cf0b07834b163ce6": 2,
+          "w-eb721d48241060b2": 2,
+          "w-eb8cc80d0a0e4458": 2,
+          "w-8e1271839a1df89a": 3
+        }
+      },
+      "grb": {
+        "base": 12.0,
+        "max": 13,
+        "penalties": {
+          "w-49d0e9ba89c6e009": 2,
+          "w-cf0b07834b163ce6": 2,
+          "w-eb721d48241060b2": 2,
+          "w-eb8cc80d0a0e4458": 2,
+          "w-8e1271839a1df89a": 3
+        }
+      }
+    },
+    "air:f3h-2": {
+      "arb": {
+        "base": 9.0,
+        "max": 9.3,
+        "penalties": {
+          "w-0eae2a1fc33321a2": 1
+        }
+      }
     }
   },
   "applicability": {
-    "source": "https://forum.warthunder.com/t/war-thunder-eagles-shadow-changelog/364110/1",
+    "source": "https://warthunder.com/en/game/changelog/current/1915",
     "checkedOn": "2026-11-12",
-    "notes": "Official Custom Battle Ratings applicability. Highlighting is independent of whether per-weapon calculation rules have been entered. F3H-2 is listed for Air Battles only.",
+    "notes": "Official aircraft and helicopter custom BR applicability; all listed modes have calculation rules.",
     "units": {
       "air:j_22m1a": [
         "arb",

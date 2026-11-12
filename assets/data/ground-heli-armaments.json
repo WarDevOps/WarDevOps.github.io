@@ -24739,18 +24739,20 @@
     "w-ba2ae136e2c9ef06": {
       "name": "Spike ER (MITL)",
       "type": "agm",
-      "guidance": "IR",
+      "guidance": "IR+MITL",
       "source": "https://wiki.warthunder.com/collections/weapon/spike",
       "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/atgm_type_spike_er_mitl_x2.png",
-      "icon": "/icon/weapon-wiki/atgm_type_spike_er_mitl_x2.png"
+      "icon": "/icon/weapon-wiki/atgm_type_spike_er_mitl_x2.png",
+      "manInTheLoop": true
     },
     "w-001c19366e352d68": {
       "name": "Spike NLOS (MITL)",
       "type": "agm",
-      "guidance": "IR",
+      "guidance": "IR+MITL",
       "source": "https://wiki.warthunder.com/unit/aw_159",
       "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/atgm_type_spike_nlos_mitl_x2.png",
-      "icon": "/icon/weapon-wiki/atgm_type_spike_nlos_mitl_x2.png"
+      "icon": "/icon/weapon-wiki/atgm_type_spike_nlos_mitl_x2.png",
+      "manInTheLoop": true
     },
     "ammo-8c105942d49e331e": {
       "name": "FS Mk.3",
@@ -24771,6 +24773,24 @@
       "source": "https://wiki.warthunder.com/unit/uk_olifant_optimering",
       "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/apdsfs_tank.png",
       "icon": "/icon/weapon-wiki/apdsfs_tank.png"
+    },
+    "w-e587205dc88ddbab": {
+      "name": "CM-502KG (MITL)",
+      "type": "agm",
+      "guidance": "IR+IOG+GNSS+MITL",
+      "source": "https://wiki.warthunder.com/unit/z_10me",
+      "manInTheLoop": true,
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_air_to_uni_group_x4.png",
+      "icon": "/icon/weapon-wiki/missile_air_to_uni_group_x4.png"
+    },
+    "w-681d46c9aab303c3": {
+      "name": "LMUR \"Izdeliye 305\" (MITL)",
+      "type": "agm",
+      "guidance": "IR+IOG+GNSS+MITL",
+      "source": "https://wiki.warthunder.com/unit/mi_28nm",
+      "manInTheLoop": true,
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_air_to_uni_large.png",
+      "icon": "/icon/weapon-wiki/missile_air_to_uni_large.png"
     }
   },
   "ground": {
@@ -35615,7 +35635,8 @@
         "w-64b1c1b8b956ec09",
         "w-947abae2679ff026"
       ],
-      "checkedAt": "2026-11-11T19:24:44Z"
+      "checkedAt": "2026-11-11T19:24:44Z",
+      "checkedOn": "2026-11-12"
     },
     "ah_64d": {
       "status": "verified",
@@ -35660,6 +35681,7 @@
     "ah_64e": {
       "status": "verified",
       "weapons": [
+        "w-001c19366e352d68",
         "w-15bf1ac188f97cd5",
         "w-52dd65f9e41af4ee",
         "w-8c8ef41b36a9c991",
@@ -35667,7 +35689,8 @@
         "w-a5f6715ffc5bd82e",
         "w-b785e443db120426",
         "w-e500c42e1bcd7228"
-      ]
+      ],
+      "checkedOn": "2026-11-12"
     },
     "bo_105pah1": {
       "status": "verified",
@@ -35727,7 +35750,8 @@
         "w-a5f6715ffc5bd82e",
         "w-c0587f15256d2a6b"
       ],
-      "checkedAt": "2026-11-11T19:24:44Z"
+      "checkedAt": "2026-11-11T19:24:44Z",
+      "checkedOn": "2026-11-12"
     },
     "mi_24p_german": {
       "status": "verified",
@@ -35844,7 +35868,8 @@
         "w-91c33c30f392fb94",
         "w-d24f04949b53dc4b"
       ],
-      "checkedAt": "2026-11-11T19:24:44Z"
+      "checkedAt": "2026-11-11T19:24:44Z",
+      "checkedOn": "2026-11-12"
     },
     "ah_2_rooivalk": {
       "status": "verified",
@@ -35860,7 +35885,8 @@
         "w-64b1c1b8b956ec09",
         "w-a5f6715ffc5bd82e"
       ],
-      "checkedAt": "2026-11-11T19:24:44Z"
+      "checkedAt": "2026-11-11T19:24:44Z",
+      "checkedOn": "2026-11-12"
     },
     "lynx_ah_mk1": {
       "status": "verified",
@@ -35869,7 +35895,8 @@
         "w-64b1c1b8b956ec09",
         "w-a5f6715ffc5bd82e"
       ],
-      "checkedAt": "2026-11-11T19:24:44Z"
+      "checkedAt": "2026-11-11T19:24:44Z",
+      "checkedOn": "2026-11-12"
     },
     "super_hind_mk3": {
       "status": "verified",
@@ -35887,9 +35914,11 @@
         "w-0a87868298102589",
         "w-0e1cc42abc816096",
         "w-4012fd30eefdaee6",
+        "w-681d46c9aab303c3",
         "w-91c33c30f392fb94",
         "w-d24f04949b53dc4b"
-      ]
+      ],
+      "checkedOn": "2026-11-12"
     },
     "ah_mk1": {
       "status": "verified",
@@ -35934,6 +35963,7 @@
     "ah_64e_britain": {
       "status": "verified",
       "weapons": [
+        "w-001c19366e352d68",
         "w-15bf1ac188f97cd5",
         "w-52dd65f9e41af4ee",
         "w-8c8ef41b36a9c991",
@@ -35941,7 +35971,8 @@
         "w-a5f6715ffc5bd82e",
         "w-b785e443db120426",
         "w-e500c42e1bcd7228"
-      ]
+      ],
+      "checkedOn": "2026-11-12"
     },
     "z_11wa": {
       "status": "verified",
@@ -35953,6 +35984,7 @@
     "ah_64e_indonesia": {
       "status": "verified",
       "weapons": [
+        "w-001c19366e352d68",
         "w-15bf1ac188f97cd5",
         "w-52dd65f9e41af4ee",
         "w-8c8ef41b36a9c991",
@@ -35960,7 +35992,8 @@
         "w-a5f6715ffc5bd82e",
         "w-b785e443db120426",
         "w-e500c42e1bcd7228"
-      ]
+      ],
+      "checkedOn": "2026-11-12"
     },
     "mi_35p_indonesia": {
       "status": "verified",
@@ -35996,7 +36029,8 @@
         "w-a150e2d241c3d61f",
         "w-d6b9f1ee548f8967"
       ],
-      "checkedAt": "2026-11-11T19:24:44Z"
+      "checkedAt": "2026-11-11T19:24:44Z",
+      "checkedOn": "2026-11-12"
     },
     "z_9wa": {
       "status": "verified",
@@ -36006,7 +36040,8 @@
         "w-a150e2d241c3d61f",
         "w-d6b9f1ee548f8967"
       ],
-      "checkedAt": "2026-11-11T19:24:44Z"
+      "checkedAt": "2026-11-11T19:24:44Z",
+      "checkedOn": "2026-11-12"
     },
     "z_19": {
       "status": "verified",
@@ -36014,7 +36049,8 @@
         "w-6c4095889095ec3b",
         "w-d6b9f1ee548f8967"
       ],
-      "checkedAt": "2026-11-11T19:24:44Z"
+      "checkedAt": "2026-11-11T19:24:44Z",
+      "checkedOn": "2026-11-12"
     },
     "z_19e": {
       "status": "verified",
@@ -36022,7 +36058,8 @@
         "w-193e21898c0bd99d",
         "w-d6b9f1ee548f8967"
       ],
-      "checkedAt": "2026-11-11T19:24:44Z"
+      "checkedAt": "2026-11-11T19:24:44Z",
+      "checkedOn": "2026-11-12"
     },
     "z_10": {
       "status": "verified",
@@ -36046,7 +36083,8 @@
         "w-64b1c1b8b956ec09",
         "w-947abae2679ff026"
       ],
-      "checkedAt": "2026-11-11T19:24:44Z"
+      "checkedAt": "2026-11-11T19:24:44Z",
+      "checkedOn": "2026-11-12"
     },
     "mi_35m_pakistan": {
       "status": "verified",
@@ -36071,8 +36109,10 @@
         "w-6c4095889095ec3b",
         "w-a1cfe29f1b155914",
         "w-bb8245896a5b1b7f",
-        "w-d6b9f1ee548f8967"
-      ]
+        "w-d6b9f1ee548f8967",
+        "w-e587205dc88ddbab"
+      ],
+      "checkedOn": "2026-11-12"
     },
     "mi_24d_hungary": {
       "status": "verified",
@@ -36089,6 +36129,7 @@
     "ah_64e_china": {
       "status": "verified",
       "weapons": [
+        "w-001c19366e352d68",
         "w-15bf1ac188f97cd5",
         "w-52dd65f9e41af4ee",
         "w-8c8ef41b36a9c991",
@@ -36096,7 +36137,8 @@
         "w-a5f6715ffc5bd82e",
         "w-b785e443db120426",
         "w-e500c42e1bcd7228"
-      ]
+      ],
+      "checkedOn": "2026-11-12"
     },
     "t_129_atak": {
       "status": "verified",
@@ -36145,7 +36187,8 @@
         "w-64b1c1b8b956ec09",
         "w-f42f0270f35132f2"
       ],
-      "checkedAt": "2026-11-11T19:24:44Z"
+      "checkedAt": "2026-11-11T19:24:44Z",
+      "checkedOn": "2026-11-12"
     },
     "mi_24p_hungary": {
       "status": "verified",
@@ -36163,7 +36206,8 @@
         "w-a25d363488f4ff96",
         "w-a5f6715ffc5bd82e"
       ],
-      "checkedAt": "2026-11-11T19:24:44Z"
+      "checkedAt": "2026-11-11T19:24:44Z",
+      "checkedOn": "2026-11-12"
     },
     "sa_341f": {
       "status": "verified",
@@ -36183,7 +36227,8 @@
         "w-a5f6715ffc5bd82e",
         "w-ba2ae136e2c9ef06"
       ],
-      "checkedAt": "2026-11-11T19:24:44Z"
+      "checkedAt": "2026-11-11T19:24:44Z",
+      "checkedOn": "2026-11-12"
     },
     "sa_342m": {
       "status": "verified",
@@ -36221,7 +36266,8 @@
         "w-a8ec4c45ff0b107e",
         "w-c0587f15256d2a6b"
       ],
-      "checkedAt": "2026-11-11T19:24:44Z"
+      "checkedAt": "2026-11-11T19:24:44Z",
+      "checkedOn": "2026-11-12"
     },
     "tiger_had_france": {
       "status": "verified",
@@ -36231,7 +36277,8 @@
         "w-b785e443db120426",
         "w-c0587f15256d2a6b"
       ],
-      "checkedAt": "2026-11-11T19:24:44Z"
+      "checkedAt": "2026-11-11T19:24:44Z",
+      "checkedOn": "2026-11-12"
     },
     "ah_64d_netherlands": {
       "status": "verified",
@@ -36252,14 +36299,18 @@
       "status": "verified",
       "weapons": [
         "w-09dce8ab03f09ea6",
+        "w-15bf1ac188f97cd5",
         "w-a25d363488f4ff96",
         "w-a5f6715ffc5bd82e",
-        "w-b785e443db120426"
-      ]
+        "w-b785e443db120426",
+        "w-ba2ae136e2c9ef06"
+      ],
+      "checkedOn": "2026-11-12"
     },
     "ah_64e_netherlands": {
       "status": "verified",
       "weapons": [
+        "w-001c19366e352d68",
         "w-15bf1ac188f97cd5",
         "w-52dd65f9e41af4ee",
         "w-8c8ef41b36a9c991",
@@ -36267,7 +36318,8 @@
         "w-a5f6715ffc5bd82e",
         "w-b785e443db120426",
         "w-e500c42e1bcd7228"
-      ]
+      ],
+      "checkedOn": "2026-11-12"
     },
     "hkp9a_cb3_fc": {
       "status": "verified",
@@ -36330,10 +36382,12 @@
     "ah_64d_i_saraph": {
       "status": "verified",
       "weapons": [
+        "w-001c19366e352d68",
         "w-15bf1ac188f97cd5",
         "w-a5f6715ffc5bd82e",
         "w-b785e443db120426"
-      ]
+      ],
+      "checkedOn": "2026-11-12"
     },
     "aw_159": {
       "status": "verified",
@@ -36342,7 +36396,8 @@
         "w-15bf1ac188f97cd5",
         "w-9132a75e07c27908"
       ],
-      "checkedAt": "2026-11-11T19:24:44Z"
+      "checkedAt": "2026-11-11T19:24:44Z",
+      "checkedOn": "2026-11-12"
     },
     "ah_60_iaf": {
       "status": "verified",
@@ -36354,14 +36409,17 @@
         "w-b785e443db120426",
         "w-ba2ae136e2c9ef06"
       ],
-      "checkedAt": "2026-11-11T19:24:44Z"
+      "checkedAt": "2026-11-11T19:24:44Z",
+      "checkedOn": "2026-11-12"
     },
     "h145m": {
       "status": "verified",
       "weapons": [
         "w-09dce8ab03f09ea6",
-        "w-b0603bc1d8ce63b1"
-      ]
+        "w-b0603bc1d8ce63b1",
+        "w-ba2ae136e2c9ef06"
+      ],
+      "checkedOn": "2026-11-12"
     },
     "aw_249_pre_serie": {
       "status": "verified",
@@ -36374,5 +36432,6 @@
       "checkedAt": "2026-11-11T19:24:44Z"
     }
   },
-  "lastPartialRefreshAt": "2026-11-11T19:24:44Z"
+  "lastPartialRefreshAt": "2026-11-11T19:24:44Z",
+  "updatedAt": "2026-11-12"
 }

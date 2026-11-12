@@ -2269,6 +2269,14 @@
       "source": "https://wiki.warthunder.com/unit/su_15tm",
       "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_air_to_air_ir_large.png",
       "icon": "/icon/weapon-wiki/missile_air_to_air_ir_large.png"
+    },
+    "w-bf44510c1d8a271c": {
+      "name": "Flz Lwf 63/90",
+      "type": "aam",
+      "guidance": "IR",
+      "source": "https://wiki.warthunder.com/unit/f-5e_switzerland",
+      "iconSource": "https://static.encyclopedia.warthunder.com/gui_skin/missile_type_f_air_to_air.png",
+      "icon": "/icon/weapon-wiki/missile_type_f_air_to_air.png"
     }
   },
   "aircraft": {
@@ -2379,7 +2387,8 @@
         "w-3db9e47b607077d1",
         "w-ba665621c2721418"
       ],
-      "checkedAt": "2026-11-11T19:24:44Z"
+      "checkedAt": "2026-11-11T19:24:44Z",
+      "checkedOn": "2026-11-12"
     },
     "a_10a_late": {
       "status": "verified",
@@ -3074,7 +3083,8 @@
         "w-b9a0933ccf196c6d",
         "w-f56acd04b392d9c8"
       ],
-      "checkedAt": "2026-11-11T19:24:44Z"
+      "checkedAt": "2026-11-11T19:24:44Z",
+      "checkedOn": "2026-11-12"
     },
     "bv-138c-1": {
       "status": "verified",
@@ -3769,8 +3779,12 @@
       "weapons": [
         "w-3008936ab0f9acc6",
         "w-a7c26eaa744bd9d8",
-        "w-ba665621c2721418"
-      ]
+        "w-ba665621c2721418",
+        "w-bf44510c1d8a271c",
+        "w-c22a35715ef91669",
+        "w-edea1141434ebc74"
+      ],
+      "checkedOn": "2026-11-12"
     },
     "f-5t_thailand": {
       "status": "verified",
@@ -4015,7 +4029,8 @@
         "w-0eae2a1fc33321a2",
         "w-be26bfa948b3d877"
       ],
-      "checkedAt": "2026-11-11T19:24:44Z"
+      "checkedAt": "2026-11-11T19:24:44Z",
+      "checkedOn": "2026-11-12"
     },
     "f4d_1": {
       "status": "verified",
@@ -4785,7 +4800,8 @@
         "w-eb8cc80d0a0e4458",
         "w-f3845c82c8f581e1"
       ],
-      "checkedAt": "2026-11-11T19:24:44Z"
+      "checkedAt": "2026-11-11T19:24:44Z",
+      "checkedOn": "2026-11-12"
     },
     "f_47n_25_re_china": {
       "status": "verified",
@@ -6085,7 +6101,8 @@
         "w-ba665621c2721418",
         "w-c3ecd962eecd8223"
       ],
-      "checkedAt": "2026-11-11T19:24:44Z"
+      "checkedAt": "2026-11-11T19:24:44Z",
+      "checkedOn": "2026-11-12"
     },
     "j_7_mk2": {
       "status": "verified",
@@ -7131,7 +7148,7 @@
         "w-e7dd58b06e016504",
         "w-facdd7439aab0dc0"
       ],
-      "checkedOn": "2026-11-08"
+      "checkedOn": "2026-11-12"
     },
     "mig-21_f13": {
       "status": "verified",
@@ -8469,7 +8486,8 @@
         "w-be26bfa948b3d877",
         "w-deaf9814d57f9eaa"
       ],
-      "checkedAt": "2026-11-11T19:24:44Z"
+      "checkedAt": "2026-11-11T19:24:44Z",
+      "checkedOn": "2026-11-12"
     },
     "saab_j21a_1": {
       "status": "verified",
@@ -8582,7 +8600,7 @@
         "w-e9208dd8094b0a54",
         "w-fd57a410bb9cc27c"
       ],
-      "checkedOn": "2026-11-08"
+      "checkedOn": "2026-11-12"
     },
     "saab_jas39c": {
       "status": "verified",
@@ -9290,7 +9308,8 @@
         "w-e342bc555c774336",
         "w-f2a2e1ba61e69fb1"
       ],
-      "checkedAt": "2026-11-11T19:24:44Z"
+      "checkedAt": "2026-11-11T19:24:44Z",
+      "checkedOn": "2026-11-12"
     },
     "su_25t": {
       "status": "verified",
@@ -9334,7 +9353,8 @@
         "w-e7ea5cd057a8cb24",
         "w-f2a2e1ba61e69fb1"
       ],
-      "checkedAt": "2026-11-11T19:24:44Z"
+      "checkedAt": "2026-11-11T19:24:44Z",
+      "checkedOn": "2026-11-12"
     },
     "su_27": {
       "status": "verified",
@@ -10054,10 +10074,12 @@
         "w-0a7b15499700bfe7",
         "w-0c3035423bf7154a",
         "w-2600a6af74f1e718",
+        "w-34b1acf401bb8938",
         "w-8e765660e2d3b731",
         "w-9c0772354769dee3",
         "w-a923fba9ef69e1bf"
-      ]
+      ],
+      "checkedOn": "2026-11-12"
     },
     "yak_1_litvyak": {
       "status": "verified",
@@ -10257,5 +10279,6 @@
       ]
     }
   },
-  "lastPartialRefreshAt": "2026-11-11T19:24:44Z"
+  "lastPartialRefreshAt": "2026-11-11T19:24:44Z",
+  "updatedAt": "2026-11-12"
 }

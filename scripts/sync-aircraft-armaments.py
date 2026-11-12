@@ -171,6 +171,9 @@ def parse_aircraft(document, wiki_id):
         links = details.xpath(".//a[starts-with(@href, '/collections/weapon/')]/@href")
         weapon = {"name": short_name, "type": kind, "guidance": method,
                   "source": WIKI + links[0] if links else f"{WIKI}/unit/{wiki_id}"}
+        if "(MITL)" in name:
+            weapon["manInTheLoop"] = True
+            weapon["guidance"] = method if "MITL" in method.split("+") else method + "+MITL"
         previous = weapons.get(weapon_id, {})
         icon = choose_icon(previous.get("iconSource"), *button.xpath("ancestor::tr[1]//img/@src"))
         if icon:

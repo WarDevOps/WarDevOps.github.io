@@ -30,7 +30,7 @@ air.TYPE_OVERRIDES.update({name: 'agm' for name in [
     'AS.11 missiles', 'AS.12 missiles', '9M14M Malyutka missiles',
     'HOT-1 missiles', 'HOT-2 TOW missiles', '9М17М Falanga missiles',
     '9M114 Shturm missiles', '9M120 Ataka missiles', '9M120-1 Ataka missiles',
-    '9M123M Khrizantema-VM missiles', 'LMUR "Izdeliye 305" missiles',
+    '9M123M Khrizantema-VM missiles', 'LMUR "Izdeliye 305" missiles', 'LMUR "Izdeliye 305" (MITL) missiles',
     'HJ-8A missiles', 'HJ-8C missiles', 'HJ-8E missiles', 'HJ-8H missiles',
     'L-UMTAS missiles', '9M14-2 Malyutka-2 missiles', 'RB 53 Bantam missiles',
     'RB 52 A missiles', 'RB 55B Heli TOW missiles', 'RB 55C Heli TOW missiles',

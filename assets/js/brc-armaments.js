@@ -3,9 +3,9 @@ const labels = {
   en: {
     title: "GUIDED WEAPONS", ammunition: "MAIN-GUN AMMUNITION", ammoEmpty: "No main-gun ammunition to display.", loading: "Loading weapons…", unknown: "Weapon information unverified.",
     partial: "Some weapon information is unverified.", empty: "No guided weapons to display in this mode.",
-    note: "Each weapon shows that alone. Only the highest selected weapon penalty applies, capped at the aircraft’s mode maximum; quantity is ignored. Availability does not guarantee a valid loadout.",
+    note: "Each weapon shows that alone. Only the highest selected weapon penalty applies, capped at the vehicle’s mode maximum; quantity is ignored. Availability does not guarantee a valid loadout.",
     previous: "Previous", next: "Next", retry: "Retry", page: "Weapon page",
-    variableNote: "Each weapon shows that alone. Only the highest selected weapon penalty applies, capped at the aircraft’s mode maximum; quantity is ignored. Availability does not guarantee a valid loadout.",
+    variableNote: "Each weapon shows that alone. Only the highest selected weapon penalty applies, capped at the vehicle’s mode maximum; quantity is ignored. Availability does not guarantee a valid loadout.",
     base: "Base", max: "Max", selected: "Selected", reset: "Clear weapons", select: "Select weapon for BR calculation",
     aam: "Air-to-air missile", agm: "Air-to-ground missile", arm: "Anti-radiation missile",
     "guided-bomb": "Guided bomb", "guided-rocket": "Guided rocket", Laser: "Laser",
@@ -13,9 +13,9 @@ const labels = {
   ko: {
     title: "유도무기", ammunition: "주포 탄약", ammoEmpty: "표시할 주포 탄약 없음", loading: "무장 불러오는 중…", unknown: "무장 정보 미확인",
     partial: "일부 무장 정보 미확인", empty: "표시할 유도무기 없음",
-    note: "각 무장은 단독 장착 기준입니다. 선택한 무장 중 가장 높은 페널티 하나만 적용하며, 항공기의 모드별 최대 BR을 넘지 않습니다. 수량은 무관하며 실제 동시 장착 가능 여부는 확인하지 않습니다.",
+    note: "각 무장은 단독 장착 기준입니다. 선택한 무장 중 가장 높은 페널티 하나만 적용하며, 장비의 모드별 최대 BR을 넘지 않습니다. 수량은 무관하며 실제 동시 장착 가능 여부는 확인하지 않습니다.",
     previous: "이전", next: "다음", retry: "다시 시도", page: "무장 페이지",
-    variableNote: "각 무장은 단독 장착 기준입니다. 선택한 무장 중 가장 높은 페널티 하나만 적용하며, 항공기의 모드별 최대 BR을 넘지 않습니다. 수량은 무관하며 실제 동시 장착 가능 여부는 확인하지 않습니다.",
+    variableNote: "각 무장은 단독 장착 기준입니다. 선택한 무장 중 가장 높은 페널티 하나만 적용하며, 장비의 모드별 최대 BR을 넘지 않습니다. 수량은 무관하며 실제 동시 장착 가능 여부는 확인하지 않습니다.",
     base: "기본", max: "최대", selected: "선택", reset: "무장 해제", select: "BR 계산에 무장 선택",
     aam: "공대공 미사일", agm: "공대지 미사일", arm: "대레이더 미사일",
     "guided-bomb": "유도폭탄", "guided-rocket": "유도로켓", Laser: "Laser",
@@ -78,8 +78,8 @@ export function createArmamentPanel({ panel, popup, onLayout, onRatingChange }) 
     loading = true; failed = false; render();
     try {
       const [result, extra] = await Promise.all([
-        "../data/aircraft-armaments.json?v=wiki-refresh-20261112",
-        "../data/ground-heli-armaments.json?v=wiki-refresh-20261112",
+        "../data/aircraft-armaments.json?v=mitl-rules-20261112",
+        "../data/ground-heli-armaments.json?v=mitl-rules-20261112",
       ].map(async path => {
         const response = await fetch(new URL(path, import.meta.url));
         if (!response.ok) throw new Error(`Armaments HTTP ${response.status}`);
