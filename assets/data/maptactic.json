@@ -65,7 +65,7 @@
     "Abandoned Town": "2026-11-07T21:44:29Z",
     "Advance to the Rhine": "2026-11-07T22:44:53Z",
     "Alaska": "2026-10-04T10:19:32Z",
-    "American Desert": "2026-11-12T03:54:06Z",
+    "American Desert": "2026-11-12T05:33:54.439Z",
     "Aral Sea": "2026-10-07T06:13:32Z",
     "Arctic Pier": "2026-09-15T01:05:22Z",
     "Arctic Polar Base": "2026-11-08T13:31:33Z",
@@ -3532,9 +3532,7 @@
         "type": "tankDestroyerRed",
         "x": 56.47,
         "y": 61.61,
-        "commentImages": [
-          "American Desert/scr_  (2).webp"
-        ]
+        "commentImages": []
       },
       {
         "id": "mtiehv3z-n6aalr",
@@ -3548,9 +3546,7 @@
         "type": "tankDestroyerRed",
         "x": 48.94,
         "y": 64.89,
-        "commentImages": [
-          "American Desert/scr_  (3).webp"
-        ]
+        "commentImages": []
       },
       {
         "id": "mtiekhpd-40qo7f",
@@ -3565,9 +3561,7 @@
         "x": 77.49,
         "y": 47.51,
         "commentEn": "Only the first spawn works.",
-        "commentImages": [
-          "American Desert/scr_  (13).webp"
-        ]
+        "commentImages": []
       },
       {
         "id": "mtiemnap-fvezd4",
@@ -3581,9 +3575,7 @@
         "type": "tankDestroyerRed",
         "x": 38.74,
         "y": 96.99,
-        "commentImages": [
-          "American Desert/scr_  (4).webp"
-        ]
+        "commentImages": []
       },
       {
         "id": "mtiemtaz-stof9y",
@@ -3597,9 +3589,7 @@
         "type": "lightTankRed",
         "x": 97.79,
         "y": 43.24,
-        "commentImages": [
-          "American Desert/scr_  (15).webp"
-        ]
+        "commentImages": []
       },
       {
         "id": "mtieni1j-ukycmm",
@@ -3614,9 +3604,7 @@
         "x": 98.05,
         "y": 39.18,
         "commentEn": "Can fight while moving in and out of the map boundary, use a tank with good reverse mobility.",
-        "commentImages": [
-          "American Desert/scr_  (16).webp"
-        ]
+        "commentImages": []
       },
       {
         "id": "mtierdd9-p3pwc4",
@@ -3630,9 +3618,7 @@
         "type": "mainBattleTankRed",
         "x": 57.46,
         "y": 12.77,
-        "commentImages": [
-          "American Desert/scr_  (9).webp"
-        ]
+        "commentImages": []
       },
       {
         "id": "mtieuu7l-5dxhv6",
@@ -3646,9 +3632,7 @@
         "type": "mainBattleTankRed",
         "x": 23.32,
         "y": 44.88,
-        "commentImages": [
-          "American Desert/scr_  (7).webp"
-        ]
+        "commentImages": []
       },
       {
         "id": "mtif90q9-z2xs9v",
@@ -3674,10 +3658,7 @@
         "type": "mainBattleTankRed",
         "x": 58.34,
         "y": 39.19,
-        "commentImages": [
-          "American Desert/scr_  (10).webp",
-          "American Desert/scr_  (11).webp"
-        ]
+        "commentImages": []
       },
       {
         "id": "mtxlzcff-3c8z3p",
@@ -3700,9 +3681,7 @@
         "type": "mainBattleTankRed",
         "x": 77.22,
         "y": 34.76,
-        "commentImages": [
-          "American Desert/scr_  (14).webp"
-        ]
+        "commentImages": []
       },
       {
         "id": "mtxpze7z-xq6hg4",
@@ -3716,9 +3695,7 @@
         "type": "tankDestroyerRed",
         "x": 45.83,
         "y": 97.53,
-        "commentImages": [
-          "American Desert/scr_  (5).webp"
-        ]
+        "commentImages": []
       },
       {
         "id": "mtxr4av9-szgbwg",
@@ -3744,9 +3721,7 @@
         "type": "lightTankRed",
         "x": 23.04,
         "y": 82.16,
-        "commentImages": [
-          "American Desert/scr_  (6).webp"
-        ]
+        "commentImages": []
       },
       {
         "id": "mtxrbm0w-i87rsa",
@@ -3760,9 +3735,7 @@
         "type": "mainBattleTankRed",
         "x": 38.67,
         "y": 50.38,
-        "commentImages": [
-          "American Desert/scr_  (17).webp"
-        ]
+        "commentImages": []
       },
       {
         "id": "mtxrg37r-8feva6",
@@ -3776,9 +3749,7 @@
         "type": "mainBattleTankRed",
         "x": 59.99,
         "y": 50.32,
-        "commentImages": [
-          "American Desert/scr_  (12).webp"
-        ]
+        "commentImages": []
       },
       {
         "id": "mtxrkofy-qit6pz",
@@ -3792,9 +3763,7 @@
         "type": "mainBattleTankRed",
         "x": 36.22,
         "y": 26.8,
-        "commentImages": [
-          "American Desert/scr_  (8).webp"
-        ]
+        "commentImages": []
       },
       {
         "id": "mwcgdwxn-sb429g",
@@ -3893,9 +3862,7 @@
         "type": "tankDestroyer",
         "x": 82.81,
         "y": 19.41,
-        "commentImages": [
-          "American Desert/scr_  (1).webp"
-        ]
+        "commentImages": []
       },
       {
         "id": "mtif1htp-torcc3",
@@ -91801,6 +91768,6 @@
     "Sands of Sinai::domination-1|Blue": [],
     "Vietnam::domination-1|Red": []
   },
-  "updatedAt": "2026-11-12T03:54:06.517Z",
+  "updatedAt": "2026-11-12T05:33:54.439Z",
   "exportedAt": "2026-11-12T04:18:04.232Z"
 }
