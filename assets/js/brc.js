@@ -1,6 +1,6 @@
-import { CATEGORIES, COUNTRIES, readCatalog, visibleUnits, searchUnits, rangeColor, toTenths, parseBrQuery, unitsAtBr } from "./brc-model.js?v=br-search-20261112";
+import { CATEGORIES, COUNTRIES, readCatalog, visibleUnits, searchUnits, rangeColor, toTenths, parseBrQuery, unitsAtBr } from "./brc-model.js?v=variable-highlight-20261112";
 import { createArmamentPanel } from "./brc-armaments.js?v=wiki-refresh-20261112";
-import { validateVariableRatings } from "./brc-ratings.js?v=br-search-20261112";
+import { validateVariableRatings, hasVariableBr } from "./brc-ratings.js?v=variable-highlight-20261112";
 import { setVehicleImage, imagePendingText } from "./vehicle-images.js?v=20261108";
 
 const copy = {
@@ -146,7 +146,7 @@ function renderTable() {
             button.append(element("small", "brc-search-br", `${t("weaponBr")} · ${number(unit.baseBr)} → ${number(unit.br)}`));
           }
           button.classList.toggle("is-new", newUnitIds.has(unit.wikiId) || unit.isNew === true);
-          button.classList.toggle("has-variable-br", hasCustomBr(unit));
+          button.classList.toggle("has-variable-br", hasVariableBr(unit, state.mode));
           button.type = "button"; button.dataset.unit = unit.id;
           button.setAttribute("aria-pressed", String(state.selected?.id === unit.id));
           button.setAttribute("aria-label", `${unit.name}, ${countryName(unit.countryCode)}, ${t(category)}, ${ratingLabel(unit)}`);
@@ -369,7 +369,7 @@ async function loadCatalog() {
   try {
     // Deliberately share the Tier List catalog and its BR values; no BRC-specific copy.
     const [catalog, ratings] = await Promise.all([
-      "../data/tier-units.json?v=wiki-refresh-20261112", "../data/brc-variable-br.json?v=20261101",
+      "../data/tier-units.json?v=wiki-refresh-20261112", "../data/brc-variable-br.json?v=variable-highlight-20261112",
     ].map(async path => {
       const response = await fetch(new URL(path, import.meta.url));
       if (!response.ok) throw new Error(`Catalog HTTP ${response.status}`);
