@@ -65,7 +65,7 @@
     "Abandoned Town": "2026-11-07T21:44:29Z",
     "Advance to the Rhine": "2026-11-07T22:44:53Z",
     "Alaska": "2026-10-04T10:19:32Z",
-    "American Desert": "2026-11-11T19:04:01Z",
+    "American Desert": "2026-11-12T03:54:06Z",
     "Aral Sea": "2026-10-07T06:13:32Z",
     "Arctic Pier": "2026-09-15T01:05:22Z",
     "Arctic Polar Base": "2026-11-08T13:31:33Z",
@@ -3898,24 +3898,11 @@
         ]
       },
       {
-        "id": "mtif0yyw-dkjvuc",
-        "type": "mainBattleTank",
-        "x": 75.71,
-        "y": 27.21
-      },
-      {
         "id": "mtif1htp-torcc3",
         "type": "sniper",
         "x": 82.81,
         "y": 19.41,
         "parentTankId": "mtif0up4-rgvajt"
-      },
-      {
-        "id": "mtif2dz9-0kwtkl",
-        "type": "battleLine",
-        "x": 75.71,
-        "y": 27.21,
-        "parentTankId": "mtif0yyw-dkjvuc"
       },
       {
         "id": "mtif2naa-lmdcx8",
@@ -3939,7 +3926,7 @@
       },
       {
         "id": "mtift5he-sloqt0",
-        "type": "mainBattleTank",
+        "type": "lightTank",
         "x": 76.57,
         "y": 33.58
       },
@@ -4034,6 +4021,32 @@
         "type": "smokeshell",
         "x": 37.37,
         "y": 60.15
+      },
+      {
+        "id": "mwd07191-xl9ujl",
+        "type": "tankDestroyer",
+        "x": 72.88,
+        "y": 32.11
+      },
+      {
+        "id": "mwd07gnf-98lswf",
+        "type": "mainBattleTank",
+        "x": 76.8,
+        "y": 27.18
+      },
+      {
+        "id": "mwd07igi-o0prbx",
+        "type": "sniper",
+        "x": 72.88,
+        "y": 32.11,
+        "parentTankId": "mwd07191-xl9ujl"
+      },
+      {
+        "id": "mwd0inmm-zlw3nf",
+        "type": "battleLine",
+        "x": 76.8,
+        "y": 27.18,
+        "parentTankId": "mwd07gnf-98lswf"
       }
     ],
     "Aral Sea::domination-1|Red": [
@@ -28708,7 +28721,15 @@
         "x": 32.89,
         "y": 17.37
       }
-    ]
+    ],
+    "American Desert::conquest-1|Red": [],
+    "American Desert::conquest-3|Red": [],
+    "American Desert::battle-1|Red": [],
+    "American Desert::conquest-2|Red": [],
+    "Sun City::conquest-1|Red": [],
+    "Sun City::conquest-2|Red": [],
+    "Sun City::conquest-3|Red": [],
+    "Sun City::battle-1|Red": []
   },
   "annotations": {
     "38th Parallel::domination-1|Red": [
@@ -34557,32 +34578,6 @@
         ]
       },
       {
-        "id": "mtif0smd-2743ep",
-        "type": "route",
-        "points": [
-          {
-            "x": 40.34,
-            "y": 8.77
-          },
-          {
-            "x": 49.82,
-            "y": 12.05
-          },
-          {
-            "x": 60.91,
-            "y": 12.85
-          },
-          {
-            "x": 66.05,
-            "y": 12.23
-          },
-          {
-            "x": 82.18,
-            "y": 17.9
-          }
-        ]
-      },
-      {
         "id": "mtif14gl-5itaal",
         "type": "route",
         "points": [
@@ -34603,15 +34598,6 @@
             "y": 26.77
           }
         ]
-      },
-      {
-        "id": "mtif1ggl-77t07h",
-        "type": "aimHere",
-        "parentTankId": "mtif0up4-rgvajt",
-        "startX": 82.81,
-        "startY": 19.41,
-        "endX": 86,
-        "endY": 57.97
       },
       {
         "id": "mtif7w3v-xfh5sk",
@@ -34722,24 +34708,6 @@
         ]
       },
       {
-        "id": "mtit5mxq-qs7va7",
-        "type": "aimHere",
-        "parentTankId": "mtif0yyw-dkjvuc",
-        "startX": 75.71,
-        "startY": 27.21,
-        "endX": 73.58,
-        "endY": 33.42
-      },
-      {
-        "id": "mtit5tg7-mz03em",
-        "type": "aimHere",
-        "parentTankId": "mtif0yyw-dkjvuc",
-        "startX": 75.71,
-        "startY": 27.21,
-        "endX": 96.46,
-        "endY": 42.9
-      },
-      {
         "id": "mtxm1f1j-vl09q9",
         "type": "aimHere",
         "parentTankId": "mtieeq46-hw4ggd",
@@ -34794,15 +34762,6 @@
         ]
       },
       {
-        "id": "mtxpj9o5-68k9lg",
-        "type": "aimHere",
-        "parentTankId": "mtif0yyw-dkjvuc",
-        "startX": 75.71,
-        "startY": 27.21,
-        "endX": 93.5,
-        "endY": 53.51
-      },
-      {
         "id": "mtxpjnbp-3elm9p",
         "type": "aimHere",
         "parentTankId": "mtift5he-sloqt0",
@@ -34819,15 +34778,6 @@
         "startY": 65.75,
         "endX": 83.47,
         "endY": 72.52
-      },
-      {
-        "id": "mtxq0w5u-wgh7fp",
-        "type": "aimHere",
-        "parentTankId": "mtif0up4-rgvajt",
-        "startX": 82.81,
-        "startY": 19.41,
-        "endX": 76.18,
-        "endY": 39.31
       },
       {
         "id": "mtxqjbdc-xwxhki",
@@ -35012,13 +34962,89 @@
         ]
       },
       {
-        "id": "mwcgika3-pox24g",
+        "id": "mwd02r9i-kyzz39",
         "type": "aimHere",
         "parentTankId": "mtif0up4-rgvajt",
         "startX": 82.81,
         "startY": 19.41,
-        "endX": 95.89,
-        "endY": 48.04
+        "endX": 76.8,
+        "endY": 49.05
+      },
+      {
+        "id": "mwd030b0-2xklc6",
+        "type": "aimHere",
+        "parentTankId": "mtif0up4-rgvajt",
+        "startX": 82.81,
+        "startY": 19.41,
+        "endX": 97.91,
+        "endY": 39.82
+      },
+      {
+        "id": "mwd079lh-qkera9",
+        "type": "aimHere",
+        "parentTankId": "mwd07191-xl9ujl",
+        "startX": 72.88,
+        "startY": 32.11,
+        "endX": 65.93,
+        "endY": 56.13
+      },
+      {
+        "id": "mwd0k6cz-l212ct",
+        "type": "route",
+        "points": [
+          {
+            "x": 39.76,
+            "y": 9.23
+          },
+          {
+            "x": 46.97,
+            "y": 11.5
+          },
+          {
+            "x": 51.77,
+            "y": 12.77
+          },
+          {
+            "x": 54.8,
+            "y": 13.91
+          },
+          {
+            "x": 58.6,
+            "y": 13.53
+          },
+          {
+            "x": 63.4,
+            "y": 12.77
+          },
+          {
+            "x": 65.68,
+            "y": 12.26
+          },
+          {
+            "x": 68.08,
+            "y": 13.15
+          },
+          {
+            "x": 70.99,
+            "y": 14.29
+          },
+          {
+            "x": 75.16,
+            "y": 15.3
+          },
+          {
+            "x": 77.56,
+            "y": 16.69
+          },
+          {
+            "x": 80.59,
+            "y": 17.57
+          },
+          {
+            "x": 82.36,
+            "y": 19.09
+          }
+        ]
       }
     ],
     "Aral Sea::domination-1|Red": [
@@ -91747,7 +91773,15 @@
           }
         ]
       }
-    ]
+    ],
+    "American Desert::conquest-1|Red": [],
+    "American Desert::conquest-3|Red": [],
+    "American Desert::battle-1|Red": [],
+    "American Desert::conquest-2|Red": [],
+    "Sun City::conquest-1|Red": [],
+    "Sun City::conquest-2|Red": [],
+    "Sun City::conquest-3|Red": [],
+    "Sun City::battle-1|Red": []
   },
   "vectorGroups": {
     "Alaska::domination-1|Red": [],
@@ -91767,6 +91801,6 @@
     "Sands of Sinai::domination-1|Blue": [],
     "Vietnam::domination-1|Red": []
   },
-  "updatedAt": "2026-11-11T19:30:55.693Z",
-  "exportedAt": "2026-11-11T19:31:16.176Z"
+  "updatedAt": "2026-11-12T03:54:06.517Z",
+  "exportedAt": "2026-11-12T04:18:04.232Z"
 }
