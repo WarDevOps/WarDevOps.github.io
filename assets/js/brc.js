@@ -165,6 +165,7 @@ function renderTable() {
   paintComparison();
 }
 
+
 function scrollToSelectedBr() {
   if (!state.selected || !rows.length) return;
   // Keep the comparison BR in view even when its vehicle type is hidden.
