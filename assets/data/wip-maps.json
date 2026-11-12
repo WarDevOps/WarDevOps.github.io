@@ -2,7 +2,6 @@
   { "slug": "volokolamsk", "color": "black" },
   { "slug": "surroundings-of-volokolamsk", "color": "black" },
   { "slug": "arctic-polar-base", "color": "black" },
-  "american-desert",
   "ash-river",
   { "slug": "battle-of-hurtgen-forest", "color": "white", "variations": ["domination-2", "conquest-3"] },
   "fields-of-poland",
@@ -15,7 +14,6 @@
   "normandy",
   "red-desert",
   { "slug": "stalingrad", "color": "black" },
-  "sun-city",
   "poland",
   "berlin"
 ]
