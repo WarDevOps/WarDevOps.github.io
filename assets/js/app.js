@@ -4,8 +4,8 @@ import { createVectorEditor } from './vector-editor.js?v=editor-shortcuts-202611
 import { validateVectorGroups, pruneGroups } from './vector-model.js?v=route-selection-20260923';
 import { validatePastedView } from './paste-validation.js';
 let vectorEditor = null;
-    import { commentImages } from './comment-images.js?v=comment-images-f1e398560e3c';
-    import { defaultMarkerLayout, maps, translations } from './data.js?v=eagles-shadow-date-20261111';
+    import { commentImages } from './comment-images.js?v=comment-images-987210b56169';
+    import { defaultMarkerLayout, maps, translations } from './data.js?v=video-carousel-20261116';
     import { normalizeTacticalSummary, resolveTacticalSummary, withVariationSummary } from './tactical-summary.js?v=variation-switch-20260914';
     import { acceptUpstreamMap, isMapSyncState, markLayoutAsLocalEdits, markMapEdited, mergeMapLayouts, sourceRevision } from './marker-merge.js?v=mobile-default-layout-20260917';
 
@@ -973,8 +973,6 @@ let vectorEditor = null;
       carousel.querySelectorAll(".map-marker-comment-indicator").forEach((indicator, indicatorIndex) => {
         indicator.setAttribute("aria-pressed", String(indicatorIndex === nextIndex));
       });
-      const clickNavigation = carousel.querySelector(".map-marker-comment-click-navigation");
-      if (clickNavigation) clickNavigation.hidden = item.kind === "video";
       if (notify && changed) carousel._commentImageChange?.(nextIndex);
     }
     function configureCommentCarousel(carousel, images, initialIndex = 0, onChange = null, { clickNavigation = false } = {}) {
