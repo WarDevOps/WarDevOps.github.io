@@ -912,6 +912,36 @@ export const commentImages = Object.freeze([
     "label": "scr_ (38).webp"
   },
   {
+    "id": "American Desert/scr_ (39).webp",
+    "path": "img/American Desert/scr_ (39).webp",
+    "label": "scr_ (39).webp"
+  },
+  {
+    "id": "American Desert/scr_ (40).webp",
+    "path": "img/American Desert/scr_ (40).webp",
+    "label": "scr_ (40).webp"
+  },
+  {
+    "id": "American Desert/scr_ (41).webp",
+    "path": "img/American Desert/scr_ (41).webp",
+    "label": "scr_ (41).webp"
+  },
+  {
+    "id": "American Desert/scr_ (42).webp",
+    "path": "img/American Desert/scr_ (42).webp",
+    "label": "scr_ (42).webp"
+  },
+  {
+    "id": "American Desert/scr_ (43).webp",
+    "path": "img/American Desert/scr_ (43).webp",
+    "label": "scr_ (43).webp"
+  },
+  {
+    "id": "American Desert/scr_route01.mp4",
+    "path": "img/American Desert/scr_route01.mp4",
+    "label": "scr_route01.mp4"
+  },
+  {
     "id": "American Desert/scr_strike01.mp4",
     "path": "img/American Desert/scr_strike01.mp4",
     "label": "scr_strike01.mp4"
@@ -2785,16 +2815,6 @@ export const commentImages = Object.freeze([
     "id": "Sun City/scr_ (4).webp",
     "path": "img/Sun City/scr_ (4).webp",
     "label": "scr_ (4).webp"
-  },
-  {
-    "id": "Sun City/scr_ (5).webp",
-    "path": "img/Sun City/scr_ (5).webp",
-    "label": "scr_ (5).webp"
-  },
-  {
-    "id": "Sun City/scr_ (6).webp",
-    "path": "img/Sun City/scr_ (6).webp",
-    "label": "scr_ (6).webp"
   },
   {
     "id": "Sun City/scr_ (7).webp",
