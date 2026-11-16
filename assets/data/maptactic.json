@@ -6,7 +6,7 @@
     "Abandoned Town": "2026-11-08",
     "Advance to the Rhine": "2026-11-08",
     "Alaska": "2026-10-04",
-    "American Desert": "2026-11-12",
+    "American Desert": "2026-11-16",
     "Aral Sea": "2026-10-07",
     "Arctic Pier": "2026-09-15",
     "Arctic Polar Base": "2026-11-08",
@@ -65,7 +65,7 @@
     "Abandoned Town": "2026-11-07T21:44:29Z",
     "Advance to the Rhine": "2026-11-07T22:44:53Z",
     "Alaska": "2026-10-04T10:19:32Z",
-    "American Desert": "2026-11-12T10:42:22Z",
+    "American Desert": "2026-11-16T02:40:15Z",
     "Aral Sea": "2026-10-07T06:13:32Z",
     "Arctic Pier": "2026-09-15T01:05:22Z",
     "Arctic Polar Base": "2026-11-08T13:31:33Z",
@@ -3803,6 +3803,27 @@
         "x": 36.22,
         "y": 26.8,
         "parentTankId": "mwcgdukg-gufmll"
+      },
+      {
+        "id": "mwinecbv-4vx0nf",
+        "type": "tankDestroyerRed",
+        "x": 81.02,
+        "y": 88.88,
+        "commentImages": [
+          "American Desert/scr_route01.mp4",
+          "American Desert/scr_ (39).webp",
+          "American Desert/scr_ (40).webp",
+          "American Desert/scr_ (41).webp",
+          "American Desert/scr_ (42).webp",
+          "American Desert/scr_ (43).webp"
+        ]
+      },
+      {
+        "id": "mwinedfq-rp7des",
+        "type": "sniper",
+        "x": 81.02,
+        "y": 88.88,
+        "parentTankId": "mwinecbv-4vx0nf"
       }
     ],
     "American Desert::domination-1|Blue": [
@@ -4341,6 +4362,27 @@
         "x": 36.22,
         "y": 26.8,
         "parentTankId": "vector-33adcb6c-c68b-4ed2-8195-8362e24f3682"
+      },
+      {
+        "id": "vector-4df4b211-aa8c-48c5-80ae-2da8acbf8f62",
+        "type": "tankDestroyerRed",
+        "x": 81.02,
+        "y": 88.88,
+        "commentImages": [
+          "American Desert/scr_route01.mp4",
+          "American Desert/scr_ (39).webp",
+          "American Desert/scr_ (40).webp",
+          "American Desert/scr_ (41).webp",
+          "American Desert/scr_ (42).webp",
+          "American Desert/scr_ (43).webp"
+        ]
+      },
+      {
+        "id": "vector-161e1161-c4dc-4f5b-b9a1-a36d37194744",
+        "type": "sniper",
+        "x": 81.02,
+        "y": 88.88,
+        "parentTankId": "vector-4df4b211-aa8c-48c5-80ae-2da8acbf8f62"
       }
     ],
     "American Desert::conquest-3|Red": [
@@ -4604,6 +4646,27 @@
         "x": 36.22,
         "y": 26.8,
         "parentTankId": "vector-8ba67870-6e0e-4957-b19a-de5360f674f0"
+      },
+      {
+        "id": "vector-e009a9e6-a8e3-4c13-a349-54b9821ec683",
+        "type": "tankDestroyerRed",
+        "x": 81.02,
+        "y": 88.88,
+        "commentImages": [
+          "American Desert/scr_route01.mp4",
+          "American Desert/scr_ (39).webp",
+          "American Desert/scr_ (40).webp",
+          "American Desert/scr_ (41).webp",
+          "American Desert/scr_ (42).webp",
+          "American Desert/scr_ (43).webp"
+        ]
+      },
+      {
+        "id": "vector-00ca6c0c-4650-4b0f-ae34-61662dcd5c40",
+        "type": "sniper",
+        "x": 81.02,
+        "y": 88.88,
+        "parentTankId": "vector-e009a9e6-a8e3-4c13-a349-54b9821ec683"
       }
     ],
     "American Desert::battle-1|Red": [
@@ -4883,6 +4946,27 @@
         "x": 36.22,
         "y": 26.8,
         "parentTankId": "vector-84aab4b9-0081-44b1-924f-bf83f186eb88"
+      },
+      {
+        "id": "vector-d2a581d2-798c-4d2d-9775-a0201c4bb8c5",
+        "type": "tankDestroyerRed",
+        "x": 81.02,
+        "y": 88.88,
+        "commentImages": [
+          "American Desert/scr_route01.mp4",
+          "American Desert/scr_ (39).webp",
+          "American Desert/scr_ (40).webp",
+          "American Desert/scr_ (41).webp",
+          "American Desert/scr_ (42).webp",
+          "American Desert/scr_ (43).webp"
+        ]
+      },
+      {
+        "id": "vector-957ae2fd-7fab-47a9-920e-d0d1bed9b0dd",
+        "type": "sniper",
+        "x": 81.02,
+        "y": 88.88,
+        "parentTankId": "vector-d2a581d2-798c-4d2d-9775-a0201c4bb8c5"
       }
     ],
     "American Desert::conquest-2|Red": [
@@ -5162,6 +5246,27 @@
         "x": 36.22,
         "y": 26.8,
         "parentTankId": "vector-b390cf67-673a-4780-bc50-0beb45946f06"
+      },
+      {
+        "id": "vector-583c9453-4d23-4b25-bd91-d3ad236b4b6e",
+        "type": "tankDestroyerRed",
+        "x": 81.02,
+        "y": 88.88,
+        "commentImages": [
+          "American Desert/scr_route01.mp4",
+          "American Desert/scr_ (39).webp",
+          "American Desert/scr_ (40).webp",
+          "American Desert/scr_ (41).webp",
+          "American Desert/scr_ (42).webp",
+          "American Desert/scr_ (43).webp"
+        ]
+      },
+      {
+        "id": "vector-1f399605-9114-42f5-977f-c4ed013cc80d",
+        "type": "sniper",
+        "x": 81.02,
+        "y": 88.88,
+        "parentTankId": "vector-583c9453-4d23-4b25-bd91-d3ad236b4b6e"
       }
     ],
     "American Desert::conquest-1|Blue": [
@@ -39210,6 +39315,100 @@
         "startY": 26.8,
         "endX": 40.96,
         "endY": 8.34
+      },
+      {
+        "id": "mwineijo-69dvez",
+        "type": "aimHere",
+        "parentTankId": "mwinecbv-4vx0nf",
+        "startX": 81.02,
+        "startY": 88.88,
+        "endX": 79.97,
+        "endY": 18.42
+      },
+      {
+        "id": "mwinel9s-8w3czk",
+        "type": "aimHere",
+        "parentTankId": "mwinecbv-4vx0nf",
+        "startX": 81.02,
+        "startY": 88.88,
+        "endX": 21.76,
+        "endY": 50.83
+      },
+      {
+        "id": "mwinmabb-rnsy8x",
+        "type": "route",
+        "points": [
+          {
+            "x": 85.27,
+            "y": 72.2
+          },
+          {
+            "x": 87.01,
+            "y": 76.54
+          },
+          {
+            "x": 87.71,
+            "y": 82.1
+          },
+          {
+            "x": 89.97,
+            "y": 87.75
+          },
+          {
+            "x": 91.53,
+            "y": 91.49
+          },
+          {
+            "x": 92.14,
+            "y": 94.01
+          },
+          {
+            "x": 92.92,
+            "y": 95.92
+          },
+          {
+            "x": 92.22,
+            "y": 96.18
+          },
+          {
+            "x": 89.88,
+            "y": 94.18
+          },
+          {
+            "x": 88.14,
+            "y": 93.4
+          },
+          {
+            "x": 86.4,
+            "y": 92.27
+          },
+          {
+            "x": 85.62,
+            "y": 90.96
+          },
+          {
+            "x": 83.88,
+            "y": 90.88
+          },
+          {
+            "x": 82.67,
+            "y": 90.1
+          },
+          {
+            "x": 81.54,
+            "y": 89.31
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "mwinn57g-12k9ct",
+        "type": "aimHere",
+        "parentTankId": "mwinecbv-4vx0nf",
+        "startX": 81.02,
+        "startY": 88.88,
+        "endX": 22.55,
+        "endY": 71.76
       }
     ],
     "American Desert::domination-1|Blue": [
@@ -40373,6 +40572,91 @@
             "y": 60.9
           }
         ]
+      },
+      {
+        "id": "vector-eb0741f6-7615-42df-b454-344cf424a4f5",
+        "type": "aimHere",
+        "parentTankId": "vector-4df4b211-aa8c-48c5-80ae-2da8acbf8f62",
+        "startX": 81.02,
+        "startY": 88.88,
+        "endX": 79.97,
+        "endY": 18.42
+      },
+      {
+        "id": "vector-f04f3070-f73d-4182-90b2-e251f0b3ffd7",
+        "type": "route",
+        "points": [
+          {
+            "x": 85.27,
+            "y": 72.2
+          },
+          {
+            "x": 87.01,
+            "y": 76.54
+          },
+          {
+            "x": 87.71,
+            "y": 82.1
+          },
+          {
+            "x": 89.97,
+            "y": 87.75
+          },
+          {
+            "x": 91.53,
+            "y": 91.49
+          },
+          {
+            "x": 92.14,
+            "y": 94.01
+          },
+          {
+            "x": 92.92,
+            "y": 95.92
+          },
+          {
+            "x": 92.22,
+            "y": 96.18
+          },
+          {
+            "x": 89.88,
+            "y": 94.18
+          },
+          {
+            "x": 88.14,
+            "y": 93.4
+          },
+          {
+            "x": 86.4,
+            "y": 92.27
+          },
+          {
+            "x": 85.62,
+            "y": 90.96
+          },
+          {
+            "x": 83.88,
+            "y": 90.88
+          },
+          {
+            "x": 82.67,
+            "y": 90.1
+          },
+          {
+            "x": 81.54,
+            "y": 89.31
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "vector-09604d46-095d-435c-bd69-8770ff5f5767",
+        "type": "aimHere",
+        "parentTankId": "vector-4df4b211-aa8c-48c5-80ae-2da8acbf8f62",
+        "startX": 81.02,
+        "startY": 88.88,
+        "endX": 22.55,
+        "endY": 71.76
       }
     ],
     "American Desert::conquest-3|Red": [
@@ -40934,6 +41218,91 @@
             "y": 72.02
           }
         ]
+      },
+      {
+        "id": "vector-062646ed-1c36-459e-a048-3787fb12dbee",
+        "type": "aimHere",
+        "parentTankId": "vector-e009a9e6-a8e3-4c13-a349-54b9821ec683",
+        "startX": 81.02,
+        "startY": 88.88,
+        "endX": 79.97,
+        "endY": 18.42
+      },
+      {
+        "id": "vector-e2c705f2-69f0-4b44-9e1c-dfcbde7d88f9",
+        "type": "route",
+        "points": [
+          {
+            "x": 85.27,
+            "y": 72.2
+          },
+          {
+            "x": 87.01,
+            "y": 76.54
+          },
+          {
+            "x": 87.71,
+            "y": 82.1
+          },
+          {
+            "x": 89.97,
+            "y": 87.75
+          },
+          {
+            "x": 91.53,
+            "y": 91.49
+          },
+          {
+            "x": 92.14,
+            "y": 94.01
+          },
+          {
+            "x": 92.92,
+            "y": 95.92
+          },
+          {
+            "x": 92.22,
+            "y": 96.18
+          },
+          {
+            "x": 89.88,
+            "y": 94.18
+          },
+          {
+            "x": 88.14,
+            "y": 93.4
+          },
+          {
+            "x": 86.4,
+            "y": 92.27
+          },
+          {
+            "x": 85.62,
+            "y": 90.96
+          },
+          {
+            "x": 83.88,
+            "y": 90.88
+          },
+          {
+            "x": 82.67,
+            "y": 90.1
+          },
+          {
+            "x": 81.54,
+            "y": 89.31
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "vector-3adaaa24-b80d-4cd6-9c7b-c5c6b075ede4",
+        "type": "aimHere",
+        "parentTankId": "vector-e009a9e6-a8e3-4c13-a349-54b9821ec683",
+        "startX": 81.02,
+        "startY": 88.88,
+        "endX": 22.55,
+        "endY": 71.76
       }
     ],
     "American Desert::battle-1|Red": [
@@ -41526,6 +41895,91 @@
         "startY": 26.8,
         "endX": 27.58,
         "endY": 19.64
+      },
+      {
+        "id": "vector-bee52056-7d5b-4e69-8864-d0586f5c6ee6",
+        "type": "aimHere",
+        "parentTankId": "vector-d2a581d2-798c-4d2d-9775-a0201c4bb8c5",
+        "startX": 81.02,
+        "startY": 88.88,
+        "endX": 79.97,
+        "endY": 18.42
+      },
+      {
+        "id": "vector-1ae0c716-8204-48c5-9c39-95b9bf8da160",
+        "type": "route",
+        "points": [
+          {
+            "x": 85.27,
+            "y": 72.2
+          },
+          {
+            "x": 87.01,
+            "y": 76.54
+          },
+          {
+            "x": 87.71,
+            "y": 82.1
+          },
+          {
+            "x": 89.97,
+            "y": 87.75
+          },
+          {
+            "x": 91.53,
+            "y": 91.49
+          },
+          {
+            "x": 92.14,
+            "y": 94.01
+          },
+          {
+            "x": 92.92,
+            "y": 95.92
+          },
+          {
+            "x": 92.22,
+            "y": 96.18
+          },
+          {
+            "x": 89.88,
+            "y": 94.18
+          },
+          {
+            "x": 88.14,
+            "y": 93.4
+          },
+          {
+            "x": 86.4,
+            "y": 92.27
+          },
+          {
+            "x": 85.62,
+            "y": 90.96
+          },
+          {
+            "x": 83.88,
+            "y": 90.88
+          },
+          {
+            "x": 82.67,
+            "y": 90.1
+          },
+          {
+            "x": 81.54,
+            "y": 89.31
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "vector-d8458db5-c829-4477-91a1-088f9e5364d0",
+        "type": "aimHere",
+        "parentTankId": "vector-d2a581d2-798c-4d2d-9775-a0201c4bb8c5",
+        "startX": 81.02,
+        "startY": 88.88,
+        "endX": 22.55,
+        "endY": 71.76
       }
     ],
     "American Desert::conquest-2|Red": [
@@ -42118,6 +42572,91 @@
         "startY": 26.8,
         "endX": 40.96,
         "endY": 8.34
+      },
+      {
+        "id": "vector-84fef6c7-41b4-4e5b-9c7c-42d9af07f7d9",
+        "type": "aimHere",
+        "parentTankId": "vector-583c9453-4d23-4b25-bd91-d3ad236b4b6e",
+        "startX": 81.02,
+        "startY": 88.88,
+        "endX": 79.97,
+        "endY": 18.42
+      },
+      {
+        "id": "vector-3df8e87d-d7ab-4a59-af14-b8792d58bf03",
+        "type": "route",
+        "points": [
+          {
+            "x": 85.27,
+            "y": 72.2
+          },
+          {
+            "x": 87.01,
+            "y": 76.54
+          },
+          {
+            "x": 87.71,
+            "y": 82.1
+          },
+          {
+            "x": 89.97,
+            "y": 87.75
+          },
+          {
+            "x": 91.53,
+            "y": 91.49
+          },
+          {
+            "x": 92.14,
+            "y": 94.01
+          },
+          {
+            "x": 92.92,
+            "y": 95.92
+          },
+          {
+            "x": 92.22,
+            "y": 96.18
+          },
+          {
+            "x": 89.88,
+            "y": 94.18
+          },
+          {
+            "x": 88.14,
+            "y": 93.4
+          },
+          {
+            "x": 86.4,
+            "y": 92.27
+          },
+          {
+            "x": 85.62,
+            "y": 90.96
+          },
+          {
+            "x": 83.88,
+            "y": 90.88
+          },
+          {
+            "x": 82.67,
+            "y": 90.1
+          },
+          {
+            "x": 81.54,
+            "y": 89.31
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "vector-b73e1149-5b25-4e0f-a187-d4e946f6a960",
+        "type": "aimHere",
+        "parentTankId": "vector-583c9453-4d23-4b25-bd91-d3ad236b4b6e",
+        "startX": 81.02,
+        "startY": 88.88,
+        "endX": 22.55,
+        "endY": 71.76
       }
     ],
     "American Desert::conquest-1|Blue": [
@@ -106407,9 +106946,9 @@
     "Sun City::conquest-2|Blue": [],
     "Sun City::conquest-3|Blue": [],
     "Sun City::battle-1|Blue": [],
-    "Vietnam::domination-1|Red": [],
-    "Sun City::domination-1|Red": []
+    "Sun City::domination-1|Red": [],
+    "Vietnam::domination-1|Red": []
   },
-  "updatedAt": "2026-11-12T12:29:10.588Z",
-  "exportedAt": "2026-11-12T12:29:14.079Z"
+  "updatedAt": "2026-11-16T02:40:15.857Z",
+  "exportedAt": "2026-11-16T02:43:05.140Z"
 }
