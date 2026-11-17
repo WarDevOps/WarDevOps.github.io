@@ -5,7 +5,7 @@ import { validateVectorGroups, pruneGroups } from './vector-model.js?v=route-sel
 import { validatePastedView } from './paste-validation.js';
 let vectorEditor = null;
     import { commentImages } from './comment-images.js?v=comment-images-987210b56169';
-    import { defaultMarkerLayout, maps, translations } from './data.js?v=marker-media-pin-20261117';
+    import { defaultMarkerLayout, maps, translations } from './data.js?v=marker-media-dismiss-20261117';
     import { normalizeTacticalSummary, resolveTacticalSummary, withVariationSummary } from './tactical-summary.js?v=variation-switch-20260914';
     import { acceptUpstreamMap, isMapSyncState, markLayoutAsLocalEdits, markMapEdited, mergeMapLayouts, sourceRevision } from './marker-merge.js?v=mobile-default-layout-20260917';
 
@@ -60,6 +60,19 @@ let vectorEditor = null;
     const clearSearch = $("#clear-search");
     const mapImage = $("#map-image");
     const mapStage = $("#map-stage");
+    const markerMediaHintStorageKey = "maptactic-marker-media-hint-dismissed-v1";
+    const markerMediaHints = [...document.querySelectorAll("[data-media-hint]")];
+    let markerMediaHintDismissed = false;
+    try { markerMediaHintDismissed = localStorage.getItem(markerMediaHintStorageKey) === "1"; } catch (error) { /* Keep hints available when storage is blocked. */ }
+    function dismissMarkerMediaHints() {
+      markerMediaHintDismissed = true;
+      markerMediaHints.forEach(hint => { hint.hidden = true; });
+      try { localStorage.setItem(markerMediaHintStorageKey, "1"); } catch (error) { /* Dismiss for this visit. */ }
+    }
+    markerMediaHints.forEach(hint => {
+      hint.hidden = markerMediaHintDismissed;
+      hint.querySelector(".media-hint-dismiss")?.addEventListener("click", dismissMarkerMediaHints);
+    });
     const imageStatus = $("#image-status");
     const dialog = $("#image-modal");
     const modalImage = $("#modal-image");

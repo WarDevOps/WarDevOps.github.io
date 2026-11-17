@@ -248,7 +248,8 @@ export const translations = {
         legendTypeHidden: "Markers for this legend are hidden.",
         legendTypeShown: "Markers for this legend are shown.",
         modalLegendHint: "Each icon represents a marker type. Click one to hide or show all markers of that type on the map.",
-        markerMediaHint: "Hover over a tank marker to view in-game screenshots and videos from that position. Click a screenshot to pin its enlarged preview."
+        markerMediaHint: "Hover over a tank marker to view in-game screenshots and videos from that position. Click a screenshot to pin its enlarged preview.",
+        dismissHint: "Dismiss hint"
       },
       ko: {
         pageTitle: "War Thunder Map Guide & Tactics | WarDevOps",
@@ -415,7 +416,8 @@ export const translations = {
         legendTypeHidden: "이 마커의 아이콘을 숨겼습니다.",
         legendTypeShown: "이 마커의 아이콘을 표시했습니다.",
         modalLegendHint: "각 아이콘은 마커 종류를 나타냅니다. 아이콘을 클릭하면 지도에서 해당 종류의 마커를 숨기거나 다시 표시할 수 있습니다.",
-        markerMediaHint: "전차 마커에 마우스를 올리면 해당 위치의 인게임 스크린샷과 동영상을 볼 수 있습니다. 스크린샷을 클릭하면 확대 미리보기를 고정할 수 있습니다."
+        markerMediaHint: "전차 마커에 마우스를 올리면 해당 위치의 인게임 스크린샷과 동영상을 볼 수 있습니다. 스크린샷을 클릭하면 확대 미리보기를 고정할 수 있습니다.",
+        dismissHint: "안내 닫기"
       }
     };
 

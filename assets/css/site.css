@@ -231,7 +231,12 @@
     .map-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(208px, 245px); gap: 16px; align-items: start; padding: 0 clamp(12px, 3vw, 28px) 20px; }
     .map-primary-column { display: grid; min-width: 0; gap: 14px; }
     .map-stage { position: relative; min-height: 470px; display: grid; overflow: hidden; place-items: center; border: 1px solid var(--line); border-radius: 12px; background: #0d1111; }
-    .map-media-hint { position: absolute; top: 12px; left: 12px; z-index: 4; max-width: min(440px, calc(100% - 24px)); margin: 0; padding: 7px 9px; border: 1px solid rgba(255,255,255,.13); border-radius: 7px; background: rgba(10, 14, 13, .82); color: #d7ded9; font-size: .7rem; line-height: 1.4; pointer-events: none; }
+    .map-media-hint { position: absolute; top: 12px; left: 12px; z-index: 4; display: flex; max-width: min(440px, calc(100% - 24px)); align-items: flex-start; gap: 8px; margin: 0; padding: 7px 9px; border: 1px solid rgba(255,255,255,.13); border-radius: 7px; background: rgba(10, 14, 13, .82); color: #d7ded9; font-size: .7rem; line-height: 1.4; pointer-events: none; }
+    .map-media-hint[hidden], .modal-legend-note.marker-media-note[hidden] { display: none; }
+    .map-media-hint > span, .marker-media-note > span { flex: 1 1 auto; }
+    .marker-media-note { display: flex; align-items: flex-start; gap: 6px; }
+    .media-hint-dismiss { flex: 0 0 auto; padding: 0 1px; border: 0; background: transparent; color: inherit; font-size: 1rem; font-weight: 800; line-height: 1; opacity: .7; cursor: pointer; pointer-events: auto; }
+    .media-hint-dismiss:hover, .media-hint-dismiss:focus-visible { opacity: 1; }
     .map-enlarge-hint { position: absolute; right: 14px; bottom: 12px; z-index: 1; padding: 7px 9px; border: 1px solid rgba(255,255,255,.13); border-radius: 7px; background: rgba(10, 14, 13, .78); color: #d7ded9; font-size: .73rem; pointer-events: none; }
     .map-overlay-layer, .annotation-layer, .marker-layer { position: absolute; overflow: hidden; pointer-events: none; }
     .map-overlay-layer { z-index: 1; }
