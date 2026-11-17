@@ -52,7 +52,7 @@
   </script>
   <title>War Thunder Map Guide &amp; Tactics | WarDevOps</title>
 
-  <link rel="stylesheet" href="/assets/css/site.css?v=legend-icon-controls-20261110">
+  <link rel="stylesheet" href="/assets/css/site.css?v=marker-media-pin-20261117">
 </head>
 <body>
   <header class="site-header">
@@ -145,6 +145,7 @@
           <div class="map-overlay-layer" id="map-overlay-layer" aria-label="Map area overlays" data-i18n-aria="mapAreaOverlays"></div>
           <div class="annotation-layer" id="annotation-layer" aria-label="Map drawings" data-i18n-aria="mapDrawings"></div>
           <div class="marker-layer" id="marker-layer" aria-label="Map markers" data-i18n-aria="mapMarkers"></div>
+          <p class="map-media-hint" data-i18n="markerMediaHint">Hover over a tank marker to view in-game screenshots and videos from that position. Click a screenshot to pin its enlarged preview.</p>
           <span class="map-enlarge-hint" data-i18n="enlargeHint">Click to enlarge</span>
           <div class="marker-context-menu" id="marker-context-menu" role="menu" aria-label="Marker actions" data-i18n-aria="markerActions" hidden>
             <div data-marker-action-list>
@@ -401,6 +402,7 @@
           <button class="marker-tool marker-color-toggle" id="modal-marker-color-toggle" type="button" aria-pressed="false">WHITE ICONS</button>
         </div>
         <p class="modal-legend-note" data-i18n="modalLegendHint">Click an icon to hide or restore that marker type.</p>
+        <p class="modal-legend-note" data-i18n="markerMediaHint">Hover over a tank marker to view in-game screenshots and videos from that position.</p>
         <div class="modal-legend-list" id="modal-legend-list"></div>
         <div class="modal-legend-actions">
           <button class="marker-tool" id="modal-toggle-editor" type="button" aria-pressed="false" data-i18n="editMarkers">Edit Map</button>
@@ -414,7 +416,7 @@
 
   <input id="marker-layout-import-file" type="file" accept="application/json,.json" hidden>
 
-  <script type="module" src="/assets/js/app.js?v=comment-images-987210b56169"></script>
+  <script type="module" src="/assets/js/app.js?v=marker-media-pin-20261117"></script>
   <script type="module" src="/assets/js/consent-controls.js?v=20260828"></script>
 </body>
 </html>
