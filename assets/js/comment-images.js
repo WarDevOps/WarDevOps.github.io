@@ -2627,74 +2627,134 @@ export const commentImages = Object.freeze([
     "label": "scr_ (38).webp"
   },
   {
-    "id": "Golden Quarry/scr_1.webp",
-    "path": "img/Golden Quarry/scr_1.webp",
-    "label": "scr_1.webp"
+    "id": "Golden Quarry/scr_ (1).webp",
+    "path": "img/Golden Quarry/scr_ (1).webp",
+    "label": "scr_ (1).webp"
   },
   {
-    "id": "Golden Quarry/scr_2.webp",
-    "path": "img/Golden Quarry/scr_2.webp",
-    "label": "scr_2.webp"
+    "id": "Golden Quarry/scr_ (2).webp",
+    "path": "img/Golden Quarry/scr_ (2).webp",
+    "label": "scr_ (2).webp"
   },
   {
-    "id": "Golden Quarry/scr_3.webp",
-    "path": "img/Golden Quarry/scr_3.webp",
-    "label": "scr_3.webp"
+    "id": "Golden Quarry/scr_ (3).webp",
+    "path": "img/Golden Quarry/scr_ (3).webp",
+    "label": "scr_ (3).webp"
   },
   {
-    "id": "Golden Quarry/scr_4.webp",
-    "path": "img/Golden Quarry/scr_4.webp",
-    "label": "scr_4.webp"
+    "id": "Golden Quarry/scr_ (4).webp",
+    "path": "img/Golden Quarry/scr_ (4).webp",
+    "label": "scr_ (4).webp"
   },
   {
-    "id": "Golden Quarry/scr_5.webp",
-    "path": "img/Golden Quarry/scr_5.webp",
-    "label": "scr_5.webp"
+    "id": "Golden Quarry/scr_ (5).webp",
+    "path": "img/Golden Quarry/scr_ (5).webp",
+    "label": "scr_ (5).webp"
   },
   {
-    "id": "Golden Quarry/scr_6.webp",
-    "path": "img/Golden Quarry/scr_6.webp",
-    "label": "scr_6.webp"
+    "id": "Golden Quarry/scr_ (6).webp",
+    "path": "img/Golden Quarry/scr_ (6).webp",
+    "label": "scr_ (6).webp"
   },
   {
-    "id": "Golden Quarry/scr_7.webp",
-    "path": "img/Golden Quarry/scr_7.webp",
-    "label": "scr_7.webp"
+    "id": "Golden Quarry/scr_ (7).webp",
+    "path": "img/Golden Quarry/scr_ (7).webp",
+    "label": "scr_ (7).webp"
   },
   {
-    "id": "Golden Quarry/scr_8.webp",
-    "path": "img/Golden Quarry/scr_8.webp",
-    "label": "scr_8.webp"
+    "id": "Golden Quarry/scr_ (8).webp",
+    "path": "img/Golden Quarry/scr_ (8).webp",
+    "label": "scr_ (8).webp"
   },
   {
-    "id": "Golden Quarry/scr_9.webp",
-    "path": "img/Golden Quarry/scr_9.webp",
-    "label": "scr_9.webp"
+    "id": "Golden Quarry/scr_ (9).webp",
+    "path": "img/Golden Quarry/scr_ (9).webp",
+    "label": "scr_ (9).webp"
   },
   {
-    "id": "Golden Quarry/scr_10.webp",
-    "path": "img/Golden Quarry/scr_10.webp",
-    "label": "scr_10.webp"
+    "id": "Golden Quarry/scr_ (10).webp",
+    "path": "img/Golden Quarry/scr_ (10).webp",
+    "label": "scr_ (10).webp"
   },
   {
-    "id": "Golden Quarry/scr_11.webp",
-    "path": "img/Golden Quarry/scr_11.webp",
-    "label": "scr_11.webp"
+    "id": "Golden Quarry/scr_ (11).webp",
+    "path": "img/Golden Quarry/scr_ (11).webp",
+    "label": "scr_ (11).webp"
   },
   {
-    "id": "Golden Quarry/scr_12.webp",
-    "path": "img/Golden Quarry/scr_12.webp",
-    "label": "scr_12.webp"
+    "id": "Golden Quarry/scr_ (12).webp",
+    "path": "img/Golden Quarry/scr_ (12).webp",
+    "label": "scr_ (12).webp"
   },
   {
-    "id": "Golden Quarry/scr_13.webp",
-    "path": "img/Golden Quarry/scr_13.webp",
-    "label": "scr_13.webp"
+    "id": "Golden Quarry/scr_ (13).webp",
+    "path": "img/Golden Quarry/scr_ (13).webp",
+    "label": "scr_ (13).webp"
   },
   {
-    "id": "Golden Quarry/scr_14.webp",
-    "path": "img/Golden Quarry/scr_14.webp",
-    "label": "scr_14.webp"
+    "id": "Golden Quarry/scr_ (14).webp",
+    "path": "img/Golden Quarry/scr_ (14).webp",
+    "label": "scr_ (14).webp"
+  },
+  {
+    "id": "Golden Quarry/scr_ (15).webp",
+    "path": "img/Golden Quarry/scr_ (15).webp",
+    "label": "scr_ (15).webp"
+  },
+  {
+    "id": "Golden Quarry/scr_ (16).webp",
+    "path": "img/Golden Quarry/scr_ (16).webp",
+    "label": "scr_ (16).webp"
+  },
+  {
+    "id": "Golden Quarry/scr_ (17).webp",
+    "path": "img/Golden Quarry/scr_ (17).webp",
+    "label": "scr_ (17).webp"
+  },
+  {
+    "id": "Golden Quarry/scr_ (18).webp",
+    "path": "img/Golden Quarry/scr_ (18).webp",
+    "label": "scr_ (18).webp"
+  },
+  {
+    "id": "Golden Quarry/scr_ (19).webp",
+    "path": "img/Golden Quarry/scr_ (19).webp",
+    "label": "scr_ (19).webp"
+  },
+  {
+    "id": "Golden Quarry/scr_ (20).webp",
+    "path": "img/Golden Quarry/scr_ (20).webp",
+    "label": "scr_ (20).webp"
+  },
+  {
+    "id": "Golden Quarry/scr_ (21).webp",
+    "path": "img/Golden Quarry/scr_ (21).webp",
+    "label": "scr_ (21).webp"
+  },
+  {
+    "id": "Golden Quarry/scr_ (22).webp",
+    "path": "img/Golden Quarry/scr_ (22).webp",
+    "label": "scr_ (22).webp"
+  },
+  {
+    "id": "North Holland/scr_ (1).webp",
+    "path": "img/North Holland/scr_ (1).webp",
+    "label": "scr_ (1).webp"
+  },
+  {
+    "id": "North Holland/scr_ (2).webp",
+    "path": "img/North Holland/scr_ (2).webp",
+    "label": "scr_ (2).webp"
+  },
+  {
+    "id": "North Holland/scr_ (3).webp",
+    "path": "img/North Holland/scr_ (3).webp",
+    "label": "scr_ (3).webp"
+  },
+  {
+    "id": "North Holland/scr_ (4).webp",
+    "path": "img/North Holland/scr_ (4).webp",
+    "label": "scr_ (4).webp"
   },
   {
     "id": "Red Desert/scr_ (1).webp",
