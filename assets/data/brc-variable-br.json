@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
   "status": "current",
-  "source": "https://warthunder.com/en/game/changelog/current/1915",
-  "reviewedOn": "2026-11-12",
-  "notes": "Official Eagle's Shadow custom BR weapon thresholds. Highest selected penalty wins, capped per mode. Penalties use integer BR steps. Only the listed mode is affected. Existing reviewed J-22 weapon aliases are retained.",
+  "source": "https://warthunder.com/en/game/changelog/current/1921",
+  "reviewedOn": "2026-11-20",
+  "notes": "Official custom BR rules reviewed through the 2026-11-19 server update. Highest selected weapon penalty wins, capped per mode. Penalties use integer BR steps.",
   "additionalWeapons": {
     "mig-21_bison": [
       "w-cff6eb8beb4f77da"
@@ -514,12 +514,28 @@
           "w-0eae2a1fc33321a2": 1
         }
       }
+    },
+    "air:yak_130_early": {
+      "arb": {
+        "base": 9.0,
+        "max": 10.3,
+        "penalties": {
+          "w-7aad7ee52204461c": 13
+        }
+      },
+      "grb": {
+        "base": 9.0,
+        "max": 10.3,
+        "penalties": {
+          "w-7aad7ee52204461c": 13
+        }
+      }
     }
   },
   "applicability": {
-    "source": "https://warthunder.com/en/game/changelog/current/1915",
-    "checkedOn": "2026-11-12",
-    "notes": "Official aircraft and helicopter custom BR applicability; all listed modes have calculation rules.",
+    "source": "https://warthunder.com/en/game/changelog/current/1921",
+    "checkedOn": "2026-11-20",
+    "notes": "Official aircraft and helicopter custom BR applicability, updated through the 2026-11-19 server update.",
     "units": {
       "air:j_22m1a": [
         "arb",
@@ -647,6 +663,10 @@
         "grb"
       ],
       "heli:ah_64e_netherlands": [
+        "grb"
+      ],
+      "air:yak_130_early": [
+        "arb",
         "grb"
       ]
     }

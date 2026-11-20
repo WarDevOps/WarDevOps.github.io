@@ -369,7 +369,7 @@ async function loadCatalog() {
   try {
     // Deliberately share the Tier List catalog and its BR values; no BRC-specific copy.
     const [catalog, ratings] = await Promise.all([
-      "../data/tier-units.json?v=wiki-refresh-20261112", "../data/brc-variable-br.json?v=mitl-rules-20261112",
+      "../data/tier-units.json?v=yak130-custom-br-20261120", "../data/brc-variable-br.json?v=yak130-custom-br-20261120",
     ].map(async path => {
       const response = await fetch(new URL(path, import.meta.url));
       if (!response.ok) throw new Error(`Catalog HTTP ${response.status}`);
