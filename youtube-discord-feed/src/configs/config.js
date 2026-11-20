@@ -19,18 +19,11 @@ export default {
   YOUTUBE_FEED: {
     CHANNELS: youtubeChannels.channels,
 
-    // Max characters of the video description shown in the embed.
-    DESCRIPTION_LIMIT: 350,
-
     // Embed sidebar color used when a channel doesn't set its own `color`.
     DEFAULT_EMBED_COLOR: "#ED4245",
 
-    // How long a resolved @handle is cached before being re-scraped.
-    HANDLE_CACHE_TTL_MS: 30 * 24 * 60 * 60 * 1000,
-
     // Retry/backoff settings for transient network failures.
     FEED_FETCH_RETRY: { MAX_RETRIES: 3, INITIAL_DELAY_MS: 1000 },
-    HANDLE_FETCH_RETRY: { MAX_RETRIES: 2, INITIAL_DELAY_MS: 1000 },
 
     // Delays between sends to stay within Discord rate limits.
     THROTTLE_MS: { PER_VIDEO: 300, PER_CHANNEL: 500 },

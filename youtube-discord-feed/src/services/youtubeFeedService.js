@@ -1,13 +1,7 @@
 import Parser from "rss-parser";
-import {
-  EmbedBuilder,
-  ButtonBuilder,
-  ButtonStyle,
-  ActionRowBuilder,
-} from "discord.js";
+import { EmbedBuilder } from "discord.js";
 import config from "../configs/config.js";
 import { loadLastSeen, saveLastSeen } from "../utils/videoTimestampsLogger.js";
-import { loadChannelInfo, saveChannelInfo } from "../utils/channelInfoCache.js";
 import { sendSysErrorMessage } from "../utils/sysErrorEmbed.js";
 import { fileURLToPath } from "url";
 
@@ -15,8 +9,6 @@ const { DISCORD_ROLE_ID, YOUTUBE_FEED } = config;
 const __filename = fileURLToPath(import.meta.url);
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
-
-const CANONICAL_HANDLE_REGEX = /"canonicalBaseUrl":"\/(@[^"]+)"/;
 
 function parseItemDate(item) {
   const rawDate = item.isoDate || item.pubDate;
@@ -58,51 +50,14 @@ class youtubeFeedService {
     });
     this.lastSeen = new Map();
     this.lastSeenReady = this.initLastSeen();
-    this.channelInfo = new Map();
-    this.channelInfoReady = this.initChannelInfo();
   }
 
   async initLastSeen() {
     this.lastSeen = await loadLastSeen();
   }
 
-  async initChannelInfo() {
-    this.channelInfo = await loadChannelInfo();
-  }
-
-  /**
-   * Resolves a channel's @handle, scraping the channel page only when the cached
-   * value is missing or stale (see HANDLE_CACHE_TTL_MS).
-   */
-  async getChannelHandle(channelId) {
-    const cached = this.channelInfo.get(channelId);
-    if (cached && Date.now() - cached.fetchedAt < YOUTUBE_FEED.HANDLE_CACHE_TTL_MS) {
-      return cached.handle;
-    }
-
-    try {
-      const { MAX_RETRIES, INITIAL_DELAY_MS } = YOUTUBE_FEED.HANDLE_FETCH_RETRY;
-      const response = await retryWithBackoff(
-        () => fetch(`https://www.youtube.com/channel/${channelId}`),
-        MAX_RETRIES,
-        INITIAL_DELAY_MS
-      );
-      const html = await response.text();
-      const match = html.match(CANONICAL_HANDLE_REGEX);
-      const handle = match ? match[1] : null;
-
-      this.channelInfo.set(channelId, { handle, fetchedAt: Date.now() });
-      await saveChannelInfo(this.channelInfo);
-      return handle;
-    } catch (error) {
-      console.warn(`[WARN] Failed to resolve @handle for channel ${channelId}:`, error);
-      return cached?.handle ?? null;
-    }
-  }
-
   async fetchAndProcessChannels(webhookClient, channels) {
     await this.lastSeenReady;
-    await this.channelInfoReady;
 
     if (!channels || channels.length === 0) {
       console.warn("[WARN] No YouTube channels configured");
@@ -139,7 +94,7 @@ class youtubeFeedService {
           const wasSent = await this.processAndSendVideo(
             webhookClient,
             newest,
-            { channelName, handle: await this.getChannelHandle(channelId), color }
+            { channelName, color }
           );
 
           if (wasSent) {
@@ -169,13 +124,11 @@ class youtubeFeedService {
           console.info(`[INFO] ${newItems.length} new video(s) found for ${channelName}, sending oldest-first.`);
         }
 
-        const handle = await this.getChannelHandle(channelId);
-
         for (const item of newItems) {
           const wasSent = await this.processAndSendVideo(
             webhookClient,
             item,
-            { channelName, handle, color }
+            { channelName, color }
           );
           if (wasSent) {
             // Persist immediately after each send (not batched at the end) so a crash
@@ -221,50 +174,22 @@ class youtubeFeedService {
     return thumb || null;
   }
 
-  getDescription(item) {
-    const raw = item.mediaGroup?.["media:description"]?.[0];
-    const description = typeof raw === "string" ? raw.trim() : "";
-    if (!description) return ">>> No description available.";
-    if (description.length > YOUTUBE_FEED.DESCRIPTION_LIMIT) {
-      return ">>> " + description.slice(0, YOUTUBE_FEED.DESCRIPTION_LIMIT - 1).trimEnd() + "…";
-    }
-    return ">>> " + description;
-  }
-
-  async processAndSendVideo(webhookClient, item, { channelName, handle, color }) {
+  async processAndSendVideo(webhookClient, item, { channelName, color }) {
     try {
       const embed = new EmbedBuilder()
         .setColor(color || YOUTUBE_FEED.DEFAULT_EMBED_COLOR)
         .setTitle(item.title)
-        .setURL(item.link)
-        .setDescription(this.getDescription(item))
-        .setTimestamp(new Date(item.isoDate || item.pubDate));
-
-      if (handle) {
-        embed.setFooter({ text: handle });
-      }
+        .setURL(item.link);
 
       const thumbnail = this.getThumbnail(item);
       if (thumbnail) {
         embed.setImage(thumbnail);
       }
 
-      // Button linking to the video
-      const button = new ButtonBuilder()
-        .setStyle(ButtonStyle.Link)
-        .setLabel("Watch on YouTube")
-        .setURL(item.link);
-
-      const actionRow = new ActionRowBuilder().addComponents(button);
-
       await webhookClient.send({
-        username: channelName,
         content: DISCORD_ROLE_ID ? `<@&${DISCORD_ROLE_ID}>` : undefined,
         allowedMentions: DISCORD_ROLE_ID ? { roles: [DISCORD_ROLE_ID] } : undefined,
         embeds: [embed],
-        components: [actionRow],
-        // Required for non-application webhooks to keep non-interactive components (link buttons).
-        withComponents: true,
       });
 
       console.info(`[INFO] New video sent for ${channelName}: ${item.title}`);
