@@ -2,7 +2,7 @@
   "source": "https://wiki.warthunder.com",
   "battleRatingMode": "RB",
   "generatedAt": "2026-09-22T02:55:51Z",
-  "updatedAt": "2026-11-12",
+  "updatedAt": "2026-11-20",
   "categories": {
     "tank": {
       "source": "https://wiki.warthunder.com/ground",
@@ -15791,23 +15791,6 @@
           "imageSource": "https://static.encyclopedia.warthunder.com/images/il_leopard_2a6_hel.png"
         },
         {
-          "wikiId": "pending-us-m3a1-twitch",
-          "name": "M3A1 (Twitch Drop)",
-          "file": "pending-us-m3a1-twitch.webp",
-          "countryCode": "US",
-          "country": "USA",
-          "rank": 1,
-          "br": 2.3,
-          "unitClass": "other",
-          "role": "",
-          "source": null,
-          "imageSource": null,
-          "wikiPending": true,
-          "imageAvailable": false,
-          "announcementSource": "https://arca.live/b/gaijin/187635726",
-          "availabilityStatus": "testing"
-        },
-        {
           "wikiId": "us_stingray_2",
           "name": "Stingray II",
           "file": "pending-us-stingray-ii.webp",
@@ -16012,6 +15995,20 @@
           "role": "Light tank",
           "source": "https://wiki.warthunder.com/unit/ussr_bt_7_m_816",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/ussr_bt_7_m_816.png",
+          "isNew": true
+        },
+        {
+          "wikiId": "us_m3a1_stuart_nvidia",
+          "name": "M3A1 TD",
+          "file": "us_m3a1_stuart_nvidia.webp",
+          "countryCode": "US",
+          "country": "USA",
+          "rank": 1,
+          "br": 2.3,
+          "unitClass": "lt",
+          "role": "Light tank",
+          "source": "https://wiki.warthunder.com/unit/us_m3a1_stuart_nvidia",
+          "imageSource": "https://static.encyclopedia.warthunder.com/images/us_m3a1_stuart_nvidia.png",
           "isNew": true
         }
       ]
@@ -34557,24 +34554,6 @@
           "brGround": 14.0
         },
         {
-          "wikiId": "pending-us-f2a-1-twitch",
-          "name": "F2A-1 (Twitch Drop)",
-          "file": "pending-us-f2a-1-twitch.webp",
-          "countryCode": "US",
-          "country": "USA",
-          "rank": 1,
-          "br": 2.0,
-          "unitClass": "other",
-          "role": "",
-          "source": null,
-          "imageSource": null,
-          "wikiPending": true,
-          "imageAvailable": false,
-          "announcementSource": "https://arca.live/b/gaijin/187635726",
-          "availabilityStatus": "testing",
-          "brGround": 2.3
-        },
-        {
           "wikiId": "fa_18d_late",
           "name": "F/A-18D",
           "file": "pending-us-fa-18d.webp",
@@ -34776,6 +34755,21 @@
           "source": "https://wiki.warthunder.com/unit/spad_13",
           "imageSource": "https://static.encyclopedia.warthunder.com/images/spad_13.png",
           "brGround": 1.0,
+          "isNew": true
+        },
+        {
+          "wikiId": "f2a-1_nvidia",
+          "name": "F2A-1 TD",
+          "file": "f2a-1_nvidia.webp",
+          "countryCode": "US",
+          "country": "USA",
+          "rank": 1,
+          "br": 2.0,
+          "unitClass": "fighter",
+          "role": "Fighter",
+          "source": "https://wiki.warthunder.com/unit/f2a-1_nvidia",
+          "imageSource": "https://static.encyclopedia.warthunder.com/images/f2a-1_nvidia.png",
+          "brGround": 2.3,
           "isNew": true
         }
       ]
@@ -36258,11 +36252,11 @@
       ]
     }
   },
-  "battleRatingsUpdatedAt": "2026-11-12",
+  "battleRatingsUpdatedAt": "2026-11-20",
   "battleRatingSnapshot": {
     "status": "current",
     "source": "https://wiki.warthunder.com",
-    "checkedOn": "2026-11-12",
+    "checkedOn": "2026-11-20",
     "fields": {
       "tank.br": "Ground RB",
       "air.br": "Air RB",
@@ -36274,21 +36268,21 @@
       "air": "https://wiki.warthunder.com/aviation",
       "heli": "https://wiki.warthunder.com/helicopters"
     },
-    "unverifiedAnnouncedVehicles": 2
+    "unverifiedAnnouncedVehicles": 0
   },
   "announcedVehicles": {
     "source": "https://arca.live/b/gaijin/187635726",
     "sourceFormat": "User-supplied article text",
-    "status": "testing",
+    "status": "reconciled",
     "addedOn": "2026-11-01",
-    "wikiCheckedOn": "2026-11-12",
+    "wikiCheckedOn": "2026-11-20",
     "excluded": [
       "naval",
       "nuke",
       "killstreak"
     ],
     "units": [
-      "pending-us-f2a-1-twitch",
+      "f2a-1_nvidia",
       "fa_18d_late",
       "f_15ex",
       "su_15tm",
@@ -36298,7 +36292,7 @@
       "q_5d",
       "saab_jas39_pre_serie",
       "f_15ia",
-      "pending-us-m3a1-twitch",
+      "us_m3a1_stuart_nvidia",
       "us_stingray_2",
       "germ_leopard_2a8",
       "ussr_btr_90_2004",
@@ -36312,6 +36306,6 @@
       "sw_leopard_2a8no",
       "aw_249_pre_serie"
     ],
-    "note": "21 provisional vehicles reconciled to official Wiki entries. Original file keys retained for saved tiers. M3A1 and F2A-1 Twitch variants still await confirmed Wiki entries."
+    "note": "All announced vehicles in this list have confirmed Wiki vehicle entries; the original provisional IDs were replaced where needed."
   }
 }

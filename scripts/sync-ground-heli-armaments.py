@@ -63,6 +63,13 @@ def parse_ground(document, wiki_id):
             continue
         tables = block.xpath('.//table[thead/tr/th[normalize-space()="Ammunition" or normalize-space()="Belt"]]')
         if not tables:
+            # Some Wiki pages list a missile both in the available-ammunition
+            # table and as a separate launcher line, without a second ammo table.
+            # The missile and its guidance were already captured from the table.
+            if re.search(r'\bAAM\b', title, re.I) and any(
+                    weapon.get('missileGuidance') and weapon['name'].casefold() in title.casefold()
+                    for weapon in weapons.values()):
+                continue
             unresolved.append({'weapon': title, 'reason': 'Missing ammunition table'})
         for table in tables:
             for row in table.xpath('./tbody/tr'):
@@ -155,7 +162,7 @@ def main():
     parser.add_argument('--workers', type=int, default=6)
     args = parser.parse_args()
     catalog = json.loads((ROOT / 'assets/data/tier-units.json').read_text(encoding='utf-8'))
-    cache = ROOT / 'local-artifacts/wiki-ground-heli-armaments'
+    cache = ROOT / 'local-artifacts/wiki-ground-heli-armaments' / datetime.now(timezone.utc).strftime('%Y-%m-%d')
     cache.mkdir(parents=True, exist_ok=True)
     data = {'schemaVersion': 1, 'source': air.WIKI,
         'checkedAt': datetime.now(timezone.utc).isoformat(), 'weapons': {}, 'ground': {}, 'helicopters': {}}
