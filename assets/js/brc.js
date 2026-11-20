@@ -312,7 +312,29 @@ function renderSearch() {
 }
 
 function applyLanguage() {
-  document.querySelectorAll("[data-brc-text]").forEach(node => { node.textContent = t(node.dataset.brcText); });
+  document.querySelectorAll("[data-brc-text]").forEach(node => {
+    const key = node.dataset.brcText;
+    const text = t(key);
+    if (!["borderLegend", "arbNotice", "notice"].includes(key)) {
+      node.textContent = text;
+      return;
+    }
+    const colorTerms = state.language === "ko"
+      ? [["파란색", "brc-copy-blue"], ["보라색", "brc-copy-purple"]]
+      : [["blue", "brc-copy-blue"], ["purple", "brc-copy-purple"]];
+    const pattern = new RegExp(colorTerms.map(([term]) => term).join("|"), "g");
+    const fragment = document.createDocumentFragment();
+    let start = 0;
+    for (const match of text.matchAll(pattern)) {
+      fragment.append(document.createTextNode(text.slice(start, match.index)));
+      const term = colorTerms.find(([value]) => value === match[0]);
+      const label = element("span", term[1], match[0]);
+      fragment.append(label);
+      start = match.index + match[0].length;
+    }
+    fragment.append(document.createTextNode(text.slice(start)));
+    node.replaceChildren(fragment);
+  });
   const updated = state.catalog?.updatedAt || state.catalog?.battleRatingsUpdatedAt || state.catalog?.generatedAt;
   const date = typeof updated === "string" ? updated.slice(0, 10) : "";
   const hasDate = /^\d{4}-\d{2}-\d{2}$/.test(date) && Number.isFinite(Date.parse(date));
@@ -369,7 +391,7 @@ async function loadCatalog() {
   try {
     // Deliberately share the Tier List catalog and its BR values; no BRC-specific copy.
     const [catalog, ratings] = await Promise.all([
-      "../data/tier-units.json?v=yak130-custom-br-20261120", "../data/brc-variable-br.json?v=yak130-custom-br-20261120",
+      "../data/tier-units.json?v=brc-color-legend-20261120", "../data/brc-variable-br.json?v=brc-color-legend-20261120",
     ].map(async path => {
       const response = await fetch(new URL(path, import.meta.url));
       if (!response.ok) throw new Error(`Catalog HTTP ${response.status}`);
