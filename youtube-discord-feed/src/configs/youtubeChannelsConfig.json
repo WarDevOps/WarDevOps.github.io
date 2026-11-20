@@ -1,3 +1,16 @@
 {
-  "channels": []
+  "channels": [
+    {
+      "name": "BPA_Jon",
+      "channelId": "UCHwQTETSJa2LGgI2LV058Sg",
+      "color": "#ED4245",
+      "enabled": true
+    },
+    {
+      "name": "Nari",
+      "channelId": "UCcBu4VLbojU3qU_nS4y7TJA",
+      "color": "#ED4245",
+      "enabled": true
+    }
+  ]
 }
