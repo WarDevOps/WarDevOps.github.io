@@ -4,15 +4,15 @@ import { createVectorEditor } from './vector-editor.js?v=editor-shortcuts-202611
 import { validateVectorGroups, pruneGroups } from './vector-model.js?v=route-selection-20260923';
 import { validatePastedView } from './paste-validation.js';
 let vectorEditor = null;
-    import { commentImages } from './comment-images.js?v=comment-images-5841265764ac';
-    import { defaultMarkerLayout, maps, translations } from './data.js?v=marker-media-dismiss-20261117';
+    import { commentImages } from './comment-images.js?v=comment-images-eb5b3fc38592';
+    import { defaultMarkerLayout, maps, translations } from './data.js?v=comment-media-share-20261122';
     import { normalizeTacticalSummary, resolveTacticalSummary, withVariationSummary } from './tactical-summary.js?v=variation-switch-20260914';
     import { acceptUpstreamMap, isMapSyncState, markLayoutAsLocalEdits, markMapEdited, mergeMapLayouts, sourceRevision } from './marker-merge.js?v=mobile-default-layout-20260917';
 
 
     const DEFAULT_ANNOTATION_OPACITY = 50;
     const ANNOTATION_OPACITY_STORAGE_KEY = "maptactic-route-aim-opacity-v1";
-    const state = { selected: null, team: "Red", query: "", language: "en", theme: "dark", editMode: false, focusedTankMarkerId: null, contextMarkerId: null, contextAnnotationId: null, commentMarkerId: null, drawing: null, annotationOpacity: loadAnnotationOpacity() };
+    const state = { selected: null, team: "Red", query: "", language: "en", theme: "dark", editMode: false, focusedTankMarkerId: null, commentLinkPending: null, commentLinkMarkerId: null, commentLinkMediaId: null, commentLinkRevealMarkerId: null, commentLinkMarkerData: null, contextMarkerId: null, contextAnnotationId: null, commentMarkerId: null, drawing: null, annotationOpacity: loadAnnotationOpacity() };
     const $ = (selector) => document.querySelector(selector);
     const markerCommentPopover = document.createElement("div");
     markerCommentPopover.className = "map-marker-comment-popover";
@@ -777,6 +777,7 @@ let vectorEditor = null;
         .filter(Boolean);
     }
     function isMarkerHidden(marker) {
+      if (marker.id === state.commentLinkRevealMarkerId) return false;
       return hiddenMarkers.has(markerIdentity(marker)) || hiddenMarkerTypes.has(markerTypeIdentity(marker.type));
     }
     function isAnnotationHidden(annotation) {
@@ -852,6 +853,16 @@ let vectorEditor = null;
         .map(resolveCommentImageId)
         .filter(Boolean)
         .slice(0, MAX_COMMENT_IMAGES);
+    }
+    function deployedCommentMarker(marker) {
+      if (!marker || !upstreamMarkerLayout || !currentMarkerKey()) return null;
+      const deployed = upstreamMarkerLayout.markers?.[currentMarkerKey()]?.find(item => item.id === marker.id);
+      if (!deployed) return null;
+      if (["comment", "commentEn", "commentKo"].some(key => (marker[key] || "") !== (deployed[key] || ""))) return null;
+      const mediaIds = markerCommentImageIds(marker);
+      const deployedMediaIds = markerCommentImageIds(deployed);
+      if (!mediaIds.length || JSON.stringify(mediaIds) !== JSON.stringify(deployedMediaIds)) return null;
+      return deployed;
     }
     function markerCommentImages(marker) {
       return markerCommentImageIds(marker).map(imageId => COMMENT_IMAGES_BY_ID.get(imageId));
@@ -1161,12 +1172,20 @@ let vectorEditor = null;
       const markerId = state.focusedTankMarkerId;
       if (!markerId) return;
       state.focusedTankMarkerId = null;
+      clearCommentLinkTarget();
       renderMarkers();
       if (!restoreFocus) return;
       window.requestAnimationFrame(() => {
         const activeMarkerLayer = dialog.open ? modalMarkerLayer : markerLayer;
         activeMarkerLayer.querySelector(`.map-marker[data-marker-id="${CSS.escape(markerId)}"]`)?.focus({ preventScroll: true });
       });
+    }
+    function clearCommentLinkTarget() {
+      state.commentLinkPending = null;
+      state.commentLinkMarkerId = null;
+      state.commentLinkMediaId = null;
+      state.commentLinkRevealMarkerId = null;
+      state.commentLinkMarkerData = null;
     }
     function positionMarkerCommentPopover(anchor) {
       if (markerCommentPopover.hidden || markerCommentPopoverAnchor !== anchor || !anchor.isConnected) return;
@@ -1238,7 +1257,7 @@ let vectorEditor = null;
       markerCommentPopover.style.top = `${top}px`;
       markerCommentPopover.style.visibility = "visible";
     }
-    function showMarkerCommentPopover(anchor, marker, { pinned = false } = {}) {
+    function showMarkerCommentPopover(anchor, marker, { pinned = false, initialMediaId = null } = {}) {
       if (state.focusedTankMarkerId && state.focusedTankMarkerId !== marker?.id) return;
       const comment = markerComment(marker);
       const commentImages = markerCommentImages(marker);
@@ -1280,12 +1299,31 @@ let vectorEditor = null;
         const carousel = document.createElement("div");
         carousel.className = "map-marker-comment-carousel";
         carousel._commentMediaInteractive = mobileSheet;
-        configureCommentCarousel(carousel, commentImages, 0, index => {
+        const initialMediaIndex = initialMediaId ? commentImages.findIndex(image => image.id === initialMediaId) : 0;
+        configureCommentCarousel(carousel, commentImages, Math.max(0, initialMediaIndex), index => {
+          if (state.commentLinkMarkerId === marker.id && state.focusedTankMarkerId === marker.id) {
+            state.commentLinkMediaId = commentImages[index]?.id || null;
+          }
           if (!markerCommentImagePreview.hidden && markerCommentImagePreviewSourceCarousel === carousel) {
             setCommentCarouselIndex(markerCommentImagePreviewCarousel, index, { notify: false });
           }
           positionMarkerCommentPopover(anchor);
         });
+        if (pinned && deployedCommentMarker(marker)) {
+          const actions = document.createElement("div");
+          actions.className = "map-marker-comment-actions";
+          const shareButton = document.createElement("button");
+          shareButton.type = "button";
+          shareButton.className = "map-marker-comment-share";
+          setCommentMediaLinkButtonState(shareButton);
+          shareButton.addEventListener("click", event => {
+            event.preventDefault();
+            event.stopPropagation();
+            void copyCommentMediaLink(shareButton, marker, carousel);
+          });
+          actions.append(shareButton);
+          content.append(actions);
+        }
         bindCommentImageSwipe(carousel);
         const handleMediaReady = event => {
           if (event.target === commentCarouselMedia(carousel)) positionMarkerCommentPopover(anchor);
@@ -2083,7 +2121,14 @@ let vectorEditor = null;
       layer.replaceChildren();
       if (!state.selected || image.hidden) return;
       const markerSize = MAP_MARKER_BASE_SIZE * (Math.min(layer.clientWidth, layer.clientHeight) / MAP_MARKER_REFERENCE_SIZE);
-      currentMarkers().forEach(marker => {
+      const localMarkers = currentMarkers();
+      const markers = state.commentLinkMarkerData
+        ? localMarkers.map(marker => marker.id === state.commentLinkMarkerId ? state.commentLinkMarkerData : marker)
+        : localMarkers;
+      const linkedDefaultMarker = state.commentLinkMarkerData && !localMarkers.some(marker => marker.id === state.commentLinkMarkerId)
+        ? [state.commentLinkMarkerData]
+        : [];
+      [...markers, ...linkedDefaultMarker].forEach(marker => {
         const type = markerTypes.get(marker.type);
         const x = Number(marker.x);
         const y = Number(marker.y);
@@ -2229,7 +2274,9 @@ let vectorEditor = null;
       renderWorkInProgress(mapStage, mapImage);
       renderWorkInProgress(modalMapStage, modalImage);
       hideMarkerCommentPopover(null, { force: true });
-      const focusedTankMarker = currentMarkers().find(marker => marker.id === state.focusedTankMarkerId);
+      const focusedTankMarker = state.commentLinkMarkerId === state.focusedTankMarkerId && state.commentLinkMarkerData
+        ? state.commentLinkMarkerData
+        : currentMarkers().find(marker => marker.id === state.focusedTankMarkerId);
       if (state.focusedTankMarkerId && ((!isTankMarker(focusedTankMarker) && !markerHasComment(focusedTankMarker)) || isMarkerHidden(focusedTankMarker))) state.focusedTankMarkerId = null;
       syncMarkerLayer(mapOverlayLayer, mapImage, mapStage);
       renderMapOverlayLayer(mapOverlayLayer, mapImage);
@@ -2246,13 +2293,19 @@ let vectorEditor = null;
         syncMarkerLayer(modalMarkerLayer, modalImage, modalMapStage);
         renderMarkerLayer(modalMarkerLayer, modalImage);
       }
-      const activeFocusedTank = !state.editMode && currentMarkers().find(marker => marker.id === state.focusedTankMarkerId);
+      const activeFocusedTank = !state.editMode && (state.commentLinkMarkerId === state.focusedTankMarkerId && state.commentLinkMarkerData
+        ? state.commentLinkMarkerData
+        : currentMarkers().find(marker => marker.id === state.focusedTankMarkerId));
+      const commentSource = activeFocusedTank?.id === state.commentLinkMarkerId && state.commentLinkMarkerData
+        ? state.commentLinkMarkerData
+        : activeFocusedTank;
       vectorEditor?.refresh();
-      if (!markerHasComment(activeFocusedTank)) return;
+      if (!markerHasComment(commentSource)) return;
       const activeMarkerLayer = dialog.open ? modalMarkerLayer : markerLayer;
       const focusedMarkerButton = [...activeMarkerLayer.querySelectorAll(".map-marker")]
         .find(button => button.dataset.markerId === activeFocusedTank.id);
-      if (focusedMarkerButton) showMarkerCommentPopover(focusedMarkerButton, activeFocusedTank, { pinned: true });
+      const initialMediaId = commentSource === state.commentLinkMarkerData ? state.commentLinkMediaId : null;
+      if (focusedMarkerButton) showMarkerCommentPopover(focusedMarkerButton, commentSource, { pinned: true, initialMediaId });
     }
     function renderMarkerPlacement(movedMarker) {
       const surfaces = [{ layer: markerLayer, image: mapImage, drawings: annotationLayer }];
@@ -2330,6 +2383,7 @@ let vectorEditor = null;
       }
       state.editMode = enabled;
       state.focusedTankMarkerId = null;
+      clearCommentLinkTarget();
       hideMarkerContextMenu();
       updateMarkerEditor();
       updateSelectedMapDetails();
@@ -2655,6 +2709,42 @@ let vectorEditor = null;
         copyLinkLabel.textContent = t("copyLink");
       }, 2200);
     }
+    function setCommentMediaLinkButtonState(button, status = "ready") {
+      const icons = {
+        ready: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.72"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.72-1.72"/></svg>',
+        copied: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>',
+        failed: '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v6m0 4h.01"/></svg>'
+      };
+      const label = status === "copied" ? t("linkCopied") : status === "failed" ? t("copyLinkFailed") : t("shareCommentMedia");
+      button.dataset.status = status;
+      button.setAttribute("aria-label", label);
+      button.title = label;
+      button.innerHTML = icons[status];
+    }
+    async function copyCommentMediaLink(button, marker, carousel) {
+      const deployed = deployedCommentMarker(marker);
+      const media = carousel?._commentImages?.[carousel._commentImageIndex];
+      if (!deployed || !media || !markerCommentImageIds(deployed).includes(media.id)) return;
+      const url = currentMapUrl();
+      if (!url) return;
+      url.searchParams.set("marker", marker.id);
+      url.searchParams.set("media", media.id);
+      try {
+        if (navigator.clipboard?.writeText) {
+          try { await navigator.clipboard.writeText(url.href); }
+          catch (error) { copyTextFallback(url.href); }
+        } else {
+          copyTextFallback(url.href);
+        }
+        setCommentMediaLinkButtonState(button, "copied");
+      } catch (error) {
+        setCommentMediaLinkButtonState(button, "failed");
+      }
+      window.clearTimeout(button._shareFeedbackTimer);
+      button._shareFeedbackTimer = window.setTimeout(() => {
+        if (button.isConnected) setCommentMediaLinkButtonState(button);
+      }, 2200);
+    }
     function setModalMapSource() {
       if (!state.selected) return;
       modalImage.hidden = true;
@@ -2672,6 +2762,7 @@ let vectorEditor = null;
       const preferredVariationId = variationId || (state.selected?.name === baseMap.name ? state.selected.variationId : null);
       cancelDrawing();
       state.focusedTankMarkerId = null;
+      clearCommentLinkTarget();
       state.selected = expandMapVariation(baseMap, preferredVariationId);
       state.team = team;
       hideMarkerContextMenu();
@@ -2693,6 +2784,28 @@ let vectorEditor = null;
       renderList();
       if (syncUrl) updateUrl(historyMode);
     }
+    function activateCommentLinkTarget() {
+      const target = state.commentLinkPending;
+      if (!target || !state.selected) return false;
+      const deployedMarker = upstreamMarkerLayout?.markers?.[currentMarkerKey()]?.find(item => item.id === target.markerId);
+      const marker = deployedMarker;
+      if (!isTankMarker(marker) || !deployedMarker || !markerCommentImageIds(deployedMarker).includes(target.mediaId)) {
+        state.commentLinkPending = null;
+        return false;
+      }
+      state.commentLinkPending = null;
+      state.commentLinkMarkerId = marker.id;
+      state.commentLinkMediaId = target.mediaId;
+      state.commentLinkRevealMarkerId = marker.id;
+      state.commentLinkMarkerData = deployedMarker;
+      state.focusedTankMarkerId = marker.id;
+      renderMarkers();
+      window.requestAnimationFrame(() => {
+        const markerButton = markerLayer.querySelector(`.map-marker[data-marker-id="${CSS.escape(marker.id)}"]`);
+        markerButton?.scrollIntoView({ behavior: "smooth", block: "center", inline: "center" });
+      });
+      return true;
+    }
     function setTeam(team) {
       if (state.selected) selectMap(state.selected, team);
     }
@@ -2706,6 +2819,9 @@ let vectorEditor = null;
       const legacyMap = maps.find(item => item.name === correctedLegacyName);
       const variationId = params.get("mode") || params.get("variation");
       const team = params.get("team")?.toLowerCase() === "blue" ? "Blue" : "Red";
+      const markerId = params.get("marker");
+      const mediaId = resolveCommentImageId(params.get("media"));
+      const commentLinkTarget = markerId && markerId.length <= 180 && mediaId ? { markerId, mediaId } : null;
       if (routeMap) {
         selectMap(routeMap, team, variationId, { syncUrl: false });
       } else if (legacyMap) {
@@ -2714,6 +2830,7 @@ let vectorEditor = null;
         updateLibraryDocumentMetadata();
         selectMap(maps[0], team, variationId, { syncUrl: false });
       }
+      state.commentLinkPending = commentLinkTarget;
     }
     function resetHiddenMarkersForCurrentMap() {
       const markerKey = currentMarkerKey();
@@ -2769,6 +2886,7 @@ let vectorEditor = null;
       hiddenAnnotations.clear();
       hiddenMarkerTypes.clear();
       state.focusedTankMarkerId = null;
+      clearCommentLinkTarget();
       state.drawing = null;
       updateDrawingState();
       hideMarkerContextMenu();
@@ -2782,12 +2900,15 @@ let vectorEditor = null;
         if (state.editMode) return;
         const markerButton = event.target.closest(".map-marker");
         if (!markerButton) return;
-        const marker = currentMarkers().find(item => item.id === markerButton.dataset.markerId);
+        const marker = state.commentLinkMarkerData?.id === markerButton.dataset.markerId
+          ? state.commentLinkMarkerData
+          : currentMarkers().find(item => item.id === markerButton.dataset.markerId);
         if (!isTankMarker(marker) && !markerHasComment(marker)) return;
         event.preventDefault();
         event.stopPropagation();
         hideMarkerContextMenu();
         hideAnnotationContextMenu();
+        clearCommentLinkTarget();
         state.focusedTankMarkerId = state.focusedTankMarkerId === marker.id ? null : marker.id;
         renderMarkers();
       });
@@ -3105,7 +3226,7 @@ let vectorEditor = null;
     mapImage.addEventListener("load", () => {
       mapImage.hidden = false;
       mapStage.classList.add("loaded");
-      renderMarkers();
+      if (!activateCommentLinkTarget()) renderMarkers();
     });
     mapImage.addEventListener("error", () => {
       mapStage.classList.add("load-error");
@@ -3180,6 +3301,7 @@ let vectorEditor = null;
       mountAnnotationOpacityControl(annotationOpacityMainSlot);
       cancelDrawing();
       state.focusedTankMarkerId = null;
+      clearCommentLinkTarget();
       hideMarkerContextMenu();
       hideAnnotationContextMenu();
       modalMapOverlayLayer.replaceChildren();
