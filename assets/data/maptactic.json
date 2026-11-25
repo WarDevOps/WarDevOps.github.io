@@ -26,10 +26,10 @@
     "Fields of Poland": "2026-10-27",
     "Finland": "2026-11-03",
     "Fire Arc": "2026-10-27",
-    "Flanders": "2026-09-29",
+    "Flanders": "2026-11-18",
     "Frozen Pass": "2026-11-03",
     "Fulda": "2026-11-03",
-    "Golden Quarry": "2026-11-03",
+    "Golden Quarry": "2026-11-25",
     "Iberian Castle": "2026-09-23",
     "Japan": "2026-11-03",
     "Jungle": "2026-10-27",
@@ -38,7 +38,7 @@
     "Maginot Line": "2026-11-09",
     "Middle East": "2026-11-09",
     "Mozdok": "2026-09-15",
-    "Normandy": "2026-11-07",
+    "Normandy": "2026-11-25",
     "North Holland": "2026-11-09",
     "Poland": "2026-09-15",
     "Port Novorossiysk": "2026-11-09",
@@ -85,10 +85,10 @@
     "Fields of Poland": "2026-10-26T21:01:49Z",
     "Finland": "2026-11-02T16:19:29Z",
     "Fire Arc": "2026-10-26T20:46:03Z",
-    "Flanders": "2026-09-29T06:20:07Z",
+    "Flanders": "2026-11-18T13:35:01Z",
     "Frozen Pass": "2026-11-02T16:23:06Z",
     "Fulda": "2026-11-02T16:23:52Z",
-    "Golden Quarry": "2026-11-02T16:24:19Z",
+    "Golden Quarry": "2026-11-25T12:29:47Z",
     "Iberian Castle": "2026-09-23T03:53:21Z",
     "Japan": "2026-11-02T16:24:55Z",
     "Jungle": "2026-10-26T21:01:04Z",
@@ -97,7 +97,7 @@
     "Maginot Line": "2026-11-09T03:32:01Z",
     "Middle East": "2026-11-09T02:50:00Z",
     "Mozdok": "2026-09-15T03:13:51Z",
-    "Normandy": "2026-11-06T22:18:19Z",
+    "Normandy": "2026-11-24T15:25:25Z",
     "North Holland": "2026-11-09T02:50:00Z",
     "Poland": "2026-09-15T02:55:29Z",
     "Port Novorossiysk": "2026-11-09T03:32:01Z",
@@ -17873,6 +17873,19 @@
         "type": "smokeshell",
         "x": 1.09,
         "y": 51.69
+      },
+      {
+        "id": "mwm5xrtu-a9irju",
+        "type": "mainBattleTank",
+        "x": 60.37,
+        "y": 58.53
+      },
+      {
+        "id": "mwm5xy3z-voiz3d",
+        "type": "sniper",
+        "x": 60.37,
+        "y": 58.53,
+        "parentTankId": "mwm5xrtu-a9irju"
       }
     ],
     "Flanders::domination-1|Red": [
@@ -18534,10 +18547,7 @@
         "id": "mtjjk5ry-oxad88",
         "type": "tankDestroyer",
         "x": 44.79,
-        "y": 64.58,
-        "commentImages": [
-          "Golden Quarry/scr_ (3).webp"
-        ]
+        "y": 64.58
       },
       {
         "id": "mtjjkvhl-bvlftf",
@@ -18550,10 +18560,7 @@
         "id": "mtjki97f-4gka7a",
         "type": "mainBattleTank",
         "x": 53.9,
-        "y": 69.86,
-        "commentImages": [
-          "Golden Quarry/scr_ (4).webp"
-        ]
+        "y": 69.86
       },
       {
         "id": "mtjkic54-ujh230",
@@ -18566,10 +18573,7 @@
         "id": "mtjkylk9-1tm265",
         "type": "mainBattleTank",
         "x": 74.74,
-        "y": 63.41,
-        "commentImages": [
-          "Golden Quarry/scr_ (10).webp"
-        ]
+        "y": 63.41
       },
       {
         "id": "mtjkyn66-iqoqhm",
@@ -18595,10 +18599,7 @@
         "id": "mtjmk96f-ixkcn4",
         "type": "mainBattleTank",
         "x": 86.99,
-        "y": 46.22,
-        "commentImages": [
-          "Golden Quarry/scr_ (11).webp"
-        ]
+        "y": 46.22
       },
       {
         "id": "mtjmkau4-9c9mo3",
@@ -18611,10 +18612,7 @@
         "id": "mtjnoyz5-4vd0j0",
         "type": "mainBattleTank",
         "x": 51.82,
-        "y": 37.36,
-        "commentImages": [
-          "Golden Quarry/scr_ (14).webp"
-        ]
+        "y": 37.36
       },
       {
         "id": "mtjnp00h-o08r6v",
@@ -18648,17 +18646,27 @@
         "x": 49.04,
         "y": 34.4,
         "parentTankId": "mujp11th-o4gpud"
+      },
+      {
+        "id": "mwnll0j4-qb9j6x",
+        "type": "tankDestroyer",
+        "x": 44.06,
+        "y": 75.98
+      },
+      {
+        "id": "mwnll67l-kk21lb",
+        "type": "sniper",
+        "x": 44.06,
+        "y": 75.98,
+        "parentTankId": "mwnll0j4-qb9j6x"
       }
     ],
     "Golden Quarry::domination-1|Red": [
       {
         "id": "mtjjdk48-p67wtq",
-        "type": "mainBattleTankRed",
+        "type": "lightTankRed",
         "x": 37.06,
-        "y": 56.73,
-        "commentImages": [
-          "Golden Quarry/scr_ (2).webp"
-        ]
+        "y": 56.73
       },
       {
         "id": "mtjje3wa-uh96hp",
@@ -18671,10 +18679,7 @@
         "id": "mtjkjshb-9yahj5",
         "type": "mainBattleTankRed",
         "x": 40.43,
-        "y": 67.99,
-        "commentImages": [
-          "Golden Quarry/scr_ (8).webp"
-        ]
+        "y": 67.99
       },
       {
         "id": "mtjkju8b-k2zmhr",
@@ -18688,10 +18693,7 @@
         "type": "mainBattleTankRed",
         "x": 31.2,
         "y": 31.02,
-        "comment": "spawn kill",
-        "commentImages": [
-          "Golden Quarry/scr_ (1).webp"
-        ]
+        "comment": "spawn kill"
       },
       {
         "id": "mtjkk3yr-nsrf35",
@@ -18704,10 +18706,7 @@
         "id": "mtjkkekr-14mdhz",
         "type": "mainBattleTankRed",
         "x": 57.89,
-        "y": 65.95,
-        "commentImages": [
-          "Golden Quarry/scr_ (6).webp"
-        ]
+        "y": 65.95
       },
       {
         "id": "mtjkkfqb-syhzki",
@@ -18720,10 +18719,7 @@
         "id": "mtjkkokx-7q0176",
         "type": "tankDestroyerRed",
         "x": 57.18,
-        "y": 68.17,
-        "commentImages": [
-          "Golden Quarry/scr_ (5).webp"
-        ]
+        "y": 68.17
       },
       {
         "id": "mtjkktq9-ys21ua",
@@ -18736,10 +18732,7 @@
         "id": "mtjkp5x0-dnm10g",
         "type": "mainBattleTankRed",
         "x": 48.23,
-        "y": 82.18,
-        "commentImages": [
-          "Golden Quarry/scr_ (7).webp"
-        ]
+        "y": 82.18
       },
       {
         "id": "mtjks4oc-swegwo",
@@ -18758,10 +18751,7 @@
         "id": "mtjlgbyr-48o330",
         "type": "mainBattleTankRed",
         "x": 22.43,
-        "y": 62.67,
-        "commentImages": [
-          "Golden Quarry/scr_ (9).webp"
-        ]
+        "y": 62.67
       },
       {
         "id": "mtjlgdq6-r0fk21",
@@ -18774,10 +18764,7 @@
         "id": "mtjlpdff-fpfejc",
         "type": "mainBattleTankRed",
         "x": 57.63,
-        "y": 20.83,
-        "commentImages": [
-          "Golden Quarry/scr_ (12).webp"
-        ]
+        "y": 20.83
       },
       {
         "id": "mtjlq3m1-wwgr5e",
@@ -18788,12 +18775,9 @@
       },
       {
         "id": "mtjnkkqe-ynptcc",
-        "type": "mainBattleTankRed",
+        "type": "lightTankRed",
         "x": 47.27,
-        "y": 56.37,
-        "commentImages": [
-          "Golden Quarry/scr_ (13).webp"
-        ]
+        "y": 56.37
       },
       {
         "id": "mtjnkrcu-ex7h4k",
@@ -18831,15 +18815,54 @@
       {
         "id": "mvzgy9im-x4hqrg",
         "type": "mainBattleTankRed",
-        "x": 29.5,
-        "y": 74.02
+        "x": 25.85,
+        "y": 74.84
       },
       {
         "id": "mvzgycgz-8aelvj",
         "type": "spawnKill",
-        "x": 29.5,
-        "y": 74.02,
+        "x": 25.85,
+        "y": 74.84,
         "parentTankId": "mvzgy9im-x4hqrg"
+      },
+      {
+        "id": "mwnljtz2-2g20l5",
+        "type": "mainBattleTankRed",
+        "x": 50.7,
+        "y": 63.94
+      },
+      {
+        "id": "mwnljwk3-a5y2cl",
+        "type": "highRiskSpot",
+        "x": 50.7,
+        "y": 63.94,
+        "parentTankId": "mwnljtz2-2g20l5"
+      },
+      {
+        "id": "mww3n37v-owu92q",
+        "type": "tankDestroyerRed",
+        "x": 80.24,
+        "y": 77.81
+      },
+      {
+        "id": "mww3n4er-18m2r5",
+        "type": "sniper",
+        "x": 80.24,
+        "y": 77.81,
+        "parentTankId": "mww3n37v-owu92q"
+      },
+      {
+        "id": "mww3p3vr-mtesmk",
+        "type": "lightTankRed",
+        "x": 55.94,
+        "y": 73.32
+      },
+      {
+        "id": "mww3pf8v-hx1nmj",
+        "type": "battleLine",
+        "x": 55.94,
+        "y": 73.32,
+        "parentTankId": "mww3p3vr-mtesmk"
       }
     ],
     "Iberian Castle::domination-1|Red": [
@@ -22164,6 +22187,19 @@
         "x": 49.48,
         "y": 53.08,
         "parentTankId": "mujwnkux-f8q1r7"
+      },
+      {
+        "id": "mwuuhyfn-qszkf9",
+        "type": "lightTankRed",
+        "x": 26.49,
+        "y": 70.8
+      },
+      {
+        "id": "mwuui0nu-01k83z",
+        "type": "spawnKill",
+        "x": 26.49,
+        "y": 70.8,
+        "parentTankId": "mwuuhyfn-qszkf9"
       }
     ],
     "Normandy::domination-1|Blue": [
@@ -71263,6 +71299,15 @@
           }
         ],
         "dangerRoute": true
+      },
+      {
+        "id": "mwm5yc9v-15ygas",
+        "type": "aimHere",
+        "parentTankId": "mwm5xrtu-a9irju",
+        "startX": 60.37,
+        "startY": 58.53,
+        "endX": 76.42,
+        "endY": 88.62
       }
     ],
     "Flanders::domination-1|Red": [
@@ -72517,6 +72562,24 @@
         "startY": 34.4,
         "endX": 62.6,
         "endY": 37.88
+      },
+      {
+        "id": "mwnll54l-jt0ual",
+        "type": "aimHere",
+        "parentTankId": "mwnll0j4-qb9j6x",
+        "startX": 44.06,
+        "startY": 75.98,
+        "endX": 53.04,
+        "endY": 64.03
+      },
+      {
+        "id": "mwnm8o35-9icp1g",
+        "type": "aimHere",
+        "parentTankId": "mwnll0j4-qb9j6x",
+        "startX": 44.06,
+        "startY": 75.98,
+        "endX": 55.31,
+        "endY": 79.9
       }
     ],
     "Golden Quarry::domination-1|Red": [
@@ -72931,10 +72994,65 @@
         "id": "mvzgyg85-zqy5bi",
         "type": "aimHere",
         "parentTankId": "mvzgy9im-x4hqrg",
-        "startX": 29.5,
-        "startY": 74.02,
+        "startX": 25.85,
+        "startY": 74.84,
         "endX": 15.16,
         "endY": 72.2
+      },
+      {
+        "id": "mwnljokj-dgaz0x",
+        "type": "route",
+        "points": [
+          {
+            "x": 57.99,
+            "y": 65.77
+          },
+          {
+            "x": 56.86,
+            "y": 64.29
+          },
+          {
+            "x": 50.87,
+            "y": 64.21
+          }
+        ],
+        "dangerRoute": true
+      },
+      {
+        "id": "mwnlkvw3-u05nnt",
+        "type": "aimHere",
+        "parentTankId": "mwnljtz2-2g20l5",
+        "startX": 50.7,
+        "startY": 63.94,
+        "endX": 37.49,
+        "endY": 83.06
+      },
+      {
+        "id": "mww3n6x6-ntdder",
+        "type": "aimHere",
+        "parentTankId": "mww3n37v-owu92q",
+        "startX": 80.24,
+        "startY": 77.81,
+        "endX": 52.38,
+        "endY": 93.79
+      },
+      {
+        "id": "mww3orqj-wovgoz",
+        "type": "aimHere",
+        "parentTankId": "mww3n37v-owu92q",
+        "startX": 80.24,
+        "startY": 77.81,
+        "endX": 44.98,
+        "endY": 66.46
+      },
+      {
+        "id": "mww3p8gp-us4t3r",
+        "type": "aimHere",
+        "parentTankId": "mww3p3vr-mtesmk",
+        "startX": 55.94,
+        "startY": 73.32,
+        "endX": 45.51,
+        "endY": 89.3
       }
     ],
     "Iberian Castle::domination-1|Red": [
@@ -80229,6 +80347,46 @@
         "startY": 39.44,
         "endX": 45.92,
         "endY": 37.79
+      },
+      {
+        "id": "mwuui6z2-w24qo1",
+        "type": "aimHere",
+        "parentTankId": "mwuuhyfn-qszkf9",
+        "startX": 26.49,
+        "startY": 70.8,
+        "endX": 9.54,
+        "endY": 47.79
+      },
+      {
+        "id": "mwuujckh-15tugo",
+        "type": "route",
+        "points": [
+          {
+            "x": 27.75,
+            "y": 71.05
+          },
+          {
+            "x": 32.55,
+            "y": 70.67
+          },
+          {
+            "x": 37.61,
+            "y": 70.16
+          },
+          {
+            "x": 41.66,
+            "y": 69.79
+          },
+          {
+            "x": 45.7,
+            "y": 68.9
+          },
+          {
+            "x": 48.86,
+            "y": 68.52
+          }
+        ],
+        "dangerRoute": true
       }
     ],
     "Normandy::domination-1|Blue": [
@@ -106949,6 +107107,6 @@
     "Sun City::domination-1|Red": [],
     "Vietnam::domination-1|Red": []
   },
-  "updatedAt": "2026-11-16T02:40:15.857Z",
-  "exportedAt": "2026-11-16T02:43:05.140Z"
+  "updatedAt": "2026-11-25T12:29:47.507Z",
+  "exportedAt": "2026-11-25T12:29:57.142Z"
 }
