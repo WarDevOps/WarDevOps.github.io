@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "source": "https://wiki.warthunder.com",
-  "checkedAt": "2026-11-20T10:54:14.033614+00:00",
+  "checkedAt": "2026-11-26T09:11:28.340062+00:00",
   "weapons": {
     "ammo-1b475e905145cbec": {
       "name": "M74 shot",
@@ -36342,5 +36342,6 @@
         "w-ba2ae136e2c9ef06"
       ]
     }
-  }
+  },
+  "updatedAt": "2026-11-26"
 }

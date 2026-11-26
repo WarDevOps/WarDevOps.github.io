@@ -162,11 +162,17 @@ def main():
     parser.add_argument('--workers', type=int, default=6)
     args = parser.parse_args()
     catalog = json.loads((ROOT / 'assets/data/tier-units.json').read_text(encoding='utf-8'))
+    output = ROOT / 'assets/data/ground-heli-armaments.json'
+    previous_data = json.loads(output.read_text(encoding='utf-8')) if output.exists() else {}
+    previous_weapons = previous_data.get('weapons', {})
     cache = ROOT / 'local-artifacts/wiki-ground-heli-armaments' / datetime.now(timezone.utc).strftime('%Y-%m-%d')
     cache.mkdir(parents=True, exist_ok=True)
     data = {'schemaVersion': 1, 'source': air.WIKI,
-        'checkedAt': datetime.now(timezone.utc).isoformat(), 'weapons': {}, 'ground': {}, 'helicopters': {}}
+        'checkedAt': datetime.now(timezone.utc).isoformat(),
+        'updatedAt': datetime.now(timezone.utc).date().isoformat(),
+        'weapons': {}, 'ground': {}, 'helicopters': {}}
     report = {'failures': {}, 'unresolved': {}}
+    collected_weapons = {}
     jobs = [(category, unit) for category in ['tank', 'heli'] for unit in catalog['categories'][category]['units']]
     with ThreadPoolExecutor(max_workers=max(1, min(args.workers, 8))) as executor:
         futures = {}
@@ -181,11 +187,7 @@ def main():
             wiki_id = unit['wikiId']
             try:
                 weapons, unresolved = future.result()
-                for key, weapon in weapons.items():
-                    previous = data['weapons'].get(key)
-                    if previous and any(previous.get(k) != weapon.get(k) for k in ['name', 'type', 'guidance']):
-                        raise ValueError(f'Conflicting weapon {key}')
-                    data['weapons'].setdefault(key, weapon)
+                collected_weapons[wiki_id] = weapons
                 entry = {'status': 'partial' if unresolved else 'verified', 'weapons': sorted(weapons)}
                 if category == 'tank' and wiki_id.endswith('_fcs'):
                     entry['launcherWikiId'] = wiki_id.removesuffix('_fcs') + '_launcher'
@@ -199,6 +201,22 @@ def main():
             data['ground' if category == 'tank' else 'helicopters'][wiki_id] = entry
             if i % 50 == 0 or i == len(futures):
                 print(f'{i}/{len(futures)} collected; {len(report["failures"])} failed; {len(report["unresolved"])} partial', flush=True)
+    # Choose shared weapon metadata in stable Wiki ID order. Keep the published
+    # representative link/icon while the weapon's identity and guidance match;
+    # different vehicles may expose different grouped Wiki icons for the same item.
+    for wiki_id in sorted(collected_weapons):
+        for key, weapon in sorted(collected_weapons[wiki_id].items()):
+            previous = data['weapons'].get(key)
+            if previous and any(previous.get(k) != weapon.get(k) for k in ['name', 'type', 'guidance']):
+                raise ValueError(f'Conflicting weapon {key}')
+            if previous is None:
+                prior = previous_weapons.get(key)
+                if prior and all(prior.get(k) == weapon.get(k) for k in ['name', 'type', 'guidance']):
+                    for field, value in weapon.items():
+                        if field not in prior:
+                            prior[field] = value
+                    weapon = prior
+                data['weapons'][key] = weapon
     # Aircraft helper supplies official generic icons for rare preset-only missiles.
     guided = {k: w for k, w in data['weapons'].items() if w['type'] != 'ammunition'}
     air.prepare_icons(guided, args.workers)
@@ -209,8 +227,12 @@ def main():
     for weapon in data['weapons'].values():
         if weapon.get('iconSource'):
             weapon['icon'] = '/icon/weapon-wiki/' + air.local_icon_name(weapon['iconSource'])
+    for key in ('weapons', 'ground', 'helicopters'):
+        previous_keys = previous_data.get(key, {})
+        order = [item for item in previous_keys if item in data[key]]
+        order.extend(sorted(item for item in data[key] if item not in previous_keys))
+        data[key] = {item: data[key][item] for item in order}
     (cache / 'report.json').write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
-    output = ROOT / 'assets/data/ground-heli-armaments.json'
     temporary = output.with_suffix('.json.tmp')
     temporary.write_text(json.dumps(data, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
     temporary.replace(output)

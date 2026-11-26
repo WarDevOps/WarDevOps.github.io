@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "status": "current",
   "source": "https://warthunder.com/en/game/changelog/current/1921",
-  "reviewedOn": "2026-11-20",
-  "notes": "Official custom BR rules reviewed through the 2026-11-19 server update. Highest selected weapon penalty wins, capped per mode. Penalties use integer BR steps.",
+  "reviewedOn": "2026-11-26",
+  "notes": "Official custom BR thresholds checked through 2026-11-25. No new applicability or weapon BR changes found after the 2026-11-19 Yak-130 update.",
   "additionalWeapons": {
     "mig-21_bison": [
       "w-cff6eb8beb4f77da"
@@ -534,8 +534,8 @@
   },
   "applicability": {
     "source": "https://warthunder.com/en/game/changelog/current/1921",
-    "checkedOn": "2026-11-20",
-    "notes": "Official aircraft and helicopter custom BR applicability, updated through the 2026-11-19 server update.",
+    "checkedOn": "2026-11-26",
+    "notes": "Applicability rechecked against official update notes through 2026-11-25; no additions or mode changes found.",
     "units": {
       "air:j_22m1a": [
         "arb",

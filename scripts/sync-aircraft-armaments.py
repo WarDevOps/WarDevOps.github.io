@@ -286,7 +286,7 @@ def main():
     (cache / "report.json").write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     if conflicts:
         raise SystemExit(f"Conflicting guidance for shared weapons; inspect {cache / 'report.json'}. Output not replaced.")
-    data = {"schemaVersion": 1, "source": WIKI, "checkedAt": now.isoformat(),
+    data = {"schemaVersion": 1, "source": WIKI, "checkedAt": now.isoformat(), "updatedAt": now.date().isoformat(),
             "scope": "All unlockable aircraft guided weapons; availability list, not simultaneous loadouts. Anti-ship-only weapons excluded.",
             "weapons": dict(sorted(weapons.items())), "aircraft": aircraft}
     rules_path = ROOT / "assets/data/brc-variable-br.json"

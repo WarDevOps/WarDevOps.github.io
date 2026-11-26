@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "source": "https://wiki.warthunder.com",
-  "checkedAt": "2026-11-20T10:44:34.711100+00:00",
+  "checkedAt": "2026-11-26T08:57:16.621132+00:00",
   "scope": "All unlockable aircraft guided weapons; availability list, not simultaneous loadouts. Anti-ship-only weapons excluded.",
   "weapons": {
     "w-01e1f67fd8d7c42e": {
@@ -3991,6 +3991,10 @@
       "weapons": []
     },
     "f2a-1": {
+      "status": "verified",
+      "weapons": []
+    },
+    "f2a-1_nvidia": {
       "status": "verified",
       "weapons": []
     },
@@ -10220,10 +10224,6 @@
     "z_1007_bis_serie5": {
       "status": "verified",
       "weapons": []
-    },
-    "f2a-1_nvidia": {
-      "status": "verified",
-      "weapons": []
     }
   },
   "testAdditions": {
@@ -10238,5 +10238,5 @@
       ]
     }
   },
-  "updatedAt": "2026-11-20"
+  "updatedAt": "2026-11-26"
 }

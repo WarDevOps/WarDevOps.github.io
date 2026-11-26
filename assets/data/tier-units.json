@@ -2,7 +2,7 @@
   "source": "https://wiki.warthunder.com",
   "battleRatingMode": "RB",
   "generatedAt": "2026-09-22T02:55:51Z",
-  "updatedAt": "2026-11-20",
+  "updatedAt": "2026-11-26",
   "categories": {
     "tank": {
       "source": "https://wiki.warthunder.com/ground",
@@ -36256,7 +36256,7 @@
   "battleRatingSnapshot": {
     "status": "current",
     "source": "https://wiki.warthunder.com",
-    "checkedOn": "2026-11-20",
+    "checkedOn": "2026-11-26",
     "fields": {
       "tank.br": "Ground RB",
       "air.br": "Air RB",
