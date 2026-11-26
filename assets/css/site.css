@@ -276,9 +276,8 @@
     .map-marker-comment-popover[hidden] { display: none; }
     .map-marker-comment-popover.has-image { width: min(720px, calc(100vw - 16px)); }
     .map-marker-comment-popover.is-pinned { pointer-events: auto; }
-    .map-marker-comment-actions { display: flex; width: 100%; margin-bottom: -6px; justify-content: flex-end; }
-    .map-marker-comment-share { display: grid; width: 30px; height: 28px; padding: 4px; border: 1px solid transparent; border-radius: 6px; background: transparent; color: var(--muted); cursor: pointer; place-items: center; }
-    .map-marker-comment-share:hover, .map-marker-comment-share:focus-visible { border-color: var(--line); background: var(--surface-raised); color: var(--ink); outline: none; }
+    .map-marker-comment-share { position: absolute; z-index: 3; bottom: 44px; left: 50%; display: grid; width: 30px; height: 28px; padding: 4px; transform: translateX(-50%); border: 1px solid rgba(255,255,255,.65); border-radius: 999px; background: rgba(23,32,31,.92); color: #fff; box-shadow: 0 2px 10px rgba(0,0,0,.5); cursor: pointer; place-items: center; pointer-events: auto; }
+    .map-marker-comment-share:hover, .map-marker-comment-share:focus-visible { border-color: #fff; background: #35423e; color: #fff; outline: 2px solid var(--accent); outline-offset: 2px; }
     .map-marker-comment-share[data-status="copied"] { color: var(--accent); }
     .map-marker-comment-share[data-status="failed"] { color: var(--red); }
     .map-marker-comment-share svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.8; }

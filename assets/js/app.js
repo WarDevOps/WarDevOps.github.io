@@ -4,7 +4,7 @@ import { createVectorEditor } from './vector-editor.js?v=editor-shortcuts-202611
 import { validateVectorGroups, pruneGroups } from './vector-model.js?v=route-selection-20260923';
 import { validatePastedView } from './paste-validation.js';
 let vectorEditor = null;
-    import { commentImages } from './comment-images.js?v=comment-images-eb5b3fc38592';
+    import { commentImages } from './comment-images.js?v=comment-images-8b65f5deb648';
     import { defaultMarkerLayout, maps, translations } from './data.js?v=comment-media-share-20261122';
     import { normalizeTacticalSummary, resolveTacticalSummary, withVariationSummary } from './tactical-summary.js?v=variation-switch-20260914';
     import { acceptUpstreamMap, isMapSyncState, markLayoutAsLocalEdits, markMapEdited, mergeMapLayouts, sourceRevision } from './marker-merge.js?v=mobile-default-layout-20260917';
@@ -1071,8 +1071,10 @@ let vectorEditor = null;
       markerCommentImagePreviewCarousel._commentImages = [];
       markerCommentImagePreviewCarousel._commentImageIndex = 0;
       markerCommentImagePreviewCarousel._commentImageChange = null;
+      markerCommentImagePreviewCarousel._commentMarker = null;
       markerCommentImagePreviewCarousel.querySelector(".map-marker-comment-indicator-hit-area")?.remove();
       markerCommentImagePreviewCarousel.querySelector(".map-marker-comment-click-navigation")?.remove();
+      markerCommentImagePreviewCarousel.querySelector(".map-marker-comment-share")?.remove();
       if (restoreFocus) sourceCarousel?.querySelector(".map-marker-comment-media")?.focus({ preventScroll: true });
     }
     function positionMarkerCommentImagePreview() {
@@ -1113,9 +1115,23 @@ let vectorEditor = null;
         markerCommentImagePreviewCarousel,
         sourceCarousel._commentImages || [],
         sourceCarousel._commentImageIndex,
-        index => setCommentCarouselIndex(sourceCarousel, index, { notify: false }),
+        index => {
+          setCommentCarouselIndex(sourceCarousel, index, { notify: false });
+          const markerId = sourceCarousel._commentMarker?.id;
+          if (markerId && state.commentLinkMarkerId === markerId && state.focusedTankMarkerId === markerId) {
+            state.commentLinkMediaId = sourceCarousel._commentImages?.[index]?.id || null;
+          }
+        },
         { clickNavigation: true }
       );
+      markerCommentImagePreviewCarousel._commentMarker = sourceCarousel._commentMarker || null;
+      const shareButton = markerCommentImagePreviewCarousel._commentMarker
+        ? createCommentMediaLinkButton(markerCommentImagePreviewCarousel._commentMarker, markerCommentImagePreviewCarousel)
+        : null;
+      if (shareButton) {
+        markerCommentImagePreviewCarousel.append(shareButton);
+        markerCommentImagePreview.setAttribute("aria-hidden", "false");
+      }
       markerCommentImagePreviewClose.setAttribute("aria-label", t("closeCommentImage"));
       markerCommentImagePreview.hidden = false;
       const previewVideo = markerCommentImagePreviewCarousel.querySelector("video");
@@ -1309,20 +1325,10 @@ let vectorEditor = null;
           }
           positionMarkerCommentPopover(anchor);
         });
-        if (pinned && deployedCommentMarker(marker)) {
-          const actions = document.createElement("div");
-          actions.className = "map-marker-comment-actions";
-          const shareButton = document.createElement("button");
-          shareButton.type = "button";
-          shareButton.className = "map-marker-comment-share";
-          setCommentMediaLinkButtonState(shareButton);
-          shareButton.addEventListener("click", event => {
-            event.preventDefault();
-            event.stopPropagation();
-            void copyCommentMediaLink(shareButton, marker, carousel);
-          });
-          actions.append(shareButton);
-          content.append(actions);
+        carousel._commentMarker = marker;
+        if (pinned) {
+          const shareButton = createCommentMediaLinkButton(marker, carousel);
+          if (shareButton) carousel.append(shareButton);
         }
         bindCommentImageSwipe(carousel);
         const handleMediaReady = event => {
@@ -1337,7 +1343,8 @@ let vectorEditor = null;
           if (!mobileSheet && event.pointerType === "mouse") showMarkerCommentImagePreview(carousel);
         });
         carousel.addEventListener("pointerleave", event => {
-          if (!mobileSheet && event.pointerType === "mouse" && !markerCommentImagePreview.classList.contains("is-touch-open")) hideMarkerCommentImagePreview();
+          if (!mobileSheet && event.pointerType === "mouse" && !markerCommentImagePreview.classList.contains("is-touch-open")
+            && !markerCommentImagePreview.contains(event.relatedTarget)) hideMarkerCommentImagePreview();
         });
         carousel.addEventListener("click", event => {
           if (!event.target.closest?.(".map-marker-comment-media")) return;
@@ -2744,6 +2751,20 @@ let vectorEditor = null;
       button._shareFeedbackTimer = window.setTimeout(() => {
         if (button.isConnected) setCommentMediaLinkButtonState(button);
       }, 2200);
+    }
+    function createCommentMediaLinkButton(marker, carousel) {
+      if (!deployedCommentMarker(marker)) return null;
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = "map-marker-comment-share";
+      setCommentMediaLinkButtonState(button);
+      button.addEventListener("pointerdown", event => event.stopPropagation());
+      button.addEventListener("click", event => {
+        event.preventDefault();
+        event.stopPropagation();
+        void copyCommentMediaLink(button, marker, carousel);
+      });
+      return button;
     }
     function setModalMapSource() {
       if (!state.selected) return;
